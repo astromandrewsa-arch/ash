@@ -11,10 +11,16 @@ import TimeSlider from '../panels/TimeSlider.jsx'
 import FuelLegend from '../panels/FuelLegend.jsx'
 import DetailDrawer from '../drawer/DetailDrawer.jsx'
 import PlaceholderPage from '../pages/PlaceholderPage.jsx'
+import LocationsAtRiskPage from '../pages/LocationsAtRiskPage.jsx'
+
+const PAGES = {
+  locations: LocationsAtRiskPage,
+}
 
 export default function Shell() {
   const { activeView, drawerOpen, layers } = useApp()
   const onMap = activeView === 'map'
+  const Page = PAGES[activeView] ?? PlaceholderPage
 
   return (
     <div className="app">
@@ -37,7 +43,7 @@ export default function Shell() {
               <DetailDrawer />
             </>
           ) : (
-            <PlaceholderPage view={VIEWS_BY_ID[activeView]} />
+            <Page view={VIEWS_BY_ID[activeView]} />
           )}
         </main>
       </div>
