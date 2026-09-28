@@ -2,6 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  // Served from https://astromandrewsa-arch.github.io/ash/ on GitHub Pages.
+  base: '/ash/',
   plugins: [react()],
   build: {
     rolldownOptions: {
