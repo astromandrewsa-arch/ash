@@ -10,5 +10,6 @@
     "attribution": "Imagery &copy; Esri, Maxar, Earthstar Geographics",
     "maxNativeZoom": 18
   },
-  "fuelGridOpacity": 0.55
+  "fuelGridOpacity": 0.55,
+  "fuelGridScaleDays": 30
 }

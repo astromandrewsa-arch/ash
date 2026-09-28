@@ -3,9 +3,9 @@ import { ImageOverlay } from 'react-leaflet'
 import { fuelGrid, mapConfig } from '../../lib/data.js'
 import { mix, palette } from '../../styles/palette.js'
 
-// Days to fuel threshold → colour: red (imminent) → orange → green (30+ days away).
+// Days to fuel threshold → colour: red (imminent) → orange → green (scale end and beyond).
 function colourFor(days, c) {
-  const t = Math.min(1, days / 30)
+  const t = Math.min(1, days / mapConfig.fuelGridScaleDays)
   return t < 0.5 ? mix(c.red, c.orange, t / 0.5) : mix(c.orange, c.green, (t - 0.5) / 0.5)
 }
 

@@ -3,6 +3,8 @@ import L from 'leaflet'
 import { Marker, useMap } from 'react-leaflet'
 import { areas, boundsOfPolygons } from '../../lib/data.js'
 import { formatNumber } from '../../lib/format.js'
+import { mapPadding } from '../../lib/mapPadding.js'
+import { UI } from '../../config/ui.js'
 
 function Cluster({ area }) {
   const map = useMap()
@@ -17,7 +19,7 @@ function Cluster({ area }) {
     [area],
   )
   const handlers = useMemo(
-    () => ({ click: () => map.flyToBounds(boundsOfPolygons([area.polygon]), { padding: [40, 40] }) }),
+    () => ({ click: () => map.flyToBounds(boundsOfPolygons([area.polygon]), { ...mapPadding(false), duration: UI.flyDurationS }) }),
     [map, area],
   )
   return <Marker position={area.center} icon={icon} eventHandlers={handlers} zIndexOffset={-200} />

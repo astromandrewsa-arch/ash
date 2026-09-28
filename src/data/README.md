@@ -21,10 +21,20 @@ Six dated fires, one per area (HC14, PH03, CT22, QD71, PP08, WF15), 6–29 days 
 Each has the ignition block, fuel state and drying trajectory, intensity, spread perimeters (1 h, 8 h, 24 h, then daily) and barrier lines.
 `homesInPath` lists engulfed homes with the step and day reached; `exposure` and `intervention` hold the money figures.
 
+**fuelGrid.json**
+A 200 m grid over each coverage area of days until the fuel crosses its threshold (0–35; -1 outside the area).
+Lowest, and so reddest, around each fire's ignition point, rising with distance; rows run north to south.
+Drawn as the Fuel-state grid Quick View, green → orange → red.
+
+**sensors.json**
+Six to ten sensor sites per coverage area, kept clear of homes.
+Each has an id, type (fuel moisture probe, weather mast or smoke camera), position and installation year.
+Drawn as small grey dots by the Sensor sites Quick View.
+
 **agentTimelines.json**
 The six-step stepper (Identified → Fire prevented) and eight agent processes: the six current fires plus HC09 and WF11 from last month.
-Each has the Pyrome agent, counterpart bodies, stage, RAG status, a ledger line and dated entries (refusals flagged, the next action marked `planned`).
-Entry `day` is relative to the predicted fire date; anything after the 28 Sep 2026 issue date is planned.
+Each has the Pyrome agent, counterpart bodies, stage, RAG status, a ledger line with document files, and dated entries (each with who acted and with whom; refusals flagged).
+Entry `day` is relative to the predicted fire date; the next action, after the 28 Sep 2026 issue date, is marked `planned`.
 
 **historicalFires.json**
 Twelve fires from the 2025–26 season: 5 prevented after intervention, 4 declined and then burned on the predicted date, 3 back-tests.
@@ -32,7 +42,7 @@ Each records lead time, window, cost and premium saved or realised loss, and whi
 BR27 carries `beforeAfter`: the burn scar and PRIMER's predicted perimeter as polygons, with their overlap.
 
 **models.json**
-PRIMER plus three comparison models: PoF Grid (ECMWF-style probability of fire), FWI (fire-weather index) and SatRisk (satellite risk score).
+PRIMER plus three comparison models: PoF Grid (ECMWF-style probability of fire), FWI (fire-weather index) and SatRisk (satellite risk score), each with a short `kind` used in the back-test sentence.
 Hit rate at 7, 14, 21 and 30 days lead time; PRIMER leads at every lead time and the gap widens as lead time grows.
 Feeds the Historical Accuracy chart (PRIMER in orange, the others in Comparison Blue).
 
@@ -47,20 +57,25 @@ The generator rewrites the totals from homes.json and coverageAreas.json but kee
 Also holds the book's annual premium and baseline AAL, used for the AAL uplift percentage.
 
 **alertSummary.json** (totals generated, `title` kept)
-Figures for the "Next 30 days" alert card with every dated fire included.
-Written from fires.json: TIV that will burn, premium at risk, dated fires, homes in path and loss preventable if intervened.
-The app will recompute these from fires.json as the slider moves.
+The "Next 30 days" card title, plus its totals with every dated fire included, for reference.
+The card itself sums fires.json live for the fires the slider has revealed, so these totals match it at slider 0.
+Premium at risk is the fires' 5-year premium saved; preventable is their loss avoided (already net of prevention probability).
 
 ## Hand-authored
 
 **forecast.json**
-The PRIMER forecast shown in the top-bar selector.
-Model name, region and issue time (28 Sep 2026, 06:00).
-Not touched by the generator.
+The PRIMER forecast in the top-bar selector: model, region, issue date and time (28 Sep 2026, 06:00).
+The two forecast presets (90% inside 7 days, called 15 days ahead; 90% inside 14 days, called 30 days ahead) with their definitions.
+The three Help terms. Not touched by the generator.
 
 **mapConfig.json**
-Map start position (Texas, 31.3, −99.5 at zoom 6) and zoom limits.
-Esri World Imagery tile URL, attribution and maximum native zoom.
+Zoom limits and the zooms used for homes (footprints from 11), area labels, a flown-to fire (13) and a searched home (17).
+Esri World Imagery tile URL, attribution and maximum native zoom, and the fuel-grid opacity and colour scale (days).
+The map opens fitted to the six coverage areas. Not touched by the generator.
+
+**reports.json**
+The mock season report: title, file name, 2.4 MB size and page count.
+The four contents sections listed in the export modal (dated hectares, scored forecasts, intervention ledger, accuracy).
 Not touched by the generator.
 
 **quickViews.json**

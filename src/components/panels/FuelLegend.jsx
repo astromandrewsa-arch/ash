@@ -1,4 +1,4 @@
-import { fuelGrid } from '../../lib/data.js'
+import { fuelGrid, mapConfig } from '../../lib/data.js'
 
 /** Key for the fuel-state grid, shown while that layer is on. */
 export default function FuelLegend() {
@@ -8,8 +8,8 @@ export default function FuelLegend() {
       <span className="fuel-legend-ramp" aria-hidden="true" />
       <span className="fuel-legend-scale">
         <span>0</span>
-        <span>15</span>
-        <span>30+</span>
+        <span>{mapConfig.fuelGridScaleDays / 2}</span>
+        <span>{mapConfig.fuelGridScaleDays}+</span>
       </span>
     </div>
   )

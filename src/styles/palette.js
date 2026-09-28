@@ -30,9 +30,15 @@ export function cssPx(name) {
   return parseFloat(getComputedStyle(document.documentElement).getPropertyValue(name)) || 0
 }
 
-/** Linear blend of two #rrggbb colours. */
+// "#abc" or "#aabbcc" → [r, g, b]. Minified CSS may shorten a token to three digits.
+function rgb(hex) {
+  const h = hex.length === 4 ? `#${hex[1]}${hex[1]}${hex[2]}${hex[2]}${hex[3]}${hex[3]}` : hex
+  return [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16))
+}
+
+/** Linear blend of two hex colours. */
 export function mix(a, b, t) {
-  const pa = [1, 3, 5].map((i) => parseInt(a.slice(i, i + 2), 16))
-  const pb = [1, 3, 5].map((i) => parseInt(b.slice(i, i + 2), 16))
+  const pa = rgb(a)
+  const pb = rgb(b)
   return pa.map((x, i) => Math.round(x + (pb[i] - x) * t))
 }
