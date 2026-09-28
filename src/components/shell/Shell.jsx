@@ -12,9 +12,11 @@ import FuelLegend from '../panels/FuelLegend.jsx'
 import DetailDrawer from '../drawer/DetailDrawer.jsx'
 import PlaceholderPage from '../pages/PlaceholderPage.jsx'
 import LocationsAtRiskPage from '../pages/LocationsAtRiskPage.jsx'
+import NegotiationChannelPage from '../pages/NegotiationChannelPage.jsx'
 
 const PAGES = {
   locations: LocationsAtRiskPage,
+  negotiation: NegotiationChannelPage,
 }
 
 export default function Shell() {
