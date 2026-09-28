@@ -1,0 +1,16 @@
+{
+  "season": "2025–26",
+  "firesDated": 9,
+  "prevented": 5,
+  "declined": 4,
+  "backTested": 3,
+  "declinedBurnedInsideWindow": 4,
+  "hectaresDated": 16810,
+  "interventionCost": 1141000,
+  "lossAvoided": 83741000,
+  "premiumSaved": 13637000,
+  "realisedLossOnDeclined": 26512000,
+  "scoredForecasts": 214,
+  "hitRate14": { "primer": 0.9, "pof": 0.52, "fwi": 0.41, "sat": 0.36 },
+  "brierScore": { "primer": 0.061, "pof": 0.148, "fwi": 0.176, "sat": 0.193 }
+}

@@ -1,9 +1,9 @@
 {
-  "_note": "Placeholder figures for the shell. Will be computed from dated fires as the slider moves.",
+  "_note": "Totals for every dated fire in the next 30 days, written by scripts/generateData.mjs from fires.json.",
   "title": "Next 30 days",
-  "tivWillBurn": 41800000,
-  "premiumAtRisk": 3900000,
+  "tivWillBurn": 128555000,
+  "premiumAtRisk": 13129000,
   "datedFires": 6,
-  "homesInPath": 287,
-  "preventableIfIntervened": 36200000
+  "homesInPath": 230,
+  "preventableIfIntervened": 76074000
 }

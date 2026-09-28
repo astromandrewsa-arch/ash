@@ -1,0 +1,34 @@
+{
+  "leadTimes": [7, 14, 21, 30],
+  "models": [
+    {
+      "id": "primer",
+      "name": "PRIMER",
+      "owner": "Pyrome",
+      "isPrimer": true,
+      "description": "Fuel-state date model: dates hectares whose accumulated fire probability reaches 90% inside a set window.",
+      "hitRate": { "7": 0.94, "14": 0.9, "21": 0.84, "30": 0.78 }
+    },
+    {
+      "id": "pof",
+      "name": "PoF Grid",
+      "owner": "Comparison model",
+      "description": "ECMWF-style probability-of-fire grid driven by forecast weather and fuel indices.",
+      "hitRate": { "7": 0.71, "14": 0.52, "21": 0.34, "30": 0.21 }
+    },
+    {
+      "id": "fwi",
+      "name": "FWI",
+      "owner": "Comparison model",
+      "description": "Fire-weather index from temperature, humidity, wind and rainfall.",
+      "hitRate": { "7": 0.63, "14": 0.41, "21": 0.24, "30": 0.12 }
+    },
+    {
+      "id": "sat",
+      "name": "SatRisk",
+      "owner": "Comparison model",
+      "description": "Satellite risk score from vegetation greenness and land-surface temperature.",
+      "hitRate": { "7": 0.58, "14": 0.36, "21": 0.19, "30": 0.09 }
+    }
+  ]
+}

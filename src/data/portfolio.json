@@ -1,9 +1,9 @@
 {
-  "_note": "Placeholder figures for the shell. Replaced by scripts/generateData.mjs once homes are generated.",
-  "options": [
-    { "id": "demo-tx-ho", "label": "Portfolio: Demo Carrier — Texas HO book" }
-  ],
-  "tiv": 362400000,
-  "homesCovered": 604,
-  "hectaresUnderForecast": 18450
+  "_note": "Totals written by scripts/generateData.mjs from coverageAreas.json and homes.json.",
+  "options": [{ "id": "demo-tx-ho", "label": "Portfolio: Demo Carrier — Texas HO book" }],
+  "tiv": 326366000,
+  "homesCovered": 601,
+  "hectaresUnderForecast": 68270,
+  "annualPremium": 2021082,
+  "baselineAal": 1469000
 }
