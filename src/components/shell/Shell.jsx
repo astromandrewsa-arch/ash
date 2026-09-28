@@ -13,10 +13,12 @@ import DetailDrawer from '../drawer/DetailDrawer.jsx'
 import PlaceholderPage from '../pages/PlaceholderPage.jsx'
 import LocationsAtRiskPage from '../pages/LocationsAtRiskPage.jsx'
 import NegotiationChannelPage from '../pages/NegotiationChannelPage.jsx'
+import AccuracyPage from '../pages/AccuracyPage.jsx'
 
 const PAGES = {
   locations: LocationsAtRiskPage,
   negotiation: NegotiationChannelPage,
+  accuracy: AccuracyPage,
 }
 
 export default function Shell() {

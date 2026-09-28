@@ -469,17 +469,17 @@ const MODELS = [
     hitRate: { 7: 0.94, 14: 0.9, 21: 0.84, 30: 0.78 }, brierScore: 0.061,
   },
   {
-    id: 'pof', name: 'PoF Grid', owner: 'Comparison model',
+    id: 'pof', name: 'PoF Grid', owner: 'Comparison model', kind: 'an ECMWF-style probability-of-fire grid',
     description: 'ECMWF-style probability-of-fire grid driven by forecast weather and fuel indices.',
     hitRate: { 7: 0.71, 14: 0.52, 21: 0.34, 30: 0.21 }, brierScore: 0.148,
   },
   {
-    id: 'fwi', name: 'FWI', owner: 'Comparison model',
+    id: 'fwi', name: 'FWI', owner: 'Comparison model', kind: 'a fire-weather index',
     description: 'Fire-weather index from temperature, humidity, wind and rainfall.',
     hitRate: { 7: 0.63, 14: 0.41, 21: 0.24, 30: 0.12 }, brierScore: 0.176,
   },
   {
-    id: 'sat', name: 'SatRisk', owner: 'Comparison model',
+    id: 'sat', name: 'SatRisk', owner: 'Comparison model', kind: 'a satellite risk score',
     description: 'Satellite risk score from vegetation greenness and land-surface temperature.',
     hitRate: { 7: 0.58, 14: 0.36, 21: 0.19, 30: 0.09 }, brierScore: 0.193,
   },
