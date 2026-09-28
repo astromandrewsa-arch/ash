@@ -1,0 +1,11 @@
+{
+  "layers": [
+    { "id": "coverage", "label": "Coverage areas", "swatch": "coverage", "defaultOn": true },
+    { "id": "homes", "label": "Homes (building level)", "swatch": "homes", "defaultOn": true },
+    { "id": "fires", "label": "Dated fires", "swatch": "fire", "defaultOn": true },
+    { "id": "spread", "label": "Spread paths", "swatch": "spread", "defaultOn": true },
+    { "id": "fuelGrid", "label": "Fuel-state grid (200 m)", "swatch": "fuel", "defaultOn": false },
+    { "id": "sensors", "label": "Sensor sites", "swatch": "sensor", "defaultOn": false },
+    { "id": "interventions", "label": "Intervention status", "swatch": "intervention", "defaultOn": true }
+  ]
+}

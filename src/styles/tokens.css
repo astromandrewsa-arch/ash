@@ -1,0 +1,35 @@
+/* Pyrome design tokens (CLAUDE.md §2). Change colours here, never in components. */
+:root {
+  /* Brand */
+  --pyrome-orange: #E2561B;
+  --charcoal: #1C1C1C;
+  --warm-grey: #F3F1EC;
+  --pale-ember: #FBEFE8;
+
+  /* Data colours */
+  --comparison-blue: #2B6CB0; /* other models in charts */
+  --homes-yellow: #F5C518;    /* coverage areas and homes */
+  --fire-red: #D7263D;        /* predicted fire and engulfed homes */
+  --savings-green: #1E9E5A;   /* net savings */
+
+  /* Supporting neutrals */
+  --white: #FFFFFF;
+  --text-muted: #6B6760;
+  --text-subtle: #8F8A80;
+  --border: #E4E0D8;
+  --rail-text: rgba(255, 255, 255, 0.62);
+  --rail-hover: rgba(255, 255, 255, 0.08);
+
+  /* Type */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Layout */
+  --rail-width: 64px;
+  --topbar-height: 56px;
+  --drawer-width: 420px;
+  --left-panel-width: 340px;
+  --overlay-gap: 16px;
+  --radius: 8px;
+  --shadow-panel: 0 4px 18px rgba(28, 28, 28, 0.22);
+  --ease: 300ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}

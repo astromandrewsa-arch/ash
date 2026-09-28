@@ -1,0 +1,9 @@
+{
+  "_note": "Placeholder figures for the shell. Will be computed from dated fires as the slider moves.",
+  "title": "Next 30 days",
+  "tivWillBurn": 41800000,
+  "premiumAtRisk": 3900000,
+  "datedFires": 6,
+  "homesInPath": 287,
+  "preventableIfIntervened": 36200000
+}

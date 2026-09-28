@@ -1,0 +1,9 @@
+{
+  "_note": "Placeholder figures for the shell. Replaced by scripts/generateData.mjs once homes are generated.",
+  "options": [
+    { "id": "demo-tx-ho", "label": "Portfolio: Demo Carrier — Texas HO book" }
+  ],
+  "tiv": 362400000,
+  "homesCovered": 604,
+  "hectaresUnderForecast": 18450
+}
