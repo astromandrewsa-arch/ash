@@ -55,7 +55,7 @@ export default function AppProvider({ children }) {
   )
 
   const setDrawerMode = useCallback((mode) => {
-    setSelection((s) => (s ? { ...s, mode } : s))
+    setSelection((s) => (s ? { ...s, mode, animate: false } : s))
   }, [])
 
   const closeDrawer = useCallback(() => {
@@ -66,6 +66,15 @@ export default function AppProvider({ children }) {
   const markHandedOff = useCallback((fireId) => {
     setHandedOff((prev) => new Set(prev).add(fireId))
   }, [])
+
+  /** "Pass to your dedicated Pyrome agent": switch the drawer to the agent view, animating the first time. */
+  const passToAgent = useCallback(
+    (fireId) => {
+      setSelection({ fireId, mode: 'agent', animate: !handedOff.has(fireId) })
+      markHandedOff(fireId)
+    },
+    [handedOff, markHandedOff],
+  )
 
   const flyToHome = useCallback((homeId) => {
     const home = homeById.get(homeId)
@@ -105,7 +114,7 @@ export default function AppProvider({ children }) {
       setDrawerMode,
       closeDrawer,
       handedOff,
-      markHandedOff,
+      passToAgent,
       helpOpen,
       setHelpOpen,
       highlightHomeId,
@@ -114,7 +123,7 @@ export default function AppProvider({ children }) {
     }),
     [
       activeView, daysUntilFire, layers, toggleLayer, preset, selection, openFire, setDrawerMode, closeDrawer,
-      handedOff, markHandedOff, helpOpen, highlightHomeId, flyToHome, registerMap,
+      handedOff, passToAgent, helpOpen, highlightHomeId, flyToHome, registerMap,
     ],
   )
 

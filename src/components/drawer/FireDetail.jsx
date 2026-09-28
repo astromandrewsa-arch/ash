@@ -19,7 +19,7 @@ export default function FireDetail({ fire }) {
         <IntensityBlock fire={fire} />
         <ExposureBlock fire={fire} />
         <InterventionBlock fire={fire} />
-        <button type="button" className="agent-button" onClick={() => passToAgent?.(fire.id)}>
+        <button type="button" className="agent-button" onClick={() => passToAgent(fire.id)}>
           Pass to your dedicated Pyrome agent
           <ArrowRight size={18} aria-hidden="true" />
         </button>

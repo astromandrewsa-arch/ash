@@ -6,5 +6,6 @@ export function mapPadding(withDrawer) {
   const left = cssPx('--left-panel-width') + gap * 2
   const right = withDrawer ? cssPx('--drawer-width') + gap * 2 : cssPx('--alert-card-width') + gap * 2
   const top = withDrawer ? cssPx('--alert-compact-clearance') : gap * 2
-  return { paddingTopLeft: [left, top], paddingBottomRight: [right, cssPx('--slider-clearance')] }
+  const bottom = cssPx(withDrawer ? '--slider-clearance-open' : '--slider-clearance')
+  return { paddingTopLeft: [left, top], paddingBottomRight: [right, bottom] }
 }
