@@ -1,27 +1,18 @@
-import { X } from 'lucide-react'
 import useApp from '../../state/useApp.js'
+import { fireById } from '../../lib/data.js'
+import FireDetail from './FireDetail.jsx'
+import AgentView from './AgentView.jsx'
 
+/** Right-hand drawer: the fire detail, or the agent process once handed off. */
 export default function DetailDrawer() {
-  const { drawerOpen, selection, closeDrawer } = useApp()
+  const { drawerOpen, selection } = useApp()
+  const fire = selection ? fireById[selection.fireId] : null
+  const mode = selection?.mode === 'agent' || !fire ? 'agent' : 'detail'
 
   return (
-    <aside
-      className={`drawer${drawerOpen ? ' is-open' : ''}`}
-      aria-label="Fire detail"
-      aria-hidden={!drawerOpen}
-      inert={!drawerOpen}
-    >
-      <header className="drawer-head">
-        <span className="drawer-title">{selection?.fireId ?? 'Fire detail'}</span>
-        <button type="button" className="icon-button" onClick={closeDrawer} aria-label="Close">
-          <X size={18} />
-        </button>
-      </header>
-      <div className="drawer-body">
-        <p className="drawer-empty">
-          Select a dated fire on the map to see its forecast, spread and Intervention Plan.
-        </p>
-      </div>
+    <aside className={`drawer${drawerOpen ? ' is-open' : ''}`} aria-label="Fire detail" aria-hidden={!drawerOpen} inert={!drawerOpen}>
+      {selection && mode === 'detail' && <FireDetail key={fire.id} fire={fire} />}
+      {selection && mode === 'agent' && <AgentView key={selection.fireId} fireId={selection.fireId} />}
     </aside>
   )
 }

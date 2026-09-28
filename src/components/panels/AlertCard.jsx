@@ -6,7 +6,7 @@ import useApp from '../../state/useApp.js'
 import AnimatedValue from '../common/AnimatedValue.jsx'
 
 export default function AlertCard() {
-  const { daysUntilFire, preset } = useApp()
+  const { daysUntilFire, preset, drawerOpen } = useApp()
   const totals = fireTotals(visibleFires(daysUntilFire))
 
   const rows = [
@@ -17,7 +17,7 @@ export default function AlertCard() {
   ]
 
   return (
-    <aside className="card alert-card" aria-label={alertSummary.title} aria-live="polite">
+    <aside className={`card alert-card${drawerOpen ? ' is-compact' : ''}`} aria-label={alertSummary.title} aria-live="polite">
       <header className="alert-card-head">
         <TriangleAlert size={16} aria-hidden="true" />
         <span>{alertSummary.title}</span>
@@ -27,6 +27,10 @@ export default function AlertCard() {
         <span className="alert-card-hero-label">Total insured value that will burn</span>
         <span className="alert-card-hero-value">
           <AnimatedValue value={totals.tivInPath} format={formatUSDCompact} />
+        </span>
+        {/* While a fire is open the card shrinks to this line so the map stays clear. */}
+        <span className="alert-card-compact-line">
+          {totals.datedFires} fires · {formatNumber(totals.homesInPath)} homes · {formatUSDCompact(totals.preventable)} preventable
         </span>
       </div>
       <dl className="alert-card-rows">

@@ -10,7 +10,7 @@ function footprintStyles() {
     // A 2 px stroke keeps each home visible as a dot at town zoom, before it resolves to a building.
     styles = {
       home: { color: c.yellow, weight: 2, opacity: 1, fillColor: c.yellow, fillOpacity: 0.95 },
-      burning: { color: c.red, weight: 2, opacity: 1, fillColor: c.red, fillOpacity: 0.95 },
+      burning: { color: '#FFFFFF', weight: 1.2, opacity: 1, fillColor: c.red, fillOpacity: 1 },
     }
   }
   return styles
