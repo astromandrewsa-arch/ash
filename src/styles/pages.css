@@ -736,3 +736,359 @@
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+/* ---------- Reports ---------- */
+.report-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  max-width: 1000px;
+  padding: 28px 32px;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgba(28, 28, 28, 0.08);
+}
+
+.report-hero h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.report-hero p {
+  margin: 6px 0 0;
+  max-width: 540px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.export-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding: 16px 26px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--pyrome-orange);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--pyrome-orange) 40%, transparent);
+  transition: background 150ms, transform 150ms, box-shadow 150ms;
+}
+
+.export-button:hover {
+  background: #C9470F;
+  transform: translateY(-1px);
+}
+
+.export-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.report-file {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius);
+  background: var(--warm-grey);
+}
+
+.report-file strong {
+  display: block;
+  font-size: 13.5px;
+}
+
+.report-file span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.report-file-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 48px;
+  border-radius: 6px;
+  background: var(--fire-red);
+  color: var(--white) !important;
+  font-size: 11px !important;
+  font-weight: 800;
+}
+
+.report-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: sec;
+}
+
+.report-contents li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px 10px 42px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  counter-increment: sec;
+}
+
+.report-contents li::before {
+  content: counter(sec);
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--pale-ember);
+  color: var(--pyrome-orange);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.report-contents strong {
+  font-size: 13.5px;
+}
+
+.report-contents span {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.report-contents em {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--pyrome-orange);
+}
+
+/* ---------- Modal ---------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(28, 28, 28, 0.5);
+  animation: fade-in 180ms ease-out;
+}
+
+.modal {
+  max-width: 100%;
+  max-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  outline: none;
+  animation: modal-in 220ms cubic-bezier(0.2, 0.8, 0.3, 1.1);
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 18px 12px;
+}
+
+.modal-head h2 {
+  flex: 1;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.modal-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--pale-ember);
+  color: var(--pyrome-orange);
+}
+
+.modal-body {
+  overflow-y: auto;
+  padding: 4px 18px 18px;
+}
+
+.modal-subhead {
+  margin: 16px 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.modal-foot {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 18px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  transition: background 150ms, border-color 150ms;
+}
+
+.btn-primary {
+  border: 0;
+  background: var(--pyrome-orange);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: #C9470F;
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  background: var(--white);
+}
+
+.btn-secondary:hover {
+  background: var(--warm-grey);
+}
+
+.help-terms section + section {
+  margin-top: 14px;
+}
+
+.help-terms h3 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--pyrome-orange);
+}
+
+.help-terms p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+/* ---------- Loading skeleton ---------- */
+.sk {
+  display: block;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #E7E3DB 0%, #F1EEE8 50%, #E7E3DB 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1s linear infinite;
+}
+
+.sk-head {
+  display: flex;
+  gap: 14px;
+}
+
+.sk-head > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sk-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+}
+
+.sk-title {
+  width: 280px;
+  height: 24px;
+}
+
+.sk-line {
+  width: 420px;
+  height: 14px;
+}
+
+.sk-tile {
+  height: 96px;
+}
+
+.sk-block {
+  height: 380px;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* ---------- Search feedback ---------- */
+.search {
+  position: relative;
+}
+
+.search-miss {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--charcoal);
+  color: var(--white);
+  font-size: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Active states ---------- */
+.rail-item:active,
+.icon-button:active,
+.chip:active,
+.spread-btn:active:not(:disabled),
+.segmented-item:active {
+  transform: scale(0.96);
+}
+
+.avatar {
+  cursor: default;
+  transition: box-shadow 150ms;
+}
+
+.avatar:hover {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--pyrome-orange) 35%, transparent);
+}
