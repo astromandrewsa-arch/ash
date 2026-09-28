@@ -1,11 +1,14 @@
 {
-  "center": [31.3, -99.5],
-  "zoom": 6,
   "minZoom": 5,
   "maxZoom": 19,
+  "homesMinZoom": 11,
+  "areaLabelMinZoom": 9,
+  "fireZoom": 13,
+  "homeZoom": 17,
   "tiles": {
     "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
     "attribution": "Imagery &copy; Esri, Maxar, Earthstar Geographics",
     "maxNativeZoom": 18
-  }
+  },
+  "fuelGridOpacity": 0.55
 }

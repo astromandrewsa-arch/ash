@@ -1,0 +1,256 @@
+/* ---------- Map layers ---------- */
+.fuel-grid-img {
+  image-rendering: pixelated;
+}
+
+/* Coverage-area labels */
+.area-label-icon {
+  background: none;
+  border: 0;
+}
+
+.area-label {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  color: var(--white);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 0 1px rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+}
+
+.area-label strong {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.area-label span {
+  font-size: 10.5px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.area-label.is-near {
+  transform: translate(-50%, calc(-100% - 6px));
+  align-items: center;
+}
+
+/* Zoomed out: centred above or below the area's home cluster. */
+.area-label.is-up,
+.area-label.is-down {
+  align-items: center;
+}
+
+.area-label.is-up {
+  align-items: flex-end;
+  transform: translate(calc(-100% + 14px), calc(-100% - 18px));
+}
+
+.area-label.is-down {
+  transform: translate(-50%, 20px);
+}
+
+/* Home clusters below town zoom */
+.home-cluster-icon {
+  background: none;
+  border: 0;
+}
+
+.home-cluster {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--homes-yellow);
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--homes-yellow) 35%, transparent), 0 2px 6px rgba(0, 0, 0, 0.4);
+  color: var(--charcoal);
+  font: 700 11px var(--font-sans);
+  cursor: pointer;
+  transition: transform 150ms;
+}
+
+.home-cluster:hover {
+  transform: scale(1.12);
+}
+
+/* Fire markers */
+.fire-marker {
+  background: none;
+  border: 0;
+}
+
+.fire-pin {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  animation: fire-appear 450ms cubic-bezier(0.2, 0.9, 0.3, 1.4);
+}
+
+.fire-pin-dot {
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background: var(--fire-red);
+  border: 2px solid var(--white);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.fire-pin-pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--fire-red);
+  animation: fire-pulse 1.6s ease-out infinite;
+}
+
+.fire-pin.has-ring::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 3px solid var(--rag, var(--white));
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+}
+
+.fire-pin.rag-red {
+  --rag: var(--fire-red);
+}
+
+.fire-pin.rag-amber {
+  --rag: var(--rag-amber);
+}
+
+.fire-pin.rag-green {
+  --rag: var(--savings-green);
+}
+
+.fire-pin.is-selected .fire-pin-dot {
+  inset: 0;
+}
+
+@keyframes fire-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(3.2);
+    opacity: 0;
+  }
+}
+
+@keyframes fire-appear {
+  from {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fire-label {
+  position: absolute;
+  left: 26px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: rgba(28, 28, 28, 0.88);
+  border-left: 3px solid var(--fire-red);
+  color: var(--white);
+  font-family: var(--font-sans);
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  animation: fire-appear 450ms ease-out;
+}
+
+.fire-label.side-up {
+  top: -6px;
+  transform: translateY(-100%);
+}
+
+.fire-label.side-down {
+  top: 24px;
+  transform: none;
+}
+
+.fire-label-top {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.fire-label-top span {
+  color: #FFB199;
+  font-weight: 600;
+}
+
+.fire-label.is-compact .fire-label-meta {
+  display: none;
+}
+
+.fire-label-meta {
+  margin-top: 1px;
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Tooltips */
+.leaflet-tooltip.home-tooltip,
+.leaflet-tooltip.sensor-tooltip,
+.leaflet-tooltip.map-label-tooltip {
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.leaflet-tooltip.sensor-tooltip {
+  padding: 5px 8px;
+  font-size: 12px;
+}
+
+.home-tip {
+  min-width: 210px;
+}
+
+.home-tip-address {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.home-tip-locality {
+  margin-top: 1px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.home-tip-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3px 12px;
+  margin: 8px 0 0;
+  font-size: 12px;
+}
+
+.home-tip-grid dt {
+  color: var(--text-muted);
+}
+
+.home-tip-grid dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}

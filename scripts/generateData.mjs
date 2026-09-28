@@ -629,7 +629,84 @@ function buildArea(area, areaIndex) {
     localities,
     polygon: proj.polygon(polygon),
   }
-  return { areaRecord, homes, fire }
+  const fuelGrid = buildFuelGrid(area, proj, polygon, ignition)
+  const sensors = buildSensors(area, proj, polygon, homes)
+  return { areaRecord, homes, fire, fuelGrid, sensors }
+}
+
+// ---------------------------------------------------------------------------
+// Fuel-state grid and sensor sites (own seeds, so they never shift the data above)
+// ---------------------------------------------------------------------------
+
+const FUEL_CELL_M = 200
+const FUEL_MAX_DAYS = 35
+
+/**
+ * Days until the fuel crosses its threshold, on a 200 m grid clipped to the coverage area.
+ * Lowest (reddest) around the fire's ignition point, rising with distance, with some texture.
+ * Rows run north to south; -1 marks cells outside the coverage area.
+ */
+function buildFuelGrid(area, proj, polygon, ignition) {
+  const rng = makeRng(`fuel:${area.id}`)
+  const xs = polygon.map((p) => p[0])
+  const ys = polygon.map((p) => p[1])
+  const minX = Math.floor(Math.min(...xs) / FUEL_CELL_M) * FUEL_CELL_M
+  const maxX = Math.ceil(Math.max(...xs) / FUEL_CELL_M) * FUEL_CELL_M
+  const minY = Math.floor(Math.min(...ys) / FUEL_CELL_M) * FUEL_CELL_M
+  const maxY = Math.ceil(Math.max(...ys) / FUEL_CELL_M) * FUEL_CELL_M
+  const cols = (maxX - minX) / FUEL_CELL_M
+  const rows = (maxY - minY) / FUEL_CELL_M
+  const ph = [0, 0, 0].map(() => rng.between(0, 6.28))
+  const values = []
+  for (let r = 0; r < rows; r++) {
+    const y = maxY - (r + 0.5) * FUEL_CELL_M
+    const row = []
+    for (let c = 0; c < cols; c++) {
+      const x = minX + (c + 0.5) * FUEL_CELL_M
+      if (!pointInPolygon([x, y], polygon)) {
+        row.push(-1)
+        continue
+      }
+      const km = len(sub([x, y], ignition)) / 1000
+      const base = 1 + 27 * (1 - Math.exp(-km / 3.2))
+      const texture =
+        2.4 * Math.sin(x / 900 + ph[0]) * Math.cos(y / 1100 + ph[1]) + 1.6 * Math.sin((x + y) / 650 + ph[2]) + rng.between(-1.2, 1.2)
+      row.push(Math.max(0, Math.min(FUEL_MAX_DAYS, Math.round(base + texture))))
+    }
+    values.push(row)
+  }
+  const [north, west] = proj.toLatLon([minX, maxY])
+  const [south, east] = proj.toLatLon([maxX, minY])
+  return { areaId: area.id, cols, rows, bounds: [[south, west], [north, east]], values }
+}
+
+const SENSOR_TYPES = [
+  ['Fuel moisture probe', 0.5],
+  ['Weather mast', 0.3],
+  ['Smoke camera', 0.2],
+]
+
+function buildSensors(area, proj, polygon, homes) {
+  const rng = makeRng(`sensors:${area.id}`)
+  const count = rng.int(6, 10)
+  const xs = polygon.map((p) => p[0])
+  const ys = polygon.map((p) => p[1])
+  const pts = []
+  for (let tries = 0; pts.length < count; tries++) {
+    if (tries > 5000) throw new Error(`${area.id}: could not place sensors`)
+    const p = [rng.between(Math.min(...xs), Math.max(...xs)), rng.between(Math.min(...ys), Math.max(...ys))]
+    if (!pointInPolygon(p, polygon)) continue
+    if (pts.some((q) => len(sub(q, p)) < 1500)) continue
+    if (homes.some((h) => len(sub(h.xy, p)) < 250)) continue
+    pts.push(p)
+  }
+  return pts.map((p, i) => ({
+    id: `${area.code}-S${i + 1}`,
+    areaId: area.id,
+    type: rng.weighted(SENSOR_TYPES),
+    position: proj.toLatLon(p),
+    installed: `${rng.int(2024, 2026)}`,
+  }))
 }
 
 function buildFire(rng, { area, proj, u, v, ignition, roadDistance, distanceToTown, homes, primaryCount }) {
@@ -1062,9 +1139,27 @@ function buildProcesses(fireById, areaById, historicalById) {
     ctx.county = county
 
     const issueDay = -daysBetween(ISSUE_DATE, ctx.predictedDate)
+    const landownerLabel = `${p.landowner} (landowner)`
+    // Who the agent was dealing with for each entry, for the timeline meta line.
+    const counterpartFor = (type, text) => {
+      if (type === 'forecast') return 'PRIMER'
+      if (/landowner declined|landowner contacted/i.test(text) && type !== 'negotiation') return landownerLabel
+      if (text.includes(TAMFS) && text.includes(county)) return `${TAMFS} and ${county}`
+      if (text.includes(TAMFS) || text.startsWith('TAMFS')) return TAMFS
+      if (text.includes(county)) return county
+      return p.primaryCounterpart === 'tamfs' ? TAMFS : county
+    }
     const entries = p.events.map(([dayOrFn, type, text]) => {
       const day = typeof dayOrFn === 'function' ? dayOrFn(ctx) : dayOrFn
-      const entry = { day, date: addDays(ctx.predictedDate, day), type, text: text(ctx) }
+      const body = text(ctx)
+      const entry = {
+        day,
+        date: addDays(ctx.predictedDate, day),
+        type,
+        text: body,
+        actor: type === 'forecast' ? 'PRIMER' : p.agent,
+        counterpart: counterpartFor(type, body),
+      }
       if (type === 'planned') entry.planned = true
       if (type === 'declined') entry.refusal = true
       if (type === 'agreed') entry.amounts = amounts
@@ -1086,13 +1181,15 @@ function buildProcesses(fireById, areaById, historicalById) {
       { key: 'landowner', ...landowner },
     ]
 
-    const documents = ['PRIMER forecast sheet']
+    const docRng = makeRng(`docs:${p.fireId}`)
+    const doc = (slug) => ({ name: `${p.fireId}_${slug}.pdf`, sizeKb: docRng.int(90, 1800) })
+    const documents = [doc('PRIMER_forecast_sheet')]
     if (['agreed', 'complete', 'prevented'].includes(p.stage)) {
-      documents.push('Intervention agreement', `Work plan — block ${docsBlockId}`, 'Landowner consent')
+      documents.push(doc('intervention_agreement'), doc(`work_plan_block_${docsBlockId}`), doc('landowner_consent'))
     }
-    if (['complete', 'prevented'].includes(p.stage)) documents.push('TAMFS completion sign-off')
-    if (p.stage === 'prevented') documents.push('Post-window verification')
-    if (p.stage === 'declined') documents.push('Refusal correspondence')
+    if (['complete', 'prevented'].includes(p.stage)) documents.push(doc('TAMFS_completion_signoff'))
+    if (p.stage === 'prevented') documents.push(doc('post_window_verification'))
+    if (p.stage === 'declined') documents.push(doc('refusal_correspondence'))
 
     return {
       fireId: p.fireId,
@@ -1135,7 +1232,7 @@ function format(value, indent = '') {
   if (Array.isArray(value)) {
     if (value.length === 0) return '[]'
     const items = value.map((x) => format(x, inner))
-    const coords = isPair(value) || value.every(isPair)
+    const coords = isPair(value) || value.every(isPair) || value.every((x) => typeof x === 'number')
     const line = `[${items.join(', ')}]`
     if (coords || (!line.includes('\n') && indent.length + line.length <= 110)) return line
     return `[\n${items.map((i) => inner + i).join(',\n')}\n${indent}]`
@@ -1219,6 +1316,8 @@ function main() {
   writeJson('coverageAreas.json', areas)
   writeJson('homes.json', homes)
   writeJson('fires.json', fireRecords)
+  writeJson('fuelGrid.json', { cellM: FUEL_CELL_M, maxDays: FUEL_MAX_DAYS, areas: built.map((b) => b.fuelGrid) })
+  writeJson('sensors.json', built.flatMap((b) => b.sensors))
   writeJson('agentTimelines.json', { stages: STAGES, processes })
   writeJson('historicalFires.json', historical)
   writeJson('models.json', models)

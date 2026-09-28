@@ -1,6 +1,6 @@
 import { Flame } from 'lucide-react'
-import useApp from '../state/useApp.js'
-import { VIEWS } from '../config/views.js'
+import useApp from '../../state/useApp.js'
+import { VIEWS } from '../../config/views.js'
 import RailButton from './RailButton.jsx'
 
 export default function IconRail() {

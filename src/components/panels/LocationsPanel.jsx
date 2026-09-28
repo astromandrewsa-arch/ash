@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Building2, ChevronDown } from 'lucide-react'
-import portfolio from '../data/portfolio.json'
-import { formatNumber, formatUSDCompact } from '../utils/format.js'
-import CollapsibleCard from './CollapsibleCard.jsx'
+import { areas, portfolio } from '../../lib/data.js'
+import { formatNumber, formatUSDCompact } from '../../lib/format.js'
+import CollapsibleCard from '../common/CollapsibleCard.jsx'
 
 export default function LocationsPanel() {
   const [portfolioId, setPortfolioId] = useState(portfolio.options[0].id)
@@ -16,11 +16,7 @@ export default function LocationsPanel() {
   return (
     <CollapsibleCard title="Your Locations" icon={Building2} className="locations-panel">
       <label className="select-control portfolio-select">
-        <select
-          value={portfolioId}
-          onChange={(e) => setPortfolioId(e.target.value)}
-          aria-label="Portfolio"
-        >
+        <select value={portfolioId} onChange={(e) => setPortfolioId(e.target.value)} aria-label="Portfolio">
           {portfolio.options.map((option) => (
             <option key={option.id} value={option.id}>
               {option.label}
@@ -38,6 +34,9 @@ export default function LocationsPanel() {
           </div>
         ))}
       </dl>
+      <p className="panel-footnote">
+        {areas.length} coverage areas · {formatUSDCompact(portfolio.annualPremium)} annual premium
+      </p>
     </CollapsibleCard>
   )
 }

@@ -1,0 +1,338 @@
+[
+  {
+    "id": "HC-S1",
+    "areaId": "hill-country",
+    "type": "Fuel moisture probe",
+    "position": [30.17492, -99.00985],
+    "installed": "2025"
+  },
+  {
+    "id": "HC-S2",
+    "areaId": "hill-country",
+    "type": "Fuel moisture probe",
+    "position": [30.20477, -99.01125],
+    "installed": "2025"
+  },
+  {
+    "id": "HC-S3",
+    "areaId": "hill-country",
+    "type": "Smoke camera",
+    "position": [30.16331, -99.02883],
+    "installed": "2024"
+  },
+  {
+    "id": "HC-S4",
+    "areaId": "hill-country",
+    "type": "Smoke camera",
+    "position": [30.13458, -98.95593],
+    "installed": "2025"
+  },
+  {
+    "id": "HC-S5",
+    "areaId": "hill-country",
+    "type": "Fuel moisture probe",
+    "position": [30.15644, -99.00604],
+    "installed": "2025"
+  },
+  {
+    "id": "HC-S6",
+    "areaId": "hill-country",
+    "type": "Fuel moisture probe",
+    "position": [30.13029, -98.98494],
+    "installed": "2024"
+  },
+  {
+    "id": "HC-S7",
+    "areaId": "hill-country",
+    "type": "Fuel moisture probe",
+    "position": [30.19098, -98.92236],
+    "installed": "2026"
+  },
+  {
+    "id": "PH-S1",
+    "areaId": "panhandle",
+    "type": "Fuel moisture probe",
+    "position": [35.05774, -102.06019],
+    "installed": "2024"
+  },
+  {
+    "id": "PH-S2",
+    "areaId": "panhandle",
+    "type": "Fuel moisture probe",
+    "position": [35.07525, -102.06702],
+    "installed": "2026"
+  },
+  {
+    "id": "PH-S3",
+    "areaId": "panhandle",
+    "type": "Smoke camera",
+    "position": [35.11951, -102.11494],
+    "installed": "2025"
+  },
+  {
+    "id": "PH-S4",
+    "areaId": "panhandle",
+    "type": "Weather mast",
+    "position": [35.07251, -102.13878],
+    "installed": "2026"
+  },
+  {
+    "id": "PH-S5",
+    "areaId": "panhandle",
+    "type": "Fuel moisture probe",
+    "position": [35.03665, -102.07111],
+    "installed": "2024"
+  },
+  {
+    "id": "PH-S6",
+    "areaId": "panhandle",
+    "type": "Fuel moisture probe",
+    "position": [35.1119, -102.05367],
+    "installed": "2025"
+  },
+  {
+    "id": "PH-S7",
+    "areaId": "panhandle",
+    "type": "Weather mast",
+    "position": [35.12898, -102.08845],
+    "installed": "2026"
+  },
+  {
+    "id": "PH-S8",
+    "areaId": "panhandle",
+    "type": "Smoke camera",
+    "position": [35.03768, -102.11027],
+    "installed": "2026"
+  },
+  {
+    "id": "PH-S9",
+    "areaId": "panhandle",
+    "type": "Fuel moisture probe",
+    "position": [35.08825, -102.05363],
+    "installed": "2026"
+  },
+  {
+    "id": "PH-S10",
+    "areaId": "panhandle",
+    "type": "Smoke camera",
+    "position": [35.06948, -102.08714],
+    "installed": "2025"
+  },
+  {
+    "id": "CT-S1",
+    "areaId": "cross-timbers",
+    "type": "Fuel moisture probe",
+    "position": [33.12513, -98.51749],
+    "installed": "2025"
+  },
+  {
+    "id": "CT-S2",
+    "areaId": "cross-timbers",
+    "type": "Fuel moisture probe",
+    "position": [33.13043, -98.47598],
+    "installed": "2025"
+  },
+  {
+    "id": "CT-S3",
+    "areaId": "cross-timbers",
+    "type": "Weather mast",
+    "position": [33.11653, -98.43723],
+    "installed": "2024"
+  },
+  {
+    "id": "CT-S4",
+    "areaId": "cross-timbers",
+    "type": "Fuel moisture probe",
+    "position": [33.06335, -98.41852],
+    "installed": "2026"
+  },
+  {
+    "id": "CT-S5",
+    "areaId": "cross-timbers",
+    "type": "Fuel moisture probe",
+    "position": [33.05136, -98.44582],
+    "installed": "2025"
+  },
+  {
+    "id": "CT-S6",
+    "areaId": "cross-timbers",
+    "type": "Weather mast",
+    "position": [33.08141, -98.4763],
+    "installed": "2026"
+  },
+  {
+    "id": "CT-S7",
+    "areaId": "cross-timbers",
+    "type": "Fuel moisture probe",
+    "position": [33.09722, -98.51886],
+    "installed": "2025"
+  },
+  {
+    "id": "QD-S1",
+    "areaId": "bastrop",
+    "type": "Smoke camera",
+    "position": [30.10275, -97.18122],
+    "installed": "2024"
+  },
+  {
+    "id": "QD-S2",
+    "areaId": "bastrop",
+    "type": "Fuel moisture probe",
+    "position": [30.05945, -97.26715],
+    "installed": "2025"
+  },
+  {
+    "id": "QD-S3",
+    "areaId": "bastrop",
+    "type": "Fuel moisture probe",
+    "position": [30.0971, -97.25782],
+    "installed": "2026"
+  },
+  {
+    "id": "QD-S4",
+    "areaId": "bastrop",
+    "type": "Fuel moisture probe",
+    "position": [30.06839, -97.22615],
+    "installed": "2026"
+  },
+  {
+    "id": "QD-S5",
+    "areaId": "bastrop",
+    "type": "Fuel moisture probe",
+    "position": [30.12177, -97.20652],
+    "installed": "2026"
+  },
+  {
+    "id": "QD-S6",
+    "areaId": "bastrop",
+    "type": "Smoke camera",
+    "position": [30.15395, -97.24139],
+    "installed": "2026"
+  },
+  {
+    "id": "QD-S7",
+    "areaId": "bastrop",
+    "type": "Smoke camera",
+    "position": [30.14307, -97.26406],
+    "installed": "2026"
+  },
+  {
+    "id": "QD-S8",
+    "areaId": "bastrop",
+    "type": "Smoke camera",
+    "position": [30.11701, -97.24379],
+    "installed": "2024"
+  },
+  {
+    "id": "PP-S1",
+    "areaId": "palo-pinto",
+    "type": "Fuel moisture probe",
+    "position": [32.89084, -98.19032],
+    "installed": "2025"
+  },
+  {
+    "id": "PP-S2",
+    "areaId": "palo-pinto",
+    "type": "Smoke camera",
+    "position": [32.92801, -98.22587],
+    "installed": "2025"
+  },
+  {
+    "id": "PP-S3",
+    "areaId": "palo-pinto",
+    "type": "Fuel moisture probe",
+    "position": [32.91355, -98.23432],
+    "installed": "2024"
+  },
+  {
+    "id": "PP-S4",
+    "areaId": "palo-pinto",
+    "type": "Weather mast",
+    "position": [32.86197, -98.2388],
+    "installed": "2026"
+  },
+  {
+    "id": "PP-S5",
+    "areaId": "palo-pinto",
+    "type": "Fuel moisture probe",
+    "position": [32.9179, -98.19946],
+    "installed": "2024"
+  },
+  {
+    "id": "PP-S6",
+    "areaId": "palo-pinto",
+    "type": "Fuel moisture probe",
+    "position": [32.87443, -98.17472],
+    "installed": "2025"
+  },
+  {
+    "id": "WF-S1",
+    "areaId": "wichita-falls",
+    "type": "Fuel moisture probe",
+    "position": [34.00939, -98.57921],
+    "installed": "2024"
+  },
+  {
+    "id": "WF-S2",
+    "areaId": "wichita-falls",
+    "type": "Smoke camera",
+    "position": [34.0437, -98.62061],
+    "installed": "2025"
+  },
+  {
+    "id": "WF-S3",
+    "areaId": "wichita-falls",
+    "type": "Smoke camera",
+    "position": [33.96177, -98.64687],
+    "installed": "2025"
+  },
+  {
+    "id": "WF-S4",
+    "areaId": "wichita-falls",
+    "type": "Weather mast",
+    "position": [34.03779, -98.64547],
+    "installed": "2024"
+  },
+  {
+    "id": "WF-S5",
+    "areaId": "wichita-falls",
+    "type": "Fuel moisture probe",
+    "position": [34.0195, -98.67481],
+    "installed": "2024"
+  },
+  {
+    "id": "WF-S6",
+    "areaId": "wichita-falls",
+    "type": "Smoke camera",
+    "position": [33.98671, -98.63223],
+    "installed": "2026"
+  },
+  {
+    "id": "WF-S7",
+    "areaId": "wichita-falls",
+    "type": "Fuel moisture probe",
+    "position": [33.97709, -98.61047],
+    "installed": "2024"
+  },
+  {
+    "id": "WF-S8",
+    "areaId": "wichita-falls",
+    "type": "Fuel moisture probe",
+    "position": [33.99167, -98.69902],
+    "installed": "2024"
+  },
+  {
+    "id": "WF-S9",
+    "areaId": "wichita-falls",
+    "type": "Smoke camera",
+    "position": [33.9734, -98.62763],
+    "installed": "2025"
+  },
+  {
+    "id": "WF-S10",
+    "areaId": "wichita-falls",
+    "type": "Fuel moisture probe",
+    "position": [33.95456, -98.68023],
+    "installed": "2026"
+  }
+]

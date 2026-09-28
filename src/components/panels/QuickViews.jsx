@@ -1,8 +1,8 @@
 import { Layers } from 'lucide-react'
-import quickViews from '../data/quickViews.json'
-import useApp from '../state/useApp.js'
-import CollapsibleCard from './CollapsibleCard.jsx'
-import Toggle from './Toggle.jsx'
+import quickViews from '../../data/quickViews.json'
+import useApp from '../../state/useApp.js'
+import CollapsibleCard from '../common/CollapsibleCard.jsx'
+import Toggle from '../common/Toggle.jsx'
 
 export default function QuickViews() {
   const { layers, toggleLayer } = useApp()

@@ -2,10 +2,44 @@
   "model": "PRIMER",
   "region": "Texas",
   "issued": "2026-09-28T06:00:00-05:00",
+  "issueDate": "2026-09-28",
   "options": [
     {
       "id": "primer-tx-2026-09-28",
       "label": "PRIMER forecast — Texas — issued 28 Sep 2026, 06:00"
+    }
+  ],
+  "defaultPreset": "14d",
+  "presets": [
+    {
+      "id": "7d",
+      "label": "90% inside 7 days",
+      "shortLabel": "7-day",
+      "windowDays": 7,
+      "callLeadDays": 15,
+      "definition": "Hectares whose accumulated fire probability reaches 90% inside a 7-day window. The call is made 15 days ahead."
+    },
+    {
+      "id": "14d",
+      "label": "90% inside 14 days",
+      "shortLabel": "14-day",
+      "windowDays": 14,
+      "callLeadDays": 30,
+      "definition": "Hectares whose accumulated fire probability reaches 90% inside a 14-day window. The call is made 30 days ahead."
+    }
+  ],
+  "terms": [
+    {
+      "term": "90% inside 7 days",
+      "text": "PRIMER dates a hectare when its accumulated fire probability reaches 90% inside a 7-day window. This is the short-range call, made 15 days before the window opens, when the fuel-state trajectory is tight enough to name the week."
+    },
+    {
+      "term": "90% inside 14 days",
+      "text": "The same test over a 14-day window, made 30 days ahead. It gives the earliest usable warning; as the fuel keeps drying the window narrows, typically to four to seven days, without the 90% threshold changing."
+    },
+    {
+      "term": "Lead time",
+      "text": "The number of days between PRIMER's first call and the predicted fire date. Lead time is what makes intervention possible: a 30-day call leaves time to agree, fund and complete firebreaks or a prescribed burn before the window opens."
     }
   ]
 }

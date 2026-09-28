@@ -11,6 +11,12 @@
   --homes-yellow: #F5C518;    /* coverage areas and homes */
   --fire-red: #D7263D;        /* predicted fire and engulfed homes */
   --savings-green: #1E9E5A;   /* net savings */
+  --comparison-blue-2: #5B8FD0;
+  --comparison-blue-3: #9DBDE6;
+  --rag-amber: #E8A317;
+  --road-grey: #B8BCC2;
+  --river-blue: #3BA3E0;
+  --sensor-grey: #8A8F96;
 
   /* Supporting neutrals */
   --white: #FFFFFF;
@@ -28,6 +34,8 @@
   --topbar-height: 56px;
   --drawer-width: 420px;
   --left-panel-width: 340px;
+  --alert-card-width: 280px;
+  --slider-clearance: 190px;
   --overlay-gap: 16px;
   --radius: 8px;
   --shadow-panel: 0 4px 18px rgba(28, 28, 28, 0.22);

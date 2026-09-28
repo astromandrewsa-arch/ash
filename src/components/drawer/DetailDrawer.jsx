@@ -1,8 +1,8 @@
 import { X } from 'lucide-react'
-import useApp from '../state/useApp.js'
+import useApp from '../../state/useApp.js'
 
 export default function DetailDrawer() {
-  const { drawerOpen, selectedFireId, closeDrawer } = useApp()
+  const { drawerOpen, selection, closeDrawer } = useApp()
 
   return (
     <aside
@@ -12,7 +12,7 @@ export default function DetailDrawer() {
       inert={!drawerOpen}
     >
       <header className="drawer-head">
-        <span className="drawer-title">{selectedFireId ?? 'Fire detail'}</span>
+        <span className="drawer-title">{selection?.fireId ?? 'Fire detail'}</span>
         <button type="button" className="icon-button" onClick={closeDrawer} aria-label="Close">
           <X size={18} />
         </button>

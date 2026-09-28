@@ -1,0 +1,30 @@
+{
+  "seasonReport": {
+    "title": "PRIMER season report — Texas HO book, 2025–26",
+    "fileName": "Pyrome_season_report_TX_2025-26.pdf",
+    "fileSizeMb": 2.4,
+    "pages": 18,
+    "sections": [
+      {
+        "id": "dated-hectares",
+        "title": "Dated hectares",
+        "description": "Every hectare PRIMER dated at 90% across the book, by coverage area and window."
+      },
+      {
+        "id": "scored-forecasts",
+        "title": "Scored forecasts",
+        "description": "Each forecast scored against observed fires, with Brier scores and hit rates by lead time."
+      },
+      {
+        "id": "intervention-ledger",
+        "title": "Intervention ledger",
+        "description": "Every intervention passed to a Pyrome agent: cost, premium saved, loss avoided and outcome."
+      },
+      {
+        "id": "accuracy",
+        "title": "Accuracy vs other models",
+        "description": "PRIMER against the PoF Grid, FWI and SatRisk comparison models, fire by fire."
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 const numberFmt = new Intl.NumberFormat('en-US')
 
 export function formatNumber(value) {
-  return numberFmt.format(value)
+  return numberFmt.format(Math.round(value))
 }
 
 /** $148k, $2.1M, $1.2B — the compact money style used across the portal. */
@@ -10,10 +10,19 @@ export function formatUSDCompact(value) {
   if (abs >= 1e9) return `$${(value / 1e9).toFixed(1)}B`
   if (abs >= 1e6) return `$${(value / 1e6).toFixed(1)}M`
   if (abs >= 1e3) return `$${Math.round(value / 1e3)}k`
-  return `$${numberFmt.format(value)}`
+  return `$${numberFmt.format(Math.round(value))}`
+}
+
+/** 0.87 → "87%" */
+export function formatPct(fraction, dp = 0) {
+  return `${(fraction * 100).toFixed(dp)}%`
 }
 
 /** Relative day label with a typographic dash: –30, –7, 0. */
 export function formatDayOffset(value) {
   return value < 0 ? `–${Math.abs(value)}` : String(value)
+}
+
+export function formatHa(value) {
+  return `${numberFmt.format(Math.round(value))} ha`
 }

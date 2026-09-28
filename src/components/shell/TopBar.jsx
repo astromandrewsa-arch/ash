@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { CalendarClock, ChevronDown, Search } from 'lucide-react'
-import forecast from '../data/forecast.json'
-import user from '../data/user.json'
+import forecast from '../../data/forecast.json'
+import user from '../../data/user.json'
 
 export default function TopBar() {
   const [forecastId, setForecastId] = useState(forecast.options[0].id)

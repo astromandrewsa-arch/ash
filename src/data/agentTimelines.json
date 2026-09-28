@@ -35,57 +35,75 @@
           "day": -33,
           "date": "2026-09-09",
           "type": "forecast",
-          "text": "HC14 dated by PRIMER at 90%, 14-day window (6–19 Oct)."
+          "text": "HC14 dated by PRIMER at 90%, 14-day window (6–19 Oct).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -31,
           "date": "2026-09-11",
           "type": "engaged",
-          "text": "Pyrome agent Maria Delgado engaged Texas A&M Forest Service and Gillespie County."
+          "text": "Pyrome agent Maria Delgado engaged Texas A&M Forest Service and Gillespie County.",
+          "actor": "Maria Delgado",
+          "counterpart": "Texas A&M Forest Service and Gillespie County"
         },
         {
           "day": -28,
           "date": "2026-09-14",
           "type": "negotiation",
-          "text": "Gillespie County in negotiation to clear a woodland strip on the exact parcel; landowner contacted."
+          "text": "Gillespie County in negotiation to clear a woodland strip on the exact parcel; landowner contacted.",
+          "actor": "Maria Delgado",
+          "counterpart": "Gillespie County"
         },
         {
           "day": -26,
           "date": "2026-09-16",
           "type": "declined",
           "text": "Gillespie County declined — budget.",
+          "actor": "Maria Delgado",
+          "counterpart": "Gillespie County",
           "refusal": true
         },
         {
           "day": -25,
           "date": "2026-09-17",
           "type": "escalated",
-          "text": "Texas A&M Forest Service agreed to co-fund from its hazardous-fuels programme; county back at the table."
+          "text": "Texas A&M Forest Service agreed to co-fund from its hazardous-fuels programme; county back at the table.",
+          "actor": "Maria Delgado",
+          "counterpart": "Texas A&M Forest Service"
         },
         {
           "day": -22,
           "date": "2026-09-20",
           "type": "agreed",
           "text": "Firebreak and burn window agreed.",
+          "actor": "Maria Delgado",
+          "counterpart": "Gillespie County",
           "amounts": { "cost": 148000, "premiumSaved5yr": 2844000, "lossAvoided": 16646000 }
         },
         {
           "day": -19,
           "date": "2026-09-23",
           "type": "scheduled",
-          "text": "Crew scheduled: TAMFS engine crew and county volunteer fire department."
+          "text": "Crew scheduled: TAMFS engine crew and county volunteer fire department.",
+          "actor": "Maria Delgado",
+          "counterpart": "Gillespie County"
         },
         {
           "day": -15,
           "date": "2026-09-27",
           "type": "forecast",
-          "text": "Window narrowed from 14 to 4 days (11–14 Oct)."
+          "text": "Window narrowed from 14 to 4 days (11–14 Oct).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -11,
           "date": "2026-10-01",
           "type": "planned",
           "text": "Prescribed burn of block HC-14 (1–3 Oct).",
+          "actor": "Maria Delgado",
+          "counterpart": "Gillespie County",
           "planned": true
         }
       ],
@@ -94,7 +112,12 @@
         "premiumSaved5yr": 2844000,
         "lossAvoided": 16646000,
         "status": "Work agreed",
-        "documents": ["PRIMER forecast sheet", "Intervention agreement", "Work plan — block HC-14", "Landowner consent"]
+        "documents": [
+          { "name": "HC14_PRIMER_forecast_sheet.pdf", "sizeKb": 1188 },
+          { "name": "HC14_intervention_agreement.pdf", "sizeKb": 1637 },
+          { "name": "HC14_work_plan_block_HC-14.pdf", "sizeKb": 923 },
+          { "name": "HC14_landowner_consent.pdf", "sizeKb": 578 }
+        ]
       }
     },
     {
@@ -127,50 +150,66 @@
           "day": -31,
           "date": "2026-09-03",
           "type": "forecast",
-          "text": "PH03 dated by PRIMER at 90%, 14-day window (27 Sep–10 Oct)."
+          "text": "PH03 dated by PRIMER at 90%, 14-day window (27 Sep–10 Oct).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -30,
           "date": "2026-09-04",
           "type": "engaged",
-          "text": "Pyrome agent Tom Whitaker engaged Texas A&M Forest Service and Randall County."
+          "text": "Pyrome agent Tom Whitaker engaged Texas A&M Forest Service and Randall County.",
+          "actor": "Tom Whitaker",
+          "counterpart": "Texas A&M Forest Service and Randall County"
         },
         {
           "day": -27,
           "date": "2026-09-07",
           "type": "negotiation",
-          "text": "Randall County in negotiation to disc a mineral-soil break on the exact parcel; landowner contacted."
+          "text": "Randall County in negotiation to disc a mineral-soil break on the exact parcel; landowner contacted.",
+          "actor": "Tom Whitaker",
+          "counterpart": "Randall County"
         },
         {
           "day": -23,
           "date": "2026-09-11",
           "type": "agreed",
           "text": "Disced break and road-verge mowing agreed.",
+          "actor": "Tom Whitaker",
+          "counterpart": "Randall County",
           "amounts": { "cost": 125000, "premiumSaved5yr": 1544000, "lossAvoided": 9002000 }
         },
         {
           "day": -20,
           "date": "2026-09-14",
           "type": "scheduled",
-          "text": "County road crew and landowner equipment scheduled."
+          "text": "County road crew and landowner equipment scheduled.",
+          "actor": "Tom Whitaker",
+          "counterpart": "Randall County"
         },
         {
           "day": -15,
           "date": "2026-09-19",
           "type": "forecast",
-          "text": "Window narrowed from 14 to 5 days (3–7 Oct)."
+          "text": "Window narrowed from 14 to 5 days (3–7 Oct).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -11,
           "date": "2026-09-23",
           "type": "complete",
-          "text": "30 m break disced and county road verge mowed; TAMFS sign-off received."
+          "text": "30 m break disced and county road verge mowed; TAMFS sign-off received.",
+          "actor": "Tom Whitaker",
+          "counterpart": "Randall County"
         },
         {
           "day": 4,
           "date": "2026-10-08",
           "type": "planned",
           "text": "Post-window verification of block PH-03.",
+          "actor": "Tom Whitaker",
+          "counterpart": "Randall County",
           "planned": true
         }
       ],
@@ -180,11 +219,11 @@
         "lossAvoided": 9002000,
         "status": "Work complete",
         "documents": [
-          "PRIMER forecast sheet",
-          "Intervention agreement",
-          "Work plan — block PH-03",
-          "Landowner consent",
-          "TAMFS completion sign-off"
+          { "name": "PH03_PRIMER_forecast_sheet.pdf", "sizeKb": 1225 },
+          { "name": "PH03_intervention_agreement.pdf", "sizeKb": 1110 },
+          { "name": "PH03_work_plan_block_PH-03.pdf", "sizeKb": 739 },
+          { "name": "PH03_landowner_consent.pdf", "sizeKb": 689 },
+          { "name": "PH03_TAMFS_completion_signoff.pdf", "sizeKb": 1762 }
         ]
       }
     },
@@ -215,44 +254,58 @@
           "day": -34,
           "date": "2026-09-13",
           "type": "forecast",
-          "text": "CT22 dated by PRIMER at 90%, 14-day window (11–24 Oct)."
+          "text": "CT22 dated by PRIMER at 90%, 14-day window (11–24 Oct).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -32,
           "date": "2026-09-15",
           "type": "engaged",
-          "text": "Pyrome agent Luis Ortega engaged Texas A&M Forest Service and Young County."
+          "text": "Pyrome agent Luis Ortega engaged Texas A&M Forest Service and Young County.",
+          "actor": "Luis Ortega",
+          "counterpart": "Texas A&M Forest Service and Young County"
         },
         {
           "day": -29,
           "date": "2026-09-18",
           "type": "negotiation",
-          "text": "Young County in negotiation to thin a post oak strip on the exact parcel; landowner contacted."
+          "text": "Young County in negotiation to thin a post oak strip on the exact parcel; landowner contacted.",
+          "actor": "Luis Ortega",
+          "counterpart": "Young County"
         },
         {
           "day": -24,
           "date": "2026-09-23",
           "type": "declined",
           "text": "Landowner declined a prescribed burn — cattle on the lease; open to mechanical thinning.",
+          "actor": "Luis Ortega",
+          "counterpart": "J. McAllister (landowner)",
           "refusal": true
         },
         {
           "day": -21,
           "date": "2026-09-26",
           "type": "negotiation",
-          "text": "Revised plan (thinning, no burn) sent to Young County commissioners."
+          "text": "Revised plan (thinning, no burn) sent to Young County commissioners.",
+          "actor": "Luis Ortega",
+          "counterpart": "Young County"
         },
         {
           "day": -19,
           "date": "2026-09-28",
           "type": "forecast",
-          "text": "Window narrowed from 14 to 6 days (15–20 Oct)."
+          "text": "Window narrowed from 14 to 6 days (15–20 Oct).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -17,
           "date": "2026-09-30",
           "type": "planned",
           "text": "Young County commissioners vote on the thinning contract.",
+          "actor": "Luis Ortega",
+          "counterpart": "Young County",
           "planned": true
         }
       ],
@@ -261,7 +314,7 @@
         "premiumSaved5yr": 2319000,
         "lossAvoided": 13331000,
         "status": "Government in negotiation",
-        "documents": ["PRIMER forecast sheet"]
+        "documents": [{ "name": "CT22_PRIMER_forecast_sheet.pdf", "sizeKb": 631 }]
       }
     },
     {
@@ -291,31 +344,41 @@
           "day": -33,
           "date": "2026-09-21",
           "type": "forecast",
-          "text": "QD71 dated by PRIMER at 90%, 14-day window (18–31 Oct)."
+          "text": "QD71 dated by PRIMER at 90%, 14-day window (18–31 Oct).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -28,
           "date": "2026-09-26",
           "type": "engaged",
-          "text": "Pyrome agent Hannah Brooks engaged Bastrop County and Texas A&M Forest Service."
+          "text": "Pyrome agent Hannah Brooks engaged Bastrop County and Texas A&M Forest Service.",
+          "actor": "Hannah Brooks",
+          "counterpart": "Texas A&M Forest Service and Bastrop County"
         },
         {
           "day": -27,
           "date": "2026-09-27",
           "type": "negotiation",
-          "text": "Bastrop County in negotiation to clear pine litter and yaupon on the exact parcel; landowner contacted."
+          "text": "Bastrop County in negotiation to clear pine litter and yaupon on the exact parcel; landowner contacted.",
+          "actor": "Hannah Brooks",
+          "counterpart": "Bastrop County"
         },
         {
           "day": -26,
           "date": "2026-09-28",
           "type": "forecast",
-          "text": "Window narrowed from 14 to 5 days (23–27 Oct)."
+          "text": "Window narrowed from 14 to 5 days (23–27 Oct).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -24,
           "date": "2026-09-30",
           "type": "planned",
           "text": "Site walk with the Bastrop County fire marshal and landowner.",
+          "actor": "Hannah Brooks",
+          "counterpart": "Bastrop County",
           "planned": true
         }
       ],
@@ -324,7 +387,7 @@
         "premiumSaved5yr": 1927000,
         "lossAvoided": 11125000,
         "status": "Government in negotiation",
-        "documents": ["PRIMER forecast sheet"]
+        "documents": [{ "name": "QD71_PRIMER_forecast_sheet.pdf", "sizeKb": 1312 }]
       }
     },
     {
@@ -357,25 +420,33 @@
           "day": -32,
           "date": "2026-09-05",
           "type": "forecast",
-          "text": "PP08 dated by PRIMER at 90%, 14-day window (3–16 Oct)."
+          "text": "PP08 dated by PRIMER at 90%, 14-day window (3–16 Oct).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -30,
           "date": "2026-09-07",
           "type": "engaged",
-          "text": "Pyrome agent Luis Ortega engaged Texas A&M Forest Service and Palo Pinto County."
+          "text": "Pyrome agent Luis Ortega engaged Texas A&M Forest Service and Palo Pinto County.",
+          "actor": "Luis Ortega",
+          "counterpart": "Texas A&M Forest Service and Palo Pinto County"
         },
         {
           "day": -27,
           "date": "2026-09-10",
           "type": "negotiation",
-          "text": "Palo Pinto County in negotiation to shred a mesquite break on the exact parcel; landowner contacted."
+          "text": "Palo Pinto County in negotiation to shred a mesquite break on the exact parcel; landowner contacted.",
+          "actor": "Luis Ortega",
+          "counterpart": "Palo Pinto County"
         },
         {
           "day": -22,
           "date": "2026-09-15",
           "type": "declined",
           "text": "Palo Pinto County declined — budget.",
+          "actor": "Luis Ortega",
+          "counterpart": "Palo Pinto County",
           "refusal": true
         },
         {
@@ -383,25 +454,33 @@
           "date": "2026-09-19",
           "type": "declined",
           "text": "Landowner declined — grazing lease runs to December.",
+          "actor": "Luis Ortega",
+          "counterpart": "S. Pruitt (landowner)",
           "refusal": true
         },
         {
           "day": -15,
           "date": "2026-09-22",
           "type": "forecast",
-          "text": "Window narrowed from 14 to 4 days (6–9 Oct)."
+          "text": "Window narrowed from 14 to 4 days (6–9 Oct).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -10,
           "date": "2026-09-27",
           "type": "escalated",
-          "text": "Escalated to the Texas A&M Forest Service regional office for a state-funded break."
+          "text": "Escalated to the Texas A&M Forest Service regional office for a state-funded break.",
+          "actor": "Luis Ortega",
+          "counterpart": "Texas A&M Forest Service"
         },
         {
           "day": -7,
           "date": "2026-09-30",
           "type": "planned",
           "text": "TAMFS regional office decision due.",
+          "actor": "Luis Ortega",
+          "counterpart": "Texas A&M Forest Service",
           "planned": true
         }
       ],
@@ -410,7 +489,10 @@
         "premiumSaved5yr": 2125000,
         "lossAvoided": 12592000,
         "status": "Declined",
-        "documents": ["PRIMER forecast sheet", "Refusal correspondence"]
+        "documents": [
+          { "name": "PP08_PRIMER_forecast_sheet.pdf", "sizeKb": 776 },
+          { "name": "PP08_refusal_correspondence.pdf", "sizeKb": 1231 }
+        ]
       }
     },
     {
@@ -443,19 +525,25 @@
           "day": -30,
           "date": "2026-09-27",
           "type": "forecast",
-          "text": "WF15 dated by PRIMER at 90%, 14-day window (22 Oct–4 Nov)."
+          "text": "WF15 dated by PRIMER at 90%, 14-day window (22 Oct–4 Nov).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -29,
           "date": "2026-09-28",
           "type": "forecast",
-          "text": "Window narrowed from 14 to 7 days (25–31 Oct)."
+          "text": "Window narrowed from 14 to 7 days (25–31 Oct).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -28,
           "date": "2026-09-29",
           "type": "planned",
           "text": "Brief Wichita County emergency management and Texas A&M Forest Service.",
+          "actor": "Priya Raman",
+          "counterpart": "Texas A&M Forest Service and Wichita County",
           "planned": true
         }
       ],
@@ -464,7 +552,7 @@
         "premiumSaved5yr": 2370000,
         "lossAvoided": 13378000,
         "status": "Identified",
-        "documents": ["PRIMER forecast sheet"]
+        "documents": [{ "name": "WF15_PRIMER_forecast_sheet.pdf", "sizeKb": 746 }]
       }
     },
     {
@@ -494,50 +582,66 @@
           "day": -29,
           "date": "2026-07-29",
           "type": "forecast",
-          "text": "HC09 dated by PRIMER at 90%, 14-day window (22 Aug–4 Sep)."
+          "text": "HC09 dated by PRIMER at 90%, 14-day window (22 Aug–4 Sep).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -27,
           "date": "2026-07-31",
           "type": "engaged",
-          "text": "Pyrome agent Maria Delgado engaged Texas A&M Forest Service and Gillespie County."
+          "text": "Pyrome agent Maria Delgado engaged Texas A&M Forest Service and Gillespie County.",
+          "actor": "Maria Delgado",
+          "counterpart": "Texas A&M Forest Service and Gillespie County"
         },
         {
           "day": -24,
           "date": "2026-08-03",
           "type": "negotiation",
-          "text": "Gillespie County in negotiation to cut a firebreak on the exact parcel; landowner contacted."
+          "text": "Gillespie County in negotiation to cut a firebreak on the exact parcel; landowner contacted.",
+          "actor": "Maria Delgado",
+          "counterpart": "Gillespie County"
         },
         {
           "day": -20,
           "date": "2026-08-07",
           "type": "agreed",
           "text": "Firebreak and burn window agreed.",
+          "actor": "Maria Delgado",
+          "counterpart": "Gillespie County",
           "amounts": { "cost": 232000, "premiumSaved5yr": 3234000, "lossAvoided": 19862000 }
         },
         {
           "day": -17,
           "date": "2026-08-10",
           "type": "scheduled",
-          "text": "Crew scheduled: TAMFS engine crew and county volunteer fire department."
+          "text": "Crew scheduled: TAMFS engine crew and county volunteer fire department.",
+          "actor": "Maria Delgado",
+          "counterpart": "Gillespie County"
         },
         {
           "day": -15,
           "date": "2026-08-12",
           "type": "forecast",
-          "text": "Window narrowed from 14 to 5 days (26–30 Aug)."
+          "text": "Window narrowed from 14 to 5 days (26–30 Aug).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -11,
           "date": "2026-08-16",
           "type": "complete",
-          "text": "Firebreak cut and block HC-09 burned in the 14–16 Aug humidity window."
+          "text": "Firebreak cut and block HC-09 burned in the 14–16 Aug humidity window.",
+          "actor": "Maria Delgado",
+          "counterpart": "Gillespie County"
         },
         {
           "day": 4,
           "date": "2026-08-31",
           "type": "prevented",
-          "text": "Window closed with no ignition in the treated block. Fire prevented."
+          "text": "Window closed with no ignition in the treated block. Fire prevented.",
+          "actor": "Maria Delgado",
+          "counterpart": "Gillespie County"
         }
       ],
       "ledger": {
@@ -546,12 +650,12 @@
         "lossAvoided": 19862000,
         "status": "Fire prevented",
         "documents": [
-          "PRIMER forecast sheet",
-          "Intervention agreement",
-          "Work plan — block HC-09",
-          "Landowner consent",
-          "TAMFS completion sign-off",
-          "Post-window verification"
+          { "name": "HC09_PRIMER_forecast_sheet.pdf", "sizeKb": 575 },
+          { "name": "HC09_intervention_agreement.pdf", "sizeKb": 1330 },
+          { "name": "HC09_work_plan_block_HC-09.pdf", "sizeKb": 1105 },
+          { "name": "HC09_landowner_consent.pdf", "sizeKb": 1101 },
+          { "name": "HC09_TAMFS_completion_signoff.pdf", "sizeKb": 1226 },
+          { "name": "HC09_post_window_verification.pdf", "sizeKb": 434 }
         ]
       }
     },
@@ -585,25 +689,33 @@
           "day": -28,
           "date": "2026-07-22",
           "type": "forecast",
-          "text": "WF11 dated by PRIMER at 90%, 14-day window (14–27 Aug)."
+          "text": "WF11 dated by PRIMER at 90%, 14-day window (14–27 Aug).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": -26,
           "date": "2026-07-24",
           "type": "engaged",
-          "text": "Pyrome agent Priya Raman engaged Texas A&M Forest Service and Wichita County."
+          "text": "Pyrome agent Priya Raman engaged Texas A&M Forest Service and Wichita County.",
+          "actor": "Priya Raman",
+          "counterpart": "Texas A&M Forest Service and Wichita County"
         },
         {
           "day": -23,
           "date": "2026-07-27",
           "type": "negotiation",
-          "text": "Wichita County in negotiation to cut a firebreak on the exact parcel; landowner contacted."
+          "text": "Wichita County in negotiation to cut a firebreak on the exact parcel; landowner contacted.",
+          "actor": "Priya Raman",
+          "counterpart": "Wichita County"
         },
         {
           "day": -19,
           "date": "2026-07-31",
           "type": "declined",
           "text": "Wichita County declined — budget.",
+          "actor": "Priya Raman",
+          "counterpart": "Wichita County",
           "refusal": true
         },
         {
@@ -611,19 +723,25 @@
           "date": "2026-08-03",
           "type": "declined",
           "text": "Landowner declined — hay contract on the block.",
+          "actor": "Priya Raman",
+          "counterpart": "B. Delacroix (landowner)",
           "refusal": true
         },
         {
           "day": -15,
           "date": "2026-08-04",
           "type": "forecast",
-          "text": "Window narrowed from 14 to 4 days (18–21 Aug)."
+          "text": "Window narrowed from 14 to 4 days (18–21 Aug).",
+          "actor": "PRIMER",
+          "counterpart": "PRIMER"
         },
         {
           "day": 0,
           "date": "2026-08-19",
           "type": "burned",
           "text": "Fire ignited on 19 Aug, inside the predicted window; 22 insured homes lost.",
+          "actor": "Priya Raman",
+          "counterpart": "Wichita County",
           "amounts": { "realisedLoss": 8526000 }
         }
       ],
@@ -631,7 +749,10 @@
         "proposedCost": 158000,
         "realisedLoss": 8526000,
         "status": "Declined",
-        "documents": ["PRIMER forecast sheet", "Refusal correspondence"]
+        "documents": [
+          { "name": "WF11_PRIMER_forecast_sheet.pdf", "sizeKb": 1268 },
+          { "name": "WF11_refusal_correspondence.pdf", "sizeKb": 1095 }
+        ]
       }
     }
   ]
