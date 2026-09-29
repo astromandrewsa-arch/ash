@@ -53,7 +53,7 @@ export const FIRES = [
     fuel: fuel(81, -1.8, 93, 4.2, 5.4, 9.6, 12.6, 57, 46, 640, 44),
     lossTarget: { p90: 48e6, p50: 71e6, p25: 96e6 },
     exposureText: '40 km of Xcel line (430 poles), Turkey Track, 590 homes in Canadian and Stinnett, Borger refinery flank at h14, 9,000 cattle',
-    analogue: { name: 'Smokehouse Creek', year: 2024, acres: 1058482, homesLost: 500 },
+    analogue: { name: 'Smokehouse Creek', year: 2024, acres: 1058482, homesLost: null, structures: 500 },
   },
   {
     id: 'AU-02', name: 'Steiner Ranch', place: 'Austin, Steiner Ranch', state: 'TX', county: 'Travis County',
@@ -111,7 +111,7 @@ export const FIRES = [
     fit: [{ area: 'BAS-1', from: [30.122, -97.262], bearing: 270, homes: 410 }],
     lossTarget: { p90: 52e6, p50: 74e6, p25: 98e6 },
     exposureText: '410 homes, $132M TIV',
-    analogue: { name: 'Bastrop County Complex', year: 2011, acres: 34068, homesLost: 1645 },
+    analogue: { name: 'Bastrop County Complex', year: 2011, acres: 32400, homesLost: 1660 },
   },
   {
     id: 'CT-04', name: 'Carbon double-header', place: 'Cross Timbers, Carbon', state: 'TX', county: 'Eastland County',
@@ -201,7 +201,7 @@ export const FIRES = [
     fit: [{ area: 'PKL-2', bearing: 90, homes: 120 }],
     lossTarget: { p90: 24e6, p50: 33e6, p25: 42e6 },
     exposureText: '120 lake-shore homes, $54M TIV',
-    analogue: { name: 'Possum Kingdom Complex', year: 2011, acres: 126734, homesLost: 160 },
+    analogue: { name: 'Possum Kingdom Complex', year: 2011, acres: 126734, homesLost: 168 },
   },
   {
     id: 'RP-07', name: 'Matador–Waggoner outbreak', place: 'Rolling Plains, Matador Ranch', state: 'TX', county: 'Motley County',
@@ -235,7 +235,7 @@ export const FIRES = [
     fuel: fuel(79, -1.9, 94, 4.0, 5.1, 9.2, 12.2, 58, 47, 690, 48),
     lossTarget: { p90: 9e6, p50: 14e6, p25: 22e6 },
     exposureText: '12,000 ha pasture, 140 km fencing, 6,500 cattle, 3 ranch headquarters',
-    analogue: { name: 'Southern Plains outbreak', year: 2009, acres: 130000, homesLost: 150 },
+    analogue: { name: 'Southern Plains outbreak, 9 April (TX and OK)', year: 2009, acres: 250000, homesLost: 339 },
   },
   {
     id: 'PB-08', name: 'Colorado City ROW', place: 'Permian, Colorado City', state: 'TX', county: 'Mitchell County',
@@ -263,7 +263,7 @@ export const FIRES = [
     fuel: fuel(80, -1.7, 92, 4.3, 5.3, 9.4, 12.4, 55, 46, 670, 46),
     lossTarget: { p90: 12e6, p50: 19e6, p25: 31e6 },
     exposureText: 'Basin pipeline segment, 4 pump stations, 60 turbines, Delek on the flank',
-    analogue: { name: 'Windy Deuce', year: 2024, acres: 142206, homesLost: 50 },
+    analogue: { name: 'Windy Deuce', year: 2024, acres: 144045, homesLost: 50 },
   },
   {
     id: 'OK-09', name: 'Osage patch-burn', place: 'Osage County, Tallgrass Prairie', state: 'OK', county: 'Osage County',
@@ -321,7 +321,7 @@ export const FIRES = [
     fit: [{ area: 'STW-1', from: [36.058, -97.142], bearing: 315, homes: 310, range: [-1000, 5000] }],
     lossTarget: { p90: 41e6, p50: 57e6, p25: 76e6 },
     exposureText: '310 homes, $96M TIV, OG&E feeder, Cushing tank farm 31 h away on the flank (monitored, outside all bands)',
-    analogue: { name: 'Oklahoma outbreak', year: 2025, acres: 170000, homesLost: 530 },
+    analogue: { name: 'Oklahoma outbreak, 14 March', year: 2025, acres: 170000, homesLost: 515 },
   },
 ]
 
