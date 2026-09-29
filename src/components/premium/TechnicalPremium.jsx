@@ -3,9 +3,10 @@ import { formatUSDCompact } from '../../lib/format.js'
 import TechnicalFormula from './TechnicalFormula.jsx'
 import PricingTerms from './PricingTerms.jsx'
 import InfoButton from '../common/InfoButton.jsx'
+import PremiumGapBars from './PremiumGapBars.jsx'
 
 /** The technical premium formula (§15), its inputs, and what it gives for the selected bundle. */
-export default function TechnicalPremium({ bundle: b, pricing: p }) {
+export default function TechnicalPremium({ bundle: b, totals, pricing: p }) {
   const short = b.premiumGap > 0
   return (
     <section className="tech glass" aria-labelledby="tech-title">
@@ -27,6 +28,7 @@ export default function TechnicalPremium({ bundle: b, pricing: p }) {
           <PricingTerms pricing={p} />
         </div>
       </div>
+      <PremiumGapBars rows={[{ id: b.id, name: b.name, written: b.premium, technical: b.technicalPremium }, { id: 'book', name: 'All bundles', written: totals.premium, technical: totals.technicalPremium }]} />
       <p className="tech-bundle">
         <strong>{b.name}:</strong> ${b.primerRatePer1000.toFixed(1)} per $1,000 on {formatUSDCompact(b.tiv)} of TIV is a technical premium of{' '}
         <strong>{formatUSDCompact(b.technicalPremium)}</strong> against {formatUSDCompact(b.premium)} written,{' '}

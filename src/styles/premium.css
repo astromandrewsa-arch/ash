@@ -4,7 +4,7 @@
 .ctx-row {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 12px;
+  gap: 16px;
   margin-bottom: 16px;
 }
 
@@ -51,17 +51,11 @@
 }
 
 .ctx-value {
-  font-size: 19px;
-  line-height: 25px;
+  font-size: 22px;
+  line-height: 28px;
   font-weight: 750;
   letter-spacing: -0.01em;
   white-space: nowrap;
-}
-
-/* A three-figure value ("21.1% · 18.7% · 4.3%") steps down so every tile keeps one width. */
-.ctx-value.is-long {
-  font-size: 16px;
-  letter-spacing: -0.02em;
 }
 
 .ctx-note {
@@ -76,14 +70,19 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) 420px;
   gap: 16px;
-  align-items: start;
+  align-items: stretch;
 }
 
+/* Both columns end on one line: the technical premium card takes the left column's slack. */
 .prem-left {
   display: flex;
   flex-direction: column;
   gap: 16px;
   min-width: 0;
+}
+
+.prem-left > .tech {
+  flex: 1;
 }
 
 /* ---------- Bundle table ---------- */
@@ -175,39 +174,36 @@
 }
 
 .bundle-table tbody tr td {
-  transition: background var(--t-panel);
+  background-color: transparent;
+  transition: background-color var(--t-panel);
 }
 
-.bundle-table tbody tr.is-under td {
-  background: rgba(226, 86, 27, 0.1);
+/* Under-priced rows carry an orange edge and wash, over-priced rows a blue one; the rest of the
+   row stays neutral so the tint never turns muddy on the charcoal. */
+.bundle-table tbody tr.is-under td.bundle-name {
+  background-image: linear-gradient(90deg, rgba(226, 86, 27, 0.2), rgba(226, 86, 27, 0) 92%);
+  box-shadow: inset 3px 0 0 rgba(226, 86, 27, 0.75);
 }
 
-.bundle-table tbody tr.is-over td {
-  background: rgba(43, 108, 176, 0.1);
+.bundle-table tbody tr.is-over td.bundle-name {
+  background-image: linear-gradient(90deg, rgba(91, 141, 214, 0.24), rgba(91, 141, 214, 0) 92%);
+  box-shadow: inset 3px 0 0 rgba(91, 141, 214, 0.85);
 }
 
-.bundle-table tbody tr.is-under:hover td {
-  background: rgba(226, 86, 27, 0.15);
+.bundle-table tbody tr:hover td {
+  background-color: var(--tint);
 }
 
-.bundle-table tbody tr.is-over:hover td {
-  background: rgba(43, 108, 176, 0.17);
+.bundle-table tbody tr.is-selected td {
+  background-color: var(--tint-strong);
 }
 
-.bundle-table tbody tr.is-under.is-selected td {
-  background: rgba(226, 86, 27, 0.2);
+.bundle-table tbody tr.is-under.is-selected td.bundle-name {
+  box-shadow: inset 4px 0 0 var(--orange);
 }
 
-.bundle-table tbody tr.is-over.is-selected td {
-  background: rgba(43, 108, 176, 0.24);
-}
-
-.bundle-table tbody tr.is-selected td:first-child {
-  box-shadow: inset 3px 0 0 var(--orange);
-}
-
-.bundle-table tbody tr.is-over.is-selected td:first-child {
-  box-shadow: inset 3px 0 0 var(--blue-soft);
+.bundle-table tbody tr.is-over.is-selected td.bundle-name {
+  box-shadow: inset 4px 0 0 var(--blue-soft);
 }
 
 .bundle-table tbody tr:focus-visible {
@@ -296,8 +292,7 @@
 }
 
 .rec-cell strong,
-.rec-cell span,
-.rec-cell em {
+.rec-cell span {
   display: block;
 }
 
@@ -320,16 +315,10 @@
   line-height: 16px;
 }
 
-.rec-cell em {
-  max-width: 132px;
-  margin-left: auto;
-  overflow: hidden;
+.rec-cell sup {
+  margin-left: 1px;
   color: var(--muted);
-  font-size: 11px;
-  font-style: normal;
-  line-height: 15px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-size: 10px;
 }
 
 .bundle-table tfoot th,
@@ -701,41 +690,127 @@
 
 .season-ratios {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-  margin-top: 12px;
+  margin: 12px 0 0;
+  border-top: 1px solid var(--hairline);
 }
 
+/* Ratios as rows: the name and its definition on the left, the figure on the right. */
 .season-ratio {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.season-ratio dt {
+  display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
   min-width: 0;
-  padding: 9px 10px;
-  border: 1px solid var(--hairline);
-  border-radius: 8px;
-  background: var(--tint);
 }
 
-.season-ratio .label {
-  font-size: 9.5px;
-  line-height: 12px;
+.season-ratio dt span:last-child {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 15px;
 }
 
-.season-ratio strong {
-  font-size: 18px;
-  line-height: 23px;
+.season-ratio dd {
+  margin: 0;
+  font-size: 17px;
+  line-height: 22px;
   font-weight: 750;
   font-variant-numeric: tabular-nums;
-}
-
-.season-ratio span:last-child {
-  color: var(--muted);
-  font-size: 10.5px;
-  line-height: 14px;
 }
 
 .sci-map {
   width: calc(100% - 36px);
   margin: 16px 18px 0;
 }
+
+/* ---------- Written against technical premium ---------- */
+.tech {
+  display: flex;
+  flex-direction: column;
+}
+
+/* In a stretched card the formula block centres in the spare height above the comparison. */
+.tech > .tech-body {
+  margin-block: auto;
+  padding-block: 12px;
+}
+
+.gap-bars {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 6px;
+  padding-top: 14px;
+  border-top: 1px solid var(--hairline);
+}
+
+.gap-bars-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 12.5px;
+}
+
+.gap-bars-head strong {
+  font-weight: 700;
+}
+
+.gap-bars-head span {
+  font-size: 12px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.gap-bar-row {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr) 54px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.gap-bar-label {
+  color: var(--muted);
+}
+
+.gap-bar-track {
+  height: 10px;
+  border-radius: var(--radius-pill);
+  background: var(--tint);
+}
+
+.gap-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: var(--radius-pill);
+  transition: width 500ms var(--ease-out);
+}
+
+.gap-bar-fill.is-written {
+  background: rgba(243, 241, 236, 0.55);
+}
+
+.gap-bar-fill.is-tech-under {
+  background: var(--orange);
+}
+
+.gap-bar-fill.is-tech-over {
+  background: var(--blue-soft);
+}
+
+.gap-bar-value {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+

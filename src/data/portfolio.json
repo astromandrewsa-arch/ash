@@ -553,9 +553,9 @@
   {
    "id": "increases",
    "label": "Rate increases 2023–25",
-   "value": "21.1% · 18.7% · 4.3%",
-   "note": "Average filed increases by year",
-   "source": "Texas Department of Insurance rate filings"
+   "value": "21.1%",
+   "note": "in 2023, then 18.7% and 4.3%",
+   "source": "Texas Department of Insurance rate filings: average filed increases by year"
   },
   {
    "id": "filings",
@@ -574,8 +574,8 @@
   {
    "id": "fair-plan",
    "label": "Texas FAIR Plan",
-   "value": "127,835 policies",
-   "note": "$40.4B TIV",
+   "value": "127,835",
+   "note": "policies · $40.4B TIV",
    "source": "Texas FAIR Plan Association exposure report"
   },
   {

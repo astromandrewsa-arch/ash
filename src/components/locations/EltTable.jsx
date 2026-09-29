@@ -1,7 +1,8 @@
 import { ArrowDown, ArrowUp } from 'lucide-react'
 import { formatNumber, formatPct, formatUSDCompact, formatUSDRange } from '../../lib/format.js'
-import { stageRag } from '../../lib/selectors.js'
+import StagePill from '../common/StagePill.jsx'
 import VerdictPill from '../fire/VerdictPill.jsx'
+import FireId from '../common/FireId.jsx'
 
 // ELT view (§13, §19): event ID, rate (probability), mean loss (point) with its lower–upper band,
 // SD, exposure impacted. Related figures stack in one cell so every §13 column fits the page.
@@ -57,7 +58,9 @@ export default function EltTable({ rows, sort, onSort, onOpen }) {
               }}
               aria-label={`Open ${r.id} ${r.name} on the map`}
             >
-              <td className="elt-id">{r.id}</td>
+              <td className="elt-id">
+                <FireId fire={r.fire} />
+              </td>
               <td className="elt-stack elt-place">
                 <strong title={r.name}>{r.name}</strong>
                 <span title={r.place}>{r.place}</span>
@@ -93,7 +96,7 @@ export default function EltTable({ rows, sort, onSort, onOpen }) {
               <td className="elt-plan">
                 <div className="plan-stack">
                   <VerdictPill verdict={r.verdict} />
-                  <span className={`stage-pill rag-${stageRag(r.stage)}`}>{r.stage}</span>
+                  <StagePill stage={r.stage} />
                 </div>
               </td>
             </tr>

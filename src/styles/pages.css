@@ -4,7 +4,7 @@
 .kpi-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 12px;
+  gap: 16px;
   margin-bottom: 16px;
 }
 
@@ -17,8 +17,8 @@
 }
 
 .kpi-value {
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 22px;
+  line-height: 28px;
   font-weight: 750;
   letter-spacing: -0.01em;
   font-variant-numeric: tabular-nums;
@@ -268,8 +268,6 @@
 }
 
 .elt-id {
-  color: var(--orange);
-  font-weight: 750;
   white-space: nowrap;
 }
 
@@ -298,13 +296,21 @@
 }
 
 .stage-pill {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   padding: 2px 9px;
   border: 1px solid;
   border-radius: 999px;
   font-size: 11.5px;
   font-weight: 650;
   white-space: nowrap;
+}
+
+.stage-pill.rag-neutral {
+  border-color: var(--hairline-strong);
+  background: var(--tint);
+  color: var(--warm-grey);
 }
 
 .stage-pill.rag-green {
@@ -527,4 +533,43 @@
 
 .elt-plan .stage-pill {
   font-size: 11px;
+}
+
+/* ---------- Fire IDs in tables: warm-grey with a severity dot ---------- */
+.fire-id {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--warm-grey);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sev-dot {
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.sev-dot.is-severe {
+  background: var(--red);
+}
+
+.sev-dot.is-nonsevere {
+  background: var(--amber);
+}
+
+/* Card titles on the pages: a step above the 10.5 px column headers under them. */
+.sim-panel-title,
+.tech-head h2.label,
+.hit-head h2.label,
+.rel h2.label,
+.la-tile h2.label,
+.conc-head .label,
+.sci-panel .section-title {
+  color: var(--warm-grey);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 650;
 }

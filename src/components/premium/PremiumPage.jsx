@@ -45,7 +45,7 @@ export default function PremiumPage() {
       <div className="prem-main">
         <div className="prem-left">
           <BundleTable rows={rows} totals={totals} sort={sort} onSort={onSort} selectedId={picked.id} onSelect={setPickedId} />
-          <TechnicalPremium bundle={picked} pricing={store.portfolio.pricing} />
+          <TechnicalPremium bundle={picked} totals={totals} pricing={store.portfolio.pricing} />
         </div>
         <SciencePanel bundle={picked} onShowOnMap={showOnMap} />
       </div>

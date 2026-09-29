@@ -42,12 +42,15 @@ function traceLine(ctx, pts, view) {
   pts.forEach(([lat, lng], i) => (i ? ctx.lineTo(view.px(lng), view.py(lat)) : ctx.moveTo(view.px(lng), view.py(lat))))
 }
 
-/** Escarpments and plowed fields: a grey line with hachures on one side. */
+/** Escarpments and plowed fields: a quiet grey line with short hachures on one side. */
 function hatchedLine(ctx, pts, view) {
   ctx.beginPath()
   traceLine(ctx, pts, view)
-  ctx.strokeStyle = 'rgba(214, 216, 220, 0.95)'
-  ctx.lineWidth = 2.2
+  ctx.strokeStyle = 'rgba(12, 12, 13, 0.45)'
+  ctx.lineWidth = 3
+  ctx.stroke()
+  ctx.strokeStyle = 'rgba(214, 216, 220, 0.55)'
+  ctx.lineWidth = 1.25
   ctx.stroke()
   ctx.beginPath()
   let carry = 0
@@ -60,15 +63,15 @@ function hatchedLine(ctx, pts, view) {
     if (!len) continue
     const ux = (x1 - x0) / len
     const uy = (y1 - y0) / len
-    for (let d = carry; d < len; d += 7) {
+    for (let d = carry; d < len; d += 10) {
       const x = x0 + ux * d
       const y = y0 + uy * d
       ctx.moveTo(x, y)
-      ctx.lineTo(x - uy * 6, y + ux * 6)
+      ctx.lineTo(x - uy * 4, y + ux * 4)
     }
-    carry = (carry + 7 - (len % 7)) % 7
+    carry = (carry + 10 - (len % 10)) % 10
   }
-  ctx.lineWidth = 1.3
+  ctx.lineWidth = 1
   ctx.stroke()
 }
 
@@ -95,14 +98,37 @@ function fireExtentPx(fire, view, padFrac = 0.25) {
   return [x0 - px, y0 - py, x1 - x0 + px * 2, y1 - y0 + py * 2]
 }
 
-function paintBarriers(ctx, fire, view) {
-  const c = palette()
-  // Barriers only matter where the fire can reach them: clip to its padded extent.
+function paintBarriers(ctx, fire, view, cur) {
+  // Barriers only matter where the fire can reach them: clip to its padded extent. Inside the
+  // current P50 they are already burned over, so they step back to a third of their strength.
+  const extent = fireExtentPx(fire, view)
   ctx.save()
   ctx.beginPath()
-  ctx.rect(...fireExtentPx(fire, view))
+  ctx.rect(...extent)
   ctx.clip()
-  ctx.globalAlpha = 0.8
+  if (!cur) {
+    drawBarriers(ctx, fire, view, 0.8)
+  } else {
+    ctx.save()
+    ctx.beginPath()
+    ctx.rect(...extent)
+    tracePolys(ctx, cur.p50, view)
+    ctx.clip('evenodd')
+    drawBarriers(ctx, fire, view, 0.8)
+    ctx.restore()
+    ctx.save()
+    ctx.beginPath()
+    tracePolys(ctx, cur.p50, view)
+    ctx.clip('evenodd')
+    drawBarriers(ctx, fire, view, 0.3)
+    ctx.restore()
+  }
+  ctx.restore()
+}
+
+function drawBarriers(ctx, fire, view, alpha) {
+  const c = palette()
+  ctx.globalAlpha = alpha
   for (const b of fire.barriers) {
     if (b.kind === 'island' || b.kind === 'patch') {
       // Unburnable patches read as holes in the fill: a faint tint and a thin outline.
@@ -133,15 +159,15 @@ function paintBarriers(ctx, fire, view) {
       ctx.beginPath()
       traceLine(ctx, b.geometry, view)
       ctx.strokeStyle = c.water
-      ctx.globalAlpha = 0.6
+      ctx.globalAlpha = 0.6 * (alpha / 0.8)
       ctx.lineWidth = b.effect === 'partial' ? 1.4 : 1.5
       ctx.setLineDash(b.effect === 'partial' ? [9, 5] : [])
       ctx.stroke()
       ctx.setLineDash([])
-      ctx.globalAlpha = 0.8
+      ctx.globalAlpha = alpha
     }
   }
-  ctx.restore()
+  ctx.globalAlpha = 1
 }
 
 /**
@@ -345,15 +371,15 @@ export function paintSpreadLines(ctx, view, st) {
   const c = palette()
   const cur = step >= 0 ? fire.steps[step] : null
   const fade = st.fade ?? 1
-  if (views.barriers) paintBarriers(ctx, fire, view)
+  if (views.barriers) paintBarriers(ctx, fire, view, cur)
   if (cur && views.isochrones) {
-    // Earlier isochrones as contour lines, ramping 1.2 → 1.7 px.
+    // Earlier isochrones as contour lines on a dark halo, so 1 h → 48 h reads over the red fill.
     const drawn = earlierSteps(fire, step)
     drawn.forEach((i, k) => {
       const s = fire.steps[i]
       const t = (k + 1) / (drawn.length + 1)
-      strokePolys(ctx, s.p50, view, 'rgba(12, 12, 13, 0.5)', 2.6 + 0.5 * t, 0.3 + 0.25 * t)
-      strokePolys(ctx, s.p50, view, hourColor(s.hour), 1.2 + 0.5 * t, 0.6 + 0.35 * t)
+      strokePolys(ctx, s.p50, view, 'rgba(12, 12, 13, 0.7)', 3.4, 0.7)
+      strokePolys(ctx, s.p50, view, hourColor(s.hour), 1.8, 0.75 + 0.25 * t)
     })
     strokePolys(ctx, cur.p50, view, 'rgba(12, 12, 13, 0.55)', 4, 0.4 + 0.6 * fade)
     strokePolys(ctx, cur.p50, view, hourColor(cur.hour), 2.2, 0.4 + 0.6 * fade)

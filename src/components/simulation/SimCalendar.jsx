@@ -1,5 +1,6 @@
 import { ShieldCheck } from 'lucide-react'
 import { addDays, dayMonth, daysBetween } from '../../lib/dates.js'
+import FireId from '../common/FireId.jsx'
 
 const DAYS = 30
 
@@ -34,7 +35,7 @@ export default function SimCalendar({ rows, issued }) {
           return (
             <div className="cal-row" key={f.id}>
               <span className="cal-fire">
-                <strong>{f.id}</strong>
+                <FireId fire={f} />
                 <span>{f.name}</span>
               </span>
               <div className="cal-track">

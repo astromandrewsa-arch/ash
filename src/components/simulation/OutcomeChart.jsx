@@ -27,8 +27,14 @@ export default function OutcomeChart({ totals, outcome }) {
     const { x, y, width, height, payload } = props
     const w = payload.thin ? 10 : width
     const dx = payload.thin ? (width - w) / 2 : 0
+    // The chosen outcome is solid; the others are outlined in their own colour rather than faded.
     const dim = payload.id !== outcome && payload.id !== 'carrier'
-    return <rect x={x + dx} y={y} width={w} height={Math.max(height, 2)} rx={4} fill={payload.color} fillOpacity={dim ? 0.55 : 0.95} />
+    const hh = Math.max(height, 2)
+    return dim ? (
+      <rect x={x + dx + 0.75} y={y + 0.75} width={w - 1.5} height={Math.max(hh - 1.5, 1)} rx={4} fill={payload.color} fillOpacity={0.12} stroke={payload.color} strokeWidth={1.5} />
+    ) : (
+      <rect x={x + dx} y={y} width={w} height={hh} rx={4} fill={payload.color} />
+    )
   }
   return (
     <section className="sim-panel glass sim-chart" aria-label="Book outcomes">

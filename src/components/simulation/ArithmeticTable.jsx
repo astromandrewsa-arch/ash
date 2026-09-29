@@ -1,5 +1,6 @@
 import { formatUSDCompact } from '../../lib/format.js'
 import { OUTCOMES } from '../../lib/simulation.js'
+import FireId from '../common/FireId.jsx'
 
 /** Per-fire expected loss over 30 days under the three outcomes, the carrier's share, and the book rows (§14). */
 export default function ArithmeticTable({ rows, totals, outcome }) {
@@ -26,7 +27,7 @@ export default function ArithmeticTable({ rows, totals, outcome }) {
           {rows.map((r) => (
             <tr key={r.fire.id}>
               <td className="sim-fire">
-                <strong>{r.fire.id}</strong>
+                <FireId fire={r.fire} />
               </td>
               {OUTCOMES.map((o) => (
                 <td key={o.id} className={`num${o.id === outcome ? ' is-on' : ''}`}>

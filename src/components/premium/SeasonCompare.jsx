@@ -30,15 +30,17 @@ export default function SeasonCompare({ bundle: b }) {
         ))}
       </div>
       {season === 0 && <p className="season-none">No dated fire reaches this bundle’s policies this season; the combined ratio is expenses only.</p>}
-      <div className="season-ratios">
+      <dl className="season-ratios">
         {ratios.map((r) => (
           <div key={r.label} className="season-ratio">
-            <span className="label">{r.label}</span>
-            <strong>{r.value}</strong>
-            <span>{r.note}</span>
+            <dt>
+              <span className="label">{r.label}</span>
+              <span>{r.note}</span>
+            </dt>
+            <dd>{r.value}</dd>
           </div>
         ))}
-      </div>
+      </dl>
     </div>
   )
 }

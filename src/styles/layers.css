@@ -287,6 +287,19 @@
   display: block;
 }
 
+/* Docked beside a home cluster's badge: a small chip with an ink ring, above the badge. */
+.leaflet-container .asset-chip.is-docked {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--yellow);
+  box-shadow: 0 0 0 2px var(--ink), 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.leaflet-container .asset-chip.is-docked svg {
+  width: 11px;
+  height: 11px;
+}
+
 /* ---------- Hover cards ---------- */
 
 .map-tip {

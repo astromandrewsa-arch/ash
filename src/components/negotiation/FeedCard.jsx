@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { ArrowUpRight, ChevronDown } from 'lucide-react'
 import { dayMonth } from '../../lib/dates.js'
 import { formatUSDCompact } from '../../lib/format.js'
-import { stageRag } from '../../lib/selectors.js'
+import StagePill from '../common/StagePill.jsx'
 import NegotiationTimeline from '../fire/NegotiationTimeline.jsx'
 
 /** One negotiation in the feed (§12). A dated fire opens in its Negotiation tab; last month's expand in place. */
@@ -15,7 +15,7 @@ export default function FeedCard({ item: n, onOpen }) {
     <article className={`feed-card glass${n.lastMonth ? ' is-past' : ''}`}>
       <button type="button" className="feed-main" onClick={act} aria-expanded={n.lastMonth ? open : undefined}>
         <span className="feed-top">
-          <span className={`stage-pill rag-${n.ledger.status === 'Declined' ? 'red' : stageRag(n.stage)}`}>{n.ledger.status === 'Declined' ? 'Declined' : n.stage}</span>
+          <StagePill stage={n.stage} declined={n.ledger.status === 'Declined'} />
           {n.lastMonth && <span className="feed-tag">Last month · {dayMonth(n.fire.date)}</span>}
           <span className="feed-go" aria-hidden="true">
             {n.lastMonth ? <ChevronDown size={16} className={open ? 'is-open' : undefined} /> : <ArrowUpRight size={16} />}

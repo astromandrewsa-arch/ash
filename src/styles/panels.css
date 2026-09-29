@@ -50,18 +50,28 @@
   opacity: 0.55;
 }
 
+/* Chips sit two across on a grid, so no chip strands alone on a ragged row. */
 .qv-chips {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 5px;
+}
+
+/* An odd chip at the end of a group takes the full row. */
+.qv-chips > :last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 .qv-chip {
   display: inline-flex;
   align-items: center;
   gap: 7px;
+  width: 100%;
+  min-width: 0;
   height: 24px;
   padding: 0 9px 0 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   border-radius: var(--radius-pill);
   border: 1px solid var(--hairline);
   background: transparent;

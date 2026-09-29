@@ -1,7 +1,8 @@
 import { dateRange } from '../../lib/dates.js'
 import { formatPct, formatUSDCompact } from '../../lib/format.js'
-import { stageRag } from '../../lib/selectors.js'
+import StagePill from '../common/StagePill.jsx'
 import PayerMiniBar from './PayerMiniBar.jsx'
+import FireId from '../common/FireId.jsx'
 
 /**
  * Intervention schedule (§14): per fire, the actions, dates, counterparty, cost, payer split,
@@ -33,7 +34,7 @@ export default function ScheduleTable({ rows, onOpen }) {
               <tr key={fire.id} onClick={() => onOpen(fire.id)} tabIndex={0} onKeyDown={(e) => (e.key === 'Enter' ? onOpen(fire.id) : null)} aria-label={`Open ${fire.id} on the map`}>
                 <td className="sched-fire">
                   <strong>
-                    <em>{fire.id}</em> {fire.name}
+                    <FireId fire={fire} /> {fire.name}
                   </strong>
                   <span title={acts.map((a) => a.text).join('\n')}>
                     {acts.length ? `${acts.length === 1 ? '1 action' : `${acts.length} actions`} · ${acts[0].text}` : plan.verdict === 'No action' ? 'Plan withdrawn' : 'No actions'}
@@ -49,7 +50,7 @@ export default function ScheduleTable({ rows, onOpen }) {
                 </td>
                 <td className="sched-stage">
                   <strong>{plan.statePlan ? 'Cannot prevent' : plan.pPrevent == null ? 'No plan' : `P(prevent) ${formatPct(plan.pPrevent)}`}</strong>
-                  <span className={`stage-pill rag-${stageRag(neg.stage)}`}>{neg.stage}</span>
+                  <StagePill stage={neg.stage} />
                 </td>
               </tr>
             )

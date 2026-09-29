@@ -11,7 +11,7 @@
 
 .cal-grid {
   display: grid;
-  grid-template-columns: 190px 1fr;
+  grid-template-columns: 220px 1fr;
   row-gap: 4px;
 }
 
@@ -57,12 +57,11 @@
   font-size: 12px;
 }
 
-.cal-fire strong {
-  color: var(--orange);
-  font-weight: 750;
+.cal-fire .fire-id {
+  flex: none;
 }
 
-.cal-fire span {
+.cal-fire > span:not(.fire-id) {
   overflow: hidden;
   color: var(--muted);
   text-overflow: ellipsis;
@@ -92,11 +91,11 @@
 }
 
 .cal-bar.is-severe {
-  background: linear-gradient(90deg, rgba(215, 38, 61, 0.95), rgba(215, 38, 61, 0.7));
+  background: var(--red);
 }
 
 .cal-bar.is-nonsevere {
-  background: linear-gradient(90deg, rgba(242, 163, 58, 0.95), rgba(242, 163, 58, 0.7));
+  background: var(--amber);
   color: #1c1406;
 }
 
@@ -142,14 +141,14 @@
 .sim-main {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
-  gap: 14px;
-  margin-bottom: 14px;
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
 .sim-lower {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
-  gap: 14px;
+  gap: 16px;
 }
 
 .sim-panel {
@@ -208,16 +207,15 @@
 }
 
 .sim-fire strong,
-.sim-fire span {
+.sim-fire > span:not(.fire-id) {
   display: block;
 }
 
 .sim-fire strong {
-  color: var(--orange);
-  font-weight: 750;
+  font-weight: 700;
 }
 
-.sim-fire span {
+.sim-fire > span:not(.fire-id) {
   max-width: 150px;
   overflow: hidden;
   color: var(--muted);
@@ -267,11 +265,12 @@
 
 .arith td.is-on,
 .arith th.is-on {
-  background: rgba(226, 86, 27, 0.1);
+  background: var(--tint);
 }
 
 .arith th.is-on {
   color: var(--warm-grey);
+  box-shadow: inset 0 2px 0 var(--orange);
 }
 
 .arith tfoot th,
@@ -316,39 +315,23 @@
 
 .payer-lines li {
   display: grid;
-  grid-template-columns: 46px 1fr auto;
-  align-items: baseline;
+  grid-template-columns: 64px 118px 1fr;
+  align-items: center;
   gap: 10px;
   font-size: 12.5px;
   line-height: 17px;
 }
 
-.payer-lines strong {
-  color: var(--orange);
-  font-weight: 750;
+
+
+.payer-lines .stage-pill {
+  justify-self: start;
+  font-size: 11px;
 }
 
 .payer-line-text {
   color: var(--warm-grey);
   font-variant-numeric: tabular-nums;
-}
-
-.payer-status {
-  font-size: 11.5px;
-  font-weight: 650;
-  white-space: nowrap;
-}
-
-.payer-status.is-agreed {
-  color: #3ccb7f;
-}
-
-.payer-status.is-open {
-  color: var(--amber);
-}
-
-.payer-status.is-none {
-  color: var(--muted);
 }
 
 .state-plans {
@@ -371,45 +354,46 @@
   display: block;
 }
 
-.sched td > strong {
+.sched td {
+  padding-top: 11px;
+  vertical-align: top;
+}
+
+/* Names and action lines wrap to two lines instead of ending in an ellipsis. */
+.sched td > strong,
+.sched td > span:not(.payer-mini):not(.stage-pill) {
+  display: -webkit-box;
   overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+}
+
+.sched td > strong {
   font-weight: 650;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .sched td > span {
-  overflow: hidden;
   color: var(--muted);
   font-size: 11.5px;
   line-height: 16px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
-.sched-fire {
-  max-width: 300px;
-}
 
-.sched-fire em {
+
+.sched-fire .fire-id {
   margin-right: 4px;
-  color: var(--orange);
-  font-style: normal;
-  font-weight: 750;
 }
 
-.sched-cp {
-  max-width: 200px;
-}
+
 
 .sched-cost .payer-mini {
   margin: 5px 0 0 auto;
 }
 
 .sched-stage .stage-pill {
-  display: inline-block;
+  display: inline-flex;
   margin-top: 4px;
-  color: inherit;
   font-size: 11px;
 }
 
@@ -434,18 +418,14 @@
   display: flex;
 }
 
-.sched-fire {
-  max-width: 250px;
-}
-
 .sched-cp {
-  max-width: 170px;
+  min-width: 150px;
 }
 
 .sim-right {
   display: grid;
   align-content: start;
-  gap: 14px;
+  gap: 16px;
   min-width: 0;
 }
 
@@ -465,5 +445,10 @@
 }
 
 .sim-main {
-  align-items: start;
+  align-items: stretch;
+}
+
+.sim-main > .sim-panel {
+  display: flex;
+  flex-direction: column;
 }

@@ -43,6 +43,10 @@ export default function FireCard({ fireId }) {
           <span className="pill">
             {f.ignitionZone.class} · {formatHa(f.ignitionZone.hectares)}
           </span>
+          <button type="button" className="btn more-info-btn" onClick={() => setMoreInfo('addresses')}>
+            <Maximize2 size={13} aria-hidden="true" />
+            More info
+          </button>
         </div>
         <p className="dh-sub">{leadLine(f)}</p>
       </DrawerHeader>
@@ -52,12 +56,6 @@ export default function FireCard({ fireId }) {
         onChange={setDrawerTab}
         label={`${f.id} detail`}
         idPrefix="fire"
-        extra={
-          <button type="button" className="btn btn-ghost more-info-btn" onClick={() => setMoreInfo('addresses')}>
-            <Maximize2 size={13} aria-hidden="true" />
-            More info
-          </button>
-        }
       />
       {/* Keyed by tab so each tab opens scrolled to its top. */}
       <div key={tab.id} className="fire-tab" role="tabpanel" id="fire-panel" aria-labelledby={`fire-tab-${tab.id}`}>

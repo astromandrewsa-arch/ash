@@ -43,9 +43,9 @@ export const PRICING = { fixedExpensePerPolicy: 95, alae: 0.12, variableExpense:
 // Texas context tiles (public figures; listed in the Help sources note).
 export const CONTEXT_TILES = [
   { id: 'avg-premium', label: 'Texas average homeowners premium', value: '$3,291', note: '4th highest in the US', source: 'NAIC / Insurance Information Institute, 2025 average premium' },
-  { id: 'increases', label: 'Rate increases 2023–25', value: '21.1% · 18.7% · 4.3%', note: 'Average filed increases by year', source: 'Texas Department of Insurance rate filings' },
+  { id: 'increases', label: 'Rate increases 2023–25', value: '21.1%', note: 'in 2023, then 18.7% and 4.3%', source: 'Texas Department of Insurance rate filings: average filed increases by year' },
   { id: 'filings', label: 'Largest US rate filings, Q1 2026', value: '9 of 10', note: 'were Texan', source: 'S&P Global Market Intelligence, Q1 2026' },
   { id: 'non-renewal', label: 'Non-renewal rate', value: '2.62%', note: 'Texas homeowners, latest year', source: 'US Senate Budget Committee, non-renewal data by state' },
-  { id: 'fair-plan', label: 'Texas FAIR Plan', value: '127,835 policies', note: '$40.4B TIV', source: 'Texas FAIR Plan Association exposure report' },
+  { id: 'fair-plan', label: 'Texas FAIR Plan', value: '127,835', note: 'policies · $40.4B TIV', source: 'Texas FAIR Plan Association exposure report' },
   { id: 'regime', label: 'Rate regime', value: 'File-and-use', note: 'No prior approval', source: 'Texas Insurance Code §2251' },
 ]

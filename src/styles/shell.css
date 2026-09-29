@@ -768,12 +768,12 @@ button.panel-head:hover .panel-caret {
   position: absolute;
   height: 4px;
   border-radius: 999px;
-  opacity: 0.4;
-  transition: opacity var(--t-panel);
+  transition: filter var(--t-panel);
 }
 
-.dslider-band.is-on {
-  opacity: 1;
+/* A band not yet revealed is its colour mixed toward grey, not faded (fading turned it muddy). */
+.dslider-band:not(.is-on) {
+  filter: saturate(0.35) brightness(0.62);
 }
 
 .dslider-track {

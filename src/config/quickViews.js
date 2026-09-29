@@ -36,14 +36,14 @@ export const QUICK_VIEW_GROUPS = [
     radio: 'fuel',
     items: [
       { value: 'live', label: 'Live moisture' },
-      { value: 'dead10', label: '10-h dead moisture' },
+      { value: 'dead10', label: '10-h dead' },
       { value: 'curing', label: 'Curing' },
       { value: 'erc', label: 'ERC' },
     ],
   },
   {
     id: 'status',
-    label: null,
+    label: 'Overlays',
     items: [
       { key: 'intervention', label: 'Intervention status', swatch: 'intervention' },
       { key: 'sensors', label: 'Sensor sites', swatch: 'sensors' },

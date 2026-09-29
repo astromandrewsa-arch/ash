@@ -29,10 +29,10 @@ export default function FuelChart({ fire }) {
     <LineChart width={WIDTH} height={HEIGHT} data={rows} margin={{ top: 10, right: 0, bottom: 0, left: 0 }}>
       <CartesianGrid stroke="rgba(243, 241, 236, 0.07)" vertical={false} />
       <XAxis dataKey="label" tick={tick} interval={Math.ceil(rows.length / 6)} axisLine={false} tickLine={false} />
-      <YAxis yAxisId="live" domain={[60, 140]} ticks={[60, 80, 100, 120, 140]} tick={tick} axisLine={false} tickLine={false} unit="%" width={42} />
-      <YAxis yAxisId="dead" orientation="right" domain={[6, 20]} ticks={[6, 10, 13, 16, 20]} tick={tick} axisLine={false} tickLine={false} unit="%" width={34} />
-      <ReferenceLine yAxisId="live" y={live?.value ?? 80} stroke={c.orange} strokeOpacity={0.55} strokeDasharray="4 4" label={{ value: `Live ${live?.value ?? 80}%`, position: 'insideTopLeft', fill: c.orange, fontSize: 10 }} />
-      <ReferenceLine yAxisId="dead" y={dead?.value ?? 13} stroke={c.blueSoft} strokeOpacity={0.55} strokeDasharray="4 4" label={{ value: `100-h ${dead?.value ?? 13}%`, position: 'insideBottomLeft', fill: c.blueSoft, fontSize: 10 }} />
+      <YAxis yAxisId="live" domain={[60, 140]} ticks={[60, 80, 100, 120, 140]} tick={{ ...tick, fill: '#FFB08C' }} axisLine={false} tickLine={false} unit="%" width={42} />
+      <YAxis yAxisId="dead" orientation="right" domain={[6, 20]} ticks={[6, 10, 13, 16, 20]} tick={{ ...tick, fill: '#A9C7F0' }} axisLine={false} tickLine={false} unit="%" width={34} />
+      {live && <ReferenceLine yAxisId="live" y={live.value} stroke={c.orange} strokeOpacity={0.55} strokeDasharray="4 4" label={{ value: `Live ${live.value}%`, position: 'insideBottomRight', fill: c.orange, fontSize: 11 }} />}
+      {dead && <ReferenceLine yAxisId="dead" y={dead.value} stroke={c.blueSoft} strokeOpacity={0.55} strokeDasharray="4 4" label={{ value: `100-h ${dead.value}%`, position: 'insideTopRight', fill: c.blueSoft, fontSize: 11 }} />}
       <ReferenceLine yAxisId="live" x={last.label} stroke="rgba(243, 241, 236, 0.35)" label={{ value: 'Issued', position: 'insideTopRight', fill: 'rgba(243, 241, 236, 0.55)', fontSize: 10 }} />
       <Line yAxisId="live" dataKey="liveFm" stroke={c.orange} strokeWidth={2.2} dot={false} isAnimationActive={false} />
       <Line yAxisId="live" dataKey="liveProj" stroke={c.orange} strokeWidth={2} strokeDasharray="4 3" dot={false} isAnimationActive={false} />

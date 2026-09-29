@@ -22,7 +22,7 @@ export default function QuickViews() {
       {open && (
         <div className={`panel-body qv-body${scrolled ? ' is-scrolled' : ''}`} onScroll={(e) => setScrolled(e.currentTarget.scrollTop > 2)}>
           {QUICK_VIEW_GROUPS.map((g) => (
-            <div key={g.id} className={`qv-group${g.needsFire && !hasFire ? ' is-idle' : ''}${g.label ? '' : ' is-plain'}`}>
+            <div key={g.id} className={`qv-group qv-group-${g.id}${g.needsFire && !hasFire ? ' is-idle' : ''}${g.label ? '' : ' is-plain'}`}>
               {g.label && (
                 <div className="qv-group-head">
                   <span className="label">{g.label}</span>

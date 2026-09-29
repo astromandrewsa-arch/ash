@@ -26,12 +26,15 @@ function placeList(places) {
   return n < places.length ? `${shown} +${places.length - n}` : shown
 }
 
+// The recommendation's note ("corridor homes to a surcharge class") shows on hover and in the science panel.
 function RecCell({ value, label, filed, note }) {
   return (
-    <td className="num rec-cell">
-      <strong className={value < 0 ? 'is-down' : 'is-up'}>{label ?? formatPctSigned(value)}</strong>
+    <td className="num rec-cell" title={note ? `${label}, ${note}` : undefined}>
+      <strong className={value < 0 ? 'is-down' : 'is-up'}>
+        {label ?? formatPctSigned(value)}
+        {note && <sup aria-hidden="true">*</sup>}
+      </strong>
       <span>filed {formatPctSigned(filed)}</span>
-      {note && <em title={note}>{note}</em>}
     </td>
   )
 }

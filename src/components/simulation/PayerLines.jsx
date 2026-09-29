@@ -1,5 +1,6 @@
 import { formatUSDCompact } from '../../lib/format.js'
 import { PAYERS } from '../fire/payers.js'
+import FireId from '../common/FireId.jsx'
 
 const payerName = (key) => PAYERS.find((p) => p.key === key)?.label ?? key
 
@@ -17,12 +18,14 @@ export default function PayerLines({ rows }) {
             .filter(([, v]) => v > 0)
             .sort((a, b) => b[1] - a[1])
             .map(([k, v]) => `${payerName(k)} ${formatUSDCompact(v)}${neg.payerInPrinciple?.[k] ? ' (in principle)' : ''}`)
-          const status = plan.verdict === 'No action' ? 'no plan: nothing to pay' : agreed ? 'agreed' : neg.payerInPrinciple ? 'agreed in principle, not signed' : 'not yet agreed'
+          const none = plan.verdict === 'No action'
+          const status = none ? 'No plan' : agreed ? 'Agreed' : neg.payerInPrinciple ? 'In principle' : 'Not yet agreed'
+          const tone = none ? 'neutral' : agreed ? 'green' : 'amber'
           return (
             <li key={fire.id}>
-              <strong>{fire.id}</strong>
+              <FireId fire={fire} />
+              <span className={`stage-pill rag-${tone}`}>{status}</span>
               <span className="payer-line-text">{parts.length ? parts.join(' · ') : 'No cost'}</span>
-              <span className={`payer-status ${agreed ? 'is-agreed' : plan.verdict === 'No action' ? 'is-none' : 'is-open'}`}>{status}</span>
             </li>
           )
         })}

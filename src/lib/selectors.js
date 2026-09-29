@@ -66,6 +66,17 @@ export function bookSummary(portfolioId) {
 const AGREED = new Set(['Work agreed', 'Work complete', 'Fire prevented'])
 const MOVING = new Set(['Agent engaged', 'Government in negotiation', 'Partial', 'State plan'])
 
+/**
+ * Pill tone for a negotiation stage on the pages: neutral while identified or under a state plan,
+ * amber while it moves, green once work is agreed, red only for a decline.
+ */
+export function stageTone(stage, declined = false) {
+  if (declined) return 'red'
+  if (AGREED.has(stage)) return 'green'
+  if (stage === 'Identified' || stage === 'State plan') return 'neutral'
+  return 'amber'
+}
+
 /** Intervention status ring colour for a negotiation stage (§9 RAG ring). */
 export function stageRag(stage) {
   if (AGREED.has(stage)) return 'green'
