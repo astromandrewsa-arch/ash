@@ -36,7 +36,7 @@ export const FIRES = [
     ],
     recipeText: '0–30 h: wind from W 65 km/h, RH 12%, head 11 km/h, LB 7. Hour 30: cold front, wind from NE 45 km/h, the south flank becomes the head running SW toward Pampa, LB 4.',
     // After the front only the south flank north-east of Pampa becomes the new head (a narrow run onto the wheat).
-    shifts: [{ hour: 30, freeze: true, faceDeg: 75, flankLng: [-100.87, -100.75] }],
+    shifts: [{ hour: 30, freeze: true, faceDeg: 75, flankLng: [-100.84, -100.79] }],
     flankScale: 1.25, rateScale: 1,
     dayFactors: [1, 0.35, 0.55],
     holdHour: 48,
@@ -99,24 +99,24 @@ export const FIRES = [
   {
     id: 'BA-03', name: 'Lost Pines', place: 'Bastrop, Lost Pines', state: 'TX', county: 'Bastrop County',
     window: ['2026-10-20', '2026-11-02'], probability: 0.9, severity: 'Severe',
-    // Three loblolly blocks about 2 km apart, the middle one set back so the lobes merge as a clover-leaf.
-    zone: { class: 'Zone', hectares: 1300, blocks: [[30.15, -97.2625], [30.162, -97.2425], [30.15, -97.2225]], prior: 'road' },
-    ignitions: [{ at: [30.15, -97.2625], hour: 0 }, { at: [30.162, -97.2425], hour: 0.5 }, { at: [30.15, -97.2225], hour: 1 }],
+    // Three loblolly blocks about 2 km apart in a triangle, the middle one 1.8 km south, so the lobes merge as a clover-leaf.
+    zone: { class: 'Zone', hectares: 1300, blocks: [[30.158, -97.2615], [30.1418, -97.2425], [30.158, -97.2235]], prior: 'road' },
+    ignitions: [{ at: [30.158, -97.2615], hour: 0 }, { at: [30.1418, -97.2425], hour: 0.5 }, { at: [30.158, -97.2235], hour: 1 }],
     startLocalHour: 14,
     recipe: [{ fromHour: 0, windFromDeg: 0, windKmh: 22, gustKmh: 40, rh: 16, headKmh: 2.2, lb: 2.5 }],
     recipeText: 'Wind from N 22 km/h, head 2.2 km/h, LB 2.5; three ignitions merge by h48 into a clover-leaf; spotting 0.8–2 km ahead every 6 h; five-day burn with night slowdown.',
-    // Narrow lobes (flank × 0.72) so the three heads stay apart as a clover-leaf to the end.
-    flankScale: 0.72, rateScale: 0.075,
+    flankScale: 1, rateScale: 0.075,
     dayFactors: [1, 0.7, 0.5, 0.35, 0.25, 0.15],
     holdHour: 120,
     barriers: { water: true, rivers: [{ name: 'Colorado River' }], lines: [{ ref: 'sh71', delayHours: 2 }] },
-    spotting: { p25: { everyHours: 6, minM: 800, maxM: 2000, untilHour: 48 } },
+    // Spot fires 0.8–2 km ahead at h6 and h12; they merge into the middle lobe.
+    spotting: { all: { everyHours: 6, minM: 800, maxM: 2000, untilHour: 12 } },
     events: [
       { hour: 0, text: 'Three ignitions in the loblolly blocks, 2 km apart.' },
       { hour: 6, text: 'First spot fires land 0.8–2 km ahead of the heads.' },
       { hour: 24, text: 'Night slowdown; the three heads run again with the afternoon wind.' },
       { hour: 48, text: 'The three lobes merge into a clover-leaf.' },
-      { hour: 120, text: 'Five days in: crews hold the three heads north of SH 71.' },
+      { hour: 120, text: 'Five days in: crews hold the heads at SH 71; the middle head crosses it before it is caught.' },
     ],
     intensity: { class: 'Very High', kwPerM: 9000, flameLengthM: 5.1, rosKmh: 2.2, windKmh: 22, windDir: 'N' },
     fuel: fuel(88, -1.3, 86, 5.1, 6.2, 11.2, 14.4, 49, 44, 560, 31),
@@ -170,11 +170,14 @@ export const FIRES = [
     ],
     recipeText: 'Wind shifting: SW 35 → W 50 → NW 40 km/h at h0/h6/h14, head 1.2 km/h, LB 2.5; fingers on each wind bearing, pockets between → egg with alternating fingers.',
     // One finger per wind: each runs from the ignition along its wind's heading while that wind blows.
+    // At each shift the perimeter freezes and only the flank facing the new wind runs on, so the
+    // earlier finger and the pocket beside it survive.
+    shifts: [{ hour: 6, freeze: true, faceDeg: 35 }, { hour: 14, freeze: true, faceDeg: 35 }],
     fingers: [
-      { bearing: 45, fromHour: 0, toHour: 8, factor: 2.0 },
-      { bearing: 90, fromHour: 6, toHour: 16, factor: 2.0 },
-      { bearing: 135, fromHour: 14, toHour: 30, factor: 1.9 },
-    ].map((f) => ({ ...f, origin: [30.3235, -98.9115], corridorM: 190, normalDeg: 60, halfWidth: 8 })),
+      { bearing: 45, fromHour: 0, toHour: 8, factor: 2.6 },
+      { bearing: 90, fromHour: 6, toHour: 16, factor: 2.6 },
+      { bearing: 135, fromHour: 14, toHour: 30, factor: 2.2 },
+    ].map((f) => ({ ...f, origin: [30.3235, -98.9115], corridorM: 260, normalDeg: 60, halfWidth: 8 })),
     flankScale: 1, rateScale: 0.18,
     holdHour: 30,
     barriers: { rivers: [{ name: 'Pedernales River' }] },
@@ -183,13 +186,14 @@ export const FIRES = [
       { hour: 0, text: 'Ignition on a ranch track in the oak-juniper savanna.' },
       { hour: 6, text: 'Wind veers to the west; a second finger runs east.' },
       { hour: 14, text: 'North-west wind: the third finger turns south-east toward town.' },
-      { hour: 24, text: 'Pockets between the fingers burn in.' },
+      { hour: 24, text: 'The south-east run widens; the pocket beside the first finger stays unburned.' },
       { hour: 30, text: 'Held at the north boundary of the subdivision.' },
     ],
     outbuildings: { p50: 60, p25: 24, tiv: 34000 },
     intensity: { class: 'High', kwPerM: 2600, flameLengthM: 2.9, rosKmh: 1.2, windKmh: 50, windDir: 'W' },
     fuel: fuel(90, -1.2, 84, 5.4, 6.6, 11.8, 15.2, 47, 44, 530, 27),
-    fit: [{ area: 'FBG-1', from: [30.312, -98.905], bearings: [160, 180, 200, 220, 240, 260], homes: 35, range: [0, 4000], steps: 64, ratioWeight: 3 }],
+    // Searched outward from the centre of the south-east run toward town.
+    fit: [{ area: 'FBG-1', from: [30.3125, -98.884], bearings: [100, 120, 140, 160, 180, 200, 220], homes: 35, range: [300, 4500], steps: 64, ratioWeight: 3 }],
     lossTarget: { p90: 6.1e6, p50: 8.4e6, p25: 11e6 },
     exposureText: (x) => `${n0(x.homes)} homes, ${x.outbuildings} outbuildings; the PEC feeder in the tail band`,
     analogue: { name: 'Crabapple Fire', year: 2025, acres: 9858, homesLost: 9 },
@@ -231,7 +235,8 @@ export const FIRES = [
     startLocalHour: 12,
     recipe: [
       { fromHour: 0, windFromDeg: 225, windKmh: 55, gustKmh: 80, rh: 7, headKmh: 8, lb: 4 },
-      { fromHour: 7, windFromDeg: 230, windKmh: 25, gustKmh: 35, rh: 14, headKmh: 3, lb: 2.5 },
+      // Once the wind eases the head broadens into the teardrop (rounder ellipse, wider flanks).
+      { fromHour: 7, windFromDeg: 230, windKmh: 25, gustKmh: 35, rh: 14, headKmh: 3, lb: 1.8, flankScale: 1.25 },
     ],
     recipeText: 'Wind from SW 55 km/h, RH 7%, head 8 km/h, LB 4 for 7 h then wind eases to 25 km/h; Caprock escarpment (hard) and plowed cotton (hard) block the west flank → lopsided teardrop.',
     flankScale: 1, rateScale: 0.2,
@@ -302,16 +307,16 @@ export const FIRES = [
     ignitions: [{ at: [36.7965, -96.4295], hour: 0 }],
     startLocalHour: 13,
     recipe: [{ fromHour: 0, windFromDeg: 185, windKmh: 45, gustKmh: 65, rh: 19, headKmh: 11, lb: 5 }],
-    recipeText: 'Wind from S 45 km/h, head 11 km/h, LB 5; last year’s patch burns as islands (ten blocks of varied size) so the perimeter shows bays and islands and halts at burned patches.',
+    recipeText: 'Wind from S 45 km/h, head 11 km/h, LB 5; last year’s patch burns as islands (twelve blocks of varied size) so the perimeter shows bays and islands and halts at burned patches.',
     flankScale: 1.1, rateScale: 0.45,
-    holdHour: 3,
-    // Last season's patch burns: islands of varied size inside the run, two that cut bays into
+    holdHour: 3.5,
+    // Last season's patch burns: islands of varied size inside the run, four that cut bays into
     // the flanks, and a staggered row of blocks that stops the head in scallops.
     // [lat, lng, widthM, heightM, axisDeg]
     patches: [
-      [36.8181, -96.4362, 900, 420, 70], [36.81, -96.4194, 380, 340, 20], [36.8298, -96.4205, 700, 520, 120], [36.8361, -96.4407, 420, 300, 45],
-      [36.8244, -96.4497, 1100, 700, 30], [36.8163, -96.4093, 900, 600, 150],
-      [36.8505, -96.453, 1500, 760, 82], [36.8536, -96.4374, 1500, 920, 97], [36.85, -96.4211, 1500, 700, 78], [36.8532, -96.4043, 1500, 850, 94],
+      [36.8172, -96.4351, 1100, 600, 70], [36.8082, -96.4216, 600, 450, 20], [36.8289, -96.4228, 1000, 650, 120], [36.837, -96.4396, 700, 500, 45],
+      [36.8253, -96.4441, 1300, 800, 30], [36.8181, -96.4116, 1100, 700, 150], [36.8361, -96.4104, 900, 600, 100], [36.8091, -96.4424, 800, 500, 60],
+      [36.8505, -96.4531, 1500, 760, 82], [36.8536, -96.4374, 1500, 920, 97], [36.85, -96.4211, 1500, 700, 78], [36.8532, -96.4043, 1500, 850, 94],
     ],
     barriers: { water: true },
     spotting: { p25: { everyHours: 2, minM: 150, maxM: 300 } },
@@ -319,7 +324,7 @@ export const FIRES = [
       { hour: 0, text: 'Ignition in the south unit under a 45 km/h south wind.' },
       { hour: 1, text: 'Head reaches last season’s patch burns and splits around them.' },
       { hour: 2, text: 'Bays form where patches reach into the flanks; burned blocks stay as islands.' },
-      { hour: 3, text: 'Out of fuel against the patch mosaic.' },
+      { hour: 4, text: 'Out of fuel against the patch mosaic.' },
     ],
     // Three sheds and corrals in the burn unit (the preserve headquarters sit outside every band).
     outbuildings: { p50: 3, p25: 0, tiv: 180000 },

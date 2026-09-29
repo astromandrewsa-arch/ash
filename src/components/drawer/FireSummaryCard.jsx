@@ -1,6 +1,6 @@
 import { store } from '../../lib/store.js'
 import { flameSvg } from '../../lib/icons.js'
-import { formatHa, formatNumber, formatUSDCompact, formatUSDRange } from '../../lib/format.js'
+import { formatHa, formatNumber, formatUSDCompact, formatUSDRange, returnPeriodText } from '../../lib/format.js'
 import useApp from '../../state/useApp.js'
 import DrawerHeader from './DrawerHeader.jsx'
 import FactGrid from './FactGrid.jsx'
@@ -42,7 +42,7 @@ export default function FireSummaryCard({ fireId }) {
           <span className="label">Loss if it burns · point (P50)</span>
           <span className="figure">{formatUSDCompact(f.lossPoint)}</span>
           <span className="loss-band">
-            Lower–upper {formatUSDRange(f.lossLower, f.lossUpper)} · a 1-in-{Math.round(f.returnPeriodYears)} event for this book
+            Lower–upper {formatUSDRange(f.lossLower, f.lossUpper)} · {returnPeriodText(f.returnPeriodYears)}
           </span>
         </div>
       </section>

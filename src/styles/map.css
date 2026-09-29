@@ -18,10 +18,6 @@
   filter: brightness(0.74) saturate(0.82) contrast(1.06);
 }
 
-.labels-tiles {
-  opacity: 0.72;
-}
-
 .leaflet-bar {
   border: 1px solid var(--hairline) !important;
   border-radius: 10px !important;

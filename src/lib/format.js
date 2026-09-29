@@ -48,3 +48,9 @@ export function formatPctSigned(fraction, dp = 0) {
   if (Number(v) === 0) return '0%'
   return fraction < 0 ? `${MINUS}${Math.abs(Number(v)).toFixed(dp)}%` : `+${v}%`
 }
+
+/** "a 1-in-13 event for this book"; losses under the curve's 1-in-2 point say so instead of "1-in-1". */
+export function returnPeriodText(rp) {
+  if (rp < 2) return 'below the 1-in-2 loss for this book'
+  return `a 1-in-${Math.round(rp)} event for this book`
+}

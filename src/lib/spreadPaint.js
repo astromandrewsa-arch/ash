@@ -149,6 +149,7 @@ function paintBarriers(ctx, fire, view) {
  * Once the spread starts the heat steps back (strength < 1) so the perimeters read first.
  */
 function paintHeat(ctx, fire, view, strength = 1) {
+  if (strength <= 0) return
   const zone = fire.ignitionZone
   ctx.save()
   ctx.globalAlpha = strength
@@ -212,7 +213,33 @@ function paintZone(ctx, fire, view) {
 }
 
 /** A large translucent arrow showing where the wind is driving the fire at this step. */
-function paintWind(ctx, fire, view, cur) {
+/**
+ * Where the wind arrow goes: beside the fire (perpendicular to the wind, outside its bounding box)
+ * on whichever side has room inside the free map area; otherwise just behind the head, inside.
+ */
+function windAnchor(view, box, dx, dy, len, free) {
+  const [x0, y0, x1, y1] = box
+  const cx = (x0 + x1) / 2
+  const cy = (y0 + y1) / 2
+  const px = -dy
+  const py = dx
+  const halfPerp = (Math.abs(px) * (x1 - x0)) / 2 + (Math.abs(py) * (y1 - y0)) / 2
+  const off = halfPerp + 30
+  const need = len / 2 + 70 // arrow plus the label pill beyond its tail
+  if (free) {
+    for (const sgn of [1, -1]) {
+      const ax = cx + px * off * sgn
+      const ay = cy + py * off * sgn
+      if (ax - need >= free[0] && ax + need <= free[2] && ay - need >= free[1] && ay + need <= free[3]) return [ax, ay]
+    }
+  }
+  const halfW = (x1 - x0) / 2
+  const halfH = (y1 - y0) / 2
+  const reach = Math.max(0, Math.min(Math.abs(dx) > 1e-6 ? halfW / Math.abs(dx) : Infinity, Math.abs(dy) > 1e-6 ? halfH / Math.abs(dy) : Infinity) - len * 0.75)
+  return [cx + dx * reach, cy + dy * reach]
+}
+
+function paintWind(ctx, fire, view, cur, free) {
   const wind = windAt(fire, cur ? cur.hour : 0)
   let s = 90
   let n = -90
@@ -231,12 +258,7 @@ function paintWind(ctx, fire, view, cur) {
   const dx = Math.sin(to)
   const dy = -Math.cos(to)
   const len = 64
-  // Sit the arrow just behind the head of the fire, clear of the marker at the ignition zone.
-  const halfW = (view.px(e) - view.px(w)) / 2
-  const halfH = (view.py(s) - view.py(n)) / 2
-  const reach = Math.max(0, Math.min(Math.abs(dx) > 1e-6 ? halfW / Math.abs(dx) : Infinity, Math.abs(dy) > 1e-6 ? halfH / Math.abs(dy) : Infinity) - len * 0.75)
-  const cx = view.px((w + e) / 2) + dx * reach
-  const cy = view.py((s + n) / 2) + dy * reach
+  const [cx, cy] = windAnchor(view, [view.px(w), view.py(n), view.px(e), view.py(s)], dx, dy, len, free)
   const x0 = cx - dx * len * 0.5
   const y0 = cy - dy * len * 0.5
   const x1 = cx + dx * len * 0.5
@@ -281,7 +303,7 @@ function paintWind(ctx, fire, view, cur) {
 }
 
 /** Ignition heat: full before the spread starts, stepping back once perimeters are drawn. */
-const heatStrength = (step) => (step < 0 ? 1 : step === 0 ? 0.4 : 0.1)
+const heatStrength = (step) => (step < 0 ? 1 : step === 0 ? 0.4 : 0)
 
 /** Earlier growing steps before the current one. */
 function earlierSteps(fire, step) {
@@ -343,9 +365,10 @@ export function paintSpreadLines(ctx, view, st) {
   paintZone(ctx, fire, view)
 }
 
-/** On top of everything: the wind arrow and its label. */
+/** On top of everything: the wind arrow and its label. st.free: free map area in container px. */
 export function paintSpreadTop(ctx, view, st) {
-  const { fire, step } = st
+  const { fire, step, free } = st
   if (!fire) return
-  paintWind(ctx, fire, view, step >= 0 ? fire.steps[step] : null)
+  const f = free ? [free[0] + view.pad.x, free[1] + view.pad.y, free[2] + view.pad.x, free[3] + view.pad.y] : null
+  paintWind(ctx, fire, view, step >= 0 ? fire.steps[step] : null, f)
 }

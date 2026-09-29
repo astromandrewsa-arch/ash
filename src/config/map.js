@@ -9,6 +9,8 @@ export const MAP = {
   maxNativeZoom: 18,
   zoomSnap: 0.25, // fly-to fits a fire or area to the free map area in quarter steps
   labelsMinZoom: 9, // dark labels "toggled on above zoom 8"
+  labelsOpacity: 0.72,
+  labelsOpacityFireOpen: 0.42, // county lines step back behind an open fire's perimeter
   dotsMinZoom: 9, // below this, one cluster dot per area
   footprintMinZoom: 14,
   poleMinZoom: 12,

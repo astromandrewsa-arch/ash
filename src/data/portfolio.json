@@ -24,14 +24,14 @@
    ],
    "areas": 84,
    "totals": {
-    "tiv": 26868713999,
+    "tiv": 26868709999,
     "homes": 43000,
     "assets": 18,
     "poles": 4081,
     "lineKm": 367,
     "ranchAcres": 1700000,
     "hectaresUnderForecast": 800313,
-    "premium": 127444823
+    "premium": 127444857
    },
    "aal": 27266300,
    "aalPer1000": 1.01,
@@ -149,8 +149,8 @@
     }
    ],
    "dataQuality": {
-    "geocodeBuildingPct": 0.9893,
-    "itvFlagged": 1459,
+    "geocodeBuildingPct": 0.9894,
+    "itvFlagged": 1464,
     "roofClassAPct": 0.46,
     "defensibleSpace10Pct": 0.831,
     "medianYearBuilt": 2003,
@@ -174,14 +174,14 @@
    ],
    "areas": 100,
    "totals": {
-    "tiv": 31660999999,
+    "tiv": 31660995999,
     "homes": 49500,
     "assets": 23,
     "poles": 5541,
     "lineKm": 498.4,
     "ranchAcres": 1826000,
     "hectaresUnderForecast": 859015,
-    "premium": 142571291
+    "premium": 142571325
    },
    "aal": 31705000,
    "aalPer1000": 1,
@@ -300,9 +300,9 @@
    ],
    "dataQuality": {
     "geocodeBuildingPct": 0.9875,
-    "itvFlagged": 1656,
+    "itvFlagged": 1661,
     "roofClassAPct": 0.459,
-    "defensibleSpace10Pct": 0.832,
+    "defensibleSpace10Pct": 0.831,
     "medianYearBuilt": 2002,
     "constructionKnownPct": 1
    }
@@ -359,15 +359,15 @@
   }
  ],
  "simulation": {
-  "none": 346367953,
+  "none": 346627298,
   "asNegotiated": 97863300,
   "fails": 160730000,
   "carrier": 1230000,
   "returnPeriods": {
-   "none": 183.8,
+   "none": 184.2,
    "asNegotiated": 15.9,
    "fails": 37.8
   },
-  "premiumAtRisk": 5653018
+  "premiumAtRisk": 5657094
  }
 }

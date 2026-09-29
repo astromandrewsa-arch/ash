@@ -3,6 +3,7 @@ import { useMap } from 'react-leaflet'
 import { CanvasOverlay } from '../../lib/canvasOverlay.js'
 import { paintSpreadFills, paintSpreadLines, paintSpreadTop } from '../../lib/spreadPaint.js'
 import { UI } from '../../config/ui.js'
+import { mapPadding } from '../../lib/mapPadding.js'
 import useApp from '../../state/useApp.js'
 import useSpread from '../../state/useSpread.js'
 import useMapPane from '../../hooks/useMapPane.js'
@@ -17,7 +18,7 @@ import SpreadCamera from './SpreadCamera.jsx'
  */
 export default function SelectedFireLayer() {
   const map = useMap()
-  const { views } = useApp()
+  const { views, drawerOpen } = useApp()
   const { fire, step } = useSpread()
   const pane = useMapPane('spreadPane', 400)
   const linePane = useMapPane('spreadLinePane', 428)
@@ -42,7 +43,11 @@ export default function SelectedFireLayer() {
 
   useLayoutEffect(() => {
     const grew = fire !== null && st.current.fire === fire && step > st.current.step
-    Object.assign(st.current, { fire, step, views })
+    // The free map area (outside the floating panels and the drawer), for placing the wind arrow.
+    const pad = mapPadding(drawerOpen)
+    const size = map.getSize()
+    const free = [pad.paddingTopLeft[0], pad.paddingTopLeft[1], size.x - pad.paddingBottomRight[0], size.y - pad.paddingBottomRight[1]]
+    Object.assign(st.current, { fire, step, views, free })
     cancelAnimationFrame(raf.current)
     if (!grew) {
       st.current.fade = 1
@@ -59,7 +64,7 @@ export default function SelectedFireLayer() {
     st.current.fade = 0
     tick()
     return () => cancelAnimationFrame(raf.current)
-  }, [fire, step, views])
+  }, [fire, step, views, drawerOpen, map])
 
   return (
     <>

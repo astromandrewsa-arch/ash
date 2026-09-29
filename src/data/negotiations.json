@@ -170,7 +170,7 @@
   ],
   "ledger": {
    "cost": 1200000,
-   "saving": 56280800,
+   "saving": 56575505,
    "status": "Agreed",
    "documents": [
     "TFS thinning prescription.pdf",
@@ -274,7 +274,7 @@
   ],
   "ledger": {
    "cost": 120000,
-   "saving": 6874312,
+   "saving": 6835992,
    "status": "Complete",
    "documents": [
     "Break completion photos.pdf",
@@ -378,7 +378,7 @@
   ],
   "ledger": {
    "cost": 580000,
-   "saving": 1988776,
+   "saving": 1992341,
    "status": "State plan",
    "documents": [
     "TFS pre-positioning order.pdf",
