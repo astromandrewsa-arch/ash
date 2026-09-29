@@ -17,6 +17,7 @@ import './styles/drawer.css'
 import './styles/fire.css'
 import './styles/moreinfo.css'
 import './styles/pages.css'
+import './styles/simulation.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(

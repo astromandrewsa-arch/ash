@@ -26,3 +26,10 @@ export function dateRange(start, end) {
 export function daysBetween(from, to) {
   return Math.round((parse(to) - parse(from)) / DAY_MS)
 }
+
+/** ISO date plus n days. */
+export function addDays(iso, n) {
+  const d = new Date(`${iso}T12:00:00Z`)
+  d.setUTCDate(d.getUTCDate() + n)
+  return d.toISOString().slice(0, 10)
+}
