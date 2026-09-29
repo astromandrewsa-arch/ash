@@ -2,7 +2,7 @@
 
 Tick a pass only when its build, smoke test and commit are done.
 
-- [ ] Pass 1: prepare the repo, shell v2, smoke test
+- [ ] Pass 1: prepare the repo, shell v2, smoke test (in progress since 2026-09-29 02:30 UTC)
 - [ ] Pass 2: data generator v2
 - [ ] Pass 3: map v2
 - [ ] Pass 4: fires v2: ignition zones, bands, spread animation
