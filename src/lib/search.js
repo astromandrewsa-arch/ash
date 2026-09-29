@@ -1,40 +1,69 @@
-import { areas, fires, homes, processes } from './data.js'
+// Search index for the top bar (§4): fire IDs, places, assets, ranches, bundles and watchlist areas.
+import { store } from './store.js'
+import { ASSET_KIND } from './assets.js'
+import { formatNumber } from './format.js'
 
-const norm = (s) => s.trim().toLowerCase()
+const norm = (s) => String(s || '').trim().toLowerCase()
 
-/** Suggestions for the search box: fire IDs, places, counties and localities. */
-export const searchSuggestions = [
-  ...processes.map((p) => p.fireId),
-  ...areas.flatMap((a) => [a.name, a.nearTown, a.county, ...a.localities.map((l) => l.name)]),
-].filter((v, i, all) => all.indexOf(v) === i)
+let index = null
 
-/**
- * Resolve a query to something to open: a fire ID, a policy number or address, or a place
- * (area, town, county or locality), which opens that area's dated fire.
- */
-export function resolveSearch(query) {
+function build() {
+  const out = []
+  for (const f of store.fires) {
+    out.push({ kind: 'fire', id: f.id, state: f.state, label: `${f.id} — ${f.name}`, sub: `${f.place} · ${f.headerLine}`, keys: [f.id, f.id.replace('-', ''), f.name, f.place, f.county], primary: 3, rank: 5 })
+  }
+  for (const [place, areas] of store.areasByPlace) {
+    const a = areas[0]
+    if (a.type !== 'homes') continue
+    const homes = areas.reduce((s, x) => s + x.homes, 0)
+    out.push({ kind: 'area', id: a.id, state: a.state, place, label: place, sub: `${a.county}, ${a.state} · ${formatNumber(homes)} homes in ${areas.length} ${areas.length === 1 ? 'area' : 'areas'}`, keys: [place, ...areas.map((x) => x.name), a.county], primary: 1 + areas.length, rank: 4 })
+  }
+  for (const asset of store.assets) {
+    const area = store.areaById.get(asset.areaId)
+    out.push({ kind: 'asset', id: asset.id, state: area.state, label: asset.name, sub: `${ASSET_KIND[asset.kind]} · ${asset.operator}`, keys: [asset.name, asset.operator, area.county], rank: 3 })
+  }
+  for (const r of store.ranches) {
+    const area = store.areaById.get(r.areaId)
+    out.push({ kind: 'ranch', id: r.id, state: area.state, label: r.name, sub: `Rangeland · ${formatNumber(r.acres)} ac · ${area.county}`, keys: [r.name, area.county], rank: 3 })
+  }
+  for (const b of store.bundles) {
+    out.push({ kind: 'bundle', id: b.id, state: null, label: `${b.name} bundle`, sub: `${formatNumber(b.policies)} policies · rate adequacy ${b.adequacy < 0 ? '−' : '+'}${Math.abs(Math.round(b.adequacy * 100))}%`, keys: [b.name, `${b.name} bundle`], rank: 2 })
+  }
+  for (const w of store.watchlist) {
+    const area = store.areaById.get(w.areaId)
+    out.push({ kind: 'watch', id: w.areaId, state: area.state, label: `${w.place} (watchlist)`, sub: `${w.probability}% · ${w.windowDays}-day window`, keys: [w.place, 'watchlist'], rank: 1 })
+  }
+  return out
+}
+
+/** Name keys count in full; secondary keys (operator, county) at 60%. */
+function score(entry, q) {
+  let best = 0
+  entry.keys.forEach((k, i) => {
+    const key = norm(k)
+    if (!key) return
+    let s = 0
+    if (key === q) s = 100
+    else if (key.startsWith(q)) s = 60
+    else if (key.split(/[\s,/()–-]+/).some((w) => w.startsWith(q))) s = 40
+    else if (q.length >= 3 && key.includes(q)) s = 20
+    const weight = i < (entry.primary ?? 1) ? 1 : 0.6
+    best = Math.max(best, s * weight)
+  })
+  return best ? best + entry.rank : 0
+}
+
+export const SEARCH_KIND_LABEL = { fire: 'Dated fire', area: 'Place', asset: 'Asset', ranch: 'Ranch', bundle: 'Bundle', watch: 'Watchlist' }
+
+/** Ranked matches for a query. */
+export function searchIndex(query, limit = 8) {
   const q = norm(query)
-  if (!q) return null
-
-  const fireId = processes.find((p) => norm(p.fireId) === q)?.fireId
-  if (fireId) return { type: 'fire', id: fireId }
-
-  const home = homes.find((h) => norm(h.policyNumber) === q || norm(h.address) === q)
-  if (home) return { type: 'home', id: home.id }
-
-  const area = areas.find(
-    (a) =>
-      [a.name, a.nearTown, a.county, a.county.replace(' County', ''), ...a.localities.map((l) => l.name)].some((v) => norm(v) === q) ||
-      norm(a.nearTown).startsWith(q) ||
-      norm(a.name).startsWith(q),
-  )
-  if (area) return { type: 'fire', id: area.fireId }
-
-  const partial = fires.filter((f) => norm(f.id).startsWith(q))
-  if (partial.length === 1) return { type: 'fire', id: partial[0].id }
-
-  const addressHit = homes.filter((h) => norm(h.address).includes(q))
-  if (q.length >= 4 && addressHit.length === 1) return { type: 'home', id: addressHit[0].id }
-
-  return null
+  if (!q) return []
+  if (!index) index = build()
+  return index
+    .map((e) => ({ e, s: score(e, q) }))
+    .filter((x) => x.s > 0)
+    .sort((a, b) => b.s - a.s || a.e.label.localeCompare(b.e.label))
+    .slice(0, limit)
+    .map((x) => x.e)
 }

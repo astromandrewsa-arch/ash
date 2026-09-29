@@ -1,0 +1,378 @@
+// The ten dated fires (CLAUDE.md §7). Geography is set against the real terrain vendored in
+// scripts/geo (lakes, rivers, freeways); recipes follow the §7 table. `rateScale` converts the
+// recipe's peak head rate into the burning-period average used for the perimeters, so multi-day
+// fires stay on the scale of their analogues (logged in DECISIONS.md); displayed rates are the
+// recipe's. Loss targets are calibration targets: the generator derives losses bottom-up from the
+// homes and assets inside each band and tunes damage ratios until they land within ±10%.
+
+export const ISSUE = { date: '2026-09-29', time: '06:00', tz: 'CT', label: '29 Sep 2026 06:00 CT' }
+
+// Hand-drawn roads and landforms that the vendored layers do not carry.
+export const LINES = {
+  rm620: { kind: 'highway', name: 'RM 620', pts: [[30.3885, -97.9115], [30.3925, -97.9045], [30.3945, -97.8935], [30.3965, -97.8825], [30.3985, -97.8715], [30.4005, -97.8605], [30.4035, -97.8495], [30.4055, -97.8425]] },
+  us60: { kind: 'highway', name: 'US-60', pts: [[35.43, -101.17], [35.49, -101.08], [35.548, -100.965], [35.6, -100.85], [35.65, -100.72], [35.69, -100.64], [35.76, -100.55], [35.84, -100.46], [35.905, -100.39]] },
+  sh71: { kind: 'highway', name: 'SH 71', pts: [[30.108, -97.33], [30.095, -97.29], [30.078, -97.25], [30.058, -97.215], [30.035, -97.185], [30.012, -97.16]] },
+  caprock: { kind: 'escarpment', name: 'Caprock escarpment', pts: [[33.8, -101.0], [33.9, -100.99], [34.0, -100.985], [34.08, -100.975], [34.16, -100.955], [34.25, -100.93]] },
+  sh18: { kind: 'highway', name: 'SH 18', pts: [[36.03, -97.28], [36.06, -97.2], [36.09, -97.14], [36.116, -97.075]] },
+}
+
+// Exposure lines are written from the computed P50 path, so the drawer never disagrees with the data.
+const n0 = (v) => Math.round(v).toLocaleString('en-US')
+const usd = (v) => (v >= 1e9 ? `$${(v / 1e9).toFixed(1)}B` : v >= 1e6 ? `$${Math.round(v / 1e6)}M` : `$${Math.round(v / 1e3)}k`)
+
+// Base fuel values per fire: both clocks. The generator derives the 30-day series from these.
+const fuel = (liveFm, trend, curing, d1, d10, d100, d1000, erc, ercP90, kbdi, rainless) => ({ liveFm, liveTrendPtsPerDay: trend, curing, dead1h: d1, dead10h: d10, dead100h: d100, dead1000h: d1000, erc, ercPercentile90: ercP90, kbdi, daysSinceRain: rainless })
+
+export const FIRES = [
+  {
+    id: 'PH-01', name: 'Stinnett Run', place: 'Panhandle, north-east of Stinnett', state: 'TX', county: 'Hutchinson County', tour: true,
+    window: ['2026-10-14', '2026-10-18'], probability: 0.92, severity: 'Severe',
+    zone: { class: 'Sector', hectares: 9800, corridor: { asset: 'XCEL', fromKm: 0.3, toKm: 15.3 }, prior: 'line' },
+    ignitions: [{ at: { asset: 'XCEL', km: 1.2 }, hour: 0 }],
+    startLocalHour: 13,
+    recipe: [
+      { fromHour: 0, windFromDeg: 270, windKmh: 65, gustKmh: 90, rh: 12, headKmh: 11, lb: 7 },
+      { fromHour: 30, windFromDeg: 45, windKmh: 45, gustKmh: 65, rh: 18, headKmh: 10, lb: 4 },
+    ],
+    recipeText: '0–30 h: wind from W 65 km/h, RH 12%, head 11 km/h, LB 7. Hour 30: cold front, wind from NE 45 km/h, the south flank becomes the head running SW toward Pampa, LB 4.',
+    // After the front only the south flank north-east of Pampa becomes the new head (a narrow run onto the wheat).
+    shifts: [{ hour: 30, freeze: true, faceDeg: 75, flankLng: [-100.84, -100.79] }],
+    flankScale: 1.25, rateScale: 1,
+    dayFactors: [1, 0.35, 0.55],
+    holdHour: 48,
+    barriers: {
+      rivers: [{ name: 'Canadian River', delayHours: 3, label: 'Canadian River (partial)' }],
+      lines: [{ ref: 'us60', delayHours: 2 }],
+      // Plowed wheat north of Pampa, wide enough to hold the whole post-front head.
+      fields: [{ name: 'Plowed wheat', kind: 'field', ring: [[35.565, -101.36], [35.598, -101.36], [35.608, -101.0], [35.612, -100.6], [35.58, -100.6], [35.572, -101.0]] }],
+    },
+    spotting: { p25: { everyHours: 2, minM: 900, maxM: 1800 } },
+    events: [
+      { hour: 0, text: 'Pole failure on the Xcel corridor ignites cured grass north-east of Stinnett.' },
+      { hour: 19, text: 'After the night slowdown the head reaches the Canadian outskirts.' },
+      { hour: 14, text: 'Borger refinery flank exposed.' },
+      { hour: 30, text: 'Frontal passage: wind swings to the north-east; the south flank becomes the head toward Pampa.' },
+      { hour: 48, text: 'Crews hold the head on plowed wheat north of Pampa.' },
+    ],
+    watch: [{ asset: 'P66', hour: 14, note: 'Flank exposed at h14; monitored, outside the P50 band' }],
+    // The post-front lobe runs toward Pampa and is held short of the town's northern clusters.
+    fit: [{ area: 'PAM-2', bearing: 180, homes: 590, range: [0, 6000] }],
+    intensity: { class: 'Extreme', kwPerM: 28000, flameLengthM: 8.6, rosKmh: 11, windKmh: 65, windDir: 'W' },
+    fuel: fuel(81, -1.8, 93, 4.2, 5.4, 9.6, 12.6, 57, 46, 640, 44),
+    lossTarget: { p90: 48e6, p50: 71e6, p25: 96e6 },
+    exposureText: (x) => `${Math.round(x.asset('XCEL').km)} km of Xcel line (${n0(x.asset('XCEL').poles)} poles), Turkey Track, ${n0(x.homes)} homes in Canadian and Stinnett, ${n0(x.livestock)} cattle; the Borger refinery on the flank at h14 (monitored, outside the P50)`,
+    analogue: { name: 'Smokehouse Creek', year: 2024, acres: 1058482, homesLost: null, structures: 500 },
+  },
+  {
+    id: 'AU-02', name: 'Steiner Ranch', place: 'Austin, Steiner Ranch', state: 'TX', county: 'Travis County',
+    window: ['2026-10-09', '2026-10-13'], probability: 0.9, severity: 'Severe',
+    zone: { class: 'Block', hectares: 420, strip: { ref: 'rm620', fromIdx: 3, toIdx: 6, offsetM: 470, side: 'south' }, prior: 'road' },
+    // Arcs at three spans along RM 620; each run follows its own draw toward the lake.
+    ignitions: [{ at: [30.3918, -97.856], hour: 0 }, { at: [30.393, -97.8685], hour: 0.2 }, { at: [30.3942, -97.881], hour: 0.4 }],
+    startLocalHour: 13,
+    recipe: [{ fromHour: 0, windFromDeg: 0, windKmh: 25, gustKmh: 50, rh: 14, headKmh: 1.6, lb: 2 }],
+    recipeText: 'Wind from N 25 km/h gusting 50, head 1.6 km/h, LB 2. Fingers on bearings 200°, 225°, 250° up the draws toward Lake Austin. Spotting 120 m. Barriers: Lake Austin (hard), RM 620 (70%). Slope ×1.4 on the fingers.',
+    // Boost per draw: the further a draw turns from the wind, the more the slope carries its run.
+    fingers: [
+      { bearing: 200, origin: [30.3885, -97.856], factor: 2.5 },
+      { bearing: 225, origin: [30.3897, -97.8685], factor: 3.9 },
+      { bearing: 250, origin: [30.3909, -97.881], factor: 5.2 },
+    ].map((f) => ({ ...f, halfWidth: 10, slope: 1.4, corridorM: 105, normalDeg: 75 })),
+    flankScale: 1, rateScale: 0.12,
+    holdHour: 8,
+    barriers: { water: true, lines: [{ ref: 'rm620', delayHours: 2 }] },
+    spotting: { all: { everyHours: 0.75, minM: 90, maxM: 150 } },
+    events: [
+      { hour: 0, text: 'Power-line arcs at three spans on RM 620 ignite the juniper strip.' },
+      { hour: 1, text: 'Three fingers run up the draws toward Lake Austin.' },
+      { hour: 3, text: 'Spot fires land 120 m ahead of the fingers.' },
+      { hour: 7, text: 'The eastern finger reaches Lake Austin; the lake stops the head.' },
+      { hour: 8, text: 'Engines hold the flanks at the ridge roads.' },
+    ],
+    intensity: { class: 'Extreme', kwPerM: 14000, flameLengthM: 6.3, rosKmh: 1.6, windKmh: 25, windDir: 'N' },
+    fuel: fuel(84, -1.4, 88, 4.6, 5.8, 10.4, 13.1, 52, 45, 590, 36),
+    fit: [{ area: 'STR-1', bearings: [240, 255, 270, 285, 300], homes: 240, steps: 64 }],
+    lossTarget: { p90: 58e6, p50: 84e6, p25: 112e6 },
+    exposureText: (x) => `${n0(x.homes)} homes, ${usd(x.homesTiv)} TIV, avg ${usd(x.avgTiv)}`,
+    analogue: { name: 'Steiner Ranch Fire', year: 2011, acres: 125, homesLost: 23 },
+  },
+  {
+    id: 'BA-03', name: 'Lost Pines', place: 'Bastrop, Lost Pines', state: 'TX', county: 'Bastrop County',
+    window: ['2026-10-20', '2026-11-02'], probability: 0.9, severity: 'Severe',
+    // Three loblolly blocks about 2 km apart in a triangle, the middle one 1.8 km south, so the lobes merge as a clover-leaf.
+    zone: { class: 'Zone', hectares: 1300, blocks: [[30.158, -97.2615], [30.1418, -97.2425], [30.158, -97.2235]], prior: 'road' },
+    ignitions: [{ at: [30.158, -97.2615], hour: 0 }, { at: [30.1418, -97.2425], hour: 0.5 }, { at: [30.158, -97.2235], hour: 1 }],
+    startLocalHour: 14,
+    recipe: [{ fromHour: 0, windFromDeg: 0, windKmh: 22, gustKmh: 40, rh: 16, headKmh: 2.2, lb: 2.5 }],
+    recipeText: 'Wind from N 22 km/h, head 2.2 km/h, LB 2.5; three ignitions merge by h48 into a clover-leaf; spotting 0.8–2 km ahead every 6 h; five-day burn with night slowdown.',
+    flankScale: 1, rateScale: 0.075,
+    dayFactors: [1, 0.7, 0.5, 0.35, 0.25, 0.15],
+    holdHour: 120,
+    barriers: { water: true, rivers: [{ name: 'Colorado River' }], lines: [{ ref: 'sh71', delayHours: 2 }] },
+    // Spot fires 0.8–2 km ahead at h6 and h12; they merge into the middle lobe.
+    spotting: { all: { everyHours: 6, minM: 800, maxM: 2000, untilHour: 12 } },
+    events: [
+      { hour: 0, text: 'Three ignitions in the loblolly blocks, 2 km apart.' },
+      { hour: 6, text: 'First spot fires land 0.8–2 km ahead of the heads.' },
+      { hour: 24, text: 'Night slowdown; the three heads run again with the afternoon wind.' },
+      { hour: 48, text: 'The three lobes merge into a clover-leaf.' },
+      { hour: 120, text: 'Five days in: crews hold the heads at SH 71; the middle head crosses it before it is caught.' },
+    ],
+    intensity: { class: 'Very High', kwPerM: 9000, flameLengthM: 5.1, rosKmh: 2.2, windKmh: 22, windDir: 'N' },
+    fuel: fuel(88, -1.3, 86, 5.1, 6.2, 11.2, 14.4, 49, 44, 560, 31),
+    fit: [{ area: 'BAS-1', from: [30.122, -97.262], bearing: 270, homes: 410 }, { area: 'BAS-2', bearing: 90, homes: 410, range: [-3000, 3000] }],
+    lossTarget: { p90: 52e6, p50: 74e6, p25: 98e6 },
+    exposureText: (x) => `${n0(x.homes)} homes, ${usd(x.homesTiv)} TIV, ${x.asset('SPB').km.toFixed(1)} km of the Bluebonnet spur`,
+    analogue: { name: 'Bastrop County Complex', year: 2011, acres: 32400, homesLost: 1660 },
+  },
+  {
+    id: 'CT-04', name: 'Carbon double-header', place: 'Cross Timbers, Carbon', state: 'TX', county: 'Eastland County',
+    window: ['2026-10-11', '2026-10-16'], probability: 0.88, probabilityAtCall: 0.9, severity: 'Non-severe',
+    zone: { class: 'Zone', hectares: 1100, corridor: { asset: 'ONCOR', fromKm: 31, toKm: 38.5 }, prior: 'line' },
+    ignitions: [{ at: { asset: 'ONCOR', km: 35 }, hour: 0 }],
+    startLocalHour: 8,
+    recipe: [
+      { fromHour: 0, windFromDeg: 225, windKmh: 40, gustKmh: 60, rh: 15, headKmh: 4, lb: 4 },
+      // The stem: a narrow run south from the middle of the bar.
+      { fromHour: 13, windFromDeg: 0, windKmh: 30, gustKmh: 45, rh: 22, headKmh: 4, lb: 2, flankScale: 0.6 },
+    ],
+    recipeText: '0–13 h: wind from SW 40 km/h, head 4 km/h, LB 4 (ellipse pointing NE). Hour 13 (21:00): shift to wind from N 30 km/h, east flank becomes head, runs south over Carbon, LB 2 → T-shape.',
+    // The new head starts from the middle of the south-east flank, so the stem hangs off the bar.
+    shifts: [{ hour: 13, freeze: true, faceDeg: 60, flankFraction: [0.46, 0.6] }],
+    flankScale: 1, rateScale: 0.2,
+    holdHour: 26,
+    barriers: { water: true, freeways: [{ name: 'I20', delayHours: 2 }] },
+    spotting: { p25: { everyHours: 3, minM: 300, maxM: 700 } },
+    events: [
+      { hour: 0, text: 'Conductor contact on the Oncor feeder, 08:00.' },
+      { hour: 6, text: 'Head runs north-east under a 40 km/h south-westerly.' },
+      { hour: 13, text: 'Wind shift at 21:00: north wind turns the east flank into a new head.' },
+      { hour: 18, text: 'Second head runs south over Carbon.' },
+      { hour: 26, text: 'Held on the Carbon ranch roads.' },
+    ],
+    intensity: { class: 'High', kwPerM: 3800, flameLengthM: 3.4, rosKmh: 4, windKmh: 40, windDir: 'SW' },
+    fuel: fuel(86, -1.5, 90, 4.8, 6.1, 10.8, 13.8, 50, 45, 610, 39),
+    fit: [{ area: 'CAR-1', from: [32.255, -98.83], bearing: 270, homes: 160, range: [0, 5000] }],
+    lossTarget: { p90: 18e6, p50: 24.6e6, p25: 35e6 },
+    exposureText: (x) => `${n0(x.homes)} homes in Carbon, ${Math.round(x.asset('ONCOR').km)} km of the Oncor feeder (${n0(x.asset('ONCOR').poles)} poles)`,
+    analogue: { name: 'Kidd Fire, Eastland Complex', year: 2022, acres: 54513, homesLost: 86 },
+  },
+  {
+    id: 'HC-05', name: 'Crabapple II', place: 'Fredericksburg, north of town', state: 'TX', county: 'Gillespie County',
+    window: ['2026-10-24', '2026-11-06'], probability: 0.9, severity: 'Non-severe',
+    zone: { class: 'Block', hectares: 380, blocks: [[30.3235, -98.9115]], prior: 'track' },
+    ignitions: [{ at: [30.3235, -98.9115], hour: 0 }],
+    startLocalHour: 12,
+    recipe: [
+      { fromHour: 0, windFromDeg: 225, windKmh: 35, gustKmh: 50, rh: 18, headKmh: 1.2, lb: 2.5 },
+      { fromHour: 6, windFromDeg: 270, windKmh: 50, gustKmh: 70, rh: 16, headKmh: 1.2, lb: 2.5 },
+      { fromHour: 14, windFromDeg: 315, windKmh: 40, gustKmh: 55, rh: 22, headKmh: 1.2, lb: 2.5 },
+    ],
+    recipeText: 'Wind shifting: SW 35 → W 50 → NW 40 km/h at h0/h6/h14, head 1.2 km/h, LB 2.5; fingers on each wind bearing, pockets between → egg with alternating fingers.',
+    // One finger per wind: each runs from the ignition along its wind's heading while that wind blows.
+    // At each shift the perimeter freezes and only the flank facing the new wind runs on, so the
+    // earlier finger and the pocket beside it survive.
+    shifts: [{ hour: 6, freeze: true, faceDeg: 35 }, { hour: 14, freeze: true, faceDeg: 35 }],
+    fingers: [
+      { bearing: 45, fromHour: 0, toHour: 8, factor: 2.6 },
+      { bearing: 90, fromHour: 6, toHour: 16, factor: 2.6 },
+      { bearing: 135, fromHour: 14, toHour: 30, factor: 2.2 },
+    ].map((f) => ({ ...f, origin: [30.3235, -98.9115], corridorM: 260, normalDeg: 60, halfWidth: 8 })),
+    flankScale: 1, rateScale: 0.18,
+    holdHour: 30,
+    barriers: { rivers: [{ name: 'Pedernales River' }] },
+    spotting: { p25: { everyHours: 4, minM: 200, maxM: 500 } },
+    events: [
+      { hour: 0, text: 'Ignition on a ranch track in the oak-juniper savanna.' },
+      { hour: 6, text: 'Wind veers to the west; a second finger runs east.' },
+      { hour: 14, text: 'North-west wind: the third finger turns south-east toward town.' },
+      { hour: 24, text: 'The south-east run widens; the pocket beside the first finger stays unburned.' },
+      { hour: 30, text: 'Held at the north boundary of the subdivision.' },
+    ],
+    outbuildings: { p50: 60, p25: 24, tiv: 34000 },
+    intensity: { class: 'High', kwPerM: 2600, flameLengthM: 2.9, rosKmh: 1.2, windKmh: 50, windDir: 'W' },
+    fuel: fuel(90, -1.2, 84, 5.4, 6.6, 11.8, 15.2, 47, 44, 530, 27),
+    // Searched outward from the centre of the south-east run toward town.
+    fit: [{ area: 'FBG-1', from: [30.3125, -98.884], bearings: [100, 120, 140, 160, 180, 200, 220], homes: 35, range: [300, 4500], steps: 64, ratioWeight: 3 }],
+    lossTarget: { p90: 6.1e6, p50: 8.4e6, p25: 11e6 },
+    exposureText: (x) => `${n0(x.homes)} homes, ${x.outbuildings} outbuildings; the PEC feeder in the tail band`,
+    analogue: { name: 'Crabapple Fire', year: 2025, acres: 9858, homesLost: 9 },
+  },
+  {
+    id: 'PK-06', name: 'Possum Kingdom', place: 'Possum Kingdom Lake', state: 'TX', county: 'Palo Pinto County',
+    window: ['2026-10-17', '2026-10-21'], probability: 0.85, probabilityAtCall: 0.9, severity: 'Severe',
+    // South of the lake loop: the south wind drives the head into the arm, and the fire wraps it.
+    zone: { class: 'Block', hectares: 520, blocks: [[32.8415, -98.4815]], prior: 'track' },
+    ignitions: [{ at: [32.8405, -98.481], hour: 0 }],
+    startLocalHour: 12,
+    recipe: [{ fromHour: 0, windFromDeg: 180, windKmh: 20, gustKmh: 35, rh: 20, headKmh: 1.0, lb: 1.8 }],
+    recipeText: 'Wind from S 20 km/h, slope ×1.8 uphill (bearings 330–30°), head 1.0 km/h, LB 1.8; lake arms as hard barriers so the perimeter wraps into a crescent; multi-day.',
+    slopes: [{ from: 330, to: 30, factor: 1.8 }],
+    flankScale: 1, rateScale: 0.6,
+    dayFactors: [1, 0.6, 0.4],
+    holdHour: 36,
+    barriers: { water: true, rivers: [{ name: 'Brazos River' }] },
+    spotting: { p25: { everyHours: 5, minM: 150, maxM: 400 } },
+    events: [
+      { hour: 0, text: 'Ignition in the juniper breaks above the lake.' },
+      { hour: 4, text: 'Head runs uphill to the north under a south wind.' },
+      { hour: 12, text: 'Lake arms stop the head; the fire wraps along the shore.' },
+      { hour: 24, text: 'Second burning day: flanks back down to the coves.' },
+      { hour: 36, text: 'Held at the shoreline and the peninsula roads.' },
+    ],
+    intensity: { class: 'Very High', kwPerM: 7500, flameLengthM: 4.7, rosKmh: 1.0, windKmh: 20, windDir: 'S' },
+    fuel: fuel(85, -1.6, 89, 4.9, 6.0, 10.6, 13.4, 51, 45, 620, 40),
+    fit: [{ area: 'PKL-2', bearings: [60, 75, 90, 105, 120], homes: 120, steps: 64 }],
+    lossTarget: { p90: 24e6, p50: 33e6, p25: 42e6 },
+    exposureText: (x) => `${n0(x.homes)} lake-shore homes, ${usd(x.homesTiv)} TIV`,
+    analogue: { name: 'Possum Kingdom Complex', year: 2011, acres: 126734, homesLost: 168 },
+  },
+  {
+    id: 'RP-07', name: 'Matador–Waggoner outbreak', place: 'Rolling Plains, Matador Ranch', state: 'TX', county: 'Motley County',
+    window: ['2026-10-12', '2026-10-25'], probability: 0.9, severity: 'Severe',
+    zone: { class: 'Sector', hectares: 12000, blocks: [[33.975, -100.955]], aspect: 1.2, prior: 'track' },
+    ignitions: [{ at: [33.953, -100.979], hour: 0 }],
+    startLocalHour: 12,
+    recipe: [
+      { fromHour: 0, windFromDeg: 225, windKmh: 55, gustKmh: 80, rh: 7, headKmh: 8, lb: 4 },
+      // Once the wind eases the head broadens into the teardrop (rounder ellipse, wider flanks).
+      { fromHour: 7, windFromDeg: 230, windKmh: 25, gustKmh: 35, rh: 14, headKmh: 3, lb: 1.8, flankScale: 1.25 },
+    ],
+    recipeText: 'Wind from SW 55 km/h, RH 7%, head 8 km/h, LB 4 for 7 h then wind eases to 25 km/h; Caprock escarpment (hard) and plowed cotton (hard) block the west flank → lopsided teardrop.',
+    flankScale: 1, rateScale: 0.2,
+    holdHour: 32,
+    barriers: {
+      rivers: [{ name: 'Tongue River', delayHours: 2 }],
+      lines: [{ ref: 'caprock' }],
+      // Plowed cotton below the Caprock runs along the fire's north-west flank and holds it straight.
+      fields: [{ name: 'Plowed cotton', kind: 'field', ring: [[33.9415, -101.0113], [34.1517, -100.7576], [34.1708, -100.7807], [33.9606, -101.0344]] }],
+    },
+    spotting: { p25: { everyHours: 2, minM: 500, maxM: 1200 } },
+    events: [
+      { hour: 0, text: 'Ignitions in the ranch quadrant under a 55 km/h south-westerly, RH 7%.' },
+      { hour: 3, text: 'Caprock escarpment and plowed cotton stop the west flank.' },
+      { hour: 7, text: 'Wind eases to 25 km/h; the head slows.' },
+      { hour: 18, text: 'East flank runs across the Tongue River pastures.' },
+      { hour: 30, text: 'State plan: engines hold the teardrop at the county roads.' },
+    ],
+    intensity: { class: 'Extreme', kwPerM: 18000, flameLengthM: 7.0, rosKmh: 8, windKmh: 55, windDir: 'SW' },
+    fuel: fuel(79, -1.9, 94, 4.0, 5.1, 9.2, 12.2, 58, 47, 690, 48),
+    lossTarget: { p90: 9e6, p50: 14e6, p25: 22e6 },
+    pathLabel: (x) => `${n0(x.p50(x.ranch('MAT').burnedHa))} ha pasture`,
+    exposureText: (x) => `${n0(x.p50(x.ranch('MAT').burnedHa))} ha of pasture, ${Math.round(x.p50(x.ranch('MAT').fenceKm))} km of fencing, ${n0(x.livestock)} cattle, ${x.p50(x.ranch('MAT').structures)} ranch headquarters and camps`,
+    analogue: { name: 'Southern Plains outbreak, Texas and Oklahoma', year: 2009, acres: 250000, homesLost: 339 },
+  },
+  {
+    id: 'PB-08', name: 'Colorado City ROW', place: 'Permian, Colorado City', state: 'TX', county: 'Mitchell County',
+    window: ['2026-10-19', '2026-10-31'], probability: 0.9, severity: 'Non-severe',
+    zone: { class: 'Sector', hectares: 6500, corridor: { asset: 'BASIN', fromKm: 1, toKm: 16 }, prior: 'line' },
+    ignitions: [{ at: { asset: 'BASIN', km: 3 }, hour: 0 }, { at: { asset: 'BASIN', km: 9 }, hour: 1.5 }],
+    startLocalHour: 13,
+    recipe: [{ fromHour: 0, windFromDeg: 260, windKmh: 35, gustKmh: 50, rh: 11, headKmh: 5, lb: 3 }],
+    recipeText: 'Wind from W 35 km/h, head 5 km/h, LB 3; fingers along the ROW bearing 75°; caliche pads as islands (30 patches); Delek refinery and 60 Roscoe turbines on the flank.',
+    // Fingers run along the ROW and the two lease roads parallel to it; caliche pads stay unburned.
+    fingers: [
+      { origin: [32.4015, -100.8385], factor: 3.2 },
+      { origin: [32.3885, -100.833], factor: 2.7 },
+      { origin: [32.4145, -100.844], factor: 2.7 },
+    ].map((f) => ({ ...f, bearing: 75, halfWidth: 9, slope: 1, corridorM: 150, normalDeg: 60 })),
+    flankScale: 1, rateScale: 0.41,
+    holdHour: 14,
+    p25HoldHour: 25,
+    islands: { count: 30, sizeM: [320, 640], alongKm: [2, 24], offsetM: [100, 1600] },
+    barriers: { water: true, freeways: [{ name: 'I20', delayHours: 2 }] },
+    spotting: { p25: { everyHours: 2, minM: 400, maxM: 900 } },
+    events: [
+      { hour: 0, text: 'Line-to-tree contact at a well pad on the pipeline ROW.' },
+      { hour: 2, text: 'Fingers run along the ROW on bearing 75°.' },
+      { hour: 6, text: 'Caliche pads stay unburned as islands.' },
+      { hour: 9, text: 'Roscoe turbines on the south flank.' },
+      { hour: 14, text: 'Held at the county road; pump stations defended.' },
+    ],
+    watch: [
+      { asset: 'DEL', hour: 10, note: 'On the upwind flank; monitored, outside all bands' },
+      { asset: 'ROS', hour: 12, note: 'Turbines about 15 km off the south flank; monitored, outside all bands' },
+    ],
+    intensity: { class: 'High', kwPerM: 3400, flameLengthM: 3.3, rosKmh: 5, windKmh: 35, windDir: 'W' },
+    fuel: fuel(80, -1.7, 92, 4.3, 5.3, 9.4, 12.4, 55, 46, 670, 46),
+    lossTarget: { p90: 12e6, p50: 19e6, p25: 31e6 },
+    pathLabel: (x) => `${Math.round(x.asset('BASIN').km)} km pipeline`,
+    exposureText: (x) => `${Math.round(x.asset('BASIN').km)} km of the Basin pipeline with ${x.asset('BASIN').stations} pump stations; the Delek refinery and the Roscoe turbines on the flanks`,
+    analogue: { name: 'Windy Deuce', year: 2024, acres: 144045, homesLost: 50 },
+  },
+  {
+    id: 'OK-09', name: 'Osage patch-burn', place: 'Osage County, Tallgrass Prairie', state: 'OK', county: 'Osage County',
+    window: ['2026-10-22', '2026-11-04'], probability: 0.9, severity: 'Non-severe',
+    zone: { class: 'Zone', hectares: 1400, blocks: [[36.8045, -96.4285]], prior: 'track' },
+    ignitions: [{ at: [36.7965, -96.4295], hour: 0 }],
+    startLocalHour: 13,
+    recipe: [{ fromHour: 0, windFromDeg: 185, windKmh: 45, gustKmh: 65, rh: 19, headKmh: 11, lb: 5 }],
+    recipeText: 'Wind from S 45 km/h, head 11 km/h, LB 5; last year’s patch burns as islands (twelve blocks of varied size) so the perimeter shows bays and islands and halts at burned patches.',
+    flankScale: 1.1, rateScale: 0.45,
+    holdHour: 3.5,
+    // Last season's patch burns: islands of varied size inside the run, four that cut bays into
+    // the flanks, and a staggered row of blocks that stops the head in scallops.
+    // [lat, lng, widthM, heightM, axisDeg]
+    patches: [
+      [36.8172, -96.4351, 1100, 600, 70], [36.8082, -96.4216, 600, 450, 20], [36.8289, -96.4228, 1000, 650, 120], [36.837, -96.4396, 700, 500, 45],
+      [36.8253, -96.4441, 1300, 800, 30], [36.8181, -96.4116, 1100, 700, 150], [36.8361, -96.4104, 900, 600, 100], [36.8091, -96.4424, 800, 500, 60],
+      [36.8505, -96.4531, 1500, 760, 82], [36.8536, -96.4374, 1500, 920, 97], [36.85, -96.4211, 1500, 700, 78], [36.8532, -96.4043, 1500, 850, 94],
+    ],
+    barriers: { water: true },
+    spotting: { p25: { everyHours: 2, minM: 150, maxM: 300 } },
+    events: [
+      { hour: 0, text: 'Ignition in the south unit under a 45 km/h south wind.' },
+      { hour: 1, text: 'Head reaches last season’s patch burns and splits around them.' },
+      { hour: 2, text: 'Bays form where patches reach into the flanks; burned blocks stay as islands.' },
+      { hour: 4, text: 'Out of fuel against the patch mosaic.' },
+    ],
+    // Three sheds and corrals in the burn unit (the preserve headquarters sit outside every band).
+    outbuildings: { p50: 3, p25: 0, tiv: 180000 },
+    intensity: { class: 'Moderate', kwPerM: 1900, flameLengthM: 2.5, rosKmh: 11, windKmh: 45, windDir: 'S' },
+    fuel: fuel(92, -1.1, 82, 5.8, 6.9, 12.8, 15.8, 46, 44, 520, 26),
+    lossTarget: { p90: 1.2e6, p50: 2.1e6, p25: 3.4e6 },
+    pathLabel: (x) => `${n0(x.p50(x.ranch('TGP').burnedHa))} ha tallgrass`,
+    exposureText: (x) => `${n0(x.p50(x.ranch('TGP').burnedHa))} ha of tallgrass, ${n0(x.livestock)} bison and cattle, ${x.outbuildings} structures`,
+    analogue: { name: 'Tallgrass Prairie patch-burn regime', year: 2025, acres: 15000, homesLost: 0 },
+  },
+  {
+    id: 'OK-10', name: 'Stillwater cigars', place: 'Oklahoma, south-west of Stillwater', state: 'OK', county: 'Payne County',
+    window: ['2026-10-08', '2026-10-11'], probability: 0.9, severity: 'Severe',
+    zone: { class: 'Sector', hectares: 4200, corridor: { asset: 'OGEL', fromKm: 22.5, toKm: 30.5 }, prior: 'line' },
+    // The line runs east–west here: 2.1 km apart along it puts the three starts 1.5 km apart across the wind.
+    ignitions: [{ at: { asset: 'OGEL', km: 24 }, hour: 0 }, { at: { asset: 'OGEL', km: 26.1 }, hour: 0.2 }, { at: { asset: 'OGEL', km: 28.2 }, hour: 0.4 }],
+    startLocalHour: 12,
+    recipe: [
+      // Narrow cigars while the gale blows; they widen and merge sideways once it eases.
+      { fromHour: 0, windFromDeg: 225, windKmh: 90, gustKmh: 130, rh: 8, headKmh: 16, lb: 8, flankScale: 0.55 },
+      { fromHour: 5, windFromDeg: 240, windKmh: 30, gustKmh: 45, rh: 16, headKmh: 3.5, lb: 2.2, flankScale: 0.6 },
+    ],
+    recipeText: 'Wind from SW 90 km/h gusting 130, RH 8%, three downed-line ignitions 1.5 km apart, head 16 km/h, LB 8 (cap) → three parallel cigars for 5 h, then wind eases to 30 km/h and they merge sideways.',
+    flankScale: 1, rateScale: 0.14,
+    holdHour: 24,
+    barriers: { water: true, freeways: [{ name: 'U412', delayHours: 2 }] },
+    spotting: { p25: { everyHours: 1.5, minM: 300, maxM: 700 } },
+    events: [
+      { hour: 0, text: 'Three downed-line ignitions on the OG&E feeder, 1.5 km apart.' },
+      { hour: 2, text: 'Three parallel cigars run north-east under a 90 km/h south-westerly.' },
+      { hour: 5, text: 'Wind eases to 30 km/h; the cigars start to widen.' },
+      { hour: 10, text: 'The three runs merge sideways into one front.' },
+      { hour: 24, text: 'Held at the section-line roads south-west of Stillwater.' },
+    ],
+    watch: [{ asset: 'CUSH', hour: 31, note: 'On the flank, 31 h away at forecast spread; monitored, outside all bands' }],
+    intensity: { class: 'Extreme', kwPerM: 32000, flameLengthM: 9.1, rosKmh: 16, windKmh: 90, windDir: 'SW' },
+    fuel: fuel(78, -1.9, 94, 4.0, 5.0, 9.0, 12.0, 58, 47, 680, 47),
+    fit: [{ area: 'STW-1', from: [36.058, -97.142], bearing: 315, homes: 310, range: [-1000, 5000] }],
+    lossTarget: { p90: 41e6, p50: 57e6, p25: 76e6 },
+    exposureText: (x) => `${n0(x.homes)} homes, ${usd(x.homesTiv)} TIV, ${Math.round(x.asset('OGEL').km)} km of the OG&E feeder and its Stillwater substation; Cushing tank farm 31 h away on the flank (monitored, outside all bands)`,
+    analogue: { name: 'Oklahoma wildfire outbreak', year: 2025, acres: 170000, homesLost: null, structures: 515 },
+  },
+]
+
+export const WATCHLIST = [
+  { id: 'W-01', place: 'Kerrville north', areaKey: 'KRV', cluster: 0, probability: 78, windowDays: 18, narrowingRate: 0.9, note: 'Live fuel 91% and falling 1.3 pts/day; curing 83%.' },
+  { id: 'W-02', place: 'Lago Vista', areaKey: 'LGV', cluster: 0, probability: 66, windowDays: 22, narrowingRate: 0.6, note: 'Sensors below every threshold; grazed continuity 40%.' },
+  { id: 'W-03', place: 'Waggoner north pasture', areaKey: 'WAG', probability: 71, windowDays: 20, narrowingRate: 0.8, note: 'Cured mixed grass at 91%; 100-h dead fuel 12%.' },
+  { id: 'W-04', place: 'Woodward', areaKey: 'WDW', cluster: 0, probability: 58, windowDays: 24, narrowingRate: 0.5, note: 'Rain on 22 Sep reset the fast clock; slow clock still drying.' },
+  { id: 'W-05', place: 'Roscoe interior', areaKey: 'ROS', probability: 62, windowDays: 21, narrowingRate: 0.7, note: 'Cotton stubble and pasture between turbine pads; ERC at the 88th percentile.' },
+]

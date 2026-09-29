@@ -1,0 +1,15 @@
+{
+ "model": "PRIMER",
+ "seed": 20260929,
+ "issued": "2026-09-29T06:00:00-05:00",
+ "issueDate": "2026-09-29",
+ "issuedLabel": "29 Sep 2026 06:00 CT",
+ "user": {
+  "name": "Jordan Ellis",
+  "initials": "JE",
+  "role": "Cat Risk Lead, Demo Carrier"
+ },
+ "forecastDefinition": "PRIMER dates a hectare on the first day its accumulated fire probability inside a window of 14 days or less reaches 90%.",
+ "rescoreHours": 6,
+ "watchlistBelow": 0.8
+}

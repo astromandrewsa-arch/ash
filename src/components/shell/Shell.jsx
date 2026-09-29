@@ -1,34 +1,39 @@
 import { useEffect, useState } from 'react'
 import useApp from '../../state/useApp.js'
 import { UI } from '../../config/ui.js'
-import IconRail from './IconRail.jsx'
+import Rail from './Rail.jsx'
 import TopBar from './TopBar.jsx'
-import HelpModal from './HelpModal.jsx'
-import PageSkeleton from './PageSkeleton.jsx'
+import HelpModal from '../help/HelpModal.jsx'
 import MapView from '../map/MapView.jsx'
-import LocationsPanel from '../panels/LocationsPanel.jsx'
-import ForecastFilter from '../panels/ForecastFilter.jsx'
 import QuickViews from '../panels/QuickViews.jsx'
+import BookPanel from '../panels/BookPanel.jsx'
 import AlertCard from '../panels/AlertCard.jsx'
 import TimeSlider from '../panels/TimeSlider.jsx'
-import FuelLegend from '../panels/FuelLegend.jsx'
-import DetailDrawer from '../drawer/DetailDrawer.jsx'
-import LocationsAtRiskPage from '../pages/LocationsAtRiskPage.jsx'
-import NegotiationChannelPage from '../pages/NegotiationChannelPage.jsx'
-import AccuracyPage from '../pages/AccuracyPage.jsx'
+import SpreadControls from '../panels/SpreadControls.jsx'
+import Drawer from '../drawer/Drawer.jsx'
+import MoreInfoPanel from '../moreinfo/MoreInfoPanel.jsx'
+import PageSkeleton from '../pages/PageSkeleton.jsx'
+import LocationsPage from '../locations/LocationsPage.jsx'
+import SimulationPage from '../simulation/SimulationPage.jsx'
+import PremiumPage from '../premium/PremiumPage.jsx'
+import NegotiationPage from '../negotiation/NegotiationPage.jsx'
+import AccuracyPage from '../accuracy/AccuracyPage.jsx'
 import ReportsPage from '../pages/ReportsPage.jsx'
 
+// v1 screens render inside .v1-legacy until their pass replaces them.
 const PAGES = {
-  locations: LocationsAtRiskPage,
-  negotiation: NegotiationChannelPage,
-  accuracy: AccuracyPage,
-  reports: ReportsPage,
+  locations: { Component: LocationsPage },
+  simulation: { Component: SimulationPage },
+  premium: { Component: PremiumPage },
+  negotiation: { Component: NegotiationPage },
+  accuracy: { Component: AccuracyPage },
+  reports: { Component: ReportsPage, legacy: true },
 }
 
 export default function Shell() {
-  const { activeView, drawerOpen, layers } = useApp()
+  const { activeView, drawerOpen } = useApp()
   const onMap = activeView === 'map'
-  const Page = PAGES[activeView]
+  const page = PAGES[activeView]
 
   // A short skeleton on each page switch, so navigation feels like a real app.
   const [lastView, setLastView] = useState(activeView)
@@ -45,30 +50,42 @@ export default function Shell() {
 
   return (
     <div className="app">
-      <IconRail />
-      <div className="main">
-        <TopBar />
-        <main className={`stage${drawerOpen ? ' drawer-open' : ''}`}>
+      <Rail />
+      <div className={`app-main${onMap && drawerOpen ? ' drawer-open' : ''}`}>
+        <main className="stage">
           {/* The map stays mounted behind every view so its position survives navigation. */}
-          <MapView />
-          {onMap ? (
+          <div className="map-host">
+            <MapView />
+          </div>
+          {onMap && (
             <>
               <div className="overlay-left">
-                <LocationsPanel />
-                <ForecastFilter />
+                <BookPanel />
                 <QuickViews />
               </div>
-              <AlertCard />
-              <TimeSlider />
-              {layers.fuelGrid && <FuelLegend />}
-              <DetailDrawer />
+              <AlertCard hidden={drawerOpen} />
+              <TimeSlider>
+                <SpreadControls />
+              </TimeSlider>
             </>
-          ) : loading ? (
-            <PageSkeleton />
-          ) : (
-            <Page />
+          )}
+          <Drawer />
+          <MoreInfoPanel />
+          {page && (
+            <div className="page-host">
+              {loading ? (
+                <PageSkeleton />
+              ) : page.legacy ? (
+                <div className="v1-legacy">
+                  <page.Component />
+                </div>
+              ) : (
+                <page.Component />
+              )}
+            </div>
           )}
         </main>
+        <TopBar />
       </div>
       <HelpModal />
     </div>

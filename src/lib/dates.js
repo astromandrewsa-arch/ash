@@ -15,6 +15,7 @@ export function fullDate(iso) {
 
 /** "11–14 Oct" or "30 Oct–2 Nov" */
 export function dateRange(start, end) {
+  if (start === end) return dayMonth(start)
   if (start.slice(0, 7) === end.slice(0, 7)) {
     return `${Number(start.slice(8, 10))}–${dayMonth(end)}`
   }
@@ -24,4 +25,11 @@ export function dateRange(start, end) {
 /** Whole days from `from` to `to` (positive when `to` is later). */
 export function daysBetween(from, to) {
   return Math.round((parse(to) - parse(from)) / DAY_MS)
+}
+
+/** ISO date plus n days. */
+export function addDays(iso, n) {
+  const d = new Date(`${iso}T12:00:00Z`)
+  d.setUTCDate(d.getUTCDate() + n)
+  return d.toISOString().slice(0, 10)
 }

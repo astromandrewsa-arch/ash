@@ -1,9 +1,601 @@
 {
-  "_note": "Totals written by scripts/generateData.mjs from coverageAreas.json and homes.json.",
-  "options": [{ "id": "demo-tx-ho", "label": "Portfolio: Demo Carrier — Texas HO book" }],
-  "tiv": 326366000,
-  "homesCovered": 601,
-  "hectaresUnderForecast": 68270,
-  "annualPremium": 2021082,
-  "baselineAal": 1469000
+ "defaultId": "txok",
+ "initialView": {
+  "center": [
+   31.3,
+   -99.5
+  ],
+  "zoom": 6
+ },
+ "terms": {
+  "deductible": 0.02,
+  "locationLimit": 1200000
+ },
+ "portfolios": [
+  {
+   "id": "tx",
+   "name": "Demo Carrier — Texas HO book",
+   "short": "Texas HO book",
+   "view": {
+    "center": [
+     31.3,
+     -99.5
+    ],
+    "zoom": 6
+   },
+   "states": [
+    "TX"
+   ],
+   "areas": 84,
+   "totals": {
+    "tiv": 26868709999,
+    "homes": 43000,
+    "assets": 18,
+    "poles": 4081,
+    "lineKm": 367,
+    "ranchAcres": 1700000,
+    "hectaresUnderForecast": 800313,
+    "premium": 127444857
+   },
+   "aal": 27266300,
+   "aalPer1000": 1.01,
+   "oep100": 223600000,
+   "oep250": 335400000,
+   "tvar100": 344160205,
+   "epCurve": [
+    {
+     "rp": 2,
+     "loss": 10320000
+    },
+    {
+     "rp": 5,
+     "loss": 32680000
+    },
+    {
+     "rp": 10,
+     "loss": 60200000
+    },
+    {
+     "rp": 25,
+     "loss": 107500000
+    },
+    {
+     "rp": 50,
+     "loss": 159100000
+    },
+    {
+     "rp": 100,
+     "loss": 223600000
+    },
+    {
+     "rp": 250,
+     "loss": 335400000
+    },
+    {
+     "rp": 500,
+     "loss": 438600000
+    },
+    {
+     "rp": 1000,
+     "loss": 559000000
+    }
+   ],
+   "exposedConcentrations": [
+    {
+     "areaId": "STR-1",
+     "name": "Steiner Ranch west",
+     "type": "homes",
+     "exposedTiv": 154491000,
+     "pointLoss": 83967402,
+     "fireIds": [
+      "AU-02"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "BAS-2",
+     "name": "Bastrop east",
+     "type": "homes",
+     "exposedTiv": 134309000,
+     "pointLoss": 70937831,
+     "fireIds": [
+      "BA-03"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "U-BASIN",
+     "name": "Basin pipeline segment",
+     "type": "utility",
+     "exposedTiv": 60375000,
+     "pointLoss": 17370000,
+     "fireIds": [
+      "PB-08"
+     ],
+     "linear": true
+    },
+    {
+     "areaId": "U-XCEL",
+     "name": "Xcel/SPS Panhandle distribution corridor",
+     "type": "utility",
+     "exposedTiv": 57059113,
+     "pointLoss": 14378897,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": true
+    },
+    {
+     "areaId": "PKL-2",
+     "name": "Graford / Possum Kingdom south-west",
+     "type": "homes",
+     "exposedTiv": 51313000,
+     "pointLoss": 33147161,
+     "fireIds": [
+      "PK-06"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "R-MAT",
+     "name": "Matador Ranch",
+     "type": "rangeland",
+     "exposedTiv": 46763084,
+     "pointLoss": 14058157,
+     "fireIds": [
+      "RP-07"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "R-TT",
+     "name": "Turkey Track Ranch",
+     "type": "rangeland",
+     "exposedTiv": 38851536,
+     "pointLoss": 11783692,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "CAN-1",
+     "name": "Canadian south-west",
+     "type": "homes",
+     "exposedTiv": 38501000,
+     "pointLoss": 17121944,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "CAN-2",
+     "name": "Canadian south-east",
+     "type": "homes",
+     "exposedTiv": 32303000,
+     "pointLoss": 14627090,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "STN-1",
+     "name": "Stinnett",
+     "type": "homes",
+     "exposedTiv": 29703000,
+     "pointLoss": 12960602,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": false
+    }
+   ],
+   "concentrations": [
+    {
+     "areaId": "U-P66",
+     "name": "Phillips 66 Borger refinery",
+     "type": "utility",
+     "tiv": 2330000000,
+     "linear": false
+    },
+    {
+     "areaId": "U-VAL",
+     "name": "Valero McKee refinery",
+     "type": "utility",
+     "tiv": 2000000000,
+     "linear": false
+    },
+    {
+     "areaId": "CDP-1",
+     "name": "Cedar Park west edge",
+     "type": "homes",
+     "tiv": 1716020000,
+     "linear": false
+    },
+    {
+     "areaId": "LEA-1",
+     "name": "Leander west edge",
+     "type": "homes",
+     "tiv": 1599986000,
+     "linear": false
+    },
+    {
+     "areaId": "LGV-1",
+     "name": "Lago Vista",
+     "type": "homes",
+     "tiv": 1449997000,
+     "linear": false
+    },
+    {
+     "areaId": "WLH-1",
+     "name": "West Lake Hills",
+     "type": "homes",
+     "tiv": 1199998000,
+     "linear": false
+    },
+    {
+     "areaId": "JON-1",
+     "name": "Jonestown",
+     "type": "homes",
+     "tiv": 1169997000,
+     "linear": false
+    },
+    {
+     "areaId": "STR-1",
+     "name": "Steiner Ranch west",
+     "type": "homes",
+     "tiv": 974989000,
+     "linear": false
+    },
+    {
+     "areaId": "U-DEL",
+     "name": "Delek Big Spring refinery",
+     "type": "utility",
+     "tiv": 900000000,
+     "linear": false
+    },
+    {
+     "areaId": "U-ROS",
+     "name": "Roscoe wind farm",
+     "type": "utility",
+     "tiv": 900000000,
+     "linear": false
+    }
+   ],
+   "dataQuality": {
+    "geocodeBuildingPct": 0.9894,
+    "itvFlagged": 1464,
+    "roofClassAPct": 0.46,
+    "defensibleSpace10Pct": 0.831,
+    "medianYearBuilt": 2003,
+    "constructionKnownPct": 1
+   }
+  },
+  {
+   "id": "txok",
+   "name": "Demo Carrier — Texas + Oklahoma",
+   "short": "Texas + Oklahoma",
+   "view": {
+    "center": [
+     33.5,
+     -98.8
+    ],
+    "zoom": 6
+   },
+   "states": [
+    "TX",
+    "OK"
+   ],
+   "areas": 100,
+   "totals": {
+    "tiv": 31660995999,
+    "homes": 49500,
+    "assets": 23,
+    "poles": 5541,
+    "lineKm": 498.4,
+    "ranchAcres": 1826000,
+    "hectaresUnderForecast": 859015,
+    "premium": 142571325
+   },
+   "aal": 31705000,
+   "aalPer1000": 1,
+   "oep100": 260000000,
+   "oep250": 390000000,
+   "tvar100": 400186285,
+   "epCurve": [
+    {
+     "rp": 2,
+     "loss": 12000000
+    },
+    {
+     "rp": 5,
+     "loss": 38000000
+    },
+    {
+     "rp": 10,
+     "loss": 70000000
+    },
+    {
+     "rp": 25,
+     "loss": 125000000
+    },
+    {
+     "rp": 50,
+     "loss": 185000000
+    },
+    {
+     "rp": 100,
+     "loss": 260000000
+    },
+    {
+     "rp": 250,
+     "loss": 390000000
+    },
+    {
+     "rp": 500,
+     "loss": 510000000
+    },
+    {
+     "rp": 1000,
+     "loss": 650000000
+    }
+   ],
+   "exposedConcentrations": [
+    {
+     "areaId": "STR-1",
+     "name": "Steiner Ranch west",
+     "type": "homes",
+     "exposedTiv": 154491000,
+     "pointLoss": 83967402,
+     "fireIds": [
+      "AU-02"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "BAS-2",
+     "name": "Bastrop east",
+     "type": "homes",
+     "exposedTiv": 134309000,
+     "pointLoss": 70937831,
+     "fireIds": [
+      "BA-03"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "STW-1",
+     "name": "Stillwater SW (south-west)",
+     "type": "homes",
+     "exposedTiv": 77244000,
+     "pointLoss": 43280728,
+     "fireIds": [
+      "OK-10"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "U-BASIN",
+     "name": "Basin pipeline segment",
+     "type": "utility",
+     "exposedTiv": 60375000,
+     "pointLoss": 17370000,
+     "fireIds": [
+      "PB-08"
+     ],
+     "linear": true
+    },
+    {
+     "areaId": "U-XCEL",
+     "name": "Xcel/SPS Panhandle distribution corridor",
+     "type": "utility",
+     "exposedTiv": 57059113,
+     "pointLoss": 14378897,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": true
+    },
+    {
+     "areaId": "PKL-2",
+     "name": "Graford / Possum Kingdom south-west",
+     "type": "homes",
+     "exposedTiv": 51313000,
+     "pointLoss": 33147161,
+     "fireIds": [
+      "PK-06"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "R-MAT",
+     "name": "Matador Ranch",
+     "type": "rangeland",
+     "exposedTiv": 46763084,
+     "pointLoss": 14058157,
+     "fireIds": [
+      "RP-07"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "R-TT",
+     "name": "Turkey Track Ranch",
+     "type": "rangeland",
+     "exposedTiv": 38851536,
+     "pointLoss": 11783692,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "CAN-1",
+     "name": "Canadian south-west",
+     "type": "homes",
+     "exposedTiv": 38501000,
+     "pointLoss": 17121944,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "CAN-2",
+     "name": "Canadian south-east",
+     "type": "homes",
+     "exposedTiv": 32303000,
+     "pointLoss": 14627090,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": false
+    }
+   ],
+   "concentrations": [
+    {
+     "areaId": "U-CUSH",
+     "name": "Cushing tank farm",
+     "type": "utility",
+     "tiv": 2700000000,
+     "linear": false
+    },
+    {
+     "areaId": "U-P66",
+     "name": "Phillips 66 Borger refinery",
+     "type": "utility",
+     "tiv": 2330000000,
+     "linear": false
+    },
+    {
+     "areaId": "U-VAL",
+     "name": "Valero McKee refinery",
+     "type": "utility",
+     "tiv": 2000000000,
+     "linear": false
+    },
+    {
+     "areaId": "CDP-1",
+     "name": "Cedar Park west edge",
+     "type": "homes",
+     "tiv": 1716020000,
+     "linear": false
+    },
+    {
+     "areaId": "LEA-1",
+     "name": "Leander west edge",
+     "type": "homes",
+     "tiv": 1599986000,
+     "linear": false
+    },
+    {
+     "areaId": "LGV-1",
+     "name": "Lago Vista",
+     "type": "homes",
+     "tiv": 1449997000,
+     "linear": false
+    },
+    {
+     "areaId": "WLH-1",
+     "name": "West Lake Hills",
+     "type": "homes",
+     "tiv": 1199998000,
+     "linear": false
+    },
+    {
+     "areaId": "JON-1",
+     "name": "Jonestown",
+     "type": "homes",
+     "tiv": 1169997000,
+     "linear": false
+    },
+    {
+     "areaId": "STR-1",
+     "name": "Steiner Ranch west",
+     "type": "homes",
+     "tiv": 974989000,
+     "linear": false
+    },
+    {
+     "areaId": "U-DEL",
+     "name": "Delek Big Spring refinery",
+     "type": "utility",
+     "tiv": 900000000,
+     "linear": false
+    }
+   ],
+   "dataQuality": {
+    "geocodeBuildingPct": 0.9875,
+    "itvFlagged": 1661,
+    "roofClassAPct": 0.459,
+    "defensibleSpace10Pct": 0.831,
+    "medianYearBuilt": 2002,
+    "constructionKnownPct": 1
+   }
+  }
+ ],
+ "pricing": {
+  "fixedExpensePerPolicy": 95,
+  "alae": 0.12,
+  "variableExpense": 0.24,
+  "returnOnPremium": 0.06
+ },
+ "contextTiles": [
+  {
+   "id": "avg-premium",
+   "label": "Texas average homeowners premium",
+   "value": "$3,291",
+   "note": "4th highest in the US",
+   "source": "NAIC / Insurance Information Institute, 2025 average premium"
+  },
+  {
+   "id": "increases",
+   "label": "Rate increases 2023–25",
+   "value": "21.1%",
+   "note": "in 2023, then 18.7% and 4.3%",
+   "source": "Texas Department of Insurance rate filings: average filed increases by year"
+  },
+  {
+   "id": "filings",
+   "label": "Largest US rate filings, Q1 2026",
+   "value": "9 of 10",
+   "note": "were Texan",
+   "source": "S&P Global Market Intelligence, Q1 2026"
+  },
+  {
+   "id": "non-renewal",
+   "label": "Non-renewal rate",
+   "value": "2.62%",
+   "note": "Texas homeowners, latest year",
+   "source": "US Senate Budget Committee, non-renewal data by state"
+  },
+  {
+   "id": "fair-plan",
+   "label": "Texas FAIR Plan",
+   "value": "127,835",
+   "note": "policies · $40.4B TIV",
+   "source": "Texas FAIR Plan Association exposure report"
+  },
+  {
+   "id": "regime",
+   "label": "Rate regime",
+   "value": "File-and-use",
+   "note": "No prior approval",
+   "source": "Texas Insurance Code §2251"
+  }
+ ],
+ "simulation": {
+  "none": 346627298,
+  "asNegotiated": 97863300,
+  "fails": 160730000,
+  "carrier": 1230000,
+  "returnPeriods": {
+   "none": 184.2,
+   "asNegotiated": 15.9,
+   "fails": 37.8
+  },
+  "premiumAtRisk": 5657094
+ }
 }

@@ -1,6 +1,6 @@
-# Pyrome insurer portal — click-through demo
+# Pyrome insurer portal — click-through demo (v2)
 
-A click-through demo of the Pyrome insurer portal: PRIMER fire-date forecasts over a Texas homeowners book, the spread of each dated fire, and the Intervention Plan that a Pyrome agent negotiates with government. Everything is mock data; the spec is in `CLAUDE.md`.
+A click-through demo of the Pyrome insurer portal for a five-minute walk-through with an insurer. PRIMER measures live and dead fuel moisture on the ground and puts a date on a fire; the portal shows the dated fires over a Texas and Oklahoma homeowners book, how each would spread, what it would cost, and the Intervention Plan a Pyrome agent negotiates with the state, the county, the utility and the landowner. Everything is mock data with no backend; the spec is `CLAUDE.md`.
 
 ## Run it
 
@@ -9,27 +9,20 @@ npm install
 npm run dev
 ```
 
-Then open http://localhost:5173.
+Then open http://localhost:5173/ash/. `npm run build` makes the production build in `dist/`, and `node scripts/smoke.mjs --pass <n>` runs the headless smoke test against it.
 
-`npm run build` makes a production build in `dist/`; `npm run data` regenerates the mock data in `src/data` (see `src/data/README.md`).
+## The data generator
+
+Every figure on screen comes from `src/data/*.json`, and none is typed into a component. `npm run data` runs `scripts/generateData.mjs` from a fixed seed (20260929), so a rerun gives identical files, then `scripts/checkData.mjs` checks them against the spec. The generator builds the 100 covered areas and 49,500 homes on street-like grids with invented addresses, routes the utility lines and pipelines through real towns, places the real turbines, and grows each of the ten dated fires with a Huygens spread model (P90, P50 and P25 perimeters at every step, wind shifts, fingers, spotting, barriers from vendored lakes, rivers and highways). It then scores exposure and loss per home and asset, writes the plans, negotiations, bundles, history and the two portfolios with their EP curves, and fills the Help text with the same figures. `src/data/README.md` describes each file.
 
 ## Five-minute demo script
 
-1. **Open on Texas.** Six yellow coverage areas; *Your Locations* shows the book: $326.4M TIV, 601 homes, 68,270 hectares under forecast.
-2. **Click the Hill Country "102" cluster.** Every yellow footprint is an insured home; hover one for its address, insured value, construction and distance to the nearest dated fire.
-3. **Drag *Days until fire* from –30 to 0.** Fires appear as they come inside their lead time and the *Next 30 days* card counts up to $128.6M of insured value that will burn.
-4. **Flip the forecast filter** between *90% inside 7 days* and *90% inside 14 days* and read the definition under it.
-5. **Click HC14.** The map flies to block HC-14 and the spread plays under forecast wind, 1 h to Day 4; 39 homes turn red as the perimeter reaches them.
-6. **Walk the drawer.** 92% it spreads on this path, 90% it burns inside these 4 days; the fuel state that produced the date; Extreme intensity; $27.0M of insured value in the path.
-7. **Intervention Plan.** A $148k firebreak and prescribed burn against a $19.5M saving: net $19.3M, with an 87% chance of preventing the fire.
-8. **Press *Pass to your dedicated Pyrome agent*.** The stepper moves to *Agent engaged*, then the timeline shows the county refusal, TAMFS co-funding, the agreement and the next burn.
-9. **Locations at Risk, then Negotiation Channel.** Every dated fire in one sortable table, and the live agent feed; click QD71 to jump straight back to it on the map.
-10. **Historical Accuracy.** Five fires prevented, $26.5M lost where interventions were declined, 90% hit rate at 14 days against 52%, 41% and 36%; drag the BR27 before/after slider.
+Filled in pass 12.
 
 ## Where things live
 
-- `src/components/` — one small component per file, grouped into `shell`, `map`, `panels`, `drawer`, `pages` and `common`
-- `src/data/*.json` — every figure shown in the UI; `scripts/generateData.mjs` regenerates the generated ones
-- `src/styles/tokens.css` — Pyrome design tokens as CSS variables
-- `src/state/` — app state and the spread animation (plain React context)
-- `src/lib/` — data lookups, formatting and search
+- `src/components/` — one small component per file: `shell`, `map`, `panels`, `drawer`, `fire`, `moreinfo`, `locations`, `simulation`, `premium`, `negotiation`, `accuracy`, `help`, `common`
+- `src/data/*.json` — every figure shown in the UI, written by `scripts/generateData.mjs`
+- `scripts/config/` — the spec's inputs (places, fires, plans, market, history, help); `scripts/lib/` — geometry, spread, loss
+- `src/styles/tokens.css` — the dark cartographic design tokens as CSS variables
+- `src/state/` — app state (plain React context); `src/lib/` — data lookups, formatting, map painting

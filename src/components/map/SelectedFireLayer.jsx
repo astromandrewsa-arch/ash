@@ -1,70 +1,75 @@
-import { useMemo } from 'react'
-import L from 'leaflet'
-import { CircleMarker, Marker, Polygon, Polyline, Tooltip } from 'react-leaflet'
+import { useEffect, useLayoutEffect, useRef } from 'react'
+import { useMap } from 'react-leaflet'
+import { CanvasOverlay } from '../../lib/canvasOverlay.js'
+import { paintSpreadFills, paintSpreadLines, paintSpreadTop } from '../../lib/spreadPaint.js'
+import { UI } from '../../config/ui.js'
+import { mapPadding } from '../../lib/mapPadding.js'
+import useApp from '../../state/useApp.js'
 import useSpread from '../../state/useSpread.js'
-import { palette } from '../../styles/palette.js'
+import useMapPane from '../../hooks/useMapPane.js'
+import AssetBurnLayer from './AssetBurnLayer.jsx'
+import SpreadCamera from './SpreadCamera.jsx'
 
-function styles() {
-  const c = palette()
-  return {
-    current: { color: c.red, weight: 2.5, opacity: 1, fillColor: c.red, fillOpacity: 0.3 },
-    earlier: { color: c.red, weight: 1, opacity: 0.45, fillColor: c.red, fillOpacity: 0.06 },
-    block: { color: c.orange, weight: 3, opacity: 1, fill: false, dashArray: '8 5' },
-    road: { color: c.road, weight: 4, opacity: 0.95, lineCap: 'round' },
-    river: { color: c.river, weight: 4, opacity: 0.95, lineCap: 'round' },
-  }
-}
-
-// The block label hangs off the block's upwind corner, away from the fire's run.
-function upwindCorner(fire) {
-  const rad = (fire.intensity.windFromDeg * Math.PI) / 180
-  const toward = [Math.cos(rad), Math.sin(rad)] // [north, east] components of the upwind direction
-  return fire.block.polygon.reduce((best, p) =>
-    p[0] * toward[0] + p[1] * toward[1] > best[0] * toward[0] + best[1] * toward[1] ? p : best,
-  )
-}
-
-function blockLabelIcon(fire, corner) {
-  const centreLat = fire.block.polygon.reduce((s, p) => s + p[0], 0) / fire.block.polygon.length
-  const side = corner[0] < centreLat ? 'below' : 'above'
-  return L.divIcon({ className: 'block-label-icon', html: `<div class="block-label is-${side}">${fire.block.label}</div>`, iconSize: [0, 0] })
-}
-
-// Barrier names sit most of the way along each line: on screen, but clear of the block label.
-function labelPoint(line) {
-  if (line.length > 3) return line[Math.floor(line.length * 0.7)]
-  const a = line[Math.floor(line.length / 2)]
-  const b = line.at(-1)
-  return [a[0] + (b[0] - a[0]) * 0.8, a[1] + (b[1] - a[1]) * 0.8]
-}
-
-/** Ignition block, barrier lines and the spread perimeters revealed so far for the selected fire. */
+/**
+ * The selected fire on three canvases: fills under the homes (ignition heat, burn-probability
+ * bands, isochrone fills), lines over the homes (isochrones, perimeter, barriers, zone) so homes
+ * never hide the perimeter, and the wind arrow and label above the utilities and icons.
+ * A new perimeter fades in over 600 ms (§3 motion).
+ */
 export default function SelectedFireLayer() {
+  const map = useMap()
+  const { views, drawerOpen } = useApp()
   const { fire, step } = useSpread()
-  const s = useMemo(styles, [])
-  const corner = useMemo(() => (fire ? upwindCorner(fire) : null), [fire])
-  const icon = useMemo(() => (fire ? blockLabelIcon(fire, corner) : null), [fire, corner])
-  if (!fire) return null
+  const pane = useMapPane('spreadPane', 400)
+  const linePane = useMapPane('spreadLinePane', 428)
+  const topPane = useMapPane('spreadTopPane', 612)
+  const layers = useRef([])
+  const st = useRef({ fire: null, step: -1, views, fade: 1 })
+  const raf = useRef(0)
 
-  const shown = fire.spread.steps.slice(0, step + 1)
+  useEffect(() => {
+    const ls = [
+      new CanvasOverlay((ctx, view) => paintSpreadFills(ctx, view, st.current), { pane, pad: 0.25 }),
+      new CanvasOverlay((ctx, view) => paintSpreadLines(ctx, view, st.current), { pane: linePane, pad: 0.25 }),
+      new CanvasOverlay((ctx, view) => paintSpreadTop(ctx, view, st.current), { pane: topPane, pad: 0.1 }),
+    ]
+    for (const l of ls) l.addTo(map)
+    layers.current = ls
+    return () => {
+      for (const l of ls) l.remove()
+      layers.current = []
+    }
+  }, [map, pane, linePane, topPane])
+
+  useLayoutEffect(() => {
+    const grew = fire !== null && st.current.fire === fire && step > st.current.step
+    // The free map area (outside the floating panels and the drawer), for placing the wind arrow.
+    const pad = mapPadding(drawerOpen)
+    const size = map.getSize()
+    const free = [pad.paddingTopLeft[0], pad.paddingTopLeft[1], size.x - pad.paddingBottomRight[0], size.y - pad.paddingBottomRight[1]]
+    Object.assign(st.current, { fire, step, views, free })
+    cancelAnimationFrame(raf.current)
+    if (!grew) {
+      st.current.fade = 1
+      for (const l of layers.current) l.redraw()
+      return undefined
+    }
+    const t0 = performance.now()
+    const tick = () => {
+      const f = Math.min(1, (performance.now() - t0) / UI.perimeterMs)
+      st.current.fade = 1 - (1 - f) ** 2
+      for (const l of layers.current) l.redraw()
+      if (f < 1) raf.current = requestAnimationFrame(tick)
+    }
+    st.current.fade = 0
+    tick()
+    return () => cancelAnimationFrame(raf.current)
+  }, [fire, step, views, drawerOpen, map])
 
   return (
     <>
-      {fire.spread.barriers.map((b) => (
-        <Polyline key={b.name} positions={b.line} pathOptions={b.type === 'river' ? s.river : s.road} interactive={false} />
-      ))}
-      {fire.spread.barriers.map((b) => (
-        <CircleMarker key={`${b.name}-label`} center={labelPoint(b.line)} radius={0} interactive={false}>
-          <Tooltip permanent direction="right" offset={[4, 0]} opacity={1} pane="tooltipPane" className={`barrier-label barrier-${b.type}`}>
-            {b.name}
-          </Tooltip>
-        </CircleMarker>
-      ))}
-      {shown.map((p, i) => (
-        <Polygon key={p.index} positions={p.polygon} pathOptions={i === shown.length - 1 ? s.current : s.earlier} interactive={false} />
-      ))}
-      <Polygon positions={fire.block.polygon} pathOptions={s.block} interactive={false} />
-      <Marker position={corner} icon={icon} interactive={false} keyboard={false} zIndexOffset={-100} />
+      <AssetBurnLayer />
+      <SpreadCamera />
     </>
   )
 }

@@ -1,0 +1,34 @@
+/* v1 token names mapped onto the v2 dark theme (deleted in pass 12 with the rest of src/styles/legacy). */
+:root {
+  --pyrome-orange: var(--orange);
+  --homes-yellow: var(--yellow);
+  --fire-red: var(--red);
+  --savings-green: var(--green);
+  --comparison-blue: var(--blue);
+  --comparison-blue-2: var(--blue-soft);
+  --comparison-blue-3: #9DBDE6;
+  --rag-amber: var(--amber);
+  --road-grey: var(--road);
+  --river-blue: var(--water);
+  --sensor-grey: var(--grey-sensor);
+  --text-muted: var(--muted);
+  --text-subtle: var(--faint);
+  --border: var(--hairline);
+}
+
+/* Inside v1 screens the light-theme names flip to dark surfaces. */
+.v1-legacy {
+  --white: #242425;
+  --charcoal: #F3F1EC;
+  --warm-grey: #19191A;
+  --pale-ember: rgba(226, 86, 27, 0.16);
+  --radius: 8px;
+  --shadow-panel: var(--shadow);
+  --ease: 180ms var(--ease-out);
+  --rail-hover: rgba(255, 255, 255, 0.08);
+  --left-panel-width: 300px;
+  --alert-card-width: 292px;
+  color: var(--charcoal);
+}
+
+

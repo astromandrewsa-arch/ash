@@ -1,41 +1,49 @@
 import { TriangleAlert } from 'lucide-react'
-import alertSummary from '../../data/alertSummary.json'
-import { fireTotals, presetById, visibleFires } from '../../lib/data.js'
-import { formatNumber, formatUSDCompact } from '../../lib/format.js'
 import useApp from '../../state/useApp.js'
+import { alertTotals, visibleFires } from '../../lib/selectors.js'
+import { formatNumber, formatUSDCompact, formatUSDRange } from '../../lib/format.js'
 import AnimatedValue from '../common/AnimatedValue.jsx'
+import InfoButton from '../common/InfoButton.jsx'
 
-export default function AlertCard() {
-  const { daysUntilFire, preset, drawerOpen } = useApp()
-  const totals = fireTotals(visibleFires(daysUntilFire))
+/** Top-right "Next 30 days": sums over the fires visible at the current slider position. */
+export default function AlertCard({ hidden }) {
+  const { daysUntilFire, portfolioId, views } = useApp()
+  const t = alertTotals(visibleFires({ slider: daysUntilFire, views, portfolioId }), portfolioId)
 
   const rows = [
-    { label: 'Premium at risk', value: totals.premiumAtRisk, format: formatUSDCompact },
-    { label: 'Dated fires', value: totals.datedFires, format: formatNumber },
-    { label: 'Homes in path', value: totals.homesInPath, format: formatNumber },
-    { label: 'Preventable if intervened', value: totals.preventable, format: formatUSDCompact, tone: 'saving' },
+    { label: 'Exposed TIV', value: t.exposedTiv, format: formatUSDCompact },
+    { label: 'Dated fires', value: t.datedFires, format: formatNumber },
+    { label: 'Watchlist', value: t.watchlist, format: formatNumber },
+    { label: 'Homes in path', value: t.homesInPath, format: formatNumber },
+    { label: 'Assets in path', value: t.assetsInPath, format: formatNumber },
+    { label: 'Preventable at negotiated plans', value: t.preventable, format: formatUSDCompact, tone: 'green' },
+    { label: 'Carrier cost to date', value: t.carrierCost, format: formatUSDCompact },
   ]
 
   return (
-    <aside className={`card alert-card${drawerOpen ? ' is-compact' : ''}`} aria-label={alertSummary.title} aria-live="polite">
-      <header className="alert-card-head">
-        <TriangleAlert size={16} aria-hidden="true" />
-        <span>{alertSummary.title}</span>
-        <span className="alert-card-preset">{presetById[preset].label}</span>
+    <aside className={`glass alert30${hidden ? ' is-hidden' : ''}`} aria-label="Next 30 days" aria-live="polite">
+      <header className="alert30-head">
+        <TriangleAlert size={15} aria-hidden="true" />
+        <span>Next 30 days</span>
+        <span className="alert30-count">
+          {t.datedFires} {t.datedFires === 1 ? 'fire' : 'fires'} in view
+        </span>
       </header>
-      <div className="alert-card-hero">
-        <span className="alert-card-hero-label">Total insured value that will burn</span>
-        <span className="alert-card-hero-value">
-          <AnimatedValue value={totals.tivInPath} format={formatUSDCompact} />
+      <div className="alert30-hero">
+        <span className="label">
+          Expected loss
+          <InfoButton topic="aal" label="30-day expected loss" />
         </span>
-        {/* While a fire is open the card shrinks to this line so the map stays clear. */}
-        <span className="alert-card-compact-line">
-          {totals.datedFires} fires · {formatNumber(totals.homesInPath)} homes · {formatUSDCompact(totals.preventable)} preventable
+        <span className="figure">
+          <AnimatedValue value={t.expectedLoss} format={formatUSDCompact} />
         </span>
+        <div className="alert30-band">
+          {t.datedFires > 0 ? `Band ${formatUSDRange(t.lossLower, t.lossUpper)}` : 'No dated fire in view yet'}
+        </div>
       </div>
-      <dl className="alert-card-rows">
+      <dl className="alert30-rows">
         {rows.map((row) => (
-          <div key={row.label} className={`alert-card-row${row.tone ? ` tone-${row.tone}` : ''}`}>
+          <div key={row.label} className={`alert30-row${row.tone ? ` tone-${row.tone}` : ''}`}>
             <dt>{row.label}</dt>
             <dd>
               <AnimatedValue value={row.value} format={row.format} />
@@ -43,7 +51,7 @@ export default function AlertCard() {
           </div>
         ))}
       </dl>
-      {totals.datedFires === 0 && <p className="alert-card-empty">Drag “Days until fire” to reveal dated fires.</p>}
+      {t.datedFires === 0 && <p className="alert30-empty">Drag “Days until fire” towards 0 to reveal the fires PRIMER has dated.</p>}
     </aside>
   )
 }

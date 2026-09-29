@@ -1,60 +1,55 @@
-import { AttributionControl, MapContainer, Pane, TileLayer, ZoomControl } from 'react-leaflet'
-import { areasBounds, mapConfig } from '../../lib/data.js'
-import { mapPadding } from '../../lib/mapPadding.js'
+import { AttributionControl, MapContainer, TileLayer, ZoomControl } from 'react-leaflet'
+import { store } from '../../lib/store.js'
+import { MAP } from '../../config/map.js'
 import useApp from '../../state/useApp.js'
 import MapBridge from './MapBridge.jsx'
+import ZoomClass from './ZoomClass.jsx'
+import LabelsOverlay from './LabelsOverlay.jsx'
 import FuelGridLayer from './FuelGridLayer.jsx'
-import CoverageLayer from './CoverageLayer.jsx'
-import AreaLabels from './AreaLabels.jsx'
-import SpreadPathsLayer from './SpreadPathsLayer.jsx'
+import RateGapLayer from './RateGapLayer.jsx'
+import RateGapLabels from './RateGapLabels.jsx'
+import RangelandLayer from './RangelandLayer.jsx'
 import SelectedFireLayer from './SelectedFireLayer.jsx'
 import HomesLayer from './HomesLayer.jsx'
+import UtilitiesLayer from './UtilitiesLayer.jsx'
 import SensorLayer from './SensorLayer.jsx'
 import FireMarkersLayer from './FireMarkersLayer.jsx'
+import WatchlistLayer from './WatchlistLayer.jsx'
 
+/**
+ * The v2 map (§2, §9). Canvas renderer throughout; panes stack fuel grid (350), rate gap (360),
+ * ranches (380), spread (400), homes (420), assets (430–435), sensors (440), labels (450), markers.
+ */
 export default function MapView() {
-  const { layers } = useApp()
-
+  const { views } = useApp()
+  const view = store.portfolio.initialView
   return (
     <div className="map-view">
-      <MapContainer
-        className="map-canvas"
-        bounds={areasBounds}
-        boundsOptions={mapPadding(false)}
-        minZoom={mapConfig.minZoom}
-        maxZoom={mapConfig.maxZoom}
-        zoomControl={false}
-        attributionControl={false}
-      >
-        <TileLayer
-          url={mapConfig.tiles.url}
-          attribution={mapConfig.tiles.attribution}
-          maxNativeZoom={mapConfig.tiles.maxNativeZoom}
-          maxZoom={mapConfig.maxZoom}
-        />
-        <ZoomControl position="bottomright" />
+      <svg className="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+        <defs>
+          <pattern id="ranch-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <rect width="9" height="9" fill="rgba(245, 197, 24, 0.07)" />
+            <line x1="0" y1="0" x2="0" y2="9" stroke="#F5C518" strokeOpacity="0.25" strokeWidth="3" />
+          </pattern>
+        </defs>
+      </svg>
+      <MapContainer className="map-canvas" center={view.center} zoom={view.zoom} preferCanvas minZoom={MAP.minZoom} maxZoom={MAP.maxZoom} zoomSnap={MAP.zoomSnap} zoomControl={false} attributionControl={false}>
+        <TileLayer url={MAP.imageryUrl} attribution={MAP.imageryAttribution} maxNativeZoom={MAP.maxNativeZoom} maxZoom={MAP.maxZoom} className="imagery-tiles" />
+        <LabelsOverlay />
+        <ZoomControl position="bottomleft" />
         <AttributionControl position="bottomleft" prefix={false} />
         <MapBridge />
-
-        {/* Panes stack the layers: fuel grid, coverage, perimeters, homes, then markers on top. */}
-        <Pane name="fuel" style={{ zIndex: 350 }}>
-          {layers.fuelGrid && <FuelGridLayer />}
-        </Pane>
-        <Pane name="coverage" style={{ zIndex: 380 }}>
-          {layers.coverage && <CoverageLayer />}
-        </Pane>
-        <Pane name="spread" style={{ zIndex: 400 }}>
-          {layers.spread && <SpreadPathsLayer />}
-          <SelectedFireLayer />
-        </Pane>
-        <Pane name="homes" style={{ zIndex: 420 }}>
-          {layers.homes && <HomesLayer />}
-        </Pane>
-        <Pane name="sensors" style={{ zIndex: 430 }}>
-          {layers.sensors && <SensorLayer />}
-        </Pane>
-        {layers.coverage && <AreaLabels />}
-        {layers.fires && <FireMarkersLayer />}
+        <ZoomClass />
+        {views.fuel && <FuelGridLayer />}
+        {views.rateGap && <RateGapLayer />}
+        {views.rateGap && <RateGapLabels />}
+        {views.rangeland && <RangelandLayer />}
+        <SelectedFireLayer />
+        <HomesLayer />
+        {views.utilities && <UtilitiesLayer />}
+        {views.sensors && <SensorLayer />}
+        {views.watchlist && <WatchlistLayer />}
+        <FireMarkersLayer />
       </MapContainer>
     </div>
   )

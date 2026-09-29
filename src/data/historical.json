@@ -1,0 +1,370 @@
+{
+ "fires": [
+  {
+   "id": "HX-01",
+   "name": "Brazos Bend",
+   "date": "2025-11-14",
+   "place": "Palo Pinto County, TX",
+   "outcomeType": "prevented",
+   "primer": {
+    "leadDays": 18,
+    "probability": 0.9,
+    "windowFrom": "2025-11-12",
+    "windowTo": "2025-11-16",
+    "burnedOnDay": null
+   },
+   "others": {
+    "moodys": "AAL $1.3 per $1,000; no date",
+    "verisk": "FireLine 17; no date",
+    "kcc": "no date",
+    "cotality": "Score 71; no date",
+    "technosylva": "Flagged \"high\" 2 days out",
+    "ecmwf": "PoF 0.22 at 7 days",
+    "nfdrs": "ERC 58, 5 days out"
+   },
+   "cost": 210000,
+   "premiumSaved": 3100000,
+   "realisedLoss": 0,
+   "primerSaid": "Dated 18 days out at 90%, window 12–16 Nov",
+   "sentence": "Dated 18 days prior → intervened → cost $210k → premium saved $3.1M → prevented."
+  },
+  {
+   "id": "HX-02",
+   "name": "James River",
+   "date": "2025-12-02",
+   "place": "Mason County, TX",
+   "outcomeType": "prevented",
+   "primer": {
+    "leadDays": 22,
+    "probability": 0.91,
+    "windowFrom": "2025-11-30",
+    "windowTo": "2025-12-05",
+    "burnedOnDay": null
+   },
+   "others": {
+    "moodys": "no date",
+    "verisk": "FireLine 12; no date",
+    "kcc": "no date",
+    "cotality": "Score 58; no date",
+    "technosylva": "no date",
+    "ecmwf": "PoF 0.18 at 9 days",
+    "nfdrs": "ERC 51, 6 days out"
+   },
+   "cost": 140000,
+   "premiumSaved": 1600000,
+   "realisedLoss": 0,
+   "primerSaid": "Dated 22 days out at 91%, window 30 Nov–5 Dec",
+   "sentence": "Dated 22 days prior → intervened → cost $140k → premium saved $1.6M → prevented."
+  },
+  {
+   "id": "HX-03",
+   "name": "Red Deer Creek",
+   "date": "2026-01-18",
+   "place": "Roberts County, TX",
+   "outcomeType": "declined-burned",
+   "primer": {
+    "leadDays": 16,
+    "probability": 0.9,
+    "windowFrom": "2026-01-16",
+    "windowTo": "2026-01-20",
+    "burnedOnDay": "2026-01-18"
+   },
+   "others": {
+    "moodys": "AAL $2.1 per $1,000; no date",
+    "verisk": "FireLine 21; no date",
+    "kcc": "no date",
+    "cotality": "Score 80; no date",
+    "technosylva": "Flagged \"extreme\" 1 day out",
+    "ecmwf": "PoF 0.41 at 5 days",
+    "nfdrs": "ERC 64, 4 days out"
+   },
+   "cost": 0,
+   "premiumSaved": 0,
+   "realisedLoss": 6400000,
+   "primerSaid": "Dated 16 days out at 90%, window 16–20 Jan",
+   "sentence": "Dated at 90% → intervention declined → burned on the predicted date, 18 Jan → loss $6.4M."
+  },
+  {
+   "id": "HX-04",
+   "name": "Buck Creek",
+   "date": "2026-02-09",
+   "place": "Childress County, TX",
+   "outcomeType": "backtest",
+   "primer": {
+    "leadDays": 19,
+    "probability": 0.9,
+    "windowFrom": "2026-02-07",
+    "windowTo": "2026-02-11",
+    "burnedOnDay": "2026-02-09"
+   },
+   "others": {
+    "moodys": "no date",
+    "verisk": "FireLine 9; no date",
+    "kcc": "no date",
+    "cotality": "Score 44; no date",
+    "technosylva": "no date",
+    "ecmwf": "no date",
+    "nfdrs": "ERC 49, 2 days out"
+   },
+   "cost": 0,
+   "premiumSaved": 0,
+   "realisedLoss": 0,
+   "primerSaid": "Dated 19 days out at 90%, window 7–11 Feb",
+   "sentence": "Back-test: all seven missed the date; PRIMER dated it 19 days out."
+  },
+  {
+   "id": "HX-05",
+   "name": "Gageby Creek",
+   "date": "2026-02-26",
+   "place": "Hemphill County, TX",
+   "outcomeType": "prevented",
+   "primer": {
+    "leadDays": 24,
+    "probability": 0.92,
+    "windowFrom": "2026-02-24",
+    "windowTo": "2026-02-28",
+    "burnedOnDay": null
+   },
+   "others": {
+    "moodys": "AAL $1.9 per $1,000; no date",
+    "verisk": "FireLine 20; no date",
+    "kcc": "no date",
+    "cotality": "Score 77; no date",
+    "technosylva": "Flagged \"high\" 3 days out",
+    "ecmwf": "PoF 0.35 at 6 days",
+    "nfdrs": "ERC 61, 5 days out"
+   },
+   "cost": 460000,
+   "premiumSaved": 7900000,
+   "realisedLoss": 0,
+   "primerSaid": "Dated 24 days out at 92%, window 24–28 Feb",
+   "sentence": "Dated 24 days prior → intervened → cost $460k → premium saved $7.9M → prevented."
+  },
+  {
+   "id": "HX-06",
+   "name": "Pecan Bayou",
+   "date": "2026-03-04",
+   "place": "Coleman County, TX",
+   "outcomeType": "declined-burned",
+   "primer": {
+    "leadDays": 14,
+    "probability": 0.9,
+    "windowFrom": "2026-03-02",
+    "windowTo": "2026-03-06",
+    "burnedOnDay": "2026-03-04"
+   },
+   "others": {
+    "moodys": "no date",
+    "verisk": "FireLine 14; no date",
+    "kcc": "no date",
+    "cotality": "Score 62; no date",
+    "technosylva": "Flagged \"high\" 1 day out",
+    "ecmwf": "PoF 0.29 at 4 days",
+    "nfdrs": "ERC 56, 3 days out"
+   },
+   "cost": 0,
+   "premiumSaved": 0,
+   "realisedLoss": 3800000,
+   "primerSaid": "Dated 14 days out at 90%, window 2–6 Mar",
+   "sentence": "Dated at 90% → intervention declined → burned on the predicted date, 4 Mar → loss $3.8M."
+  },
+  {
+   "id": "HX-07",
+   "name": "Cottonwood Creek",
+   "date": "2026-03-12",
+   "place": "Logan County, OK",
+   "outcomeType": "prevented",
+   "primer": {
+    "leadDays": 17,
+    "probability": 0.9,
+    "windowFrom": "2026-03-10",
+    "windowTo": "2026-03-14",
+    "burnedOnDay": null
+   },
+   "others": {
+    "moodys": "AAL $1.2 per $1,000; no date",
+    "verisk": "FireLine 15; no date",
+    "kcc": "no date",
+    "cotality": "Score 66; no date",
+    "technosylva": "Flagged \"high\" 2 days out",
+    "ecmwf": "PoF 0.33 at 5 days",
+    "nfdrs": "ERC 57, 4 days out"
+   },
+   "cost": 320000,
+   "premiumSaved": 4400000,
+   "realisedLoss": 0,
+   "primerSaid": "Dated 17 days out at 90%, window 10–14 Mar",
+   "sentence": "Dated 17 days prior → intervened → cost $320k → premium saved $4.4M → prevented."
+  },
+  {
+   "id": "HX-08",
+   "name": "Wolf Creek",
+   "date": "2026-03-21",
+   "place": "Woodward County, OK",
+   "outcomeType": "backtest",
+   "primer": {
+    "leadDays": 19,
+    "probability": 0.91,
+    "windowFrom": "2026-03-19",
+    "windowTo": "2026-03-23",
+    "burnedOnDay": "2026-03-21"
+   },
+   "others": {
+    "moodys": "no date",
+    "verisk": "FireLine 11; no date",
+    "kcc": "no date",
+    "cotality": "Score 49; no date",
+    "technosylva": "no date",
+    "ecmwf": "PoF 0.19 at 3 days",
+    "nfdrs": "ERC 54, 2 days out"
+   },
+   "cost": 0,
+   "premiumSaved": 0,
+   "realisedLoss": 0,
+   "primerSaid": "Dated 19 days out at 91%, window 19–23 Mar",
+   "sentence": "Back-test: all seven missed the date; PRIMER dated it 19 days out."
+  },
+  {
+   "id": "HX-09",
+   "name": "Hubbard Creek",
+   "date": "2026-04-02",
+   "place": "Stephens County, TX",
+   "outcomeType": "declined-burned",
+   "primer": {
+    "leadDays": 15,
+    "probability": 0.9,
+    "windowFrom": "2026-03-31",
+    "windowTo": "2026-04-04",
+    "burnedOnDay": "2026-04-02"
+   },
+   "others": {
+    "moodys": "no date",
+    "verisk": "FireLine 13; no date",
+    "kcc": "no date",
+    "cotality": "Score 59; no date",
+    "technosylva": "Flagged \"high\" 1 day out",
+    "ecmwf": "PoF 0.27 at 4 days",
+    "nfdrs": "ERC 55, 3 days out"
+   },
+   "cost": 0,
+   "premiumSaved": 0,
+   "realisedLoss": 9100000,
+   "primerSaid": "Dated 15 days out at 90%, window 31 Mar–4 Apr",
+   "sentence": "Dated at 90% → intervention declined → burned on the predicted date, 2 Apr → loss $9.1M."
+  },
+  {
+   "id": "HX-10",
+   "name": "Hoover Point",
+   "date": "2026-04-15",
+   "place": "Burnet County, TX",
+   "outcomeType": "prevented",
+   "primer": {
+    "leadDays": 21,
+    "probability": 0.9,
+    "windowFrom": "2026-04-13",
+    "windowTo": "2026-04-17",
+    "burnedOnDay": null
+   },
+   "others": {
+    "moodys": "AAL $1.1 per $1,000; no date",
+    "verisk": "FireLine 16; no date",
+    "kcc": "no date",
+    "cotality": "Score 68; no date",
+    "technosylva": "no date",
+    "ecmwf": "PoF 0.21 at 8 days",
+    "nfdrs": "ERC 53, 5 days out"
+   },
+   "cost": 180000,
+   "premiumSaved": 2700000,
+   "realisedLoss": 0,
+   "primerSaid": "Dated 21 days out at 90%, window 13–17 Apr",
+   "sentence": "Dated 21 days prior → intervened → cost $180k → premium saved $2.7M → prevented."
+  },
+  {
+   "id": "HX-11",
+   "name": "Turtle Creek",
+   "date": "2026-07-07",
+   "place": "Kerr County, TX",
+   "outcomeType": "backtest",
+   "primer": {
+    "leadDays": 19,
+    "probability": 0.9,
+    "windowFrom": "2026-07-05",
+    "windowTo": "2026-07-09",
+    "burnedOnDay": "2026-07-07"
+   },
+   "others": {
+    "moodys": "no date",
+    "verisk": "FireLine 10; no date",
+    "kcc": "no date",
+    "cotality": "Score 52; no date",
+    "technosylva": "no date",
+    "ecmwf": "no date",
+    "nfdrs": "ERC 50, 1 day out"
+   },
+   "cost": 0,
+   "premiumSaved": 0,
+   "realisedLoss": 0,
+   "primerSaid": "Dated 19 days out at 90%, window 5–9 Jul",
+   "sentence": "Back-test: all seven missed the date; PRIMER dated it 19 days out."
+  },
+  {
+   "id": "HX-12",
+   "name": "Sweetwater Creek",
+   "date": "2026-08-03",
+   "place": "Wheeler County, TX",
+   "outcomeType": "declined-burned",
+   "primer": {
+    "leadDays": 18,
+    "probability": 0.91,
+    "windowFrom": "2026-08-01",
+    "windowTo": "2026-08-05",
+    "burnedOnDay": "2026-08-03"
+   },
+   "others": {
+    "moodys": "AAL $1.6 per $1,000; no date",
+    "verisk": "FireLine 19; no date",
+    "kcc": "no date",
+    "cotality": "Score 74; no date",
+    "technosylva": "Flagged \"extreme\" 1 day out",
+    "ecmwf": "PoF 0.38 at 5 days",
+    "nfdrs": "ERC 62, 4 days out"
+   },
+   "cost": 0,
+   "premiumSaved": 0,
+   "realisedLoss": 5200000,
+   "primerSaid": "Dated 18 days out at 91%, window 1–5 Aug",
+   "sentence": "Dated at 91% → intervention declined → burned on the predicted date, 3 Aug → loss $5.2M."
+  }
+ ],
+ "ruledOut": [
+  {
+   "place": "Circuit 14, Hill Country feeder",
+   "theyCalled": "Utility wildfire plan flagged 9 km of clearance, $1.4M",
+   "primerSaw": "1000-h fuel stayed above 15%, curing never passed 65%",
+   "outcome": "No fire, $1.4M saved",
+   "saved": 1400000
+  },
+  {
+   "place": "Lago Vista blocks",
+   "theyCalled": "Cotality score 78 prompted a non-renewal review of 310 policies",
+   "primerSaw": "Sensors below every threshold, grazed continuity 40%",
+   "outcome": "Policies kept, no loss",
+   "saved": 0
+  },
+  {
+   "place": "Osage north",
+   "theyCalled": "State proposed a 6,000 ac burn, $180k",
+   "primerSaw": "Patch-burn mosaic already caps spread",
+   "outcome": "Withdrawn",
+   "saved": 180000
+  },
+  {
+   "place": "Steiner Ranch draw",
+   "theyCalled": "No model flagged, FireLine 2",
+   "primerSaw": "PRIMER dated it 22 days out",
+   "outcome": "Break cut, $9.6M avoided",
+   "saved": 9600000
+  }
+ ]
+}
