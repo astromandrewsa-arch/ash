@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef } from 'react'
 import { useMap } from 'react-leaflet'
 import { CanvasOverlay } from '../../lib/canvasOverlay.js'
-import { paintSpread } from '../../lib/spreadPaint.js'
+import { paintSpreadFills, paintSpreadLines, paintSpreadTop } from '../../lib/spreadPaint.js'
 import { UI } from '../../config/ui.js'
 import useApp from '../../state/useApp.js'
 import useSpread from '../../state/useSpread.js'
@@ -10,27 +10,35 @@ import AssetBurnLayer from './AssetBurnLayer.jsx'
 import SpreadCamera from './SpreadCamera.jsx'
 
 /**
- * The selected fire on one canvas: ignition heat and zone, barriers, burn-probability bands and
- * isochrones up to the current step. A new perimeter fades in over 600 ms (§3 motion).
+ * The selected fire on three canvases: fills under the homes (ignition heat, burn-probability
+ * bands, isochrone fills), lines over the homes (isochrones, perimeter, barriers, zone) so homes
+ * never hide the perimeter, and the wind arrow and label above the utilities and icons.
+ * A new perimeter fades in over 600 ms (§3 motion).
  */
 export default function SelectedFireLayer() {
   const map = useMap()
   const { views } = useApp()
   const { fire, step } = useSpread()
   const pane = useMapPane('spreadPane', 400)
-  const layer = useRef(null)
+  const linePane = useMapPane('spreadLinePane', 428)
+  const topPane = useMapPane('spreadTopPane', 612)
+  const layers = useRef([])
   const st = useRef({ fire: null, step: -1, views, fade: 1 })
   const raf = useRef(0)
 
   useEffect(() => {
-    const l = new CanvasOverlay((ctx, view) => paintSpread(ctx, view, st.current), { pane, pad: 0.25 })
-    l.addTo(map)
-    layer.current = l
+    const ls = [
+      new CanvasOverlay((ctx, view) => paintSpreadFills(ctx, view, st.current), { pane, pad: 0.25 }),
+      new CanvasOverlay((ctx, view) => paintSpreadLines(ctx, view, st.current), { pane: linePane, pad: 0.25 }),
+      new CanvasOverlay((ctx, view) => paintSpreadTop(ctx, view, st.current), { pane: topPane, pad: 0.1 }),
+    ]
+    for (const l of ls) l.addTo(map)
+    layers.current = ls
     return () => {
-      l.remove()
-      layer.current = null
+      for (const l of ls) l.remove()
+      layers.current = []
     }
-  }, [map, pane])
+  }, [map, pane, linePane, topPane])
 
   useLayoutEffect(() => {
     const grew = fire !== null && st.current.fire === fire && step > st.current.step
@@ -38,14 +46,14 @@ export default function SelectedFireLayer() {
     cancelAnimationFrame(raf.current)
     if (!grew) {
       st.current.fade = 1
-      layer.current?.redraw()
+      for (const l of layers.current) l.redraw()
       return undefined
     }
     const t0 = performance.now()
     const tick = () => {
       const f = Math.min(1, (performance.now() - t0) / UI.perimeterMs)
       st.current.fade = 1 - (1 - f) ** 2
-      layer.current?.redraw()
+      for (const l of layers.current) l.redraw()
       if (f < 1) raf.current = requestAnimationFrame(tick)
     }
     st.current.fade = 0

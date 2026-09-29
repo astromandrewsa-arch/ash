@@ -568,14 +568,15 @@ export function buildFire(def, ctx) {
     }
   }
   if (def.patches) {
-    def.patches.forEach(([lat, lng, w, h], i) => {
-      const ring = blobPolygon(makeRng(`patch:${def.id}:${i}`), [lat, lng], Math.sqrt((w * h) / Math.PI), { vertices: 18, roughness: 0.12, aspect: w / h, axisDeg: 90 })
+    // [lat, lng, widthM, heightM, axisDeg?]: an irregular blob of last season's burn.
+    def.patches.forEach(([lat, lng, w, h, axisDeg = 90], i) => {
+      const ring = blobPolygon(makeRng(`patch:${def.id}:${i}`), [lat, lng], Math.sqrt((w * h) / Math.PI), { vertices: 18, roughness: 0.16, aspect: w / h, axisDeg })
       islands.push([ring.map(pr.toXY)])
       islandDisplay.push({ kind: 'patch', name: 'Last season’s patch burn', effect: 'hard', geometry: ring.map(([a, b]) => [round5(a), round5(b)]) })
     })
   }
 
-  const segments = def.recipe.map((s) => ({ fromHour: s.fromHour, windFromDeg: s.windFromDeg, headKmh: s.headKmh, lb: s.lb }))
+  const segments = def.recipe.map((s) => ({ fromHour: s.fromHour, windFromDeg: s.windFromDeg, headKmh: s.headKmh, lb: s.lb, flankScale: s.flankScale }))
   const ignitions = ignitionPts.map((ig) => ({ hour: ig.hour, ring: circleXY(pr.toXY(ig.pt), 150, 72) }))
   const bandParams = {
     p90: { rate: 0.8, lb: 0.9, spotting: null },
@@ -599,7 +600,8 @@ export function buildFire(def, ctx) {
       spotting: bp.spotting,
       barriers,
       islands,
-      shifts: def.shifts || [],
+      // flankLng: keep only the exposed flank between two longitudes (the new head's start strip).
+      shifts: (def.shifts || []).map((ev) => (ev.flankLng ? { ...ev, keepX: ev.flankLng.map((lng) => pr.toXY([pr.origin[0], lng])[0]) } : ev)),
       // The tail band can assume crews hold later than in the expected case.
       holdHour: band === 'p25' && def.p25HoldHour ? def.p25HoldHour : def.holdHour ?? endHour,
       endHour,

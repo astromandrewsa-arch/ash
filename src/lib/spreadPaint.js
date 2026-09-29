@@ -1,5 +1,6 @@
-// Painting for the selected fire (§7, §10): burn-probability bands, isochrones, the current
-// perimeter, barriers, the ignition zone with its ignition-prior heat, and the ignition points.
+// Painting for the selected fire (§7, §10) on three canvases: fills under the homes (ignition heat,
+// burn-probability bands, isochrone fills), lines over the homes (isochrones, the current perimeter,
+// barriers, the ignition zone and points), and the wind arrow and label on top of everything.
 import { alpha, palette } from '../styles/palette.js'
 import { bandColor, hourColor } from './severity.js'
 import { compass, windAt } from './recipe.js'
@@ -71,28 +72,60 @@ function hatchedLine(ctx, pts, view) {
   ctx.stroke()
 }
 
+/** The fire's full extent in canvas pixels (last growing step, tail band), padded. */
+function fireExtentPx(fire, view, padFrac = 0.25) {
+  let i = fire.steps.length - 1
+  while (i > 0 && fire.steps[i].held) i--
+  let x0 = Infinity
+  let y0 = Infinity
+  let x1 = -Infinity
+  let y1 = -Infinity
+  for (const poly of fire.steps[i].p25) {
+    for (const [lat, lng] of poly[0]) {
+      const x = view.px(lng)
+      const y = view.py(lat)
+      if (x < x0) x0 = x
+      if (x > x1) x1 = x
+      if (y < y0) y0 = y
+      if (y > y1) y1 = y
+    }
+  }
+  const px = Math.max(40, (x1 - x0) * padFrac)
+  const py = Math.max(40, (y1 - y0) * padFrac)
+  return [x0 - px, y0 - py, x1 - x0 + px * 2, y1 - y0 + py * 2]
+}
+
 function paintBarriers(ctx, fire, view) {
   const c = palette()
+  // Barriers only matter where the fire can reach them: clip to its padded extent.
+  ctx.save()
+  ctx.beginPath()
+  ctx.rect(...fireExtentPx(fire, view))
+  ctx.clip()
+  ctx.globalAlpha = 0.8
   for (const b of fire.barriers) {
     if (b.kind === 'island' || b.kind === 'patch') {
+      // Unburnable patches read as holes in the fill: a faint tint and a thin outline.
       ctx.beginPath()
       traceLine(ctx, b.geometry, view)
       ctx.closePath()
-      ctx.fillStyle = b.kind === 'patch' ? 'rgba(38, 30, 26, 0.72)' : 'rgba(226, 222, 210, 0.55)'
-      ctx.fill()
-      ctx.strokeStyle = b.kind === 'patch' ? 'rgba(140, 120, 104, 0.9)' : 'rgba(240, 236, 226, 0.9)'
-      ctx.lineWidth = 1.2
+      if (b.kind === 'patch') {
+        ctx.fillStyle = 'rgba(20, 17, 15, 0.38)'
+        ctx.fill()
+      }
+      ctx.strokeStyle = b.kind === 'patch' ? 'rgba(226, 214, 198, 0.8)' : 'rgba(240, 236, 226, 0.6)'
+      ctx.lineWidth = 1
       ctx.stroke()
     } else if (b.kind === 'escarpment' || b.kind === 'field') {
       hatchedLine(ctx, b.geometry, view)
     } else if (b.kind === 'highway') {
       ctx.beginPath()
       traceLine(ctx, b.geometry, view)
-      ctx.strokeStyle = 'rgba(12, 12, 13, 0.7)'
-      ctx.lineWidth = 4.5
+      ctx.strokeStyle = 'rgba(12, 12, 13, 0.6)'
+      ctx.lineWidth = 4
       ctx.stroke()
       ctx.strokeStyle = c.road
-      ctx.lineWidth = 2.2
+      ctx.lineWidth = 2
       ctx.setLineDash([8, 5])
       ctx.stroke()
       ctx.setLineDash([])
@@ -100,14 +133,15 @@ function paintBarriers(ctx, fire, view) {
       ctx.beginPath()
       traceLine(ctx, b.geometry, view)
       ctx.strokeStyle = c.water
-      ctx.globalAlpha = 0.85
-      ctx.lineWidth = b.effect === 'partial' ? 1.5 : 1.7
+      ctx.globalAlpha = 0.6
+      ctx.lineWidth = b.effect === 'partial' ? 1.4 : 1.5
       ctx.setLineDash(b.effect === 'partial' ? [9, 5] : [])
       ctx.stroke()
       ctx.setLineDash([])
-      ctx.globalAlpha = 1
+      ctx.globalAlpha = 0.8
     }
   }
+  ctx.restore()
 }
 
 /**
@@ -129,7 +163,7 @@ function paintHeat(ctx, fire, view, strength = 1) {
     const y = view.py(h.lat)
     const g = ctx.createRadialGradient(x, y, 0, x, y, r)
     const hot = h.w > 0.66 ? '#D7263D' : h.w > 0.4 ? '#E2561B' : '#F5A623'
-    g.addColorStop(0, alpha(hot, 0.2 + 0.45 * h.w))
+    g.addColorStop(0, alpha(hot, 0.16 + 0.38 * h.w))
     g.addColorStop(1, alpha(hot, 0))
     ctx.fillStyle = g
     ctx.beginPath()
@@ -139,15 +173,23 @@ function paintHeat(ctx, fire, view, strength = 1) {
   ctx.restore()
 }
 
-/** The ignition zone's orange boundary and the ignition points. */
+/** The ignition zone's faint orange fill (under the homes). */
+function paintZoneFill(ctx, fire, view) {
+  const c = palette()
+  ctx.beginPath()
+  for (const ring of fire.ignitionZone.polygon) traceLine(ctx, ring, view)
+  ctx.closePath()
+  ctx.fillStyle = alpha(c.orange, 0.06)
+  ctx.fill()
+}
+
+/** The ignition zone's orange boundary and the ignition points (over the homes). */
 function paintZone(ctx, fire, view) {
   const c = palette()
   const zone = fire.ignitionZone
   ctx.beginPath()
   for (const ring of zone.polygon) traceLine(ctx, ring, view)
   ctx.closePath()
-  ctx.fillStyle = alpha(c.orange, 0.06)
-  ctx.fill()
   ctx.strokeStyle = 'rgba(12, 12, 13, 0.55)'
   ctx.lineWidth = 4.5
   ctx.stroke()
@@ -216,42 +258,75 @@ function paintWind(ctx, fire, view, cur) {
     ctx.lineWidth = width
     ctx.stroke()
   }
+  // The label sits on a dark pill behind the arrow's tail, so lines under it never cross the text.
   ctx.font = '700 11.5px Inter, system-ui, sans-serif'
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'
   const label = `${compass(wind.windFromDeg)} ${wind.windKmh} km/h`
-  const lx = x0 - dx * 16
-  const ly = y0 - dy * 16
-  ctx.lineWidth = 3.5
-  ctx.strokeStyle = 'rgba(12, 12, 13, 0.85)'
-  ctx.strokeText(label, lx, ly)
+  const pw = ctx.measureText(label).width + 16
+  const ph = 20
+  const lx = x0 - dx * (pw / 2 + 6)
+  const ly = y0 - dy * (ph / 2 + 6)
+  ctx.beginPath()
+  if (ctx.roundRect) ctx.roundRect(lx - pw / 2, ly - ph / 2, pw, ph, 999)
+  else ctx.rect(lx - pw / 2, ly - ph / 2, pw, ph)
+  ctx.fillStyle = 'rgba(15, 15, 16, 0.86)'
+  ctx.fill()
+  ctx.lineWidth = 1
+  ctx.strokeStyle = 'rgba(243, 241, 236, 0.22)'
+  ctx.stroke()
   ctx.fillStyle = '#F3F1EC'
-  ctx.fillText(label, lx, ly)
+  ctx.fillText(label, lx, ly + 0.5)
   ctx.restore()
 }
 
+/** Ignition heat: full before the spread starts, stepping back once perimeters are drawn. */
+const heatStrength = (step) => (step < 0 ? 1 : step === 0 ? 0.4 : 0.1)
+
+/** Earlier growing steps before the current one. */
+function earlierSteps(fire, step) {
+  const drawn = []
+  for (let i = 0; i < step; i++) if (!fire.steps[i].held) drawn.push(i)
+  return drawn
+}
+
 /**
- * st: { fire, step (index, −1 = ignition), fade (0→1 for the newest perimeter), views }
+ * Under the homes. st: { fire, step (index, −1 = ignition), fade (0→1 for the newest perimeter), views }
  */
-export function paintSpread(ctx, view, st) {
+export function paintSpreadFills(ctx, view, st) {
   const { fire, step, views } = st
   if (!fire) return
   const c = palette()
   const cur = step >= 0 ? fire.steps[step] : null
   const fade = st.fade ?? 1
-  paintHeat(ctx, fire, view, cur ? 0.3 : 1)
+  paintHeat(ctx, fire, view, heatStrength(step))
+  paintZoneFill(ctx, fire, view)
   if (cur && views.probability) {
     for (const band of ['p25', 'p50', 'p90']) fillPolys(ctx, cur[band], view, bandColor(band), 0.35)
   }
   if (cur && views.isochrones) {
     // Earlier steps fainter, the current one solid at 45% (§10). The earlier fills share one
-    // alpha budget so a 19-step fire is no heavier than a 7-step one; strokes ramp 1.2 → 1.7 px.
-    const drawn = []
-    for (let i = 0; i < step; i++) if (!fire.steps[i].held) drawn.push(i)
+    // alpha budget so a 19-step fire is no heavier than a 7-step one.
+    const drawn = earlierSteps(fire, step)
     const each = drawn.length ? Math.min(0.07, 0.3 / drawn.length) : 0
     for (const i of drawn) fillPolys(ctx, fire.steps[i].p50, view, hourColor(fire.steps[i].hour), each)
     fillPolys(ctx, cur.p50, view, hourColor(cur.hour), 0.45 * fade)
-    // Earlier isochrones are stroked over the current fill so they read as contour lines.
+  } else if (cur && !views.probability) {
+    fillPolys(ctx, cur.p50, view, c.red, 0.3 * fade)
+  }
+}
+
+/** Over the homes: isochrone contours, the current perimeter, the tail band, barriers and the zone. */
+export function paintSpreadLines(ctx, view, st) {
+  const { fire, step, views } = st
+  if (!fire) return
+  const c = palette()
+  const cur = step >= 0 ? fire.steps[step] : null
+  const fade = st.fade ?? 1
+  if (views.barriers) paintBarriers(ctx, fire, view)
+  if (cur && views.isochrones) {
+    // Earlier isochrones as contour lines, ramping 1.2 → 1.7 px.
+    const drawn = earlierSteps(fire, step)
     drawn.forEach((i, k) => {
       const s = fire.steps[i]
       const t = (k + 1) / (drawn.length + 1)
@@ -261,13 +336,16 @@ export function paintSpread(ctx, view, st) {
     strokePolys(ctx, cur.p50, view, 'rgba(12, 12, 13, 0.55)', 4, 0.4 + 0.6 * fade)
     strokePolys(ctx, cur.p50, view, hourColor(cur.hour), 2.2, 0.4 + 0.6 * fade)
   } else if (cur) {
-    fillPolys(ctx, cur.p50, view, c.red, (views.probability ? 0 : 0.3) * fade)
+    strokePolys(ctx, cur.p50, view, 'rgba(12, 12, 13, 0.55)', 4, 0.4 + 0.6 * fade)
     strokePolys(ctx, cur.p50, view, c.red, 2.2, 0.4 + 0.6 * fade)
   }
-  if (cur && views.probability) {
-    strokePolys(ctx, cur.p25, view, bandColor('p25'), 1.2, 0.9, [4, 4])
-  }
-  if (views.barriers) paintBarriers(ctx, fire, view)
+  if (cur && views.probability) strokePolys(ctx, cur.p25, view, bandColor('p25'), 1.2, 0.9, [4, 4])
   paintZone(ctx, fire, view)
-  paintWind(ctx, fire, view, cur)
+}
+
+/** On top of everything: the wind arrow and its label. */
+export function paintSpreadTop(ctx, view, st) {
+  const { fire, step } = st
+  if (!fire) return
+  paintWind(ctx, fire, view, step >= 0 ? fire.steps[step] : null)
 }

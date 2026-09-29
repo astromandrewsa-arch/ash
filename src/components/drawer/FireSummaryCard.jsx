@@ -53,8 +53,8 @@ export default function FireSummaryCard({ fireId }) {
             { label: 'Assets in P50 path', value: formatNumber(b.assets) },
             { label: 'Exposed TIV', value: formatUSDCompact(b.tiv) },
             { label: 'Mean damage ratio', value: `${Math.round(b.damageRatio * 100)}%` },
-            { label: 'Head fire', value: `${f.intensity.rosKmh} km/h · ${formatNumber(f.intensity.kwPerM)} kW/m` },
-            { label: 'Wind', value: `${f.intensity.windKmh} km/h from ${f.intensity.windDir}` },
+            { label: 'Peak head fire', value: `${f.intensity.rosKmh} km/h · ${formatNumber(f.intensity.kwPerM)} kW/m` },
+            { label: 'Peak wind', value: `${f.intensity.windKmh} km/h from ${f.intensity.windDir}` },
           ]}
         />
       </section>

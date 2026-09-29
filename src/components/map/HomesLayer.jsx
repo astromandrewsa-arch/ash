@@ -38,10 +38,11 @@ export default function HomesLayer() {
     return out
   }, [fire, hour])
 
+  const fireOpen = fire !== null
   useLayoutEffect(() => {
-    Object.assign(st.current, { showHomes: views.homes, areas, styleOf, engulfed })
+    Object.assign(st.current, { showHomes: views.homes, areas, styleOf, engulfed, fireOpen })
     for (const l of layers.current) l.redraw()
-  }, [views.homes, areas, styleOf, engulfed])
+  }, [views.homes, areas, styleOf, engulfed, fireOpen])
 
   useEffect(() => {
     const homes = new CanvasOverlay((ctx, view) => paintHomes(ctx, view, st.current), { pane: homesPane, pad: MAP.viewportPad })

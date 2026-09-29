@@ -107,6 +107,10 @@ function paintClusters(ctx, view, st) {
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'
   for (const k of clusters) {
+    let burnt = 0
+    if (st.engulfed?.size) for (const a of k.areas) burnt += st.engulfed.get(a.id) || 0
+    // While a fire is open, clusters it has not reached step back so its perimeter reads first.
+    ctx.globalAlpha = st.fireOpen && burnt === 0 ? 0.5 : 1
     // Soft halo, solid yellow disc with a dark rim, count in ink.
     const g = ctx.createRadialGradient(k.x, k.y, k.r * 0.6, k.x, k.y, k.r * 2.1)
     g.addColorStop(0, alpha(c.yellow, 0.34))
@@ -125,8 +129,6 @@ function paintClusters(ctx, view, st) {
     ctx.fillStyle = '#16140C'
     ctx.fillText(countLabel(k.homes), k.x, k.y + 0.5)
     // Homes the open fire has reached: a red arc for their share of the cluster.
-    let burnt = 0
-    if (st.engulfed?.size) for (const a of k.areas) burnt += st.engulfed.get(a.id) || 0
     if (burnt > 0) {
       const share = Math.max(0.08, Math.min(1, burnt / k.homes))
       ctx.beginPath()
@@ -138,6 +140,7 @@ function paintClusters(ctx, view, st) {
       ctx.lineCap = 'butt'
     }
   }
+  ctx.globalAlpha = 1
 }
 
 function paintAreas(ctx, view, st) {

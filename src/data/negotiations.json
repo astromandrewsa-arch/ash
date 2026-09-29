@@ -170,7 +170,7 @@
   ],
   "ledger": {
    "cost": 1200000,
-   "saving": 56486687,
+   "saving": 56280800,
    "status": "Agreed",
    "documents": [
     "TFS thinning prescription.pdf",
@@ -511,7 +511,7 @@
   ],
   "ledger": {
    "cost": 380000,
-   "saving": 23507103,
+   "saving": 23834091,
    "status": "State plan",
    "documents": [
     "OG&E PSPS notice.pdf",

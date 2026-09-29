@@ -224,7 +224,7 @@ const inSector = (brg, from, to) => (from <= to ? brg >= from && brg <= to : brg
 /**
  * @param {object} cfg
  *  - ignitions: [{ hour, ring }]   rings in metres (open)
- *  - segments: [{ fromHour, windFromDeg, headKmh, lb }]
+ *  - segments: [{ fromHour, windFromDeg, headKmh, lb, flankScale? }] (a segment's flankScale multiplies the fire's)
  *  - startLocalHour: local clock hour at t = 0
  *  - rateScale, flankScale, lbScale: band and calibration multipliers
  *  - night: { from: 21, to: 7, factor: 0.3 } | null
@@ -234,7 +234,7 @@ const inSector = (brg, from, to) => (from <= to ? brg >= from && brg <= to : brg
  *  - spotting: { everyHours, minM, maxM, fromHour } | null
  *  - barriers: [{ id, polys (metre polygons), delayHours (null = hard) }]
  *  - islands: metre polygons that never burn
- *  - shifts: [{ hour, freeze, faceDeg, flankFraction: [f0, f1] }]
+ *  - shifts: [{ hour, freeze, faceDeg, flankFraction: [f0, f1], keepX: [x0, x1] }]
  *  - holdHour: spread stops after this hour
  *  - endHour: last hour to report
  *  - maxVertices: resampling cap per ring
@@ -368,6 +368,11 @@ export function simulate(cfg) {
           }
           if (run.length) runs.push(run)
           for (let r of runs) {
+            if (ev.keepX) {
+              // Keep the exposed flank between two eastings (set from longitudes by the caller).
+              const [x0, x1] = ev.keepX
+              r = r.filter((p) => p[0] >= Math.min(x0, x1) && p[0] <= Math.max(x0, x1))
+            }
             if (ev.flankFraction) {
               // Keep the middle part of the flank, measured along the old axis.
               const old = segmentAt(ev.hour - 0.01)
@@ -424,7 +429,7 @@ export function simulate(cfg) {
         const L = Math.hypot(nx, ny) || 1
         nx /= L
         ny /= L
-        const vel = waveletVelocity([nx, ny], d, R, lb, flankScale)
+        const vel = waveletVelocity([nx, ny], d, R, lb, flankScale * (seg.flankScale ?? 1))
         let k = clock
         const brg = bearingOf([nx, ny])
         for (const f of fingers) {

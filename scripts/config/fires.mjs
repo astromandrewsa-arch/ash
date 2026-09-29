@@ -35,7 +35,8 @@ export const FIRES = [
       { fromHour: 30, windFromDeg: 45, windKmh: 45, gustKmh: 65, rh: 18, headKmh: 10, lb: 4 },
     ],
     recipeText: '0–30 h: wind from W 65 km/h, RH 12%, head 11 km/h, LB 7. Hour 30: cold front, wind from NE 45 km/h, the south flank becomes the head running SW toward Pampa, LB 4.',
-    shifts: [{ hour: 30, freeze: true, faceDeg: 75, flankFraction: [0.3, 0.65] }],
+    // After the front only the south flank north-east of Pampa becomes the new head (a narrow run onto the wheat).
+    shifts: [{ hour: 30, freeze: true, faceDeg: 75, flankLng: [-100.87, -100.75] }],
     flankScale: 1.25, rateScale: 1,
     dayFactors: [1, 0.35, 0.55],
     holdHour: 48,
@@ -59,7 +60,7 @@ export const FIRES = [
     intensity: { class: 'Extreme', kwPerM: 28000, flameLengthM: 8.6, rosKmh: 11, windKmh: 65, windDir: 'W' },
     fuel: fuel(81, -1.8, 93, 4.2, 5.4, 9.6, 12.6, 57, 46, 640, 44),
     lossTarget: { p90: 48e6, p50: 71e6, p25: 96e6 },
-    exposureText: (x) => `${Math.round(x.asset('XCEL').km)} km of Xcel line (${n0(x.asset('XCEL').poles)} poles), Turkey Track, ${n0(x.homes)} homes in Canadian and Stinnett, Borger refinery flank at h14, ${n0(x.livestock)} cattle`,
+    exposureText: (x) => `${Math.round(x.asset('XCEL').km)} km of Xcel line (${n0(x.asset('XCEL').poles)} poles), Turkey Track, ${n0(x.homes)} homes in Canadian and Stinnett, ${n0(x.livestock)} cattle; the Borger refinery on the flank at h14 (monitored, outside the P50)`,
     analogue: { name: 'Smokehouse Creek', year: 2024, acres: 1058482, homesLost: null, structures: 500 },
   },
   {
@@ -104,7 +105,8 @@ export const FIRES = [
     startLocalHour: 14,
     recipe: [{ fromHour: 0, windFromDeg: 0, windKmh: 22, gustKmh: 40, rh: 16, headKmh: 2.2, lb: 2.5 }],
     recipeText: 'Wind from N 22 km/h, head 2.2 km/h, LB 2.5; three ignitions merge by h48 into a clover-leaf; spotting 0.8–2 km ahead every 6 h; five-day burn with night slowdown.',
-    flankScale: 1, rateScale: 0.075,
+    // Narrow lobes (flank × 0.72) so the three heads stay apart as a clover-leaf to the end.
+    flankScale: 0.72, rateScale: 0.075,
     dayFactors: [1, 0.7, 0.5, 0.35, 0.25, 0.15],
     holdHour: 120,
     barriers: { water: true, rivers: [{ name: 'Colorado River' }], lines: [{ ref: 'sh71', delayHours: 2 }] },
@@ -114,7 +116,7 @@ export const FIRES = [
       { hour: 6, text: 'First spot fires land 0.8–2 km ahead of the heads.' },
       { hour: 24, text: 'Night slowdown; the three heads run again with the afternoon wind.' },
       { hour: 48, text: 'The three lobes merge into a clover-leaf.' },
-      { hour: 120, text: 'Five days in: crews hold on SH 71 and the Colorado River.' },
+      { hour: 120, text: 'Five days in: crews hold the three heads north of SH 71.' },
     ],
     intensity: { class: 'Very High', kwPerM: 9000, flameLengthM: 5.1, rosKmh: 2.2, windKmh: 22, windDir: 'N' },
     fuel: fuel(88, -1.3, 86, 5.1, 6.2, 11.2, 14.4, 49, 44, 560, 31),
@@ -131,11 +133,12 @@ export const FIRES = [
     startLocalHour: 8,
     recipe: [
       { fromHour: 0, windFromDeg: 225, windKmh: 40, gustKmh: 60, rh: 15, headKmh: 4, lb: 4 },
-      { fromHour: 13, windFromDeg: 0, windKmh: 30, gustKmh: 45, rh: 22, headKmh: 4, lb: 2 },
+      // The stem: a narrow run south from the middle of the bar.
+      { fromHour: 13, windFromDeg: 0, windKmh: 30, gustKmh: 45, rh: 22, headKmh: 4, lb: 2, flankScale: 0.6 },
     ],
     recipeText: '0–13 h: wind from SW 40 km/h, head 4 km/h, LB 4 (ellipse pointing NE). Hour 13 (21:00): shift to wind from N 30 km/h, east flank becomes head, runs south over Carbon, LB 2 → T-shape.',
     // The new head starts from the middle of the south-east flank, so the stem hangs off the bar.
-    shifts: [{ hour: 13, freeze: true, faceDeg: 60, flankFraction: [0.58, 0.72] }],
+    shifts: [{ hour: 13, freeze: true, faceDeg: 60, flankFraction: [0.46, 0.6] }],
     flankScale: 1, rateScale: 0.2,
     holdHour: 26,
     barriers: { water: true, freeways: [{ name: 'I20', delayHours: 2 }] },
@@ -298,23 +301,25 @@ export const FIRES = [
     zone: { class: 'Zone', hectares: 1400, blocks: [[36.8045, -96.4285]], prior: 'track' },
     ignitions: [{ at: [36.7965, -96.4295], hour: 0 }],
     startLocalHour: 13,
-    recipe: [{ fromHour: 0, windFromDeg: 180, windKmh: 45, gustKmh: 65, rh: 19, headKmh: 11, lb: 5 }],
-    recipeText: 'Wind from S 45 km/h, head 11 km/h, LB 5; last year’s patch burns as islands (8 large blocks) so the perimeter shows bays and islands and halts at burned patches.',
+    recipe: [{ fromHour: 0, windFromDeg: 185, windKmh: 45, gustKmh: 65, rh: 19, headKmh: 11, lb: 5 }],
+    recipeText: 'Wind from S 45 km/h, head 11 km/h, LB 5; last year’s patch burns as islands (ten blocks of varied size) so the perimeter shows bays and islands and halts at burned patches.',
     flankScale: 1.1, rateScale: 0.45,
-    holdHour: 4,
-    // Last season's patch burns: islands the fire flows around, then a band of blocks that stops the head.
+    holdHour: 3,
+    // Last season's patch burns: islands of varied size inside the run, two that cut bays into
+    // the flanks, and a staggered row of blocks that stops the head in scallops.
+    // [lat, lng, widthM, heightM, axisDeg]
     patches: [
-      [36.8172, -96.4385, 750, 520], [36.8154, -96.4194, 700, 500],
-      [36.8316, -96.4441, 820, 560], [36.8307, -96.416, 820, 560],
-      [36.8478, -96.4553, 1750, 800], [36.8487, -96.4385, 1750, 800], [36.8478, -96.4217, 1750, 800], [36.8487, -96.4049, 1750, 800],
+      [36.8181, -96.4362, 900, 420, 70], [36.81, -96.4194, 380, 340, 20], [36.8298, -96.4205, 700, 520, 120], [36.8361, -96.4407, 420, 300, 45],
+      [36.8244, -96.4497, 1100, 700, 30], [36.8163, -96.4093, 900, 600, 150],
+      [36.8505, -96.453, 1500, 760, 82], [36.8536, -96.4374, 1500, 920, 97], [36.85, -96.4211, 1500, 700, 78], [36.8532, -96.4043, 1500, 850, 94],
     ],
     barriers: { water: true },
     spotting: { p25: { everyHours: 2, minM: 150, maxM: 300 } },
     events: [
       { hour: 0, text: 'Ignition in the south unit under a 45 km/h south wind.' },
-      { hour: 1, text: 'Head reaches last season’s patch burns and splits.' },
-      { hour: 2, text: 'Bays form between the patches; burned blocks stay as islands.' },
-      { hour: 5, text: 'Out of fuel against the patch mosaic.' },
+      { hour: 1, text: 'Head reaches last season’s patch burns and splits around them.' },
+      { hour: 2, text: 'Bays form where patches reach into the flanks; burned blocks stay as islands.' },
+      { hour: 3, text: 'Out of fuel against the patch mosaic.' },
     ],
     // Three sheds and corrals in the burn unit (the preserve headquarters sit outside every band).
     outbuildings: { p50: 3, p25: 0, tiv: 180000 },
@@ -329,11 +334,13 @@ export const FIRES = [
     id: 'OK-10', name: 'Stillwater cigars', place: 'Oklahoma, south-west of Stillwater', state: 'OK', county: 'Payne County',
     window: ['2026-10-08', '2026-10-11'], probability: 0.9, severity: 'Severe',
     zone: { class: 'Sector', hectares: 4200, corridor: { asset: 'OGEL', fromKm: 22.5, toKm: 30.5 }, prior: 'line' },
-    ignitions: [{ at: { asset: 'OGEL', km: 24.5 }, hour: 0 }, { at: { asset: 'OGEL', km: 26 }, hour: 0.2 }, { at: { asset: 'OGEL', km: 27.5 }, hour: 0.4 }],
+    // The line runs east–west here: 2.1 km apart along it puts the three starts 1.5 km apart across the wind.
+    ignitions: [{ at: { asset: 'OGEL', km: 24 }, hour: 0 }, { at: { asset: 'OGEL', km: 26.1 }, hour: 0.2 }, { at: { asset: 'OGEL', km: 28.2 }, hour: 0.4 }],
     startLocalHour: 12,
     recipe: [
-      { fromHour: 0, windFromDeg: 225, windKmh: 90, gustKmh: 130, rh: 8, headKmh: 16, lb: 8 },
-      { fromHour: 5, windFromDeg: 240, windKmh: 30, gustKmh: 45, rh: 16, headKmh: 3.5, lb: 2.2 },
+      // Narrow cigars while the gale blows; they widen and merge sideways once it eases.
+      { fromHour: 0, windFromDeg: 225, windKmh: 90, gustKmh: 130, rh: 8, headKmh: 16, lb: 8, flankScale: 0.55 },
+      { fromHour: 5, windFromDeg: 240, windKmh: 30, gustKmh: 45, rh: 16, headKmh: 3.5, lb: 2.2, flankScale: 0.6 },
     ],
     recipeText: 'Wind from SW 90 km/h gusting 130, RH 8%, three downed-line ignitions 1.5 km apart, head 16 km/h, LB 8 (cap) → three parallel cigars for 5 h, then wind eases to 30 km/h and they merge sideways.',
     flankScale: 1, rateScale: 0.14,
