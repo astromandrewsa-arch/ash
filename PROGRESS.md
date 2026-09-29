@@ -18,7 +18,7 @@ Tick a pass only when its build, smoke test and commit are done.
   - 30-day calendar with each fire on its window (severity colours, shields on state plans, arrows past day 30), intervention schedule, per-fire arithmetic with the No intervention · As negotiated · Every plan fails toggle and book rows computed in the browser from fires.json and plans.json ($347M / $97.9M / $161M / $1.2M, as checkData prints), premium at risk, season loss ratio and return period tiles, who-pays lines with agreement status, the state-plan statements, and the recharts bar chart with the carrier cost as a thin fourth bar. Deviation: schedule fields stack in four cells.
 - [x] Pass 8: Premium Intelligence
   - Six Texas market tiles with info icons opening Help at the sources; a sortable bundle table (policies, TIV, premium, market and PRIMER rates, adequacy bar, 2027 recommendation against the filed change, all-bundles row; under-priced rows orange, over-priced blue); the science panel (fuel load, live and dead fuel, spread, intensity, sensitivity line, AAL against PRIMER season expected loss with adequacy, loss and combined ratios); the technical premium formula in HTML with its inputs; Rate gap shading per bundle with labels and a Today · 2027 switch in the Quick Views key; v2 Help dialog. Deviations: the page opens with the most under-priced bundle selected; the Texas ranches are no longer shaded because their homes bundles do not price them.
-- [ ] Pass 9: Historical Accuracy v2
+- [ ] Pass 9: Historical Accuracy v2 (in progress since 2026-09-29 09:11 UTC)
 - [ ] Pass 10: UI polish, Help, README
 - [ ] Pass 11: tour, PDF export, Reports
 - [ ] Pass 12: acceptance and hand-over
