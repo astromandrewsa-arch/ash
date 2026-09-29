@@ -106,3 +106,6 @@ One line each: date · what · why.
 - 2026-09-29 · Bundle rows keep a tint (spec §15) as a 3 px coloured edge and a wash that fades across the name cell, not a full-row fill · full-row orange and blue at low alpha read brown and navy on charcoal.
 - 2026-09-29 · The Premium technical premium card now also compares written and technical premium for the selected bundle and for all bundles (bars from bundles.json) · the card stretches to meet the science panel and the space was empty.
 
+- 2026-09-29 · PDF spread maps are drawn offscreen from Esri tiles (they send CORS `*`) plus the P90/P50/P25 perimeters, not captured from the live Leaflet container; a tainted or failed tile falls back to the perimeters on a plain dark background · the four snapshot hours (1, 8, 24, 48 h) need the fire framed the same way each time without moving the user's map.
+- 2026-09-29 · jsPDF and html2canvas load only when an export starts (kept out of the vendor chunk) · they would add ~550 kB to first load for a button most walk-throughs never press.
+- 2026-09-29 · Work stopped mid pass 11 at the user's request: per-fire PDF export is done; the tour, the v2 Reports page and the smoke PDF/tour steps are not.

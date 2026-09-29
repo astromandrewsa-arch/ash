@@ -1,4 +1,6 @@
-import { FileDown, FileText } from 'lucide-react'
+import { FileText } from 'lucide-react'
+import { store } from '../../lib/store.js'
+import ExportButton from '../common/ExportButton.jsx'
 
 const PAGES = [
   'Cover: fire, header line, severity, issued stamp',
@@ -11,7 +13,7 @@ const PAGES = [
   'Methods and disclaimer',
 ]
 
-/** Export (§17): what the per-fire report holds. The generator itself arrives in pass 11. */
+/** Export (§17): what the per-fire report holds, and the button that builds and downloads it. */
 export default function ExportTab({ fire }) {
   return (
     <div className="mi-export">
@@ -19,7 +21,7 @@ export default function ExportTab({ fire }) {
         <FileText size={22} aria-hidden="true" />
         <div>
           <strong>Fire report · {fire.id} {fire.name}</strong>
-          <span>pyrome-{fire.id}-{fire.called}.pdf</span>
+          <span>pyrome-{fire.id}-{store.meta.issueDate}.pdf</span>
         </div>
       </div>
       <ol className="export-pages">
@@ -27,10 +29,7 @@ export default function ExportTab({ fire }) {
           <li key={p}>{p}</li>
         ))}
       </ol>
-      <button type="button" className="btn btn-primary" disabled aria-disabled="true">
-        <FileDown size={16} aria-hidden="true" />
-        PDF export arrives in pass 11
-      </button>
+      <ExportButton fire={fire} className="mi-export-action" />
     </div>
   )
 }

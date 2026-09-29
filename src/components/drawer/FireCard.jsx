@@ -6,6 +6,7 @@ import useApp from '../../state/useApp.js'
 import DrawerHeader from './DrawerHeader.jsx'
 import SvgIcon from '../common/SvgIcon.jsx'
 import TabBar from '../common/TabBar.jsx'
+import ExportButton from '../common/ExportButton.jsx'
 import ForecastTab from '../fire/ForecastTab.jsx'
 import SpreadTab from '../fire/SpreadTab.jsx'
 import ExposureTab from '../fire/ExposureTab.jsx'
@@ -61,6 +62,9 @@ export default function FireCard({ fireId }) {
       <div key={tab.id} className="fire-tab" role="tabpanel" id="fire-panel" aria-labelledby={`fire-tab-${tab.id}`}>
         <Panel fire={f} />
       </div>
+      <footer className="fire-footer">
+        <ExportButton fire={f} primary={false} />
+      </footer>
     </div>
   )
 }
