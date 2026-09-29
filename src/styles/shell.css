@@ -76,8 +76,8 @@
   background: rgba(226, 86, 27, 0.12);
 }
 
-/* 3 px active bar hugging the rail's left edge. */
-.rail-item.is-active::before {
+/* 3 px active bar hugging the rail's left edge (pages only; an open Help dialog is a tint). */
+.rail-item.is-active:not(.is-modal)::before {
   content: '';
   position: absolute;
   left: -10px;

@@ -27,6 +27,8 @@
   --green: #1E9E5A;    /* protected homes, net saving, prevented */
   --blue: #2B6CB0;     /* other models in charts, over-priced bundles */
   --blue-soft: #5B8DD6;
+  --orange-text: #FFB08C; /* orange and blue figures in small text on dark glass (AA contrast) */
+  --blue-text: #A9C7F0;
   --grey-sensor: #9A9CA0;
   --water: #3B8FD6;
   --road: #B9BCC2;

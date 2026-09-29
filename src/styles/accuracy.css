@@ -1,0 +1,616 @@
+/* Historical Accuracy (CLAUDE.md §16): model exhibit, season tiles, hit-rate chart, reliability,
+   LA 2025 flash estimates, twelve fires, ruled-out calls and the before/after slider. */
+
+.accuracy .kpi-row {
+  margin-top: 16px;
+}
+
+.accuracy .kpi .label {
+  min-height: 28px;
+}
+
+.acc-h2 {
+  margin: 22px 0 10px;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.acc-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.acc-grid.is-even {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.acc-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---------- Model exhibit ---------- */
+.exhibit-wrap,
+.hist-wrap,
+.ruled-wrap {
+  overflow-x: auto;
+  padding: 4px 0 2px;
+}
+
+.exhibit,
+.hist-table,
+.ruled {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  line-height: 17px;
+}
+
+.exhibit thead th,
+.hist-table thead th,
+.ruled thead th {
+  padding: 11px 10px 9px;
+  border-bottom: 1px solid var(--hairline-strong);
+  color: var(--muted);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
+
+.exhibit td,
+.exhibit tbody th,
+.hist-table td,
+.hist-table tbody th,
+.ruled td,
+.ruled tbody th {
+  padding: 10px;
+  border-bottom: 1px solid var(--hairline);
+  text-align: left;
+  vertical-align: top;
+}
+
+.exhibit tbody tr:last-child > *,
+.hist-table tbody tr:last-child > *,
+.ruled tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.exhibit .num,
+.hist-table .num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.exhibit .is-none,
+.hist-table .is-none {
+  color: var(--faint);
+}
+
+.exhibit-name strong,
+.exhibit-name span {
+  display: block;
+}
+
+.exhibit-name strong {
+  font-weight: 650;
+}
+
+.exhibit-name span {
+  color: var(--muted);
+  font-size: 11.5px;
+  font-weight: 500;
+}
+
+.exhibit tr.is-primer > * {
+  background: rgba(226, 86, 27, 0.1);
+}
+
+.exhibit tr.is-primer .exhibit-name strong,
+.exhibit tr.is-primer .num {
+  color: var(--orange);
+  font-weight: 750;
+}
+
+.exhibit tr.is-primer > :first-child {
+  box-shadow: inset 3px 0 0 var(--orange);
+}
+
+/* ---------- Hit rate ---------- */
+.hit {
+  padding: 16px 18px 14px;
+}
+
+.hit-head p {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.hit-head {
+  margin-bottom: 8px;
+}
+
+.hit-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 8px 0 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 11.5px;
+  list-style: none;
+}
+
+.hit-key li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.hit-key li.is-primer {
+  color: var(--warm-grey);
+  font-weight: 650;
+}
+
+.hit-key i {
+  display: inline-block;
+  width: 16px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.hit-key i.is-ring {
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid var(--blue-soft);
+  border-radius: 50%;
+}
+
+.hit-key i.is-dash {
+  background: repeating-linear-gradient(90deg, rgba(143, 180, 234, 0.6) 0 3px, transparent 3px 6px);
+}
+
+.hit-tip b {
+  margin-left: auto;
+  padding-left: 12px;
+}
+
+.hit-tip i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* ---------- Reliability ---------- */
+.rel {
+  padding: 14px 16px;
+}
+
+.rel-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.rel-plot {
+  flex: none;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.rel-diag {
+  stroke: rgba(243, 241, 236, 0.3);
+  stroke-dasharray: 3 3;
+}
+
+.rel-line {
+  fill: none;
+  stroke: var(--orange);
+  stroke-width: 2;
+}
+
+.rel-dot {
+  fill: var(--orange);
+}
+
+.rel-line-text {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+}
+
+.rel-bins {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.rel-brier {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--hairline);
+}
+
+.rel-brier ul {
+  display: grid;
+  gap: 4px;
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rel-brier li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.rel-brier li em {
+  color: var(--muted);
+  font-style: normal;
+}
+
+.rel-brier li.is-primer strong {
+  color: var(--orange);
+}
+
+.rel-brier li.is-none {
+  color: var(--faint);
+}
+
+/* ---------- LA 2025 ---------- */
+.la-tile {
+  padding: 14px 16px 12px;
+}
+
+.la-scale {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.la-row {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 64px;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+}
+
+.la-model {
+  color: var(--muted);
+}
+
+.la-row.is-final .la-model,
+.la-row.is-final .la-value {
+  color: var(--warm-grey);
+  font-weight: 700;
+}
+
+.la-value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.la-track {
+  position: relative;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  background: var(--tint);
+}
+
+.la-range {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: var(--radius-pill);
+  background: var(--blue-soft);
+}
+
+.la-range.is-point {
+  width: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+}
+
+.la-final {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 2px;
+  margin-left: -1px;
+  background: var(--red);
+}
+
+.la-final-dot {
+  position: absolute;
+  top: -1px;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
+.la-note {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.la-axis {
+  display: block;
+  margin-top: 4px;
+  color: var(--faint);
+  font-size: 10.5px;
+}
+
+/* ---------- Twelve fires ---------- */
+.hist-table {
+  font-size: 11.5px;
+  line-height: 15px;
+}
+
+.hist-table td {
+  min-width: 78px;
+}
+
+.hist-fire {
+  min-width: 150px;
+}
+
+.hist-fire strong,
+.hist-fire span {
+  display: block;
+}
+
+.hist-fire strong {
+  font-size: 12.5px;
+  font-weight: 650;
+}
+
+.hist-fire span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.hist-table th.is-primer,
+.hist-primer {
+  color: var(--orange);
+}
+
+.hist-primer {
+  min-width: 140px;
+  font-weight: 650;
+}
+
+.hist-outcome {
+  min-width: 230px;
+}
+
+.hist-outcome p {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.outcome-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border: 1px solid;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.outcome-pill.tone-green {
+  border-color: rgba(30, 158, 90, 0.55);
+  background: rgba(30, 158, 90, 0.14);
+  color: #3ccb7f;
+}
+
+.outcome-pill.tone-red {
+  border-color: rgba(215, 38, 61, 0.55);
+  background: rgba(215, 38, 61, 0.12);
+  color: #ff6b7d;
+}
+
+.outcome-pill.tone-blue {
+  border-color: rgba(91, 141, 214, 0.55);
+  background: rgba(43, 108, 176, 0.18);
+  color: var(--blue-soft);
+}
+
+/* ---------- Ruled out ---------- */
+.acc-lower {
+  margin-top: 22px;
+}
+
+.ruled-card {
+  padding-bottom: 4px;
+}
+
+.ruled-card .acc-h2 {
+  margin: 14px 16px 8px;
+}
+
+.ruled-wrap {
+  padding: 0;
+}
+.ruled tbody th {
+  min-width: 130px;
+  font-weight: 650;
+}
+
+.ruled-outcome {
+  color: #3ccb7f;
+  font-weight: 650;
+}
+
+/* ---------- Before / after ---------- */
+.ba2 {
+  padding: 0 0 12px;
+  overflow: hidden;
+}
+
+.ba2-head {
+  padding: 0 16px 10px;
+}
+
+.ba2-head .acc-h2 {
+  margin: 14px 0 4px;
+}
+
+.ba2-head p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.ba2-frame {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+  background: #0d0d0e;
+  user-select: none;
+}
+
+.ba2-map,
+.ba2-after {
+  position: absolute;
+  inset: 0;
+}
+
+/* Each map is its own stacking context, or the before map's panes (z 200–700) paint over the after side. */
+.ba2-map {
+  z-index: 0;
+  background: #0d0d0e;
+}
+
+.ba2-after {
+  z-index: 1;
+}
+
+.ba2-desat {
+  filter: grayscale(1) brightness(0.72) contrast(1.05);
+}
+
+.ba2-tag {
+  position: absolute;
+  z-index: 800;
+  top: 10px;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  background: rgba(15, 15, 16, 0.78);
+  font-size: 11px;
+  font-weight: 650;
+  pointer-events: none;
+}
+
+.ba2-tag.is-before {
+  left: 10px;
+}
+
+.ba2-tag.is-after {
+  right: 10px;
+}
+
+.ba2-divider {
+  position: absolute;
+  z-index: 900;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  margin-left: -12px;
+  cursor: ew-resize;
+  touch-action: none;
+}
+
+.ba2-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 11px;
+  width: 2px;
+  background: var(--warm-grey);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.ba2-divider:focus-visible {
+  outline: none;
+}
+
+.ba2-divider:focus-visible .ba2-handle {
+  box-shadow: 0 0 0 3px var(--orange), 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.ba2-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin: -16px 0 0 -16px;
+  border-radius: 50%;
+  background: var(--warm-grey);
+  color: #161616;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.ba2-legend {
+  display: flex;
+  gap: 16px;
+  padding: 10px 16px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.ba2-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.ba2-key {
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+.ba2-key.is-predicted {
+  border: 2px dashed var(--orange);
+}
+
+.ba2-key.is-scar {
+  background: #0b0b0b;
+  box-shadow: 0 0 0 1px rgba(243, 241, 236, 0.3);
+}
+
+.acc-footer {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid var(--hairline);
+  color: var(--muted);
+  font-size: 12px;
+}

@@ -10,7 +10,7 @@ export default function ContextTile({ tile, onInfo }) {
           <Info size={14} />
         </button>
       </div>
-      <strong className="ctx-value">{tile.value}</strong>
+      <strong className={`ctx-value${tile.value.length > 14 ? ' is-long' : ''}`}>{tile.value}</strong>
       <span className="ctx-note">{tile.note}</span>
     </div>
   )

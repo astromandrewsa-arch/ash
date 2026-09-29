@@ -10,6 +10,7 @@ import ViewLegend from './ViewLegend.jsx'
 export default function QuickViews() {
   const { views, toggleView, setView, selection } = useApp()
   const [open, setOpen] = useState(true)
+  const [scrolled, setScrolled] = useState(false)
   const hasFire = selection?.kind === 'fire'
   return (
     <section className="glass panel qv" aria-label="Quick Views">
@@ -19,7 +20,7 @@ export default function QuickViews() {
         <ChevronDown size={16} className={`panel-caret${open ? '' : ' is-collapsed'}`} aria-hidden="true" />
       </button>
       {open && (
-        <div className="panel-body qv-body">
+        <div className={`panel-body qv-body${scrolled ? ' is-scrolled' : ''}`} onScroll={(e) => setScrolled(e.currentTarget.scrollTop > 2)}>
           {QUICK_VIEW_GROUPS.map((g) => (
             <div key={g.id} className={`qv-group${g.needsFire && !hasFire ? ' is-idle' : ''}${g.label ? '' : ' is-plain'}`}>
               {g.label && (

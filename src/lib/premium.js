@@ -46,3 +46,6 @@ export function splitRecommendation(text) {
   const i = text.indexOf(',')
   return i < 0 ? { figure: text, note: null } : { figure: text.slice(0, i), note: text.slice(i + 1).trim() }
 }
+
+/** TIV in billions throughout a column ($5.6B, $0.90B), so the units never mix. */
+export const formatBn = (v) => `$${(v / 1e9).toFixed(v < 1e9 ? 2 : 1)}B`

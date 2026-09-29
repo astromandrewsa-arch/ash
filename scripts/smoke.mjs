@@ -250,6 +250,12 @@ const STEPS = [
       await page.waitForSelector('.sci-panel .sci-sensitivity', { timeout: 3000 })
       await sleep(400)
       await shot(page, 'premium-bundle')
+      // The technical premium and the season block sit below the fold.
+      await page.evaluate(() => document.querySelector('.page-host')?.scrollTo(0, 10000))
+      await sleep(400)
+      await shot(page, 'premium-lower')
+      await page.evaluate(() => document.querySelector('.page-host')?.scrollTo(0, 0))
+      await sleep(200)
       await page.locator('.ctx-info').first().click()
       await page.waitForSelector('#help-sources', { timeout: 3000 })
       await sleep(500)
@@ -267,6 +273,34 @@ const STEPS = [
       await page.keyboard.press('Escape')
       await page.locator('.qv-chip', { hasText: 'Rate gap' }).click()
       await sleep(400)
+    },
+  },
+  {
+    name: 'Historical Accuracy: exhibit, chart, twelve fires, ruled-out calls, before/after',
+    since: 9,
+    run: async (page) => {
+      await railTo(page, 'accuracy')
+      await page.waitForSelector('.exhibit tbody tr', { timeout: 5000 })
+      const count = (sel) => page.locator(sel).count()
+      if ((await count('.exhibit tbody tr')) !== 8) throw new Error('the model exhibit should have eight rows')
+      if ((await count('.hist-table tbody tr')) !== 12) throw new Error('expected twelve historical fires')
+      if ((await count('.ruled tbody tr')) !== 4) throw new Error('expected four ruled-out rows')
+      if (!(await count('.hit .recharts-line'))) throw new Error('the hit-rate chart is missing')
+      const footer = (await page.locator('.acc-footer').innerText()).replace(/[’']/g, "'").trim()
+      if (footer !== "Named models' mechanics and horizons are sourced. Per-fire figures are an illustrative back-test.") throw new Error(`footer differs from §16: "${footer}"`)
+      await page.locator('.hist-table').scrollIntoViewIfNeeded()
+      await sleep(300)
+      await shot(page, 'accuracy-fires')
+      await page.locator('.ba2-frame').scrollIntoViewIfNeeded()
+      await sleep(1200)
+      const box = await page.locator('.ba2-divider').boundingBox()
+      await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2)
+      await page.mouse.down()
+      await page.mouse.move(box.x + box.width / 2 + 140, box.y + box.height / 2, { steps: 8 })
+      await page.mouse.up()
+      await waitForTiles(page, 4000)
+      await sleep(400)
+      await shot(page, 'accuracy-lower')
     },
   },
   {

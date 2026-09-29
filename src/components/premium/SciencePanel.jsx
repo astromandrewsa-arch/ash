@@ -11,14 +11,16 @@ export default function SciencePanel({ bundle: b, onShowOnMap }) {
   return (
     <aside className="sci-panel glass" aria-label={`Science panel: ${b.name}`}>
       <header className="sci-head" key={b.id}>
-        <div className="sci-title">
+        <div className="sci-kicker">
           <span className="label">Science panel</span>
+          <span className={`gap-pill ${tone}`}>
+            {formatPctSigned(b.adequacy)} {b.underPriced ? 'under-priced' : 'over-priced'}
+          </span>
+        </div>
+        <div className="sci-title">
           <h2>{b.name}</h2>
           <p>{b.places.join(' · ')}</p>
         </div>
-        <span className={`gap-pill ${tone}`}>
-          {formatPctSigned(b.adequacy)} {b.underPriced ? 'under-priced' : 'over-priced'}
-        </span>
       </header>
       <div className="sci-body" key={`${b.id}-body`}>
         <RateCompare bundle={b} />

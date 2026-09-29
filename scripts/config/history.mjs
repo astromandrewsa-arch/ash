@@ -6,42 +6,42 @@ const byLead = (vals) => Object.fromEntries(LEADS.map((l, i) => [l, vals[i] ?? n
 
 export const MODELS = [
   {
-    id: 'primer', name: 'PRIMER', vendor: 'Pyrome', version: '2026.3', family: 'primer',
+    id: 'primer', name: 'PRIMER', shortName: 'PRIMER', vendor: 'Pyrome', version: '2026.3', family: 'primer',
     outputs: 'Date, window, probability, spread and intensity per hectare', resolution: '1 ha', horizonDays: 30, horizonText: '30 days, narrowing',
     fuelTreatment: 'Measured live and dead fuel moisture on the ground', hitRateByLead: byLead([0.96, 0.95, 0.94, 0.93, 0.92, 0.9, 0.84, 0.76]), brier: 0.06,
   },
   {
-    id: 'moodys', name: 'Moody’s RMS North America Wildfire HD', vendor: 'Moody’s', version: 'v2.0', family: 'cat',
+    id: 'moodys', name: 'Moody’s RMS North America Wildfire HD', shortName: 'Moody’s', vendor: 'Moody’s', version: 'v2.0', family: 'cat',
     outputs: 'AAL, EP, loss cost', resolution: '30 m LANDFIRE fuels; 100,000-year event set', horizonDays: null, horizonText: 'No date',
     fuelTreatment: 'Fuel moisture from historical weather', hitRateByLead: byLead([]), longRunHitRate: 0.14, brier: null,
   },
   {
-    id: 'verisk', name: 'Verisk US Wildfire and FireLine', vendor: 'Verisk', version: 'v4.0', family: 'cat',
+    id: 'verisk', name: 'Verisk US Wildfire and FireLine', shortName: 'Verisk', vendor: 'Verisk', version: 'v4.0', family: 'cat',
     outputs: 'AAL, EP, smoke, conflagration; FireLine score 0–30', resolution: 'Static fuel map', horizonDays: null, horizonText: 'No date',
     fuelTreatment: 'Static fuel map', hitRateByLead: byLead([]), longRunHitRate: 0.12, brier: null,
   },
   {
-    id: 'kcc', name: 'KCC US Wildfire', vendor: 'Karen Clark & Co.', version: 'v3.0', family: 'cat',
+    id: 'kcc', name: 'KCC US Wildfire', shortName: 'KCC', vendor: 'Karen Clark & Co.', version: 'v3.0', family: 'cat',
     outputs: '850,000 physics-based events; AAL, EP', resolution: 'Event set on VPD climatology', horizonDays: null, horizonText: 'No date',
     fuelTreatment: 'Vapour-pressure-deficit climatology', hitRateByLead: byLead([]), longRunHitRate: 0.13, brier: null,
   },
   {
-    id: 'cotality', name: 'Cotality Wildfire Risk Score and US model', vendor: 'Cotality', version: 'v26', family: 'cat',
+    id: 'cotality', name: 'Cotality Wildfire Risk Score and US model', shortName: 'Cotality', vendor: 'Cotality', version: 'v26', family: 'cat',
     outputs: '5–100 score, conflagration, mitigation; AAL/EP', resolution: 'Parcel score', horizonDays: null, horizonText: 'No date',
     fuelTreatment: 'Static fuels with mitigation adjustments', hitRateByLead: byLead([]), longRunHitRate: 0.16, brier: null,
   },
   {
-    id: 'technosylva', name: 'Technosylva FireSight / FireRisk', vendor: 'Technosylva', version: '2026', family: 'short',
+    id: 'technosylva', name: 'Technosylva FireSight / FireRisk', shortName: 'Technosylva', vendor: 'Technosylva', version: '2026', family: 'short',
     outputs: 'Daily simulations, buildings threatened', resolution: '2 km weather', horizonDays: 3, horizonText: '3 days',
     fuelTreatment: 'Modelled live fuel', hitRateByLead: byLead([0.71, 0.58]), brier: null,
   },
   {
-    id: 'ecmwf', name: 'ECMWF Probability of Fire', vendor: 'ECMWF', version: 'PoF 2025', family: 'short',
+    id: 'ecmwf', name: 'ECMWF Probability of Fire', shortName: 'ECMWF', vendor: 'ECMWF', version: 'PoF 2025', family: 'short',
     outputs: 'Probability of a satellite detection in a 9 km cell', resolution: '9 km', horizonDays: 10, horizonText: '10 days',
     fuelTreatment: 'Modelled fuel; grass R ≈ 0.65', hitRateByLead: byLead([0.62, 0.55, 0.47, 0.39, 0.3]), brier: 0.19,
   },
   {
-    id: 'nfdrs', name: 'NFDRS / Texas A&M ERC', vendor: 'USFS / Texas A&M Forest Service', version: 'NFDRS 2016', family: 'short',
+    id: 'nfdrs', name: 'NFDRS / Texas A&M ERC', shortName: 'NFDRS', vendor: 'USFS / Texas A&M Forest Service', version: 'NFDRS 2016', family: 'short',
     outputs: 'Danger rating per station', resolution: 'Weather station', horizonDays: 7, horizonText: '7 days',
     fuelTreatment: 'Modelled dead fuel moisture', hitRateByLead: byLead([0.34, 0.3, 0.27, 0.24]), brier: null,
   },
@@ -88,15 +88,16 @@ export const SEASON = {
   brierByModel: [
     { model: 'PRIMER', range: '1–5 days', value: 0.05 },
     { model: 'PRIMER', range: '14 days', value: 0.06 },
-    { model: 'ECMWF PoF', range: '1–5 days', value: 0.19 },
+    { model: 'ECMWF', range: '1–5 days', value: 0.19 },
   ],
   la2025: {
     title: 'LA 2025: flash estimates vs the final',
     final: '~$40B',
+    finalValue: 40e9,
     estimates: [
-      { model: 'Moody’s', value: '$20–30B' },
-      { model: 'Verisk', value: '$28–35B' },
-      { model: 'KCC', value: '~$28B' },
+      { model: 'Moody’s', value: '$20–30B', low: 20e9, high: 30e9 },
+      { model: 'Verisk', value: '$28–35B', low: 28e9, high: 35e9 },
+      { model: 'KCC', value: '~$28B', low: 28e9, high: 28e9 },
     ],
     note: 'Cotality found ~75% of Eaton losses sat in "low-to-moderate" risk classes.',
   },

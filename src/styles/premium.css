@@ -2,18 +2,17 @@
 
 /* ---------- Texas context tiles ---------- */
 .ctx-row {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 12px;
   margin-bottom: 16px;
 }
 
-/* Each tile is at least as wide as its figure; labels wrap instead. */
 .ctx-tile {
   display: flex;
-  flex: 1 1 150px;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
   padding: 12px 14px 12px;
 }
 
@@ -60,10 +59,17 @@
   white-space: nowrap;
 }
 
+/* A three-figure value ("21.1% · 18.7% · 4.3%") steps down so every tile keeps one width. */
+.ctx-value.is-long {
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
 .ctx-note {
   color: var(--muted);
   font-size: 12px;
   line-height: 16px;
+  text-wrap: balance;
 }
 
 /* ---------- Layout ---------- */
@@ -103,12 +109,12 @@
   letter-spacing: 0.05em;
   text-align: left;
   text-transform: uppercase;
-  vertical-align: bottom;
+  vertical-align: top;
 }
 
 .bundle-table thead th button {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 3px;
   width: 100%;
   padding: 11px 9px 9px;
@@ -131,8 +137,8 @@
 .th-text small {
   display: block;
   margin-top: 2px;
-  color: var(--faint);
-  font-size: 10px;
+  color: var(--muted);
+  font-size: 10.5px;
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: none;
@@ -140,7 +146,7 @@
 
 .bundle-table thead th button svg {
   flex: none;
-  margin-bottom: 1px;
+  margin-top: 1px;
 }
 
 .bundle-table thead th button:hover,
@@ -151,7 +157,7 @@
 
 .bundle-table td,
 .bundle-table tfoot th {
-  padding: 9px;
+  padding: 7px 9px;
   border-bottom: 1px solid var(--hairline);
   vertical-align: middle;
 }
@@ -174,27 +180,27 @@
 }
 
 .bundle-table tbody tr.is-under td {
-  background: rgba(226, 86, 27, 0.06);
+  background: rgba(226, 86, 27, 0.1);
 }
 
 .bundle-table tbody tr.is-over td {
-  background: rgba(43, 108, 176, 0.14);
+  background: rgba(43, 108, 176, 0.1);
 }
 
 .bundle-table tbody tr.is-under:hover td {
-  background: rgba(226, 86, 27, 0.12);
+  background: rgba(226, 86, 27, 0.15);
 }
 
 .bundle-table tbody tr.is-over:hover td {
-  background: rgba(43, 108, 176, 0.22);
+  background: rgba(43, 108, 176, 0.17);
 }
 
 .bundle-table tbody tr.is-under.is-selected td {
-  background: rgba(226, 86, 27, 0.18);
+  background: rgba(226, 86, 27, 0.2);
 }
 
 .bundle-table tbody tr.is-over.is-selected td {
-  background: rgba(43, 108, 176, 0.3);
+  background: rgba(43, 108, 176, 0.24);
 }
 
 .bundle-table tbody tr.is-selected td:first-child {
@@ -243,11 +249,11 @@
 }
 
 .premium :is(span, strong).is-under {
-  color: var(--orange);
+  color: var(--orange-text);
 }
 
 .premium :is(span, strong).is-over {
-  color: var(--blue-soft);
+  color: var(--blue-text);
 }
 
 .adq-kind {
@@ -302,11 +308,11 @@
 }
 
 .rec-cell .is-up {
-  color: var(--orange);
+  color: var(--orange-text);
 }
 
 .rec-cell .is-down {
-  color: var(--blue-soft);
+  color: var(--blue-text);
 }
 
 .rec-cell span {
@@ -316,13 +322,15 @@
 }
 
 .rec-cell em {
-  max-width: 120px;
+  max-width: 132px;
   margin-left: auto;
+  overflow: hidden;
   color: var(--muted);
   font-size: 11px;
   font-style: normal;
-  line-height: 14px;
-  white-space: normal;
+  line-height: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .bundle-table tfoot th,
@@ -457,17 +465,16 @@
 }
 
 .sci-head {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 16px 18px 14px;
+  padding: 14px 18px 14px;
   border-bottom: 1px solid var(--hairline);
   animation: rise-in var(--t-panel) var(--ease-out);
 }
 
-.sci-title {
-  min-width: 0;
+.sci-kicker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
 .sci-title h2 {
@@ -487,7 +494,6 @@
 
 .gap-pill {
   flex: none;
-  margin-top: 2px;
   padding: 3px 10px;
   border: 1px solid;
   border-radius: var(--radius-pill);
@@ -539,6 +545,14 @@
   font-variant-numeric: tabular-nums;
 }
 
+.rc-rates strong.is-under {
+  color: var(--orange);
+}
+
+.rc-rates strong.is-over {
+  color: var(--blue-soft);
+}
+
 .rc-arrow {
   margin-bottom: 6px;
   color: var(--muted);
@@ -563,11 +577,11 @@
 }
 
 .rc-2027 .is-up {
-  color: var(--orange);
+  color: var(--orange-text);
 }
 
 .rc-2027 .is-down {
-  color: var(--blue-soft);
+  color: var(--blue-text);
 }
 
 .sci-list {

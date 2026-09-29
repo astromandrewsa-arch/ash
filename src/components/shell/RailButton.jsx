@@ -3,10 +3,11 @@ export default function RailButton({ view, active, onSelect }) {
   return (
     <button
       type="button"
-      className={`rail-item${active ? ' is-active' : ''}`}
+      className={`rail-item${active ? ' is-active' : ''}${view.modal ? ' is-modal' : ''}`}
       onClick={onSelect}
       aria-label={view.label}
-      aria-current={active ? 'page' : undefined}
+      aria-current={active && !view.modal ? 'page' : undefined}
+      aria-expanded={view.modal ? active : undefined}
       data-view={view.id}
     >
       <Icon size={20} strokeWidth={1.9} aria-hidden="true" />

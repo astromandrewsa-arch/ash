@@ -17,7 +17,7 @@ import LocationsPage from '../locations/LocationsPage.jsx'
 import SimulationPage from '../simulation/SimulationPage.jsx'
 import PremiumPage from '../premium/PremiumPage.jsx'
 import NegotiationChannelPage from '../pages/NegotiationChannelPage.jsx'
-import AccuracyPage from '../pages/AccuracyPage.jsx'
+import AccuracyPage from '../accuracy/AccuracyPage.jsx'
 import ReportsPage from '../pages/ReportsPage.jsx'
 
 // v1 screens render inside .v1-legacy until their pass replaces them.
@@ -26,7 +26,7 @@ const PAGES = {
   simulation: { Component: SimulationPage },
   premium: { Component: PremiumPage },
   negotiation: { Component: NegotiationChannelPage, legacy: true },
-  accuracy: { Component: AccuracyPage, legacy: true },
+  accuracy: { Component: AccuracyPage },
   reports: { Component: ReportsPage, legacy: true },
 }
 

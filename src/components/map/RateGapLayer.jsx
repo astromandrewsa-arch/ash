@@ -22,7 +22,7 @@ function paint(ctx, view, { groups, max, mode }) {
   for (const { bundle, areas } of groups) {
     const [r, g, b] = rgb(isShort(bundle, mode) ? c.orange : c.blue)
     const k = Math.min(1, Math.abs(gapOf(bundle, mode)) / max)
-    const fill = 0.18 + 0.34 * k
+    const fill = 0.24 + 0.36 * k
     const polys = areas.filter((a) => a.type === 'rangeland' || view.zoom >= MAP.dotsMinZoom)
     const discs = areas
       .filter((a) => a.type !== 'rangeland' && view.zoom < MAP.dotsMinZoom)
@@ -48,7 +48,8 @@ function paint(ctx, view, { groups, max, mode }) {
         ctx.closePath()
       }
       ctx.lineWidth = Math.max(8, 20 - (view.zoom - MAP.dotsMinZoom) * 3)
-      ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${fill})`
+      // The rim is all that shows beside the homes, so it runs stronger than the fill.
+      ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${0.5 + 0.35 * k})`
       ctx.stroke()
       ctx.lineWidth = 1.5
     }

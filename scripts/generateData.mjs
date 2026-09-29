@@ -10,7 +10,8 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { makeRng, SEED } from './lib/rng.mjs'
-import { destination, haversineKm, pointInRing, projector, round, round5, sum } from './lib/geo.mjs'
+import * as turf from '@turf/turf'
+import { blobPolygon, destination, featureAreaHa, haversineKm, pointInRing, polyFeature, projector, round, round5, roundRing, scaleRingToArea, sum } from './lib/geo.mjs'
 import { buildWorld, MARKET_RATE, nameClusters, relocateCluster } from './lib/world.mjs'
 import { buildFire, computeExposure, finishFire, fitClusters, FIRES } from './lib/fires.mjs'
 import { DEDUCTIBLE, LOCATION_LIMIT, homeDamageRatio, outcomes, returnPeriod, lossAt, tvar } from './lib/loss.mjs'
@@ -276,7 +277,7 @@ const bundles = Object.entries(BUNDLES).map(([id, meta]) => {
     kind: id === 'osage-rangeland' ? 'rangeland' : 'homes',
     areaIds: areasIn.map((a) => a.id),
     insuredAreaIds: insured.map((a) => a.id),
-    places: [...new Set(insured.map((a) => a.place))],
+    places: [...new Set([...insured].sort((a, b) => b.tiv - a.tiv).map((a) => a.place))],
     policies,
     tiv,
     premium,
@@ -329,15 +330,41 @@ const historical = {
   }),
   ruledOut: RULED_OUT,
 }
+// Crabapple before/after (§16): an illustrative burn scar the size of the 2025 fire and PRIMER's
+// back-test perimeter, drawn over real imagery at the fire's location.
+function crabappleExhibit(c) {
+  const rng = makeRng('crabapple')
+  const ha = c.acres * 0.404686
+  const scar = scaleRingToArea(blobPolygon(rng, c.center, 3000, { vertices: 72, roughness: 0.16, aspect: 2.1, axisDeg: 40 }), ha)
+  const shifted = projector(c.center).toLatLng([600, -300])
+  const predicted = scaleRingToArea(blobPolygon(rng, shifted, 3000, { vertices: 72, roughness: 0.1, aspect: 2.3, axisDeg: 48 }), ha * 1.05)
+  const inter = turf.intersect(turf.featureCollection([polyFeature(scar), polyFeature(predicted)]))
+  const all = [...scar, ...predicted]
+  const lats = all.map((q) => q[0])
+  const lngs = all.map((q) => q[1])
+  return {
+    ...c,
+    hectares: Math.round(ha),
+    burnScar: roundRing(scar),
+    predicted: roundRing(predicted),
+    overlapPct: Math.round((featureAreaHa(inter) / ha) * 100),
+    bounds: [
+      [Math.min(...lats), Math.min(...lngs)],
+      [Math.max(...lats), Math.max(...lngs)],
+    ],
+  }
+}
+
 const seasonStats = {
   ...SEASON,
+  crabapple: crabappleExhibit(SEASON.crabapple),
   tiles: [
-    { id: 'dated', label: 'Fires dated last season', value: SEASON.datedFires, format: 'number' },
-    { id: 'prevented', label: 'Prevented', value: SEASON.prevented, format: 'number' },
-    { id: 'saved', label: 'Premium saved', value: SEASON.premiumSaved, format: 'money' },
-    { id: 'declined', label: 'Realised loss on declined interventions', value: SEASON.declinedLoss, format: 'money' },
-    { id: 'brier', label: 'Brier score', value: SEASON.brier, format: 'decimal' },
-    { id: 'hit14', label: 'Hit rate at 14 days', value: SEASON.hitRate14, format: 'pct' },
+    { id: 'dated', label: 'Fires dated last season', value: SEASON.datedFires, format: 'number', note: `${SEASON.season} season` },
+    { id: 'prevented', label: 'Prevented', value: SEASON.prevented, format: 'number', note: `of ${SEASON.datedFires} dated`, tone: 'saving' },
+    { id: 'saved', label: 'Premium saved', value: SEASON.premiumSaved, format: 'money', note: 'on the prevented fires', tone: 'saving' },
+    { id: 'declined', label: 'Realised loss on declined interventions', value: SEASON.declinedLoss, format: 'money', note: 'burned on the predicted date', tone: 'loss' },
+    { id: 'brier', label: 'Brier score', value: SEASON.brier, format: 'decimal', note: 'at 14 days; lower is better' },
+    { id: 'hit14', label: 'Hit rate at 14 days', value: SEASON.hitRate14, format: 'pct', note: 'fires inside the called window' },
   ],
 }
 

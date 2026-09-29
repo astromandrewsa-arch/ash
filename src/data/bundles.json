@@ -24,11 +24,11 @@
    "JES-1"
   ],
   "places": [
-   "Steiner Ranch",
-   "Lakeway",
-   "Bee Cave",
    "West Lake Hills",
-   "Jester Estates"
+   "Steiner Ranch",
+   "Jester Estates",
+   "Lakeway",
+   "Bee Cave"
   ],
   "policies": 9800,
   "tiv": 5603799000,
@@ -83,10 +83,10 @@
    "LEA-1"
   ],
   "places": [
-   "Jonestown",
-   "Lago Vista",
    "Cedar Park west edge",
-   "Leander west edge"
+   "Leander west edge",
+   "Lago Vista",
+   "Jonestown"
   ],
   "policies": 12000,
   "tiv": 5936000000,
@@ -159,12 +159,12 @@
    "MBF-2"
   ],
   "places": [
-   "Spicewood",
    "Dripping Springs",
+   "Spicewood",
    "Wimberley",
    "Fredericksburg",
-   "Kerrville",
-   "Marble Falls"
+   "Marble Falls",
+   "Kerrville"
   ],
   "policies": 6200,
   "tiv": 2400502000,
@@ -281,10 +281,10 @@
    "CAR-1"
   ],
   "places": [
-   "Graford / Possum Kingdom",
    "Eastland",
    "Cisco",
-   "Carbon"
+   "Carbon",
+   "Graford / Possum Kingdom"
   ],
   "policies": 2400,
   "tiv": 612508000,
@@ -371,11 +371,11 @@
   "places": [
    "Amarillo south edge",
    "Canyon",
-   "Fritch",
+   "Pampa",
    "Borger",
-   "Stinnett",
+   "Fritch",
    "Canadian",
-   "Pampa"
+   "Stinnett"
   ],
   "policies": 4100,
   "tiv": 1102694000,
@@ -455,10 +455,10 @@
    "MID-4"
   ],
   "places": [
-   "Wichita Falls west edge",
+   "Midland edge",
    "Abilene",
    "Big Spring",
-   "Midland edge"
+   "Wichita Falls west edge"
   ],
   "policies": 5600,
   "tiv": 1513582000,
@@ -526,10 +526,10 @@
    "WDW-1"
   ],
   "places": [
+   "Norman east edge",
    "Stillwater SW",
    "Guthrie / Logan County",
    "Mannford",
-   "Norman east edge",
    "Woodward"
   ],
   "policies": 6500,

@@ -20,6 +20,7 @@ import './styles/pages.css'
 import './styles/simulation.css'
 import './styles/premium.css'
 import './styles/help.css'
+import './styles/accuracy.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(

@@ -18,8 +18,7 @@ body {
   font-family: var(--font-sans);
   font-size: var(--fs-body);
   line-height: var(--lh-body);
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: 'tnum' 1, 'cv11' 1, 'ss01' 1;
+  font-feature-settings: 'cv11' 1, 'ss01' 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
@@ -31,7 +30,38 @@ select,
 textarea {
   font: inherit;
   color: inherit;
+}
+
+/* Figures are tabular (§3) so columns align and counters do not jitter. Running text stays
+   proportional: Inter's tabular set also widens the hyphen, which spread IDs like "AU-02". */
+.num,
+.figure,
+.animated-value,
+.alert30-band,
+.alert30-count,
+.alert30-rows,
+.book-grid,
+.book-hero,
+.quality-value,
+.dslider-count,
+.dslider-value,
+.dslider-ticks,
+.chart-tip,
+.recharts-text {
   font-variant-numeric: tabular-nums;
+}
+
+/* Text cells inside tabular tables keep proportional hyphens. */
+.elt-id,
+.elt-place,
+.elt-type,
+.sev-text,
+.stage-pill,
+.sim-fire,
+.sched-fire,
+.sched-cp,
+.sched-stage {
+  font-variant-numeric: normal;
 }
 
 button {

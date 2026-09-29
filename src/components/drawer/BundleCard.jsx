@@ -28,7 +28,7 @@ export default function BundleCard({ bundleId }) {
         />
       </section>
       <section className="card-section">
-        <h3 className="label">Why the rate moves</h3>
+        <h3 className="label">Sensitivity</h3>
         <p className="card-text">{b.science.sensitivityLine}</p>
       </section>
       <section className="card-section">

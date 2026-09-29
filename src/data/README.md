@@ -47,12 +47,12 @@ What PRIMER said, what each named model said before the fire (or "no date"), cos
 An outcome sentence by type: prevented, declined-then-burned, or back-test.
 
 **models.json** — PRIMER and the seven named models (§16).
-Version, outputs, resolution, forecast horizon, fuel treatment.
+Name, short name, version, outputs, resolution, forecast horizon, fuel treatment.
 Hit rate by lead time (null outside the horizon), long-run hit rate for the cat models, Brier score where one exists.
 
 **seasonStats.json** — headline tiles for Historical Accuracy.
-Reliability bins, Brier by model and range, and the LA 2025 flash-estimate tile.
-The page footer text.
+Reliability bins, Brier by model and range, and the LA 2025 flash-estimate tile (with numeric ranges).
+The Crabapple before/after exhibit (illustrative scar, PRIMER's back-test perimeter, overlap) and the page footer text.
 
 **portfolio.json** — the two books (Texas HO; Texas + Oklahoma) and the map's opening view.
 Totals, AAL, OEP 1-in-100 and 1-in-250, TVaR, EP curve points, top-10 concentrations, data-quality strip.

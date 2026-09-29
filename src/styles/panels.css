@@ -16,10 +16,16 @@
   gap: 10px;
   min-height: 0;
   overflow-y: auto;
-  padding-bottom: 16px;
+  padding-bottom: 24px;
   scrollbar-width: thin;
   -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 18px), transparent);
   mask-image: linear-gradient(180deg, #000 calc(100% - 18px), transparent);
+}
+
+/* Once scrolled, the top edge fades too, so chips never look sliced under the header. */
+.qv-body.is-scrolled {
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 14px, #000 calc(100% - 18px), transparent);
+  mask-image: linear-gradient(180deg, transparent 0, #000 14px, #000 calc(100% - 18px), transparent);
 }
 
 .qv-group-head {
@@ -152,6 +158,7 @@
   flex-direction: column;
   gap: 6px;
   margin-top: 10px;
+  scroll-margin-bottom: 22px;
   padding: 9px 10px;
   border-radius: var(--radius-tile);
   background: rgba(0, 0, 0, 0.22);

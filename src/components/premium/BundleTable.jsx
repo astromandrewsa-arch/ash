@@ -1,6 +1,6 @@
 import { ArrowDown, ArrowUp } from 'lucide-react'
 import { formatNumber, formatPctSigned, formatUSDCompact } from '../../lib/format.js'
-import { splitRecommendation } from '../../lib/premium.js'
+import { formatBn, splitRecommendation } from '../../lib/premium.js'
 import AdequacyBar from './AdequacyBar.jsx'
 
 // §15 bundle table: under-priced rows tinted orange, over-priced rows blue.
@@ -11,18 +11,27 @@ const COLS = [
   { key: 'premium', label: 'Premium', num: true },
   { key: 'marketRatePer1000', label: 'Market rate', unit: 'per $1,000', num: true },
   { key: 'primerRatePer1000', label: 'PRIMER rate', unit: 'technical', num: true },
-  { key: 'adequacy', label: 'Adequacy', unit: 'market ÷ PRIMER', num: true },
+  { key: 'adequacy', label: 'Adequacy', unit: 'market vs PRIMER', num: true },
   { key: 'recommendation2027', label: '2027', unit: 'PRIMER · filed', num: true },
 ]
 
 const rate = (v) => `$${v.toFixed(1)}`
 
-function RecCell({ rec, filed, note }) {
+// Places as "A · B +3" so a long list never breaks mid-word in the column.
+const PLACE_CHARS = 26
+function placeList(places) {
+  let n = 1
+  while (n < places.length && places.slice(0, n + 1).join(' · ').length <= PLACE_CHARS) n++
+  const shown = places.slice(0, n).join(' · ')
+  return n < places.length ? `${shown} +${places.length - n}` : shown
+}
+
+function RecCell({ value, label, filed, note }) {
   return (
     <td className="num rec-cell">
-      <strong className={rec < 0 ? 'is-down' : 'is-up'}>{typeof rec === 'number' ? formatPctSigned(rec) : rec}</strong>
+      <strong className={value < 0 ? 'is-down' : 'is-up'}>{label ?? formatPctSigned(value)}</strong>
       <span>filed {formatPctSigned(filed)}</span>
-      {note && <em>{note}</em>}
+      {note && <em title={note}>{note}</em>}
     </td>
   )
 }
@@ -70,10 +79,10 @@ export default function BundleTable({ rows, totals, sort, onSort, selectedId, on
               >
                 <td className="bundle-name">
                   <strong>{b.name}</strong>
-                  <span>{b.places.join(' · ')}</span>
+                  <span title={b.places.join(' · ')}>{placeList(b.places)}</span>
                 </td>
                 <td className="num">{formatNumber(b.policies)}</td>
-                <td className="num">{formatUSDCompact(b.tiv)}</td>
+                <td className="num">{formatBn(b.tiv)}</td>
                 <td className="num">{formatUSDCompact(b.premium)}</td>
                 <td className="num">{rate(b.marketRatePer1000)}</td>
                 <td className="num strong">{rate(b.primerRatePer1000)}</td>
@@ -81,7 +90,7 @@ export default function BundleTable({ rows, totals, sort, onSort, selectedId, on
                   <span className={`adq-value ${b.underPriced ? 'is-under' : 'is-over'}`}>{formatPctSigned(b.adequacy)}</span>
                   <AdequacyBar value={b.adequacy} max={max} />
                 </td>
-                <RecCell rec={rec.figure} filed={b.filed2027} note={rec.note} />
+                <RecCell value={b.recommendation2027} label={rec.figure} filed={b.filed2027} note={rec.note} />
               </tr>
             )
           })}
@@ -93,7 +102,7 @@ export default function BundleTable({ rows, totals, sort, onSort, selectedId, on
               <span>rates weighted by TIV</span>
             </th>
             <td className="num">{formatNumber(totals.policies)}</td>
-            <td className="num">{formatUSDCompact(totals.tiv)}</td>
+            <td className="num">{formatBn(totals.tiv)}</td>
             <td className="num">{formatUSDCompact(totals.premium)}</td>
             <td className="num">{rate(totals.marketRatePer1000)}</td>
             <td className="num strong">{rate(totals.primerRatePer1000)}</td>
@@ -103,7 +112,7 @@ export default function BundleTable({ rows, totals, sort, onSort, selectedId, on
                 {formatUSDCompact(Math.abs(totals.premiumGap))} {totals.premiumGap > 0 ? 'short' : 'over'}
               </span>
             </td>
-            <RecCell rec={totals.recommendation2027} filed={totals.filed2027} />
+            <RecCell value={totals.recommendation2027} filed={totals.filed2027} />
           </tr>
         </tfoot>
       </table>
