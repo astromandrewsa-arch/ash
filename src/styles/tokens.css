@@ -1,45 +1,70 @@
-/* Pyrome design tokens (CLAUDE.md §2). Change colours here, never in components. */
+/* Pyrome v2 design tokens: dark cartographic theme (CLAUDE.md §3).
+   Change colours here, never in components. Leaflet and recharts read them via src/lib/palette.js. */
 :root {
-  /* Brand */
-  --pyrome-orange: #E2561B;
+  /* Surfaces */
   --charcoal: #1C1C1C;
+  --ink: #0F0F10;
+  --glass: rgba(28, 28, 28, 0.72);
+  --glass-strong: rgba(22, 22, 23, 0.9);
+  --glass-blur: blur(14px);
+  --hairline: rgba(243, 241, 236, 0.14);
+  --hairline-strong: rgba(243, 241, 236, 0.24);
+  --tint: rgba(243, 241, 236, 0.05);
+  --tint-strong: rgba(243, 241, 236, 0.09);
+
+  /* Text */
   --warm-grey: #F3F1EC;
-  --pale-ember: #FBEFE8;
+  --muted: rgba(243, 241, 236, 0.62);
+  --faint: rgba(243, 241, 236, 0.42);
+  --pale-ember: #FBEFE8; /* light surfaces only */
 
   /* Data colours */
-  --comparison-blue: #2B6CB0; /* other models in charts */
-  --homes-yellow: #F5C518;    /* coverage areas and homes */
-  --fire-red: #D7263D;        /* predicted fire and engulfed homes */
-  --savings-green: #1E9E5A;   /* net savings */
-  --comparison-blue-2: #5B8FD0;
-  --comparison-blue-3: #9DBDE6;
-  --rag-amber: #E8A317;
-  --road-grey: #B8BCC2;
-  --river-blue: #3BA3E0;
-  --sensor-grey: #8A8F96;
+  --orange: #E2561B;   /* active state, fire markers, net-saving line, primary button */
+  --orange-hover: #EE6A2F;
+  --yellow: #F5C518;   /* covered homes and assets */
+  --red: #D7263D;      /* fire path, engulfed homes */
+  --amber: #F2A33A;    /* watchlist, warned homes */
+  --green: #1E9E5A;    /* protected homes, net saving, prevented */
+  --blue: #2B6CB0;     /* other models in charts, over-priced bundles */
+  --blue-soft: #5B8DD6;
+  --grey-sensor: #9A9CA0;
+  --water: #3B8FD6;
+  --road: #B9BCC2;
 
-  /* Supporting neutrals */
-  --white: #FFFFFF;
-  --text-muted: #6B6760;
-  --text-subtle: #8F8A80;
-  --border: #E4E0D8;
-  --rail-text: rgba(255, 255, 255, 0.62);
-  --rail-hover: rgba(255, 255, 255, 0.08);
+  /* Severity ramp for isochrones (1 h → 48 h) */
+  --sev-1: #FFE8B0;
+  --sev-2: #F5A623;
+  --sev-3: #E2561B;
+  --sev-4: #B3121F;
+
+  /* Shape */
+  --radius-panel: 12px;
+  --radius-tile: 8px;
+  --radius-pill: 999px;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-panel: 180ms;
+  --t-perimeter: 600ms;
+  --t-number: 500ms;
 
   /* Type */
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --fs-figure: 28px;
+  --lh-figure: 32px;
+  --fs-body: 13px;
+  --lh-body: 18px;
+  --fs-label: 11px;
+  --lh-label: 14px;
+  --tracking-label: 0.06em;
 
   /* Layout */
   --rail-width: 64px;
   --topbar-height: 56px;
-  --drawer-width: 420px;
-  --left-panel-width: 340px;
-  --alert-card-width: 280px;
-  --slider-clearance: 190px;
-  --slider-clearance-open: 270px;
-  --alert-compact-clearance: 128px;
+  --drawer-width: 460px;
+  --left-panel-width: 300px;
+  --alert-card-width: 292px;
   --overlay-gap: 16px;
-  --radius: 8px;
-  --shadow-panel: 0 4px 18px rgba(28, 28, 28, 0.22);
-  --ease: 300ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  --slider-height: 88px;
 }

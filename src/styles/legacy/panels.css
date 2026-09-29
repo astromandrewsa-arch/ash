@@ -1,3 +1,7 @@
+/* v1 styles, scoped under .v1-legacy until each screen is rebuilt (deleted in pass 12). */
+
+
+.v1-legacy {
 /* ---------- Left panel additions ---------- */
 .panel-footnote {
   margin: 10px 0 0;
@@ -188,4 +192,6 @@
 
 .alert-card.is-compact .alert-card-head {
   padding: 7px 14px;
+}
+
 }

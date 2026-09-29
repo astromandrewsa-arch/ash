@@ -1,3 +1,38 @@
+/* v1 styles, scoped under .v1-legacy until each screen is rebuilt (deleted in pass 12). */
+@keyframes live-pulse {
+  from {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.v1-legacy {
 /* ---------- Pages (shared) ---------- */
 .page {
   display: flex;
@@ -217,16 +252,7 @@
   animation: live-pulse 1.6s ease-out infinite;
 }
 
-@keyframes live-pulse {
-  from {
-    transform: scale(1);
-    opacity: 0.7;
-  }
-  to {
-    transform: scale(2.8);
-    opacity: 0;
-  }
-}
+
 
 .chips {
   display: flex;
@@ -990,18 +1016,9 @@
   line-height: 1.55;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-}
 
-@keyframes modal-in {
-  from {
-    opacity: 0;
-    transform: translateY(10px) scale(0.98);
-  }
-}
+
+
 
 /* ---------- Loading skeleton ---------- */
 .sk {
@@ -1047,14 +1064,7 @@
   height: 380px;
 }
 
-@keyframes shimmer {
-  from {
-    background-position: 200% 0;
-  }
-  to {
-    background-position: -200% 0;
-  }
-}
+
 
 /* ---------- Search feedback ---------- */
 .search {
@@ -1091,4 +1101,6 @@
 
 .avatar:hover {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--pyrome-orange) 35%, transparent);
+}
+
 }

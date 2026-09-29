@@ -9,7 +9,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
-const DATA_DIR = join(ROOT, 'src', 'data')
+const DATA_DIR = join(ROOT, 'src', 'data', 'v1')
 
 const SEED = 20260928
 const ISSUE_DATE = '2026-09-28'

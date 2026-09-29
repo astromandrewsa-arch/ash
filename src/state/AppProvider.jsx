@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AppContext } from './AppContext.js'
-import quickViews from '../data/quickViews.json'
-import timeline from '../data/timeline.json'
+import quickViews from '../data/v1/quickViews.json'
+import timeline from '../data/v1/timeline.json'
 import { areaById, areasBounds, fireById, forecast, homeById, mapConfig, processByFireId } from '../lib/data.js'
 import { mapPadding as padding } from '../lib/mapPadding.js'
 import { UI } from '../config/ui.js'
+import { defaultPortfolioId, portfolioById } from '../lib/shellData.js'
 
 const initialLayers = Object.fromEntries(quickViews.layers.map((layer) => [layer.id, layer.defaultOn]))
 
@@ -17,6 +18,7 @@ export default function AppProvider({ children }) {
   const [handedOff, setHandedOff] = useState(() => new Set())
   const [helpOpen, setHelpOpen] = useState(false)
   const [highlightHomeId, setHighlightHomeId] = useState(null)
+  const [portfolioId, setPortfolioId] = useState(defaultPortfolioId)
   const mapRef = useRef(null)
 
   const registerMap = useCallback((map) => {
@@ -25,6 +27,13 @@ export default function AppProvider({ children }) {
 
   const toggleLayer = useCallback((id) => {
     setLayers((prev) => ({ ...prev, [id]: !prev[id] }))
+  }, [])
+
+  /** Switch the book shown and fly to its view. */
+  const setPortfolio = useCallback((id) => {
+    setPortfolioId(id)
+    const view = portfolioById[id]?.view
+    if (view) mapRef.current?.flyTo(view.center, view.zoom, { duration: UI.flyDurationS })
   }, [])
 
   const flyHome = useCallback(() => {
@@ -120,8 +129,11 @@ export default function AppProvider({ children }) {
       highlightHomeId,
       flyToHome,
       registerMap,
+      portfolioId,
+      setPortfolio,
     }),
     [
+      portfolioId, setPortfolio,
       activeView, daysUntilFire, layers, toggleLayer, preset, selection, openFire, setDrawerMode, closeDrawer,
       handedOff, passToAgent, helpOpen, highlightHomeId, flyToHome, registerMap,
     ],

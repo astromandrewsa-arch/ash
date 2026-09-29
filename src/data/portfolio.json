@@ -1,9 +1,37 @@
 {
-  "_note": "Totals written by scripts/generateData.mjs from coverageAreas.json and homes.json.",
-  "options": [{ "id": "demo-tx-ho", "label": "Portfolio: Demo Carrier — Texas HO book" }],
-  "tiv": 326366000,
-  "homesCovered": 601,
-  "hectaresUnderForecast": 68270,
-  "annualPremium": 2021082,
-  "baselineAal": 1469000
+  "_note": "Pass 1 stub: the two portfolios and their map views. Pass 2 regenerates this file with totals, AAL, OEP, TVaR and the EP curve.",
+  "defaultId": "txok",
+  "initialView": {
+    "center": [
+      31.3,
+      -99.5
+    ],
+    "zoom": 6
+  },
+  "portfolios": [
+    {
+      "id": "tx",
+      "name": "Demo Carrier — Texas HO book",
+      "short": "Texas HO book",
+      "view": {
+        "center": [
+          31.3,
+          -99.5
+        ],
+        "zoom": 6
+      }
+    },
+    {
+      "id": "txok",
+      "name": "Demo Carrier — Texas + Oklahoma",
+      "short": "Texas + Oklahoma",
+      "view": {
+        "center": [
+          33.5,
+          -98.8
+        ],
+        "zoom": 6
+      }
+    }
+  ]
 }

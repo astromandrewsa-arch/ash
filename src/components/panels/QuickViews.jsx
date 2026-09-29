@@ -1,5 +1,5 @@
 import { Layers } from 'lucide-react'
-import quickViews from '../../data/quickViews.json'
+import quickViews from '../../data/v1/quickViews.json'
 import useApp from '../../state/useApp.js'
 import CollapsibleCard from '../common/CollapsibleCard.jsx'
 import Toggle from '../common/Toggle.jsx'

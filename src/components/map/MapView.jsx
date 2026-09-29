@@ -1,8 +1,9 @@
 import { AttributionControl, MapContainer, Pane, TileLayer, ZoomControl } from 'react-leaflet'
-import { areasBounds, mapConfig } from '../../lib/data.js'
-import { mapPadding } from '../../lib/mapPadding.js'
+import { mapConfig } from '../../lib/data.js'
+import { initialView } from '../../lib/shellData.js'
 import useApp from '../../state/useApp.js'
 import MapBridge from './MapBridge.jsx'
+import LabelsOverlay from './LabelsOverlay.jsx'
 import FuelGridLayer from './FuelGridLayer.jsx'
 import CoverageLayer from './CoverageLayer.jsx'
 import AreaLabels from './AreaLabels.jsx'
@@ -19,8 +20,9 @@ export default function MapView() {
     <div className="map-view">
       <MapContainer
         className="map-canvas"
-        bounds={areasBounds}
-        boundsOptions={mapPadding(false)}
+        center={initialView.center}
+        zoom={initialView.zoom}
+        preferCanvas
         minZoom={mapConfig.minZoom}
         maxZoom={mapConfig.maxZoom}
         zoomControl={false}
@@ -31,8 +33,10 @@ export default function MapView() {
           attribution={mapConfig.tiles.attribution}
           maxNativeZoom={mapConfig.tiles.maxNativeZoom}
           maxZoom={mapConfig.maxZoom}
+          className="imagery-tiles"
         />
-        <ZoomControl position="bottomright" />
+        <LabelsOverlay />
+        <ZoomControl position="bottomleft" />
         <AttributionControl position="bottomleft" prefix={false} />
         <MapBridge />
 

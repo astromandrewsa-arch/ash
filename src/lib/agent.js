@@ -1,6 +1,6 @@
 import { issueDate, stages } from './data.js'
 import { daysBetween } from './dates.js'
-import user from '../data/user.json'
+import user from '../data/v1/user.json'
 
 const ORDER = stages.map((s) => s.id)
 const AGREED = new Set(['agreed', 'complete', 'prevented'])

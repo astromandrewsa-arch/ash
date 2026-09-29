@@ -1,3 +1,7 @@
+/* v1 styles, scoped under .v1-legacy until each screen is rebuilt (deleted in pass 12). */
+
+
+.v1-legacy {
 /* ---------- Base ---------- */
 *,
 *::before,
@@ -5,21 +9,9 @@
   box-sizing: border-box;
 }
 
-html,
-body,
-#root {
-  height: 100%;
-  margin: 0;
-}
 
-body {
-  font-family: var(--font-sans);
-  font-size: 14px;
-  line-height: 1.4;
-  color: var(--charcoal);
-  background: var(--warm-grey);
-  -webkit-font-smoothing: antialiased;
-}
+
+
 
 button,
 input,
@@ -788,4 +780,6 @@ button {
 
 .page-placeholder li + li {
   margin-top: 4px;
+}
+
 }

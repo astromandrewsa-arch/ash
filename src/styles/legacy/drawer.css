@@ -1,3 +1,12 @@
+/* v1 styles, scoped under .v1-legacy until each screen is rebuilt (deleted in pass 12). */
+@keyframes entry-in {
+  from {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+}
+
+.v1-legacy {
 /* ---------- Drawer ---------- */
 .drawer {
   overflow: hidden;
@@ -939,12 +948,7 @@
   animation-delay: calc(var(--i) * 45ms);
 }
 
-@keyframes entry-in {
-  from {
-    opacity: 0;
-    transform: translateX(-6px);
-  }
-}
+
 
 .timeline-dot {
   position: absolute;
@@ -1115,4 +1119,6 @@
 
 .documents-size {
   color: var(--text-subtle);
+}
+
 }
