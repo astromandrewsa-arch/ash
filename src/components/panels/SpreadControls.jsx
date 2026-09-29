@@ -1,53 +1,49 @@
-import { Pause, Play, RotateCcw, SkipForward, Wind } from 'lucide-react'
+import { Pause, Play, RotateCcw, StepForward } from 'lucide-react'
 import useSpread from '../../state/useSpread.js'
-import { dayMonth } from '../../lib/dates.js'
 import { formatHa } from '../../lib/format.js'
 
-/** Play / pause / step / reset for the selected fire's spread, with the step timeline. */
+/** With many steps, label only the hour steps, every other day and the last day. */
+function showTick(n, i, s) {
+  if (n <= 11) return true
+  if (i === n - 1) return true
+  if (s.hour <= 48) return s.hour === 1 || s.hour === 12 || s.hour === 24 || s.hour === 48
+  return Math.round(s.hour / 24) % 2 === 1 && i < n - 2
+}
+
+/** Play, pause, step and reset the selected fire's spread (§10). */
 export default function SpreadControls() {
-  const { fire, step, playing, lastStep, play, pause, stepForward, reset } = useSpread()
+  const { fire, step, stepInfo, playing, lastStep, play, pause, stepForward, reset, setStep } = useSpread()
   if (!fire) return null
-
-  const current = step >= 0 ? fire.spread.steps[step] : null
-  const reached = fire.homesInPath.filter((h) => h.step <= step).length
-  const { windKmH, windFrom } = fire.intensity
-
   return (
-    <div className="card spread-controls" aria-label="Spread animation">
-      <div className="spread-controls-row">
-        <div className="spread-buttons">
-          <button type="button" className="spread-btn is-primary" onClick={play} disabled={playing} aria-label="Play">
-            <Play size={15} />
+    <div className="glass spread-bar" aria-label={`${fire.id} spread`}>
+      <div className="spread-buttons">
+        {playing ? (
+          <button type="button" className="icon-btn spread-main" onClick={pause} aria-label="Pause spread" title="Pause">
+            <Pause size={16} />
           </button>
-          <button type="button" className="spread-btn" onClick={pause} disabled={!playing} aria-label="Pause">
-            <Pause size={15} />
+        ) : (
+          <button type="button" className="icon-btn spread-main" onClick={play} aria-label="Play spread" title="Play">
+            <Play size={16} />
           </button>
-          <button type="button" className="spread-btn" onClick={stepForward} disabled={step >= lastStep} aria-label="Step">
-            <SkipForward size={15} />
-          </button>
-          <button type="button" className="spread-btn" onClick={reset} disabled={step < 0} aria-label="Reset">
-            <RotateCcw size={15} />
-          </button>
-        </div>
-        <div className="spread-status">
-          <span className="spread-wind">
-            <Wind size={14} aria-hidden="true" /> Under forecast wind {windKmH} km/h {windFrom}
-          </span>
-          <span className="spread-now">
-            {current
-              ? `${current.label} · ${dayMonth(current.date)} · ${formatHa(current.hectares)} · ${reached} of ${fire.homesInPath.length} homes reached`
-              : `Ignition in block ${fire.block.id} · press play`}
-          </span>
-        </div>
+        )}
+        <button type="button" className="icon-btn" onClick={stepForward} disabled={step >= lastStep} aria-label="Step spread" title="Step">
+          <StepForward size={16} />
+        </button>
+        <button type="button" className="icon-btn" onClick={reset} disabled={step < 0} aria-label="Reset spread" title="Reset">
+          <RotateCcw size={15} />
+        </button>
       </div>
-      <ol className="spread-steps" aria-hidden="true">
-        {fire.spread.steps.map((s) => (
-          <li key={s.index} className={s.index <= step ? (s.index === step ? 'is-current' : 'is-done') : ''}>
-            {s.label}
-          </li>
+      <div className="spread-now">
+        <span className="spread-step">{stepInfo ? stepInfo.label : 'Ignition'}</span>
+        <span className="spread-ha">{stepInfo ? `${formatHa(stepInfo.ha.p50)} in P50` : `${fire.ignitionZone.class} · ${formatHa(fire.ignitionZone.hectares)}`}</span>
+      </div>
+      <div className="spread-ticks" role="group" aria-label="Spread steps">
+        {fire.steps.map((s, i) => (
+          <button key={s.hour} type="button" className={`spread-tick${i <= step ? ' is-done' : ''}${i === step ? ' is-current' : ''}`} onClick={() => setStep(i)} aria-label={s.label} title={s.label}>
+            <span>{showTick(fire.steps.length, i, s) ? s.label.replace(' h', 'h').replace('Day ', 'D') : '\u00a0'}</span>
+          </button>
         ))}
-      </ol>
+      </div>
     </div>
   )
 }
-

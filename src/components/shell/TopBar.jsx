@@ -1,8 +1,10 @@
 import { Compass } from 'lucide-react'
-import { meta } from '../../lib/shellData.js'
+import { store } from '../../lib/store.js'
 import ForecastStamp from './ForecastStamp.jsx'
 import PortfolioSwitch from './PortfolioSwitch.jsx'
 import SearchBox from './SearchBox.jsx'
+
+const { meta } = store
 
 export default function TopBar() {
   return (

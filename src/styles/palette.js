@@ -1,4 +1,4 @@
-// Leaflet paths and recharts need real colour values, so read them from the CSS tokens once.
+// Leaflet canvases and recharts need real colour values, so read them from the CSS tokens once.
 let cache = null
 
 export function palette() {
@@ -6,20 +6,27 @@ export function palette() {
   const style = getComputedStyle(document.documentElement)
   const v = (name) => style.getPropertyValue(name).trim()
   const values = {
-    orange: v('--pyrome-orange'),
+    orange: v('--orange'),
+    yellow: v('--yellow'),
+    red: v('--red'),
+    amber: v('--amber'),
+    green: v('--green'),
+    blue: v('--blue'),
+    blueSoft: v('--blue-soft'),
     charcoal: v('--charcoal'),
-    yellow: v('--homes-yellow'),
-    red: v('--fire-red'),
-    green: v('--savings-green'),
-    amber: v('--rag-amber'),
-    blue: v('--comparison-blue'),
-    blue2: v('--comparison-blue-2'),
-    blue3: v('--comparison-blue-3'),
-    road: v('--road-grey'),
-    river: v('--river-blue'),
-    sensor: v('--sensor-grey'),
-    muted: v('--text-muted'),
-    border: v('--border'),
+    ink: v('--ink'),
+    warmGrey: v('--warm-grey'),
+    muted: v('--muted'),
+    hairline: v('--hairline'),
+    sensor: v('--grey-sensor'),
+    water: v('--water'),
+    road: v('--road'),
+    sev: [v('--sev-1'), v('--sev-2'), v('--sev-3'), v('--sev-4')],
+    // v1 names still read by the legacy screens until their passes replace them.
+    blue2: v('--blue-soft'),
+    blue3: '#9DBDE6',
+    river: v('--water'),
+    border: v('--hairline'),
   }
   if (values.orange) cache = values
   return values
@@ -31,9 +38,15 @@ export function cssPx(name) {
 }
 
 // "#abc" or "#aabbcc" → [r, g, b]. Minified CSS may shorten a token to three digits.
-function rgb(hex) {
+export function rgb(hex) {
   const h = hex.length === 4 ? `#${hex[1]}${hex[1]}${hex[2]}${hex[2]}${hex[3]}${hex[3]}` : hex
   return [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16))
+}
+
+/** "#E2561B", 0.4 → "rgba(226, 86, 27, 0.4)" */
+export function alpha(hex, a) {
+  const [r, g, b] = rgb(hex)
+  return `rgba(${r}, ${g}, ${b}, ${a})`
 }
 
 /** Linear blend of two hex colours. */

@@ -11,6 +11,9 @@ import './styles/legacy/pages.css'
 import './styles/base.css'
 import './styles/shell.css'
 import './styles/map.css'
+import './styles/layers.css'
+import './styles/panels.css'
+import './styles/drawer.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(

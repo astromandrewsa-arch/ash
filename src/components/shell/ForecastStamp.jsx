@@ -1,4 +1,6 @@
-import { meta } from '../../lib/shellData.js'
+import { store } from '../../lib/store.js'
+
+const { meta } = store
 
 /** "PRIMER forecast · issued 29 Sep 2026 06:00 CT" with a live dot. */
 export default function ForecastStamp() {

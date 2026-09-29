@@ -1,12 +1,15 @@
 import { useMemo } from 'react'
 import useApp from '../../state/useApp.js'
-import { isVisibleAt, sliderFires } from '../../lib/shellData.js'
+import { sliderBands } from '../../lib/selectors.js'
 import { formatDayOffset } from '../../lib/format.js'
 
 const MIN = -30
 const MAX = 0
 const TICKS = [-30, -25, -20, -15, -10, -5, 0]
 const LANE_PX = 7
+
+/** A fire dated N days out appears when the slider reaches −N and stays. */
+const isVisibleAt = (startDay, slider) => slider >= -startDay
 
 const pct = (value) => ((Math.max(MIN, Math.min(MAX, value)) - MIN) / (MAX - MIN)) * 100
 
@@ -23,7 +26,8 @@ function laneOf(bands) {
 
 /** "Days until fire" from −30 to 0; each fire's burn window is a tick band in its severity colour. */
 export default function TimeSlider({ children }) {
-  const { daysUntilFire, setDaysUntilFire } = useApp()
+  const { daysUntilFire, setDaysUntilFire, portfolioId } = useApp()
+  const sliderFires = useMemo(() => sliderBands(portfolioId), [portfolioId])
 
   const bands = useMemo(
     () =>
@@ -32,7 +36,7 @@ export default function TimeSlider({ children }) {
           .map((f) => ({ ...f, from: Math.max(MIN, -f.endDay), to: -f.startDay }))
           .sort((a, b) => a.from - b.from || a.to - b.to),
       ),
-    [],
+    [sliderFires],
   )
   const lanes = Math.max(1, ...bands.map((b) => b.lane + 1))
   const shown = sliderFires.filter((f) => isVisibleAt(f.startDay, daysUntilFire)).length

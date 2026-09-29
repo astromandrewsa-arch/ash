@@ -10,9 +10,7 @@ import BookPanel from '../panels/BookPanel.jsx'
 import AlertCard from '../panels/AlertCard.jsx'
 import TimeSlider from '../panels/TimeSlider.jsx'
 import SpreadControls from '../panels/SpreadControls.jsx'
-import FuelLegend from '../panels/FuelLegend.jsx'
-import DrawerShell from '../drawer/DrawerShell.jsx'
-import DetailDrawer from '../drawer/DetailDrawer.jsx'
+import Drawer from '../drawer/Drawer.jsx'
 import PageSkeleton from '../pages/PageSkeleton.jsx'
 import LocationsAtRiskPage from '../pages/LocationsAtRiskPage.jsx'
 import SimulationPage from '../pages/SimulationPage.jsx'
@@ -32,7 +30,7 @@ const PAGES = {
 }
 
 export default function Shell() {
-  const { activeView, drawerOpen, layers, selection } = useApp()
+  const { activeView, drawerOpen } = useApp()
   const onMap = activeView === 'map'
   const page = PAGES[activeView]
 
@@ -55,37 +53,22 @@ export default function Shell() {
       <div className={`app-main${onMap && drawerOpen ? ' drawer-open' : ''}`}>
         <main className="stage">
           {/* The map stays mounted behind every view so its position survives navigation. */}
-          <div className="map-host v1-legacy">
+          <div className="map-host">
             <MapView />
           </div>
           {onMap && (
             <>
               <div className="overlay-left">
                 <BookPanel />
-                <div className="v1-legacy">
-                  <QuickViews />
-                </div>
+                <QuickViews />
               </div>
               <AlertCard hidden={drawerOpen} />
               <TimeSlider>
-                {selection && (
-                  <div className="v1-legacy">
-                    <SpreadControls />
-                  </div>
-                )}
+                <SpreadControls />
               </TimeSlider>
-              {layers.fuelGrid && (
-                <div className="v1-legacy">
-                  <FuelLegend />
-                </div>
-              )}
             </>
           )}
-          <DrawerShell open={onMap && drawerOpen} label="Fire detail">
-            <div className="v1-legacy">
-              <DetailDrawer />
-            </div>
-          </DrawerShell>
+          <Drawer />
           {page && (
             <div className="page-host">
               {loading ? (

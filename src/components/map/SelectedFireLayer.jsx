@@ -1,70 +1,47 @@
-import { useMemo } from 'react'
-import L from 'leaflet'
-import { CircleMarker, Marker, Polygon, Polyline, Tooltip } from 'react-leaflet'
+import { Fragment } from 'react'
+import { CircleMarker, Polygon } from 'react-leaflet'
+import useApp from '../../state/useApp.js'
 import useSpread from '../../state/useSpread.js'
+import useMapPane from '../../hooks/useMapPane.js'
+import { bandColor, hourColor } from '../../lib/severity.js'
 import { palette } from '../../styles/palette.js'
+import BarrierLines from './BarrierLines.jsx'
 
-function styles() {
-  const c = palette()
-  return {
-    current: { color: c.red, weight: 2.5, opacity: 1, fillColor: c.red, fillOpacity: 0.3 },
-    earlier: { color: c.red, weight: 1, opacity: 0.45, fillColor: c.red, fillOpacity: 0.06 },
-    block: { color: c.orange, weight: 3, opacity: 1, fill: false, dashArray: '8 5' },
-    road: { color: c.road, weight: 4, opacity: 0.95, lineCap: 'round' },
-    river: { color: c.river, weight: 4, opacity: 0.95, lineCap: 'round' },
-  }
-}
-
-// The block label hangs off the block's upwind corner, away from the fire's run.
-function upwindCorner(fire) {
-  const rad = (fire.intensity.windFromDeg * Math.PI) / 180
-  const toward = [Math.cos(rad), Math.sin(rad)] // [north, east] components of the upwind direction
-  return fire.block.polygon.reduce((best, p) =>
-    p[0] * toward[0] + p[1] * toward[1] > best[0] * toward[0] + best[1] * toward[1] ? p : best,
-  )
-}
-
-function blockLabelIcon(fire, corner) {
-  const centreLat = fire.block.polygon.reduce((s, p) => s + p[0], 0) / fire.block.polygon.length
-  const side = corner[0] < centreLat ? 'below' : 'above'
-  return L.divIcon({ className: 'block-label-icon', html: `<div class="block-label is-${side}">${fire.block.label}</div>`, iconSize: [0, 0] })
-}
-
-// Barrier names sit most of the way along each line: on screen, but clear of the block label.
-function labelPoint(line) {
-  if (line.length > 3) return line[Math.floor(line.length * 0.7)]
-  const a = line[Math.floor(line.length / 2)]
-  const b = line.at(-1)
-  return [a[0] + (b[0] - a[0]) * 0.8, a[1] + (b[1] - a[1]) * 0.8]
-}
-
-/** Ignition block, barrier lines and the spread perimeters revealed so far for the selected fire. */
+/** The selected fire: ignition zone, barriers, and its perimeters up to the current spread step. */
 export default function SelectedFireLayer() {
+  const { views } = useApp()
   const { fire, step } = useSpread()
-  const s = useMemo(styles, [])
-  const corner = useMemo(() => (fire ? upwindCorner(fire) : null), [fire])
-  const icon = useMemo(() => (fire ? blockLabelIcon(fire, corner) : null), [fire, corner])
+  const pane = useMapPane('spreadPane', 400)
   if (!fire) return null
-
-  const shown = fire.spread.steps.slice(0, step + 1)
-
+  const c = palette()
+  const cur = step >= 0 ? fire.steps[step] : null
   return (
     <>
-      {fire.spread.barriers.map((b) => (
-        <Polyline key={b.name} positions={b.line} pathOptions={b.type === 'river' ? s.river : s.road} interactive={false} />
+      {views.barriers && <BarrierLines fire={fire} pane={pane} />}
+      {cur && views.probability &&
+        ['p25', 'p50', 'p90'].map((band) => (
+          <Polygon key={band} pane={pane} interactive={false} positions={cur[band].map((poly) => poly)} pathOptions={{ stroke: false, fillColor: bandColor(band), fillOpacity: 0.35 }} />
+        ))}
+      {cur && views.isochrones &&
+        fire.steps.slice(0, step).map((s, i) =>
+          s.held && i > 0 ? null : (
+            <Polygon key={s.hour} pane={pane} interactive={false} positions={s.p50} pathOptions={{ color: hourColor(s.hour), weight: 1.4, opacity: 0.75, fill: false }} />
+          ),
+        )}
+      {cur && (
+        <Fragment key={`cur-${step}`}>
+          <Polygon
+            pane={pane}
+            interactive={false}
+            positions={cur.p50}
+            pathOptions={{ color: views.isochrones ? hourColor(cur.hour) : c.red, weight: 2.2, opacity: 1, fillColor: hourColor(cur.hour), fillOpacity: views.isochrones ? 0.45 : 0.3 }}
+          />
+        </Fragment>
+      )}
+      <Polygon pane={pane} interactive={false} positions={fire.ignitionZone.polygon} pathOptions={{ color: c.orange, weight: 2.2, dashArray: '6 5', fillColor: c.orange, fillOpacity: 0.1 }} />
+      {fire.ignitionZone.ignitions?.map((ig) => (
+        <CircleMarker key={`${ig.pos[0]},${ig.pos[1]}`} pane={pane} interactive={false} center={ig.pos} radius={4.5} pathOptions={{ color: '#1C1C1C', weight: 1.5, fillColor: '#FFE8B0', fillOpacity: 1 }} />
       ))}
-      {fire.spread.barriers.map((b) => (
-        <CircleMarker key={`${b.name}-label`} center={labelPoint(b.line)} radius={0} interactive={false}>
-          <Tooltip permanent direction="right" offset={[4, 0]} opacity={1} pane="tooltipPane" className={`barrier-label barrier-${b.type}`}>
-            {b.name}
-          </Tooltip>
-        </CircleMarker>
-      ))}
-      {shown.map((p, i) => (
-        <Polygon key={p.index} positions={p.polygon} pathOptions={i === shown.length - 1 ? s.current : s.earlier} interactive={false} />
-      ))}
-      <Polygon positions={fire.block.polygon} pathOptions={s.block} interactive={false} />
-      <Marker position={corner} icon={icon} interactive={false} keyboard={false} zIndexOffset={-100} />
     </>
   )
 }

@@ -41,3 +41,10 @@ export function formatHa(value) {
 export function formatKm(value, dp = 0) {
   return `${numberFmt.format(Number(value.toFixed(dp)))} km`
 }
+
+/** −0.187 → "−19%", 0.07 → "+7%" */
+export function formatPctSigned(fraction, dp = 0) {
+  const v = (fraction * 100).toFixed(dp)
+  if (Number(v) === 0) return '0%'
+  return fraction < 0 ? `${MINUS}${Math.abs(Number(v)).toFixed(dp)}%` : `+${v}%`
+}

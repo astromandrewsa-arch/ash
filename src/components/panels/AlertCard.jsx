@@ -1,13 +1,13 @@
 import { TriangleAlert } from 'lucide-react'
 import useApp from '../../state/useApp.js'
-import { alertTotals } from '../../lib/shellData.js'
+import { alertTotals, visibleFires } from '../../lib/selectors.js'
 import { formatNumber, formatUSDCompact, formatUSDRange } from '../../lib/format.js'
 import AnimatedValue from '../common/AnimatedValue.jsx'
 
 /** Top-right "Next 30 days": sums over the fires visible at the current slider position. */
 export default function AlertCard({ hidden }) {
-  const { daysUntilFire, portfolioId } = useApp()
-  const t = alertTotals(daysUntilFire, portfolioId)
+  const { daysUntilFire, portfolioId, views } = useApp()
+  const t = alertTotals(visibleFires({ slider: daysUntilFire, views, portfolioId }), portfolioId)
 
   const rows = [
     { label: 'Exposed TIV', value: t.exposedTiv, format: formatUSDCompact },

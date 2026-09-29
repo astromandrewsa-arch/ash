@@ -1,54 +1,44 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { SpreadContext } from './SpreadContext.js'
 import useApp from './useApp.js'
-import { fireById } from '../lib/data.js'
+import { store } from '../lib/store.js'
 import { UI } from '../config/ui.js'
 
 /**
- * Spread animation for the selected fire. step -1 shows nothing yet; step i shows perimeters 0..i.
- * Kept apart from AppContext so the ticking animation only re-renders what draws it.
+ * Spread playback for the selected fire: a step index into fire.steps (−1 = ignition only),
+ * play / pause / step / reset. Changing fire resets to ignition.
  */
 export default function SpreadProvider({ children }) {
   const { selection } = useApp()
-  const fire = selection ? fireById[selection.fireId] : null
-  const fireId = fire?.id ?? null
-  const lastStep = fire ? fire.spread.steps.length - 1 : -1
-
+  const fireId = selection?.kind === 'fire' ? selection.id : null
   const [state, setState] = useState({ fireId: null, step: -1, playing: false })
-
-  // A newly opened fire starts from nothing and autoplays once after the fly-in.
-  if (state.fireId !== fireId) setState({ fireId, step: -1, playing: false })
-
-  useEffect(() => {
-    if (!fireId) return undefined
-    const t = setTimeout(() => setState((s) => (s.fireId === fireId ? { ...s, playing: true } : s)), UI.autoplayDelayMs)
-    return () => clearTimeout(t)
-  }, [fireId])
+  let current = state
+  if (state.fireId !== fireId) {
+    current = { fireId, step: -1, playing: false }
+    setState(current)
+  }
+  const fire = current.fireId ? store.fireById.get(current.fireId) : null
+  const last = fire ? fire.steps.length - 1 : -1
 
   useEffect(() => {
     if (!state.playing) return undefined
-    const id = setInterval(() => {
-      setState((s) => {
-        const step = Math.min(s.step + 1, lastStep)
-        return { ...s, step, playing: step < lastStep }
-      })
-    }, UI.spreadStepMs)
-    return () => clearInterval(id)
-  }, [state.playing, lastStep])
+    const t = setTimeout(
+      () => setState((p) => (p.step >= last ? { ...p, playing: false } : { ...p, step: p.step + 1, playing: p.step + 1 < last })),
+      state.step < 0 ? UI.spreadFirstStepMs : UI.spreadStepMs,
+    )
+    return () => clearTimeout(t)
+  }, [state, last])
 
-  const play = useCallback(() => {
-    setState((s) => ({ ...s, step: s.step >= lastStep ? -1 : s.step, playing: true }))
-  }, [lastStep])
-  const pause = useCallback(() => setState((s) => ({ ...s, playing: false })), [])
-  const stepForward = useCallback(() => {
-    setState((s) => ({ ...s, step: Math.min(s.step + 1, lastStep), playing: false }))
-  }, [lastStep])
-  const reset = useCallback(() => setState((s) => ({ ...s, step: -1, playing: false })), [])
+  const play = useCallback(() => setState((p) => ({ ...p, playing: true, step: p.step >= last ? -1 : p.step })), [last])
+  const pause = useCallback(() => setState((p) => ({ ...p, playing: false })), [])
+  const stepForward = useCallback(() => setState((p) => ({ ...p, playing: false, step: Math.min(last, p.step + 1) })), [last])
+  const reset = useCallback(() => setState((p) => ({ ...p, playing: false, step: -1 })), [])
+  const setStep = useCallback((i) => setState((p) => ({ ...p, playing: false, step: Math.max(-1, Math.min(last, i)) })), [last])
 
+  const stepInfo = fire && current.step >= 0 ? fire.steps[current.step] : null
   const value = useMemo(
-    () => ({ fire, step: state.step, playing: state.playing, lastStep, play, pause, stepForward, reset }),
-    [fire, state.step, state.playing, lastStep, play, pause, stepForward, reset],
+    () => ({ fire, step: current.step, stepInfo, hour: stepInfo ? stepInfo.hour : null, playing: current.playing, lastStep: last, play, pause, stepForward, reset, setStep }),
+    [fire, current.step, stepInfo, current.playing, last, play, pause, stepForward, reset, setStep],
   )
-
   return <SpreadContext.Provider value={value}>{children}</SpreadContext.Provider>
 }

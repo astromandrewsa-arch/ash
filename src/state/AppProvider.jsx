@@ -1,99 +1,130 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import L from 'leaflet'
 import { AppContext } from './AppContext.js'
-import quickViews from '../data/v1/quickViews.json'
-import timeline from '../data/v1/timeline.json'
-import { areaById, areasBounds, fireById, forecast, homeById, mapConfig, processByFireId } from '../lib/data.js'
-import { mapPadding as padding } from '../lib/mapPadding.js'
+import { store } from '../lib/store.js'
+import { boundsOfAreas, boundsOfRing, fireFocusBounds } from '../lib/geo.js'
+import { assetAnchor } from '../lib/assets.js'
+import { mapPadding } from '../lib/mapPadding.js'
+import { portfolioOf } from '../lib/selectors.js'
 import { UI } from '../config/ui.js'
-import { defaultPortfolioId, portfolioById } from '../lib/shellData.js'
+import { DEFAULT_VIEWS } from '../config/quickViews.js'
 
-const initialLayers = Object.fromEntries(quickViews.layers.map((layer) => [layer.id, layer.defaultOn]))
-
+/** App-wide state (plain React context, CLAUDE.md §0). */
 export default function AppProvider({ children }) {
-  const [activeView, setActiveView] = useState('map')
-  const [daysUntilFire, setDaysUntilFire] = useState(timeline.initial)
-  const [layers, setLayers] = useState(initialLayers)
-  const [preset, setPreset] = useState(forecast.defaultPreset)
-  const [selection, setSelection] = useState(null) // { fireId, mode: 'detail' | 'agent' }
+  const [activeView, setActiveViewRaw] = useState('map')
+  const [portfolioId, setPortfolioId] = useState(store.portfolio.defaultId)
+  const [daysUntilFire, setDaysUntilFire] = useState(-30)
+  const [views, setViews] = useState(DEFAULT_VIEWS)
+  const [selection, setSelection] = useState(null) // { kind: 'fire' | 'asset' | 'ranch' | 'area' | 'bundle', id }
+  const [drawerTab, setDrawerTab] = useState('forecast')
+  const [moreInfo, setMoreInfo] = useState(null) // open tab id, or null
+  const [plansViewed, setPlansViewed] = useState(() => new Set())
   const [handedOff, setHandedOff] = useState(() => new Set())
   const [helpOpen, setHelpOpen] = useState(false)
-  const [highlightHomeId, setHighlightHomeId] = useState(null)
-  const [portfolioId, setPortfolioId] = useState(defaultPortfolioId)
+  const [helpSection, setHelpSection] = useState(null)
   const mapRef = useRef(null)
 
   const registerMap = useCallback((map) => {
     mapRef.current = map
   }, [])
 
-  const toggleLayer = useCallback((id) => {
-    setLayers((prev) => ({ ...prev, [id]: !prev[id] }))
+  const setActiveView = useCallback((view) => {
+    setActiveViewRaw(view)
+    if (view !== 'map') setMoreInfo(null)
   }, [])
 
-  /** Switch the book shown and fly to its view. */
-  const setPortfolio = useCallback((id) => {
-    setPortfolioId(id)
-    const view = portfolioById[id]?.view
-    if (view) mapRef.current?.flyTo(view.center, view.zoom, { duration: UI.flyDurationS })
-  }, [])
+  const toggleView = useCallback((key) => setViews((v) => ({ ...v, [key]: !v[key] })), [])
+  const setView = useCallback((key, value) => setViews((v) => ({ ...v, [key]: value })), [])
 
-  const flyHome = useCallback(() => {
-    mapRef.current?.flyToBounds(areasBounds, { ...padding(false), duration: UI.flyDurationS })
-  }, [])
-
-  const flyToFire = useCallback((fireId) => {
+  const flyToBounds = useCallback((bounds, { drawer = false, maxZoom = 16 } = {}) => {
     const map = mapRef.current
-    if (!map) return
-    const fire = fireById[fireId]
-    const bounds = fire ? fire.spread.bounds : areaBounds(processByFireId[fireId]?.areaId)
-    if (!bounds) return
-    map.flyToBounds(bounds, { ...padding(true), maxZoom: mapConfig.fireZoom, duration: UI.flyDurationS })
+    if (!map || !bounds) return
+    map.flyToBounds(bounds, { ...mapPadding(drawer), maxZoom, duration: UI.flyDurationS })
   }, [])
 
-  /** Open a fire (current or last month's) in the drawer, on the map, with its marker revealed. */
-  const openFire = useCallback(
-    (fireId, mode = 'detail') => {
-      const fire = fireById[fireId]
-      setActiveView('map')
-      setHighlightHomeId(null)
-      setSelection({ fireId, mode })
-      if (fire) setDaysUntilFire((v) => Math.max(v, -fire.daysUntilFire))
-      // Let the map view mount/settle before flying.
-      requestAnimationFrame(() => flyToFire(fireId))
+  const flyToBook = useCallback((id) => {
+    const p = portfolioOf(id)
+    mapRef.current?.flyTo(p.view.center, p.view.zoom, { duration: UI.flyDurationS })
+  }, [])
+
+  /** Switch the book shown; the map flies to that book's view (§9). */
+  const setPortfolio = useCallback(
+    (id, { fly = true } = {}) => {
+      setPortfolioId(id)
+      setSelection(null)
+      if (fly) flyToBook(id)
     },
-    [flyToFire],
+    [flyToBook],
   )
 
-  const setDrawerMode = useCallback((mode) => {
-    setSelection((s) => (s ? { ...s, mode, animate: false } : s))
-  }, [])
+  /** Open something in the drawer and, unless told not to, fly the map to it. */
+  const select = useCallback(
+    (kindIn, idIn, { fly = true, tab } = {}) => {
+      let kind = kindIn
+      let id = idIn
+      // Rangeland and utility areas open their ranch or asset card.
+      if (kind === 'area') {
+        const a = store.areaById.get(id)
+        if (a?.type === 'rangeland' && a.ranchId) [kind, id] = ['ranch', a.ranchId]
+        else if (a?.type === 'utility' && a.assetIds?.length) [kind, id] = ['asset', a.assetIds[0]]
+      }
+      setActiveViewRaw('map')
+      setMoreInfo(null)
+      setSelection({ kind, id })
+      if (kind === 'fire') {
+        const fire = store.fireById.get(id)
+        if (!fire) return
+        setDrawerTab(tab || 'forecast')
+        setDaysUntilFire((v) => Math.max(v, -fire.daysUntilFire))
+        if (fly) requestAnimationFrame(() => flyToBounds(fireFocusBounds(fire), { drawer: true, maxZoom: fire.ignitionZone.class === 'Sector' ? 12 : 13 }))
+        return
+      }
+      if (!fly) return
+      let bounds = null
+      let maxZoom = 12
+      if (kind === 'area') {
+        bounds = boundsOfRing(store.areaById.get(id)?.polygon)
+        maxZoom = 14
+      } else if (kind === 'asset') {
+        const asset = store.assetById.get(id)
+        bounds = asset?.kind === 'substation' ? L.latLng(assetAnchor(asset)).toBounds(3000) : boundsOfRing(store.areaById.get(asset?.areaId)?.polygon)
+      } else if (kind === 'ranch') {
+        bounds = boundsOfRing(store.areaById.get(store.ranchById.get(id)?.areaId)?.polygon)
+      } else if (kind === 'bundle') {
+        const b = store.bundleById.get(id)
+        bounds = b ? boundsOfAreas(b.areaIds.map((a) => store.areaById.get(a))) : null
+        maxZoom = 11
+      }
+      if (bounds) requestAnimationFrame(() => flyToBounds(bounds, { drawer: true, maxZoom }))
+    },
+    [flyToBounds],
+  )
 
   const closeDrawer = useCallback(() => {
     setSelection(null)
-    flyHome()
-  }, [flyHome])
+    setMoreInfo(null)
+    flyToBook(portfolioId)
+  }, [portfolioId, flyToBook])
 
-  const markHandedOff = useCallback((fireId) => {
-    setHandedOff((prev) => new Set(prev).add(fireId))
+  const markPlanViewed = useCallback((fireId) => {
+    setPlansViewed((prev) => (prev.has(fireId) ? prev : new Set(prev).add(fireId)))
   }, [])
 
-  /** "Pass to your dedicated Pyrome agent": switch the drawer to the agent view, animating the first time. */
-  const passToAgent = useCallback(
+  const markHandedOff = useCallback((fireId) => {
+    setHandedOff((prev) => (prev.has(fireId) ? prev : new Set(prev).add(fireId)))
+  }, [])
+
+  /** Legacy screens (until their pass replaces them) open fires through this. */
+  const openFire = useCallback(
     (fireId) => {
-      setSelection({ fireId, mode: 'agent', animate: !handedOff.has(fireId) })
-      markHandedOff(fireId)
+      if (store.fireById.has(fireId)) select('fire', fireId)
     },
-    [handedOff, markHandedOff],
+    [select],
   )
 
-  const flyToHome = useCallback((homeId) => {
-    const home = homeById.get(homeId)
-    if (!home) return
-    setActiveView('map')
-    setSelection(null)
-    setHighlightHomeId(homeId)
-    requestAnimationFrame(() =>
-      mapRef.current?.flyTo(home.centroid, mapConfig.homeZoom, { duration: UI.flyDurationS }),
-    )
+  const openHelp = useCallback((section = null) => {
+    setHelpSection(section)
+    setHelpOpen(true)
   }, [])
 
   // Escape closes whatever is on top.
@@ -101,54 +132,47 @@ export default function AppProvider({ children }) {
     const onKey = (e) => {
       if (e.key !== 'Escape') return
       if (helpOpen) setHelpOpen(false)
+      else if (moreInfo) setMoreInfo(null)
       else if (selection) closeDrawer()
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [helpOpen, selection, closeDrawer])
+  }, [helpOpen, moreInfo, selection, closeDrawer])
 
   const value = useMemo(
     () => ({
       activeView,
       setActiveView,
-      daysUntilFire,
-      setDaysUntilFire,
-      layers,
-      toggleLayer,
-      preset,
-      setPreset,
-      selection,
-      drawerOpen: selection !== null,
-      openFire,
-      setDrawerMode,
-      closeDrawer,
-      handedOff,
-      passToAgent,
-      helpOpen,
-      setHelpOpen,
-      highlightHomeId,
-      flyToHome,
-      registerMap,
       portfolioId,
       setPortfolio,
+      daysUntilFire,
+      setDaysUntilFire,
+      views,
+      toggleView,
+      setView,
+      selection,
+      select,
+      closeDrawer,
+      drawerOpen: selection !== null,
+      drawerTab,
+      setDrawerTab,
+      moreInfo,
+      setMoreInfo,
+      plansViewed,
+      markPlanViewed,
+      handedOff,
+      markHandedOff,
+      helpOpen,
+      setHelpOpen,
+      helpSection,
+      openHelp,
+      registerMap,
+      mapRef,
+      flyToBounds,
+      openFire,
     }),
-    [
-      portfolioId, setPortfolio,
-      activeView, daysUntilFire, layers, toggleLayer, preset, selection, openFire, setDrawerMode, closeDrawer,
-      handedOff, passToAgent, helpOpen, highlightHomeId, flyToHome, registerMap,
-    ],
+    [activeView, setActiveView, portfolioId, setPortfolio, daysUntilFire, views, toggleView, setView, selection, select, closeDrawer, drawerTab, moreInfo, plansViewed, markPlanViewed, handedOff, markHandedOff, helpOpen, helpSection, openHelp, registerMap, flyToBounds, openFire],
   )
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>
-}
-
-function areaBounds(areaId) {
-  const area = areaById[areaId]
-  if (!area) return null
-  const lats = area.polygon.map((p) => p[0])
-  const lons = area.polygon.map((p) => p[1])
-  return [
-    [Math.min(...lats), Math.min(...lons)],
-    [Math.max(...lats), Math.max(...lons)],
-  ]
 }

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BookOpen, ChevronDown } from 'lucide-react'
 import useApp from '../../state/useApp.js'
-import { bookSummary, portfolioById } from '../../lib/shellData.js'
+import { bookSummary } from '../../lib/selectors.js'
 import { formatHa, formatNumber, formatPct, formatUSDCompact } from '../../lib/format.js'
 import AnimatedValue from '../common/AnimatedValue.jsx'
 
@@ -10,18 +10,18 @@ export default function BookPanel() {
   const { portfolioId } = useApp()
   const [open, setOpen] = useState(true)
   const book = bookSummary(portfolioId)
-  const portfolio = portfolioById[portfolioId]
+  const dq = book.dataQuality
 
   return (
     <section className="glass panel book-panel" aria-label="Your book">
       <button type="button" className="panel-head" onClick={() => setOpen((v) => !v)} aria-expanded={open}>
         <BookOpen size={15} className="muted" aria-hidden="true" />
         <span className="label panel-title">Your book</span>
+        <span className="panel-meta">{book.short}</span>
         <ChevronDown size={16} className={`panel-caret${open ? '' : ' is-collapsed'}`} aria-hidden="true" />
       </button>
       {open && (
         <div className="panel-body">
-          <p className="book-portfolio">{portfolio.name}</p>
           <div className="book-hero">
             <span className="label">Total insured value</span>
             <span className="figure">
@@ -44,7 +44,7 @@ export default function BookPanel() {
             <div>
               <dt>Under forecast</dt>
               <dd>
-                <AnimatedValue value={book.hectares} format={formatHa} />
+                <AnimatedValue value={book.hectaresUnderForecast} format={formatHa} />
               </dd>
             </div>
             <div>
@@ -55,19 +55,23 @@ export default function BookPanel() {
             </div>
           </dl>
           <div className="book-quality">
-            <div className="quality-row">
-              <span>Geocode quality, building level</span>
-              <strong>{formatPct(book.geocodeBuildingPct, 1)}</strong>
+            <div className="quality-item">
+              <span className="quality-label" title="Share of homes geocoded to the building footprint">Building geocode</span>
+              <span className="quality-value">
+                <strong>{formatPct(dq.geocodeBuildingPct, 1)}</strong>
+                <span className="quality-bar" aria-hidden="true">
+                  <span style={{ width: formatPct(dq.geocodeBuildingPct, 1) }} />
+                </span>
+              </span>
             </div>
-            <div className="quality-bar" aria-hidden="true">
-              <span style={{ width: formatPct(book.geocodeBuildingPct, 1) }} />
-            </div>
-            <div className="quality-row">
-              <span>Insurance to value</span>
-              {book.itvFlagged > 0 ? (
-                <span className="pill pill-amber">{formatNumber(book.itvFlagged)} under-insured</span>
+            <div className="quality-item">
+              <span className="quality-label" title="Insurance to value: homes insured below rebuild value">ITV flags</span>
+              {dq.itvFlagged > 0 ? (
+                <span className="pill pill-amber" title={`${formatNumber(dq.itvFlagged)} homes insured below rebuild value`}>
+                  {formatNumber(dq.itvFlagged)} under-insured
+                </span>
               ) : (
-                <span className="pill pill-green">No ITV flags</span>
+                <span className="pill pill-green">No flags</span>
               )}
             </div>
           </div>

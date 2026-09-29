@@ -1,0 +1,413 @@
+/* Map layers: fire and watchlist markers, asset chips, ranch labels, hover cards (CLAUDE.md §3, §9). */
+
+.svg-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.map-view,
+.map-canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.leaflet-container.is-over-home {
+  cursor: pointer;
+}
+
+.canvas-overlay {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Ranches take the hatch pattern defined in MapView's inline <svg> (set as a fill attribute). */
+.leaflet-pane .ranch-shape {
+  cursor: pointer;
+}
+
+.ranch-label-icon {
+  pointer-events: none;
+}
+
+.ranch-label {
+  display: block;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FBE08A;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.95), 0 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* ---------- Fire markers ---------- */
+
+.fire-marker-icon {
+  background: transparent;
+  border: 0;
+}
+
+.fire-marker {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  --pulse: 2.6s;
+}
+
+.fire-marker.is-severe {
+  --pulse: 1.6s;
+}
+
+.fm-glow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(var(--flame) + 18px);
+  height: calc(var(--flame) + 18px);
+  margin: calc((var(--flame) + 18px) / -2) 0 0 calc((var(--flame) + 18px) / -2);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(226, 86, 27, 0.55) 0%, rgba(226, 86, 27, 0.18) 45%, rgba(226, 86, 27, 0) 70%);
+  animation: fm-pulse var(--pulse) ease-out infinite;
+}
+
+.fire-marker.is-severe .fm-glow {
+  background: radial-gradient(circle, rgba(215, 38, 61, 0.6) 0%, rgba(226, 86, 27, 0.22) 45%, rgba(226, 86, 27, 0) 70%);
+}
+
+@keyframes fm-pulse {
+  0% { transform: scale(0.65); opacity: 0.95; }
+  70% { transform: scale(1.45); opacity: 0; }
+  100% { transform: scale(1.45); opacity: 0; }
+}
+
+.fm-flame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--flame);
+  height: var(--flame);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.65));
+  transition: transform var(--t-panel) var(--ease-out);
+}
+
+.fire-marker:hover .fm-flame {
+  transform: scale(1.12);
+}
+
+.fire-marker.is-selected .fm-flame {
+  transform: scale(1.18);
+  filter: drop-shadow(0 0 5px rgba(255, 232, 176, 0.9)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+}
+
+/* Intervention status ring (RAG). */
+.fm-rag {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(var(--flame) + 12px);
+  height: calc(var(--flame) + 12px);
+  margin: calc((var(--flame) + 12px) / -2) 0 0 calc((var(--flame) + 12px) / -2);
+  border-radius: 50%;
+  border: 2.5px solid var(--rag, var(--red));
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.fire-marker.rag-green { --rag: var(--green); }
+.fire-marker.rag-amber { --rag: var(--amber); }
+.fire-marker.rag-red { --rag: var(--red); }
+
+.fm-label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 9px;
+  border-radius: 999px;
+  background: rgba(18, 18, 19, 0.86);
+  border: 1px solid rgba(243, 241, 236, 0.16);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  color: var(--warm-grey);
+  font-size: 11.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+
+.fire-marker.is-severe .fm-label {
+  border-color: rgba(215, 38, 61, 0.55);
+}
+
+.fire-marker.is-selected .fm-label {
+  border-color: rgba(226, 86, 27, 0.8);
+  background: rgba(40, 20, 12, 0.92);
+}
+
+.fm-label-full {
+  display: none;
+}
+
+.fire-marker:hover .fm-label-text {
+  display: none;
+}
+
+.fire-marker:hover .fm-label-full {
+  display: inline;
+}
+
+.fire-marker.label-right .fm-label { left: calc(50% + var(--flame) / 2 + 6px); top: 50%; transform: translateY(-50%); }
+.fire-marker.label-left .fm-label { right: calc(50% + var(--flame) / 2 + 6px); top: 50%; transform: translateY(-50%); }
+.fire-marker.label-below .fm-label { top: calc(50% + var(--flame) / 2 + 6px); left: 50%; transform: translateX(-50%); }
+.fire-marker.label-above .fm-label { bottom: calc(50% + var(--flame) / 2 + 6px); left: 50%; transform: translateX(-50%); }
+
+.fire-marker.label-hidden .fm-label {
+  display: none;
+  left: calc(50% + var(--flame) / 2 + 6px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fire-marker.label-hidden:hover .fm-label {
+  display: flex;
+}
+
+/* ---------- Watchlist markers ---------- */
+
+.watch-marker-icon {
+  background: transparent;
+  border: 0;
+}
+
+.watch-marker {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+
+.wm-ring {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2.5px solid var(--amber);
+  background: rgba(20, 16, 10, 0.55);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.55), 0 3px 10px rgba(0, 0, 0, 0.5);
+  color: #FFD08F;
+  font-size: 10.5px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  transition: transform var(--t-panel) var(--ease-out);
+}
+
+.watch-marker:hover .wm-ring {
+  transform: scale(1.1);
+}
+
+.wm-label {
+  position: absolute;
+  left: 42px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  height: 24px;
+  align-items: center;
+  padding: 0 9px;
+  border-radius: 999px;
+  background: rgba(18, 18, 19, 0.88);
+  border: 1px solid rgba(242, 163, 58, 0.5);
+  color: var(--warm-grey);
+  font-size: 11.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.watch-marker:hover .wm-label {
+  display: flex;
+}
+
+/* ---------- Asset chips ---------- */
+
+.asset-chip-icon {
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 0;
+}
+
+/* Smaller chips at state scale so they do not bury the homes clusters. */
+.leaflet-container[data-zoom='5'] .asset-chip,
+.leaflet-container[data-zoom='6'] .asset-chip,
+.leaflet-container[data-zoom='7'] .asset-chip {
+  width: 20px;
+  height: 20px;
+  border-width: 1.25px;
+}
+
+.leaflet-container[data-zoom='5'] .asset-chip svg,
+.leaflet-container[data-zoom='6'] .asset-chip svg,
+.leaflet-container[data-zoom='7'] .asset-chip svg {
+  width: 12px;
+  height: 12px;
+}
+
+.asset-chip {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(16, 16, 17, 0.9);
+  border: 1.5px solid var(--yellow);
+  color: var(--yellow);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  transition: transform var(--t-panel) var(--ease-out), background var(--t-panel);
+}
+
+.asset-chip:hover {
+  transform: scale(1.12);
+}
+
+.asset-chip.is-selected {
+  background: var(--yellow);
+  color: #16140C;
+  transform: scale(1.15);
+}
+
+.asset-chip svg {
+  display: block;
+}
+
+/* ---------- Hover cards ---------- */
+
+.map-tip {
+  position: absolute;
+  z-index: 650;
+  min-width: 220px;
+  max-width: 300px;
+  padding: 10px 12px 11px;
+  border-radius: 10px;
+  background: var(--glass-strong);
+  border: 1px solid var(--hairline-strong);
+  box-shadow: var(--shadow);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  color: var(--warm-grey);
+  font-size: 12px;
+  line-height: 16px;
+  pointer-events: none;
+  animation: fade-in 120ms var(--ease-out);
+}
+
+.tip-title {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.tip-sub {
+  margin-top: 1px;
+  color: var(--muted);
+  font-size: 11.5px;
+}
+
+.tip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 12px;
+  margin: 9px 0 0;
+  padding-top: 8px;
+  border-top: 1px solid var(--hairline);
+}
+
+.tip-grid dt {
+  color: var(--faint);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tip-grid dd {
+  margin: 1px 0 0;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.tip-line {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.tip-line strong {
+  color: var(--warm-grey);
+}
+
+.tip-line + .tip-line {
+  margin-top: 3px;
+}
+
+.tip-line.tone-red { color: #FF9AA8; }
+.tip-line.tone-green { color: #7FE0AA; }
+.tip-line.tone-amber { color: #FFD08F; }
+
+.tip-hint {
+  margin-top: 8px;
+  color: var(--faint);
+  font-size: 11px;
+}
+
+/* Leaflet tooltips on assets and ranches, restyled as glass. */
+.leaflet-tooltip.map-tooltip {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 7px 10px;
+  border-radius: 9px;
+  background: var(--glass-strong);
+  border: 1px solid var(--hairline-strong);
+  box-shadow: var(--shadow);
+  color: var(--warm-grey);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.leaflet-tooltip.map-tooltip span {
+  color: var(--muted);
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.leaflet-tooltip-top.map-tooltip::before {
+  border-top-color: var(--hairline-strong);
+}
+
+.leaflet-tooltip-bottom.map-tooltip::before {
+  border-bottom-color: var(--hairline-strong);
+}
+
+.leaflet-tooltip-left.map-tooltip::before {
+  border-left-color: var(--hairline-strong);
+}
+
+.leaflet-tooltip-right.map-tooltip::before {
+  border-right-color: var(--hairline-strong);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fm-glow {
+    animation: none;
+    opacity: 0.6;
+  }
+}

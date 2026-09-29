@@ -235,7 +235,7 @@ export const FIRES = [
     fuel: fuel(79, -1.9, 94, 4.0, 5.1, 9.2, 12.2, 58, 47, 690, 48),
     lossTarget: { p90: 9e6, p50: 14e6, p25: 22e6 },
     exposureText: '12,000 ha pasture, 140 km fencing, 6,500 cattle, 3 ranch headquarters',
-    analogue: { name: 'Southern Plains outbreak, 9 April (TX and OK)', year: 2009, acres: 250000, homesLost: 339 },
+    analogue: { name: 'Southern Plains outbreak, Texas and Oklahoma', year: 2009, acres: 250000, homesLost: 339 },
   },
   {
     id: 'PB-08', name: 'Colorado City ROW', place: 'Permian, Colorado City', state: 'TX', county: 'Mitchell County',
@@ -321,7 +321,7 @@ export const FIRES = [
     fit: [{ area: 'STW-1', from: [36.058, -97.142], bearing: 315, homes: 310, range: [-1000, 5000] }],
     lossTarget: { p90: 41e6, p50: 57e6, p25: 76e6 },
     exposureText: '310 homes, $96M TIV, OG&E feeder, Cushing tank farm 31 h away on the flank (monitored, outside all bands)',
-    analogue: { name: 'Oklahoma outbreak, 14 March', year: 2025, acres: 170000, homesLost: 515 },
+    analogue: { name: 'Oklahoma wildfire outbreak', year: 2025, acres: 170000, homesLost: null, structures: 515 },
   },
 ]
 
