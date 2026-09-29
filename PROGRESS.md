@@ -22,7 +22,7 @@ Tick a pass only when its build, smoke test and commit are done.
   - Model exhibit (eight rows from models.json), six season tiles, the hit-rate chart (PRIMER orange to 30 days; ECMWF, Technosylva and NFDRS in blue up to their horizons with "horizon ends" markers; the four cat models as flat long-run lines), reliability line with a calibration plot and Brier by model, the LA 2025 flash-estimate tile, the twelve 2025–26 fires with every named model's call and the outcome sentence, the ruled-out table, the Crabapple before/after on two synchronised maps with a desaturated after side, dark scar, orange predicted perimeter and draggable divider, and the §16 footer. Deviations: NFDRS joins the chart as a third short-range model; the Crabapple scar is illustrative and generated; the footer uses a typographic apostrophe.
 - [x] Pass 10: UI polish, Help, README
   - Help generated into help.json (fifteen §17/§19 topics with the book's figures, topic list, info icons across the screens); Negotiation Channel rebuilt on v2 (headline format, status/counterparty/payer filters, tiles, cards into the Negotiation tab); README for v2; walk-through fixes (area and ranch labels step aside for markers, basemap-named towns, alert empty state, watchlist rings, hyphens kept proportional) and the designer's top ten on the three key screens (barriers, drawer header, tables, tints, fuel clocks, type scale, gutters, colour meanings, Quick Views grid). Deviations: Help text lives in data; two Premium tiles split figure and note; the 2027 note is a tooltip.
-- [ ] Pass 11: tour, PDF export, Reports
+- [ ] Pass 11: tour, PDF export, Reports (in progress since 2026-09-29 10:08 UTC)
 - [ ] Pass 12: acceptance and hand-over
 
 ## Blocked
