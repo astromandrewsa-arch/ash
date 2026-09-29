@@ -4,6 +4,7 @@
   "fireId": "PH-01",
   "verdict": "Partly",
   "statePlan": false,
+  "statePlanNote": null,
   "summary": "60 km bladed line and 45 km grazed strip along the corridor; 120 priority poles replaced; PSPS on the red-flag day; 4,000 ac back-burn on Turkey Track; county pre-notice.",
   "actions": [
    {
@@ -744,6 +745,7 @@
   "fireId": "AU-02",
   "verdict": "Targeted",
   "statePlan": false,
+  "statePlanNote": null,
   "summary": "Protect the 96 highest-value homes on the lake side (40 m breaks, hardening audits, two engines on the day); RM 620 spur de-energised; the other 146 homes in the P50 path get pre-warning only.",
   "actions": [
    {
@@ -1297,6 +1299,7 @@
   "fireId": "BA-03",
   "verdict": "Yes",
   "statePlan": false,
+  "statePlanNote": null,
   "summary": "Thin the three ignition blocks (600 ac) and burn 700 ac in the 3–5 Nov humidity window; Bluebonnet line inspection.",
   "actions": [
    {
@@ -1959,6 +1962,7 @@
   "fireId": "CT-04",
   "verdict": "Yes",
   "statePlan": false,
+  "statePlanNote": null,
   "summary": "Oncor feeder de-energised on the red-flag day; 12 km blade line north of Carbon; 40 homes hardened.",
   "actions": [
    {
@@ -2233,6 +2237,7 @@
   "fireId": "HC-05",
   "verdict": "Yes",
   "statePlan": false,
+  "statePlanNote": null,
   "summary": "Graze and cut a 40 m break on the north boundary; burn the block in the humidity window.",
   "actions": [
    {
@@ -2346,6 +2351,7 @@
   "fireId": "PK-06",
   "verdict": "Targeted",
   "statePlan": false,
+  "statePlanNote": null,
   "summary": "Defend three peninsulas: 12 km break, engines staged; interior slopes cannot be cut.",
   "actions": [
    {
@@ -2622,6 +2628,7 @@
   "fireId": "RP-07",
   "verdict": "Cannot be mitigated",
   "statePlan": true,
+  "statePlanNote": "This area cannot be mitigated in the window. A state agency plan is in place; expected loss is reduced by pre-positioning, not prevented.",
   "summary": "12,000 ha is beyond any pre-treatment in the window. State agency plan: TFS engines pre-positioned, livestock moved off the quadrant, fence lines opened.",
   "actions": [
    {
@@ -2697,6 +2704,7 @@
   "fireId": "PB-08",
   "verdict": "Yes",
   "statePlan": false,
+  "statePlanNote": null,
   "summary": "Mow 90 km of ROW, clear 40 pads, EPSS settings on the feeder.",
   "actions": [
    {
@@ -2772,6 +2780,7 @@
   "fireId": "OK-09",
   "verdict": "No action",
   "statePlan": false,
+  "statePlanNote": null,
   "summary": "Last season’s patch burns already cap the fire; plan withdrawn.",
   "actions": [],
   "cost": 0,
@@ -2819,6 +2828,7 @@
   "fireId": "OK-10",
   "verdict": "Cannot be mitigated",
   "statePlan": true,
+  "statePlanNote": "This area cannot be mitigated in the window. A state agency plan is in place; expected loss is reduced by pre-positioning, not prevented.",
   "summary": "Cannot be mitigated by fuel work in 9 days. PSPS on the OG&E feeder removes the three line starts; evacuation pre-notice; 60 homes hardened.",
   "actions": [
    {

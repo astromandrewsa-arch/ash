@@ -11,6 +11,7 @@ import AlertCard from '../panels/AlertCard.jsx'
 import TimeSlider from '../panels/TimeSlider.jsx'
 import SpreadControls from '../panels/SpreadControls.jsx'
 import Drawer from '../drawer/Drawer.jsx'
+import MoreInfoPanel from '../moreinfo/MoreInfoPanel.jsx'
 import PageSkeleton from '../pages/PageSkeleton.jsx'
 import LocationsAtRiskPage from '../pages/LocationsAtRiskPage.jsx'
 import SimulationPage from '../pages/SimulationPage.jsx'
@@ -69,6 +70,7 @@ export default function Shell() {
             </>
           )}
           <Drawer />
+          <MoreInfoPanel />
           {page && (
             <div className="page-host">
               {loading ? (

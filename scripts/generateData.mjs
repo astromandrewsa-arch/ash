@@ -13,7 +13,7 @@ import { makeRng, SEED } from './lib/rng.mjs'
 import { destination, haversineKm, pointInRing, projector, round, round5, sum } from './lib/geo.mjs'
 import { buildWorld, MARKET_RATE, relocateCluster } from './lib/world.mjs'
 import { buildFire, computeExposure, finishFire, fitClusters, FIRES } from './lib/fires.mjs'
-import { homeDamageRatio, outcomes, returnPeriod, lossAt, tvar } from './lib/loss.mjs'
+import { DEDUCTIBLE, LOCATION_LIMIT, homeDamageRatio, outcomes, returnPeriod, lossAt, tvar } from './lib/loss.mjs'
 import { addDays, dayMonth, daysBetween, money, windowLabel } from './lib/text.mjs'
 import { ISSUE, WATCHLIST } from './config/fires.mjs'
 import { AGENTS, LAST_MONTH, NEGOTIATIONS, PLANS } from './config/plans.mjs'
@@ -142,6 +142,7 @@ const plans = fires.map((f) => {
     fireId: f.id,
     verdict: cfg.verdict,
     statePlan: !!cfg.statePlan,
+    statePlanNote: cfg.statePlan ? 'This area cannot be mitigated in the window. A state agency plan is in place; expected loss is reduced by pre-positioning, not prevented.' : null,
     summary: typeof cfg.summary === 'function' ? cfg.summary(summaryCounts) : cfg.summary,
     actions: cfg.actions.map(({ text, owner, payer, cost: c, start, end, unit }) => ({ text, owner, payer, cost: c, start, end, unit })),
     cost,
@@ -373,6 +374,8 @@ function portfolioFor(id, name, short, view, states, curve) {
 const portfolio = {
   defaultId: 'txok',
   initialView: { center: [31.3, -99.5], zoom: 6 },
+  // Gross loss terms (§8): a 2% deductible and a per-location limit.
+  terms: { deductible: DEDUCTIBLE, locationLimit: LOCATION_LIMIT },
   portfolios: [
     portfolioFor('tx', 'Demo Carrier — Texas HO book', 'Texas HO book', { center: [31.3, -99.5], zoom: 6 }, ['TX'], EP_TX),
     portfolioFor('txok', 'Demo Carrier — Texas + Oklahoma', 'Texas + Oklahoma', { center: [33.5, -98.8], zoom: 6 }, ['TX', 'OK'], EP_TXOK),

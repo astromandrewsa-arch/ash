@@ -15,6 +15,8 @@ import { FIRES, ISSUE, LINES } from '../config/fires.mjs'
 
 const BASE_STEPS = [1, 4, 8, 12, 24, 36, 48]
 const BAND_KEYS = ['p90', 'p50', 'p25']
+// The minimum share of ensemble runs in which each band burns (§8 band definitions).
+const BAND_SHARE = { p90: 0.9, p50: 0.5, p25: 0.25 }
 
 export function stepHours(windowDays) {
   const hours = [...BASE_STEPS]
@@ -751,7 +753,46 @@ export function finishFire(built, ctx) {
     if (band === 'p50') exp.p50Items = list
   }
   const finalStep = steps[steps.length - 1]
-  const ranchSummary = exp.ranchHits.map((h) => ({ ...h, burnedHa: h.burnedHa, fenceKm: mapRound(h.fenceKm), livestock: h.livestock, structures: h.structures }))
+  // Per location (More info · Addresses): loss if it burns at the point-loss severity (P50 for
+  // core and expected-band items, P25 for tail-only items), and expected loss = dated probability
+  // × the band's minimum burn share (90% / 50% / 25% of runs) × that loss.
+  const perRef = new Map()
+  for (const it of exp.items) {
+    const f = factor[it.band === 'p25' ? 'p25' : 'p50']
+    const loss = it.tiv * Math.min(0.95, it.dr * f)
+    const acc = perRef.get(it.ref) || { tiv: 0, loss: 0, expected: 0 }
+    acc.tiv += it.tiv
+    acc.loss += loss
+    acc.expected += def.probability * BAND_SHARE[it.band] * loss
+    perRef.set(it.ref, acc)
+  }
+  const money = (ref) => {
+    const a = perRef.get(ref)
+    return a ? { tiv: Math.round(a.tiv), loss: Math.round(a.loss), expectedLoss: Math.round(a.expected) } : { tiv: 0, loss: 0, expectedLoss: 0 }
+  }
+  for (const h of exp.homesInPath) {
+    const m = money(h.homeId)
+    h.loss = m.loss
+    h.expectedLoss = m.expectedLoss
+  }
+  for (const a of exp.assetsInPath) Object.assign(a, money(a.assetId))
+  const ranchSummary = exp.ranchHits.map((h) => ({
+    ...h,
+    burnedHa: h.burnedHa,
+    fenceKm: mapRound(h.fenceKm),
+    livestock: h.livestock,
+    structures: h.structures,
+    band: h.burnedHa.p90 > 0 ? 'p90' : h.burnedHa.p50 > 0 ? 'p50' : 'p25',
+    ...money(h.ranchId),
+  }))
+  // Rural outbuildings (HC-05, OK-09) as one line per band.
+  const otherInPath = []
+  for (const band of BAND_KEYS) {
+    const obs = exp.items.filter((it) => it.kind === 'outbuilding' && it.band === band)
+    if (!obs.length) continue
+    const m = obs.map((it) => money(it.ref))
+    otherInPath.push({ label: 'Outbuildings and barns', count: obs.length, band, tiv: m.reduce((s2, x) => s2 + x.tiv, 0), loss: m.reduce((s2, x) => s2 + x.loss, 0), expectedLoss: m.reduce((s2, x) => s2 + x.expectedLoss, 0) })
+  }
   const leadDays = daysBetween(ISSUE.date, def.window[0])
   const fuel = fuelState(def, rng)
   const exposureItems = exp.items
@@ -811,13 +852,14 @@ export function finishFire(built, ctx) {
       sd: Math.round((bands.p25.loss - bands.p90.loss) / 2.56),
       returnPeriodYears: null,
       analogue: def.analogue,
-      inclusions: ['demand surge 18%', 'debris 5%', 'ALE'],
-      exclusions: ['smoke', 'urban conflagration beyond band'],
+      inclusions: ['demand surge 18%', 'debris removal 5%', 'ALE'],
+      exclusions: ['smoke', 'urban conflagration beyond the band'],
       exposureText: typeof def.exposureText === 'function' ? def.exposureText(exposureSummary(bands, exp, ranchSummary, def)) : def.exposureText,
       // Short exposure for the map marker label (§9): homes in path, or the fire's main exposure.
       pathLabel: def.pathLabel ? def.pathLabel(exposureSummary(bands, exp, ranchSummary, def)) : `${Math.round(bands.p50.homes).toLocaleString('en-US')} ${bands.p50.homes === 1 ? 'home' : 'homes'}`,
       ranches: ranchSummary,
       homesInPath: exp.homesInPath,
+      otherInPath,
       assetsInPath: [
         ...exp.assetsInPath,
         ...(def.watch || []).map((w) => ({ assetId: `A-${w.asset}`, band: 'watch', hourReached: w.hour, note: w.note })),

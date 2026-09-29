@@ -7,6 +7,10 @@
   ],
   "zoom": 6
  },
+ "terms": {
+  "deductible": 0.02,
+  "locationLimit": 1200000
+ },
  "portfolios": [
   {
    "id": "tx",
