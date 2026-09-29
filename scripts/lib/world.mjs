@@ -562,3 +562,42 @@ export function buildWorld({ water, turbines }) {
   }
   return { areas, homes, assets, ranches, homesByArea, log, bundles: BUNDLES, water }
 }
+
+// ---------------------------------------------------------------------------
+// Cluster names: "Canadian north-west" rather than "Canadian 2" (after any refit has moved them)
+// ---------------------------------------------------------------------------
+
+const COMPASS8 = ['north', 'north-east', 'east', 'south-east', 'south', 'south-west', 'west', 'north-west']
+const COMPASS16 = ['north', 'north-north-east', 'north-east', 'east-north-east', 'east', 'east-south-east', 'south-east', 'south-south-east', 'south', 'south-south-west', 'south-west', 'west-south-west', 'west', 'west-north-west', 'north-west', 'north-north-west']
+
+function bearingDeg([lat1, lng1], [lat2, lng2]) {
+  const r = Math.PI / 180
+  const y = Math.sin((lng2 - lng1) * r) * Math.cos(lat2 * r)
+  const x = Math.cos(lat1 * r) * Math.sin(lat2 * r) - Math.sin(lat1 * r) * Math.cos(lat2 * r) * Math.cos((lng2 - lng1) * r)
+  return ((Math.atan2(y, x) / r) % 360 + 360) % 360
+}
+
+/** Name each cluster of a multi-cluster place by its compass direction from the place centroid. */
+export function nameClusters(world) {
+  const byPlace = new Map()
+  for (const a of world.areas) {
+    if (a.type !== 'homes') continue
+    const list = byPlace.get(a.placeKey) || []
+    list.push(a)
+    byPlace.set(a.placeKey, list)
+  }
+  for (const [key, list] of byPlace) {
+    if (list.length < 2) continue
+    const place = HOME_PLACES.find((p) => p.key === key)
+    const bearings = list.map((a) => bearingDeg(place.centroid, a.centroid))
+    const coarse = bearings.map((b) => COMPASS8[Math.round(b / 45) % 8])
+    const fine = bearings.map((b) => COMPASS16[Math.round(b / 22.5) % 16])
+    const names = coarse.map((n, i) => (coarse.filter((x) => x === n).length > 1 ? fine[i] : n))
+    list.forEach((a, i) => {
+      const clash = names.filter((x) => x === names[i]).length > 1
+      const dir = `${names[i]}${clash ? ` ${['outer', 'inner', 'far'][list.filter((b, j) => j < i && names[j] === names[i]).length] || i + 1}` : ''}`
+      // "Amarillo south edge (north-east)"; otherwise "Canadian south-west".
+      a.name = / edge$/.test(place.name) ? `${place.name} (${dir})` : `${place.name} ${dir}`
+    })
+  }
+}

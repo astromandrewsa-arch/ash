@@ -15,7 +15,7 @@ export function inPathRows(fire) {
     const ranch = store.ranchById.get(r.ranchId)
     return { key: r.ranchId, kind: 'ranch', name: ranch.name, sub: `${formatHa(r.burnedHa.p50 || r.burnedHa.p25)} · ${formatNumber(r.livestock.p50 || r.livestock.p25)} head`, tiv: r.tiv, band: r.band, hour: null }
   })
-  const other = (fire.otherInPath || []).map((o) => ({ key: `other-${o.band}`, kind: 'other', name: `${formatNumber(o.count)} ${o.label.toLowerCase()}`, sub: 'Rural structures', tiv: o.tiv, band: o.band, hour: null }))
+  const other = (fire.otherInPath || []).map((o) => ({ key: `other-${o.band}`, kind: 'other', name: o.count === 1 ? '1 outbuilding' : `${formatNumber(o.count)} outbuildings and barns`, sub: 'Rural structures', tiv: o.tiv, band: o.band, hour: null }))
   const homes = fire.homesInPath.map((h) => {
     const home = store.homeById.get(h.homeId)
     return { key: h.homeId, kind: 'home', name: home.address, sub: store.areaById.get(home.areaId).name, tiv: home.tiv, band: h.band, hour: h.hourReached, state: home.protectedState }

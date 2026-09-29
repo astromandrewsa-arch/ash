@@ -128,7 +128,6 @@
   padding: 0 16px 0 18px;
   background: var(--glass-strong);
   backdrop-filter: var(--glass-blur) saturate(140%);
-  -webkit-backdrop-filter: var(--glass-blur) saturate(140%);
   border-bottom: 1px solid var(--hairline);
 }
 
@@ -869,7 +868,6 @@ button.panel-head:hover .panel-caret {
   flex-direction: column;
   background: var(--glass-strong);
   backdrop-filter: var(--glass-blur) saturate(140%);
-  -webkit-backdrop-filter: var(--glass-blur) saturate(140%);
   border-left: 1px solid var(--hairline);
   box-shadow: -18px 0 50px rgba(0, 0, 0, 0.45);
   transform: translateX(104%);

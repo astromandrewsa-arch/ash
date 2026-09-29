@@ -19,7 +19,7 @@ export default function ActionList({ actions }) {
             <span>{a.owner}</span>
             <span>Paid by {payerLabel(a.payer).toLowerCase()}</span>
             <span>{dateRange(a.start, a.end)}</span>
-            {a.unit && <span className="muted">{a.unit}</span>}
+            {a.unit && <span className="action-unit">{a.unit}</span>}
           </div>
         </li>
       ))}

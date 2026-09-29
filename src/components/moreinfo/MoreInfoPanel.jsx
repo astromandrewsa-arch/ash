@@ -22,7 +22,9 @@ export default function MoreInfoPanel() {
   const tab = TABS.find((t) => t.id === moreInfo) || TABS[0]
   const Panel = tab.Panel
   return (
-    <section className={`more-info glass${open ? ' is-open' : ''}`} aria-label={fire ? `${fire.id} more info` : 'More info'} aria-hidden={!open} inert={!open}>
+    <>
+    <div className={`mi-scrim${open ? ' is-open' : ''}`} aria-hidden="true" onClick={() => setMoreInfo(null)} />
+    <section className={`more-info${open ? ' is-open' : ''}`} aria-label={fire ? `${fire.id} more info` : 'More info'} aria-hidden={!open} inert={!open}>
       {fire && (
         <>
           <header className="mi-head">
@@ -42,5 +44,6 @@ export default function MoreInfoPanel() {
         </>
       )}
     </section>
+    </>
   )
 }

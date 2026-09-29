@@ -25,7 +25,6 @@
   box-shadow: var(--shadow) !important;
   background: var(--glass-strong);
   backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
 }
 
 .leaflet-bar a,

@@ -163,6 +163,8 @@ export const NEGOTIATIONS = {
       e('2026-09-29', 'Hutchinson County declined to fund engine staging — budget; state asked to cover.', 'Hutchinson County', true),
     ],
     documents: ['Xcel pole priority list.pdf', 'PSPS window notice draft.pdf', 'TFS cost-share request.pdf'],
+    // Agreed in principle, not yet signed (28 Sep entry).
+    inPrinciple: { utility: 1400000 },
   },
   'AU-02': {
     agent: 1, stage: 'Work agreed', counterparty: 'Travis County and Austin Energy', counterpartyType: 'County', decisionDue: '2026-09-30',

@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 
 /** Accessible tab row: arrow keys move between tabs, the active tab carries the orange underline. */
-export default function TabBar({ tabs, active, onChange, label, idPrefix, className = '' }) {
+export default function TabBar({ tabs, active, onChange, label, idPrefix, extra = null, className = '' }) {
   const refs = useRef({})
   const onKey = (e) => {
     const i = tabs.findIndex((t) => t.id === active)
@@ -30,6 +30,7 @@ export default function TabBar({ tabs, active, onChange, label, idPrefix, classN
           {t.label}
         </button>
       ))}
+      {extra && <span className="tabbar-extra">{extra}</span>}
     </div>
   )
 }

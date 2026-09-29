@@ -15,6 +15,7 @@ export function fullDate(iso) {
 
 /** "11–14 Oct" or "30 Oct–2 Nov" */
 export function dateRange(start, end) {
+  if (start === end) return dayMonth(start)
   if (start.slice(0, 7) === end.slice(0, 7)) {
     return `${Number(start.slice(8, 10))}–${dayMonth(end)}`
   }

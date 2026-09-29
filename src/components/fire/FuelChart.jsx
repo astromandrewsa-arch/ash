@@ -31,8 +31,8 @@ export default function FuelChart({ fire }) {
       <XAxis dataKey="label" tick={tick} interval={Math.ceil(rows.length / 6)} axisLine={false} tickLine={false} />
       <YAxis yAxisId="live" domain={[60, 140]} ticks={[60, 80, 100, 120, 140]} tick={tick} axisLine={false} tickLine={false} unit="%" width={42} />
       <YAxis yAxisId="dead" orientation="right" domain={[6, 20]} ticks={[6, 10, 13, 16, 20]} tick={tick} axisLine={false} tickLine={false} unit="%" width={34} />
-      <ReferenceLine yAxisId="live" y={live?.value ?? 80} stroke={c.orange} strokeOpacity={0.55} strokeDasharray="4 4" />
-      <ReferenceLine yAxisId="dead" y={dead?.value ?? 13} stroke={c.blueSoft} strokeOpacity={0.55} strokeDasharray="4 4" />
+      <ReferenceLine yAxisId="live" y={live?.value ?? 80} stroke={c.orange} strokeOpacity={0.55} strokeDasharray="4 4" label={{ value: `Live ${live?.value ?? 80}%`, position: 'insideTopLeft', fill: c.orange, fontSize: 10 }} />
+      <ReferenceLine yAxisId="dead" y={dead?.value ?? 13} stroke={c.blueSoft} strokeOpacity={0.55} strokeDasharray="4 4" label={{ value: `100-h ${dead?.value ?? 13}%`, position: 'insideBottomLeft', fill: c.blueSoft, fontSize: 10 }} />
       <ReferenceLine yAxisId="live" x={last.label} stroke="rgba(243, 241, 236, 0.35)" label={{ value: 'Issued', position: 'insideTopRight', fill: 'rgba(243, 241, 236, 0.55)', fontSize: 10 }} />
       <Line yAxisId="live" dataKey="liveFm" stroke={c.orange} strokeWidth={2.2} dot={false} isAnimationActive={false} />
       <Line yAxisId="live" dataKey="liveProj" stroke={c.orange} strokeWidth={2} strokeDasharray="4 3" dot={false} isAnimationActive={false} />

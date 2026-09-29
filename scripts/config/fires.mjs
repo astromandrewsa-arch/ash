@@ -49,7 +49,7 @@ export const FIRES = [
     spotting: { p25: { everyHours: 2, minM: 900, maxM: 1800 } },
     events: [
       { hour: 0, text: 'Pole failure on the Xcel corridor ignites cured grass north-east of Stinnett.' },
-      { hour: 9, text: 'Head reaches the Canadian outskirts.' },
+      { hour: 19, text: 'After the night slowdown the head reaches the Canadian outskirts.' },
       { hour: 14, text: 'Borger refinery flank exposed.' },
       { hour: 30, text: 'Frontal passage: wind swings to the north-east; the south flank becomes the head toward Pampa.' },
       { hour: 48, text: 'Crews hold the head on plowed wheat north of Pampa.' },

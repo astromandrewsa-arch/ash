@@ -54,3 +54,10 @@ export function returnPeriodText(rp) {
   if (rp < 2) return 'below the 1-in-2 loss for this book'
   return `a 1-in-${Math.round(rp)} event for this book`
 }
+
+/** Money in one unit for a set of figures (a legend reads "$1.4M · $0.8M", not "$1.4M · $800k"). */
+export function formatUSDIn(value, max) {
+  if (max >= 1e6) return `$${(value / 1e6).toFixed(value > 0 && value < 1e5 ? 2 : 1)}M`
+  if (max >= 1e3) return `$${Math.round(value / 1e3)}k`
+  return `$${Math.round(value)}`
+}

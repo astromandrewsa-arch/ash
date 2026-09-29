@@ -86,7 +86,6 @@ p {
 .glass {
   background: var(--glass);
   backdrop-filter: var(--glass-blur) saturate(140%);
-  -webkit-backdrop-filter: var(--glass-blur) saturate(140%);
   border: 1px solid var(--hairline);
   border-radius: var(--radius-panel);
   box-shadow: var(--shadow);

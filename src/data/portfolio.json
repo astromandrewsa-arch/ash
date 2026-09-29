@@ -132,7 +132,7 @@
     },
     {
      "areaId": "STR-1",
-     "name": "Steiner Ranch 1",
+     "name": "Steiner Ranch west",
      "type": "homes",
      "tiv": 974989000,
      "linear": false
@@ -289,7 +289,7 @@
     },
     {
      "areaId": "STR-1",
-     "name": "Steiner Ranch 1",
+     "name": "Steiner Ranch west",
      "type": "homes",
      "tiv": 974989000,
      "linear": false

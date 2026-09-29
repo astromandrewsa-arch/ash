@@ -35,12 +35,6 @@ export default function FireCard({ fireId }) {
         kicker={`${f.id} · ${f.place}`}
         title={f.name}
         onClose={closeDrawer}
-        actions={
-          <button type="button" className="btn btn-ghost more-info-btn" onClick={() => setMoreInfo('addresses')}>
-            <Maximize2 size={13} aria-hidden="true" />
-            More info
-          </button>
-        }
       >
         <p className="dh-line">{f.headerLine}</p>
         <div className="dh-pills">
@@ -52,7 +46,19 @@ export default function FireCard({ fireId }) {
         </div>
         <p className="dh-sub">{leadLine(f)}</p>
       </DrawerHeader>
-      <TabBar tabs={TABS} active={tab.id} onChange={setDrawerTab} label={`${f.id} detail`} idPrefix="fire" />
+      <TabBar
+        tabs={TABS}
+        active={tab.id}
+        onChange={setDrawerTab}
+        label={`${f.id} detail`}
+        idPrefix="fire"
+        extra={
+          <button type="button" className="btn btn-ghost more-info-btn" onClick={() => setMoreInfo('addresses')}>
+            <Maximize2 size={13} aria-hidden="true" />
+            More info
+          </button>
+        }
+      />
       {/* Keyed by tab so each tab opens scrolled to its top. */}
       <div key={tab.id} className="fire-tab" role="tabpanel" id="fire-panel" aria-labelledby={`fire-tab-${tab.id}`}>
         <Panel fire={f} />

@@ -30,7 +30,7 @@ function rowsOf(fire) {
     const ranch = store.ranchById.get(r.ranchId)
     return { key: r.ranchId, kind: 'ranch', name: ranch.name, area: `${formatNumber(r.burnedHa.p50 || r.burnedHa.p25)} ha of range`, tiv: r.tiv, loss: r.loss, expected: r.expectedLoss, band: r.band, hour: null, state: null }
   })
-  const other = (fire.otherInPath || []).map((o) => ({ key: `other-${o.band}`, kind: 'other', name: `${formatNumber(o.count)} ${o.label.toLowerCase()}`, area: 'Rural structures', tiv: o.tiv, loss: o.loss, expected: o.expectedLoss, band: o.band, hour: null, state: null }))
+  const other = (fire.otherInPath || []).map((o) => ({ key: `other-${o.band}`, kind: 'other', name: o.count === 1 ? '1 outbuilding' : `${formatNumber(o.count)} outbuildings and barns`, area: 'Rural structures', tiv: o.tiv, loss: o.loss, expected: o.expectedLoss, band: o.band, hour: null, state: null }))
   const homes = fire.homesInPath.map((h) => {
     const home = store.homeById.get(h.homeId)
     return { key: h.homeId, kind: 'home', name: home.address, area: store.areaById.get(home.areaId).name, tiv: home.tiv, loss: h.loss, expected: h.expectedLoss, band: h.band, hour: h.hourReached, state: home.protectedState }
@@ -71,8 +71,16 @@ export default function AddressTable({ fire }) {
         <tbody>
           {sorted.map((r) => (
             <tr key={r.key} className={`is-${r.kind}`}>
-              <td className="addr-name">{r.name}</td>
-              <td className="muted">{r.area}</td>
+              <td className="addr-name">
+                <span className="cell-clip is-wide" title={r.name}>
+                  {r.name}
+                </span>
+              </td>
+              <td className="muted">
+                <span className="cell-clip" title={r.area}>
+                  {r.area}
+                </span>
+              </td>
               <td className="num">{formatUSDCompact(r.tiv)}</td>
               <td className="num">{formatUSDCompact(r.loss)}</td>
               <td className="num">{formatUSDCompact(r.expected)}</td>

@@ -11,7 +11,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { makeRng, SEED } from './lib/rng.mjs'
 import { destination, haversineKm, pointInRing, projector, round, round5, sum } from './lib/geo.mjs'
-import { buildWorld, MARKET_RATE, relocateCluster } from './lib/world.mjs'
+import { buildWorld, MARKET_RATE, nameClusters, relocateCluster } from './lib/world.mjs'
 import { buildFire, computeExposure, finishFire, fitClusters, FIRES } from './lib/fires.mjs'
 import { DEDUCTIBLE, LOCATION_LIMIT, homeDamageRatio, outcomes, returnPeriod, lossAt, tvar } from './lib/loss.mjs'
 import { addDays, dayMonth, daysBetween, money, windowLabel } from './lib/text.mjs'
@@ -52,6 +52,7 @@ for (const b of built) {
   fitClusters(b, ctx, (id, c) => relocateCluster(world, id, c))
   for (const line of b.fitLog || []) log(`${b.def.id} fit ${line}`)
 }
+nameClusters(world)
 const fires = []
 const fireItems = {}
 for (const b of built) {
@@ -132,7 +133,9 @@ const plans = fires.map((f) => {
   const trigger = f.fuel.thresholds.find((t) => t.name.startsWith('100-h')) || f.fuel.thresholds[0]
   warnings.push({ day: addDays(ws, -10), text: `Pyrome pre-notice to the ${county} emergency manager (trigger: ${trigger.name.toLowerCase()} crossed ${dayMonth(trigger.crossedOn)})`, by: 'Pyrome' })
   const liveT = f.fuel.thresholds.find((t) => t.name.startsWith('Live'))
-  warnings.push({ day: addDays(ws, -6), text: `Sensor alert: ${liveT.name.toLowerCase()} ${liveT.projected ? 'projected' : 'crossed'} ${dayMonth(liveT.crossedOn)}; curing ${f.fuel.curing}%`, by: 'PRIMER sensors' })
+  // By the alert day a crossing projected before it has happened.
+  const alertDay = addDays(ws, -6)
+  warnings.push({ day: alertDay, text: `Sensor alert: ${liveT.name.toLowerCase()} ${liveT.crossedOn <= alertDay ? 'crossed' : 'projected'} ${dayMonth(liveT.crossedOn)}; curing ${f.fuel.curing}%`, by: 'PRIMER sensors' })
   if (cfg.actions.some((x) => x.payer === 'utility' && /PSPS|De-energise|de-energis/i.test(x.text))) warnings.push({ day: addDays(ws, -2), text: 'PSPS window notice to customers on the affected feeder', by: cfg.actions.find((x) => x.payer === 'utility').owner })
   if (f.homesInPath.length) warnings.push({ day: addDays(ws, -3), text: `Evacuation pre-notice to ${f.homesInPath.length.toLocaleString('en-US')} households in the path`, by: `${county} Emergency Management` })
   warnings.push({ day: ws, text: 'Red Flag Warning for the burn window', by: NWS[f.id] })
@@ -190,6 +193,7 @@ const negotiations = fires.map((f) => {
     counterpartyType: cfg.counterpartyType,
     decisionDue: cfg.decisionDue,
     payerAgreed: agreed ? p.payerSplit : Object.fromEntries(Object.keys(p.payerSplit).map((k) => [k, 0])),
+    payerInPrinciple: agreed ? null : cfg.inPrinciple || null,
     entries: cfg.entries,
     ledger: { cost: agreed ? p.cost : 0, saving: Math.round(saving), status: STATUS[cfg.stage], documents: cfg.documents },
   }

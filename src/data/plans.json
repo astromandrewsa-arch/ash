@@ -714,7 +714,7 @@
    },
    {
     "day": "2026-10-08",
-    "text": "Sensor alert: live fuel 80% projected 30 Sep; curing 93%",
+    "text": "Sensor alert: live fuel 80% crossed 30 Sep; curing 93%",
     "by": "PRIMER sensors"
    },
    {
@@ -1268,7 +1268,7 @@
    },
    {
     "day": "2026-10-03",
-    "text": "Sensor alert: live fuel 80% projected 2 Oct; curing 88%",
+    "text": "Sensor alert: live fuel 80% crossed 2 Oct; curing 88%",
     "by": "PRIMER sensors"
    },
    {
@@ -1936,7 +1936,7 @@
    },
    {
     "day": "2026-10-14",
-    "text": "Sensor alert: live fuel 80% projected 6 Oct; curing 86%",
+    "text": "Sensor alert: live fuel 80% crossed 6 Oct; curing 86%",
     "by": "PRIMER sensors"
    },
    {
@@ -2206,7 +2206,7 @@
    },
    {
     "day": "2026-10-05",
-    "text": "Sensor alert: live fuel 80% projected 3 Oct; curing 90%",
+    "text": "Sensor alert: live fuel 80% crossed 3 Oct; curing 90%",
     "by": "PRIMER sensors"
    },
    {
@@ -2325,7 +2325,7 @@
    },
    {
     "day": "2026-10-18",
-    "text": "Sensor alert: live fuel 80% projected 8 Oct; curing 84%",
+    "text": "Sensor alert: live fuel 80% crossed 8 Oct; curing 84%",
     "by": "PRIMER sensors"
    },
    {
@@ -2602,7 +2602,7 @@
    },
    {
     "day": "2026-10-11",
-    "text": "Sensor alert: live fuel 80% projected 3 Oct; curing 89%",
+    "text": "Sensor alert: live fuel 80% crossed 3 Oct; curing 89%",
     "by": "PRIMER sensors"
    },
    {
@@ -2807,7 +2807,7 @@
    },
    {
     "day": "2026-10-16",
-    "text": "Sensor alert: live fuel 80% projected 10 Oct; curing 82%",
+    "text": "Sensor alert: live fuel 80% crossed 10 Oct; curing 82%",
     "by": "PRIMER sensors"
    },
    {

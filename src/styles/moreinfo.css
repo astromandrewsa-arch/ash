@@ -11,7 +11,6 @@
   flex-direction: column;
   background: var(--glass-strong);
   backdrop-filter: var(--glass-blur) saturate(140%);
-  -webkit-backdrop-filter: var(--glass-blur) saturate(140%);
   border-left: 1px solid var(--hairline);
   box-shadow: -24px 0 60px rgba(0, 0, 0, 0.5);
   transform: translateX(104%);
@@ -93,12 +92,11 @@
 }
 
 .addr-table th button {
-  white-space: nowrap;
   display: flex;
   align-items: center;
   gap: 4px;
   width: 100%;
-  padding: 10px 10px 9px;
+  padding: 10px 8px 9px;
   border: 0;
   background: none;
   color: inherit;
@@ -119,7 +117,7 @@
 }
 
 .addr-table td {
-  padding: 7px 10px;
+  padding: 7px 8px;
   border-bottom: 1px solid var(--hairline);
   white-space: nowrap;
 }
@@ -212,4 +210,40 @@
 .export-pages li::marker {
   color: var(--muted);
   font-variant-numeric: tabular-nums;
+}
+
+.more-info {
+  /* Opaque: the drawer sits right under it and must not ghost through. */
+  background: #151516;
+  backdrop-filter: none;
+}
+
+.mi-scrim {
+  position: absolute;
+  z-index: 940;
+  inset: var(--topbar-height) 0 0 0;
+  background: rgba(8, 8, 9, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-panel) var(--ease-out);
+}
+
+.mi-scrim.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cell-clip {
+  display: block;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cell-clip.is-wide {
+  max-width: 190px;
+}
+
+.addr-table th.num {
+  min-width: 64px;
 }

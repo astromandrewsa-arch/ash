@@ -34,9 +34,15 @@ export default function CostVsLoss({ plan, fire }) {
         <span>Net saving</span>
         <strong>{formatUSDCompact(net)}</strong>
       </div>
-      <p className="cost-loss-note">
-        P(prevent) {plan.pPrevent == null ? 'n/a' : formatPct(plan.pPrevent)} · P(fire after plan) {formatPct(plan.pFireAfterPlan)} · loss if the plan holds {formatUSDCompact(plan.lossIfHolds)}, if it fails {formatUSDCompact(plan.lossIfFails)} · dated at {formatPct(fire.probability)}
-      </p>
+      {plan.statePlan ? (
+        <p className="cost-loss-note">
+          State agency plan: it cannot prevent the fire, so the expected loss uses the loss with the plan in place ({formatUSDCompact(plan.lossIfHolds)}, against {formatUSDCompact(plan.lossIfFails)} without it) × P(fire after plan) {formatPct(plan.pFireAfterPlan)}, plus the cost · dated at {formatPct(fire.probability)}
+        </p>
+      ) : (
+        <p className="cost-loss-note">
+          P(prevent) {plan.pPrevent == null ? 'n/a' : formatPct(plan.pPrevent)} · P(fire after plan) {formatPct(plan.pFireAfterPlan)} · loss if the plan holds {formatUSDCompact(plan.lossIfHolds)}, if it fails {formatUSDCompact(plan.lossIfFails)} · dated at {formatPct(fire.probability)}
+        </p>
+      )}
     </div>
   )
 }

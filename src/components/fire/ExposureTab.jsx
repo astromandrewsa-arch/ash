@@ -5,7 +5,7 @@ import Section from '../common/Section.jsx'
 import SegToggle from '../common/SegToggle.jsx'
 import BandCards from './BandCards.jsx'
 import LossRange from './LossRange.jsx'
-import InPathList from './InPathList.jsx'
+import InPathList, { inPathRows } from './InPathList.jsx'
 import { analogueLine, basisLine } from './fireText.js'
 
 const BASIS = [
@@ -21,7 +21,7 @@ export default function ExposureTab({ fire }) {
   const [basis, setBasis] = useState('ground')
   const gross = basis === 'gross'
   const terms = store.portfolio.terms
-  const n = fire.homesInPath.length + fire.assetsInPath.filter((a) => a.band !== 'watch').length
+  const n = inPathRows(fire).length
   return (
     <>
       <Section title="Loss if it burns">
