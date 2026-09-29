@@ -16,7 +16,7 @@ Tick a pass only when its build, smoke test and commit are done.
   - v2 page on v2 data: seven summary tiles, a glass filter bar (type, state and severity chips; bundle, probability, days away, verdict and stage menus; count and reset), a sortable ELT-style table with every §13 figure (row or Enter opens the fire on the map with the slider set), an empty state, and the top-10 exposed-TIV concentration strip with linear accumulations flagged; exposure types and exposed concentrations generated into the data. Deviation: related columns share a cell to fit the page.
 - [x] Pass 7: Simulation (30-day)
   - 30-day calendar with each fire on its window (severity colours, shields on state plans, arrows past day 30), intervention schedule, per-fire arithmetic with the No intervention · As negotiated · Every plan fails toggle and book rows computed in the browser from fires.json and plans.json ($347M / $97.9M / $161M / $1.2M, as checkData prints), premium at risk, season loss ratio and return period tiles, who-pays lines with agreement status, the state-plan statements, and the recharts bar chart with the carrier cost as a thin fourth bar. Deviation: schedule fields stack in four cells.
-- [ ] Pass 8: Premium Intelligence
+- [ ] Pass 8: Premium Intelligence (in progress since 2026-09-29 08:30 UTC)
 - [ ] Pass 9: Historical Accuracy v2
 - [ ] Pass 10: UI polish, Help, README
 - [ ] Pass 11: tour, PDF export, Reports
