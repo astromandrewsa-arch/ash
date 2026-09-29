@@ -1,0 +1,530 @@
+/* v2 pages (CLAUDE.md §13–§16): tiles, filter bars, tables and strips on dark glass. */
+
+/* ---------- KPI tiles ---------- */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 14px 16px 13px;
+}
+
+.kpi-value {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.kpi-note {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kpi.tone-loss .kpi-value {
+  color: #ff6b7d;
+}
+
+.kpi.tone-saving .kpi-value {
+  color: #3ccb7f;
+}
+
+/* ---------- Filter bar ---------- */
+.filter-bar {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding: 12px 14px;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.chip-group-label {
+  margin-right: 2px;
+  color: var(--muted);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.filter-count {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.filter-reset {
+  gap: 6px;
+  height: 30px;
+  padding: 0 11px;
+  font-size: 12px;
+}
+
+/* ---------- Dropdown ---------- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 30px;
+  padding: 0 10px 0 12px;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 999px;
+  background: var(--tint);
+  color: var(--warm-grey);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition: border-color var(--t-panel), background var(--t-panel);
+}
+
+.dropdown-button:hover,
+.dropdown-button.is-open {
+  border-color: rgba(243, 241, 236, 0.36);
+  background: var(--tint-strong);
+}
+
+.dropdown-button.is-set {
+  border-color: rgba(226, 86, 27, 0.7);
+  background: rgba(226, 86, 27, 0.16);
+}
+
+.dropdown-label {
+  color: var(--muted);
+}
+
+.dropdown-value {
+  font-weight: 650;
+}
+
+.dropdown-caret {
+  color: var(--muted);
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 100%;
+  max-height: 320px;
+  margin: 0;
+  padding: 5px;
+  overflow-y: auto;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 10px;
+  background: rgba(22, 22, 23, 0.98);
+  box-shadow: var(--shadow);
+  list-style: none;
+}
+
+.dropdown-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 7px;
+  background: none;
+  color: var(--warm-grey);
+  font: inherit;
+  font-size: 12.5px;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.dropdown-option.is-active {
+  background: var(--tint-strong);
+}
+
+.dropdown-option svg {
+  color: var(--orange);
+}
+
+/* ---------- ELT table ---------- */
+.elt-wrap {
+  overflow-x: auto;
+  margin-bottom: 16px;
+  padding: 4px 0;
+}
+
+.elt {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.elt th {
+  padding: 0;
+  border-bottom: 1px solid var(--hairline-strong);
+  color: var(--muted);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.elt th button {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  width: 100%;
+  padding: 11px 9px 10px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.elt th.num button {
+  justify-content: flex-end;
+}
+
+.elt th button:hover,
+.elt th[aria-sort='ascending'] button,
+.elt th[aria-sort='descending'] button {
+  color: var(--warm-grey);
+}
+
+.elt td {
+  padding: 10px 9px;
+  border-bottom: 1px solid var(--hairline);
+  vertical-align: middle;
+}
+
+.elt tbody tr {
+  cursor: pointer;
+  transition: background var(--t-panel);
+}
+
+.elt tbody tr:hover td,
+.elt tbody tr:focus-visible td {
+  background: var(--tint-strong);
+}
+
+.elt tbody tr:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: -2px;
+}
+
+.elt tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.elt .num {
+  text-align: right;
+}
+
+.elt .nowrap {
+  white-space: nowrap;
+}
+
+.elt .muted {
+  color: var(--muted);
+}
+
+.elt .strong {
+  font-weight: 750;
+}
+
+.elt-id {
+  color: var(--orange);
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.elt-place {
+  min-width: 170px;
+}
+
+.elt-place strong,
+.elt-place span {
+  display: block;
+}
+
+.elt-place strong {
+  font-weight: 650;
+}
+
+.elt-place span {
+  color: var(--muted);
+  font-size: 11.5px;
+}
+
+.elt-state {
+  display: block;
+  color: var(--muted);
+  font-size: 11.5px;
+}
+
+.stage-pill {
+  display: inline-block;
+  padding: 2px 9px;
+  border: 1px solid;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.stage-pill.rag-green {
+  border-color: rgba(30, 158, 90, 0.55);
+  background: rgba(30, 158, 90, 0.14);
+  color: #3ccb7f;
+}
+
+.stage-pill.rag-amber {
+  border-color: rgba(242, 163, 58, 0.55);
+  background: rgba(242, 163, 58, 0.12);
+  color: var(--amber);
+}
+
+.stage-pill.rag-red {
+  border-color: rgba(215, 38, 61, 0.55);
+  background: rgba(215, 38, 61, 0.12);
+  color: #ff6b7d;
+}
+
+/* ---------- Empty state ---------- */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding: 36px 20px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ---------- Concentration strip ---------- */
+.conc {
+  padding: 14px 16px 10px;
+}
+
+.conc-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin-bottom: 10px;
+}
+
+.conc-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.conc-swatch {
+  display: inline-block;
+  width: 18px;
+  height: 8px;
+  border-radius: 999px;
+}
+
+.conc-swatch.is-linear,
+.conc-bar.is-linear {
+  background: repeating-linear-gradient(90deg, var(--yellow) 0 6px, rgba(245, 197, 24, 0.45) 6px 9px);
+}
+
+.conc-list {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.conc-row {
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) 1fr 76px;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.conc-row:hover {
+  background: var(--tint);
+}
+
+.conc-name {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.conc-name strong {
+  overflow: hidden;
+  font-size: 12.5px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.conc-name span {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.conc-linear {
+  color: var(--yellow);
+  font-style: normal;
+}
+
+.conc-track {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--tint);
+}
+
+.conc-bar {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--yellow);
+}
+
+.conc-value {
+  font-size: 12.5px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+/* ---------- ELT compact cells ---------- */
+.elt th {
+  white-space: normal;
+  vertical-align: bottom;
+}
+
+.elt th button {
+  line-height: 13px;
+}
+
+.elt td {
+  padding: 9px 8px;
+}
+
+.elt-stack strong,
+.elt-stack span {
+  display: block;
+}
+
+.elt-stack strong {
+  font-weight: 650;
+}
+
+.elt-stack span {
+  color: var(--muted);
+  font-size: 11.5px;
+  line-height: 16px;
+}
+
+.elt-place {
+  max-width: 210px;
+}
+
+.elt-place strong,
+.elt-place span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.elt-type {
+  white-space: nowrap;
+}
+
+.elt-more {
+  margin-left: 5px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--tint-strong);
+  color: var(--muted);
+  font-size: 10.5px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.sev-text {
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.sev-text.is-severe {
+  color: #ff6b7d;
+}
+
+.sev-text.is-nonsevere {
+  color: var(--amber);
+}
+
+.elt-plan {
+  min-width: 170px;
+}
+
+.plan-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.elt-plan .stage-pill {
+  font-size: 11px;
+}

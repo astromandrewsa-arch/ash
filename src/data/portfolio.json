@@ -80,6 +80,118 @@
      "loss": 559000000
     }
    ],
+   "exposedConcentrations": [
+    {
+     "areaId": "STR-1",
+     "name": "Steiner Ranch west",
+     "type": "homes",
+     "exposedTiv": 154491000,
+     "pointLoss": 83967402,
+     "fireIds": [
+      "AU-02"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "BAS-2",
+     "name": "Bastrop east",
+     "type": "homes",
+     "exposedTiv": 134309000,
+     "pointLoss": 70937831,
+     "fireIds": [
+      "BA-03"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "U-BASIN",
+     "name": "Basin pipeline segment",
+     "type": "utility",
+     "exposedTiv": 60375000,
+     "pointLoss": 17370000,
+     "fireIds": [
+      "PB-08"
+     ],
+     "linear": true
+    },
+    {
+     "areaId": "U-XCEL",
+     "name": "Xcel/SPS Panhandle distribution corridor",
+     "type": "utility",
+     "exposedTiv": 57059113,
+     "pointLoss": 14378897,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": true
+    },
+    {
+     "areaId": "PKL-2",
+     "name": "Graford / Possum Kingdom south-west",
+     "type": "homes",
+     "exposedTiv": 51313000,
+     "pointLoss": 33147161,
+     "fireIds": [
+      "PK-06"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "R-MAT",
+     "name": "Matador Ranch",
+     "type": "rangeland",
+     "exposedTiv": 46763084,
+     "pointLoss": 14058157,
+     "fireIds": [
+      "RP-07"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "R-TT",
+     "name": "Turkey Track Ranch",
+     "type": "rangeland",
+     "exposedTiv": 38851536,
+     "pointLoss": 11783692,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "CAN-1",
+     "name": "Canadian south-west",
+     "type": "homes",
+     "exposedTiv": 38501000,
+     "pointLoss": 17121944,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "CAN-2",
+     "name": "Canadian south-east",
+     "type": "homes",
+     "exposedTiv": 32303000,
+     "pointLoss": 14627090,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "STN-1",
+     "name": "Stinnett",
+     "type": "homes",
+     "exposedTiv": 29703000,
+     "pointLoss": 12960602,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": false
+    }
+   ],
    "concentrations": [
     {
      "areaId": "U-P66",
@@ -228,6 +340,118 @@
     {
      "rp": 1000,
      "loss": 650000000
+    }
+   ],
+   "exposedConcentrations": [
+    {
+     "areaId": "STR-1",
+     "name": "Steiner Ranch west",
+     "type": "homes",
+     "exposedTiv": 154491000,
+     "pointLoss": 83967402,
+     "fireIds": [
+      "AU-02"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "BAS-2",
+     "name": "Bastrop east",
+     "type": "homes",
+     "exposedTiv": 134309000,
+     "pointLoss": 70937831,
+     "fireIds": [
+      "BA-03"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "STW-1",
+     "name": "Stillwater SW (south-west)",
+     "type": "homes",
+     "exposedTiv": 77244000,
+     "pointLoss": 43280728,
+     "fireIds": [
+      "OK-10"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "U-BASIN",
+     "name": "Basin pipeline segment",
+     "type": "utility",
+     "exposedTiv": 60375000,
+     "pointLoss": 17370000,
+     "fireIds": [
+      "PB-08"
+     ],
+     "linear": true
+    },
+    {
+     "areaId": "U-XCEL",
+     "name": "Xcel/SPS Panhandle distribution corridor",
+     "type": "utility",
+     "exposedTiv": 57059113,
+     "pointLoss": 14378897,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": true
+    },
+    {
+     "areaId": "PKL-2",
+     "name": "Graford / Possum Kingdom south-west",
+     "type": "homes",
+     "exposedTiv": 51313000,
+     "pointLoss": 33147161,
+     "fireIds": [
+      "PK-06"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "R-MAT",
+     "name": "Matador Ranch",
+     "type": "rangeland",
+     "exposedTiv": 46763084,
+     "pointLoss": 14058157,
+     "fireIds": [
+      "RP-07"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "R-TT",
+     "name": "Turkey Track Ranch",
+     "type": "rangeland",
+     "exposedTiv": 38851536,
+     "pointLoss": 11783692,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "CAN-1",
+     "name": "Canadian south-west",
+     "type": "homes",
+     "exposedTiv": 38501000,
+     "pointLoss": 17121944,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": false
+    },
+    {
+     "areaId": "CAN-2",
+     "name": "Canadian south-east",
+     "type": "homes",
+     "exposedTiv": 32303000,
+     "pointLoss": 14627090,
+     "fireIds": [
+      "PH-01"
+     ],
+     "linear": false
     }
    ],
    "concentrations": [

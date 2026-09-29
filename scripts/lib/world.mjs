@@ -596,8 +596,8 @@ export function nameClusters(world) {
     list.forEach((a, i) => {
       const clash = names.filter((x) => x === names[i]).length > 1
       const dir = `${names[i]}${clash ? ` ${['outer', 'inner', 'far'][list.filter((b, j) => j < i && names[j] === names[i]).length] || i + 1}` : ''}`
-      // "Amarillo south edge (north-east)"; otherwise "Canadian south-west".
-      a.name = / edge$/.test(place.name) ? `${place.name} (${dir})` : `${place.name} ${dir}`
+      // "Amarillo south edge (north-east)", "Stillwater SW (south-west)"; otherwise "Canadian south-west".
+      a.name = / (edge|N|NE|E|SE|S|SW|W|NW)$/.test(place.name) ? `${place.name} (${dir})` : `${place.name} ${dir}`
     })
   }
 }

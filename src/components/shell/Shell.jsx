@@ -13,7 +13,7 @@ import SpreadControls from '../panels/SpreadControls.jsx'
 import Drawer from '../drawer/Drawer.jsx'
 import MoreInfoPanel from '../moreinfo/MoreInfoPanel.jsx'
 import PageSkeleton from '../pages/PageSkeleton.jsx'
-import LocationsAtRiskPage from '../pages/LocationsAtRiskPage.jsx'
+import LocationsPage from '../locations/LocationsPage.jsx'
 import SimulationPage from '../pages/SimulationPage.jsx'
 import PremiumPage from '../pages/PremiumPage.jsx'
 import NegotiationChannelPage from '../pages/NegotiationChannelPage.jsx'
@@ -22,7 +22,7 @@ import ReportsPage from '../pages/ReportsPage.jsx'
 
 // v1 screens render inside .v1-legacy until their pass replaces them.
 const PAGES = {
-  locations: { Component: LocationsAtRiskPage, legacy: true },
+  locations: { Component: LocationsPage },
   simulation: { Component: SimulationPage },
   premium: { Component: PremiumPage },
   negotiation: { Component: NegotiationChannelPage, legacy: true },

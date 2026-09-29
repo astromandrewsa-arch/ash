@@ -63,6 +63,17 @@ for (const b of built) {
 }
 log('fires: exposure and losses done')
 
+// Type of exposure per fire (§13): the classes carrying the P50 loss, largest first.
+const EXPOSURE_CLASS = (kind) => (kind === 'home' ? 'Homes' : ['forage', 'fencing', 'livestock', 'structures', 'outbuilding'].includes(kind) ? 'Rangeland' : 'Utility')
+for (const f of fires) {
+  const byClass = {}
+  for (const it of fireItems[f.id]) byClass[EXPOSURE_CLASS(it.kind)] = (byClass[EXPOSURE_CLASS(it.kind)] || 0) + it.loss
+  const total = Object.values(byClass).reduce((a, b) => a + b, 0) || 1
+  const ranked = Object.entries(byClass).sort((a, b) => b[1] - a[1])
+  f.exposureTypes = ranked.filter(([, v]) => v / total >= 0.1).map(([k]) => k)
+  f.exposureType = ranked[0][0]
+}
+
 const homeById = new Map(world.homes.map((h) => [h.id, h]))
 const areaById = new Map(world.areas.map((a) => [a.id, a]))
 const assetById = new Map(world.assets.map((a) => [a.id, a]))
@@ -340,9 +351,31 @@ function portfolioFor(id, name, short, view, states, curve) {
   const geocodeBuildingPct = share((h) => h.yearBuilt >= 1967)
   const avgByArea = new Map(areas.map((a) => [a.id, a.avgTiv]))
   const itvFlagged = homes.filter((h) => h.tiv < 0.6 * avgByArea.get(h.areaId)).length
+  const isLinear = (a) => a.type === 'utility' && ['line', 'pipeline'].includes(assetById.get(a.assetIds?.[0])?.kind)
   const concentrations = areas
-    .map((a) => ({ areaId: a.id, name: a.name, type: a.type, tiv: a.tiv, linear: a.type === 'utility' && ['line', 'pipeline'].includes(assetById.get(a.assetIds?.[0])?.kind) }))
+    .map((a) => ({ areaId: a.id, name: a.name, type: a.type, tiv: a.tiv, linear: isLinear(a) }))
     .sort((x, y) => y.tiv - x.tiv)
+    .slice(0, 10)
+  // Exposed concentration (§13): TIV inside the dated fires' P50 paths, by area.
+  const exposedByArea = new Map()
+  for (const f of fires) {
+    if (!states.includes(f.state)) continue
+    for (const it of fireItems[f.id]) {
+      const areaId = it.kind === 'home' ? it.areaId : assetById.get(it.ref)?.areaId || ranchById.get(it.ref)?.areaId || null
+      if (!areaId || !areaIds.has(areaId)) continue
+      const e = exposedByArea.get(areaId) || { tiv: 0, loss: 0, fires: new Set() }
+      e.tiv += it.tiv
+      e.loss += it.loss
+      e.fires.add(f.id)
+      exposedByArea.set(areaId, e)
+    }
+  }
+  const exposedConcentrations = [...exposedByArea.entries()]
+    .map(([areaId, e]) => {
+      const a = areaById.get(areaId)
+      return { areaId, name: a.name, type: a.type, exposedTiv: Math.round(e.tiv), pointLoss: Math.round(e.loss), fireIds: [...e.fires], linear: isLinear(a) }
+    })
+    .sort((x, y) => y.exposedTiv - x.exposedTiv)
     .slice(0, 10)
   return {
     id, name, short, view,
@@ -364,6 +397,7 @@ function portfolioFor(id, name, short, view, states, curve) {
     oep250: lossAt(curve, 250),
     tvar100: Math.round(tvar(curve, 100)),
     epCurve: curve,
+    exposedConcentrations,
     concentrations,
     dataQuality: {
       geocodeBuildingPct: round(geocodeBuildingPct, 4),
