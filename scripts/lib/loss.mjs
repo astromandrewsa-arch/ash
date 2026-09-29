@@ -34,7 +34,7 @@ export function calibrate(bands, targets) {
   const factor = {}
   for (const key of ['p90', 'p50', 'p25']) {
     const base = sum(bands[key], (it) => it.base)
-    factor[key] = round(clamp(targets[key] / Math.max(base, 1), 0.35, 1.6), 2)
+    factor[key] = round(clamp(targets[key] / Math.max(base, 1), 0.3, 1.6), 2)
   }
   return factor
 }

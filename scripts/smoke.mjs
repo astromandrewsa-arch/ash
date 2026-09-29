@@ -200,6 +200,12 @@ const STEPS = [
     name: 'play the spread',
     since: 1,
     run: async (page) => {
+      // From pass 4 the spread autoplays on open: reset it first, then play from ignition.
+      const reset = page.locator('button[aria-label="Reset spread"]').first()
+      if ((await reset.count()) && (await reset.isEnabled().catch(() => false))) {
+        await reset.click()
+        await sleep(300)
+      }
       const play = page.locator('button[aria-label="Play spread"], button[aria-label="Play"]').first()
       await play.waitFor({ state: 'visible', timeout: 5000 })
       await play.click()

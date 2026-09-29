@@ -26,7 +26,8 @@ export const PLANS = {
   },
   'AU-02': {
     verdict: 'Targeted',
-    summary: 'Protect the 96 highest-value homes on the lake side (40 m breaks, hardening audits, two engines on the day); RM 620 spur de-energised; the other 144 homes in the path get pre-warning only.',
+    // Counts come from the generated path: x.protected, x.warnedP50 (other P50 homes), x.tail (P25-only homes).
+    summary: (x) => `Protect the ${x.protected} highest-value homes on the lake side (40 m breaks, hardening audits, two engines on the day); RM 620 spur de-energised; the other ${x.warnedP50} homes in the P50 path get pre-warning only.`,
     actions: [
       a('40 m fuel breaks behind the 96 lake-side homes', 'Demo Carrier', 'carrier', 132000, '2026-10-01', '2026-10-06', '$2,200 per ac'),
       a('Hardening audits on 96 homes', 'Demo Carrier', 'carrier', 240000, '2026-10-01', '2026-10-05', '$2,500 per home'),

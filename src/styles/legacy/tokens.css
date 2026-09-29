@@ -31,9 +31,4 @@
   color: var(--charcoal);
 }
 
-/* Layout values the v1 map padding helper reads from :root. */
-:root {
-  --slider-clearance: 150px;
-  --slider-clearance-open: 150px;
-  --alert-compact-clearance: 88px;
-}
+

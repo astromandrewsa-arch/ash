@@ -437,8 +437,9 @@ function buildRanches(water, log) {
       herds.push({ kind: 'cattle', head: def.cattle / groups, pos: near ? randomInside(rng, ring, def.herdCenter, def.herdSpreadM) : randomInside(rng, ring) })
     }
     if (def.bison) {
-      const herdCenter = def.key === 'TGP' ? [36.806, -96.43] : randomInside(rng, ring)
-      for (let i = 0; i < Math.round(def.bison / 25); i++) herds.push({ kind: 'bison', head: 25, pos: randomInside(rng, ring, herdCenter, 1600) })
+      // The preserve's bison graze the south unit where OK-09 is dated.
+      const herdCenter = def.key === 'TGP' ? [36.816, -96.43] : randomInside(rng, ring)
+      for (let i = 0; i < Math.round(def.bison / 25); i++) herds.push({ kind: 'bison', head: 25, pos: randomInside(rng, ring, herdCenter, def.key === 'TGP' ? 1100 : 1600) })
     }
     const acres = def.acres
     const components = {

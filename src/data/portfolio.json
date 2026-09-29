@@ -24,14 +24,14 @@
    ],
    "areas": 84,
    "totals": {
-    "tiv": 26868735999,
+    "tiv": 26868701999,
     "homes": 43000,
     "assets": 18,
     "poles": 4081,
     "lineKm": 367,
     "ranchAcres": 1700000,
-    "hectaresUnderForecast": 800333,
-    "premium": 127444075
+    "hectaresUnderForecast": 800313,
+    "premium": 127443700
    },
    "aal": 27266300,
    "aalPer1000": 1.01,
@@ -130,7 +130,7 @@
      "areaId": "STR-1",
      "name": "Steiner Ranch 1",
      "type": "homes",
-     "tiv": 975010000,
+     "tiv": 974989000,
      "linear": false
     },
     {
@@ -149,8 +149,8 @@
     }
    ],
    "dataQuality": {
-    "geocodeBuildingPct": 0.9895,
-    "itvFlagged": 1457,
+    "geocodeBuildingPct": 0.9892,
+    "itvFlagged": 1464,
     "roofClassAPct": 0.46,
     "defensibleSpace10Pct": 0.831,
     "medianYearBuilt": 2003,
@@ -174,14 +174,14 @@
    ],
    "areas": 100,
    "totals": {
-    "tiv": 31661021999,
+    "tiv": 31660987999,
     "homes": 49500,
     "assets": 23,
     "poles": 5541,
     "lineKm": 498.4,
     "ranchAcres": 1826000,
-    "hectaresUnderForecast": 859035,
-    "premium": 142570543
+    "hectaresUnderForecast": 859015,
+    "premium": 142570168
    },
    "aal": 31705000,
    "aalPer1000": 1,
@@ -287,7 +287,7 @@
      "areaId": "STR-1",
      "name": "Steiner Ranch 1",
      "type": "homes",
-     "tiv": 975010000,
+     "tiv": 974989000,
      "linear": false
     },
     {
@@ -299,10 +299,10 @@
     }
    ],
    "dataQuality": {
-    "geocodeBuildingPct": 0.9876,
-    "itvFlagged": 1654,
+    "geocodeBuildingPct": 0.9874,
+    "itvFlagged": 1661,
     "roofClassAPct": 0.459,
-    "defensibleSpace10Pct": 0.831,
+    "defensibleSpace10Pct": 0.832,
     "medianYearBuilt": 2002,
     "constructionKnownPct": 1
    }
@@ -359,15 +359,15 @@
   }
  ],
  "simulation": {
-  "none": 347358019,
+  "none": 346420879,
   "asNegotiated": 97863300,
   "fails": 160730000,
   "carrier": 1230000,
   "returnPeriods": {
-   "none": 185.1,
+   "none": 183.9,
    "asNegotiated": 15.9,
    "fails": 37.8
   },
-  "premiumAtRisk": 6427649
+  "premiumAtRisk": 5879914
  }
 }

@@ -206,10 +206,129 @@
 
 .spread-bar {
   display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 12px 9px;
+  animation: rise-in var(--t-panel) var(--ease-out);
+}
+
+.spread-row {
+  display: flex;
   align-items: center;
   gap: 14px;
-  padding: 8px 12px;
-  animation: rise-in var(--t-panel) var(--ease-out);
+}
+
+.spread-held {
+  margin-left: 7px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: rgba(30, 158, 90, 0.18);
+  border: 1px solid rgba(30, 158, 90, 0.5);
+  color: #7FE0AA;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: 2px;
+}
+
+.spread-tick {
+  position: relative;
+}
+
+.spread-tick.is-held::before {
+  background: repeating-linear-gradient(90deg, rgba(30, 158, 90, 0.45) 0 3px, rgba(30, 158, 90, 0.12) 3px 6px);
+}
+
+.tick-event {
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  margin-left: -2.5px;
+  border-radius: 50%;
+  background: var(--warm-grey);
+}
+
+.tick-event.is-shift {
+  width: 7px;
+  height: 7px;
+  margin-left: -3.5px;
+  top: -8px;
+  background: var(--orange);
+  box-shadow: 0 0 0 2px rgba(226, 86, 27, 0.3);
+}
+
+.tick-event.is-spot {
+  background: var(--amber);
+}
+
+.wind-strip {
+  display: flex;
+  align-items: center;
+  min-height: 41px;
+  gap: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--hairline);
+  font-size: 12px;
+  min-width: 0;
+}
+
+.wind-now {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.wind-arrow {
+  color: #A9C7F0;
+  transition: transform 400ms var(--ease-out);
+}
+
+.wind-event {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  color: var(--muted);
+}
+
+.wind-event.is-fresh {
+  animation: event-in 700ms var(--ease-out);
+}
+
+.wind-event.is-fresh .wind-event-text {
+  color: var(--warm-grey);
+}
+
+@keyframes event-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+
+.wind-event .pill {
+  flex-shrink: 0;
+  height: 20px;
+  font-size: 10.5px;
+}
+
+.wind-event-hour {
+  flex-shrink: 0;
+  color: #FFB08C;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.wind-event-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 16px;
 }
 
 .spread-buttons {

@@ -32,7 +32,7 @@ export default function MapView() {
           </pattern>
         </defs>
       </svg>
-      <MapContainer className="map-canvas" center={view.center} zoom={view.zoom} preferCanvas minZoom={MAP.minZoom} maxZoom={MAP.maxZoom} zoomControl={false} attributionControl={false}>
+      <MapContainer className="map-canvas" center={view.center} zoom={view.zoom} preferCanvas minZoom={MAP.minZoom} maxZoom={MAP.maxZoom} zoomSnap={MAP.zoomSnap} zoomControl={false} attributionControl={false}>
         <TileLayer url={MAP.imageryUrl} attribution={MAP.imageryAttribution} maxNativeZoom={MAP.maxNativeZoom} maxZoom={MAP.maxZoom} className="imagery-tiles" />
         <LabelsOverlay />
         <ZoomControl position="bottomleft" />

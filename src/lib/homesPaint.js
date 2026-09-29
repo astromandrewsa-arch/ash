@@ -124,6 +124,19 @@ function paintClusters(ctx, view, st) {
     ctx.stroke()
     ctx.fillStyle = '#16140C'
     ctx.fillText(countLabel(k.homes), k.x, k.y + 0.5)
+    // Homes the open fire has reached: a red arc for their share of the cluster.
+    let burnt = 0
+    if (st.engulfed?.size) for (const a of k.areas) burnt += st.engulfed.get(a.id) || 0
+    if (burnt > 0) {
+      const share = Math.max(0.08, Math.min(1, burnt / k.homes))
+      ctx.beginPath()
+      ctx.arc(k.x, k.y, k.r + 3.5, -Math.PI / 2, -Math.PI / 2 + share * TAU)
+      ctx.strokeStyle = c.red
+      ctx.lineWidth = 3.5
+      ctx.lineCap = 'round'
+      ctx.stroke()
+      ctx.lineCap = 'butt'
+    }
   }
 }
 

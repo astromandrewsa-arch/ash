@@ -60,3 +60,14 @@ export function distanceToRingKm(pt, ring) {
   for (const v of ring) best = Math.min(best, haversineKm(pt, v))
   return best
 }
+
+/** Point in a list of polygons (each [outer, ...holes]). */
+export function pointInPolys(pt, polys) {
+  for (const poly of polys || []) {
+    if (!pointInRing(pt, poly[0])) continue
+    let inHole = false
+    for (let i = 1; i < poly.length; i++) if (pointInRing(pt, poly[i])) inHole = true
+    if (!inHole) return true
+  }
+  return false
+}

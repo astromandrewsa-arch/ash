@@ -115,10 +115,17 @@ const plans = fires.map((f) => {
   const avoided = cfg.pPrevent == null ? 0 : f.lossPoint - (cfg.pPrevent * cfg.lossIfHolds + (1 - cfg.pPrevent) * cfg.lossIfFails)
   if (p50Ha > 2000 || cfg.verdict === 'Targeted') {
     const why = p50Ha > 2000 ? `P50 footprint ${Math.round(p50Ha).toLocaleString('en-US')} ha exceeds 2,000 ha` : `protecting all ${p50Homes.length} homes would cost ${money(p50Homes.length * 12000)}, ${Math.round(((p50Homes.length * 12000) / Math.max(1, avoided * 0.08)) * 100)}% of the structure loss it avoids`
-    scopeRule = protectedIds.length && protectedIds.length < f.homesInPath.length
-      ? `Scope rule applied: ${why}. Structure work narrows to the ${protectedIds.length} homes ranked highest by TIV × damage ratio; the other ${f.homesInPath.length - protectedIds.length} homes in the path get pre-warning.`
-      : `Scope rule applied: ${why}. The plan works on fuel, lines and the state response rather than on every structure.`
+    const tail = f.homesInPath.length - p50Homes.length
+    const tailText = tail ? ` and the ${tail.toLocaleString('en-US')} in the tail band` : ''
+    if (protectedIds.length && protectedIds.length < p50Homes.length) {
+      scopeRule = `Scope rule applied: ${why}. Structure work narrows to the ${protectedIds.length} homes ranked highest by TIV × damage ratio; the other ${(p50Homes.length - protectedIds.length).toLocaleString('en-US')} homes in the P50 path${tailText} get pre-warning.`
+    } else if (protectedIds.length) {
+      scopeRule = `Scope rule checked: ${why}. The plan still covers all ${protectedIds.length} homes in the P50 path${tail ? `; the ${tail.toLocaleString('en-US')} in the tail band get pre-warning` : ''}.`
+    } else {
+      scopeRule = `Scope rule applied: ${why}. The plan works on fuel, lines and the state response rather than on every structure.`
+    }
   }
+  const summaryCounts = { protected: protectedIds.length, warnedP50: p50Homes.length - protectedIds.length, tail: f.homesInPath.length - p50Homes.length }
   const ws = f.windowStart
   const county = f.county
   const warnings = []
@@ -135,7 +142,7 @@ const plans = fires.map((f) => {
     fireId: f.id,
     verdict: cfg.verdict,
     statePlan: !!cfg.statePlan,
-    summary: cfg.summary,
+    summary: typeof cfg.summary === 'function' ? cfg.summary(summaryCounts) : cfg.summary,
     actions: cfg.actions.map(({ text, owner, payer, cost: c, start, end, unit }) => ({ text, owner, payer, cost: c, start, end, unit })),
     cost,
     payerSplit,

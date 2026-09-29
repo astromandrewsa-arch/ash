@@ -323,30 +323,30 @@
   "fenceKm": 132,
   "headquarters": [
    36.8065,
-   -96.4445
+   -96.4745
   ],
   "structures": [
    {
     "name": "Tallgrass Prairie Preserve headquarters",
     "pos": [
      36.8065,
-     -96.4445
+     -96.4745
     ],
     "tiv": 12690947
    },
    {
     "name": "Tallgrass Prairie Preserve camp 1",
     "pos": [
-     36.8095,
-     -96.4135
+     36.815,
+     -96.378
     ],
     "tiv": 4852421
    },
    {
     "name": "Tallgrass Prairie Preserve camp 2",
     "pos": [
-     36.8005,
-     -96.4585
+     36.79,
+     -96.485
     ],
     "tiv": 4852421
    }

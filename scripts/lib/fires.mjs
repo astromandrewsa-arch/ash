@@ -557,8 +557,10 @@ export function buildFire(def, ctx) {
   if (def.islands) {
     const route = assetsByKey.BASIN.geometry
     for (let i = 0; i < def.islands.count; i++) {
-      const along = pointAtKm(route, rng.between(4, 40))
-      const c = destination(along, rng.pick([rng.between(-20, 20) + 160, rng.between(-20, 20) + 340]), rng.between(80, 2600))
+      const [k0, k1] = def.islands.alongKm ?? [4, 40]
+      const [o0, o1] = def.islands.offsetM ?? [80, 2600]
+      const along = pointAtKm(route, rng.between(k0, k1))
+      const c = destination(along, rng.pick([rng.between(-20, 20) + 160, rng.between(-20, 20) + 340]), rng.between(o0, o1))
       const s = rng.between(def.islands.sizeM[0], def.islands.sizeM[1])
       const ring = rectRing(c, s, s * rng.between(0.8, 1.2), rng.between(0, 90))
       islands.push([ring.map(pr.toXY)])
@@ -598,7 +600,8 @@ export function buildFire(def, ctx) {
       barriers,
       islands,
       shifts: def.shifts || [],
-      holdHour: def.holdHour ?? endHour,
+      // The tail band can assume crews hold later than in the expected case.
+      holdHour: band === 'p25' && def.p25HoldHour ? def.p25HoldHour : def.holdHour ?? endHour,
       endHour,
       rng: makeRng(`spot:${def.id}:${band}`),
     })
@@ -660,18 +663,24 @@ export function fitClusters(built, ctx, relocate) {
     const area = ctx.areas.find((a) => a.id === fit.area)
     const base = fit.from || area.anchor
     const [lo, hi] = fit.range || [-3000, 3000]
-    const steps = 48
+    const steps = fit.steps || 48
+    // Several bearings may be searched; the band-ratio terms can be weighted up where the
+    // P90 core must hold most of the P50 homes for the band losses to be reachable.
+    const bearings = fit.bearings || [fit.bearing]
+    const w = fit.ratioWeight || 1
     let best = null
-    for (let i = 0; i <= steps; i++) {
-      const sM = lo + ((hi - lo) * i) / steps
-      relocate(fit.area, destination(base, fit.bearing, sM))
-      const n = countBandHomes(built, ctx)
-      const t = fit.homes
-      const score = 2 * (Math.abs(n.p50 - t) / t) + 0.35 * Math.abs(n.p90 / Math.max(n.p50, 1) - 0.8) + 0.2 * Math.abs(n.p25 / Math.max(n.p50, 1) - 1.3)
-      if (!best || score < best.score) best = { sM, n, score }
+    for (const bearing of bearings) {
+      for (let i = 0; i <= steps; i++) {
+        const sM = lo + ((hi - lo) * i) / steps
+        relocate(fit.area, destination(base, bearing, sM))
+        const n = countBandHomes(built, ctx)
+        const t = fit.homes
+        const score = 4 * (Math.abs(n.p50 - t) / t) + w * (0.35 * Math.abs(n.p90 / Math.max(n.p50, 1) - 0.8) + 0.2 * Math.abs(n.p25 / Math.max(n.p50, 1) - 1.3))
+        if (!best || score < best.score) best = { sM, n, score, bearing }
+      }
     }
-    relocate(fit.area, destination(base, fit.bearing, best.sM))
-    built.fitLog = [...(built.fitLog || []), `${fit.area}: ${best.n.p90}/${best.n.p50}/${best.n.p25} homes (P50 target ${fit.homes}) at ${Math.round(best.sM)} m on ${fit.bearing}°`]
+    relocate(fit.area, destination(base, best.bearing, best.sM))
+    built.fitLog = [...(built.fitLog || []), `${fit.area}: ${best.n.p90}/${best.n.p50}/${best.n.p25} homes (P50 target ${fit.homes}) at ${Math.round(best.sM)} m on ${best.bearing}°`]
   }
 }
 
@@ -687,6 +696,23 @@ function rectRing(center, w, d, rot) {
 }
 
 // ---------------------------------------------------------------------------
+/** What sits in the P50 path, for the fire's exposure line (config templates read this). */
+function exposureSummary(bands, exp, ranches, def) {
+  const asset = (key) => exp.assetsInPath.find((a) => a.assetId === `A-${key}` && a.band !== 'p25')
+  const r = (key) => ranches.find((x) => x.ranchId === `RN-${key}`)
+  const p50 = (v) => (v && typeof v === 'object' ? v.p50 : v) || 0
+  return {
+    homes: bands.p50.homes,
+    homesTiv: bands.p50.homesTiv,
+    avgTiv: bands.p50.homes ? bands.p50.homesTiv / bands.p50.homes : 0,
+    asset,
+    ranch: r,
+    livestock: ranches.reduce((s, x) => s + p50(x.livestock), 0),
+    outbuildings: def.outbuildings?.p50 || 0,
+    p50,
+  }
+}
+
 // Assemble the fires.json record once losses are calibrated
 // ---------------------------------------------------------------------------
 
@@ -785,7 +811,9 @@ export function finishFire(built, ctx) {
       analogue: def.analogue,
       inclusions: ['demand surge 18%', 'debris 5%', 'ALE'],
       exclusions: ['smoke', 'urban conflagration beyond band'],
-      exposureText: def.exposureText,
+      exposureText: typeof def.exposureText === 'function' ? def.exposureText(exposureSummary(bands, exp, ranchSummary, def)) : def.exposureText,
+      // Short exposure for the map marker label (§9): homes in path, or the fire's main exposure.
+      pathLabel: def.pathLabel ? def.pathLabel(exposureSummary(bands, exp, ranchSummary, def)) : `${Math.round(bands.p50.homes).toLocaleString('en-US')} ${bands.p50.homes === 1 ? 'home' : 'homes'}`,
       ranches: ranchSummary,
       homesInPath: exp.homesInPath,
       assetsInPath: [

@@ -13,8 +13,8 @@
    "U-LCRA"
   ],
   "policies": 9800,
-  "tiv": 5603820000,
-  "premium": 34175021,
+  "tiv": 5603799000,
+  "premium": 34174653,
   "marketRatePer1000": 6.1,
   "primerRatePer1000": 7.5,
   "adequacy": -0.187,
@@ -35,11 +35,11 @@
    "intensityText": "Intensity one class hotter: High → Very High",
    "sensitivityLine": "If afternoon temperatures run 1°C above forecast, or live fuel dries 2 points a day instead of 1.4 for the next 30 days, this bundle crosses the extreme threshold in the following month and the technical rate rises another 9%."
   },
-  "aal": 5884011,
-  "primerSeasonExpectedLoss": 75690128,
-  "adequacyRatio": 12.86,
-  "lossRatio": 2.215,
-  "combinedRatio": 2.482,
+  "aal": 5883989,
+  "primerSeasonExpectedLoss": 75570662,
+  "adequacyRatio": 12.84,
+  "lossRatio": 2.211,
+  "combinedRatio": 2.478,
   "expenseRatio": 0.267
  },
  {
@@ -125,10 +125,10 @@
    "sensitivityLine": "If afternoon temperatures run 1°C above forecast, or live fuel dries 2 points a day instead of 1.3 for the next 30 days, this bundle crosses the extreme threshold in the following month and the technical rate rises another 9%."
   },
   "aal": 2688562,
-  "primerSeasonExpectedLoss": 6863351,
-  "adequacyRatio": 2.55,
-  "lossRatio": 0.427,
-  "combinedRatio": 0.704,
+  "primerSeasonExpectedLoss": 6516808,
+  "adequacyRatio": 2.42,
+  "lossRatio": 0.405,
+  "combinedRatio": 0.682,
   "expenseRatio": 0.277
  },
  {
@@ -142,8 +142,8 @@
    "U-SPB"
   ],
   "policies": 2900,
-  "tiv": 899625000,
-  "premium": 6571775,
+  "tiv": 899617000,
+  "premium": 6570618,
   "marketRatePer1000": 7.3,
   "primerRatePer1000": 8.4,
   "adequacy": -0.131,
@@ -164,11 +164,11 @@
    "intensityText": "Intensity one class hotter: High → Very High",
    "sensitivityLine": "If afternoon temperatures run 1°C above forecast, or live fuel dries 2 points a day instead of 1.3 for the next 30 days, this bundle crosses the extreme threshold in the following month and the technical rate rises another 9%."
   },
-  "aal": 1151520,
-  "primerSeasonExpectedLoss": 63523567,
-  "adequacyRatio": 55.16,
-  "lossRatio": 9.666,
-  "combinedRatio": 9.948,
+  "aal": 1151510,
+  "primerSeasonExpectedLoss": 63690306,
+  "adequacyRatio": 55.31,
+  "lossRatio": 9.693,
+  "combinedRatio": 9.975,
   "expenseRatio": 0.282
  },
  {
@@ -184,8 +184,8 @@
    "U-ONCOR"
   ],
   "policies": 2400,
-  "tiv": 612513000,
-  "premium": 5018863,
+  "tiv": 612508000,
+  "premium": 5020013,
   "marketRatePer1000": 8.2,
   "primerRatePer1000": 9.1,
   "adequacy": -0.099,
@@ -206,11 +206,11 @@
    "intensityText": "Intensity one class hotter: High → Very High",
    "sensitivityLine": "If afternoon temperatures run 1°C above forecast, or live fuel dries 2 points a day instead of 1.5 for the next 30 days, this bundle crosses the extreme threshold in the following month and the technical rate rises another 9%."
   },
-  "aal": 820767,
-  "primerSeasonExpectedLoss": 45734879,
-  "adequacyRatio": 55.72,
-  "lossRatio": 9.113,
-  "combinedRatio": 9.398,
+  "aal": 820761,
+  "primerSeasonExpectedLoss": 46112253,
+  "adequacyRatio": 56.18,
+  "lossRatio": 9.186,
+  "combinedRatio": 9.471,
   "expenseRatio": 0.285
  },
  {
@@ -408,10 +408,10 @@
    "sensitivityLine": "If afternoon temperatures run 1°C above forecast, or live fuel dries 2 points a day instead of 1.1 for the next 30 days, this bundle crosses the extreme threshold in the following month and the technical rate rises another 9%."
   },
   "aal": 140000,
-  "primerSeasonExpectedLoss": 1891242,
-  "adequacyRatio": 13.51,
-  "lossRatio": 1.719,
-  "combinedRatio": 1.962,
+  "primerSeasonExpectedLoss": 1728385,
+  "adequacyRatio": 12.35,
+  "lossRatio": 1.571,
+  "combinedRatio": 1.814,
   "expenseRatio": 0.243
  }
 ]

@@ -229,7 +229,7 @@ const inSector = (brg, from, to) => (from <= to ? brg >= from && brg <= to : brg
  *  - rateScale, flankScale, lbScale: band and calibration multipliers
  *  - night: { from: 21, to: 7, factor: 0.3 } | null
  *  - dayFactors: per-day multipliers (index 0 = ignition day), optional
- *  - fingers: [{ bearing, halfWidth, factor, slope }]
+ *  - fingers: [{ bearing, halfWidth, factor, slope, origin?, corridorM?, normalDeg?, fromHour?, toHour? }]
  *  - slopes: [{ from, to, factor }]
  *  - spotting: { everyHours, minM, maxM, fromHour } | null
  *  - barriers: [{ id, polys (metre polygons), delayHours (null = hard) }]
@@ -428,6 +428,7 @@ export function simulate(cfg) {
         let k = clock
         const brg = bearingOf([nx, ny])
         for (const f of fingers) {
+          if ((f.fromHour != null && t < f.fromHour) || (f.toHour != null && t >= f.toHour)) continue
           if (f.origin) {
             // Anchored finger: the front inside a narrow corridor along the draw runs faster.
             const ax = Math.sin(f.bearing * RAD)
@@ -436,7 +437,7 @@ export function simulate(cfg) {
             const ry = ring[i][1] - f.origin[1]
             const along = rx * ax + ry * ay
             const across = Math.abs(rx * ay - ry * ax)
-            if (along > -f.corridorM && across <= f.corridorM && diff(brg, f.bearing) <= 70) k *= f.factor * (f.slope ?? 1) * (1 - 0.5 * (across / f.corridorM) ** 2)
+            if (along > -f.corridorM && across <= f.corridorM && diff(brg, f.bearing) <= (f.normalDeg ?? 70)) k *= f.factor * (f.slope ?? 1) * (1 - 0.5 * (across / f.corridorM) ** 2)
           } else if (diff(brg, f.bearing) <= (f.halfWidth ?? 10)) k *= f.factor * (f.slope ?? 1)
         }
         for (const s of slopes) if (inSector(brg, s.from, s.to)) k *= s.factor

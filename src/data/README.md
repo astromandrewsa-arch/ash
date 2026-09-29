@@ -24,7 +24,7 @@ Texas ranches total $0.6B; the Osage block is the $0.2B Osage rangeland bundle.
 
 **fires.json** — the ten dated fires of §7 (compact JSON).
 Ignition zone (polygon, ignition-prior heat points), window, probability, fuel state (both clocks, thresholds, 30-day series and projection), narrowing strip, recipe and events, barriers, and P90/P50/P25 perimeters at every step (`held: true` steps repeat the previous perimeter).
-Bands carry homes, assets, TIV, damage ratio, loss and gross; `homesInPath`/`assetsInPath` give band and hour reached; losses are calibrated to within ±10% of the §7 table.
+Bands carry homes, assets, TIV, damage ratio, loss and gross; `homesInPath`/`assetsInPath` give band and hour reached; `exposureText` and `pathLabel` are the drawer's exposure line and the marker label; losses are calibrated to within ±10% of the §7 table.
 
 **watchlist.json** — five areas dated below the 90% threshold (§7).
 Probability, window length, narrowing rate and a note on the sensor state.

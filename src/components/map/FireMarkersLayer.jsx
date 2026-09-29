@@ -4,7 +4,6 @@ import { store } from '../../lib/store.js'
 import { stageRag, visibleFires, watchlistInBook } from '../../lib/selectors.js'
 import { fireCenter } from '../../lib/geo.js'
 import { dayMonth } from '../../lib/dates.js'
-import { formatNumber } from '../../lib/format.js'
 import { labelWidth, placeLabels } from '../../lib/labelPlacement.js'
 import { panelKeepOut } from '../../lib/mapPadding.js'
 import useApp from '../../state/useApp.js'
@@ -13,10 +12,9 @@ import FireMarker, { FLAME_PX } from './FireMarker.jsx'
 
 const COMPACT_BELOW_ZOOM = 7
 
-/** §9 marker label: ID · called date · window · probability · homes in path. */
+/** §9 marker label: ID · called date · window · probability · homes in path (or the main exposure). */
 export function fireLabel(f) {
-  const homes = f.bands.p50.homes
-  return `${f.id} · ${dayMonth(f.called)} · ${f.windowLabel} · ${Math.round(f.probability * 100)}% · ${formatNumber(homes)} ${homes === 1 ? 'home' : 'homes'}`
+  return `${f.id} · ${dayMonth(f.called)} · ${f.windowLabel} · ${Math.round(f.probability * 100)}% · ${f.pathLabel}`
 }
 
 export default function FireMarkersLayer() {
@@ -34,7 +32,8 @@ export default function FireMarkersLayer() {
     const ordered = [...fires].sort((a, b) => (a.id === selectedId ? -1 : b.id === selectedId ? 1 : b.lossPoint - a.lossPoint))
     const items = ordered.map((f) => {
       const text = compact && f.id !== selectedId ? f.id : fireLabel(f)
-      return { id: f.id, point: map.latLngToContainerPoint(fireCenter(f)), size: FLAME_PX[f.intensity.class] + 8, width: labelWidth(text), height: 24 }
+      // The open fire's label would sit on its own perimeter; the drawer header carries it instead.
+      return { id: f.id, point: map.latLngToContainerPoint(fireCenter(f)), size: FLAME_PX[f.intensity.class] + 8, width: labelWidth(text), height: 24, skip: f.id === selectedId }
     })
     // Watchlist rings are obstacles too, so labels do not sit on them.
     const rings = views.watchlist

@@ -67,4 +67,7 @@
   --alert-card-width: 292px;
   --overlay-gap: 16px;
   --slider-height: 88px;
+  --slider-clearance: 150px;
+  --slider-clearance-open: 250px;
+  --alert-compact-clearance: 88px;
 }
