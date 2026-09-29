@@ -550,7 +550,6 @@
 .loss-range-note {
   color: var(--muted);
   font-size: 12px;
-  font-variant-numeric: tabular-nums;
 }
 
 .band-cards {

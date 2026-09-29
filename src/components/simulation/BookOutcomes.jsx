@@ -14,6 +14,7 @@ export default function BookOutcomes({ sim, outcome }) {
       <KpiTile label="Premium at risk · 30 days" value={formatUSDCompact(sim.premiumAtRisk)} note="homeowners premium in the paths" />
       <KpiTile label={`Season loss ratio · ${label.toLowerCase()}`} value={formatPct(sim.lossRatio[outcome])} note={others((v) => formatPct(v), sim.lossRatio)} tone={outcome === 'asNegotiated' ? 'saving' : 'loss'} />
       <KpiTile
+        plain
         label={`Return period · ${label.toLowerCase()}`}
         value={rpText(sim.returnPeriods[outcome])}
         note={OUTCOMES.filter((o) => o.id !== outcome)

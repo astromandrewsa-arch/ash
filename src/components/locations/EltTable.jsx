@@ -89,7 +89,7 @@ export default function EltTable({ rows, sort, onSort, onOpen }) {
                 <span className="nowrap">{formatUSDRange(r.lower, r.upper)}</span>
               </td>
               <td className="num">{formatUSDCompact(r.sd)}</td>
-              <td className="num nowrap">{rpText(r.rp)}</td>
+              <td className="num nowrap txt">{rpText(r.rp)}</td>
               <td className="elt-plan">
                 <div className="plan-stack">
                   <VerdictPill verdict={r.verdict} />

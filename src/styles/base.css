@@ -52,6 +52,9 @@ textarea {
 }
 
 /* Text cells inside tabular tables keep proportional hyphens. */
+.num.txt,
+.kpi.is-plain .kpi-value,
+.kpi.is-plain .kpi-note,
 .elt-id,
 .elt-place,
 .elt-type,
