@@ -267,10 +267,16 @@ const bundles = Object.entries(BUNDLES).map(([id, meta]) => {
   const seasonEL = Math.round(sum(insured, (a) => lossByArea.get(a.id) || 0))
   const expenseRatio = PRICING.variableExpense + (PRICING.fixedExpensePerPolicy * policies) / Math.max(premium, 1)
   const lossRatio = round(seasonEL / premium, 3)
+  // Technical premium at PRIMER's rate, and what the written premium falls short of it (or exceeds it by).
+  const technicalPremium = Math.round((rates.primer * tiv) / 1000)
   return {
     id,
     name: meta.name,
+    state: areasIn[0].state,
+    kind: id === 'osage-rangeland' ? 'rangeland' : 'homes',
     areaIds: areasIn.map((a) => a.id),
+    insuredAreaIds: insured.map((a) => a.id),
+    places: [...new Set(insured.map((a) => a.place))],
     policies,
     tiv,
     premium,
@@ -278,6 +284,8 @@ const bundles = Object.entries(BUNDLES).map(([id, meta]) => {
     primerRatePer1000: rates.primer,
     adequacy,
     underPriced: adequacy < 0,
+    technicalPremium,
+    premiumGap: technicalPremium - premium,
     recommendation2027: rates.rec2027,
     recommendationText: rates.recText,
     filed2027: FILED_2027[id] ?? FILED_DEFAULT,
@@ -286,7 +294,10 @@ const bundles = Object.entries(BUNDLES).map(([id, meta]) => {
       fuelLoadText: `+${Math.round(sc.fuelLoad * 100)}% fuel load against the five-year mean after the wet spring`,
       liveFmTrend: -sc.liveTrend,
       liveFmText: `Live fuel falling ${sc.liveTrend} pts/day; crosses 80% on ${dayMonth(sc.liveCross)}`,
+      liveFmCrossesOn: sc.liveCross,
+      liveFmThreshold: 80,
       deadFmVsLastYear: -sc.dead100,
+      dead1000hVsLastYear: -sc.dead1000,
       deadFmText: `100-h dead fuel ${sc.dead100} pts and 1000-h ${sc.dead1000} pts below this date last year`,
       rosVsLastSeason: sc.ros,
       rosText: `Rate of spread +${Math.round(sc.ros * 100)}% against last season`,

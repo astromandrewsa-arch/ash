@@ -4,7 +4,7 @@ import { VIEWS } from '../../config/views.js'
 import RailButton from './RailButton.jsx'
 
 export default function Rail() {
-  const { activeView, setActiveView, helpOpen, setHelpOpen } = useApp()
+  const { activeView, setActiveView, helpOpen, openHelp } = useApp()
   const top = VIEWS.filter((view) => !view.bottom)
   const bottom = VIEWS.filter((view) => view.bottom)
 
@@ -13,7 +13,7 @@ export default function Rail() {
       key={view.id}
       view={view}
       active={view.modal ? helpOpen : activeView === view.id}
-      onSelect={() => (view.modal ? setHelpOpen(true) : setActiveView(view.id))}
+      onSelect={() => (view.modal ? openHelp() : setActiveView(view.id))}
     />
   )
 

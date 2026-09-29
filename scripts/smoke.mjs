@@ -239,6 +239,37 @@ const STEPS = [
     },
   },
   {
+    name: 'Premium Intelligence: bundle, science panel, sources, rate gap and 2027 on the map',
+    since: 8,
+    run: async (page) => {
+      await railTo(page, 'premium')
+      const rows = page.locator('.bundle-table tbody tr')
+      await rows.first().waitFor({ state: 'visible', timeout: 5000 })
+      if ((await rows.count()) < 8) throw new Error(`expected at least eight bundles, got ${await rows.count()}`)
+      await rows.nth(1).click()
+      await page.waitForSelector('.sci-panel .sci-sensitivity', { timeout: 3000 })
+      await sleep(400)
+      await shot(page, 'premium-bundle')
+      await page.locator('.ctx-info').first().click()
+      await page.waitForSelector('#help-sources', { timeout: 3000 })
+      await sleep(500)
+      await shot(page, 'premium-sources')
+      await page.keyboard.press('Escape')
+      await sleep(300)
+      await page.locator('.sci-map').click()
+      await page.waitForSelector('.bundle-label', { timeout: 8000 })
+      await sleep(1800)
+      await page.getByRole('radio', { name: '2027', exact: true }).click()
+      await sleep(800)
+      await waitForTiles(page, 4000)
+      await shot(page, 'rate-gap-2027')
+      await page.getByRole('radio', { name: 'Today', exact: true }).click()
+      await page.keyboard.press('Escape')
+      await page.locator('.qv-chip', { hasText: 'Rate gap' }).click()
+      await sleep(400)
+    },
+  },
+  {
     name: 'tour end to end',
     since: 11,
     optionalFlag: 'tour',

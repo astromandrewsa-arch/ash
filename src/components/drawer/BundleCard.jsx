@@ -10,10 +10,9 @@ export default function BundleCard({ bundleId }) {
   const { closeDrawer, setActiveView } = useApp()
   const b = store.bundleById.get(bundleId)
   if (!b) return null
-  const places = [...new Set(b.areaIds.map((id) => store.areaById.get(id)?.place).filter(Boolean))]
   return (
     <div className="card-body">
-      <DrawerHeader icon={<BadgeDollarSign size={20} />} kicker="Premium Intelligence bundle" title={b.name} subtitle={places.join(' · ')} onClose={closeDrawer} />
+      <DrawerHeader icon={<BadgeDollarSign size={20} />} kicker="Premium Intelligence bundle" title={b.name} subtitle={b.places.join(' · ')} onClose={closeDrawer} />
       <section className="card-section">
         <FactGrid
           items={[
@@ -23,7 +22,8 @@ export default function BundleCard({ bundleId }) {
             { label: 'Market rate', value: `$${b.marketRatePer1000.toFixed(1)} per $1,000` },
             { label: 'PRIMER technical rate', value: `$${b.primerRatePer1000.toFixed(1)} per $1,000` },
             { label: 'Rate adequacy', value: `${formatPctSigned(b.adequacy)} ${b.adequacy < 0 ? 'under-priced' : 'over-priced'}`, tone: b.adequacy < 0 ? 'orange' : 'blue' },
-            { label: '2027 recommendation', value: b.recommendationText, wide: true },
+            { label: '2027 recommendation', value: b.recommendationText, tone: b.recommendation2027 < 0 ? 'blue' : 'orange', wide: b.recommendationText.length > 16 },
+            { label: 'Carrier’s filed 2027 change', value: formatPctSigned(b.filed2027) },
           ]}
         />
       </section>

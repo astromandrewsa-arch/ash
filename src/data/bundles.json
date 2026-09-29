@@ -2,6 +2,8 @@
  {
   "id": "austin-lake",
   "name": "Austin Lake",
+  "state": "TX",
+  "kind": "homes",
   "areaIds": [
    "STR-1",
    "STR-2",
@@ -12,6 +14,22 @@
    "JES-1",
    "U-LCRA"
   ],
+  "insuredAreaIds": [
+   "STR-1",
+   "STR-2",
+   "LKW-1",
+   "LKW-2",
+   "BEE-1",
+   "WLH-1",
+   "JES-1"
+  ],
+  "places": [
+   "Steiner Ranch",
+   "Lakeway",
+   "Bee Cave",
+   "West Lake Hills",
+   "Jester Estates"
+  ],
   "policies": 9800,
   "tiv": 5603799000,
   "premium": 34174653,
@@ -19,6 +37,8 @@
   "primerRatePer1000": 7.5,
   "adequacy": -0.187,
   "underPriced": true,
+  "technicalPremium": 42028493,
+  "premiumGap": 7853840,
   "recommendation2027": 0.18,
   "recommendationText": "+18%",
   "filed2027": 0.06,
@@ -27,7 +47,10 @@
    "fuelLoadText": "+31% fuel load against the five-year mean after the wet spring",
    "liveFmTrend": -1.4,
    "liveFmText": "Live fuel falling 1.4 pts/day; crosses 80% on 8 Oct",
+   "liveFmCrossesOn": "2026-10-08",
+   "liveFmThreshold": 80,
    "deadFmVsLastYear": -1.2,
+   "dead1000hVsLastYear": -0.9,
    "deadFmText": "100-h dead fuel 1.2 pts and 1000-h 0.9 pts below this date last year",
    "rosVsLastSeason": 0.42,
    "rosText": "Rate of spread +42% against last season",
@@ -45,11 +68,25 @@
  {
   "id": "austin-north",
   "name": "Austin North",
+  "state": "TX",
+  "kind": "homes",
   "areaIds": [
    "JON-1",
    "LGV-1",
    "CDP-1",
    "LEA-1"
+  ],
+  "insuredAreaIds": [
+   "JON-1",
+   "LGV-1",
+   "CDP-1",
+   "LEA-1"
+  ],
+  "places": [
+   "Jonestown",
+   "Lago Vista",
+   "Cedar Park west edge",
+   "Leander west edge"
   ],
   "policies": 12000,
   "tiv": 5936000000,
@@ -58,6 +95,8 @@
   "primerRatePer1000": 6.4,
   "adequacy": -0.078,
   "underPriced": true,
+  "technicalPremium": 37990400,
+  "premiumGap": 2998820,
   "recommendation2027": 0.08,
   "recommendationText": "+8%",
   "filed2027": 0.06,
@@ -66,7 +105,10 @@
    "fuelLoadText": "+24% fuel load against the five-year mean after the wet spring",
    "liveFmTrend": -1.2,
    "liveFmText": "Live fuel falling 1.2 pts/day; crosses 80% on 14 Oct",
+   "liveFmCrossesOn": "2026-10-14",
+   "liveFmThreshold": 80,
    "deadFmVsLastYear": -1,
+   "dead1000hVsLastYear": -0.8,
    "deadFmText": "100-h dead fuel 1 pts and 1000-h 0.8 pts below this date last year",
    "rosVsLastSeason": 0.33,
    "rosText": "Rate of spread +33% against last season",
@@ -84,6 +126,8 @@
  {
   "id": "hill-country-west",
   "name": "Hill Country West",
+  "state": "TX",
+  "kind": "homes",
   "areaIds": [
    "SPW-1",
    "DRS-1",
@@ -101,6 +145,27 @@
    "U-SPWM",
    "U-SPSW"
   ],
+  "insuredAreaIds": [
+   "SPW-1",
+   "DRS-1",
+   "WIM-1",
+   "FBG-1",
+   "FBG-2",
+   "FBG-3",
+   "KRV-1",
+   "KRV-2",
+   "KRV-3",
+   "MBF-1",
+   "MBF-2"
+  ],
+  "places": [
+   "Spicewood",
+   "Dripping Springs",
+   "Wimberley",
+   "Fredericksburg",
+   "Kerrville",
+   "Marble Falls"
+  ],
   "policies": 6200,
   "tiv": 2400502000,
   "premium": 16090136,
@@ -108,6 +173,8 @@
   "primerRatePer1000": 7.8,
   "adequacy": -0.141,
   "underPriced": true,
+  "technicalPremium": 18723916,
+  "premiumGap": 2633780,
   "recommendation2027": 0.14,
   "recommendationText": "+14%",
   "filed2027": 0.04,
@@ -116,7 +183,10 @@
    "fuelLoadText": "+27% fuel load against the five-year mean after the wet spring",
    "liveFmTrend": -1.3,
    "liveFmText": "Live fuel falling 1.3 pts/day; crosses 80% on 19 Oct",
+   "liveFmCrossesOn": "2026-10-19",
+   "liveFmThreshold": 80,
    "deadFmVsLastYear": -1.1,
+   "dead1000hVsLastYear": -0.9,
    "deadFmText": "100-h dead fuel 1.1 pts and 1000-h 0.9 pts below this date last year",
    "rosVsLastSeason": 0.37,
    "rosText": "Rate of spread +37% against last season",
@@ -134,12 +204,24 @@
  {
   "id": "lost-pines",
   "name": "Lost Pines",
+  "state": "TX",
+  "kind": "homes",
   "areaIds": [
    "BAS-1",
    "BAS-2",
    "BAS-3",
    "SMV-1",
    "U-SPB"
+  ],
+  "insuredAreaIds": [
+   "BAS-1",
+   "BAS-2",
+   "BAS-3",
+   "SMV-1"
+  ],
+  "places": [
+   "Bastrop",
+   "Smithville"
   ],
   "policies": 2900,
   "tiv": 899625000,
@@ -148,6 +230,8 @@
   "primerRatePer1000": 8.4,
   "adequacy": -0.131,
   "underPriced": true,
+  "technicalPremium": 7556850,
+  "premiumGap": 985075,
   "recommendation2027": 0.12,
   "recommendationText": "+12%",
   "filed2027": 0.04,
@@ -156,7 +240,10 @@
    "fuelLoadText": "+22% fuel load against the five-year mean after the wet spring",
    "liveFmTrend": -1.3,
    "liveFmText": "Live fuel falling 1.3 pts/day; crosses 80% on 16 Oct",
+   "liveFmCrossesOn": "2026-10-16",
+   "liveFmThreshold": 80,
    "deadFmVsLastYear": -1,
+   "dead1000hVsLastYear": -1,
    "deadFmText": "100-h dead fuel 1 pts and 1000-h 1 pts below this date last year",
    "rosVsLastSeason": 0.34,
    "rosText": "Rate of spread +34% against last season",
@@ -174,6 +261,8 @@
  {
   "id": "cross-timbers",
   "name": "Cross Timbers",
+  "state": "TX",
+  "kind": "homes",
   "areaIds": [
    "PKL-1",
    "PKL-2",
@@ -183,6 +272,20 @@
    "CAR-1",
    "U-ONCOR"
   ],
+  "insuredAreaIds": [
+   "PKL-1",
+   "PKL-2",
+   "PKL-3",
+   "EAS-1",
+   "CIS-1",
+   "CAR-1"
+  ],
+  "places": [
+   "Graford / Possum Kingdom",
+   "Eastland",
+   "Cisco",
+   "Carbon"
+  ],
   "policies": 2400,
   "tiv": 612508000,
   "premium": 5020013,
@@ -190,6 +293,8 @@
   "primerRatePer1000": 9.1,
   "adequacy": -0.099,
   "underPriced": true,
+  "technicalPremium": 5573823,
+  "premiumGap": 553810,
   "recommendation2027": 0.09,
   "recommendationText": "+9%",
   "filed2027": 0.04,
@@ -198,7 +303,10 @@
    "fuelLoadText": "+29% fuel load against the five-year mean after the wet spring",
    "liveFmTrend": -1.5,
    "liveFmText": "Live fuel falling 1.5 pts/day; crosses 80% on 5 Oct",
+   "liveFmCrossesOn": "2026-10-05",
+   "liveFmThreshold": 80,
    "deadFmVsLastYear": -1.2,
+   "dead1000hVsLastYear": -0.9,
    "deadFmText": "100-h dead fuel 1.2 pts and 1000-h 0.9 pts below this date last year",
    "rosVsLastSeason": 0.4,
    "rosText": "Rate of spread +40% against last season",
@@ -216,6 +324,8 @@
  {
   "id": "panhandle-north",
   "name": "Panhandle North",
+  "state": "TX",
+  "kind": "homes",
   "areaIds": [
    "AMA-1",
    "AMA-2",
@@ -242,6 +352,31 @@
    "R-JA",
    "R-PDC"
   ],
+  "insuredAreaIds": [
+   "AMA-1",
+   "AMA-2",
+   "AMA-3",
+   "CYN-1",
+   "CYN-2",
+   "FRI-1",
+   "FRI-2",
+   "BRG-1",
+   "BRG-2",
+   "STN-1",
+   "CAN-1",
+   "CAN-2",
+   "PAM-1",
+   "PAM-2"
+  ],
+  "places": [
+   "Amarillo south edge",
+   "Canyon",
+   "Fritch",
+   "Borger",
+   "Stinnett",
+   "Canadian",
+   "Pampa"
+  ],
   "policies": 4100,
   "tiv": 1102694000,
   "premium": 9823502,
@@ -249,6 +384,8 @@
   "primerRatePer1000": 12.4,
   "adequacy": -0.282,
   "underPriced": true,
+  "technicalPremium": 13673406,
+  "premiumGap": 3849904,
   "recommendation2027": 0.31,
   "recommendationText": "+31%, corridor homes to a surcharge class",
   "filed2027": 0.04,
@@ -257,7 +394,10 @@
    "fuelLoadText": "+38% fuel load against the five-year mean after the wet spring",
    "liveFmTrend": -1.8,
    "liveFmText": "Live fuel falling 1.8 pts/day; crosses 80% on 1 Oct",
+   "liveFmCrossesOn": "2026-10-01",
+   "liveFmThreshold": 80,
    "deadFmVsLastYear": -1.4,
+   "dead1000hVsLastYear": -1.1,
    "deadFmText": "100-h dead fuel 1.4 pts and 1000-h 1.1 pts below this date last year",
    "rosVsLastSeason": 0.5,
    "rosText": "Rate of spread +50% against last season",
@@ -275,6 +415,8 @@
  {
   "id": "permian-rolling-plains",
   "name": "Permian and Rolling Plains",
+  "state": "TX",
+  "kind": "homes",
   "areaIds": [
    "WFS-1",
    "WFS-2",
@@ -298,6 +440,26 @@
    "R-MAT",
    "R-PIT"
   ],
+  "insuredAreaIds": [
+   "WFS-1",
+   "WFS-2",
+   "WFS-3",
+   "ABI-1",
+   "ABI-2",
+   "ABI-3",
+   "BSP-1",
+   "BSP-2",
+   "MID-1",
+   "MID-2",
+   "MID-3",
+   "MID-4"
+  ],
+  "places": [
+   "Wichita Falls west edge",
+   "Abilene",
+   "Big Spring",
+   "Midland edge"
+  ],
   "policies": 5600,
   "tiv": 1513582000,
   "premium": 10444195,
@@ -305,6 +467,8 @@
   "primerRatePer1000": 6.6,
   "adequacy": 0.045,
   "underPriced": false,
+  "technicalPremium": 9989641,
+  "premiumGap": -454554,
   "recommendation2027": -0.04,
   "recommendationText": "−4%, win share",
   "filed2027": 0.04,
@@ -313,7 +477,10 @@
    "fuelLoadText": "+20% fuel load against the five-year mean after the wet spring",
    "liveFmTrend": -1.9,
    "liveFmText": "Live fuel falling 1.9 pts/day; crosses 80% on 30 Sep",
+   "liveFmCrossesOn": "2026-09-30",
+   "liveFmThreshold": 80,
    "deadFmVsLastYear": -1.1,
+   "dead1000hVsLastYear": -0.8,
    "deadFmText": "100-h dead fuel 1.1 pts and 1000-h 0.8 pts below this date last year",
    "rosVsLastSeason": 0.31,
    "rosText": "Rate of spread +31% against last season",
@@ -331,6 +498,8 @@
  {
   "id": "oklahoma-central",
   "name": "Oklahoma Central",
+  "state": "OK",
+  "kind": "homes",
   "areaIds": [
    "STW-1",
    "STW-2",
@@ -346,6 +515,23 @@
    "U-CUSH",
    "U-SUBO"
   ],
+  "insuredAreaIds": [
+   "STW-1",
+   "STW-2",
+   "STW-3",
+   "GUT-1",
+   "GUT-2",
+   "MAN-1",
+   "NOR-1",
+   "WDW-1"
+  ],
+  "places": [
+   "Stillwater SW",
+   "Guthrie / Logan County",
+   "Mannford",
+   "Norman east edge",
+   "Woodward"
+  ],
   "policies": 6500,
   "tiv": 1592286000,
   "premium": 11936467,
@@ -353,6 +539,8 @@
   "primerRatePer1000": 8.6,
   "adequacy": -0.128,
   "underPriced": true,
+  "technicalPremium": 13693660,
+  "premiumGap": 1757193,
   "recommendation2027": 0.13,
   "recommendationText": "+13%",
   "filed2027": 0.04,
@@ -361,7 +549,10 @@
    "fuelLoadText": "+26% fuel load against the five-year mean after the wet spring",
    "liveFmTrend": -1.6,
    "liveFmText": "Live fuel falling 1.6 pts/day; crosses 80% on 3 Oct",
+   "liveFmCrossesOn": "2026-10-03",
+   "liveFmThreshold": 80,
    "deadFmVsLastYear": -1.3,
+   "dead1000hVsLastYear": -1,
    "deadFmText": "100-h dead fuel 1.3 pts and 1000-h 1 pts below this date last year",
    "rosVsLastSeason": 0.44,
    "rosText": "Rate of spread +44% against last season",
@@ -379,10 +570,22 @@
  {
   "id": "osage-rangeland",
   "name": "Osage rangeland (farm)",
+  "state": "OK",
+  "kind": "rangeland",
   "areaIds": [
    "R-TGP",
    "R-OSB",
    "R-OSG"
+  ],
+  "insuredAreaIds": [
+   "R-TGP",
+   "R-OSB",
+   "R-OSG"
+  ],
+  "places": [
+   "Tallgrass Prairie Preserve",
+   "Osage Nation Bluestem Ranch",
+   "Osage grazing block"
   ],
   "policies": 40,
   "tiv": 200000000,
@@ -391,6 +594,8 @@
   "primerRatePer1000": 5.1,
   "adequacy": 0.078,
   "underPriced": false,
+  "technicalPremium": 1020000,
+  "premiumGap": -80001,
   "recommendation2027": -0.07,
   "recommendationText": "−7%",
   "filed2027": 0.04,
@@ -399,7 +604,10 @@
    "fuelLoadText": "+21% fuel load against the five-year mean after the wet spring",
    "liveFmTrend": -1.1,
    "liveFmText": "Live fuel falling 1.1 pts/day; crosses 80% on 21 Oct",
+   "liveFmCrossesOn": "2026-10-21",
+   "liveFmThreshold": 80,
    "deadFmVsLastYear": -0.9,
+   "dead1000hVsLastYear": -0.7,
    "deadFmText": "100-h dead fuel 0.9 pts and 1000-h 0.7 pts below this date last year",
    "rosVsLastSeason": 0.3,
    "rosText": "Rate of spread +30% against last season",

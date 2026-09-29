@@ -418,3 +418,28 @@
 .spread-tick:hover {
   color: var(--warm-grey);
 }
+
+/* Rate gap key: title with the Today · 2027 toggle */
+.vl-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+
+.vl-head .label {
+  width: auto;
+  min-width: 0;
+}
+
+.seg-toggle.vl-seg {
+  flex: none;
+  margin: 0;
+  padding: 2px;
+}
+
+.seg-toggle.vl-seg button {
+  padding: 2px 9px;
+  font-size: 10.5px;
+}

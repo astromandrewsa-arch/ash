@@ -39,7 +39,7 @@ Stage (including Partial and State plan branches), counterparty, decision due, d
 Ledger with agreed cost, saving, status and documents.
 
 **bundles.json** — nine Premium Intelligence bundles (§15): the eight listed plus the Osage rangeland row.
-Policies, TIV and premium from the homes; market and PRIMER technical rate, adequacy, 2027 recommendation and the carrier's filed change.
+Policies, TIV and premium from the priced areas (`insuredAreaIds`); market and PRIMER technical rate, technical premium and gap, adequacy, 2027 recommendation and the carrier's filed change.
 Science panel inputs, long-run AAL, PRIMER season expected loss, loss ratio and combined ratio.
 
 **historical.json** — twelve 2025–26 fires (§16) and the ruled-out table.

@@ -1,0 +1,166 @@
+/* v2 dialogs and the Help modal (CLAUDE.md §17). */
+
+.dlg-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(8, 8, 9, 0.62);
+  animation: fade-in2 var(--t-panel) var(--ease-out);
+}
+
+.dlg {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: min(760px, calc(100vh - 48px));
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--radius-panel);
+  background: rgba(24, 24, 25, 0.96);
+  box-shadow: var(--shadow);
+  outline: none;
+  animation: rise-in 220ms var(--ease-out);
+}
+
+.dlg-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 18px 14px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.dlg-head h2 {
+  flex: 1;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 750;
+}
+
+.dlg-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(226, 86, 27, 0.16);
+  color: var(--orange);
+}
+
+.dlg-close {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: var(--muted);
+  transition: color var(--t-panel), background var(--t-panel);
+}
+
+.dlg-close:hover,
+.dlg-close:focus-visible {
+  color: var(--warm-grey);
+  background: var(--tint-strong);
+}
+
+.dlg-body {
+  position: relative;
+  overflow-y: auto;
+  padding: 4px 18px 18px;
+  scrollbar-width: thin;
+}
+
+@keyframes fade-in2 {
+  from {
+    opacity: 0;
+  }
+}
+
+/* ---------- Help ---------- */
+.help-section {
+  margin: 0 -10px;
+  padding: 14px 10px 14px;
+  border-radius: 10px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.help-section:last-child {
+  border-bottom: 0;
+}
+
+.help-section.is-flash {
+  animation: help-flash 1.6s var(--ease-out);
+}
+
+@keyframes help-flash {
+  0%,
+  30% {
+    background: rgba(226, 86, 27, 0.14);
+  }
+  100% {
+    background: transparent;
+  }
+}
+
+.help-section h3 {
+  margin-bottom: 8px;
+  font-size: 13.5px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.help-section p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.help-section p + p,
+.help-section .formula + p {
+  margin-top: 8px;
+}
+
+.help-section .formula {
+  margin-bottom: 4px;
+}
+
+.help-section p.help-lead {
+  color: var(--warm-grey);
+  font-weight: 600;
+}
+
+.help-sources {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.help-sources li {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 1px 14px;
+  font-size: 12.5px;
+  line-height: 18px;
+}
+
+.help-src-label {
+  grid-row: span 2;
+  color: var(--muted);
+}
+
+.help-sources strong {
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.help-src-source {
+  color: var(--muted);
+  font-size: 12px;
+}

@@ -3,7 +3,7 @@ import useApp from '../../state/useApp.js'
 import { UI } from '../../config/ui.js'
 import Rail from './Rail.jsx'
 import TopBar from './TopBar.jsx'
-import HelpModal from './HelpModal.jsx'
+import HelpModal from '../help/HelpModal.jsx'
 import MapView from '../map/MapView.jsx'
 import QuickViews from '../panels/QuickViews.jsx'
 import BookPanel from '../panels/BookPanel.jsx'
@@ -15,7 +15,7 @@ import MoreInfoPanel from '../moreinfo/MoreInfoPanel.jsx'
 import PageSkeleton from '../pages/PageSkeleton.jsx'
 import LocationsPage from '../locations/LocationsPage.jsx'
 import SimulationPage from '../simulation/SimulationPage.jsx'
-import PremiumPage from '../pages/PremiumPage.jsx'
+import PremiumPage from '../premium/PremiumPage.jsx'
 import NegotiationChannelPage from '../pages/NegotiationChannelPage.jsx'
 import AccuracyPage from '../pages/AccuracyPage.jsx'
 import ReportsPage from '../pages/ReportsPage.jsx'
@@ -87,9 +87,7 @@ export default function Shell() {
         </main>
         <TopBar />
       </div>
-      <div className="v1-legacy">
-        <HelpModal />
-      </div>
+      <HelpModal />
     </div>
   )
 }

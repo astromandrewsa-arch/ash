@@ -1010,32 +1010,6 @@ button.panel-head:hover .panel-caret {
   }
 }
 
-/* Interim page frame (Simulation and Premium Intelligence until their passes land). */
-.placeholder-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.placeholder-card {
-  padding: 18px 18px 20px;
-  min-height: 160px;
-}
-
-.placeholder-card h2 {
-  margin: 12px 0 6px;
-  font-size: 15px;
-  font-weight: 650;
-}
-
-.placeholder-card p {
-  color: var(--muted);
-}
-
-.placeholder-icon {
-  color: var(--orange);
-}
-
 /* v1 drawer content sits inside the v2 drawer shell until pass 5 replaces it. */
 .side-drawer > .v1-legacy {
   position: relative;

@@ -67,4 +67,5 @@ export const DEFAULT_VIEWS = {
   intervention: false,
   sensors: false,
   rateGap: false,
+  rateGap2027: false,
 }

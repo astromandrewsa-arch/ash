@@ -7,6 +7,7 @@ import ZoomClass from './ZoomClass.jsx'
 import LabelsOverlay from './LabelsOverlay.jsx'
 import FuelGridLayer from './FuelGridLayer.jsx'
 import RateGapLayer from './RateGapLayer.jsx'
+import RateGapLabels from './RateGapLabels.jsx'
 import RangelandLayer from './RangelandLayer.jsx'
 import SelectedFireLayer from './SelectedFireLayer.jsx'
 import HomesLayer from './HomesLayer.jsx'
@@ -41,6 +42,7 @@ export default function MapView() {
         <ZoomClass />
         {views.fuel && <FuelGridLayer />}
         {views.rateGap && <RateGapLayer />}
+        {views.rateGap && <RateGapLabels />}
         {views.rangeland && <RangelandLayer />}
         <SelectedFireLayer />
         <HomesLayer />
