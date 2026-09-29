@@ -1,0 +1,429 @@
+[
+ {
+  "id": "RN-WAG",
+  "areaId": "R-WAG",
+  "name": "Waggoner Ranch",
+  "acres": 520527,
+  "pastures": 60,
+  "lastBurnYear": 2019,
+  "cattle": 14000,
+  "bison": 0,
+  "fenceKm": 759,
+  "headquarters": [
+   34.03021,
+   -99.00718
+  ],
+  "structures": [
+   {
+    "name": "Waggoner Ranch headquarters",
+    "pos": [
+     34.03021,
+     -99.00718
+    ],
+    "tiv": 7102594
+   },
+   {
+    "name": "Waggoner Ranch camp 1",
+    "pos": [
+     34.13423,
+     -99.33977
+    ],
+    "tiv": 2715698
+   },
+   {
+    "name": "Waggoner Ranch camp 2",
+    "pos": [
+     33.98339,
+     -98.935
+    ],
+    "tiv": 2715698
+   }
+  ],
+  "components": {
+   "structures": 12533990,
+   "fencing": 15062722,
+   "livestock": 64341147,
+   "forage": 65242801
+  },
+  "tiv": 157180660,
+  "notes": "Mesquite and mixed grass; oil leases on the north pastures."
+ },
+ {
+  "id": "RN-6666",
+  "areaId": "R-6666",
+  "name": "Four Sixes Ranch",
+  "acres": 350000,
+  "pastures": 44,
+  "lastBurnYear": 2021,
+  "cattle": 9000,
+  "bison": 0,
+  "fenceKm": 551,
+  "headquarters": [
+   33.7094,
+   -100.01618
+  ],
+  "structures": [
+   {
+    "name": "Four Sixes Ranch headquarters",
+    "pos": [
+     33.7094,
+     -100.01618
+    ],
+    "tiv": 7102594
+   },
+   {
+    "name": "Four Sixes Ranch camp 1",
+    "pos": [
+     33.65266,
+     -100.19187
+    ],
+    "tiv": 2715698
+   }
+  ],
+  "components": {
+   "structures": 9818292,
+   "fencing": 10934862,
+   "livestock": 41362166,
+   "forage": 43868964
+  },
+  "tiv": 105984284,
+  "notes": "Horse and cattle operation; prescribed burns on a 5-year rotation."
+ },
+ {
+  "id": "RN-DIX",
+  "areaId": "R-DIX",
+  "name": "Dixon Creek (Four Sixes)",
+  "acres": 108000,
+  "pastures": 18,
+  "lastBurnYear": 2020,
+  "cattle": 3600,
+  "bison": 0,
+  "fenceKm": 253,
+  "headquarters": [
+   35.53629,
+   -101.29507
+  ],
+  "structures": [
+   {
+    "name": "Dixon Creek (Four Sixes) headquarters",
+    "pos": [
+     35.53629,
+     -101.29507
+    ],
+    "tiv": 7102594
+   }
+  ],
+  "components": {
+   "structures": 7102594,
+   "fencing": 5020907,
+   "livestock": 16544866,
+   "forage": 13536709
+  },
+  "tiv": 42205076,
+  "notes": "Breaks country with shinnery oak; burned in part by the 2006 complex."
+ },
+ {
+  "id": "RN-MAT",
+  "areaId": "R-MAT",
+  "name": "Matador Ranch",
+  "acres": 131000,
+  "pastures": 50,
+  "lastBurnYear": 2018,
+  "cattle": 9800,
+  "bison": 0,
+  "fenceKm": 388,
+  "headquarters": [
+   34.012,
+   -100.868
+  ],
+  "structures": [
+   {
+    "name": "Matador Ranch headquarters",
+    "pos": [
+     34.012,
+     -100.868
+    ],
+    "tiv": 7102594
+   },
+   {
+    "name": "Matador Ranch camp 1",
+    "pos": [
+     33.986,
+     -100.902
+    ],
+    "tiv": 2715698
+   },
+   {
+    "name": "Matador Ranch camp 2",
+    "pos": [
+     34.046,
+     -100.842
+    ],
+    "tiv": 2715698
+   }
+  ],
+  "components": {
+   "structures": 12533990,
+   "fencing": 7700048,
+   "livestock": 45038803,
+   "forage": 16419527
+  },
+  "tiv": 81692368,
+  "notes": "West pastures run up to the Caprock; cotton fields beyond the west fence."
+ },
+ {
+  "id": "RN-PIT",
+  "areaId": "R-PIT",
+  "name": "Pitchfork Ranch",
+  "acres": 165000,
+  "pastures": 30,
+  "lastBurnYear": 2022,
+  "cattle": 5000,
+  "bison": 0,
+  "fenceKm": 334,
+  "headquarters": [
+   33.48588,
+   -100.59601
+  ],
+  "structures": [
+   {
+    "name": "Pitchfork Ranch headquarters",
+    "pos": [
+     33.48588,
+     -100.59601
+    ],
+    "tiv": 7102594
+   }
+  ],
+  "components": {
+   "structures": 7102594,
+   "fencing": 6628392,
+   "livestock": 22978981,
+   "forage": 20681083
+  },
+  "tiv": 57391050,
+  "notes": "Adjoins the Four Sixes to the east."
+ },
+ {
+  "id": "RN-TT",
+  "areaId": "R-TT",
+  "name": "Turkey Track Ranch",
+  "acres": 80000,
+  "pastures": 14,
+  "lastBurnYear": 2023,
+  "cattle": 5200,
+  "bison": 0,
+  "fenceKm": 182,
+  "headquarters": [
+   35.78823,
+   -101.32494
+  ],
+  "structures": [
+   {
+    "name": "Turkey Track Ranch headquarters",
+    "pos": [
+     35.78823,
+     -101.32494
+    ],
+    "tiv": 7102594
+   }
+  ],
+  "components": {
+   "structures": 7102594,
+   "fencing": 3611878,
+   "livestock": 23898140,
+   "forage": 10027192
+  },
+  "tiv": 44639804,
+  "notes": "Canadian River breaks east of Stinnett; the Xcel corridor crosses it."
+ },
+ {
+  "id": "RN-JA",
+  "areaId": "R-JA",
+  "name": "JA Ranch",
+  "acres": 250000,
+  "pastures": 40,
+  "lastBurnYear": 2017,
+  "cattle": 6000,
+  "bison": 0,
+  "fenceKm": 456,
+  "headquarters": [
+   34.97731,
+   -101.42476
+  ],
+  "structures": [
+   {
+    "name": "JA Ranch headquarters",
+    "pos": [
+     34.97731,
+     -101.42476
+    ],
+    "tiv": 7102594
+   },
+   {
+    "name": "JA Ranch camp 1",
+    "pos": [
+     34.84675,
+     -101.20206
+    ],
+    "tiv": 2715698
+   }
+  ],
+  "components": {
+   "structures": 9818292,
+   "fencing": 9049541,
+   "livestock": 27574777,
+   "forage": 31334974
+  },
+  "tiv": 77777584,
+  "notes": "Canyon breaks and shortgrass tableland."
+ },
+ {
+  "id": "RN-PDC",
+  "areaId": "R-PDC",
+  "name": "Palo Duro Canyon grazing block",
+  "acres": 95473,
+  "pastures": 16,
+  "lastBurnYear": 2016,
+  "cattle": 2200,
+  "bison": 0,
+  "fenceKm": 199,
+  "headquarters": [
+   34.84331,
+   -101.49623
+  ],
+  "structures": [
+   {
+    "name": "Palo Duro Canyon grazing block headquarters",
+    "pos": [
+     34.84331,
+     -101.49623
+    ],
+    "tiv": 7102594
+   }
+  ],
+  "components": {
+   "structures": 7102594,
+   "fencing": 3949251,
+   "livestock": 10110752,
+   "forage": 11966576
+  },
+  "tiv": 33129173,
+  "notes": "Grazing leases on the canyon rim."
+ },
+ {
+  "id": "RN-TGP",
+  "areaId": "R-TGP",
+  "name": "Tallgrass Prairie Preserve",
+  "acres": 45000,
+  "pastures": 12,
+  "lastBurnYear": 2026,
+  "cattle": 2600,
+  "bison": 2500,
+  "fenceKm": 132,
+  "headquarters": [
+   36.8065,
+   -96.4445
+  ],
+  "structures": [
+   {
+    "name": "Tallgrass Prairie Preserve headquarters",
+    "pos": [
+     36.8065,
+     -96.4445
+    ],
+    "tiv": 12690947
+   },
+   {
+    "name": "Tallgrass Prairie Preserve camp 1",
+    "pos": [
+     36.8095,
+     -96.4135
+    ],
+    "tiv": 4852421
+   },
+   {
+    "name": "Tallgrass Prairie Preserve camp 2",
+    "pos": [
+     36.8005,
+     -96.4585
+    ],
+    "tiv": 4852421
+   }
+  ],
+  "components": {
+   "structures": 22395790,
+   "fencing": 4680720,
+   "livestock": 49345390,
+   "forage": 14277316
+  },
+  "tiv": 90699216,
+  "notes": "Bison and leased cattle on a patch-burn rotation."
+ },
+ {
+  "id": "RN-OSB",
+  "areaId": "R-OSB",
+  "name": "Osage Nation Bluestem Ranch",
+  "acres": 43000,
+  "pastures": 12,
+  "lastBurnYear": 2025,
+  "cattle": 2400,
+  "bison": 400,
+  "fenceKm": 140,
+  "headquarters": [
+   36.68482,
+   -96.34475
+  ],
+  "structures": [
+   {
+    "name": "Osage Nation Bluestem Ranch headquarters",
+    "pos": [
+     36.68482,
+     -96.34475
+    ],
+    "tiv": 12690947
+   }
+  ],
+  "components": {
+   "structures": 12690947,
+   "fencing": 4964400,
+   "livestock": 24187453,
+   "forage": 13642768
+  },
+  "tiv": 55485568,
+  "notes": "Spring burns on a two-year cycle."
+ },
+ {
+  "id": "RN-OSG",
+  "areaId": "R-OSG",
+  "name": "Osage grazing block",
+  "acres": 38000,
+  "pastures": 10,
+  "lastBurnYear": 2025,
+  "cattle": 3000,
+  "bison": 0,
+  "fenceKm": 125,
+  "headquarters": [
+   36.71432,
+   -96.54247
+  ],
+  "structures": [
+   {
+    "name": "Osage grazing block headquarters",
+    "pos": [
+     36.71432,
+     -96.54247
+    ],
+    "tiv": 12690947
+   }
+  ],
+  "components": {
+   "structures": 12690947,
+   "fencing": 4432500,
+   "livestock": 24635369,
+   "forage": 12056400
+  },
+  "tiv": 53815216,
+  "notes": "Early-spring burns ahead of stocker season."
+ }
+]

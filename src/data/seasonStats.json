@@ -1,0 +1,111 @@
+{
+ "season": "2025–26",
+ "datedFires": 128,
+ "prevented": 41,
+ "premiumSaved": 38600000,
+ "declinedLoss": 61200000,
+ "brier": 0.06,
+ "hitRate14": 0.9,
+ "reliability": [
+  {
+   "forecast": 0.6,
+   "observed": 0.57
+  },
+  {
+   "forecast": 0.7,
+   "observed": 0.68
+  },
+  {
+   "forecast": 0.8,
+   "observed": 0.79
+  },
+  {
+   "forecast": 0.9,
+   "observed": 0.89
+  }
+ ],
+ "brierByModel": [
+  {
+   "model": "PRIMER",
+   "range": "1–5 days",
+   "value": 0.05
+  },
+  {
+   "model": "PRIMER",
+   "range": "14 days",
+   "value": 0.06
+  },
+  {
+   "model": "ECMWF PoF",
+   "range": "1–5 days",
+   "value": 0.19
+  }
+ ],
+ "la2025": {
+  "title": "LA 2025: flash estimates vs the final",
+  "final": "~$40B",
+  "estimates": [
+   {
+    "model": "Moody’s",
+    "value": "$20–30B"
+   },
+   {
+    "model": "Verisk",
+    "value": "$28–35B"
+   },
+   {
+    "model": "KCC",
+    "value": "~$28B"
+   }
+  ],
+  "note": "Cotality found ~75% of Eaton losses sat in \"low-to-moderate\" risk classes."
+ },
+ "crabapple": {
+  "center": [
+   30.392,
+   -98.783
+  ],
+  "name": "Crabapple",
+  "year": 2025,
+  "acres": 9858
+ },
+ "footer": "Named models’ mechanics and horizons are sourced. Per-fire figures are an illustrative back-test.",
+ "tiles": [
+  {
+   "id": "dated",
+   "label": "Fires dated last season",
+   "value": 128,
+   "format": "number"
+  },
+  {
+   "id": "prevented",
+   "label": "Prevented",
+   "value": 41,
+   "format": "number"
+  },
+  {
+   "id": "saved",
+   "label": "Premium saved",
+   "value": 38600000,
+   "format": "money"
+  },
+  {
+   "id": "declined",
+   "label": "Realised loss on declined interventions",
+   "value": 61200000,
+   "format": "money"
+  },
+  {
+   "id": "brier",
+   "label": "Brier score",
+   "value": 0.06,
+   "format": "decimal"
+  },
+  {
+   "id": "hit14",
+   "label": "Hit rate at 14 days",
+   "value": 0.9,
+   "format": "pct"
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+[
+ {
+  "id": "W-01",
+  "areaId": "KRV-1",
+  "place": "Kerrville north",
+  "probability": 78,
+  "windowDays": 18,
+  "narrowingRate": 0.9,
+  "note": "Live fuel 91% and falling 1.3 pts/day; curing 83%.",
+  "center": [
+   30.04534,
+   -99.1138
+  ]
+ },
+ {
+  "id": "W-02",
+  "areaId": "LGV-1",
+  "place": "Lago Vista",
+  "probability": 66,
+  "windowDays": 22,
+  "narrowingRate": 0.6,
+  "note": "Sensors below every threshold; grazed continuity 40%.",
+  "center": [
+   30.47225,
+   -97.99643
+  ]
+ },
+ {
+  "id": "W-03",
+  "areaId": "R-WAG",
+  "place": "Waggoner north pasture",
+  "probability": 71,
+  "windowDays": 20,
+  "narrowingRate": 0.8,
+  "note": "Cured mixed grass at 91%; 100-h dead fuel 12%.",
+  "center": [
+   33.99996,
+   -99.30017
+  ]
+ },
+ {
+  "id": "W-04",
+  "areaId": "WDW-1",
+  "place": "Woodward",
+  "probability": 58,
+  "windowDays": 24,
+  "narrowingRate": 0.5,
+  "note": "Rain on 22 Sep reset the fast clock; slow clock still drying.",
+  "center": [
+   36.40819,
+   -99.3755
+  ]
+ },
+ {
+  "id": "W-05",
+  "areaId": "U-ROS",
+  "place": "Roscoe interior",
+  "probability": 62,
+  "windowDays": 21,
+  "narrowingRate": 0.7,
+  "note": "Cotton stubble and pasture between turbine pads; ERC at the 88th percentile.",
+  "center": [
+   32.28901,
+   -100.3387
+  ]
+ }
+]

@@ -101,12 +101,9 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 // Steps
 // ---------------------------------------------------------------------------
 
+/** PH-01 once the v2 map and search are in (pass 3); before that, the first v1 fire. */
 function firstFireId() {
-  const v2 = join(ROOT, 'src', 'data', 'fires.json')
-  if (existsSync(v2)) {
-    const fires = JSON.parse(readFileSync(v2, 'utf8'))
-    if (Array.isArray(fires) && fires.some((f) => f.id === 'PH-01')) return 'PH-01'
-  }
+  if (PASS >= 3) return 'PH-01'
   const v1 = join(ROOT, 'src', 'data', 'v1', 'fires.json')
   if (existsSync(v1)) return JSON.parse(readFileSync(v1, 'utf8'))[0].id
   return 'PH-01'

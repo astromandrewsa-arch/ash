@@ -7,3 +7,6 @@ dist
 # Smoke-test screenshots: only the final set is kept in git (pass 12).
 screenshots/*
 !screenshots/final-*.png
+
+# Scratch helpers
+scripts/*.tmp.mjs

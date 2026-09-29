@@ -1,0 +1,718 @@
+[
+ {
+  "id": "NG-PH-01",
+  "fireId": "PH-01",
+  "agent": {
+   "name": "Maya Okafor",
+   "initials": "MO"
+  },
+  "stage": "Government in negotiation",
+  "counterparty": "Xcel Energy (SPS) and Hutchinson County",
+  "counterpartyType": "Utility",
+  "decisionDue": "2026-10-03",
+  "payerAgreed": {
+   "utility": 0,
+   "state": 0,
+   "landowner": 0,
+   "operator": 0,
+   "carrier": 0,
+   "county": 0
+  },
+  "entries": [
+   {
+    "day": "2026-09-24",
+    "text": "Watchlist at 84%: agent assigned; corridor pole records requested from Xcel.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-27",
+    "text": "Agent engaged Xcel and Hutchinson County; PSPS window and pole list shared.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-28",
+    "text": "Xcel agrees in principle to replace 120 priority poles, rate-recoverable under its HB 145 plan.",
+    "by": "Xcel Energy (SPS)",
+    "declined": false
+   },
+   {
+    "day": "2026-09-29",
+    "text": "Dated at 92%, 15 days out. TFS reviewing the back-burn and dozer standby.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-29",
+    "text": "Hutchinson County declined to fund engine staging — budget; state asked to cover.",
+    "by": "Hutchinson County",
+    "declined": true
+   }
+  ],
+  "ledger": {
+   "cost": 0,
+   "saving": 0,
+   "status": "In negotiation",
+   "documents": [
+    "Xcel pole priority list.pdf",
+    "PSPS window notice draft.pdf",
+    "TFS cost-share request.pdf"
+   ]
+  }
+ },
+ {
+  "id": "NG-AU-02",
+  "fireId": "AU-02",
+  "agent": {
+   "name": "Luis Ferrer",
+   "initials": "LF"
+  },
+  "stage": "Work agreed",
+  "counterparty": "Travis County and Austin Energy",
+  "counterpartyType": "County",
+  "decisionDue": "2026-09-30",
+  "payerAgreed": {
+   "utility": 200000,
+   "state": 0,
+   "landowner": 0,
+   "operator": 0,
+   "carrier": 600000,
+   "county": 300000
+  },
+  "entries": [
+   {
+    "day": "2026-09-20",
+    "text": "Watchlist at 81%; homes ranked by TIV × damage ratio.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-23",
+    "text": "Travis County fire marshal briefed; greenbelt thinning scoped at 120 ac.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-26",
+    "text": "Austin Energy agrees to de-energise the RM 620 spur for the red-flag window.",
+    "by": "Austin Energy",
+    "declined": false
+   },
+   {
+    "day": "2026-09-28",
+    "text": "County agrees $300k for thinning and route clearance.",
+    "by": "Travis County",
+    "declined": false
+   },
+   {
+    "day": "2026-09-29",
+    "text": "Carrier signs off $600k for the 96 lake-side homes; work orders issued.",
+    "by": "Demo Carrier",
+    "declined": false
+   }
+  ],
+  "ledger": {
+   "cost": 1100000,
+   "saving": 52684128,
+   "status": "Agreed",
+   "documents": [
+    "Ranked homes list (96).xlsx",
+    "Travis County work order.pdf",
+    "Austin Energy PSPS confirmation.pdf"
+   ]
+  }
+ },
+ {
+  "id": "NG-BA-03",
+  "fireId": "BA-03",
+  "agent": {
+   "name": "Hannah Kowalski",
+   "initials": "HK"
+  },
+  "stage": "Work agreed",
+  "counterparty": "Texas A&M Forest Service and Bastrop landowners",
+  "counterpartyType": "State agency",
+  "decisionDue": "2026-10-01",
+  "payerAgreed": {
+   "utility": 0,
+   "state": 700000,
+   "landowner": 400000,
+   "operator": 0,
+   "carrier": 100000,
+   "county": 0
+  },
+  "entries": [
+   {
+    "day": "2026-09-18",
+    "text": "Watchlist at 78%; three ignition blocks mapped in the loblolly.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-22",
+    "text": "TFS Bastrop office agrees to lead thinning; NRCS EQIP match requested.",
+    "by": "Texas A&M Forest Service",
+    "declined": false
+   },
+   {
+    "day": "2026-09-26",
+    "text": "Two landowners agree the EQIP match; one asks for a burn-day guarantee.",
+    "by": "Bastrop County landowners",
+    "declined": false
+   },
+   {
+    "day": "2026-09-29",
+    "text": "Dated at 90%; burn scheduled for the 3–5 Nov humidity window, thinning from 1 Oct.",
+    "by": "Pyrome agent",
+    "declined": false
+   }
+  ],
+  "ledger": {
+   "cost": 1200000,
+   "saving": 56038613,
+   "status": "Agreed",
+   "documents": [
+    "TFS thinning prescription.pdf",
+    "EQIP cost-share letters.pdf"
+   ]
+  }
+ },
+ {
+  "id": "NG-CT-04",
+  "fireId": "CT-04",
+  "agent": {
+   "name": "Sam Whitehorse",
+   "initials": "SW"
+  },
+  "stage": "Government in negotiation",
+  "counterparty": "Oncor and Eastland County",
+  "counterpartyType": "Utility",
+  "decisionDue": "2026-10-02",
+  "payerAgreed": {
+   "utility": 0,
+   "state": 0,
+   "landowner": 0,
+   "operator": 0,
+   "carrier": 0,
+   "county": 0
+  },
+  "entries": [
+   {
+    "day": "2026-09-25",
+    "text": "Watchlist at 83%; feeder segments ranked by conductor age.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-27",
+    "text": "Oncor restates PSPS as \"last resort\"; agrees to review the red-flag forecast.",
+    "by": "Oncor",
+    "declined": false
+   },
+   {
+    "day": "2026-09-28",
+    "text": "County declined — budget for dozer standby; asked the state to cover.",
+    "by": "Eastland County",
+    "declined": true
+   },
+   {
+    "day": "2026-09-29",
+    "text": "County reverses after TFS cost-share offer; blade line agreed, dozer pending.",
+    "by": "Eastland County",
+    "declined": false
+   }
+  ],
+  "ledger": {
+   "cost": 0,
+   "saving": 0,
+   "status": "In negotiation",
+   "documents": [
+    "Oncor PSPS criteria.pdf",
+    "Eastland County letter.pdf"
+   ]
+  }
+ },
+ {
+  "id": "NG-HC-05",
+  "fireId": "HC-05",
+  "agent": {
+   "name": "Luis Ferrer",
+   "initials": "LF"
+  },
+  "stage": "Work complete",
+  "counterparty": "Landowner and Texas A&M Forest Service",
+  "counterpartyType": "Landowner",
+  "decisionDue": "2026-09-26",
+  "payerAgreed": {
+   "utility": 0,
+   "state": 50000,
+   "landowner": 70000,
+   "operator": 0,
+   "carrier": 0,
+   "county": 0
+  },
+  "entries": [
+   {
+    "day": "2026-09-10",
+    "text": "Watchlist at 80%; north-boundary break scoped with the landowner.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-15",
+    "text": "Landowner agrees to graze and cut the 40 m break.",
+    "by": "Landowner",
+    "declined": false
+   },
+   {
+    "day": "2026-09-24",
+    "text": "Break complete; TFS burn plan approved for the humidity window.",
+    "by": "Texas A&M Forest Service",
+    "declined": false
+   }
+  ],
+  "ledger": {
+   "cost": 120000,
+   "saving": 6923423,
+   "status": "Complete",
+   "documents": [
+    "Break completion photos.pdf",
+    "TFS burn plan.pdf"
+   ]
+  }
+ },
+ {
+  "id": "NG-PK-06",
+  "fireId": "PK-06",
+  "agent": {
+   "name": "Hannah Kowalski",
+   "initials": "HK"
+  },
+  "stage": "Partial",
+  "counterparty": "Palo Pinto County and PK HOAs",
+  "counterpartyType": "County",
+  "decisionDue": "2026-10-05",
+  "payerAgreed": {
+   "utility": 0,
+   "state": 0,
+   "landowner": 100000,
+   "operator": 0,
+   "carrier": 240000,
+   "county": 300000
+  },
+  "entries": [
+   {
+    "day": "2026-09-21",
+    "text": "Watchlist at 82%; three peninsulas ranked by TIV × damage ratio.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-25",
+    "text": "County agrees the 12 km break and engine staging.",
+    "by": "Palo Pinto County",
+    "declined": false
+   },
+   {
+    "day": "2026-09-27",
+    "text": "Two HOAs agree common-area clearance; one declined — cost.",
+    "by": "Possum Kingdom HOAs",
+    "declined": true
+   },
+   {
+    "day": "2026-09-29",
+    "text": "Dated at 90% then re-scored to 85%. Interior slopes cannot be cut; plan stays partial.",
+    "by": "Pyrome agent",
+    "declined": false
+   }
+  ],
+  "ledger": {
+   "cost": 640000,
+   "saving": 18961776,
+   "status": "Partial",
+   "documents": [
+    "Peninsula break map.pdf",
+    "HOA agreements (2 of 3).pdf"
+   ]
+  }
+ },
+ {
+  "id": "NG-RP-07",
+  "fireId": "RP-07",
+  "agent": {
+   "name": "Sam Whitehorse",
+   "initials": "SW"
+  },
+  "stage": "State plan",
+  "counterparty": "Texas A&M Forest Service",
+  "counterpartyType": "State agency",
+  "decisionDue": "2026-10-08",
+  "payerAgreed": {
+   "utility": 0,
+   "state": 400000,
+   "landowner": 180000,
+   "operator": 0,
+   "carrier": 0,
+   "county": 0
+  },
+  "entries": [
+   {
+    "day": "2026-09-23",
+    "text": "Watchlist at 86%; quadrant too large for pre-treatment in the window.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-26",
+    "text": "TFS accepts a state agency plan: engines pre-positioned at Matador.",
+    "by": "Texas A&M Forest Service",
+    "declined": false
+   },
+   {
+    "day": "2026-09-28",
+    "text": "Matador agrees to move cattle off the quadrant and open fence lines.",
+    "by": "Matador Ranch",
+    "declined": false
+   }
+  ],
+  "ledger": {
+   "cost": 580000,
+   "saving": 1894909,
+   "status": "State plan",
+   "documents": [
+    "TFS pre-positioning order.pdf",
+    "Matador livestock plan.pdf"
+   ]
+  }
+ },
+ {
+  "id": "NG-PB-08",
+  "fireId": "PB-08",
+  "agent": {
+   "name": "Maya Okafor",
+   "initials": "MO"
+  },
+  "stage": "Agent engaged",
+  "counterparty": "Plains All American and Oncor",
+  "counterpartyType": "Operator",
+  "decisionDue": "2026-10-06",
+  "payerAgreed": {
+   "utility": 0,
+   "state": 0,
+   "landowner": 0,
+   "operator": 0,
+   "carrier": 0,
+   "county": 0
+  },
+  "entries": [
+   {
+    "day": "2026-09-26",
+    "text": "Watchlist at 85%; ROW segments and 40 pads ranked.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-29",
+    "text": "Dated at 90%; agent engaged the pipeline operator and the pad feeder utility.",
+    "by": "Pyrome agent",
+    "declined": false
+   }
+  ],
+  "ledger": {
+   "cost": 0,
+   "saving": 0,
+   "status": "In negotiation",
+   "documents": [
+    "ROW mowing scope.pdf"
+   ]
+  }
+ },
+ {
+  "id": "NG-OK-09",
+  "fireId": "OK-09",
+  "agent": {
+   "name": "Luis Ferrer",
+   "initials": "LF"
+  },
+  "stage": "Identified",
+  "counterparty": "Tallgrass Prairie Preserve",
+  "counterpartyType": "Landowner",
+  "decisionDue": "2026-10-10",
+  "payerAgreed": {
+   "utility": 0,
+   "state": 0,
+   "landowner": 0,
+   "operator": 0,
+   "carrier": 0,
+   "county": 0
+  },
+  "entries": [
+   {
+    "day": "2026-09-27",
+    "text": "Watchlist at 88%; last season’s patch burns mapped across the path.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-29",
+    "text": "Dated at 90%. Patch mosaic caps the spread; plan withdrawn, monitoring only.",
+    "by": "Pyrome agent",
+    "declined": false
+   }
+  ],
+  "ledger": {
+   "cost": 0,
+   "saving": 0,
+   "status": "Identified",
+   "documents": [
+    "Patch-burn map 2025.pdf"
+   ]
+  }
+ },
+ {
+  "id": "NG-OK-10",
+  "fireId": "OK-10",
+  "agent": {
+   "name": "Hannah Kowalski",
+   "initials": "HK"
+  },
+  "stage": "State plan",
+  "counterparty": "OG&E and City of Stillwater",
+  "counterpartyType": "Utility",
+  "decisionDue": "2026-10-02",
+  "payerAgreed": {
+   "utility": 250000,
+   "state": 0,
+   "landowner": 0,
+   "operator": 0,
+   "carrier": 50000,
+   "county": 80000
+  },
+  "entries": [
+   {
+    "day": "2026-09-26",
+    "text": "Watchlist at 87%; three downed-line ignition points identified on the feeder.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-28",
+    "text": "OG&E agrees PSPS for the wind event; restoration crews staged.",
+    "by": "OG&E",
+    "declined": false
+   },
+   {
+    "day": "2026-09-29",
+    "text": "Dated at 90%, 9 days out. Fuel work cannot finish in time; city issues evacuation pre-notice plan.",
+    "by": "City of Stillwater",
+    "declined": false
+   }
+  ],
+  "ledger": {
+   "cost": 380000,
+   "saving": 23507103,
+   "status": "State plan",
+   "documents": [
+    "OG&E PSPS notice.pdf",
+    "Stillwater evacuation zones.pdf"
+   ]
+  }
+ },
+ {
+  "id": "NG-SEP-01",
+  "fireId": "SEP-01",
+  "fire": {
+   "id": "SEP-01",
+   "name": "Willow City",
+   "place": "Gillespie County, TX",
+   "date": "2026-09-12"
+  },
+  "lastMonth": true,
+  "agent": {
+   "name": "Sam Whitehorse",
+   "initials": "SW"
+  },
+  "stage": "Fire prevented",
+  "counterparty": "Texas A&M Forest Service",
+  "counterpartyType": "State agency",
+  "decisionDue": "2026-08-30",
+  "payerAgreed": null,
+  "entries": [
+   {
+    "day": "2026-08-20",
+    "text": "Dated at 90%, 23 days out.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-08-27",
+    "text": "TFS burned the block in the humidity window.",
+    "by": "Texas A&M Forest Service",
+    "declined": false
+   },
+   {
+    "day": "2026-09-12",
+    "text": "Window closed with no ignition in the treated block.",
+    "by": "Pyrome agent",
+    "declined": false
+   }
+  ],
+  "outcome": null,
+  "ledger": {
+   "cost": 96000,
+   "saving": 5800000,
+   "status": "Prevented",
+   "documents": [
+    "Burn completion report.pdf"
+   ]
+  }
+ },
+ {
+  "id": "NG-SEP-02",
+  "fireId": "SEP-02",
+  "fire": {
+   "id": "SEP-02",
+   "name": "White Deer",
+   "place": "Carson County, TX",
+   "date": "2026-09-18"
+  },
+  "lastMonth": true,
+  "agent": {
+   "name": "Maya Okafor",
+   "initials": "MO"
+  },
+  "stage": "Work complete",
+  "counterparty": "Xcel Energy (SPS)",
+  "counterpartyType": "Utility",
+  "decisionDue": "2026-09-02",
+  "payerAgreed": null,
+  "entries": [
+   {
+    "day": "2026-08-28",
+    "text": "Dated at 91%, 21 days out.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-04",
+    "text": "Xcel replaced 38 poles and mowed 22 km of ROW.",
+    "by": "Xcel Energy (SPS)",
+    "declined": false
+   },
+   {
+    "day": "2026-09-18",
+    "text": "Red-flag day passed without an ignition on the treated span.",
+    "by": "Pyrome agent",
+    "declined": false
+   }
+  ],
+  "outcome": null,
+  "ledger": {
+   "cost": 410000,
+   "saving": 12400000,
+   "status": "Complete",
+   "documents": [
+    "Xcel work completion.pdf"
+   ]
+  }
+ },
+ {
+  "id": "NG-SEP-03",
+  "fireId": "SEP-03",
+  "fire": {
+   "id": "SEP-03",
+   "name": "Lake Arrowhead",
+   "place": "Clay County, TX",
+   "date": "2026-09-21"
+  },
+  "lastMonth": true,
+  "agent": {
+   "name": "Hannah Kowalski",
+   "initials": "HK"
+  },
+  "stage": "Identified",
+  "counterparty": "Clay County",
+  "counterpartyType": "County",
+  "decisionDue": "2026-09-08",
+  "payerAgreed": null,
+  "entries": [
+   {
+    "day": "2026-08-31",
+    "text": "Dated at 90%, 21 days out.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-08",
+    "text": "County declined — budget; landowner declined — timing.",
+    "by": "Clay County",
+    "declined": true
+   },
+   {
+    "day": "2026-09-21",
+    "text": "Burned on the predicted date.",
+    "by": "Pyrome agent",
+    "declined": false
+   }
+  ],
+  "outcome": "Burned on the predicted date: 2,300 ac, 4 homes, $1.9M insured loss.",
+  "ledger": {
+   "cost": 0,
+   "saving": 0,
+   "status": "Declined",
+   "documents": [
+    "Decline letter.pdf"
+   ]
+  }
+ },
+ {
+  "id": "NG-SEP-04",
+  "fireId": "SEP-04",
+  "fire": {
+   "id": "SEP-04",
+   "name": "Cooper Creek",
+   "place": "Logan County, OK",
+   "date": "2026-09-25"
+  },
+  "lastMonth": true,
+  "agent": {
+   "name": "Luis Ferrer",
+   "initials": "LF"
+  },
+  "stage": "State plan",
+  "counterparty": "Oklahoma Forestry Services",
+  "counterpartyType": "State agency",
+  "decisionDue": "2026-09-15",
+  "payerAgreed": null,
+  "entries": [
+   {
+    "day": "2026-09-05",
+    "text": "Dated at 90%, 20 days out.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   {
+    "day": "2026-09-12",
+    "text": "OFS pre-positioned engines; OG&E held a PSPS on the day.",
+    "by": "Oklahoma Forestry Services",
+    "declined": false
+   },
+   {
+    "day": "2026-09-25",
+    "text": "Fire held at 180 ac; no homes lost.",
+    "by": "Pyrome agent",
+    "declined": false
+   }
+  ],
+  "outcome": null,
+  "ledger": {
+   "cost": 140000,
+   "saving": 2200000,
+   "status": "State plan",
+   "documents": [
+    "OFS after-action note.pdf"
+   ]
+  }
+ }
+]
