@@ -1,4 +1,5 @@
 import { formatPct } from '../../lib/format.js'
+import InfoButton from '../common/InfoButton.jsx'
 
 const S = 92 // mini diagram size in px
 
@@ -23,6 +24,7 @@ export default function Reliability({ stats, models }) {
         <div>
           <h2 id="rel-title" className="label">
             Reliability
+            <InfoButton topic="glossary" label="Brier score and reliability" />
           </h2>
           <p className="rel-line-text">
             When PRIMER said {formatPct(top.forecast)}, {formatPct(top.observed)} burned.

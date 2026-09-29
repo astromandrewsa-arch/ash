@@ -11,7 +11,7 @@ import Section from '../common/Section.jsx'
 export default function ForecastTab({ fire }) {
   return (
     <>
-      <Section title="Fuel state · both clocks" note="Live fuel and curing set the window; dead fuel and wind set the day.">
+      <Section title="Fuel state · both clocks" help="fuel" note="Live fuel and curing set the window; dead fuel and wind set the day.">
         <FuelClocks fuel={fire.fuel} />
       </Section>
       <Section title="Thresholds behind the date">
@@ -25,7 +25,7 @@ export default function ForecastTab({ fire }) {
           <span className="muted">Dashed: projected to the window</span>
         </p>
       </Section>
-      <Section title="Ensemble narrowing" note="The burn window on each issue date; probability rises as it narrows.">
+      <Section title="Ensemble narrowing" help="lead" note="The burn window on each issue date; probability rises as it narrows.">
         <NarrowingStrip fire={fire} />
       </Section>
     </>

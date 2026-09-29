@@ -292,3 +292,25 @@ p {
     transition-duration: 1ms !important;
   }
 }
+
+/* Info icon beside a title: opens Help at that topic. */
+.info-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  margin: -3px 0 -3px 4px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: none;
+  color: var(--muted);
+  vertical-align: middle;
+  transition: color var(--t-panel), background var(--t-panel);
+}
+
+.info-btn:hover,
+.info-btn:focus-visible {
+  color: var(--warm-grey);
+  background: var(--tint-strong);
+}

@@ -156,18 +156,33 @@ function paintAreas(ctx, view, st) {
   ctx.setLineDash([])
 }
 
-function paintAreaLabels(ctx, view, st) {
-  if (view.zoom < MAP.areaLabelMinZoom) return
+const boxesMeet = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1
+
+/**
+ * Area names above each homes area from zoom 11 (own canvas). A name that would sit under a fire
+ * marker or its label steps aside: `st.obstacles` holds those boxes as pixel offsets from a lat/lng.
+ */
+export function paintAreaLabels(ctx, view, st) {
+  if (!st.showHomes || view.zoom < MAP.areaLabelMinZoom) return
   ctx.font = '600 11.5px Inter, system-ui, sans-serif'
   ctx.textAlign = 'center'
   ctx.textBaseline = 'bottom'
   ctx.lineJoin = 'round'
+  const blocked = (st.obstacles || []).map((o) => {
+    const x = view.px(o.at[1])
+    const y = view.py(o.at[0])
+    return { x0: x + o.x0, y0: y + o.y0, x1: x + o.x1, y1: y + o.y1 }
+  })
+  const basemap = new Set(MAP.basemapTowns)
   for (const a of st.areas) {
-    if (!inView(a.polygon, view.bounds)) continue
+    if (basemap.has(a.name) || !inView(a.polygon, view.bounds)) continue
     let top = a.polygon[0]
     for (const p of a.polygon) if (p[0] > top[0]) top = p
     const x = view.px(a.centroid[1])
     const y = view.py(top[0]) - 6
+    const w = ctx.measureText(a.name).width
+    const box = { x0: x - w / 2 - 3, y0: y - 15, x1: x + w / 2 + 3, y1: y + 2 }
+    if (blocked.some((b) => boxesMeet(b, box))) continue
     ctx.lineWidth = 3.5
     ctx.strokeStyle = 'rgba(12, 12, 13, 0.85)'
     ctx.strokeText(a.name, x, y)
@@ -275,7 +290,7 @@ function paintFootprints(ctx, view, st) {
 }
 
 /**
- * Paint the homes canvas (zoom 9 and above): area outlines, then dots or footprints, then labels.
+ * Paint the homes canvas (zoom 9 and above): area outlines, then dots or footprints (names draw on their own canvas).
  * `st` carries showHomes, areas (homes areas in the book) and styleOf(home) → { fill, ring } | null.
  * Records the mode for hit tests in `st.mode`.
  */
@@ -290,7 +305,6 @@ export function paintHomes(ctx, view, st) {
     st.mode = 'footprints'
     paintFootprints(ctx, view, st)
   }
-  paintAreaLabels(ctx, view, st)
 }
 
 /** Paint the cluster canvas (below zoom 9): one dot per area, merged where they overlap. */

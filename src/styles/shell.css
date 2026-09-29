@@ -558,6 +558,12 @@ button.panel-head:hover .panel-caret {
   min-width: 0;
 }
 
+.quality-item .pill {
+  max-width: 100%;
+  padding: 0 8px;
+  font-size: 10.5px;
+}
+
 .quality-label {
   font-size: 10.5px;
   line-height: 13px;

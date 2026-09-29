@@ -1,10 +1,10 @@
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useMap, useMapEvents } from 'react-leaflet'
 import { store } from '../../lib/store.js'
 import { stageRag, visibleFires, watchlistInBook } from '../../lib/selectors.js'
 import { fireCenter } from '../../lib/geo.js'
 import { dayMonth } from '../../lib/dates.js'
-import { labelWidth, placeLabels } from '../../lib/labelPlacement.js'
+import { labelWidth, placeLabels, rectFor } from '../../lib/labelPlacement.js'
 import { panelKeepOut } from '../../lib/mapPadding.js'
 import useApp from '../../state/useApp.js'
 import useMapPane from '../../hooks/useMapPane.js'
@@ -44,6 +44,23 @@ export default function FireMarkersLayer() {
       : []
     return placeLabels(items, [...panelKeepOut(drawerOpen), ...rings])
   }, [fires, map, tick, compact, selectedId, drawerOpen, views.watchlist, portfolioId])
+
+  // Publish each marker's flame and label box so area names on the homes canvas can step aside.
+  useEffect(() => {
+    const boxes = []
+    for (const f of fires) {
+      const size = FLAME_PX[f.intensity.class] + 8
+      const at = fireCenter(f)
+      boxes.push({ at, x0: -size / 2, y0: -size / 2, x1: size / 2, y1: size / 2 })
+      const side = sides.get(f.id)
+      if (side && side !== 'hidden') {
+        const text = compact && f.id !== selectedId ? f.id : fireLabel(f)
+        boxes.push({ at, ...rectFor(side, { x: 0, y: 0 }, size, labelWidth(text), 24) })
+      }
+    }
+    if (views.watchlist) for (const w of watchlistInBook(portfolioId)) boxes.push({ at: w.center, x0: -18, y0: -18, x1: 18, y1: 18 })
+    map.fire('pyrome:firelabels', { boxes })
+  }, [fires, sides, compact, selectedId, views.watchlist, portfolioId, map])
 
   const onSelect = useCallback((id) => select('fire', id), [select])
 

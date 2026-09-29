@@ -37,12 +37,12 @@ export default function PlanTab({ fire, inPanel = false }) {
         </Section>
       )}
       {plan.cost > 0 && (
-        <Section title="Who pays">
+        <Section title="Who pays" help="payer">
           <PayerSplitBar split={plan.payerSplit} total={plan.cost} />
         </Section>
       )}
       {plan.scopeRule && (
-        <Section title="Scope rule">
+        <Section title="Scope rule" help="scope">
           <p className="card-text">{plan.scopeRule}</p>
           {(plan.protectedHomeIds.length > 0 || plan.warnedHomeIds.length > 0) && (
             <p className="ring-key">

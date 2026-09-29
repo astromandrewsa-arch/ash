@@ -36,7 +36,7 @@ Protected and warned home ids (ranked by TIV × damage ratio), warnings ledger, 
 
 **negotiations.json** — the Pyrome agent's negotiation for each dated fire plus four from last month (§12).
 Stage (including Partial and State plan branches), counterparty, decision due, dated entries (declined ones flagged).
-Ledger with agreed cost, saving, status and documents.
+Ledger with agreed cost, saving, status and documents; the feed headline, filter group, last and next action, payers.
 
 **bundles.json** — nine Premium Intelligence bundles (§15): the eight listed plus the Osage rangeland row.
 Policies, TIV and premium from the priced areas (`insuredAreaIds`); market and PRIMER technical rate, technical premium and gap, adequacy, 2027 recommendation and the carrier's filed change.
@@ -61,6 +61,10 @@ Also the pricing inputs for the technical premium, the Texas context tiles and t
 **fuelGrid.json** — the four Quick View fuel grids (live moisture, 10-h dead moisture, curing, ERC).
 200 m cells over every area (coarser over the large ranches), stored per area as origin, cell size and row/column pairs.
 Values are reddest near each fire's ignition zone.
+
+**help.json** — the Help dialog's fifteen topics (§17 and §19).
+Definitions with this book's figures filled in by the generator: policy terms, damage ratios, payer split, the PH-01 example.
+The sources behind the Texas market tiles.
 
 **meta.json** — forecast issue stamp, the signed-in user and the forecast definition.
 

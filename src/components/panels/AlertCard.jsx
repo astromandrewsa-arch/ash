@@ -3,6 +3,7 @@ import useApp from '../../state/useApp.js'
 import { alertTotals, visibleFires } from '../../lib/selectors.js'
 import { formatNumber, formatUSDCompact, formatUSDRange } from '../../lib/format.js'
 import AnimatedValue from '../common/AnimatedValue.jsx'
+import InfoButton from '../common/InfoButton.jsx'
 
 /** Top-right "Next 30 days": sums over the fires visible at the current slider position. */
 export default function AlertCard({ hidden }) {
@@ -29,12 +30,15 @@ export default function AlertCard({ hidden }) {
         </span>
       </header>
       <div className="alert30-hero">
-        <span className="label">Expected loss</span>
+        <span className="label">
+          Expected loss
+          <InfoButton topic="aal" label="30-day expected loss" />
+        </span>
         <span className="figure">
           <AnimatedValue value={t.expectedLoss} format={formatUSDCompact} />
         </span>
         <div className="alert30-band">
-          {t.datedFires > 0 ? `Band ${formatUSDRange(t.lossLower, t.lossUpper)}` : 'Band $0'}
+          {t.datedFires > 0 ? `Band ${formatUSDRange(t.lossLower, t.lossUpper)}` : 'No dated fire in view yet'}
         </div>
       </div>
       <dl className="alert30-rows">

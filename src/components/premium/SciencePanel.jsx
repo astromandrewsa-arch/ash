@@ -31,7 +31,7 @@ export default function SciencePanel({ bundle: b, onShowOnMap }) {
             <p>{b.science.sensitivityLine}</p>
           </div>
         </Section>
-        <Section title="This season against the long run">
+        <Section title="This season against the long run" help="aal">
           <SeasonCompare bundle={b} />
         </Section>
         <button type="button" className="btn btn-block sci-map" onClick={() => onShowOnMap(b.id)}>

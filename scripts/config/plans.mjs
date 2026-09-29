@@ -154,6 +154,7 @@ const e = (day, text, by, declined = false) => ({ day, text, by, declined })
 // branch states Partial and State plan.
 export const NEGOTIATIONS = {
   'PH-01': {
+    short: 'Stinnett', counterpartyShort: 'Xcel and Hutchinson County', engagedOn: '2026-09-27', next: 'TFS decision on the Turkey Track back-burn and state cover for engine staging, due 3 Oct.',
     agent: 0, stage: 'Government in negotiation', counterparty: 'Xcel Energy (SPS) and Hutchinson County', counterpartyType: 'Utility', decisionDue: '2026-10-03',
     entries: [
       e('2026-09-24', 'Watchlist at 84%: agent assigned; corridor pole records requested from Xcel.', 'Pyrome agent'),
@@ -167,6 +168,7 @@ export const NEGOTIATIONS = {
     inPrinciple: { utility: 1400000 },
   },
   'AU-02': {
+    short: 'Steiner Ranch', counterpartyShort: 'Travis County and Austin Energy', engagedOn: '2026-09-23', next: 'Lake-side breaks and hardening audits start 1 Oct; RM 620 spur de-energised for the window.',
     agent: 1, stage: 'Work agreed', counterparty: 'Travis County and Austin Energy', counterpartyType: 'County', decisionDue: '2026-09-30',
     entries: [
       e('2026-09-20', 'Watchlist at 81%; homes ranked by TIV × damage ratio.', 'Pyrome agent'),
@@ -178,6 +180,7 @@ export const NEGOTIATIONS = {
     documents: ['Ranked homes list (96).xlsx', 'Travis County work order.pdf', 'Austin Energy PSPS confirmation.pdf'],
   },
   'BA-03': {
+    short: 'Bastrop', counterpartyShort: 'TFS and the Bastrop landowners', engagedOn: '2026-09-22', next: 'Thinning of the three blocks from 1 Oct; the burn waits for the 3–5 Nov humidity window.',
     agent: 2, stage: 'Work agreed', counterparty: 'Texas A&M Forest Service and Bastrop landowners', counterpartyType: 'State agency', decisionDue: '2026-10-01',
     entries: [
       e('2026-09-18', 'Watchlist at 78%; three ignition blocks mapped in the loblolly.', 'Pyrome agent'),
@@ -188,6 +191,7 @@ export const NEGOTIATIONS = {
     documents: ['TFS thinning prescription.pdf', 'EQIP cost-share letters.pdf'],
   },
   'CT-04': {
+    short: 'Carbon', counterpartyShort: 'Oncor and Eastland County', engagedOn: '2026-09-27', next: 'Oncor answer on de-energising the feeder for the red-flag day, due 2 Oct.',
     agent: 3, stage: 'Government in negotiation', counterparty: 'Oncor and Eastland County', counterpartyType: 'Utility', decisionDue: '2026-10-02',
     entries: [
       e('2026-09-25', 'Watchlist at 83%; feeder segments ranked by conductor age.', 'Pyrome agent'),
@@ -198,6 +202,7 @@ export const NEGOTIATIONS = {
     documents: ['Oncor PSPS criteria.pdf', 'Eastland County letter.pdf'],
   },
   'HC-05': {
+    short: 'Fredericksburg', counterpartyShort: 'the landowner and TFS', engagedOn: '2026-09-15', next: 'TFS burns the block in the next humidity window; sensors watch the break.',
     agent: 1, stage: 'Work complete', counterparty: 'Landowner and Texas A&M Forest Service', counterpartyType: 'Landowner', decisionDue: '2026-09-26',
     entries: [
       e('2026-09-10', 'Watchlist at 80%; north-boundary break scoped with the landowner.', 'Pyrome agent'),
@@ -207,6 +212,7 @@ export const NEGOTIATIONS = {
     documents: ['Break completion photos.pdf', 'TFS burn plan.pdf'],
   },
   'PK-06': {
+    short: 'Possum Kingdom', counterpartyShort: 'Palo Pinto County and the PK HOAs', engagedOn: '2026-09-25', next: 'Engines staged on the three peninsulas; the declining HOA gets pre-warning only.',
     agent: 2, stage: 'Partial', counterparty: 'Palo Pinto County and PK HOAs', counterpartyType: 'County', decisionDue: '2026-10-05',
     entries: [
       e('2026-09-21', 'Watchlist at 82%; three peninsulas ranked by TIV × damage ratio.', 'Pyrome agent'),
@@ -217,6 +223,7 @@ export const NEGOTIATIONS = {
     documents: ['Peninsula break map.pdf', 'HOA agreements (2 of 3).pdf'],
   },
   'RP-07': {
+    short: 'Matador–Waggoner', counterpartyShort: 'Texas A&M Forest Service', engagedOn: '2026-09-26', next: 'TFS engines pre-positioned at Matador from 11 Oct; cattle moved off the quadrant.',
     agent: 3, stage: 'State plan', counterparty: 'Texas A&M Forest Service', counterpartyType: 'State agency', decisionDue: '2026-10-08',
     entries: [
       e('2026-09-23', 'Watchlist at 86%; quadrant too large for pre-treatment in the window.', 'Pyrome agent'),
@@ -226,6 +233,7 @@ export const NEGOTIATIONS = {
     documents: ['TFS pre-positioning order.pdf', 'Matador livestock plan.pdf'],
   },
   'PB-08': {
+    short: 'Colorado City', counterpartyShort: 'Plains All American and Oncor', engagedOn: '2026-09-29', next: 'Operator to confirm the ROW mowing crews and pad clearing, due 6 Oct.',
     agent: 0, stage: 'Agent engaged', counterparty: 'Plains All American and Oncor', counterpartyType: 'Operator', decisionDue: '2026-10-06',
     entries: [
       e('2026-09-26', 'Watchlist at 85%; ROW segments and 40 pads ranked.', 'Pyrome agent'),
@@ -234,6 +242,7 @@ export const NEGOTIATIONS = {
     documents: ['ROW mowing scope.pdf'],
   },
   'OK-09': {
+    short: 'Osage', counterpartyShort: 'the Tallgrass Prairie Preserve', engagedOn: null, engagedText: 'no engagement needed: last season’s patch burns cap the spread', next: 'Monitoring only; the plan was withdrawn.',
     agent: 1, stage: 'Identified', counterparty: 'Tallgrass Prairie Preserve', counterpartyType: 'Landowner', decisionDue: '2026-10-10',
     entries: [
       e('2026-09-27', 'Watchlist at 88%; last season’s patch burns mapped across the path.', 'Pyrome agent'),
@@ -242,6 +251,7 @@ export const NEGOTIATIONS = {
     documents: ['Patch-burn map 2025.pdf'],
   },
   'OK-10': {
+    short: 'Stillwater', counterpartyShort: 'OG&E and the City of Stillwater', engagedOn: '2026-09-28', next: 'PSPS on the OG&E feeder for the wind event; evacuation pre-notice goes out 5 Oct.',
     agent: 2, stage: 'State plan', counterparty: 'OG&E and City of Stillwater', counterpartyType: 'Utility', decisionDue: '2026-10-02',
     entries: [
       e('2026-09-26', 'Watchlist at 87%; three downed-line ignition points identified on the feeder.', 'Pyrome agent'),
@@ -254,8 +264,8 @@ export const NEGOTIATIONS = {
 
 // Four from last month (September 2026), already closed or in delivery.
 export const LAST_MONTH = [
-  { id: 'NG-SEP-01', fire: { id: 'SEP-01', name: 'Willow City', place: 'Gillespie County, TX', date: '2026-09-12' }, agent: 3, stage: 'Fire prevented', counterparty: 'Texas A&M Forest Service', counterpartyType: 'State agency', decisionDue: '2026-08-30', cost: 96000, saving: 5.8e6, entries: [e('2026-08-20', 'Dated at 90%, 23 days out.', 'Pyrome agent'), e('2026-08-27', 'TFS burned the block in the humidity window.', 'Texas A&M Forest Service'), e('2026-09-12', 'Window closed with no ignition in the treated block.', 'Pyrome agent')], documents: ['Burn completion report.pdf'] },
-  { id: 'NG-SEP-02', fire: { id: 'SEP-02', name: 'White Deer', place: 'Carson County, TX', date: '2026-09-18' }, agent: 0, stage: 'Work complete', counterparty: 'Xcel Energy (SPS)', counterpartyType: 'Utility', decisionDue: '2026-09-02', cost: 410000, saving: 12.4e6, entries: [e('2026-08-28', 'Dated at 91%, 21 days out.', 'Pyrome agent'), e('2026-09-04', 'Xcel replaced 38 poles and mowed 22 km of ROW.', 'Xcel Energy (SPS)'), e('2026-09-18', 'Red-flag day passed without an ignition on the treated span.', 'Pyrome agent')], documents: ['Xcel work completion.pdf'] },
-  { id: 'NG-SEP-03', fire: { id: 'SEP-03', name: 'Lake Arrowhead', place: 'Clay County, TX', date: '2026-09-21' }, agent: 2, stage: 'Identified', counterparty: 'Clay County', counterpartyType: 'County', decisionDue: '2026-09-08', cost: 0, saving: 0, declinedOutcome: 'Burned on the predicted date: 2,300 ac, 4 homes, $1.9M insured loss.', entries: [e('2026-08-31', 'Dated at 90%, 21 days out.', 'Pyrome agent'), e('2026-09-08', 'County declined — budget; landowner declined — timing.', 'Clay County', true), e('2026-09-21', 'Burned on the predicted date.', 'Pyrome agent')], documents: ['Decline letter.pdf'] },
-  { id: 'NG-SEP-04', fire: { id: 'SEP-04', name: 'Cooper Creek', place: 'Logan County, OK', date: '2026-09-25' }, agent: 1, stage: 'State plan', counterparty: 'Oklahoma Forestry Services', counterpartyType: 'State agency', decisionDue: '2026-09-15', cost: 140000, saving: 2.2e6, entries: [e('2026-09-05', 'Dated at 90%, 20 days out.', 'Pyrome agent'), e('2026-09-12', 'OFS pre-positioned engines; OG&E held a PSPS on the day.', 'Oklahoma Forestry Services'), e('2026-09-25', 'Fire held at 180 ac; no homes lost.', 'Pyrome agent')], documents: ['OFS after-action note.pdf'] },
+  { id: 'NG-SEP-01', probability: 0.9, leadDays: 23, counterpartyShort: 'TFS', engagedOn: '2026-08-20', payers: ['state'], next: null, fire: { id: 'SEP-01', name: 'Willow City', place: 'Gillespie County, TX', date: '2026-09-12' }, agent: 3, stage: 'Fire prevented', counterparty: 'Texas A&M Forest Service', counterpartyType: 'State agency', decisionDue: '2026-08-30', cost: 96000, saving: 5.8e6, entries: [e('2026-08-20', 'Dated at 90%, 23 days out.', 'Pyrome agent'), e('2026-08-27', 'TFS burned the block in the humidity window.', 'Texas A&M Forest Service'), e('2026-09-12', 'Window closed with no ignition in the treated block.', 'Pyrome agent')], documents: ['Burn completion report.pdf'] },
+  { id: 'NG-SEP-02', probability: 0.91, leadDays: 21, counterpartyShort: 'Xcel', engagedOn: '2026-08-28', payers: ['utility'], next: null, fire: { id: 'SEP-02', name: 'White Deer', place: 'Carson County, TX', date: '2026-09-18' }, agent: 0, stage: 'Work complete', counterparty: 'Xcel Energy (SPS)', counterpartyType: 'Utility', decisionDue: '2026-09-02', cost: 410000, saving: 12.4e6, entries: [e('2026-08-28', 'Dated at 91%, 21 days out.', 'Pyrome agent'), e('2026-09-04', 'Xcel replaced 38 poles and mowed 22 km of ROW.', 'Xcel Energy (SPS)'), e('2026-09-18', 'Red-flag day passed without an ignition on the treated span.', 'Pyrome agent')], documents: ['Xcel work completion.pdf'] },
+  { id: 'NG-SEP-03', probability: 0.9, leadDays: 21, counterpartyShort: 'Clay County', engagedOn: '2026-08-31', payers: [], next: null, fire: { id: 'SEP-03', name: 'Lake Arrowhead', place: 'Clay County, TX', date: '2026-09-21' }, agent: 2, stage: 'Identified', counterparty: 'Clay County', counterpartyType: 'County', decisionDue: '2026-09-08', cost: 0, saving: 0, declinedOutcome: 'Burned on the predicted date: 2,300 ac, 4 homes, $1.9M insured loss.', entries: [e('2026-08-31', 'Dated at 90%, 21 days out.', 'Pyrome agent'), e('2026-09-08', 'County declined — budget; landowner declined — timing.', 'Clay County', true), e('2026-09-21', 'Burned on the predicted date.', 'Pyrome agent')], documents: ['Decline letter.pdf'] },
+  { id: 'NG-SEP-04', probability: 0.9, leadDays: 20, counterpartyShort: 'Oklahoma Forestry Services', engagedOn: '2026-09-05', payers: ['state', 'utility'], next: null, fire: { id: 'SEP-04', name: 'Cooper Creek', place: 'Logan County, OK', date: '2026-09-25' }, agent: 1, stage: 'State plan', counterparty: 'Oklahoma Forestry Services', counterpartyType: 'State agency', decisionDue: '2026-09-15', cost: 140000, saving: 2.2e6, entries: [e('2026-09-05', 'Dated at 90%, 20 days out.', 'Pyrome agent'), e('2026-09-12', 'OFS pre-positioned engines; OG&E held a PSPS on the day.', 'Oklahoma Forestry Services'), e('2026-09-25', 'Fire held at 180 ac; no homes lost.', 'Pyrome agent')], documents: ['OFS after-action note.pdf'] },
 ]

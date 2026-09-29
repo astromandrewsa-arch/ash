@@ -16,7 +16,7 @@ import PageSkeleton from '../pages/PageSkeleton.jsx'
 import LocationsPage from '../locations/LocationsPage.jsx'
 import SimulationPage from '../simulation/SimulationPage.jsx'
 import PremiumPage from '../premium/PremiumPage.jsx'
-import NegotiationChannelPage from '../pages/NegotiationChannelPage.jsx'
+import NegotiationPage from '../negotiation/NegotiationPage.jsx'
 import AccuracyPage from '../accuracy/AccuracyPage.jsx'
 import ReportsPage from '../pages/ReportsPage.jsx'
 
@@ -25,7 +25,7 @@ const PAGES = {
   locations: { Component: LocationsPage },
   simulation: { Component: SimulationPage },
   premium: { Component: PremiumPage },
-  negotiation: { Component: NegotiationChannelPage, legacy: true },
+  negotiation: { Component: NegotiationPage },
   accuracy: { Component: AccuracyPage },
   reports: { Component: ReportsPage, legacy: true },
 }

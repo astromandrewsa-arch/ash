@@ -14,7 +14,8 @@ import * as turf from '@turf/turf'
 import { blobPolygon, destination, featureAreaHa, haversineKm, pointInRing, polyFeature, projector, round, round5, roundRing, scaleRingToArea, sum } from './lib/geo.mjs'
 import { buildWorld, MARKET_RATE, nameClusters, relocateCluster } from './lib/world.mjs'
 import { buildFire, computeExposure, finishFire, fitClusters, FIRES } from './lib/fires.mjs'
-import { DEDUCTIBLE, LOCATION_LIMIT, homeDamageRatio, outcomes, returnPeriod, lossAt, tvar } from './lib/loss.mjs'
+import { ASSET_DR, CONSTRUCTION_DR, DEDUCTIBLE, LOCATION_LIMIT, homeDamageRatio, outcomes, returnPeriod, lossAt, tvar } from './lib/loss.mjs'
+import { buildHelp } from './config/help.mjs'
 import { addDays, dayMonth, daysBetween, money, windowLabel } from './lib/text.mjs'
 import { ISSUE, WATCHLIST } from './config/fires.mjs'
 import { AGENTS, LAST_MONTH, NEGOTIATIONS, PLANS } from './config/plans.mjs'
@@ -191,6 +192,18 @@ for (const f of fires) {
 // ---------------------------------------------------------------------------
 
 const STATUS = { Identified: 'Identified', 'Agent engaged': 'In negotiation', 'Government in negotiation': 'In negotiation', 'Work agreed': 'Agreed', 'Work complete': 'Complete', 'Fire prevented': 'Prevented', Partial: 'Partial', 'State plan': 'State plan' }
+// Negotiation Channel filter chips (§12).
+const FEED_GROUP = { Identified: 'Identified', 'Agent engaged': 'In negotiation', 'Government in negotiation': 'In negotiation', 'Work agreed': 'Agreed', 'Work complete': 'Agreed', 'Fire prevented': 'Prevented', Partial: 'Partial', 'State plan': 'State plan' }
+const ago = (iso) => {
+  const d = daysBetween(iso, ISSUE.date)
+  return d <= 0 ? 'today' : d === 1 ? 'yesterday' : d < 14 ? `${d} days ago` : `on ${dayMonth(iso)}`
+}
+// §12 headline: "PH-01 — Stinnett — dated at 92%, 15 days out — agent engaged Xcel and Hutchinson County 2 days ago — status: in negotiation"
+function feedHeadline({ id, short, probability, leadDays, counterpartyShort, engagedOn, engagedText, status }) {
+  const engaged = engagedOn ? `agent engaged ${counterpartyShort} ${ago(engagedOn)}` : engagedText
+  return `${id} — ${short} — dated at ${Math.round(probability * 100)}%, ${leadDays} days out — ${engaged} — status: ${status.toLowerCase()}`
+}
+const lastEntry = (entries) => [...entries].sort((a, b) => a.day.localeCompare(b.day)).pop()
 const negotiations = fires.map((f) => {
   const cfg = NEGOTIATIONS[f.id]
   const p = planByFire[f.id]
@@ -208,6 +221,14 @@ const negotiations = fires.map((f) => {
     payerInPrinciple: agreed ? null : cfg.inPrinciple || null,
     entries: cfg.entries,
     ledger: { cost: agreed ? p.cost : 0, saving: Math.round(saving), status: STATUS[cfg.stage], documents: cfg.documents },
+    feed: {
+      headline: feedHeadline({ id: f.id, short: cfg.short, probability: f.probability, leadDays: f.leadDays, counterpartyShort: cfg.counterpartyShort, engagedOn: cfg.engagedOn, engagedText: cfg.engagedText, status: STATUS[cfg.stage] }),
+      group: FEED_GROUP[cfg.stage],
+      engagedOn: cfg.engagedOn,
+      lastAction: lastEntry(cfg.entries),
+      nextAction: cfg.next,
+      payers: Object.entries(p.payerSplit).filter(([, v]) => v > 0).map(([k]) => k),
+    },
   }
 })
 for (const n of LAST_MONTH) {
@@ -225,6 +246,14 @@ for (const n of LAST_MONTH) {
     entries: n.entries,
     outcome: n.declinedOutcome || null,
     ledger: { cost: n.cost, saving: n.saving, status: n.declinedOutcome ? 'Declined' : STATUS[n.stage], documents: n.documents },
+    feed: {
+      headline: feedHeadline({ id: n.fire.id, short: n.fire.name, probability: n.probability, leadDays: n.leadDays, counterpartyShort: n.counterpartyShort, engagedOn: n.engagedOn, status: n.declinedOutcome ? 'Declined' : STATUS[n.stage] }),
+      group: n.declinedOutcome ? 'Declined' : FEED_GROUP[n.stage],
+      engagedOn: n.engagedOn,
+      lastAction: lastEntry(n.entries),
+      nextAction: n.next,
+      payers: n.payers,
+    },
   })
 }
 
@@ -589,4 +618,31 @@ pretty('seasonStats.json', seasonStats)
 pretty('portfolio.json', portfolio)
 compact('fuelGrid.json', fuelGrid)
 pretty('meta.json', meta)
+
+// Help (§17, §19): definitions with this book's figures filled in.
+{
+  const splitTotals = {}
+  for (const p of plans) for (const [k, v] of Object.entries(p.payerSplit)) splitTotals[k] = (splitTotals[k] || 0) + v
+  const all = sum(Object.values(splitTotals)) || 1
+  const ex = fires.find((f) => f.id === 'PH-01')
+  const help = buildHelp({
+    meta,
+    pricing: PRICING,
+    deductible: DEDUCTIBLE,
+    locationLimit: LOCATION_LIMIT,
+    constructionDR: CONSTRUCTION_DR,
+    assetDR: ASSET_DR,
+    rangelandDR: fires.find((f) => f.id === 'RP-07').bands.p50.damageRatio,
+    inclusions: ex.inclusions,
+    exclusions: ex.exclusions,
+    contextTiles: CONTEXT_TILES,
+    example: { id: ex.id, called: dayMonth(ex.called), leadDays: ex.leadDays, window: ex.windowLabel, from: ex.windowNarrowedFrom, to: ex.windowDays },
+    bookSplit: {
+      publicShare: (splitTotals.utility + splitTotals.state + splitTotals.county) / all,
+      privateShare: (splitTotals.landowner + splitTotals.operator) / all,
+      carrierShare: splitTotals.carrier / all,
+    },
+  })
+  pretty('help.json', help)
+}
 log(`wrote src/data (${fires.length} fires, ${world.homes.length} homes, book: none ${money(bookTotals.none)}, as negotiated ${money(bookTotals.asNegotiated)}, fails ${money(bookTotals.fails)}, carrier ${money(bookTotals.carrier)})`)

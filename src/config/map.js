@@ -19,4 +19,7 @@ export const MAP = {
   ranchLabelMinZoom: 8,
   viewportPad: 0.2, // homes drawn inside the viewport padded by 20%
   clusterMergePx: 30, // cluster dots closer than this on screen merge into one
+  // Single-area towns the imagery's reference labels already name at zoom 11+; our yellow area name
+  // would print the same word a few pixels away, so it is left to the basemap.
+  basemapTowns: ['Bee Cave', 'Jonestown', 'Lago Vista', 'Spicewood', 'Dripping Springs', 'Wimberley', 'Smithville', 'Stinnett', 'Eastland', 'Cisco', 'Carbon', 'Mannford', 'Woodward'],
 }

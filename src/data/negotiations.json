@@ -62,6 +62,24 @@
     "PSPS window notice draft.pdf",
     "TFS cost-share request.pdf"
    ]
+  },
+  "feed": {
+   "headline": "PH-01 — Stinnett — dated at 92%, 15 days out — agent engaged Xcel and Hutchinson County 2 days ago — status: in negotiation",
+   "group": "In negotiation",
+   "engagedOn": "2026-09-27",
+   "lastAction": {
+    "day": "2026-09-29",
+    "text": "Hutchinson County declined to fund engine staging — budget; state asked to cover.",
+    "by": "Hutchinson County",
+    "declined": true
+   },
+   "nextAction": "TFS decision on the Turkey Track back-burn and state cover for engine staging, due 3 Oct.",
+   "payers": [
+    "utility",
+    "state",
+    "landowner",
+    "carrier"
+   ]
   }
  },
  {
@@ -125,6 +143,23 @@
     "Travis County work order.pdf",
     "Austin Energy PSPS confirmation.pdf"
    ]
+  },
+  "feed": {
+   "headline": "AU-02 — Steiner Ranch — dated at 90%, 10 days out — agent engaged Travis County and Austin Energy 6 days ago — status: agreed",
+   "group": "Agreed",
+   "engagedOn": "2026-09-23",
+   "lastAction": {
+    "day": "2026-09-29",
+    "text": "Carrier signs off $600k for the 96 lake-side homes; work orders issued.",
+    "by": "Demo Carrier",
+    "declined": false
+   },
+   "nextAction": "Lake-side breaks and hardening audits start 1 Oct; RM 620 spur de-energised for the window.",
+   "payers": [
+    "utility",
+    "carrier",
+    "county"
+   ]
   }
  },
  {
@@ -180,6 +215,23 @@
    "documents": [
     "TFS thinning prescription.pdf",
     "EQIP cost-share letters.pdf"
+   ]
+  },
+  "feed": {
+   "headline": "BA-03 — Bastrop — dated at 90%, 21 days out — agent engaged TFS and the Bastrop landowners 7 days ago — status: agreed",
+   "group": "Agreed",
+   "engagedOn": "2026-09-22",
+   "lastAction": {
+    "day": "2026-09-29",
+    "text": "Dated at 90%; burn scheduled for the 3–5 Nov humidity window, thinning from 1 Oct.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   "nextAction": "Thinning of the three blocks from 1 Oct; the burn waits for the 3–5 Nov humidity window.",
+   "payers": [
+    "state",
+    "landowner",
+    "carrier"
    ]
   }
  },
@@ -237,6 +289,23 @@
     "Oncor PSPS criteria.pdf",
     "Eastland County letter.pdf"
    ]
+  },
+  "feed": {
+   "headline": "CT-04 — Carbon — dated at 88%, 12 days out — agent engaged Oncor and Eastland County 2 days ago — status: in negotiation",
+   "group": "In negotiation",
+   "engagedOn": "2026-09-27",
+   "lastAction": {
+    "day": "2026-09-29",
+    "text": "County reverses after TFS cost-share offer; blade line agreed, dozer pending.",
+    "by": "Eastland County",
+    "declined": false
+   },
+   "nextAction": "Oncor answer on de-energising the feeder for the red-flag day, due 2 Oct.",
+   "payers": [
+    "utility",
+    "carrier",
+    "county"
+   ]
   }
  },
  {
@@ -286,6 +355,22 @@
    "documents": [
     "Break completion photos.pdf",
     "TFS burn plan.pdf"
+   ]
+  },
+  "feed": {
+   "headline": "HC-05 — Fredericksburg — dated at 90%, 25 days out — agent engaged the landowner and TFS on 15 Sep — status: complete",
+   "group": "Agreed",
+   "engagedOn": "2026-09-15",
+   "lastAction": {
+    "day": "2026-09-24",
+    "text": "Break complete; TFS burn plan approved for the humidity window.",
+    "by": "Texas A&M Forest Service",
+    "declined": false
+   },
+   "nextAction": "TFS burns the block in the next humidity window; sensors watch the break.",
+   "payers": [
+    "state",
+    "landowner"
    ]
   }
  },
@@ -343,6 +428,23 @@
     "Peninsula break map.pdf",
     "HOA agreements (2 of 3).pdf"
    ]
+  },
+  "feed": {
+   "headline": "PK-06 — Possum Kingdom — dated at 85%, 18 days out — agent engaged Palo Pinto County and the PK HOAs 4 days ago — status: partial",
+   "group": "Partial",
+   "engagedOn": "2026-09-25",
+   "lastAction": {
+    "day": "2026-09-29",
+    "text": "Dated at 90% then re-scored to 85%. Interior slopes cannot be cut; plan stays partial.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   "nextAction": "Engines staged on the three peninsulas; the declining HOA gets pre-warning only.",
+   "payers": [
+    "landowner",
+    "carrier",
+    "county"
+   ]
   }
  },
  {
@@ -393,6 +495,22 @@
     "TFS pre-positioning order.pdf",
     "Matador livestock plan.pdf"
    ]
+  },
+  "feed": {
+   "headline": "RP-07 — Matador–Waggoner — dated at 90%, 13 days out — agent engaged Texas A&M Forest Service 3 days ago — status: state plan",
+   "group": "State plan",
+   "engagedOn": "2026-09-26",
+   "lastAction": {
+    "day": "2026-09-28",
+    "text": "Matador agrees to move cattle off the quadrant and open fence lines.",
+    "by": "Matador Ranch",
+    "declined": false
+   },
+   "nextAction": "TFS engines pre-positioned at Matador from 11 Oct; cattle moved off the quadrant.",
+   "payers": [
+    "state",
+    "landowner"
+   ]
   }
  },
  {
@@ -435,6 +553,22 @@
    "status": "In negotiation",
    "documents": [
     "ROW mowing scope.pdf"
+   ]
+  },
+  "feed": {
+   "headline": "PB-08 — Colorado City — dated at 90%, 20 days out — agent engaged Plains All American and Oncor today — status: in negotiation",
+   "group": "In negotiation",
+   "engagedOn": "2026-09-29",
+   "lastAction": {
+    "day": "2026-09-29",
+    "text": "Dated at 90%; agent engaged the pipeline operator and the pad feeder utility.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   "nextAction": "Operator to confirm the ROW mowing crews and pad clearing, due 6 Oct.",
+   "payers": [
+    "utility",
+    "operator"
    ]
   }
  },
@@ -479,6 +613,19 @@
    "documents": [
     "Patch-burn map 2025.pdf"
    ]
+  },
+  "feed": {
+   "headline": "OK-09 — Osage — dated at 90%, 23 days out — no engagement needed: last season’s patch burns cap the spread — status: identified",
+   "group": "Identified",
+   "engagedOn": null,
+   "lastAction": {
+    "day": "2026-09-29",
+    "text": "Dated at 90%. Patch mosaic caps the spread; plan withdrawn, monitoring only.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   "nextAction": "Monitoring only; the plan was withdrawn.",
+   "payers": []
   }
  },
  {
@@ -529,6 +676,23 @@
     "OG&E PSPS notice.pdf",
     "Stillwater evacuation zones.pdf"
    ]
+  },
+  "feed": {
+   "headline": "OK-10 — Stillwater — dated at 90%, 9 days out — agent engaged OG&E and the City of Stillwater yesterday — status: state plan",
+   "group": "State plan",
+   "engagedOn": "2026-09-28",
+   "lastAction": {
+    "day": "2026-09-29",
+    "text": "Dated at 90%, 9 days out. Fuel work cannot finish in time; city issues evacuation pre-notice plan.",
+    "by": "City of Stillwater",
+    "declined": false
+   },
+   "nextAction": "PSPS on the OG&E feeder for the wind event; evacuation pre-notice goes out 5 Oct.",
+   "payers": [
+    "utility",
+    "carrier",
+    "county"
+   ]
   }
  },
  {
@@ -577,6 +741,21 @@
    "status": "Prevented",
    "documents": [
     "Burn completion report.pdf"
+   ]
+  },
+  "feed": {
+   "headline": "SEP-01 — Willow City — dated at 90%, 23 days out — agent engaged TFS on 20 Aug — status: prevented",
+   "group": "Prevented",
+   "engagedOn": "2026-08-20",
+   "lastAction": {
+    "day": "2026-09-12",
+    "text": "Window closed with no ignition in the treated block.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   "nextAction": null,
+   "payers": [
+    "state"
    ]
   }
  },
@@ -627,6 +806,21 @@
    "documents": [
     "Xcel work completion.pdf"
    ]
+  },
+  "feed": {
+   "headline": "SEP-02 — White Deer — dated at 91%, 21 days out — agent engaged Xcel on 28 Aug — status: complete",
+   "group": "Agreed",
+   "engagedOn": "2026-08-28",
+   "lastAction": {
+    "day": "2026-09-18",
+    "text": "Red-flag day passed without an ignition on the treated span.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   "nextAction": null,
+   "payers": [
+    "utility"
+   ]
   }
  },
  {
@@ -676,6 +870,19 @@
    "documents": [
     "Decline letter.pdf"
    ]
+  },
+  "feed": {
+   "headline": "SEP-03 — Lake Arrowhead — dated at 90%, 21 days out — agent engaged Clay County on 31 Aug — status: declined",
+   "group": "Declined",
+   "engagedOn": "2026-08-31",
+   "lastAction": {
+    "day": "2026-09-21",
+    "text": "Burned on the predicted date.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   "nextAction": null,
+   "payers": []
   }
  },
  {
@@ -724,6 +931,22 @@
    "status": "State plan",
    "documents": [
     "OFS after-action note.pdf"
+   ]
+  },
+  "feed": {
+   "headline": "SEP-04 — Cooper Creek — dated at 90%, 20 days out — agent engaged Oklahoma Forestry Services on 5 Sep — status: state plan",
+   "group": "State plan",
+   "engagedOn": "2026-09-05",
+   "lastAction": {
+    "day": "2026-09-25",
+    "text": "Fire held at 180 ac; no homes lost.",
+    "by": "Pyrome agent",
+    "declined": false
+   },
+   "nextAction": null,
+   "payers": [
+    "state",
+    "utility"
    ]
   }
  }

@@ -11,6 +11,7 @@ import ranches from '../data/ranches.json'
 import models from '../data/models.json'
 import historical from '../data/historical.json'
 import seasonStats from '../data/seasonStats.json'
+import help from '../data/help.json'
 import areasUrl from '../data/areas.json?url'
 import homesUrl from '../data/homes.json?url'
 import assetsUrl from '../data/assets.json?url'
@@ -31,6 +32,7 @@ export const store = {
   models,
   historical,
   seasonStats,
+  help,
   indexCellDeg: INDEX_CELL_DEG,
 }
 

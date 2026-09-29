@@ -304,6 +304,41 @@ const STEPS = [
     },
   },
   {
+    name: 'Negotiation Channel: filters, card opens the fire in its Negotiation tab; Help topics',
+    since: 10,
+    run: async (page) => {
+      await railTo(page, 'negotiation')
+      await page.waitForSelector('.feed-card', { timeout: 5000 })
+      if (!(await page.locator('.live-pill').count())) throw new Error('the live dot is missing')
+      await page.getByRole('radio', { name: /^In negotiation/ }).click()
+      await sleep(300)
+      const n = await page.locator('.feed-card').count()
+      if (n < 1) throw new Error('the In negotiation filter shows no cards')
+      await shot(page, 'negotiation-filtered')
+      await page.getByRole('radio', { name: /^All/ }).first().click()
+      await sleep(300)
+      await page.locator('.feed-card:not(.is-past) .feed-main').first().click()
+      await page.waitForSelector('.side-drawer.is-open', { timeout: 8000 })
+      await sleep(1500)
+      const tab = await page.locator('[role="tab"][aria-selected="true"]').first().innerText()
+      if (!/negotiation/i.test(tab)) throw new Error(`the card should open the Negotiation tab, got "${tab}"`)
+      await waitForTiles(page, 6000)
+      await sleep(500)
+      await shot(page, 'negotiation-open')
+      await page.keyboard.press('Escape')
+      await sleep(600)
+      await railTo(page, 'help')
+      await page.waitForSelector('.help-nav button', { timeout: 3000 })
+      if ((await page.locator('.help-section').count()) < 14) throw new Error('Help should carry every §17 and §19 topic')
+      await page.locator('.help-nav button', { hasText: 'Who pays' }).click()
+      await sleep(400)
+      await shot(page, 'help-payer')
+      await page.keyboard.press('Escape')
+      await sleep(300)
+      await railTo(page, 'map')
+    },
+  },
+  {
     name: 'tour end to end',
     since: 11,
     optionalFlag: 'tour',

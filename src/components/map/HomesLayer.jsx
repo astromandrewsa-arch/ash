@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useMemo, useRef } from 'react'
 import { useMap } from 'react-leaflet'
 import { CanvasOverlay } from '../../lib/canvasOverlay.js'
-import { paintClusterDots, paintHomes } from '../../lib/homesPaint.js'
+import { paintAreaLabels, paintClusterDots, paintHomes } from '../../lib/homesPaint.js'
 import { store } from '../../lib/store.js'
 import { inBook } from '../../lib/selectors.js'
 import { MAP } from '../../config/map.js'
@@ -21,6 +21,7 @@ export default function HomesLayer() {
   const styleOf = useHomeStyle()
   const homesPane = useMapPane('homesPane', 420)
   const clusterPane = useMapPane('clusterPane', 615)
+  const labelPane = useMapPane('areaLabelPane', 433)
   const layers = useRef([])
   const st = useRef({ showHomes: true, areas: [], styleOf: () => null, mode: 'none', clusters: [] })
   const areas = useMemo(() => store.areas.filter((a) => a.type === 'homes' && inBook(a.state, portfolioId)), [portfolioId])
@@ -47,15 +48,25 @@ export default function HomesLayer() {
   useEffect(() => {
     const homes = new CanvasOverlay((ctx, view) => paintHomes(ctx, view, st.current), { pane: homesPane, pad: MAP.viewportPad })
     const clusters = new CanvasOverlay((ctx, view) => paintClusterDots(ctx, view, st.current), { pane: clusterPane, pad: 0.1 })
+    const names = new CanvasOverlay((ctx, view) => paintAreaLabels(ctx, view, st.current), { pane: labelPane, pad: 0.1 })
     homes.addTo(map)
     clusters.addTo(map)
-    layers.current = [homes, clusters]
+    names.addTo(map)
+    layers.current = [homes, clusters, names]
+    // Fire markers publish their flame and label boxes; area names that would sit under them step aside.
+    const onBoxes = (e) => {
+      st.current.obstacles = e.boxes
+      names.redraw()
+    }
+    map.on('pyrome:firelabels', onBoxes)
     return () => {
+      map.off('pyrome:firelabels', onBoxes)
       homes.remove()
       clusters.remove()
+      names.remove()
       layers.current = []
     }
-  }, [map, homesPane, clusterPane])
+  }, [map, homesPane, clusterPane, labelPane])
 
   return <HomeHover st={st} />
 }

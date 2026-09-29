@@ -24,7 +24,7 @@ export default function ExposureTab({ fire }) {
   const n = inPathRows(fire).length
   return (
     <>
-      <Section title="Loss if it burns">
+      <Section title="Loss if it burns" help="gross">
         <SegToggle options={BASIS} value={basis} onChange={setBasis} label="Loss basis" />
         <LossRange fire={fire} gross={gross} />
         <p className="section-note">
@@ -33,10 +33,10 @@ export default function ExposureTab({ fire }) {
             : 'Ground-up: before deductibles and limits.'}
         </p>
       </Section>
-      <Section title="Bands">
+      <Section title="Bands" help="bands">
         <BandCards fire={fire} gross={gross} />
       </Section>
-      <Section title="Basis">
+      <Section title="Basis" help="loss">
         <p className="card-text">{basisLine(fire)}</p>
         <p className="card-text muted">Analogue: {analogueLine(fire.analogue)}</p>
       </Section>

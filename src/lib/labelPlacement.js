@@ -4,7 +4,7 @@
 const SIDES = ['right', 'left', 'below', 'above']
 const GAP = 6
 
-function rectFor(side, p, size, w, h) {
+export function rectFor(side, p, size, w, h) {
   const half = size / 2
   if (side === 'right') return { x0: p.x + half + GAP, y0: p.y - h / 2, x1: p.x + half + GAP + w, y1: p.y + h / 2 }
   if (side === 'left') return { x0: p.x - half - GAP - w, y0: p.y - h / 2, x1: p.x - half - GAP, y1: p.y + h / 2 }

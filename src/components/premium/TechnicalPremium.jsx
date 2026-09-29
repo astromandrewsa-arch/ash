@@ -2,6 +2,7 @@ import { Sigma } from 'lucide-react'
 import { formatUSDCompact } from '../../lib/format.js'
 import TechnicalFormula from './TechnicalFormula.jsx'
 import PricingTerms from './PricingTerms.jsx'
+import InfoButton from '../common/InfoButton.jsx'
 
 /** The technical premium formula (§15), its inputs, and what it gives for the selected bundle. */
 export default function TechnicalPremium({ bundle: b, pricing: p }) {
@@ -12,7 +13,10 @@ export default function TechnicalPremium({ bundle: b, pricing: p }) {
         <span className="tech-icon" aria-hidden="true">
           <Sigma size={16} />
         </span>
-        <h2 id="tech-title" className="label">Technical premium</h2>
+        <h2 id="tech-title" className="label">
+          Technical premium
+          <InfoButton topic="premium" label="Technical premium" />
+        </h2>
       </div>
       <div className="tech-body">
         <TechnicalFormula />
