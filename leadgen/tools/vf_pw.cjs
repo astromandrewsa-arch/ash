@@ -21,7 +21,8 @@ const dom = h => h.toLowerCase().replace(/^www\./, '');
     if (rr.ok()) { let on = false; for (const line of (await rr.text()).split(/\r?\n/)) { const [k, ...v] = line.split(':'); const val = v.join(':').trim();
       if (/^user-agent$/i.test(k.trim())) on = val === '*'; else if (on && /^disallow$/i.test(k.trim()) && val) disallow.push(val); } }
   } catch (e) {}
-  const ok = url => { const path = new URL(url).pathname; return !disallow.some(d => d !== '/' ? path.startsWith(d.replace(/\*.*$/, '')) : true); };
+  const rx = d => new RegExp('^' + d.replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*').replace(/\\\$$/, '$'));
+  const ok = url => { const u = new URL(url); const path = u.pathname + u.search; return !disallow.some(d => rx(d).test(path)); };
   await sleep(2500);
   async function grab(url) {
     try {

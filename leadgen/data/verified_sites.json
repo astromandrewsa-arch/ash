@@ -1,0 +1,953 @@
+{
+ "Aressco Services Inc": {
+  "owner_name": "Don Richter",
+  "owner_role": "Co-founder (incorporated Aressco, Inc. in 1979; launched Aressco Services, Inc. with Matthew Forristall in 1997; no current title stated)",
+  "owner_source": "https://www.aressco.com/about.php",
+  "other_named": [
+   {
+    "name": "Matthew Forristall",
+    "role": "Co-founder of Aressco Services, Inc. (1997); formerly co-owner of Assured Security Company",
+    "url": "https://www.aressco.com/about.php"
+   }
+  ],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "offices",
+   "retail",
+   "warehouses",
+   "schools/educational facilities",
+   "government"
+  ],
+  "brands": [
+   "Avigilon",
+   "Uniview",
+   "Qolsys",
+   "Alarm.com",
+   "Honeywell (Total Connect)",
+   "DMP"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33177",
+  "service_area": "South Florida: Miami-Dade, Broward and Monroe (same-day service across Miami-Dade and Monroe)",
+  "notes": "Family-owned since 1979; runs its own UL-listed local central station in South Miami-Dade; all installs by own employees (no subs); site has a Client List page and an Avigilon demo page. Email is behind a 'Click to email us' script, not printed.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.aressco.com/",
+   "https://www.aressco.com/video-surveillance.php",
+   "https://www.aressco.com/about.php",
+   "https://www.aressco.com/contact/contact.php",
+   "https://www.aressco.com/contacts-update.php",
+   "https://www.aressco.com/security-service.php",
+   "https://www.aressco.com/uniview-owlview.php",
+   "https://www.aressco.com/avigilon-demo.php",
+   "https://www.aressco.com/qolsys.php"
+  ]
+ },
+ "Horizon Electronics Inc": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "info@horizonsecurity.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "offices",
+   "retail",
+   "warehouses/logistics",
+   "medical/dental offices",
+   "gated communities",
+   "managed properties"
+  ],
+  "brands": [
+   "Ubiquiti UniFi (Protect, Access, Talk)"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami Lakes"
+  ],
+  "hq_city": "Miami Lakes",
+  "hq_zip": "33016",
+  "service_area": "Miami-Dade, Broward, Monroe and Palm Beach counties (South Florida)",
+  "notes": "dba Horizon Security Systems; since 1979; own 24-hour UL-listed central station; FL license EF0000530; also fire alarm, business phones (UniFi Talk) and networking. Site names no people (Jorge Tapanes is not on the site).",
+  "site_status": "ok",
+  "checked_urls": [
+   "http://www.horizonsecurity.com/",
+   "http://www.horizonsecurity.com/business-phone-system.html",
+   "http://www.horizonsecurity.com/video-surveillance.html",
+   "http://www.horizonsecurity.com/about.html",
+   "http://www.horizonsecurity.com/access-control.html",
+   "http://www.horizonsecurity.com/index.html"
+  ]
+ },
+ "MCG Electronics Inc dba APS Security Systems": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "info@apsmiami.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "luxury condos/high-rises",
+   "small business",
+   "property managers",
+   "enterprise multi-site",
+   "institutions"
+  ],
+  "brands": [
+   "Avigilon",
+   "Bosch",
+   "Honeywell",
+   "DSC",
+   "Alarm.com",
+   "Potter",
+   "Salto",
+   "Control4",
+   "Crestron",
+   "Sony"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33155",
+  "service_area": "South Florida and the Caribbean (Puerto Rico, Trinidad and Tobago, other islands)",
+  "notes": "Family-owned since 1987 by the del Pino family (three generations; no individual named on site, so Eric del Pino is unconfirmed); UL-listed monitoring, remote video monitoring with talk-down, LPR; AV division AVX (avxmiami.com). FL license EF0000574.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.apsmiami.com/",
+   "http://www.apsmiami.com/",
+   "http://www.apsmiami.com/about.html",
+   "http://www.apsmiami.com/contact.html",
+   "http://www.apsmiami.com/video-monitoring.html",
+   "http://www.apsmiami.com/audio-video.html",
+   "http://www.apsmiami.com/security-access.html"
+  ]
+ },
+ "Integrated Security Systems Inc": {
+  "owner_name": "Jeffrey S. Nunberg",
+  "owner_role": "President & CEO",
+  "owner_source": "https://www.teamiss.com/who-we-are.php",
+  "other_named": [
+   {
+    "name": "Joe Graeber",
+    "role": "Chief Technology Officer",
+    "url": "https://www.teamiss.com/who-we-are.php"
+   },
+   {
+    "name": "Ronen Sarig",
+    "role": "General Manager",
+    "url": "https://www.teamiss.com/who-we-are.php"
+   }
+  ],
+  "email": "service@TeamISS.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "healthcare",
+   "universities/campuses",
+   "industrial",
+   "pharmaceutical",
+   "corporate",
+   "seaports",
+   "airports"
+  ],
+  "brands": [
+   "EST/Edwards (Strategic Partner)",
+   "Medeco",
+   "Schlage",
+   "Cisco"
+  ],
+  "locations": "?",
+  "location_cities": [
+   "Miami (corporate HQ)"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33125",
+  "service_area": "Eastern US ('Serving the Eastern US'); licenses in FL, SC, NC, MD, NY",
+  "notes": "Who-we-are page says its PARENT COMPANY is Convergint Technologies (now part of Convergint, not independent). Established 1962; design-build integrator for large clients; also commercial locksmith, PSIM, mass notification. Contact page lists service@TeamISS.com; info@teamiss.com also appears.",
+  "site_status": "ok",
+  "checked_urls": [
+   "http://www.teamiss.com/",
+   "https://www.teamiss.com/",
+   "https://www.teamiss.com/services-alarm-intrusion-detection-systems.php",
+   "https://www.teamiss.com/services-closed-circuit-tv-cctv.php",
+   "https://www.teamiss.com/services-commercial-locksmith.php",
+   "https://www.teamiss.com/solutions-and-services.php",
+   "https://www.teamiss.com/service-psim-physical-security-information-management.php",
+   "https://www.teamiss.com/services-access-control.php",
+   "https://www.teamiss.com/services-fire-and-life-safety.php",
+   "https://www.teamiss.com/services-photo-id.php",
+   "https://www.teamiss.com/services-command-and-control-systems.php",
+   "https://www.teamiss.com/who-we-are.php",
+   "https://www.teamiss.com/contact-us.php"
+  ]
+ },
+ "Maximum Security Inc": {
+  "owner_name": "Greg Gracer",
+  "owner_role": "President",
+  "owner_source": "http://www.maximumsecuritymiami.com/AboutUs",
+  "other_named": [
+   {
+    "name": "Pedro (Pete) Mata",
+    "role": "Service and Installation Manager",
+    "url": "http://www.maximumsecuritymiami.com/AboutUs"
+   }
+  ],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "homes",
+   "small businesses"
+  ],
+  "brands": [
+   "iBridge Connected Home"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33177",
+  "service_area": "South Florida",
+  "notes": "Small owner-run alarm company since 1980; mostly residential alarms plus residential and commercial video surveillance; Gracer is a past State President of the Alarm Association of Florida (2011). No email printed (contact form only).",
+  "site_status": "ok",
+  "checked_urls": [
+   "http://www.maximumsecuritymiami.com/",
+   "http://www.maximumsecuritymiami.com/Services",
+   "http://www.maximumsecuritymiami.com/AboutUs",
+   "http://www.maximumsecuritymiami.com/ContactingYou",
+   "http://www.maximumsecuritymiami.com/ContactUs",
+   "http://www.maximumsecuritymiami.com/WhyMaximumSecurity"
+  ]
+ },
+ "DiversiFire Systems Inc": {
+  "owner_name": "Stefani Royall-Hall",
+  "owner_role": "President",
+  "owner_source": "https://diversifire.net/",
+  "other_named": [
+   {
+    "name": "Charlie Jones",
+    "role": "Counter Sales",
+    "url": "https://diversifire.net/"
+   },
+   {
+    "name": "Petr Farcales",
+    "role": "Service Manager",
+    "url": "https://diversifire.net/"
+   },
+   {
+    "name": "Samantha Mabry",
+    "role": "Engineering",
+    "url": "https://diversifire.net/"
+   }
+  ],
+  "email": "Sales@diversifire.net",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": false,
+  "verticals": [
+   "schools/college campuses",
+   "hospitals/medical",
+   "assisted living/nursing homes",
+   "warehouses",
+   "office buildings",
+   "shopping plazas",
+   "condo buildings",
+   "government",
+   "auto dealers",
+   "restaurants/supermarkets"
+  ],
+  "brands": [
+   "Notifier",
+   "Faraday",
+   "Fire-Lite",
+   "System Sensor",
+   "Gentex",
+   "Silent Knight",
+   "Wheelock",
+   "Hochiki",
+   "VES"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33054",
+  "service_area": "South Florida Tri-County (Miami-Dade, Broward and Palm Beach)",
+  "notes": "FIRE-ALARM ONLY: fire alarm distributor plus design/permitting/install/monitoring; no cameras or security on the site. Family owned, 35+ years. Stefani Royall-Hall is also listed under Accounting AP.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://diversifire.net/",
+   "https://diversifire.net/services/",
+   "https://diversifire.net/contact/",
+   "https://diversifire.net/products/"
+  ]
+ },
+ "Arco Security Central Station Corp.": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "central@arcoweb.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "residential",
+   "commercial",
+   "industrial",
+   "financial",
+   "marine",
+   "government (federal, state, local)",
+   "mobile"
+  ],
+  "brands": [],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33165",
+  "service_area": "Miami (local, bilingual monitoring center)",
+  "notes": "Primarily a wholesale central station ('Pure Wholesale', 'Dealer Support Services' at support@arcoweb.com) operating since 1970; consulting and monitoring for burglar, fire, video and access systems. A monitoring partner for dealers rather than a typical installer. arcoweb.com redirects to a netsolhost.com address. No people named.",
+  "site_status": "ok",
+  "checked_urls": [
+   "http://arcoweb.com/",
+   "https://044b24e.netsolhost.com/",
+   "https://044b24e.netsolhost.com/about-us/",
+   "https://044b24e.netsolhost.com/contact-us/"
+  ]
+ },
+ "Wiginton Fire Systems - Miami": {
+  "owner_name": "Don Wiginton",
+  "owner_role": "Chairman and CEO",
+  "owner_source": "https://wiginton.net/about-us/meet-our-executives/",
+  "other_named": [
+   {
+    "name": "Alan Tuck",
+    "role": "Branch Manager (Miami branch, Medley)",
+    "url": "https://wiginton.net/locations/miami/"
+   },
+   {
+    "name": "Mark Erickson",
+    "role": "President, Chief Operating Officer",
+    "url": "https://wiginton.net/about-us/meet-our-executives/"
+   },
+   {
+    "name": "Randy Agee",
+    "role": "Senior Vice President, Wiginton Fire Systems",
+    "url": "https://wiginton.net/about-us/meet-our-executives/"
+   }
+  ],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": false,
+  "verticals": [
+   "warehouses/cold storage",
+   "schools",
+   "offices",
+   "retail",
+   "banks",
+   "airports",
+   "government"
+  ],
+  "brands": [],
+  "locations": 11,
+  "location_cities": [
+   "Fort Myers",
+   "Gainesville",
+   "Jacksonville",
+   "Melbourne",
+   "Miami (Medley)",
+   "Orlando",
+   "Pensacola",
+   "Tampa",
+   "West Palm Beach",
+   "Atlanta GA",
+   "Charlotte NC"
+  ],
+  "hq_city": "Sanford",
+  "hq_zip": "",
+  "service_area": "Florida and the Southeast US",
+  "notes": "FIRE-ONLY: fire sprinkler, fire alarm and BDA/ERRCS contractor; no cameras. Large, 100% employee-owned (ESOP) since 2007, corporate HQ Sanford FL. Miami branch: 10050 NW 116 Way, Bay 16, Medley FL 33178; Branch Manager Alan Tuck (aet@wiginton.net), admin Otmara Izquierdo (oxi@wiginton.net). Poor fit for IRIS.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://wiginton.net/",
+   "https://wiginton.net/about-us/company-history/",
+   "https://wiginton.net/services/",
+   "https://wiginton.net/services/bda-testing-and-compliance-solutions/",
+   "https://wiginton.net/about-us/meet-our-executives/",
+   "https://wiginton.net/services/fire-sprinkler-system-repair/",
+   "https://wiginton.net/services/fire-system-inspection/",
+   "https://wiginton.net/services/fire-alarm-extinguisher-suppression/",
+   "https://wiginton.net/services/fire-sprinkler-system-maintenance/",
+   "https://wiginton.net/services/fire-sprinkler-system-installation/",
+   "https://wiginton.net/services/services-fire-protection-engineering/",
+   "https://wiginton.net/locations/miami/"
+  ]
+ },
+ "Safesys USA LLC": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "info@safesysusa.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "commercial",
+   "government",
+   "institutional",
+   "residential",
+   "multi-facility sites"
+  ],
+  "brands": [],
+  "locations": "?",
+  "location_cities": [],
+  "hq_city": "",
+  "hq_zip": "",
+  "service_area": "",
+  "notes": "Small integrator site: access control, video surveillance with analytics, intrusion, fire/life safety, 24/7 monitoring; claims 20 years' experience. No address, city or people printed on the site.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.safesysusa.com/",
+   "https://safesysusa.com/",
+   "https://safesysusa.com/services/",
+   "https://safesysusa.com/web-agency-gb-contact-us/",
+   "https://safesysusa.com/web-agency-gb-about-us/"
+  ]
+ },
+ "WISE Building Technologies, LLC": {
+  "owner_name": "Guido Tregent",
+  "owner_role": "Founder | Wise Building Technologies",
+  "owner_source": "https://www.wisebt.com/about-us",
+  "other_named": [],
+  "email": "info@wisebt.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "schools (charter schools)",
+   "retail/malls",
+   "hotels",
+   "multifamily/condos",
+   "offices",
+   "new construction"
+  ],
+  "brands": [],
+  "locations": 3,
+  "location_cities": [
+   "Doral (head office)"
+  ],
+  "hq_city": "Doral",
+  "hq_zip": "33172",
+  "service_area": "Florida (South and Central Florida projects)",
+  "notes": "Fire alarm-led low-voltage and electrical contractor (fire, security, intercom/call boxes, BDA/ERCES, building automation, mass evacuation, IT); camera work only implied ('comprehensive surveillance'). Claims 3 office locations but lists only the Doral head office. Projects: Aventura Mall, Four Seasons Miami, BridgePrep Academy Doral, Citigroup Center.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.wisebt.com/",
+   "https://www.wisebt.com/services",
+   "https://www.wisebt.com/about-us",
+   "https://www.wisebt.com/get-a-quote"
+  ]
+ },
+ "Fisec Technology Convergence LLC": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": false,
+  "residential_only": false,
+  "cameras": false,
+  "verticals": [],
+  "brands": [],
+  "locations": "?",
+  "location_cities": [],
+  "hq_city": "",
+  "hq_zip": "",
+  "service_area": "",
+  "notes": "Site down on 17 Nov 2026: http returns 503 'upstream connect error ... connection timeout'; https does not connect (tried www and bare domain, requests + headless browser). Nothing verifiable from the site.",
+  "site_status": "down",
+  "checked_urls": [
+   "http://www.fisectech.com/"
+  ]
+ },
+ "Omni Data LLC dba Paradyme Secure LLC": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "servicemiami@myomnidata.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "condos/HOA/multi-dwelling units",
+   "property management",
+   "enterprise/commercial offices",
+   "retail",
+   "warehouses/industrial",
+   "schools (K-12)",
+   "government",
+   "healthcare",
+   "hospitality",
+   "data centers"
+  ],
+  "brands": [
+   "Hanwha",
+   "Bosch",
+   "Milestone",
+   "LenelS2",
+   "Aiphone",
+   "Aruba",
+   "Cisco Meraki",
+   "Ruckus"
+  ],
+  "locations": 2,
+  "location_cities": [
+   "Miami FL",
+   "West Haven CT"
+  ],
+  "hq_city": "Miami (Florida office)",
+  "hq_zip": "33177",
+  "service_area": "Connecticut, South Florida and beyond",
+  "notes": "paradyme360.com now redirects to myomnidata.com (Omni Data LLC). History page: Omni Data and Paradyme360 consolidated in Jan 2025 'under the umbrella of parent company, RapidSOS' - i.e., owned by RapidSOS (a 911-data company; relevant/competitive for IRIS). Florida office 16115 SW 117th Ave Unit 2, Miami 33177 (same building as Aressco). FL license EF20002165. No people named. www.paradyme360.com showed a hosting default page; the bare domain redirects.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://paradyme360.com/",
+   "https://www.myomnidata.com/",
+   "https://www.myomnidata.com/about",
+   "https://www.myomnidata.com/multi-dwelling-units-and-property-management",
+   "https://www.myomnidata.com/contact",
+   "https://www.myomnidata.com/security-as-a-service",
+   "https://www.myomnidata.com/enterprise-and-commercial",
+   "https://www.myomnidata.com/history",
+   "https://www.myomnidata.com/solutions",
+   "https://www.myomnidata.com/industries",
+   "https://www.myomnidata.com/warehouse-and-industrial",
+   "http://www.paradyme360.com/",
+   "https://www.paradyme360.com/"
+  ]
+ },
+ "R&D Electric": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "info@rdelectricinc.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": false,
+  "verticals": [
+   "government (FDOT, MDX, Miami-Dade and Broward counties, cities)",
+   "commercial centers",
+   "office buildings",
+   "road construction contractors"
+  ],
+  "brands": [],
+  "locations": 1,
+  "location_cities": [],
+  "hq_city": "",
+  "hq_zip": "",
+  "service_area": "South Florida",
+  "notes": "NOT A SECURITY DEALER: electrical contractor specializing in street lighting installation, maintenance and repair (est. 2004). Site is mostly 'under construction'; 'Our team' page empty. Poor fit for IRIS.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.rdelectricinc.com/",
+   "https://www.rdelectricinc.com/index2.html",
+   "https://www.rdelectricinc.com/1657/index.html",
+   "https://www.rdelectricinc.com/1636.html"
+  ]
+ },
+ "Acoustic Architects": {
+  "owner_name": "Spencer Hauldren",
+  "owner_role": "Founder & Managing Partner",
+  "owner_source": "https://acousticarchitects.net/about/our-team/",
+  "other_named": [
+   {
+    "name": "Aaron Flint",
+    "role": "Founder & Managing Partner",
+    "url": "https://acousticarchitects.net/about/our-team/"
+   },
+   {
+    "name": "Joshua Hamann",
+    "role": "Managing Partner",
+    "url": "https://acousticarchitects.net/about/our-team/"
+   },
+   {
+    "name": "Aaron Cramer",
+    "role": "Director of Operations, PM of MDU Deployment",
+    "url": "https://acousticarchitects.net/about/our-team/"
+   }
+  ],
+  "email": "design@acousticarchitects.net",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "luxury residences",
+   "condos/MDU",
+   "commercial buildings",
+   "yachts/marine"
+  ],
+  "brands": [
+   "Savant",
+   "Control4",
+   "Crestron",
+   "Lutron",
+   "Sonos",
+   "Somfy"
+  ],
+  "locations": 2,
+  "location_cities": [
+   "Miami",
+   "West Palm Beach"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33150",
+  "service_area": "South Florida (Miami and Palm Beach)",
+  "notes": "Luxury smart-home automation/AV integrator (founded 2008) with a Smart Security line (access control, video surveillance, cameras); mostly high-end residential and yachts, some commercial and MDU work. Media contact on site is an outside PR firm (jp@theedge360.com). Marginal fit for IRIS.",
+  "site_status": "ok",
+  "checked_urls": [
+   "http://acousticarchitects.net/",
+   "https://acousticarchitects.net/",
+   "https://acousticarchitects.net/about/our-team/",
+   "https://acousticarchitects.net/about/solutions-videos/",
+   "https://acousticarchitects.net/about/project-videos/",
+   "https://acousticarchitects.net/contact/on-demand-service/",
+   "https://acousticarchitects.net/brands/tech-videos/",
+   "https://acousticarchitects.net/about/",
+   "https://acousticarchitects.net/about/the-story/",
+   "https://acousticarchitects.net/about/media-center/",
+   "https://acousticarchitects.net/solutions/smart-security/",
+   "https://acousticarchitects.net/contact/",
+   "https://acousticarchitects.net/eleusis-indoor-digital-canvas-where-art-meets-intelligent-design/"
+  ]
+ },
+ "York Security Solutions": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "service@yorkss.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "multifamily condos/rental communities",
+   "HOA boards/property managers",
+   "office buildings",
+   "hotels/hospitality",
+   "retail"
+  ],
+  "brands": [
+   "Axis",
+   "Hanwha",
+   "Brivo",
+   "OpenPath"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami Beach"
+  ],
+  "hq_city": "Miami Beach",
+  "hq_zip": "33139",
+  "service_area": "South Florida (Miami, Miami Beach)",
+  "notes": "Commercial/multifamily access control and AI video integrator; legacy traces to a 1937 locksmith business. FL license EG13000865. No people named on site (James Bienenfeld not on site).",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://yorksecuritysolutions.com/",
+   "https://yorksecuritysolutions.com/services/video-surveillance",
+   "https://yorksecuritysolutions.com/services/access-control",
+   "https://yorksecuritysolutions.com/services",
+   "https://yorksecuritysolutions.com/services/communication-systems",
+   "https://yorksecuritysolutions.com/about",
+   "https://yorksecuritysolutions.com/contact",
+   "https://yorksecuritysolutions.com/customers/multifamily-condos-rental-communities",
+   "https://yorksecuritysolutions.com/customers/offices"
+  ]
+ },
+ "Baltic Service LLC": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "info@adbsnow.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "offices/commercial real estate",
+   "healthcare/medical",
+   "retail",
+   "warehouses/logistics",
+   "schools/universities",
+   "hotels",
+   "condos/multifamily",
+   "government",
+   "restaurants"
+  ],
+  "brands": [
+   "Axis (AXIS Certified Partner)",
+   "Ubiquiti",
+   "Cisco"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Sunny Isles Beach"
+  ],
+  "hq_city": "Sunny Isles Beach",
+  "hq_zip": "33160",
+  "service_area": "Miami-Dade, Broward, Palm Beach and the Florida Keys",
+  "notes": "Commercial network/security integrator since 2015 (video, access, intercoms, VoIP, cabling, Wi-Fi), Axis-focused. The Fort Lauderdale address on the site (401 E Las Olas) is the AXIS Experience Center, not their office. No people named.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.adbsnow.com/",
+   "https://www.adbsnow.com/video-surveillance",
+   "https://www.adbsnow.com/industries/offices",
+   "https://www.adbsnow.com/industries/healthcare",
+   "https://www.adbsnow.com/about-us",
+   "https://www.adbsnow.com/remote-management",
+   "https://www.adbsnow.com/contact-us",
+   "https://www.adbsnow.com/intercoms",
+   "https://www.adbsnow.com/video-analytics",
+   "https://www.adbsnow.com/industries/retail",
+   "https://www.adbsnow.com/industries/warehouses",
+   "https://www.adbsnow.com/industries/education"
+  ]
+ },
+ "InaCOMP Technical Services Group": {
+  "owner_name": "Michael Kanan",
+  "owner_role": "Chairman and CEO",
+  "owner_source": "https://www.inacomp.net/about",
+  "other_named": [
+   {
+    "name": "Michael Boone",
+    "role": "President, Commercial",
+    "url": "https://www.inacomp.net/about"
+   },
+   {
+    "name": "Audrey Levi",
+    "role": "Executive Vice President, Business Development",
+    "url": "https://www.inacomp.net/about"
+   },
+   {
+    "name": "Joe Jenkins",
+    "role": "Executive Vice President, Business Development, Client and Team Experience",
+    "url": "https://www.inacomp.net/about"
+   }
+  ],
+  "email": "sales@inacomptsg.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "K-12 and higher education",
+   "healthcare/clinics",
+   "automotive/manufacturing",
+   "venues/esports",
+   "retail/multi-site",
+   "legal/financial",
+   "local government",
+   "small and midsize businesses"
+  ],
+  "brands": [
+   "Verkada",
+   "Cisco",
+   "Meraki",
+   "HP/HPE",
+   "Dell",
+   "Lenovo",
+   "Microsoft",
+   "Promethean"
+  ],
+  "locations": 5,
+  "location_cities": [
+   "Southfield MI (HQ)",
+   "Traverse City MI",
+   "Miami FL",
+   "Norcross GA",
+   "Redding CA"
+  ],
+  "hq_city": "Southfield, MI",
+  "hq_zip": "",
+  "service_area": "Many states; commercial teams in Florida and Georgia",
+  "notes": "IT/technology integrator founded 1982 in Michigan; cameras/access (Verkada) are one of several lines. Miami office: 1400 NW 107th Avenue, Suite 206, Miami FL 33172 (South Florida commercial team under Michael Boone).",
+  "site_status": "ok",
+  "checked_urls": [
+   "http://inacomp.net/",
+   "https://www.inacomp.net/",
+   "https://www.inacomp.net/solutions/data-center",
+   "https://www.inacomp.net/industries/professional-services",
+   "https://www.inacomp.net/solutions/physical-security",
+   "https://www.inacomp.net/contact",
+   "https://www.inacomp.net/solutions/collaboration",
+   "https://www.inacomp.net/industries/small-business",
+   "https://www.inacomp.net/about",
+   "https://www.inacomp.net/solutions/cybersecurity",
+   "https://www.inacomp.net/contact?topic=consultation",
+   "https://www.inacomp.net/solutions/network",
+   "https://www.inacomp.net/solutions/devices"
+  ]
+ },
+ "Industrial Communications (Induscom)": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "public safety/government",
+   "commercial real estate",
+   "healthcare",
+   "schools",
+   "hotels",
+   "warehouses/industrial",
+   "transportation"
+  ],
+  "brands": [
+   "Motorola Solutions (Authorized Channel Partner, Ecosystem Solutions Partner)",
+   "Avigilon",
+   "Avigilon Alta"
+  ],
+  "locations": 3,
+  "location_cities": [
+   "Marshfield MA",
+   "Miami FL",
+   "Fort Myers FL"
+  ],
+  "hq_city": "Marshfield, MA",
+  "hq_zip": "",
+  "service_area": "New England (MA, NH, RI, ME) and South Florida",
+  "notes": "Two-way radio / Motorola Solutions dealer since 1974 (radios, BDA/DAS, towers, MOTOTRBO network) that also sells Avigilon video and access and body-worn/in-car video. Miami office ZIP 33169 (NW 215th St). Sells Motorola's public-safety ecosystem, which overlaps with IRIS. No people named; no email printed.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.induscom.com/",
+   "https://www.induscom.com/motorola/essential-services/",
+   "https://www.induscom.com/about-us/msi-ecosystem-solutions-partner.htm",
+   "https://www.induscom.com/solutions/body-worn-cameras-and-in-car-video.htm",
+   "https://www.induscom.com/services/",
+   "https://www.induscom.com/services/rental-solutions.htm",
+   "https://www.induscom.com/industry-solutions/commercial-real-estate.htm",
+   "https://www.induscom.com/about-us/our-locations.htm",
+   "https://www.induscom.com/about-us/our-history.htm",
+   "https://www.induscom.com/contact-us.htm",
+   "https://www.induscom.com/avigilon/security-cameras.htm",
+   "https://www.induscom.com/avigilon/"
+  ]
+ },
+ "Mobile Me IT": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "sales@mobilemeit.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "schools (K-12, faith-based, higher ed)",
+   "healthcare",
+   "government/cities",
+   "construction",
+   "maritime",
+   "retail",
+   "hotels"
+  ],
+  "brands": [
+   "Verkada (Gold Partner)",
+   "UniFi",
+   "Hanwha Vision",
+   "Axis",
+   "Apple",
+   "Lenovo",
+   "Microsoft"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Doral"
+  ],
+  "hq_city": "Doral",
+  "hq_zip": "33172",
+  "service_area": "Miami-Dade, Broward and Palm Beach",
+  "notes": "IT + security + licensed electrical contractor (EC13015256) since 2011; commercial only. No people named on site.",
+  "site_status": "ok",
+  "checked_urls": [
+   "http://mobilemeit.com/",
+   "https://www.mobilemeit.com/",
+   "https://www.mobilemeit.com/services",
+   "https://www.mobilemeit.com/specialized-deployment-field-services",
+   "https://www.mobilemeit.com/about",
+   "https://www.mobilemeit.com/electrical-physical-security-solutions",
+   "https://www.mobilemeit.com/apple",
+   "https://www.mobilemeit.com/security",
+   "https://www.mobilemeit.com/cloud-security"
+  ]
+ },
+ "PC Solutions & Integration": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": false,
+  "verticals": [
+   "K-12 education",
+   "healthcare",
+   "government",
+   "retail",
+   "hospitality",
+   "manufacturing",
+   "transportation",
+   "data centers"
+  ],
+  "brands": [],
+  "locations": 6,
+  "location_cities": [
+   "Miami (HQ)",
+   "Tallahassee",
+   "Tampa",
+   "Atlanta GA",
+   "Birmingham AL",
+   "Nashville TN"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33155",
+  "service_area": "Florida, Georgia, Alabama, Tennessee",
+  "notes": "IT managed-services / network and cybersecurity provider (PCS); no camera or physical-security work on the site. Poor fit for IRIS. No people named (only customer testimonials).",
+  "site_status": "ok",
+  "checked_urls": [
+   "http://pcsusa.net/",
+   "https://pcsusa.net/",
+   "https://pcsusa.net/pcs-about-us/",
+   "https://pcsusa.net/pcs-solutions/",
+   "https://pcsusa.net/pcs-managed-services/",
+   "https://pcsusa.net/pcs-contact-us/",
+   "https://pcsusa.net/pcs-industries/"
+  ]
+ }
+}

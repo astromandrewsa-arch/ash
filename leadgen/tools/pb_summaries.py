@@ -151,7 +151,7 @@ def why_text(c, bt):
     if c['mb']: w.append('active in Miami Beach (preferred zone)')
     if c['mdc'] and c['mdc'].get('_homestead'): w.append(f"active in Homestead ({c['mdc']['_homestead']} permits; preferred zone)")
     if any('School' in b['agency'] for b in c['bids']): w.append('on the M-DCPS camera/security vendor pool (school safety buyer, police-dispatch relevance)')
-    if any('County' in b['agency'] for b in c['bids']): w.append('holds Miami-Dade County security/fire contracts')
+    if any(b['agency'].startswith('Miami-Dade County (') for b in c['bids']): w.append('holds Miami-Dade County security/fire contracts')
     if any('Miami Beach' in b['agency'] for b in c['bids']): w.append('holds City of Miami Beach security/CCTV contracts (Police Support Services / Facilities)')
     if not w: w.append('low-voltage contractor in target area')
     return 'IRIS fit: ' + '; '.join(w) + '. Sold through dealers, so an integrator already installing cameras in commercial buildings can resell IRIS to the same building owners.'
@@ -190,6 +190,8 @@ for s, k, c in rows[:60]:
         'found': found_text(c),
         'why': why_text(c, bt),
         'next_step': ('Ask for the IRIS dealer conversation: they already install cameras/access control in commercial buildings in the target zones; offer a pilot on one of the buildings in their permit list.' if bt == 'Dealer/Integrator' else
+                      'National firm: reach the Miami-Dade branch/sales lead (not corporate); pitch IRIS as an add-on for the hospital/condo/school accounts shown in their permits and contracts.' if bt.startswith('Dealer/Integrator') else
+                      'Fire/life-safety contractor: pitch IRIS as a building-map and first-responder add-on to their fire-alarm/BDA customers; confirm whether they also install cameras.' if 'fire alarm' in bt else
                       'Lower priority: confirm whether they sell/maintain cameras (not just wiring) before outreach; could be a subcontractor partner for installs.'),
         'source_url': ' | '.join(dict.fromkeys(srcs)),
         '_score': round(s, 1),

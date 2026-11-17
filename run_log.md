@@ -14,7 +14,7 @@
 | 5 | Licenses (DBPR) | leads/T3_Licenses.xlsx | done (v1; websites being added) |
 | 5 | Permits & bids | docs/T3_Permits_and_Bids.docx | pending |
 | 5 | Hiring | docs/T3_Hiring.docx | done |
-| 6 | Houses of worship | leads/Segment_Houses_of_Worship.xlsx | pending |
+| 6 | Houses of worship | leads/Segment_Houses_of_Worship.xlsx | done |
 | 7 | Master | leads/Master.xlsx | pending |
 
 ## DECISIONS
@@ -40,6 +40,7 @@
 - Dicsan Technology (Miami; appears to claim Avigilon and Hanwha) — site fails TLS/502; verify by hand. Empire State Security (Plantation) brands page renders client-side; verify.
 - Alarm Exchange: Protective Security Solutions Inc. (Miami 33186, top pick) website failed (TLS/503) — check services by hand; Scorpion Fire and Safety city unknown; Sunbiz (Florida company registry) is behind a Cloudflare check from this environment.
 - Hiring: Indeed (login wall), Glassdoor/SimplyHired (bot blocks), LinkedIn and ZipRecruiter (robots.txt) were not read directly; Indeed posts were reached through Tallo mirrors. WISE Building Technologies (Doral) security/fire alarm technician post could not be confirmed (hosting page would not load) — check by hand. SIA/ESA job boards and Employ Florida (robots.txt) not reachable.
+- Houses of worship: Chabad.org directory and Chabad-hosted center sites block automated access, so leadership names are missing for ~20 Chabad centers (names/addresses came from the Greater Miami Jewish Federation directory). Unreadable sites: Beth Torah Benny Rok (btbrc.org), Edmond J. Safra Synagogue (ejsfl.com) and a few others. Prizmah and Florida DOE returned 403 (Miami-Dade County private-school listing used). ~8 address conflicts, split-ZIP municipalities (33180, 33169, 33156, 33161, 33150) and ~14 small directory-only minyans need checking (details: leadgen/data/how_notes.md).
 - web.archive.org is unreachable from this cloud environment (connection timeouts), so no archived copies could be used anywhere.
 - TMA member directory https://my.tma.us/tmamemberdirectory (USA > Florida): Cloudflare "verify you are human" check, 403 to plain requests and headless browser (also after a 60 s retry). Not bypassed. In a normal browser, export the Florida list (especially Miami, Doral, Hialeah, Medley, Miami Lakes, Coral Gables, Miami Beach, Homestead). Same block on the Five Diamond lists (https://my.tma.us/fivediamondmonitoringcenters, https://my.tma.us/20262027tmafivediamondapprovedcompanies) and New Members (https://themonitoringassociation.growthzoneapp.com/newtmamembers/). T1_TMA_Members.xlsx was rebuilt from public tma.us pages and search-engine copies of directory pages and is incomplete.
 - TMA: Arco Security Central Station Corp. (Miami 33165, the one clean Miami-Dade monitoring member) — trade press reports Owen Security Solutions bought the Arco Security Group in 2025; check current status.
@@ -82,3 +83,7 @@
 
 ### Website finding (for license holders / IAF members without a listed site)
 - Web search allowance was exhausted by the research agents, so websites were found by testing candidate domains built from the company name (e.g. name.com / name.net) and accepting one ONLY if its homepage names the company and carries a Florida/Miami marker. 36 found for 210 targets; 4 rejected on manual review (different companies). Results: leadgen/data/websites_found.json.
+
+### Houses of worship (segment)
+- 140 institutions (92 houses of worship, 48 schools); 44 in Miami Beach. Sources: Greater Miami Jewish Federation directory and "Find a Rabbi", Miami-Dade County private-school map data, CAJE Miami lists, OU/URJ/USCJ listings (same public data their pages load), ~95 institution websites. 65 named contacts (own site or county listing), 69 published emails, 29 with published security notes (e.g. named security directors, video surveillance, guards, a 2023 security RFP).
+- DECISION: "Services Listed on Website" holds denomination, size and published security notes for this segment. Closed/moved institutions (Temple Israel of Greater Miami, Bet Breira Samu-El Or Olom, Temple Beth Tov, Sha'arei Bina, Hochberg Prep) left out. DO NOT CONTACT - segment list for dealers.

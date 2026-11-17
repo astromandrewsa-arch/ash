@@ -3,15 +3,15 @@
   {
    "contractor": "CONVERGINT TECHNOLOGIES LLC",
    "city_portal": "Miami Beach",
-   "permit_count": 26,
-   "work_types": "Electrical - Commercial - Low Voltage (26) | description tags: access control 15, CCTV/cameras 12, data/voice cabling 1, intercom/entry 1, audio/video 1",
+   "permit_count": 28,
+   "work_types": "Electrical - Commercial - Low Voltage (26); Electrical Sub-Permit Commercial Low Voltage (2) | description tags: access control 16, CCTV/cameras 13, data/voice cabling 1, intercom/entry 1, audio/video 1",
    "examples": "4300 ALTON RD / MOUNT SINAI MEDICAL / hospital/institutional - \"MSOB Labor & Delivery CCTV INSTALLING 28 DEVICES\"; 4300 ALTON RD / MOUNT SINAI MEDICAL / hospital/institutional - \"Cabling and Installation of 3 Cameras at the Main Entrance, 2 Cameras for the Walkway inte\"; 4300 ALTON RD / MOUNT SINAI MEDICAL / hospital/institutional - \"Low Voltage Access Control in the parking lot entrance/exit of parking lot\"; 4300 ALTON RD / MOUNT SINAI MEDICAL / institutional - \"Low Voltage Access Control, ACS on the Entrance and Exit of parking lot, 4 card readers an\"; 4300 ALTON RD / MOUNT SINAI MEDICAL / hospital/institutional - \"MSMC Greenspan 2 Door Addition Low Voltage Access Control\"",
    "date_range": "2025-09-15 to 2026-11-02 (issue dates)",
    "contractor_municipality": "?",
    "contractor_zip": "?",
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: EC13008283. Sum of job values on these permits: $3,482,895. Permit numbers: ELC2617949, ELC2617822, ELC2617820, ELC2617819, ELC2617769, ELC2617867, ELC2617776, ELC2617728, ELC2617774, ELC2617767, ELC2617777, ELC2617775 ...."
+   "notes": "License(s) on work permit: EC13008283. Sum of job values on these permits: $3,559,445. Permit numbers: ELC2617949, ELC2617822, ELC2617820, ELC2617819, ELC2617769, ELC2617867, ELC2617776, ELC2617728, ELC2617774, ELC2617767, ELC2617777, ELC2617775 ...."
   },
   {
    "contractor": "MAXICON LLC",
@@ -25,6 +25,19 @@
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
    "notes": "License(s) on work permit: ES12001350. Sum of job values on these permits: $522,145. Permit numbers: ELC2617467, ELC2517274, ELC2517383, ELC2516807, ELC2517100, ELC2516767, ELC2516600, ELC2516264, ELC2515973, ELC2515878, ELR2505811, ELR2505617 ...."
+  },
+  {
+   "contractor": "SECURITAS TECHNOLOGY CORPORATION",
+   "city_portal": "Miami Beach",
+   "permit_count": 8,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (5); Electrical - Commercial - Low Voltage (3) | description tags: CCTV/cameras 3, burglar/intrusion alarm 3, access control 2",
+   "examples": "828 LINCOLN RD / PPF MBL PORTFOLIO LLC / business/office - \"BC2525594/CCTV\"; 828 LINCOLN RD / PPF MBL PORTFOLIO LLC / business/office - \"BC2525594/BURGLAR ALARM SYSTEM\"; 7426 COLLINS AVE / AJS COLLINS LLC - \"BC2424086 // Access Control System\"; 1617 ALTON RD / BH 1100 LINCOLN ROAD LLC / condo/apartment building - \"Access control system//BC2627432\"; 1617 ALTON RD / BH 1100 LINCOLN ROAD LLC / condo/apartment building - \"CCTV system under Master BC2627432\"",
+   "date_range": "2025-05-13 to 2026-11-03 (issue dates)",
+   "contractor_municipality": "Fishers",
+   "contractor_zip": "46037",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EF20000607, EF20002129. Sum of job values on these permits: $97,904. Permit numbers: ELC2516784, ELC2516785, ELC2516122, ELSPC2600863, ELSPC2600805, ELSPC2600804, ELSPC2600755, ELSPC2600754."
   },
   {
    "contractor": "UNITEC",
@@ -53,6 +66,19 @@
    "notes": "License(s) on work permit: EF0001199. Sum of job values on these permits: $189,635. Permit numbers: ELC2516184, ELC2516803, ELC2516585, ELC2516605, ELC2516239, ELC2516192, ELC2516193."
   },
   {
+   "contractor": "MELODY INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 7,
+   "work_types": "Electrical - Commercial - Low Voltage (4); Electrical Sub-Permit Commercial Low Voltage (3) | description tags: audio/video 7",
+   "examples": "828 LINCOLN RD / PPF MBL PORTFOLIO LLC - \"master permit # BC2525594 low voltage installing 5 Speakers, 1 Amplifier and 2 TV's.\"; 900 LINCOLN RD / Alto 900 Lincoln Rd, LP / condo/apartment building - \"Master Permit # BC2424539 Low Voltage installing 25 Speakers, 1 Amplifier and 7 Television\"; 1624 WASHINGTON AVE - \"BC2423627 // Private Provider inspection and review // TAOC BELL - MUSIC SPEAKER SYSTEM\"; 1784 WEST AVE / AP SUNSET HARBOUR, LP - \"Master permit# BC2424447/ Private Provider: Greenlite Technologies Inc. Yes (Plan Review &\"; 1011 5 ST / NF FIFTH STREET, LLC R.A. / condo/apartment building - \"BC2526445 // Low voltage installing 5 Speakers and 1 Amplifier\"",
+   "date_range": "2025-02-13 to 2026-10-09 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33166",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: ES12001337. Sum of job values on these permits: $116,000. Permit numbers: ELC2516771, ELC2515917, ELC2515812, ELC2515701, ELSPC2600689, ELSPC2600691, ELSPC2600690."
+  },
+  {
    "contractor": "JOHNSON CONTROLS SECURITY SOLUTIONS LLC",
    "city_portal": "Miami Beach",
    "permit_count": 5,
@@ -64,6 +90,32 @@
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
    "notes": "License(s) on work permit: EF20000452. Sum of job values on these permits: $169,176. Permit numbers: ELC2617936, ELC2617849, ELC2617662, ELC2415378, ELC2415511."
+  },
+  {
+   "contractor": "ASE TELECOM & DATA INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 5,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (3); Electrical - Commercial - Low Voltage (2) | description tags: data/voice cabling 5, CCTV/cameras 1",
+   "examples": "4300 ALTON RD / MOUNT SINAI MEDICAL - \"BC2425036 // Low voltage wiring - Category 6 structured cabling system (SCS), for both voi\"; 425 W 41 ST / REIMS AGR I LLC - \"BC2424773 // Low Voltage wiring- Data installation\"; 4300 ALTON RD / MOUNT SINAI MEDICAL CTR / hospital/institutional - \" BC2424319 --- LOW VOLTAGE WIRING - VOICE & DATA INSTALLATION\"; 1759 PURDY AVE / mercantile/retail - \"BC2527111 // LOW VOLTAGE WIRING DATA, CCTV & CAMERAS//MTCI Private Provider Services, LLC \"; 4300 ALTON RD / MOUNT SINAI MEDICAL / hospital/institutional - \"BC2527222 // LOW VOLTAGE WIRING-VOICE & DATA INSTALL\"",
+   "date_range": "2025-08-07 to 2026-10-28 (issue dates)",
+   "contractor_municipality": "Doral",
+   "contractor_zip": "33122",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EG13000859. Sum of job values on these permits: $63,077. Permit numbers: ELC2516481, ELC2516589, ELSPC2600767, ELSPC2600588, ELSPC2600639."
+  },
+  {
+   "contractor": "HURRICANEMARK INVESTMENTS INC dba HM ELECTRIC INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 4,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (3); Electrical - Commercial - Low Voltage (1) | description tags: data/voice cabling 2, access control 1",
+   "examples": "1691 MICHIGAN AVE - \"Low voltage electric for speak easy lounge and Gym\"; 1691 MICHIGAN AVE / condo/apartment building - \"BC2424638/Prv. Prv. Pacifica Engineering Services LLC. - Insp. Only / Electric Low Voltage\"; 1691 MICHIGAN AVE / RK RAGNA, LLC / condo/apartment building - \"BC2627779 // Private provider reviews and inspections: Pacifica // Low voltage access cont\"; 1691 MICHIGAN AVE / RK RAGNA, LLC / condo/apartment building - \"BC2627779 // Private provider reviews and inspections, Pacifica // Low voltage Structured \"",
+   "date_range": "2026-07-06 to 2026-07-24 (issue dates)",
+   "contractor_municipality": "Gainesville",
+   "contractor_zip": "32609",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13012874. Sum of job values on these permits: $105,000. Permit numbers: ELC2617672, ELSPC2600368, ELSPC2600439, ELSPC2600440."
   },
   {
    "contractor": "NCT CORPORATION",
@@ -79,6 +131,19 @@
    "notes": "License(s) on work permit: ES12001898. Sum of job values on these permits: $804,500. Permit numbers: ELC2517067, ELC2516417, ELC2516023, ELC2515658."
   },
   {
+   "contractor": "TS AV & AUTOMATION LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 4,
+   "work_types": "Electrical - Commercial - Low Voltage (3); Electrical Sub-Permit Commercial Low Voltage (1) | description tags: audio/video 4, data/voice cabling 1",
+   "examples": "4775 COLLINS AVE (unit in building) / condo/apartment building - \"BCR2504297// UNIT # // low voltage pre-wiring for TV, internet, and speakers\"; 6101 AQUA AVE (unit in building) - \"BCR2403687 // UNIT # // Low Voltage Pre-wiring data, tv, internet, speaker.\"; 826 MERIDIAN AVE / condo/apartment building - \"BC2118078 / low voltage pre wiring for tvs, internet and sound\"; 7012 FISHER ISLAND DR (unit in building) / condo/apartment building - \"BCR2605023 // Unit # // Low voltage Prewiring for speakers and TV\"",
+   "date_range": "2025-04-26 to 2026-09-22 (issue dates)",
+   "contractor_municipality": "Boca Raton",
+   "contractor_zip": "33428",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13009725. Sum of job values on these permits: $27,873. Permit numbers: ELC2517223, ELC2516599, ELC2516132, ELSPC2600735."
+  },
+  {
    "contractor": "HAMILTON SAFE AND SECURITY SYSTEMS",
    "city_portal": "Miami Beach",
    "permit_count": 4,
@@ -90,32 +155,6 @@
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
    "notes": "License(s) on work permit: EF0000173. Sum of job values on these permits: $54,544. Permit numbers: ELC2516941, ELC2516942, ELC2516649, ELC2516650."
-  },
-  {
-   "contractor": "SECURITAS TECHNOLOGY CORPORATION",
-   "city_portal": "Miami Beach",
-   "permit_count": 4,
-   "work_types": "Electrical - Commercial - Low Voltage (3); Electrical Sub-Permit Commercial Low Voltage (1) | description tags: access control 2, CCTV/cameras 1, burglar/intrusion alarm 1",
-   "examples": "828 LINCOLN RD / PPF MBL PORTFOLIO LLC / business/office - \"BC2525594/CCTV\"; 828 LINCOLN RD / PPF MBL PORTFOLIO LLC / business/office - \"BC2525594/BURGLAR ALARM SYSTEM\"; 7426 COLLINS AVE / AJS COLLINS LLC - \"BC2424086 // Access Control System\"; 1617 ALTON RD / BH 1100 LINCOLN ROAD LLC / condo/apartment building - \"Access control system//BC2627432\"",
-   "date_range": "2025-05-13 to 2026-11-03 (issue dates)",
-   "contractor_municipality": "Fishers",
-   "contractor_zip": "46037",
-   "website": "?",
-   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: EF20000607, EF20002129. Sum of job values on these permits: $22,100. Permit numbers: ELC2516784, ELC2516785, ELC2516122, ELSPC2600863."
-  },
-  {
-   "contractor": "MELODY INC",
-   "city_portal": "Miami Beach",
-   "permit_count": 4,
-   "work_types": "Electrical - Commercial - Low Voltage (4) | description tags: audio/video 4",
-   "examples": "828 LINCOLN RD / PPF MBL PORTFOLIO LLC - \"master permit # BC2525594 low voltage installing 5 Speakers, 1 Amplifier and 2 TV's.\"; 900 LINCOLN RD / Alto 900 Lincoln Rd, LP / condo/apartment building - \"Master Permit # BC2424539 Low Voltage installing 25 Speakers, 1 Amplifier and 7 Television\"; 1624 WASHINGTON AVE - \"BC2423627 // Private Provider inspection and review // TAOC BELL - MUSIC SPEAKER SYSTEM\"; 1784 WEST AVE / AP SUNSET HARBOUR, LP - \"Master permit# BC2424447/ Private Provider: Greenlite Technologies Inc. Yes (Plan Review &\"",
-   "date_range": "2025-02-13 to 2025-08-27 (issue dates)",
-   "contractor_municipality": "Miami",
-   "contractor_zip": "33166",
-   "website": "?",
-   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: ES12001337. Sum of job values on these permits: $111,500. Permit numbers: ELC2516771, ELC2515917, ELC2515812, ELC2515701."
   },
   {
    "contractor": "ALARM DEPOT INC",
@@ -170,6 +209,32 @@
    "notes": "License(s) on work permit: EG13000763. Sum of job values on these permits: $188,000. Permit numbers: ELC2617686, ELC2517034, ELC2516752."
   },
   {
+   "contractor": "NET CONNECT CORP",
+   "city_portal": "Miami Beach",
+   "permit_count": 3,
+   "work_types": "Electrical - Commercial - Low Voltage (2); Electrical Sub-Permit Commercial Low Voltage (1) | description tags: access control 3, CCTV/cameras 2",
+   "examples": "1691 MICHIGAN AVE - \"Security Cameras and Access Control, Installation in floors: 2, 4, & 5.\"; 1691 MICHIGAN AVE - \"BC2424658 // Low voltage for lobby Access control\"; 1691 MICHIGAN AVE / condo/apartment building - \"BC2425012 --- Pacifica Engineering Services, LLC Private Provider Inspections Only / Elect\"",
+   "date_range": "2026-02-23 to 2026-10-14 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33186",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13006365. Sum of job values on these permits: $129,000. Permit numbers: ELC2617642, ELC2517128, ELSPC2600576."
+  },
+  {
+   "contractor": "SHOWTIME AUDIO & VIDEO INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 3,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (2); Electrical - Commercial - Low Voltage (1) | description tags: audio/video 3, CCTV/cameras 2, data/voice cabling 2",
+   "examples": "1445 BAY RD - \"BC2220458 ----- Sub Permit Low Voltage, Under Master Permit BC2220458, Pre-Wired Install: \"; 1 COLLINS AVE (unit in building) / condo/apartment building - \"BC2627652 // Unit # // Low-Voltage Sub Permit // Upgrade existing equipment, validated exi\"; 501 WEST AVE (unit in building) / condo/apartment building - \"BCR2604775 // Unit # Sub Low Voltage Permit UNDER MASTER permit BCR2604775 TO PRE-WIRED AN\"",
+   "date_range": "2026-03-13 to 2026-08-05 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33015",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: ES12001128. Sum of job values on these permits: $248,454. Permit numbers: ELC2617503, ELSPC2600585, ELSPC2600471."
+  },
+  {
    "contractor": "AUDIO SYSTEMS CONSULTING INC",
    "city_portal": "Miami Beach",
    "permit_count": 3,
@@ -183,17 +248,43 @@
    "notes": "License(s) on work permit: ES12000946. Sum of job values on these permits: $29,000. Permit numbers: ELC2517293, ELR2605825, ELR2505490."
   },
   {
-   "contractor": "TS AV & AUTOMATION LLC",
+   "contractor": "ACOUSTIC ARCHITECTS INC",
    "city_portal": "Miami Beach",
    "permit_count": 3,
-   "work_types": "Electrical - Commercial - Low Voltage (3) | description tags: audio/video 3, data/voice cabling 1",
-   "examples": "4775 COLLINS AVE (unit in building) / condo/apartment building - \"BCR2504297// UNIT # // low voltage pre-wiring for TV, internet, and speakers\"; 6101 AQUA AVE (unit in building) - \"BCR2403687 // UNIT # // Low Voltage Pre-wiring data, tv, internet, speaker.\"; 826 MERIDIAN AVE / condo/apartment building - \"BC2118078 / low voltage pre wiring for tvs, internet and sound\"",
-   "date_range": "2025-04-26 to 2025-12-03 (issue dates)",
-   "contractor_municipality": "Boca Raton",
-   "contractor_zip": "33428",
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (2); Electrical - Commercial - Low Voltage (1) | description tags: data/voice cabling 3, audio/video 2, CCTV/cameras 1",
+   "examples": "501 WEST AVE (unit in building) - \"Low voltage permit for shade, TV's, wifi network\"; 501 WEST AVE (unit in building) - \"Master # BCR2605074 Low voltage sub permit - tv's , phone / data, windows treatments, spea\"; 125 OCEAN DR (unit in building) / condo/apartment building - \"BC2527217/ U-0702/ MTCI private provider inspection only - New installation of tv's, netwo\"",
+   "date_range": "2025-12-16 to 2026-11-04 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33150",
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: EC13009725. Sum of job values on these permits: $23,873. Permit numbers: ELC2517223, ELC2516599, ELC2516132."
+   "notes": "License(s) on work permit: ES12000829. Sum of job values on these permits: $80,768. Permit numbers: ELC2517009, ELSPC2600882, ELSPC2600609."
+  },
+  {
+   "contractor": "Cayamas Electric Corporation",
+   "city_portal": "Miami Beach",
+   "permit_count": 3,
+   "work_types": "Electrical - Commercial - Low Voltage (2); Electrical Sub-Permit Commercial Low Voltage (1) | description tags: audio/video 3, data/voice cabling 2, CCTV/cameras 1",
+   "examples": "1691 MICHIGAN AVE - \"BC2424658 // Low voltage internet communication Wiring, LV Audio Speakers, LV control touc\"; 1691 MICHIGAN AVE - \"Low voltage permits for master BC2423435. 33 Phones and internet outlets, 7 wireless acces\"; 1691 MICHIGAN AVE / condo/apartment building - \"Audio visual for master BC2425012. Low voltage, internet communication wiring, LV Audio sp\"",
+   "date_range": "2025-03-07 to 2026-07-08 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33155",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13005178. Sum of job values on these permits: $57,870. Permit numbers: ELC2517117, ELC2515777, ELSPC2600370."
+  },
+  {
+   "contractor": "BLUE WAVE COMMUNICATIONS LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 3,
+   "work_types": "Electrical - Commercial - Low Voltage (2); Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 3, audio/video 1",
+   "examples": "1759 PURDY AVE - \"BC2525314// Unit #// Low Voltage - Cabling for all low voltage infrastructure for the secu\"; 1688 MERIDIAN AVE / 1688 PROPERTY OWNER - \"BC2525178// This for a sub permit project of Low Voltage that involves the installation an\"; 4308 ALTON RD / condo/apartment building - \"Master Permit: BC2627280 - Sub Permit work: Low voltage data cabling in UNIT #\"",
+   "date_range": "2025-04-18 to 2026-09-02 (issue dates)",
+   "contractor_municipality": "Miramar",
+   "contractor_zip": "33025",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: ES0000428. Sum of job values on these permits: $82,970. Permit numbers: ELC2516795, ELC2515872, ELSPC2600637."
   },
   {
    "contractor": "DKERR ELECTRIC LLC",
@@ -235,6 +326,19 @@
    "notes": "License(s) on work permit: EG0000183. Sum of job values on these permits: $881,367. Permit numbers: ELR2505291, ELR2505278, ELR2405239."
   },
   {
+   "contractor": "BRYANT INTEGRATED TECHNOLOGIES INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 2,
+   "work_types": "Electrical - Commercial - Low Voltage (1); Electrical Sub-Permit Commercial Low Voltage (1) | description tags: access control 1, CCTV/cameras 1, audio/video 1",
+   "examples": "3400 COLLINS AVE / 3420 COLLINS AVE LLC - \"Installation of Access Control System\"; 727 77 ST / condo/apartment building - \"BC2627507 // Low voltage device installation Cameras, speaker and waps\"",
+   "date_range": "2026-09-08 to 2026-10-09 (issue dates)",
+   "contractor_municipality": "Cooper City",
+   "contractor_zip": "33328",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13016171. Sum of job values on these permits: $60,693. Permit numbers: ELC2617865, ELSPC2600648."
+  },
+  {
    "contractor": "DICSAN TECHNOLOGY INC",
    "city_portal": "Miami Beach",
    "permit_count": 2,
@@ -259,19 +363,6 @@
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
    "notes": "License(s) on work permit: EF20001842. Sum of job values on these permits: $35,318. Permit numbers: ELC2617493, ELC2414962."
-  },
-  {
-   "contractor": "NET CONNECT CORP",
-   "city_portal": "Miami Beach",
-   "permit_count": 2,
-   "work_types": "Electrical - Commercial - Low Voltage (2) | description tags: access control 2, CCTV/cameras 1",
-   "examples": "1691 MICHIGAN AVE - \"Security Cameras and Access Control, Installation in floors: 2, 4, & 5.\"; 1691 MICHIGAN AVE - \"BC2424658 // Low voltage for lobby Access control\"",
-   "date_range": "2026-02-23 to 2026-06-11 (issue dates)",
-   "contractor_municipality": "Miami",
-   "contractor_zip": "33186",
-   "website": "?",
-   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: EC13006365. Sum of job values on these permits: $91,000. Permit numbers: ELC2617642, ELC2517128."
   },
   {
    "contractor": "SOUND COMPONENTS, INC.",
@@ -300,32 +391,6 @@
    "notes": "License(s) on work permit: EC13005401. Sum of job values on these permits: $2,500. Permit numbers: ELC2517333, ELR2505695."
   },
   {
-   "contractor": "ACOUSTIC ARCHITECTS INC",
-   "city_portal": "Miami Beach",
-   "permit_count": 2,
-   "work_types": "Electrical - Commercial - Low Voltage (1); Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 2, audio/video 1",
-   "examples": "501 WEST AVE (unit in building) - \"Low voltage permit for shade, TV's, wifi network\"; 501 WEST AVE (unit in building) - \"Master # BCR2605074 Low voltage sub permit - tv's , phone / data, windows treatments, spea\"",
-   "date_range": "2025-12-16 to 2026-11-04 (issue dates)",
-   "contractor_municipality": "Miami",
-   "contractor_zip": "33150",
-   "website": "?",
-   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: ES12000829. Sum of job values on these permits: $48,614. Permit numbers: ELC2517009, ELSPC2600882."
-  },
-  {
-   "contractor": "Cayamas Electric Corporation",
-   "city_portal": "Miami Beach",
-   "permit_count": 2,
-   "work_types": "Electrical - Commercial - Low Voltage (2) | description tags: audio/video 2, data/voice cabling 1, CCTV/cameras 1",
-   "examples": "1691 MICHIGAN AVE - \"BC2424658 // Low voltage internet communication Wiring, LV Audio Speakers, LV control touc\"; 1691 MICHIGAN AVE - \"Low voltage permits for master BC2423435. 33 Phones and internet outlets, 7 wireless acces\"",
-   "date_range": "2025-03-07 to 2025-12-05 (issue dates)",
-   "contractor_municipality": "Miami",
-   "contractor_zip": "33155",
-   "website": "?",
-   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: EC13005178. Sum of job values on these permits: $9,975. Permit numbers: ELC2517117, ELC2515777."
-  },
-  {
    "contractor": "STRIKING ELECTRIC LLC",
    "city_portal": "Miami Beach",
    "permit_count": 2,
@@ -339,17 +404,17 @@
    "notes": "License(s) on work permit: EC13005327. Sum of job values on these permits: $7,840. Permit numbers: ELC2516879, ELC2516364."
   },
   {
-   "contractor": "BLUE WAVE COMMUNICATIONS LLC",
+   "contractor": "DELPHI ONE SYSTEM CORP EG13000224",
    "city_portal": "Miami Beach",
    "permit_count": 2,
-   "work_types": "Electrical - Commercial - Low Voltage (2) | description tags: data/voice cabling 2, audio/video 1",
-   "examples": "1759 PURDY AVE - \"BC2525314// Unit #// Low Voltage - Cabling for all low voltage infrastructure for the secu\"; 1688 MERIDIAN AVE / 1688 PROPERTY OWNER - \"BC2525178// This for a sub permit project of Low Voltage that involves the installation an\"",
-   "date_range": "2025-04-18 to 2025-09-26 (issue dates)",
-   "contractor_municipality": "Miramar",
-   "contractor_zip": "33025",
+   "work_types": "Electrical - Commercial - Low Voltage (1); Electrical Sub-Permit Commercial Low Voltage (1) | description tags: access control 2, CCTV/cameras 1, burglar/intrusion alarm 1, fire alarm 1",
+   "examples": "1688 MERIDIAN AVE / 1688 PROPERTY OWNER - \"Suite #: 1020 // installation of Access Control for three doors, including one magnetic lo\"; 411 MICHIGAN AVE / 411 MICHIGAN SOFI OWNER / condo/apartment building - \"BC2526381 --- Installation of Access Control for three doors using electrified mortise loc\"",
+   "date_range": "2025-10-17 to 2026-07-15 (issue dates)",
+   "contractor_municipality": "?",
+   "contractor_zip": "?",
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: ES0000428. Sum of job values on these permits: $46,620. Permit numbers: ELC2516795, ELC2515872."
+   "notes": "License(s) on work permit: n/a. Sum of job values on these permits: $92,290. Permit numbers: ELC2516645, ELSPC2600276."
   },
   {
    "contractor": "M C G ELECTRONICS INC",
@@ -363,6 +428,19 @@
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
    "notes": "License(s) on work permit: EF0000574. Sum of job values on these permits: $7,300. Permit numbers: ELC2516802, ELC2415592."
+  },
+  {
+   "contractor": "VICON ELECTRIC INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 2,
+   "work_types": "Electrical - Commercial - Low Voltage (1); Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1, audio/video 1",
+   "examples": "828 LINCOLN RD / PPF MBL PORTFOLIO LLC  - \"BC2525594 ----TO INSTALL 15-CAT 6 CABLES AND HOOK UP EQUIPMENT\"; 530 LINCOLN RD / 530 LINCOLN OWNER LLC / condo/apartment building - \"BC2627350// Installing a 22-speaker sound systerm.\"",
+   "date_range": "2025-09-22 to 2026-07-02 (issue dates)",
+   "contractor_municipality": "?",
+   "contractor_zip": "?",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC0002072. Sum of job values on these permits: $8,000. Permit numbers: ELC2516827, ELSPC2600458."
   },
   {
    "contractor": "EVERON LLC",
@@ -391,17 +469,17 @@
    "notes": "License(s) on work permit: EC13010779, ES12001696. Sum of job values on these permits: $121,274. Permit numbers: ELC2516654, ELC2414583."
   },
   {
-   "contractor": "ASE TELECOM & DATA, INC.",
+   "contractor": "HT-INSTALL INC",
    "city_portal": "Miami Beach",
    "permit_count": 2,
-   "work_types": "Electrical - Commercial - Low Voltage (2) | description tags: data/voice cabling 2",
-   "examples": "4300 ALTON RD / MOUNT SINAI MEDICAL - \"BC2425036 // Low voltage wiring - Category 6 structured cabling system (SCS), for both voi\"; 425 W 41 ST / REIMS AGR I LLC - \"BC2424773 // Low Voltage wiring- Data installation\"",
-   "date_range": "2025-08-07 to 2025-08-26 (issue dates)",
-   "contractor_municipality": "Doral",
-   "contractor_zip": "33122",
+   "work_types": "Electrical - Commercial - Low Voltage (1); Electrical Sub-Permit Commercial Low Voltage (1) | description tags: audio/video 2, CCTV/cameras 1, data/voice cabling 1",
+   "examples": "5801 COLLINS AVE (unit in building) - \"Sub permit low voltage electric for TVs, speakers, lighting\"; 50 S S POINTE DR (unit in building) / condo/apartment building - \" BC2627614| Unit # Prewire Low-voltage prewire TVs, speakers, data, lighting/shade control\"",
+   "date_range": "2025-07-29 to 2026-07-23 (issue dates)",
+   "contractor_municipality": "?",
+   "contractor_zip": "?",
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: EG13000859. Sum of job values on these permits: $18,520. Permit numbers: ELC2516481, ELC2516589."
+   "notes": "License(s) on work permit: ES12000249. Sum of job values on these permits: $30,766. Permit numbers: ELC2516538, ELSPC2600539."
   },
   {
    "contractor": "123 AUTOMATION LLC",
@@ -430,6 +508,32 @@
    "notes": "License(s) on work permit: EF20001957. Sum of job values on these permits: $39,000. Permit numbers: ELC2516259, ELC2516148."
   },
   {
+   "contractor": "COMMUNICATION ACCESS SERVICES INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 2,
+   "work_types": "Electrical - Commercial - Low Voltage (1); Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1",
+   "examples": "4300 ALTON RD / MOUNT SINAI MEDICAL - \"BC2322043 --- Absolute Civil Engineering Solutions, LLC // Structured Cabling System\"; 4300 ALTON RD / MOUNT SINAI MEDICAL / condo/apartment building - \"BC2526226 ------ Nurse Call installation at MSOP 2nd Floor\"",
+   "date_range": "2025-06-24 to 2026-08-21 (issue dates)",
+   "contractor_municipality": "?",
+   "contractor_zip": "?",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: ES0000241. Sum of job values on these permits: $1,073,933. Permit numbers: ELC2516062, ELSPC2600618."
+  },
+  {
+   "contractor": "INTEGRITY TECHNOLOGY SOLUTIONS GROUP INC dba INTEGRITYTECH",
+   "city_portal": "Miami Beach",
+   "permit_count": 2,
+   "work_types": "Electrical - Commercial - Low Voltage (1); Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 2",
+   "examples": "1759 PURDY AVE / Sunset Land Associates LLC / - \"BC2425104 --- MTCI Plan review and Inspections. Low Voltage. CAT 6A cabling and wireless a\"; 530 LINCOLN RD / 530 LINCOLN OWNER, LLC / condo/apartment building - \"BC2627350 ------ Low voltage permit for voice and data cabling. (Master Permit BC2627350)\"",
+   "date_range": "2025-05-05 to 2026-06-30 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33177",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: ES12001525. Sum of job values on these permits: $28,128. Permit numbers: ELC2516179, ELSPC2600393."
+  },
+  {
    "contractor": "NEC ELECTRIC SOLUTIONS CORP",
    "city_portal": "Miami Beach",
    "permit_count": 2,
@@ -454,6 +558,19 @@
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
    "notes": "License(s) on work permit: EC13005489. Sum of job values on these permits: $1,000. Permit numbers: ELC2515907, ELC2515714."
+  },
+  {
+   "contractor": "E3 TECHNOLOGIES FLORIDA LLC dba BDIGITAL TECHNOLOGIES",
+   "city_portal": "Miami Beach",
+   "permit_count": 2,
+   "work_types": "Electrical - Commercial - Low Voltage (1); Electrical Sub-Permit Commercial Low Voltage (1) | description tags: audio/video 1",
+   "examples": "501 WEST AVE (unit in building) / condo/apartment building - \"BC2425031 // Unit # // WIRE FOR 6 TVs AND 3 ACCESS POINT\"; 3315 COLLINS AVE (unit in building) / condo/apartment building - \"Unit # // BC2627454 Wire for 4 TVs 12 pairs of speakers and 3 access points\"",
+   "date_range": "2025-02-28 to 2026-07-10 (issue dates)",
+   "contractor_municipality": "Port St Lucie",
+   "contractor_zip": "34953",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EG13000842. Sum of job values on these permits: $2,345. Permit numbers: ELC2515877, ELSPC2600505."
   },
   {
    "contractor": "ARC ELECTRICAL CORP",
@@ -493,6 +610,58 @@
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
    "notes": "License(s) on work permit: ES12001494. Sum of job values on these permits: $150,000. Permit numbers: ELR2505652, ELR2505314."
+  },
+  {
+   "contractor": "UNIFY PRODUCTIONS, INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 2,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (2) | description tags: CCTV/cameras 1, data/voice cabling 1, audio/video 1",
+   "examples": "4000 COLLINS AVE / SOV CMB HOTEL OWNER / hotel/transient residential - \" BC2525348 // Low Voltage - ARC Private Provider Services\"; 1600 ALTON RD / ARRP 1600 ALTON LLC / condo/apartment building - \"BC2526612 // Low Voltage Installation for Embe Bakery at 1700 Alton Road. Installation inc\"",
+   "date_range": "2026-09-02 to 2026-11-02 (issue dates)",
+   "contractor_municipality": "Jupiter",
+   "contractor_zip": "33458",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: ES12002178. Sum of job values on these permits: $95,000. Permit numbers: ELSPC2600868, ELSPC2600661."
+  },
+  {
+   "contractor": "HI-TECH ELECTRIC & FIRE CORP",
+   "city_portal": "Miami Beach",
+   "permit_count": 2,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (2) | description tags: data/voice cabling 2, audio/video 1",
+   "examples": "1455 OCEAN DR (unit in building) / condo/apartment building - \"BCR2604895 --- Low voltage sub permit for Phone, data, tv and speakers.\"; 6365 COLLINS AVE / AKOYA CONDOMINIUM / condo/apartment building - \"BC2013607 --- Installation of 4 - 2\" conduits and 3 - 24\" x 24\" j-boxes at lobby to 3rd fl\"",
+   "date_range": "2026-07-30 to 2026-09-23 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33174",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13002608. Sum of job values on these permits: $14,000. Permit numbers: ELSPC2600757, ELSPC2600553."
+  },
+  {
+   "contractor": "NATIONWIDE COMMUNICATION SERVICES LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 2,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (2) | description tags: CCTV/cameras 2, data/voice cabling 2",
+   "examples": "1101 5TH ST / NF Fifth Street LLC / condo/apartment building - \"BC2526445 // Low voltage data and CCTV cabling only\"; 1617 ALTON RD / BH 1100 LINCOLN ROAD LLC / condo/apartment building - \"BC2627432 // Low Voltage data and CCTV cabling only\"",
+   "date_range": "2026-08-25 to 2026-08-31 (issue dates)",
+   "contractor_municipality": "Orlando",
+   "contractor_zip": "32819",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: ES12000076. Sum of job values on these permits: $147,797. Permit numbers: ELSPC2600629, ELSPC2600632."
+  },
+  {
+   "contractor": "SMART BUILDING SOLUTIONS CORP",
+   "city_portal": "Miami Beach",
+   "permit_count": 2,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (2)",
+   "examples": "6985 ABBOTT AVE / condo/apartment building - \"BC2219160 / Low Voltage Energy Management\"; 6988 ABBOTT AVE / mercantile/retail - \"BC2219161 / Low Voltage Energy Management\"",
+   "date_range": "2026-07-17 to 2026-07-17 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33186",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13011416. Sum of job values on these permits: $200. Permit numbers: ELSPC2600401, ELSPC2600402."
   },
   {
    "contractor": "G BRICKELL ELECTRIC, LLC",
@@ -547,19 +716,6 @@
    "notes": "License(s) on work permit: ES12002322. Sum of job values on these permits: $2,500. Permit numbers: ELC2617802."
   },
   {
-   "contractor": "BRYANT INTEGRATED TECHNOLOGIES INC",
-   "city_portal": "Miami Beach",
-   "permit_count": 1,
-   "work_types": "Electrical - Commercial - Low Voltage (1) | description tags: access control 1",
-   "examples": "3400 COLLINS AVE / 3420 COLLINS AVE LLC - \"Installation of Access Control System\"",
-   "date_range": "2026-10-09 to 2026-10-09 (issue dates)",
-   "contractor_municipality": "Cooper City",
-   "contractor_zip": "33328",
-   "website": "?",
-   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: EC13016171. Sum of job values on these permits: $23,319. Permit numbers: ELC2617865."
-  },
-  {
    "contractor": "ACCESS POINT TECHNOLOGIES, INC",
    "city_portal": "Miami Beach",
    "permit_count": 1,
@@ -584,19 +740,6 @@
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
    "notes": "License(s) on work permit: EC13005807. Sum of job values on these permits: $800. Permit numbers: ELC2617839."
-  },
-  {
-   "contractor": "HURRICANEMARK INVESTMENTS INC dba HM ELECTRIC INC",
-   "city_portal": "Miami Beach",
-   "permit_count": 1,
-   "work_types": "Electrical - Commercial - Low Voltage (1)",
-   "examples": "1691 MICHIGAN AVE - \"Low voltage electric for speak easy lounge and Gym\"",
-   "date_range": "2026-07-06 to 2026-07-06 (issue dates)",
-   "contractor_municipality": "Gainesville",
-   "contractor_zip": "32609",
-   "website": "?",
-   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: EC13012874. Sum of job values on these permits: $55,000. Permit numbers: ELC2617672."
   },
   {
    "contractor": "SOUTHEAST FLORIDA HOME SERVICES LLC dba MISTER SPARKY",
@@ -649,19 +792,6 @@
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
    "notes": "License(s) on work permit: EF20000574. Sum of job values on these permits: $120,000. Permit numbers: ELC2517062."
-  },
-  {
-   "contractor": "SHOWTIME AUDIO & VIDEO INC",
-   "city_portal": "Miami Beach",
-   "permit_count": 1,
-   "work_types": "Electrical - Commercial - Low Voltage (1) | description tags: CCTV/cameras 1, data/voice cabling 1, audio/video 1",
-   "examples": "1445 BAY RD - \"BC2220458 ----- Sub Permit Low Voltage, Under Master Permit BC2220458, Pre-Wired Install: \"",
-   "date_range": "2026-03-13 to 2026-03-13 (issue dates)",
-   "contractor_municipality": "Miami",
-   "contractor_zip": "33015",
-   "website": "?",
-   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: ES12001128. Sum of job values on these permits: $186,314. Permit numbers: ELC2617503."
   },
   {
    "contractor": "UNLIMITED FIRE & ELECTRICAL INC",
@@ -846,19 +976,6 @@
    "notes": "License(s) on work permit: ES12002040. Sum of job values on these permits: $1,000. Permit numbers: ELC2516553."
   },
   {
-   "contractor": "DELPHI ONE SYSTEM CORP EG13000224",
-   "city_portal": "Miami Beach",
-   "permit_count": 1,
-   "work_types": "Electrical - Commercial - Low Voltage (1) | description tags: access control 1",
-   "examples": "1688 MERIDIAN AVE / 1688 PROPERTY OWNER - \"Suite #: 1020 // installation of Access Control for three doors, including one magnetic lo\"",
-   "date_range": "2025-10-17 to 2025-10-17 (issue dates)",
-   "contractor_municipality": "?",
-   "contractor_zip": "?",
-   "website": "?",
-   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: n/a. Sum of job values on these permits: $7,500. Permit numbers: ELC2516645."
-  },
-  {
    "contractor": "ODETTE ELECTRIC COMPANY INC",
    "city_portal": "Miami Beach",
    "permit_count": 1,
@@ -883,19 +1000,6 @@
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
    "notes": "License(s) on work permit: EC13011885. Sum of job values on these permits: $2,500. Permit numbers: ELC2516918."
-  },
-  {
-   "contractor": "VICON ELECTRIC INC",
-   "city_portal": "Miami Beach",
-   "permit_count": 1,
-   "work_types": "Electrical - Commercial - Low Voltage (1) | description tags: data/voice cabling 1",
-   "examples": "828 LINCOLN RD / PPF MBL PORTFOLIO LLC  - \"BC2525594 ----TO INSTALL 15-CAT 6 CABLES AND HOOK UP EQUIPMENT\"",
-   "date_range": "2025-09-22 to 2025-09-22 (issue dates)",
-   "contractor_municipality": "?",
-   "contractor_zip": "?",
-   "website": "?",
-   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: EC0002072. Sum of job values on these permits: $2,000. Permit numbers: ELC2516827."
   },
   {
    "contractor": "IWATCH SYSTEMS LLC",
@@ -1028,19 +1132,6 @@
    "notes": "License(s) on work permit: EC13014730. Sum of job values on these permits: $7,976. Permit numbers: ELC2516367."
   },
   {
-   "contractor": "HT-INSTALL INC",
-   "city_portal": "Miami Beach",
-   "permit_count": 1,
-   "work_types": "Electrical - Commercial - Low Voltage (1) | description tags: audio/video 1",
-   "examples": "5801 COLLINS AVE (unit in building) - \"Sub permit low voltage electric for TVs, speakers, lighting\"",
-   "date_range": "2025-07-29 to 2025-07-29 (issue dates)",
-   "contractor_municipality": "?",
-   "contractor_zip": "?",
-   "website": "?",
-   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: ES12000249. Sum of job values on these permits: $10,766. Permit numbers: ELC2516538."
-  },
-  {
    "contractor": "FLORIDA ELECTRICAL CONTRACTORS",
    "city_portal": "Miami Beach",
    "permit_count": 1,
@@ -1065,19 +1156,6 @@
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
    "notes": "License(s) on work permit: EF20000684. Sum of job values on these permits: $16,000. Permit numbers: ELC2516235."
-  },
-  {
-   "contractor": "COMMUNICATION ACCESS SERVICES INC",
-   "city_portal": "Miami Beach",
-   "permit_count": 1,
-   "work_types": "Electrical - Commercial - Low Voltage (1) | description tags: data/voice cabling 1",
-   "examples": "4300 ALTON RD / MOUNT SINAI MEDICAL - \"BC2322043 --- Absolute Civil Engineering Solutions, LLC // Structured Cabling System\"",
-   "date_range": "2025-06-24 to 2025-06-24 (issue dates)",
-   "contractor_municipality": "?",
-   "contractor_zip": "?",
-   "website": "?",
-   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: ES0000241. Sum of job values on these permits: $1,065,961. Permit numbers: ELC2516062."
   },
   {
    "contractor": "GREENHOME AUTOMATIONS LLC",
@@ -1143,19 +1221,6 @@
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
    "notes": "License(s) on work permit: EF20000666. Sum of job values on these permits: $500. Permit numbers: ELC2516262."
-  },
-  {
-   "contractor": "INTEGRITY TECHNOLOGY SOLUTIONS GROUP INC dba INTEGRITYTECH",
-   "city_portal": "Miami Beach",
-   "permit_count": 1,
-   "work_types": "Electrical - Commercial - Low Voltage (1) | description tags: data/voice cabling 1",
-   "examples": "1759 PURDY AVE / Sunset Land Associates LLC / - \"BC2425104 --- MTCI Plan review and Inspections. Low Voltage. CAT 6A cabling and wireless a\"",
-   "date_range": "2025-05-05 to 2025-05-05 (issue dates)",
-   "contractor_municipality": "Miami",
-   "contractor_zip": "33177",
-   "website": "?",
-   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: ES12001525. Sum of job values on these permits: $13,128. Permit numbers: ELC2516179."
   },
   {
    "contractor": "ALCOR ELECTRIC LLC",
@@ -1286,19 +1351,6 @@
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
    "notes": "License(s) on work permit: EC13008715. Sum of job values on these permits: $4,000. Permit numbers: ELC2515866."
-  },
-  {
-   "contractor": "E3 TECHNOLOGIES FLORIDA LLC dba BDIGITAL TECHNOLOGIES",
-   "city_portal": "Miami Beach",
-   "permit_count": 1,
-   "work_types": "Electrical - Commercial - Low Voltage (1)",
-   "examples": "501 WEST AVE (unit in building) / condo/apartment building - \"BC2425031 // Unit # // WIRE FOR 6 TVs AND 3 ACCESS POINT\"",
-   "date_range": "2025-02-28 to 2025-02-28 (issue dates)",
-   "contractor_municipality": "Port St Lucie",
-   "contractor_zip": "34953",
-   "website": "?",
-   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: EG13000842. Sum of job values on these permits: $900. Permit numbers: ELC2515877."
   },
   {
    "contractor": "DEDICATED SECURITY & SOUND LLC",
@@ -1665,17 +1717,446 @@
    "notes": "License(s) on work permit: ES12001821. Sum of job values on these permits: $29,741. Permit numbers: ELSPC2600677."
   },
   {
-   "contractor": "UNIFY PRODUCTIONS, INC",
+   "contractor": "PLUGOUT LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: CCTV/cameras 1, access control 1, burglar/intrusion alarm 1",
+   "examples": "530 LINCOLN RD / 530 LINCOLN OWNER LLC / mercantile/retail - \"BC2627350 --- low voltage security cameras, access control, and intrusion alarm Installati\"",
+   "date_range": "2026-10-30 to 2026-10-30 (issue dates)",
+   "contractor_municipality": "Englewood",
+   "contractor_zip": "07631",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EG13000805. Sum of job values on these permits: $247,538. Permit numbers: ELSPC2600532."
+  },
+  {
+   "contractor": "SUPER ELECTRONICS INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1, audio/video 1",
+   "examples": "50 S S POINTE DR (unit in building) / condo/apartment building - \" BCR2604982 // Unit # // Low voltage - Audio/Video and network wiring\"",
+   "date_range": "2026-10-27 to 2026-10-27 (issue dates)",
+   "contractor_municipality": "Key Largo",
+   "contractor_zip": "33037",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EG13000458. Sum of job values on these permits: $26,350. Permit numbers: ELSPC2600862."
+  },
+  {
+   "contractor": "VOLTAGE 11 LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1",
+   "examples": "1759 PURDY AVE / Sunset Land Associates LLC / / mercantile/retail - \"BC2627642 // low voltage // JEM -- PRIVATE PROVIDER REVIEW AND INSPECTIONS Cat6 cabling fo\"",
+   "date_range": "2026-10-27 to 2026-10-27 (issue dates)",
+   "contractor_municipality": "Boynton Beach",
+   "contractor_zip": "33426",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13010381. Sum of job values on these permits: $4,000. Permit numbers: ELSPC2600443."
+  },
+  {
+   "contractor": "R.E.C REVOLUTION ELECTRICAL CONTRACTOR CORP",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: burglar/intrusion alarm 1",
+   "examples": "420 LINCOLN RD / mercantile/retail - \"BC2627978/ low voltage electrical rough-in for interior buildout of the new ZARA retail st\"",
+   "date_range": "2026-10-22 to 2026-10-22 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33186",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13016029. Sum of job values on these permits: $186,984. Permit numbers: ELSPC2600838."
+  },
+  {
+   "contractor": "Fernando Gimeno",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: CCTV/cameras 1, data/voice cabling 1, audio/video 1",
+   "examples": "1646 EUCLID AVE / Seven Hundred Realty Corp / mercantile/retail - \"BC2628229 // Low voltage prewire for cameras, speakers, video wall, data\"",
+   "date_range": "2026-10-21 to 2026-10-21 (issue dates)",
+   "contractor_municipality": "Hollywood",
+   "contractor_zip": "33020",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: n/a. Sum of job values on these permits: $6,000. Permit numbers: ELSPC2600848."
+  },
+  {
+   "contractor": "LC ELECTRICAL AND FIRE SOLUTION LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1",
+   "examples": "3315 COLLINS AVE (unit in building) / condo/apartment building - \"Unit # ---- BCR2504498--- Low Voltage install CAT 6 CABLES FOR tv's & phone lines\"",
+   "date_range": "2026-10-16 to 2026-10-16 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33157",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13016638. Sum of job values on these permits: $11,000. Permit numbers: ELSPC2600778."
+  },
+  {
+   "contractor": "KILIAN SMART HOMES LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1, audio/video 1",
+   "examples": "1 single-family residence(s)",
+   "date_range": "2026-10-14 to 2026-10-14 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33137",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13014549. Sum of job values on these permits: $4,000. Permit numbers: ELSPC2600835."
+  },
+  {
+   "contractor": "SOCIAL DESIGN TECHNOLOGIES LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1",
+   "examples": "811 LINCOLN RD / MAC 801 LR LLC / condo/apartment building - \"BC2628221/SWAROVSKI/Low voltage, to run 21 Cat 6 cables for POS, access points and compute\"",
+   "date_range": "2026-10-13 to 2026-10-13 (issue dates)",
+   "contractor_municipality": "Fort Myers",
+   "contractor_zip": "33967",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: ES12002337. Sum of job values on these permits: $0. Permit numbers: ELSPC2600764."
+  },
+  {
+   "contractor": "C&D INVESTMENTS 1703 LLC dba ANCOR GROUP",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1",
+   "examples": "4391 COLLINS AVE (unit in building) / condo/apartment building - \"BC2628144 --- Installation of low-voltage wiring and devices, including data/communication\"",
+   "date_range": "2026-10-12 to 2026-10-12 (issue dates)",
+   "contractor_municipality": "Buford",
+   "contractor_zip": "30518",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13015506. Sum of job values on these permits: $1,200. Permit numbers: ELSPC2600796."
+  },
+  {
+   "contractor": "David Ayan",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: CCTV/cameras 1, data/voice cabling 1",
+   "examples": "1000 17 ST / 1000 17th ST LLC / business/office - \"Interior renovation of 2nd and 3rd floors DATA CABLING AND CCTV UNDER MASTER #BC2627915\"",
+   "date_range": "2026-10-09 to 2026-10-09 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33186",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: n/a. Sum of job values on these permits: $60,000. Permit numbers: ELSPC2600803."
+  },
+  {
+   "contractor": "D & R ELECTRICAL CONTRACTOR LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: CCTV/cameras 1, audio/video 1",
+   "examples": "1800 SUNSET HARBOUR DR (unit in building) / condo/apartment building - \"BCR2604917/ #1902/4/ LOW VOLTAGE WIRING: (3) WIFI ACCESS POINTS, (5) TV, (8) SPEAKERS, (2)\"",
+   "date_range": "2026-10-06 to 2026-10-06 (issue dates)",
+   "contractor_municipality": "Miami Gardens",
+   "contractor_zip": "33056",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: 12E000397. Sum of job values on these permits: $4,600. Permit numbers: ELSPC2600787."
+  },
+  {
+   "contractor": "ELECTRICAL MASTER SOLUTIONS LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: CCTV/cameras 1",
+   "examples": "2401 COLLINS AVE / THE RIVIERA CONDOMINIUM / condo/apartment building - \"BC2526994 --- 3 CAMERAS & 1 WIFI HUB IN LOBBY\"",
+   "date_range": "2026-10-02 to 2026-10-02 (issue dates)",
+   "contractor_municipality": "?",
+   "contractor_zip": "?",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13015502. Sum of job values on these permits: $2,400. Permit numbers: ELSPC2600791."
+  },
+  {
+   "contractor": "ABW ELECTRIC INC DBA A BETTER WAY ELECTRIC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: CCTV/cameras 1, audio/video 1",
+   "examples": "850 COMMERCE ST / Limestone Plant LLC - \"BC2525225 //PP INSPECTION ONLY (Pacifica Engineering Services LLC)/supply and install audi\"",
+   "date_range": "2026-09-28 to 2026-09-28 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33186",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13003933. Sum of job values on these permits: $200,000. Permit numbers: ELSPC2600726."
+  },
+  {
+   "contractor": "COMPLEX CIRCUIT ELECTRICAL SERVICES INC",
    "city_portal": "Miami Beach",
    "permit_count": 1,
    "work_types": "Electrical Sub-Permit Commercial Low Voltage (1)",
-   "examples": "4000 COLLINS AVE / SOV CMB HOTEL OWNER / hotel/transient residential - \" BC2525348 // Low Voltage - ARC Private Provider Services\"",
-   "date_range": "2026-11-02 to 2026-11-02 (issue dates)",
-   "contractor_municipality": "Jupiter",
-   "contractor_zip": "33458",
+   "examples": "1220 17 ST / condo/apartment building - \"BC2627678 / Work shall consist of one new 60 pole 250 amp panel from existing service, ins\"",
+   "date_range": "2026-09-16 to 2026-09-16 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33175",
    "website": "?",
    "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
-   "notes": "License(s) on work permit: ES12002178. Sum of job values on these permits: $70,000. Permit numbers: ELSPC2600868."
+   "notes": "License(s) on work permit: EC13008467. Sum of job values on these permits: $44,100. Permit numbers: ELSPC2600659."
+  },
+  {
+   "contractor": "QUALITY WIRING INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: access control 1",
+   "examples": "411 MICHIGAN AVE / 411 MICHIGAN SOFI OWNER / business/office - \"BC2526933 // Suite #: 201 // MTCI Private Provider Services, LLC, Inspections Only // Low \"",
+   "date_range": "2026-09-04 to 2026-09-04 (issue dates)",
+   "contractor_municipality": "Doral",
+   "contractor_zip": "33172",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EFA000574. Sum of job values on these permits: $1,950. Permit numbers: ELSPC2600650."
+  },
+  {
+   "contractor": "Broadband Services, INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: CCTV/cameras 1, data/voice cabling 1, audio/video 1",
+   "examples": "1212 LINCOLN RD / assembly (restaurant/venue) - \"BC2424968 // Low Voltage // CCTV, DATA/network, AUDIO, Control wiring\"",
+   "date_range": "2026-08-27 to 2026-08-27 (issue dates)",
+   "contractor_municipality": "Crystal River",
+   "contractor_zip": "34429",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: ES12001448. Sum of job values on these permits: $20,000. Permit numbers: ELSPC2600649."
+  },
+  {
+   "contractor": "JGE ELECTRICAL INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1)",
+   "examples": "3900 COLLINS AVE / CLH Circa39, LLC / condo/apartment building - \"Master Permit: BC2627355 // MTCI Private Provider Review and Inspections // Low-voltage wi\"",
+   "date_range": "2026-08-20 to 2026-08-20 (issue dates)",
+   "contractor_municipality": "Orlando",
+   "contractor_zip": "32837",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13011553. Sum of job values on these permits: $3,900. Permit numbers: ELSPC2600607."
+  },
+  {
+   "contractor": "SECURITY TECHNOLOGIES NETWORK INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: CCTV/cameras 1, data/voice cabling 1",
+   "examples": "3801 COLLINS AVE (unit in building) / condo/apartment building - \"BC2627531 --------- LOW VOLTAGE /DATA/CAMERAS\"",
+   "date_range": "2026-08-20 to 2026-08-20 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33155",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EG13000220. Sum of job values on these permits: $10,000. Permit numbers: ELSPC2600578."
+  },
+  {
+   "contractor": "TROPIC AIR CONDITIONING dba TROPIC MECHANICAL CONTRACTORS",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1)",
+   "examples": "1901 COLLINS AVE / SHORE CLUB PROPERTY / condo/apartment building - \"BC2322278 // Priv Prov. review and inspections MTCI // Low Voltage\"",
+   "date_range": "2026-08-19 to 2026-08-19 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33172",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13003773. Sum of job values on these permits: $300,000. Permit numbers: ELSPC2600613."
+  },
+  {
+   "contractor": "CASTAWAY SECURITY SOLUTIONS LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: CCTV/cameras 1, access control 1",
+   "examples": "326 71 ST / MIAMI BEACH TOWN CENTER / business/office - \"BC2526428// Suite A access control system and CCTV \"",
+   "date_range": "2026-08-18 to 2026-08-18 (issue dates)",
+   "contractor_municipality": "Daytona Beach",
+   "contractor_zip": "32114",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EG13000876. Sum of job values on these permits: $90,000. Permit numbers: ELSPC2600431."
+  },
+  {
+   "contractor": "RSD ENTERPRISES INC dba THE TELEPHONE MAN",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1, audio/video 1",
+   "examples": "5500 COLLINS AVE (unit in building) / condo/apartment building - \"BCR2504306/ #2201/ Low Voltage Data Cabling and Audio Cabling\"",
+   "date_range": "2026-08-10 to 2026-08-10 (issue dates)",
+   "contractor_municipality": "Dania Beach",
+   "contractor_zip": "33004",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: ES12001866. Sum of job values on these permits: $3,500. Permit numbers: ELSPC2600587."
+  },
+  {
+   "contractor": "CONCEPT AUTOMATION DESIGN LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: audio/video 1",
+   "examples": "100 S S POINTE DR (unit in building) / condo/apartment building - \"LOW VOLTAGE SUBPERMIT FOR MASTER PERMIT #BC2425075, SPEAKERS INSTALLATION.\"",
+   "date_range": "2026-08-07 to 2026-08-07 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33165",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: 26E000004. Sum of job values on these permits: $8,087. Permit numbers: ELSPC2600622."
+  },
+  {
+   "contractor": "AVI-SPL LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: audio/video 1",
+   "examples": "2200 LIBERTY AVE / City of Miami Beach / condo/apartment building - \"BC2526920 --- Install low voltage audio-visual devices for tele-video conferencing calling\"",
+   "date_range": "2026-08-06 to 2026-08-06 (issue dates)",
+   "contractor_municipality": "Tampa",
+   "contractor_zip": "33643",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: ES12002609. Sum of job values on these permits: $325,000. Permit numbers: ELSPC2600564."
+  },
+  {
+   "contractor": "JAVILYN INC dba SOUNDS & VIDEO",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1",
+   "examples": "100 S S POINTE DR (unit in building) / condo/apartment building - \"BCR2604876 --- wiring for TV, shades, lighting control, low voltage lighting, network\"",
+   "date_range": "2026-08-06 to 2026-08-06 (issue dates)",
+   "contractor_municipality": "?",
+   "contractor_zip": "?",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: ES12000715. Sum of job values on these permits: $45,000. Permit numbers: ELSPC2600547."
+  },
+  {
+   "contractor": "L.V. CONTRACTOR CORP",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1)",
+   "examples": "251 WASHINGTON AVE / educational - \"BC2321465 // MTCI PP for Plans review/ Inspection electrical wiring - Low voltage for ener\"",
+   "date_range": "2026-08-04 to 2026-08-04 (issue dates)",
+   "contractor_municipality": "Hialeah Garden",
+   "contractor_zip": "33016",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13007518. Sum of job values on these permits: $46,451. Permit numbers: ELSPC2600490."
+  },
+  {
+   "contractor": "ALTURA POWER ELECTRIC LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1)",
+   "examples": "1000 S S POINTE DR (unit in building) / S POINTE TH-M1 LLC / condo/apartment building - \"Unit # // BC2526022 // TV's install, lightning system and internet\"",
+   "date_range": "2026-08-03 to 2026-08-03 (issue dates)",
+   "contractor_municipality": "Hialeah",
+   "contractor_zip": "33013",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13012126. Sum of job values on these permits: $15,300. Permit numbers: ELSPC2600535."
+  },
+  {
+   "contractor": "ACCESS POINT TECHNOLOGIES, INC [ES12001417",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1",
+   "examples": "1688 MERIDIAN AVE / 1688 Property Owner, LLC / business/office - \"BC2526771 Low Voltage - Installation of Cat6A plenum cable for Data according to plan \"",
+   "date_range": "2026-07-24 to 2026-07-24 (issue dates)",
+   "contractor_municipality": "Loxahatchee",
+   "contractor_zip": "33420",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: ES12001417. Sum of job values on these permits: $35,357. Permit numbers: ELSPC2600453."
+  },
+  {
+   "contractor": "BALTIC ELECTRICAL LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1",
+   "examples": "450 ALTON RD (unit in building) / VI Forty 0304 LLC / condo/apartment building - \"Unit # BC2526898 - Electrical low-voltage sub-permit, Unit # 4003/4004. Scope: Lutron ligh\"",
+   "date_range": "2026-07-23 to 2026-07-23 (issue dates)",
+   "contractor_municipality": "Miami",
+   "contractor_zip": "33179",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13010446. Sum of job values on these permits: $2,300. Permit numbers: ELSPC2600483."
+  },
+  {
+   "contractor": "J & I ELECTRIC SERVICE CORP",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: CCTV/cameras 1",
+   "examples": "939 LINCOLN RD / condo/apartment building - \"BC2627510 // Interior Renovations to existing retail store, include low volt outlet for in\"",
+   "date_range": "2026-07-21 to 2026-07-21 (issue dates)",
+   "contractor_municipality": "Cape Coral",
+   "contractor_zip": "33990",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13004970. Sum of job values on these permits: $10,000. Permit numbers: ELSPC2600544."
+  },
+  {
+   "contractor": "SOLOTECH SALES & INTEGRATION USA INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1",
+   "examples": "251 WASHINGTON AVE / 251 WASHINGTON LLC / condo/apartment building - \"BC2321465/ provide all data and communications EQUIPMENT/RACKS, PATCH CORDS, TESTING, TERM\"",
+   "date_range": "2026-07-15 to 2026-07-15 (issue dates)",
+   "contractor_municipality": "Winter Garden",
+   "contractor_zip": "34787",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13003836. Sum of job values on these permits: $152,000. Permit numbers: ELSPC2600405."
+  },
+  {
+   "contractor": "TRITECH COMMUNICATIONS INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1",
+   "examples": "411 MICHIGAN AVE / 411 MICHIGAN SOFI OWNER / condo/apartment building - \"Master BC2526933 Low voltage cat6 cabling for internet\"",
+   "date_range": "2026-07-07 to 2026-07-07 (issue dates)",
+   "contractor_municipality": "St. Petersburg,",
+   "contractor_zip": "33710",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: ES12002492. Sum of job values on these permits: $30,889. Permit numbers: ELSPC2600460."
+  },
+  {
+   "contractor": "ELECTECH ELECTRICAL SERVICES LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: audio/video 1",
+   "examples": "800 S S POINTE DR (unit in building) / APOGEE 601 LLC / condo/apartment building - \"BC2526405 // Unit # Run low voltage wires for motorized shades in every room, speakers in \"",
+   "date_range": "2026-07-06 to 2026-07-06 (issue dates)",
+   "contractor_municipality": "Miami Gardens",
+   "contractor_zip": "33056",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13009659. Sum of job values on these permits: $33,000. Permit numbers: ELSPC2600451."
+  },
+  {
+   "contractor": "NODAL CONSTRUCTION & ELECTRIC ASSOCIATES INC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: data/voice cabling 1, audio/video 1",
+   "examples": "1680 MICHIGAN AVE (unit in building) / condo/apartment building - \"Unit # : // BC1702990 This is for low voltage permit for installation of speakers phone da\"",
+   "date_range": "2026-07-02 to 2026-07-02 (issue dates)",
+   "contractor_municipality": "Hialeah",
+   "contractor_zip": "33018",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EC13004085. Sum of job values on these permits: $4,900. Permit numbers: ELSPC2600481."
+  },
+  {
+   "contractor": "MODERN TEK SOLUTIONS LLC",
+   "city_portal": "Miami Beach",
+   "permit_count": 1,
+   "work_types": "Electrical Sub-Permit Commercial Low Voltage (1) | description tags: CCTV/cameras 1, data/voice cabling 1, audio/video 1",
+   "examples": "1545 COLLINS AVE / condo/apartment building - \"BC2526032 --- PACIFICA ENGINEERING SERVICES Private provider review and inspection / Insta\"",
+   "date_range": "2026-06-17 to 2026-06-17 (issue dates)",
+   "contractor_municipality": "Fort Myers",
+   "contractor_zip": "33912",
+   "website": "?",
+   "source_url": "https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search (permit search; contractor from the public \"Building Work Permit.pdf\" attachment on each permit page)",
+   "notes": "License(s) on work permit: EF20002159. Sum of job values on these permits: $1. Permit numbers: ELSPC2600367."
   },
   {
    "contractor": "NOT PUBLIC - Coral Gables Civic Access hides contacts/attachments unless logged in as a record contact",
@@ -6587,7 +7068,7 @@
    "value": "?",
    "date": "Start 2021-11-23; initial expiration 2026-11-22; extended through 2027-11-22",
    "source_url": "https://apps.miamibeachfl.gov/contractawards/",
-   "notes": "From the City of Miami Beach public Awarded Contracts grid (searched by keyword); value not shown in grid (contract documents behind \"View Documents\")."
+   "notes": "From the City of Miami Beach public Awarded Contracts grid (searched by keyword); value not shown in grid (contract documents behind \"View Documents\"). Documents: signed renewal letter to 11-22-27; fully executed contract 11-23-2021."
   },
   {
    "agency": "City of Miami Beach",
@@ -6595,7 +7076,7 @@
    "what_was_bought": "Citywide security/access-control systems term contract (one of three awardees).",
    "winner": "AVI INTEGRATORS INC. dba SECURITY 101",
    "value": "?",
-   "date": "Start 2021-11-23; initial expiration 2026-11-22 (no extension shown)",
+   "date": "Start 2021-11-23; initial expiration 2026-11-22; contract documents include a signed renewal letter \"to 11-22-27\"",
    "source_url": "https://apps.miamibeachfl.gov/contractawards/",
    "notes": "From the City of Miami Beach public Awarded Contracts grid (searched by keyword); value not shown in grid (contract documents behind \"View Documents\")."
   },
@@ -6607,7 +7088,7 @@
    "value": "?",
    "date": "Start 2021-12-01; initial expiration 2026-11-30; extended through 2027-11-30",
    "source_url": "https://apps.miamibeachfl.gov/contractawards/",
-   "notes": "From the City of Miami Beach public Awarded Contracts grid (searched by keyword); value not shown in grid (contract documents behind \"View Documents\")."
+   "notes": "From the City of Miami Beach public Awarded Contracts grid (searched by keyword); value not shown in grid (contract documents behind \"View Documents\"). Documents: signed renewal letter to 11-30-27; fully executed contract 12-01-2021."
   },
   {
    "agency": "City of Miami Beach",
@@ -6748,6 +7229,46 @@
    "date": "2024-06-18 (Board meeting); term 2024-07-24 to 2027-07-23",
    "source_url": "https://pdfs.dadeschools.net/Bdarch/2024/Bd061824/agenda/e142.pdf",
    "notes": "Officers on record: GlobalXNet - MACK SAMUEL; IFSS - JUSTIN N. PETERSON; NDR Corp - RONALD BOENDER; Rauland-Borg - MICHELLE A. ALLEN; United Data Technologies - ENRIQUE A. FLECHES; Valcom - JOHN W. MASON."
+  },
+  {
+   "agency": "City of Miami Beach",
+   "title": "25-046-01 LICENSE PLATE READERS - GOB PROJECT NO. 47 (Police Support Services)",
+   "what_was_bought": "License plate reader installation (General Obligation Bond project no. 47) for Miami Beach Police.",
+   "winner": "SOUTH FLORIDA ELECTRICAL CONSULTANT INC",
+   "value": "?",
+   "date": "Start 2025-05-26 (construction contract)",
+   "source_url": "https://apps.miamibeachfl.gov/contractawards/",
+   "notes": "From the City of Miami Beach public Awarded Contracts grid (keyword search); value not shown; no documents attached in the grid detail."
+  },
+  {
+   "agency": "City of Homestead",
+   "title": "202301 Fiber Optic Connection from HPD to CRA to City Hall",
+   "what_was_bought": "New conduit and two fiber-optic cables linking City Hall IT/telecom room to the Homestead Police Department IT datacenter and to the CRA (ARPA-funded).",
+   "winner": "Bore Tech Utilities and Maintenance, Inc.",
+   "value": "?",
+   "date": "2023 (status: Awarded)",
+   "source_url": "https://www.homesteadfl.gov/bids.aspx?bidID=277",
+   "notes": "Older and infrastructure-only (not cameras); listed because it is the only Homestead police-technology award visible on the public archived bids page. Newer Homestead awards are on OpenGov (blocked by Cloudflare challenge)."
+  },
+  {
+   "agency": "Miami-Dade County Public Schools (School Board)",
+   "title": "ITB-20-030-EV Security Camera/Video Surveillance Systems - Furnish and Install - supplemental award (2026)",
+   "what_was_bought": "One-time $4,666,667 supplement for additional security camera/video surveillance systems funded by a $4,874,110 Safety and Security of School Buildings grant; turnkey camera systems in schools and offices.",
+   "winner": "ADVANCE SECURITY GROUP ENTERPRISE INC. (Miami, FL 33015); BRIGGS MANAGEMENT & ASSOCIATE LLC (Miramar, FL 33029); METRO CONTRACTOR INCORPORATED (Miami Gardens, FL 33014); MUNWAY TECHNOLOGY, INC. (Miami, FL 33166); QUALITY WIRING, INC. (Doral, FL 33172); SYTEC-USA, INC. (Miami, FL 33126); WDR-TECHNOLOGY CORP. (Miami, FL 33186); ZIMY ELECTRONICS, INC. (Cooper City, FL 33330)",
+   "value": "Original $5,000,000/yr; extension $3,333,333/yr; this supplemental $4,666,667 one-time; total $8,000,000/yr",
+   "date": "2026-03-11 (Board meeting; memo 2026-02-25)",
+   "source_url": "https://pdfs.dadeschools.net/Bdarch/2026/Bd031126/agenda/e142.pdf",
+   "notes": "Shows which of the 2021 pool vendors were still active in 2026 (8 of 15). All 8 are camera installers for schools."
+  },
+  {
+   "agency": "Miami-Dade County Public Schools (School Board)",
+   "title": "ITB-25-011-YG Fire Alarm Services, Inspections, Maintenance and Service Contract",
+   "what_was_bought": "Firm unit-price contracts to test, inspect, service, repair and maintain fire alarm systems at 448 M-DCPS facilities (Siemens, Simplex, Edwards, Notifier, Faraday, Autocall and multi-system sites).",
+   "winner": "Primary: WISE BUILDING TECHNOLOGIES, LLC (Doral, FL 33172); Alternates: BASS-UNITED FIRE & SECURITY SYSTEMS, INC. (Pompano Beach, FL 33069); ADVANCE SECURITY GROUP ENTERPRISE INC. (Miami, FL 33015); AFA PROTECTIVE SYSTEMS, INC. (Syosset, NY)",
+   "value": "Up to $15,000,000 initial 3-year term (about $5,000,000/yr); up to $5,000,000 per 1-year extension",
+   "date": "2026-05-13 (Board meeting; memo 2026-04-29); term 2026-07-01 to 2029-06-30",
+   "source_url": "https://pdfs.dadeschools.net/Bdarch/2026/Bd051326/agenda/e141.pdf",
+   "notes": "8 bids, 4 non-responsive. Replaces ITB-20-008-HR."
   }
  ],
  "contractor_summaries": [

@@ -29,7 +29,8 @@ add('Temple Beth Sholom', H, 'Reform', '4144 Chase Avenue, Miami Beach, FL', 'Mi
     'https://tbsmb.org/ ; ' + URJ + ' ; ' + FED_S + 'temple_beth_sholom',
     'URJ member. Campus also houses the Innovative School of Temple Beth Sholom (separate record). Executive Director Jeff Graff (jeff@tbsmb.org) per https://tbsmb.org/staff/. County polling place.')
 add('Temple Emanu-El of Miami Beach', H, 'Conservative', '1701 Washington Avenue, Miami Beach, FL', 'Miami Beach', '33139', 'https://www.tesobe.org/',
-    'paula@tesobe.org', 'Rabbi Liora Ramati', 'Rabbi', 'https://www.tesobe.org/clergy-staff-and-leadership.html', 'Historic: history page says membership once surpassed 1,300 families (current size not stated).', '',
+    'paula@tesobe.org', 'Rabbi Liora Ramati', 'Rabbi', 'https://www.tesobe.org/clergy-staff-and-leadership.html', 'Historic: history page says membership once surpassed 1,300 families (current size not stated).',
+    'Campus school Muss Family Montessori reports two security guards and a Director of Security (https://mussmontessori.org/staff/).',
     'https://www.tesobe.org/contact-us.html ; ' + FED_S + 'temple_emanuel',
     'Executive Director Paula Arias Dorado (paula@tesobe.org) per clergy/staff page; rabbi email rabbiliora@tesobe.org. Large historic sanctuary in South Beach.')
 add('Cuban Hebrew Congregation of Miami (Temple Beth Shmuel)', H, 'Conservative', '1700 Michigan Avenue, Miami Beach, FL', 'Miami Beach', '33139', 'https://cubanhebrew.com/',
@@ -74,11 +75,11 @@ add('Yeshiva Elementary School - Boys Campus (and Yeshiva Middle School)', S, 'O
     'About page: approximately 800 students across the school; Yeshiva Middle School (Menahel Rabbi Yosef Zemel) shares this campus.', '',
     'https://yeshivaelementary.com/contact/ ; ' + MDC, 'Executive Director Rabbi Dovid Nathan covers both campuses. Mailing city Miami (33161); municipality inferred from ZIP, verify (North Miami vs. unincorporated).')
 add('Lubavitch Educational Center - Yeshiva Gedolah Miami (Lubavitch Headquarters)', S, 'Chabad', '1140 Alton Road, Miami Beach, FL', 'Miami Beach', '33139', 'https://lecfl.com/',
-    'administration@lecfl.com', 'Zalman Myer-Smith', 'Safety & Security Director (LEC network)', 'https://lecfl.com/contact/',
+    'administrator@ygmiami.com', 'Rabbi Yehuda Leib Schapiro', 'Rosh Yeshiva, Yeshiva Gedolah Rabbinical College', 'https://lecfl.com/contact/',
     'LEC network: over 2,300 students across several campuses (about page); county layer lists Yeshiva Gedolah enrollment 141.',
-    'LEC about page: "Each building is tightly secured by expert safety and security personnel which also includes an on-site EMT"; contact page names a Safety & Security Director.',
+    'LEC about page: "Each building is tightly secured by expert safety and security personnel which also includes an on-site EMT"; contact page names Mr. Zalman Myer-Smith as Safety & Security Director (network-wide).',
     'https://lecfl.com/about/ ; ' + MDC + ' ; ' + FED_S + 'beis_hamedrash_levi_yitzchok',
-    'Same address hosts Beis Hamedrash Levi Yitzchok synagogue and Friends of Lubavitch of Florida (federation directory). Phones withheld.')
+    'Same address hosts Beis Hamedrash Levi Yitzchok synagogue and Friends of Lubavitch of Florida (federation directory). Menahel Rabbi Chaim Stern; Administrator Mrs. Melissa Korf.')
 add('Chevra Shas of Tower 41', H, 'Orthodox', '4101 Pine Tree Drive, Miami Beach, FL', 'Miami Beach', '33140', 'https://www.chevrashas.org/',
     '', 'Menashe Teitelbaum', 'President (Chevra Shas Board)', 'https://www.chevrashas.org/', '', '',
     'https://www.chevrashas.org/ ; ' + OU, 'Minyan located inside the Tower 41 condominium building (site: "Chevra Shas @ Tower 41"); building security likely run by the condo association.')
@@ -128,17 +129,22 @@ add('Yeshiva of Miami', S, 'Orthodox', '1010 NE 173rd Street, Miami, FL', 'North
 # ---------------- Miami Beach: batch 3 ----------------
 add('Ohev Shalom Congregation', H, 'Orthodox', '7055 Bonita Drive, Miami Beach, FL', 'Miami Beach', '33141', 'https://www.ohevshalom.miami/',
     'ohev@att.net', '', '', '', '', '', 'https://www.ohevshalom.miami/ ; ' + FED_S + 'ohev_shalom',
-    'Read via WebFetch (site returns 406 to scripts). No staff names on home page. Gan Katan preschool uses the same address.')
-add('Gan Katan', S, 'Jewish (preschool)', '7055 Bonita Drive, Miami Beach, FL', 'Miami Beach', '33141', 'https://www.gankatanmiami.com/',
-    'gankatanmiami@gmail.com', 'Sharon Eichberg', 'Director (Miami-Dade County private school listing)', MDC,
-    'Began 2011 with 5 children (site); county layer KG-03, enrollment 68.', 'A parent testimonial on the site mentions the school\'s security guard.',
-    'https://www.gankatanmiami.com/ ; ' + MDC, 'Same address as Ohev Shalom Congregation.')
+    'Read via WebFetch (site returns 406 to scripts). No staff names on home page. Pardes Day School middle school uses the same address.')
+add('Pardes Day School - Gan Katan and Elementary', S, 'Orthodox', '1211 Marseille Drive, Miami Beach, FL', 'Miami Beach', '33141', 'https://pardesdayschool.org/',
+    'office@pardesdayschool.org', 'Rabbi Dr. Levi Druin', 'Listed contact (contact page; role not stated)', 'https://pardesdayschool.org/pages/contact',
+    'Grades K-6 plus Gan Katan preschool (CAJE lists); Gan Katan began 2011 with 5 children (gankatanmiami.com); county layer (Gan Katan) KG-03 enrollment 68.',
+    'Admissions page charges a $1,000 annual per-family security fee; a parent testimonial on gankatanmiami.com mentions the security guard.',
+    'https://pardesdayschool.org/pages/contact ; https://pardesdayschool.org/pages/admissions ; https://caje-miami.org/schools/day/jewish_day_schools/index.html ; ' + MDC,
+    'Gan Katan (gankatanmiami.com, gankatanmiami@gmail.com) is the preschool of Pardes; Miami-Dade County layer names Sharon Eichberg as Gan Katan director.')
+add('Pardes Day School - Middle School', S, 'Orthodox', '7055 Bonita Drive, Miami Beach, FL', 'Miami Beach', '33141', 'https://pardesdayschool.org/',
+    'office@pardesdayschool.org', '', '', '', '', 'Per-family security fee (admissions page).', 'https://pardesdayschool.org/pages/contact',
+    'Same address as Ohev Shalom Congregation (separate record).')
 add('Temple Menorah', H, 'Traditional (Conservative)', '620 75th Street, Miami Beach, FL', 'Miami Beach', '33141', 'https://www.templemenorahmiami.org/',
     'info@menorahmail.org', 'Rabbi Eliot H. Pearlson', 'Rabbi', 'https://www.templemenorahmiami.org/meet-our-rabbi.html', 'Founded 1949 (rabbi page).', '',
     'https://www.templemenorahmiami.org/ ; ' + FED_S + 'temple_menorah', 'Read via WebFetch (site returns 406 to scripts).')
 add('Chabad in South Beach (The Center for Jewish Life in South Beach)', H, 'Chabad', '320 Meridian Avenue, Miami Beach, FL', 'Miami Beach', '33139', 'https://www.chabadinsouthbeach.com/',
     '', '', '', '', 'Founded 2005 (about page).', '', 'https://www.chabadinsouthbeach.com/306913 ; ' + FED_S + 'chabad_in_south_beach',
-    'Read via WebFetch (Chabad.org-hosted site blocks scripts). About page names the rabbi and rebbetzin by first name only (Shragi and Devorah Leah); full names not printed.')
+    'Read via WebFetch (Chabad.org-hosted site blocks scripts). About page names the rabbi and rebbetzin by first name only (Shragi and Devorah Leah). Federation Find a Rabbi page lists services at 311 Washington Ave (Savoy Hotel ballroom).')
 add('Capt. Hyman P. Galbut Jewish Learning Center Chabad', H, 'Chabad', '411 West 41st Street, Miami Beach, FL', 'Miami Beach', '33140', 'https://www.jlconline.org/',
     '', '', '', '', '', '', 'https://www.jlconline.org/ ; ' + FED_S + 'capt_hyman_p_galbut_jewish_learning_center_chabad',
     'Read via WebFetch (Chabad.org-hosted site). Email obfuscated on page; no staff names on home page.')
@@ -183,7 +189,7 @@ add('Temple Sinai of North Dade', H, 'Reform', '18801 NE 22nd Avenue, Miami, FL'
     'Its Gan Sinai preschool charges each family a $650 security fee per child "so that we may provide on-campus security" (https://www.iamsinai.org/admissions).',
     'https://www.tsnd.org/contacts/ ; ' + URJ + ' ; ' + FED_S + 'temple_sinai_of_north_dade', 'URJ member. Rabbi email rabbi.litwak@tsnd.org. Federation lists city as North Miami Beach (mailing city Miami).')
 add('Gan Sinai Preschool (Temple Sinai of North Dade; formerly Jacobson Sinai Academy ECC)', S, 'Reform', '18801 NE 22nd Avenue, Miami, FL', 'North Miami Beach', '33180', 'https://www.iamsinai.org/gan-sinai-preschool',
-    'rabbi.david@tsnd.org', 'Rabbi David Paskin', 'Rabbi; admissions contact for Gan Sinai (county listing names him director)', 'https://www.iamsinai.org/contact',
+    'rabbi.david@tsnd.org', 'Rabbi David Paskin', 'Rabbi (Temple Sinai clergy page); Gan Sinai admissions/tour contact "Rabbi David" per iamsinai.org; county listing also names him director', 'https://www.tsnd.org/clergy-staff/',
     'County layer lists Jacobson Sinai Academy ECC PK-08 enrollment 227 (older figure); class sizes 8-16 per two teachers (site).',
     'Families pay a $650 per-child security fee for on-campus security (admissions page).',
     'https://www.iamsinai.org/admissions ; ' + MDC + ' ; ' + FED_E + 'temple_sinai_early_childhood_education_center', 'Same campus as Temple Sinai of North Dade.')
@@ -214,15 +220,20 @@ add('Congregation Magen David - Sephardic Jewish Center of North Miami Beach', H
 add('Netive Ezra', H, 'Sephardic Orthodox', '2655 NE 207th Street, Aventura, FL', 'Aventura', '33180', 'https://netiveezra.org/',
     'netiveezra@gmail.com', '', '', '', 'Runs a preschool/gan on site (netiveezraschool@gmail.com).', '',
     'https://netiveezra.org/contact-us/ ; ' + OU + ' ; ' + FED_S + 'netive_ezra', '')
-add('Yeshiva Toras Chaim Toras Emes - Klurman High School Campus', S, 'Orthodox', '1025 Miami Gardens Drive, North Miami Beach, FL', 'North Miami Beach', '33179', 'http://www.ytcteam.org/',
-    '', 'Mordechai Palgon', 'Director (Miami-Dade County private school listing)', MDC, 'County layer: grades 09-12, enrollment 115.', '',
-    MDC + ' ; ' + FED_E + 'toras_emes_academy', 'Website ytcteam.org returns 403 to scripts (NEEDS MANUAL WORK for current leadership/email).')
-add('Toras Emes Academy of Miami (Klurman Elementary)', S, 'Orthodox', '1051 North Miami Beach Boulevard, North Miami Beach, FL', 'North Miami Beach', '33162', 'http://www.ytcteam.org/',
-    '', 'Harayl Askotzky', 'Director (Miami-Dade County private school listing)', MDC, 'County layer: PK-08, enrollment 523.', '',
-    MDC, 'Website ytcteam.org returns 403 to scripts (NEEDS MANUAL WORK).')
-add('Beth Jacob High School', S, 'Orthodox', '1110 NE 163rd Street, North Miami Beach, FL', 'North Miami Beach', '33162', '',
-    '', 'Rabbi Ephraim Leizerson', 'Director (Miami-Dade County private school listing)', MDC, 'County layer: grades 06-12, enrollment 283.', '',
-    MDC + ' ; ' + FED_E + 'beth_jacob_high_school', 'Girls high school. No website found in county or federation listings.')
+add('Yeshiva Toras Chaim Toras Emes (YTCTE) - Klurman Campus', S, 'Orthodox', '1025 NE Miami Gardens Drive, North Miami Beach, FL', 'North Miami Beach', '33179', 'https://www.ytcte.org/',
+    'office@ytcte.org', 'Rabbi Yermiyahu Ornstein', 'Head of School (EECC/BBYKES/BBYMS/BBYHS/YTCTE KES/RMS)', 'https://www.ytcte.org/our-leadership/',
+    'Over 1,300 students in six divisions (FAQ); this campus houses Rohr Middle School, Mesivta Avraham Zev (DACHS) and Bais Medrash Zichron Ezra; county layer 09-12 enrollment 115.',
+    'FAQ: both campuses fenced (6-ft gated fences), all access points locked 24/7 and under constant video surveillance, key cards/car transponders; Klurman campus has 1 full-time security guard; working with law enforcement on expansion plans.',
+    'https://www.ytcte.org/about/faq/ ; ' + MDC + ' ; https://caje-miami.org/schools/day/jewish_day_schools/index.html', 'Existing camera coverage makes this a strong IRIS fit. Old domain ytcteam.org returns 403; current site is ytcte.org.')
+add('Yeshiva Toras Chaim Toras Emes (YTCTE) - South Campus (Toras Emes Academy)', S, 'Orthodox', '1051 North Miami Beach Boulevard, North Miami Beach, FL', 'North Miami Beach', '33162', 'https://www.ytcte.org/',
+    'office@ytcte.org', 'Rabbi Ephraim Palgon', 'Head of South Campus', 'https://www.ytcte.org/our-leadership/',
+    'Over 1,300 students in six divisions (FAQ); South Campus holds early childhood, boys and girls elementary and Bnos Toras Emes; county layer PK-08 enrollment 523.',
+    'FAQ: fenced campus, access points locked 24/7 under constant video surveillance, key-card/transponder access; security on South Campus increased to three guards with frequent patrols.',
+    'https://www.ytcte.org/about/faq/ ; ' + MDC + ' ; https://caje-miami.org/schools/early/ECE_Directory.pdf', 'Director of South Campus Operations: Rabbi Zev Weiner (our-leadership page). Strong IRIS fit.')
+add('Bais Yaakov Miami (Beth Jacob High School, Inc.)', S, 'Orthodox', '1110 NE 163rd Street, North Miami Beach, FL', 'North Miami Beach', '33162', 'https://www.bymiami.org/',
+    'office@bymiami.org', 'Rabbi Ephraim Leizerson', 'Menahel', 'https://www.bymiami.org/',
+    'Site: over 500 students across elementary (nursery-3rd grade) and middle/high school (grades 6-12) divisions; girls school.', '',
+    'https://www.bymiami.org/ ; ' + MDC + ' ; ' + FED_E + 'beth_jacob_high_school ; https://caje-miami.org/schools/day/jewish_day_schools/index.html', 'County layer lists it as Beth Jacob High School Inc (06-12, enrollment 283).')
 add('Neytz Hachochma School', S, 'Orthodox', '901 NE 167th Street, North Miami Beach, FL', 'North Miami Beach', '33162', 'http://neytz.com/',
     '', 'Dolly Aizenman', 'Director (Miami-Dade County private school listing)', MDC, 'County layer: KG-12, enrollment 20.', '', MDC + ' ; ' + FED_E + 'neytz_hachochma',
     'Federation directory shows an older address (152 NW 165 St). Website did not resolve through the proxy.')
@@ -246,7 +257,7 @@ add('Temple Beth Am', H, 'Reform', '5950 North Kendall Drive, Pinecrest, FL', 'P
     'info@tbam.org', 'Rabbi Jeremy Barras', 'Senior Rabbi', 'https://www.tbam.org/temple/staff-directory/', 'Janet and Richard Yulman Campus (site).',
     'Staff directory lists Lior Edry, Security Director; a site post describes clergy meeting with City of Miami Police and Homeland Security officials about rising threats.',
     'https://www.tbam.org/temple/staff-directory/ ; ' + URJ + ' ; ' + FED_S + 'temple_beth_am', 'URJ member. Executive Director Sharon Levi. Campus includes Temple Beth Am Day School (separate record). Strong IRIS fit.')
-add('Temple Beth Am Day School', S, 'Reform', '5950 North Kendall Drive, Pinecrest, FL', 'Pinecrest', '33156', 'https://www.tbam.org/',
+add('Rambam Day School at Temple Beth Am (formerly Temple Beth Am Day School)', S, 'Reform', '5950 North Kendall Drive, Pinecrest, FL', 'Pinecrest', '33156', 'https://www.tbam.org/',
     'info@tbam.org', 'Nora Anderson', 'Head of Day School', 'https://www.tbam.org/temple/staff-directory/', 'County layer: PK-05, enrollment 324.',
     'Temple has an in-house Security Director (Lior Edry).', 'https://www.tbam.org/temple/staff-directory/ ; ' + MDC + ' ; ' + FED_E + 'temple_beth_am_day_school', 'Same campus as Temple Beth Am.')
 add('Center for Jewish Life at Beth David (Beth David Congregation)', H, 'Conservative', '2625 SW 3rd Avenue, Miami, FL', 'City of Miami', '33129', 'https://www.centerbd.org/',
@@ -259,12 +270,183 @@ add('Gordon School of Beth David', S, 'Conservative', '2625 SW 3rd Avenue, Miami
 add('Young Israel of Kendall', H, 'Orthodox', '7880 SW 112th Street, Miami, FL', 'Pinecrest', '33156', 'https://yikendall.com/',
     'admin@yikendall.com', 'Rabbi Hershel D. Becker', 'Rabbi', 'https://yikendall.com/about/', '', '', 'https://yikendall.com/contact-us/ ; ' + OU + ' ; ' + FED_S + 'young_israel_of_kendall',
     'OU member. Municipality inferred from ZIP 33156 (mailing city Miami); verify Pinecrest vs. unincorporated Kendall.')
-add('Congregation Dor Chadash', H, 'Reform & Conservative', '9560 SW 107th Avenue, Suite 202, Miami, FL (mailing)', 'Unincorporated Miami-Dade (Kendall)', '33176', 'https://www.dorchadashmiami.org/',
+add('Congregation Dor Chadash', H, 'Reform & Conservative', '9400 SW 87th Avenue, Miami, FL', 'Unincorporated Miami-Dade (Kendall)', '33176', 'https://www.dorchadashmiami.org/',
     '', '', '', '', '', '', 'https://www.dorchadashmiami.org/ ; ' + FED_S + 'congregation_dor_chadash_miami',
-    'Site gives only a mailing suite address; federation lists 8770 SW 131st Street. May not own a dedicated building - verify.')
+    'Address from the federation Find a Rabbi page (the former Bet Breira Samu-El Or Olom building); the site gives a mailing suite (9560 SW 107th Ave, Ste 202) and the older directory entry lists 8770 SW 131st St - verify.')
 add('Dave and Mary Alper JCC (Early Childhood Development Center)', S, 'JCC (community)', '11155 SW 112th Avenue, Miami, FL', 'Unincorporated Miami-Dade (Kendall)', '33176', 'https://www.alperjcc.org/',
     '', 'Irene Tzanani', 'Chief Executive Officer', 'https://www.alperjcc.org/about-us/leadership', 'Site: impacts more than 140,000 residents annually; Early Childhood Development Center serves more than 150 students a year.', '',
     'https://www.alperjcc.org/about-us/leadership ; ' + OU + ' ; ' + FED_E + 'dave_and_mary_alper_jewish_community_center_jcc', 'JCC campus; typed School for its preschool. County layer also lists Greenfield Day School at this address.')
 add('El Centro de Estudios Judios - Torat Emet (CEJTE)', H, 'Sephardic Orthodox', '1221 SW 104th Avenue, Miami, FL', 'Unincorporated Miami-Dade (Westchester area)', '33174', 'https://cejte.org/',
     'info@cejte.org', '', '', '', '', '', 'https://cejte.org/contact/ ; ' + FED_S + 'el_centro_de_estudios_judios___torat_emet',
     'Spanish-language Sephardic congregation/study center. Site names Rabbi Rigoberto Emmanuel Vinas as author of a Haggadah commentary but states no title.')
+
+# ---------------- LEC campuses (Miami Gardens / North Dade) ----------------
+LEC_SEC = 'LEC about page: every building "tightly secured by expert safety and security personnel" with an on-site EMT; Safety & Security Director Mr. Zalman Myer-Smith (https://lecfl.com/contact/).'
+add('Lubavitch Educational Center - Campus Menachem Mendel (flagship)', S, 'Chabad', '17330 NW 7th Avenue, Miami, FL', 'Miami Gardens', '33169', 'https://lecfl.com/',
+    'administration@lecfl.com', 'Rabbi Benzion Korf', 'Head of School', 'https://lecfl.com/contact/',
+    'LEC network: over 2,300 students (about page); county layer PK-12 enrollment 311 for this campus. Houses Early Stages, Young Division, boys schools and administration.',
+    LEC_SEC, 'https://lecfl.com/about/ ; https://lecfl.com/contact/ ; ' + MDC, 'Founder: Rabbi Avraham Korf (Chabad-Lubavitch Regional Director). Associate Head of School Rabbi Yossi Zavdi (yzavdi@lecfl.com). Strong IRIS fit: multi-campus with in-house security.')
+add('Lubavitch Educational Center - Campus Chaya Mushka (preschool, Beis Chana High School)', S, 'Chabad', '1515 NW 167th Street, Miami, FL', 'Miami Gardens', '33169', 'https://lecfl.com/',
+    'preschool@lecfl.com', 'Mrs. Musha Krasnjanski', 'Principal, Beis Chana High School', 'https://lecfl.com/contact/', 'Part of LEC network (over 2,300 students).', LEC_SEC,
+    'https://lecfl.com/about/ ; https://lecfl.com/contact/', 'Preschool Director Mrs. Bina Rosenblum (preschool@lecfl.com).')
+add('Lubavitch Educational Center - Beit Apel (Girls Elementary and Middle Schools)', S, 'Chabad', '1525 NW 167th Street, Miami, FL', 'Miami Gardens', '33169', 'https://lecfl.com/',
+    'elmgirls@lecfl.com', 'Mrs. Chaya Sara Dalfin', 'Principal, Girls Elementary School', 'https://lecfl.com/contact/', 'County layer lists Beit Apel - Campus Chaya Mushka, grades 02-12.', LEC_SEC,
+    'https://lecfl.com/about/ ; https://lecfl.com/contact/ ; ' + MDC, 'Girls Middle School principal Mrs. Shevi Sossonko (middleschoolgirls@lecfl.com).')
+add('Lubavitch Educational Center - Zimerman Campus (Klurman Lubavitch Yeshiva High School)', S, 'Chabad', '20 NW 181st Street, Miami, FL', 'Miami Gardens', '33169', 'https://lecfl.com/',
+    'highschool@lecfl.com', 'Rabbi Nochum Schapiro', 'Principal, Klurman Lubavitch Yeshiva High School', 'https://lecfl.com/contact/', 'Part of LEC network (over 2,300 students).', LEC_SEC,
+    'https://lecfl.com/about/ ; https://lecfl.com/contact/', 'Municipality from ZIP 33169 default; verify (Miami Gardens vs. unincorporated). Mesivta Lubavitch Miami (mesivta@lecfl.com) also listed under boys schools.')
+
+# ---------------- Directory-sourced synagogues (federation / OU), batch 6 ----------------
+CH_NOTE = 'Website is on the Chabad.org platform, which blocks scripted access; leadership not captured (NEEDS MANUAL WORK).'
+add('Aventura Chabad (Chabad House of North Dade)', H, 'Chabad', '2801 NE 210th Street, Aventura, FL', 'Aventura', '33180', 'https://www.chabadfl.org/',
+    'info@chabadfl.org', 'Rabbi Laivi Forta', 'Director', 'https://www.chabadfl.org/templates/articlecco_cdo/aid/1469703/jewish/Our-Staff.htm', '', '',
+    'https://www.chabadfl.org/templates/articlecco_cdo/aid/1469703/jewish/Our-Staff.htm ; ' + FED_S + 'aventura_chabad',
+    'Read via WebFetch. Founder Rabbi Casriel Brusowankin; Administrator Mariana Furmanski (mariana@chabadfl.org); runs Karol Galan Hebrew School and a mikvah.')
+add('Congregation Shaaray Tefilah', H, 'Orthodox', '971 NE 172nd Street, North Miami Beach, FL', 'North Miami Beach', '33162', 'https://www.cstnmb.com/',
+    '', 'HaRav Ephraim Eliyahu Shapiro', "Mara D'Asra (rav)", 'https://www.cstnmb.com/', '', '', 'https://www.cstnmb.com/ ; ' + OU + ' ; ' + FED_S + 'congregation_shaaray_tefilah',
+    'Read via WebFetch (site returns 406 to scripts). No email on home page.')
+add('Bais Menachem of North Miami Beach', H, 'Chabad', '17299 NE 10th Avenue, North Miami Beach, FL', 'North Miami Beach', '33162', 'https://bmnmb.com/',
+    '', '', '', '', '', '', FED_S + 'bais_menachem_nmb', 'Website returns 403 to scripts; data from federation directory.')
+add('Beit David Highland Lakes Shul', H, 'Orthodox', '2600 NE 209th Street, Miami, FL', 'Unincorporated Miami-Dade (Highland Lakes)', '33180', 'https://www.bdhls.org/',
+    '', '', '', '', 'Runs Yeladim Miami Preschool (CAJE early-childhood directory, July 2024).',
+    'Site has a security donation page ("donating towards our enhanced security") funding security personnel for Shabbat and preschool months and a "Security fence, equipment & upgrades" line (https://www.bdhls.org/form/securitydonation).',
+    'https://www.bdhls.org/form/securitydonation ; ' + FED_S + 'beit_david_highland_lakes_shul ; ' + OU + ' ; https://caje-miami.org/schools/early/ECE_Directory.pdf',
+    'Read via WebFetch (site returns 406 to scripts). Site mentions "Rabbi Wolf" (surname only). Federation lists city as Aventura; Highland Lakes is unincorporated.')
+add('Beit Rambam Congregation', H, 'Sephardic Orthodox', '200 178th Street, Sunny Isles Beach, FL', 'Sunny Isles Beach', '33160', '',
+    '', '', '', '', '', '', FED_S + 'beit_rambam_congregation ; ' + OU,
+    'OU lists "Beit Rambam Community Center" at 17700 Collins Ave, Sunny Isles Beach; federation lists 200 178th St. Former website domain (beitrambam.com) is parked/for sale.')
+add('Bet Ovadia - Chabad of Miami (Chabad of the Grove)', H, 'Chabad', '3713 Main Highway, Miami (Coconut Grove), FL', 'City of Miami', '33133', 'http://chabadmiami.com',
+    '', '', '', '', '', '', FED_S + 'bet_ovadia_chabad_of_the_grove', CH_NOTE + ' Same address as Miami Jewish Montessori (separate record).')
+add('Beth Torah Benny Rok Campus', H, 'Conservative', '20350 NE 26th Avenue, Miami, FL', 'North Miami Beach', '33180', 'https://btbrc.org/',
+    '', '', '', '', 'USCJ directory size class: Medium (400-749).', '', USCJ + ' ; ' + FED_S + 'beth_torah_benny_rok',
+    'USCJ member. Website returns 403 to scripts and WebFetch (NEEDS MANUAL WORK). Campus has the Suzy Fischer early childhood program (separate record). Municipality hint per federation listing; ZIP 33180 straddles Aventura/unincorporated.')
+add('California Club Chabad', H, 'Chabad', '825 NE 205th Terrace, Miami, FL', 'Unincorporated Miami-Dade (California Club area)', '33179', 'http://californiaclubchabad.com',
+    '', '', '', '', '', '', FED_S + 'california_club_chabad', CH_NOTE + ' Federation lists city as North Miami Beach.')
+add('Chabad at Midtown', H, 'Chabad', '221 NE 29th Street, Miami, FL', 'City of Miami', '33137', 'http://midtownjewish.org',
+    '', '', '', '', '', '', FED_S + 'chabad_at_midtown', CH_NOTE)
+add('Chabad Center for Jewish Life - NW Dade & Miami Lakes', H, 'Chabad', '7924 NW 163rd Terrace, Miami Lakes, FL', 'Miami Lakes', '33016', 'http://chabadmiamilakes.com',
+    '', '', '', '', '', '', FED_S + 'chabad_center_for_jewish_life___nw_dademiami_lakes ; https://jewishmiami.org/resources/find_rabbi/', CH_NOTE + ' Federation Find a Rabbi page lists "Chabad of Miami Lakes Northwest Dade County Synagogue" and "Congregation Tehilat Hashem" at 16800 NW 83rd Place, Miami Lakes 33016 - possibly the current location; verify.')
+add('Chabad of Kendall & Pinecrest', H, 'Chabad', '9700 South Dixie Highway, Suite 100, Miami, FL', 'Pinecrest', '33156', 'http://chabadofkendall.org',
+    '', '', '', '', '', '', FED_S + 'chabad_center_of_kendall_pinecrest ; https://jewishmiami.org/resources/find_rabbi/', CH_NOTE + ' Federation Find a Rabbi page lists Chabad of Kendall at 8700 SW 112th Street, Miami 33176 - verify which is current.')
+add('Chabad Chayil - The Family Shul (Jewish Center of Highland Lakes)', H, 'Chabad', '2601 NE 211th Terrace, Miami, FL', 'Unincorporated Miami-Dade (Highland Lakes)', '33180', 'http://chabadchayil.org',
+    '', '', '', '', '', '', FED_S + 'chabad_chayil_the_family_shul_highland', CH_NOTE + ' Runs Chabad Chayil school (separate record).')
+add('Chabad Chayil School (Highland Lakes)', S, 'Chabad', '2601 NE 211th Terrace, Miami, FL', 'Unincorporated Miami-Dade (Highland Lakes)', '33180', 'http://chabadchayil.org',
+    '', 'Rabbi Moishe Kievman', 'Director (Miami-Dade County private school listing)', MDC, 'County layer: PK-08, enrollment 131.', '', MDC, 'Same campus as Chabad Chayil - The Family Shul.')
+add('Chabad of Homestead & Cutler Bay', H, 'Chabad', '20557 Old Cutler Road, Cutler Bay, FL', 'Cutler Bay', '33189', 'http://chabadhomebay.com',
+    '', '', '', '', '', '', FED_S + 'chabad_homestead_cutler_bay', CH_NOTE + ' Serves Homestead; building is in Cutler Bay.')
+add('Chabad Jewish Center of Doral', H, 'Chabad', '10181 NW 58th Street, Suite 16, Doral, FL', 'Doral', '33178', 'http://chabaddoral.com',
+    '', '', '', '', '', '', FED_S + 'chabad_jewish_center_of_doral', CH_NOTE + ' Suite in a commercial center.')
+add('Chabad Lubavitch of Sunny Isles Beach', H, 'Chabad', '17555 Atlantic Boulevard (King David, ground floor), Sunny Isles Beach, FL', 'Sunny Isles Beach', '33160', 'http://sunnychabad.org',
+    '', '', '', '', '', '', FED_S + 'chabad_lubavitch_of_sunny_isles_beach', CH_NOTE + ' Located on the ground floor of a residential building.')
+add('Chabad of Golden Beach', H, 'Chabad', '19201 Collins Avenue, Sunny Isles Beach, FL', 'Sunny Isles Beach', '33160', 'http://chabadofgoldenbeach.org',
+    '', '', '', '', '', '', FED_S + 'chabad_of_golden_beach', CH_NOTE + ' Serves Golden Beach; address is in Sunny Isles Beach per federation listing.')
+add('Chabad Key Biscayne Jewish Center', H, 'Chabad', '101 Harbor Drive, Key Biscayne, FL', 'Key Biscayne', '33149', 'https://www.chabadkeyb.com/',
+    '', '', '', '', '', '', 'https://www.chabadkeyb.com/ ; ' + FED_S + 'chabad_of_key_biscayne', 'Read via WebFetch: name and address confirmed; no staff names or email on home page (NEEDS MANUAL WORK).')
+add('Chabad of Miami Shores', H, 'Chabad', '10626 NE 11th Court, Miami Shores, FL', 'Miami Shores', '33138', 'http://chabadmiamishores.com',
+    '', '', '', '', '', '', FED_S + 'chabad_of_miami_shores', CH_NOTE)
+add('Chabad of North Miami Beach East', H, 'Chabad', '1999 NE 178th Street, North Miami Beach, FL', 'North Miami Beach', '33162', 'http://jewishnmb.com',
+    '', '', '', '', '', '', FED_S + 'chabad_of_north_miami_beach_east', CH_NOTE)
+add('Chabad of Palmetto Bay & Deering Bay', H, 'Chabad', '16721 SW 78th Court, Palmetto Bay, FL', 'Palmetto Bay', '33157', 'https://jewishpalmettobay.org',
+    '', '', '', '', '', '', FED_S + 'chabad_palmetto_bay', CH_NOTE)
+add('Chabad Russian Center of South Florida', H, 'Chabad', '488 Sunny Isles Boulevard, Sunny Isles Beach, FL', 'Sunny Isles Beach', '33160', 'http://chabadrc.com',
+    'office@thegan.com', 'Rabbi Alexander Kaller', 'Founder and leader (named on its school site)', 'https://www.thegan.com/staff/', '', '',
+    FED_S + 'chabad_russian_center ; https://www.thegan.com/about/', 'CAJE ECE directory (July 2024) lists the center at 252 Sunny Isles Blvd, Suite 3. Parent of The Gan Frida preschool. Email is the preschool office address.')
+add('Magen David Congregation of Surfside (Syrian Sephardic)', H, 'Sephardic Orthodox', '9348 Harding Avenue, Surfside, FL', 'Surfside', '33154', '',
+    '', '', '', '', '', '', FED_S + 'congregation_magen_david_sephardic_jewish_center ; ' + OU,
+    'Listed domain magendavid.com now redirects to an unrelated site (shul.com); no working website found.')
+add('Edmond J. Safra Synagogue (Beit Edmond J. Safra)', H, 'Sephardic Orthodox', '19275 Mystic Pointe Drive, Aventura, FL', 'Aventura', '33180', 'http://www.ejsfl.com',
+    '', '', '', '', '', '', FED_S + 'edmond_j_safra_synagogue ; ' + OU, 'OU member. Website failed TLS/returned 503 (NEEDS MANUAL WORK).')
+add('Skylake Chabad House', H, 'Chabad', '18445 NE 19th Avenue, North Miami Beach, FL', 'North Miami Beach', '33179', 'http://skylakechabad.org',
+    '', '', '', '', '', '', FED_S + 'skylake_chabad_house ; https://jewishmiami.org/resources/find_rabbi/', CH_NOTE + ' Address per federation Find a Rabbi page is 18445 NE 19th Ave, North Miami Beach 33179; the directory detail page shows 18801 NE 22nd Ave (Temple Sinai\'s address) - verify.')
+add('Temple Beth Or', H, 'Post-denominational', '11715 SW 87th Avenue, Miami, FL', 'Unincorporated Miami-Dade (Kendall)', '33176', 'https://bethormiami.com',
+    '', '', '', '', '', '', FED_S + 'temple_beth_or', 'Website redirect loop on fetch (NEEDS MANUAL WORK).')
+add('The Rok Family Shul - Chabad Downtown Jewish Center', H, 'Chabad', '35 SE 9th Street, Miami, FL', 'City of Miami', '33131', 'https://www.jewishdowntown.net/',
+    '', '', '', '', '', '', 'https://www.jewishdowntown.net/ ; ' + FED_S + 'the_rok_family_shul___chabad_downtown_jewish_center',
+    'Read via WebFetch: no staff names or email on home/about pages. Brickell/Downtown. Hosts Brumer Preschool of the Arts (separate record).')
+add('Willie & Celia Trump Synagogue (Williams Island Synagogue)', H, 'Orthodox', '2000 West Island Boulevard (Williams Island), Aventura, FL', 'Aventura', '33160', 'https://www.wctsynagogue.org/',
+    '', '', '', '', '', '', OU + ' ; ' + FED_S + 'willie_and_celia_trump_synagogue',
+    'OU member. Inside the gated Williams Island community. Federation lists 3000 Island Blvd. Site home page shows no names (WebFetch).')
+add('Young Israel of Aventura', H, 'Orthodox', '3575 NE 207th Street (Shoppes at the Waterways), Aventura, FL', 'Aventura', '33180', 'https://www.youngisraelaventura.com/',
+    '', '', '', '', '', '', OU + ' ; ' + FED_S + 'young_israel_of_aventura', 'Storefront space in a shopping center. Website returns 406 to scripts.')
+add('Biala Center of Florida', H, 'Orthodox (Chassidic)', '18131 NE 10th Avenue, Miami, FL', 'North Miami Beach', '33162', '', '', '', '', '', '', '', OU, 'From OU synagogue finder only.')
+add('Kehillas Ahavas Shalom', H, 'Orthodox', '951 NE 172nd Street, North Miami Beach, FL', 'North Miami Beach', '33162', 'https://www.kasnmb.com/',
+    '', '', '', '', '', '', OU, 'From OU synagogue finder; website did not resolve through the proxy.')
+add('Torah VeEmunah', H, 'Orthodox', '1000 NE 175th Street, North Miami Beach, FL', 'North Miami Beach', '33162', '', '', '', '', '', '', '', OU, 'From OU synagogue finder only.')
+add('Kollel Zichron Michel of North Miami Beach', H, 'Orthodox', '990 NE 175th Street, North Miami Beach, FL', 'North Miami Beach', '33162', 'https://www.kzmnmb.org/',
+    '', '', '', '', '', '', OU, 'Kollel/beis medrash; website returns 406 to scripts.')
+add('Miami Torah Center', H, 'Orthodox', '19000 North Bay Road, Sunny Isles Beach, FL', 'Sunny Isles Beach', '33160', '', '', '', '', '', '', '', OU, 'From OU synagogue finder only.')
+add('Breslev Learning Center', H, 'Orthodox (Breslov)', '19088 NE 29th Avenue, Aventura, FL', 'Aventura', '33180', '', '', '', '', '', '', '', OU,
+    'Listed website redirects to a myshul.com page (403).')
+add('Shuva Israel Aventura', H, 'Sephardic Orthodox', '18461 West Dixie Highway, North Miami Beach, FL', 'North Miami Beach', '33160', 'https://www.shuvaisrael.com/',
+    '', '', '', '', '', '', OU + ' ; https://www.shuvaisrael.com/', 'Site is Hebrew-language; no English contact details captured.')
+add('Baba Sali Synagogue', H, 'Sephardic Orthodox', '2380 NE 199th Street, Miami, FL', 'Unincorporated Miami-Dade (Highland Lakes area)', '33180', '', '', '', '', '', '', '', OU, 'From OU synagogue finder only.')
+add('Young Israel of Sunny Isles Beach', H, 'Orthodox', '17395 North Bay Road, Suite 107, Sunny Isles Beach, FL', 'Sunny Isles Beach', '33160', 'https://www.youngisraelsib.com/',
+    'youngisraelofsib@bellsouth.net', '', '', '', 'Site: more than 120 families.', '', 'https://www.youngisraelsib.com/ ; ' + OU + ' ; ' + FED_S + 'young_israel_of_sunny_isles',
+    'Read via WebFetch (site rate-limits scripts, 429). Site mentions "Rabbi Haber" (surname only). Suite in a residential/commercial building.')
+
+# ---------------- Schools from CAJE day-school list and ECE directory, batch 7 ----------------
+CAJE_D = 'https://caje-miami.org/schools/day/jewish_day_schools/index.html'
+CAJE_E = 'https://caje-miami.org/schools/early/ECE_Directory.pdf'
+add('Cheder Neimus Hatorah (Cheder Miami)', S, 'Orthodox', '424 West 40th Street, Miami Beach, FL', 'Miami Beach', '33140', 'https://www.chedermiami.com/',
+    'office@chedermiami.com', 'Rabbi Yaakov Burstyn', 'Menahel', 'https://www.chedermiami.com/about/our-staff/', 'CAJE list: ages 2 through 1st grade (boys).', '',
+    'https://www.chedermiami.com/about/our-staff/ ; ' + CAJE_D, 'Same address as Ahavas Torah synagogue. Executive Administrator Mrs. Rachel Wasserlauf.')
+add('JEMS Academy', S, 'Jewish (denomination not stated)', '1117 NE 163rd Street, Suite C, North Miami Beach, FL', 'North Miami Beach', '33162', 'https://jemsacademy.org/',
+    '', '', '', '', 'CAJE list: grades K-5.', '', CAJE_D, 'School website shows only a donation page; data from CAJE list.')
+add('Jewish Leadership Academy (JLA)', S, 'Jewish community', '975 NW 95th Street, Miami, FL', 'Unincorporated Miami-Dade (Miami Shores area)', '33150', 'https://jlamiami.org/',
+    'admissions@jlamiami.org', 'Rabbi Dr. Gil S. Perl', 'Head of School', 'https://jlamiami.org/our-team/',
+    'Grades 6-12; middle school capped at 45 per grade, upper school at 50 per grade (admissions page).', 'Our-team page lists a Lead Security Officer (Nate Baker).',
+    'https://jlamiami.org/our-team/ ; ' + CAJE_D, 'Associate Head of School (Middle School) Dr. Zak Cohen. ZIP 33150 default is City of Miami; site describes staff living minutes away in Miami Shores - verify municipality.')
+add('Lanaar School', S, 'Orthodox', '20400 NE 30th Avenue, Aventura, FL', 'Aventura', '33180', 'https://lanaarschool.org/',
+    'office@lanaarschool.org', 'Rabbi Chaim Mayzlesh', 'Executive Director', 'https://lanaarschool.org/team/', 'Site: 261 enrolled students across 9 grades in 2026/2027 (15 in 2018/2019).', '',
+    'https://lanaarschool.org/team/ ; ' + CAJE_D + ' ; ' + MDC, 'Address per CAJE list is the ATJC campus; county layer shows an older address (200 NE 161st St, North Miami Beach). Elementary principal Mrs. Aurit Katan.')
+add('Miami Jewish Academy', S, 'Jewish (denomination not stated)', '2180 NE 122nd Street, North Miami, FL', 'North Miami', '33181', 'https://miamijewishacademy.org/',
+    '', '', '', '', 'CAJE list: grades K-3.', '', CAJE_D, 'Website is an under-construction placeholder; data from CAJE list.')
+add('Tamim Academy of Miami', S, 'Chabad', '488 Sunny Isles Boulevard, 3rd Floor, Sunny Isles Beach, FL', 'Sunny Isles Beach', '33160', 'https://www.tamimmiami.org/',
+    'office@tamimmiami.org', 'Chanie Kaller', 'Head of School', 'https://www.tamimmiami.org/staff/', 'CAJE list: grades K-3.', '',
+    'https://www.tamimmiami.org/staff/ ; ' + CAJE_D, 'Dean Rabbi Kaller; principal Vera Yarosh. Same building as the Chabad Russian Center.')
+add('Yotzer Ohr Miami', S, 'Orthodox', '18900 NE 25th Avenue, Miami, FL', 'North Miami Beach', '33180', 'https://www.yomiami.org/',
+    'office@yomiami.org', 'Nietzah Benbenisti', 'Director (Miami-Dade County private school listing; the school site signs its admissions letter "Mrs. Benbenishti, Head of School")', MDC,
+    'CAJE list: girls grades 9-12; county layer enrollment 16.', 'Faculty page lists a Head of Security.', 'https://www.yomiami.org/faculty ; ' + CAJE_D + ' ; ' + MDC,
+    'On the MAR-JCC campus address.')
+add('Brumer Preschool of the Arts at the Shul of Downtown', S, 'Chabad', '35 SE 9th Street, Miami, FL', 'City of Miami', '33131', 'https://brickellpreschool.com/',
+    '', '', '', '', '', '', 'https://brickellpreschool.com/ ; ' + CAJE_E, 'Preschool of The Rok Family Shul - Chabad Downtown (Brickell). No email or names captured from site text.')
+add('Moses Montessori', S, 'Sephardic (community)', '1200 Normandy Drive, Miami Beach, FL', 'Miami Beach', '33141', 'https://mosesmontessori.com/',
+    '26hadar@gmail.com', '', '', '', '', '', 'https://mosesmontessori.com/ ; ' + CAJE_E, 'Early childhood program at the Temple Moses address.')
+add('Shalom Montessori', S, 'Jewish community', '3790 Prairie Avenue, Miami Beach, FL', 'Miami Beach', '33140', 'https://shalommontessori.org/',
+    'info@shalommontessori.org', '', '', '', '', 'Home page quote: "Our highest priority is the children ... Their safety, security ... are our most important focus."',
+    'https://shalommontessori.org/ ; ' + CAJE_E, 'Early childhood program (CAJE ECE directory, July 2024).')
+add('Muss Family Montessori at Temple Emanu-El', S, 'Conservative', '1701 Washington Avenue, Miami Beach, FL', 'Miami Beach', '33139', 'https://mussmontessori.org/',
+    'info@mussmontessori.org', 'Debbie Serbin', 'Head of School', 'https://mussmontessori.org/staff/', '',
+    'Site: single entrance so student safety is monitored, and "two security guards on campus"; staff page lists Franz Fernandez, Director of Security.',
+    'https://mussmontessori.org/staff/ ; ' + CAJE_E, 'Same campus as Temple Emanu-El of Miami Beach. Strong IRIS fit.')
+add('Suzy Fischer Early Childhood Academy (Beth Torah Benny Rok Campus)', S, 'Conservative', '20350 NE 26th Avenue, Miami, FL', 'North Miami Beach', '33180', 'https://btbrc.org/',
+    '', '', '', '', '', '', CAJE_E + ' ; ' + FED_E + 'suzy_ficher_early_childhood_academy_at_beth_torah_benny_rok_campus', 'Website blocked (403). Same campus as Beth Torah Benny Rok.')
+add('Yeladim Miami Preschool (Beit David Highland Lakes Shul)', S, 'Orthodox', '2600 NE 209th Street, Miami, FL', 'Unincorporated Miami-Dade (Highland Lakes)', '33180', 'https://www.bdhls.org/',
+    '', '', '', '', '', 'Synagogue security donation page funds security personnel including "1 Preschool Month" (https://www.bdhls.org/form/securitydonation).', CAJE_E + ' ; https://www.bdhls.org/form/securitydonation', 'From CAJE ECE directory (July 2024).')
+add('Miami Jewish Montessori', S, 'Chabad', '3713 Main Highway, Miami (Coconut Grove), FL', 'City of Miami', '33133', 'https://www.mjm.miami/',
+    'office@jewishmontessori.miami', 'Daniel Presberg', 'Director (Miami-Dade County private school listing)', MDC, 'County layer: PK-06; CAJE: early childhood and elementary.', '',
+    'https://www.mjm.miami/about-us ; ' + MDC + ' ; ' + CAJE_E, 'Same address as Bet Ovadia - Chabad of Miami (Coconut Grove). County also lists "Chabad of The Grove" preschool at this address (director Chana Fellig).')
+
+# ---------------- From federation "Find a Rabbi" page and other checks, batch 8 ----------------
+FR = 'https://jewishmiami.org/resources/find_rabbi/'
+add('Temple Hatikvah - Homestead Jewish Center', H, 'Reform', '183 NE 8th Street, Homestead, FL', 'Homestead', '33030', 'https://www.thhjc.org/',
+    'rabbi@temple-hatikvah.org', 'Dr. Jack L. Sparks', 'Rabbi', 'https://www.thhjc.org/Aboutus.html', 'Formed as a Jewish Community Center in 1952 (site); serves Homestead, Perrine, the Redland, Cutler Ridge, Upper Keys, Kendall.',
+    'Membership page states the congregation has no security fund (voluntary dues).', 'https://www.thhjc.org/ ; ' + FR,
+    'Site says weekly Erev Shabbat services take place via Zoom - verify how much the building is used. Only Jewish congregation found in Homestead.')
+add('Chabad of Downtown Coral Gables', H, 'Chabad', '1827 Ponce de Leon Boulevard, Coral Gables, FL', 'Coral Gables', '33134', 'https://chabadgables.com/',
+    '', 'Rabbi Avraham Stolik', 'Rabbi (home page: "Rabbi Avraham & Chany Stolik")', 'https://chabadgables.com/', '', '', 'https://chabadgables.com/',
+    'Read via WebFetch (Chabad.org-hosted site). Runs Chabad Hebrew School. Found through web search; not in federation directory.')
+add('The Jewish Center - Chabad of North Miami', H, 'Chabad', '12407 Biscayne Boulevard, North Miami, FL', 'North Miami', '33181', 'http://thejewishcenterflorida.com',
+    '', '', '', '', '', '', FR + ' ; ' + FED_S + 'the_jewish_center___chabad_of_north_miami',
+    'Address per Find a Rabbi page; the directory detail page lists 2225 NE 121st St (Beth Moshe\'s address).')
+add('Lubavitch Congregation (South Beach)', H, 'Chabad', '1423 Lenox Avenue, Miami Beach, FL', 'Miami Beach', '33139', '', '', '', '', '', '', '', FR, 'Listed only on the federation Find a Rabbi page.')
+add('Beth El Congregation (at Hebrew Academy)', H, 'Orthodox', '2400 Pine Tree Drive, Miami Beach, FL', 'Miami Beach', '33140', '', '', '', '', '', '', '', FR,
+    'Listed on the federation Find a Rabbi page at the RASG Hebrew Academy address (synagogue on the school campus; see the Hebrew Academy record for security contacts).')
+add('Communaute Francaise de Miami', H, 'Orthodox (French-speaking)', '3401 Prairie Avenue, Miami Beach, FL', 'Miami Beach', '33140', '', '', '', '', '', '', '', FR, 'Listed only on the federation Find a Rabbi page.')
+add('KSpace Miami', H, 'Jewish (denomination not stated)', '3575 NE 207th Street, #B20, Aventura, FL', 'Aventura', '33180', '', '', '', '', '', '', '', FR,
+    'Listed on the federation Find a Rabbi page; storefront unit in the same shopping center as Young Israel of Aventura.')
+add('Ner Yitzchak of Highland Lakes Synagogue', H, 'Sephardic Orthodox', '20701 NE 26th Avenue, Miami, FL', 'Unincorporated Miami-Dade (Highland Lakes)', '33180', '', '', '', '', '', '', '', FR, 'Listed only on the federation Find a Rabbi page.')
+add('Or Yaacov Orthodox Sephardic Congregation', H, 'Sephardic Orthodox', '3479 NE 163rd Street, North Miami Beach, FL', 'North Miami Beach', '33160', '', '', '', '', '', '', '', FR, 'Listed only on the federation Find a Rabbi page.')
+add('Bnei Emunah Congregation', H, 'Orthodox', '100 Bayview Drive, Sunny Isles Beach, FL', 'Sunny Isles Beach', '33160', '', '', '', '', '', '', '', FR, 'Listed only on the federation Find a Rabbi page.')
+add('Chabad Jewish Student Center at FIU', H, 'Chabad', '10031 SW 15th Terrace, Miami, FL', 'Unincorporated Miami-Dade (Westchester area)', '33174', '', '', '', '', '', '', '', FR,
+    'Student Chabad house near Florida International University (Find a Rabbi page).')

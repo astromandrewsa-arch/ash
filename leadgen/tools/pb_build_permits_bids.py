@@ -242,8 +242,10 @@ def build_mdc():
         name = (r['ContractorName'] or '').replace('\\,', ',').strip()
         g = groups.setdefault(key(name), {'names': collections.Counter(), 'rows': [], 'city': collections.Counter(), 'zip': collections.Counter(), 'lic': set()})
         g['names'][name] += 1; g['rows'].append(r)
-        if r.get('ContractorCity'): g['city'][r['ContractorCity'].replace('\\,', ',').strip().title()] += 1
-        if r.get('ContractorZip'): g['zip'][str(r['ContractorZip'])[:5]] += 1
+        cc = (r.get('ContractorCity') or '').replace('\\,', ',').strip()
+        if cc and len(cc) > 2 and not re.search(r'\d|\[phone\]', cc): g['city'][cc.title()] += 1
+        zz = str(r.get('ContractorZip') or '').strip()
+        if re.fullmatch(r'\d{5}(-?\d{4})?', zz): g['zip'][zz[:5]] += 1
         if r.get('ContractorNumber'): g['lic'].add(r['ContractorNumber'])
     out = []
     for k, g in groups.items():
