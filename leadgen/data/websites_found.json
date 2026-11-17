@@ -64,8 +64,8 @@
   "method": "not found"
  },
  "Haig Service Corporation": {
-  "website": "https://www.haigco.com/",
-  "method": "candidate domain verified (name + Florida marker on homepage)"
+  "website": "",
+  "method": "candidate rejected on manual review (different company)"
  },
  "Hotwire Communications": {
   "website": "https://hotwirecommunications.com/",
@@ -80,8 +80,8 @@
   "method": "not found"
  },
  "NextGen Security": {
-  "website": "https://www.nextgen.com/",
-  "method": "candidate domain verified (name + Florida marker on homepage)"
+  "website": "",
+  "method": "candidate rejected on manual review (different company)"
  },
  "Sciens-WSA Division": {
   "website": "",
@@ -160,6 +160,682 @@
   "method": "not found"
  },
  "United Fire Communications INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Next Step Electric": {
+  "website": "",
+  "method": "not found"
+ },
+ "Rrr Electrical LLC": {
+  "website": "https://rrrelectrical.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Sunshine Security Consultants, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "50 State Technology, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Abar Technology Group Corp": {
+  "website": "",
+  "method": "not found"
+ },
+ "Action Alarm INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Actron Security": {
+  "website": "",
+  "method": "not found"
+ },
+ "Advanced Detection Technologies Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Advanced Home Theater INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Advanced Technology Group, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Advanced Technology Security & Communication": {
+  "website": "",
+  "method": "not found"
+ },
+ "Alarm and Electronics Systems, LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Alarm Depot, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Alarm Plus, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Alarm Service & Fire INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Alarm-dish-telecommunications Corp.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Alemany Academy LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Alemany L.l.c.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Amiti Alarm Systems LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Apex Security Systems Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Arco Electronics INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Ascom Systems INC": {
+  "website": "https://www.ascomsystems.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Ase Telecom & Data, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Asinet": {
+  "website": "https://www.asinet.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Atlantic Automatic Control, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Atlantic Smart Technologies": {
+  "website": "https://atlanticsmart.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Axion Fire Systems LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Beacon Protection Group, LLC": {
+  "website": "https://beaconprotection.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Best Access and Security Solutions, LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Brophy Associates Inc/ Dba Direct Digital Concepts": {
+  "website": "",
+  "method": "not found"
+ },
+ "C F Alarm Industry, INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Central Alarm Control Systems, LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Century Fire Alarm, LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Chi Alarms, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Cimas Enterprises INC Dba Cimas Technologies": {
+  "website": "",
+  "method": "not found"
+ },
+ "Circle Security Solutions": {
+  "website": "https://circlesecuritysolutions.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "City Fire Protection, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Cjr Communications Group, INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Comprehensive Fire Alarms & Security Systems INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Delphi One Systems Corp": {
+  "website": "https://www.delphione.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Delta Alarm Systems, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Dependable Security Sys INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Design Av, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "DL Professional Group INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Dml Security Systems LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Dommex , Corp": {
+  "website": "",
+  "method": "not found"
+ },
+ "Dommex Home Security, Corp": {
+  "website": "",
+  "method": "not found"
+ },
+ "Dsp Video Systems": {
+  "website": "",
+  "method": "not found"
+ },
+ "Dssec INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "E & E Systems INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "E.g. Telecommunications & Technology LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Electricfire, Corp": {
+  "website": "",
+  "method": "not found"
+ },
+ "Electronic Alarms, Inc.": {
+  "website": "https://www.electronicalarmsinc.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Elite Integration Solutions, LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Empire Fire Safety LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Engineered Automation, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Enterprise Security Solution, Corp": {
+  "website": "",
+  "method": "not found"
+ },
+ "Es&lvs": {
+  "website": "http://www.eslvs.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Etek Fire Alarms Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Excell-alarm System, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "EZ Security, Corp": {
+  "website": "",
+  "method": "not found"
+ },
+ "Fidrat Fire & Systems, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Fire Alarm Integrated System, LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Fire Alarm Specialist of Florida Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Fire Alarms and Sprinklers": {
+  "website": "",
+  "method": "not found"
+ },
+ "Fire and Security Systems Specialists, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Fire Security Alarm Protection Corp": {
+  "website": "",
+  "method": "not found"
+ },
+ "Fire-link Technologies Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Florida Fire & Burglary INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Flying A Security Systems, Inc.": {
+  "website": "https://www.flyinga.net/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "G Volts, Corp.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Gate Security": {
+  "website": "",
+  "method": "not found"
+ },
+ "Helios Security Systems LLC": {
+  "website": "https://heliossecurity.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Hemag INC": {
+  "website": "https://www.hemaginc.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Hexagonal Fire Detection, LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Hi-gain Electronics, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Hi-tech Security LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Hometech Automation Systems INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Horizon Electronics INC Dba Horizon Security Systems": {
+  "website": "",
+  "method": "not found"
+ },
+ "I - Link Service, Corp.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Icon Home Technologies": {
+  "website": "https://www.iconhometechnologies.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Icon Security Systems INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Improve Fire Alarms, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Inhoome INC": {
+  "website": "https://www.inhoome.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Intech Systems LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Integrated Technologies, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Intellitech Systems INC": {
+  "website": "https://intellitechsystemsinc.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "J1 Technologies LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Jdav Design South Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Jose D Lima": {
+  "website": "",
+  "method": "not found"
+ },
+ "JP Security Systems Inc.": {
+  "website": "https://www.jpsecuritysystems.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Lanzy's Fire & Life Safety LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Layer 8 Security LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Legnasys Technology Inc.": {
+  "website": "https://www.legnasys.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Lmg Security Services INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Lsn International LLC": {
+  "website": "https://lsninternational.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Luxtec Security LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "M C G Electronics Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Master Electronic Solutions LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Medina Security & Network LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Metro Dade Security System, Inc.": {
+  "website": "https://metrodadesecurity.net",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "MG Technology Services, INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Miami Cable Connections, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Miami Dade County Dept of Corrections and Rehabilitation": {
+  "website": "",
+  "method": "not found"
+ },
+ "Miami Tech Support & Solutions LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Miami Total Security LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Millennium Integration Technology, Corp.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Monarch Security, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Moon Security Systems INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Munway Technology INC": {
+  "website": "https://www.munway.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "National Fire Security, Inc.": {
+  "website": "",
+  "method": "candidate rejected on manual review (different company)"
+ },
+ "Next Level Security & Fire LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Obx Technologies, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Octagon Security LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Omega Controls INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Omega Security of South Florida, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "One Safety Solutions, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Ontech Smart Services": {
+  "website": "",
+  "method": "not found"
+ },
+ "Packet Twist": {
+  "website": "",
+  "method": "not found"
+ },
+ "Peace of Mind Technologies, LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Pearce Alarm Services, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Perimeter Access Control": {
+  "website": "",
+  "method": "not found"
+ },
+ "Pinnacle Security & Technology, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Pro Technical Support Corporation": {
+  "website": "",
+  "method": "not found"
+ },
+ "Prosafety Fire and Security Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Protect-o-larms": {
+  "website": "https://protect-o-larms.com",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Protective Security Solutions Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Qualified Alarms INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Quality Service Contractors, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Quality Wiring, Inc.": {
+  "website": "https://qualitywiring.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Related Systems INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Royce Bravo Security and Access Control LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Royce Integrated Solutions": {
+  "website": "",
+  "method": "not found"
+ },
+ "Sanbee Systems Intergrated INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Securemax Solutions, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Security Alarm Divison LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Security Line of Miami, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Security Systems Solutions Corp": {
+  "website": "",
+  "method": "not found"
+ },
+ "Security Tech Group, Inc.": {
+  "website": "https://www.securitytechfl.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Security Technologies Network INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Skylight Technologies Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Smartech Security, Corp": {
+  "website": "",
+  "method": "not found"
+ },
+ "Smartsys LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Sos Technologies Holdings": {
+  "website": "",
+  "method": "not found"
+ },
+ "SY Electronics Corp": {
+  "website": "",
+  "method": "not found"
+ },
+ "Synergy Security & Fire Solutions, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Systems Design & Integration, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Techaddict INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Ulises Operations INC": {
+  "website": "",
+  "method": "not found"
+ },
+ "United Communication & Protection, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "United Communication and Protection, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "United Telecommunications & Alarms Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Universal Fire & Security Services, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "V&p Power Control Corp": {
+  "website": "https://www.vppowercontrol.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Vcs Tech Systems, LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Visual Acoustics, L.l.c.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Vitel Communications, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Walmart Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Whitetip Fire & Security LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Zone 1 Security": {
+  "website": "https://www.zone1security.com/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Allied Electrical Services, Inc.": {
+  "website": "http://www.alliedelectricalservices.net/",
+  "method": "candidate domain verified (name + Florida marker on homepage)"
+ },
+ "Arco Security Central Station, Corp.,": {
+  "website": "",
+  "method": "not found"
+ },
+ "Bda Consulting and Solutions, LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Electrical Services Group LLC": {
+  "website": "",
+  "method": "candidate rejected on manual review (different company)"
+ },
+ "Engineering Systems Technology, Inc.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Furns Monitoring Services Corp.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Mac Electrical Engineering LLC": {
+  "website": "",
+  "method": "not found"
+ },
+ "Pyd Electric, Corp.": {
+  "website": "",
+  "method": "not found"
+ },
+ "Zone Electric Corp": {
   "website": "",
   "method": "not found"
  }

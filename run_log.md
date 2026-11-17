@@ -79,3 +79,6 @@
 ### Hiring (T3 doc)
 - 24 companies (22 Miami-Dade). Small local firms first, nationals (Kastle, Pavion, Securitas Technology, Wachter, Titan, ADT, Brinks Home, Johnson Controls, Parsons, KBR) in short entries. Note: Omni Data / Paradyme Secure (Miami-Dade IAF member) says it is now part of the RapidSOS family of companies — possible competitor channel; flagged in the hiring notes.
 - The shared web-search allowance ran out near the end of this agent's run, so a few names were not searched.
+
+### Website finding (for license holders / IAF members without a listed site)
+- Web search allowance was exhausted by the research agents, so websites were found by testing candidate domains built from the company name (e.g. name.com / name.net) and accepting one ONLY if its homepage names the company and carries a Florida/Miami marker. 36 found for 210 targets; 4 rejected on manual review (different companies). Results: leadgen/data/websites_found.json.

@@ -328,6 +328,32 @@
   "_self_declared": false
  },
  {
+  "Name": "Miami Security Systems",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "City of Miami",
+  "State": "FL",
+  "Website": "https://www.miamisecuritysystems.net/",
+  "Email": "info@miamisecuritysystems.net",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, structured cabling, gates/barriers, smart home/automation, serves hospitals/healthcare/hotels/condos/HOA/offices/warehouses/industrial, brands: Dahua/Digital Watchdog/DMP/Hikvision/Honeywell",
+  "Number of Locations": "?",
+  "ZIP Code": "?",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 4,
+  "Source URL": "https://www.miamisecuritysystems.net/fire-alarm-miami-fl/",
+  "_region": "Miami-Dade",
+  "_pz_why": "Mentions 'coral gables'",
+  "_brands": [
+   "DMP"
+  ],
+  "_levels": [
+   "DMP: \"Authorized dealer\" for some listed brands (self-declared; DMP named)"
+  ],
+  "_self_declared": true
+ },
+ {
   "Name": "World Security & Electric (WSE), now Pye-Barker Fire & Safety - Doral",
   "Point of Contact": "Kelly Rooney",
   "Contact Role": "President",
@@ -739,6 +765,36 @@
   "_self_declared": false
  },
  {
+  "Name": "Sentry Security, Inc.",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Sunrise",
+  "State": "FL",
+  "Website": "https://sentrysecurityfl.com/",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, mass notification/ERRCS, serves condos/HOA/offices/retail, brands: 2GIG/Alarm.com/Bosch/DMP/DSC/Edwards/Fire-Lite/Genetec/HID/Honeywell/Interlogix/Kantech/Napco/Notifier/Qolsys/Silent Knight/Simplex",
+  "Number of Locations": 1,
+  "ZIP Code": "?",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 5,
+  "Source URL": "https://sentrysecurityfl.com/",
+  "_region": "Broward",
+  "_pz_why": "Mentions 'coral gables'",
+  "_brands": [
+   "Bosch",
+   "DMP",
+   "Napco"
+  ],
+  "_levels": [
+   "Bosch: self-declared on dealer site",
+   "DMP: Services DMP (self-declared on dealer site; Broward-based, serves Miami-Dade)",
+   "Napco: self-declared on dealer site"
+  ],
+  "_self_declared": true
+ },
+ {
   "Name": "St. Moritz Security Services",
   "Point of Contact": "Barry Haesly",
   "Contact Role": "Vice President, Education, and Organizational Development",
@@ -819,6 +875,38 @@
    "Verkada: Platinum Partner"
   ],
   "_self_declared": false
+ },
+ {
+  "Name": "Everon",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Miramar",
+  "State": "FL",
+  "Website": "https://everonsolutions.com/about/company-information/locations/fl/miramar/dade-county",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, smart home/automation, remote video monitoring, mass notification/ERRCS, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/government/retail/warehouses/industrial, brands: ADT/Avigilon/Bosch/Brivo/DMP",
+  "Number of Locations": 74,
+  "ZIP Code": "?",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 4,
+  "Source URL": "https://www.everonsolutions.com/product-vendors",
+  "_region": "Broward",
+  "_pz_why": "Mentions 'Dade County'",
+  "_brands": [
+   "Avigilon",
+   "Bosch",
+   "Brivo",
+   "DMP"
+  ],
+  "_levels": [
+   "Avigilon: self-declared on company site (Motorola Solutions/Avigilon)",
+   "Bosch: self-declared on company site",
+   "Brivo: self-declared on company site",
+   "DMP: Product vendor (self-declared on company site; Miramar office with Dade County service pages)"
+  ],
+  "_self_declared": true
  },
  {
   "Name": "Tesys Networks",
@@ -2285,68 +2373,6 @@
   "_self_declared": false
  },
  {
-  "Name": "Sentry Security, Inc.",
-  "Point of Contact": "",
-  "Contact Role": "",
-  "Contact Source": "",
-  "Municipality": "Sunrise",
-  "State": "FL",
-  "Website": "https://sentrysecurityfl.com/",
-  "Email": "?",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, mass notification/ERRCS, serves condos/HOA/offices/retail, brands: 2GIG/Alarm.com/Bosch/DMP/DSC/Edwards/Fire-Lite/Genetec/HID/Honeywell/Interlogix/Kantech/Napco/Notifier/Qolsys/Silent Knight/Simplex",
-  "Number of Locations": 1,
-  "ZIP Code": "?",
-  "Preferred Zone (Y/N)": "Y",
-  "Fit Score": 5,
-  "Source URL": "https://sentrysecurityfl.com/",
-  "_region": "Other FL",
-  "_pz_why": "Mentions 'coral gables'",
-  "_brands": [
-   "Bosch",
-   "DMP",
-   "Napco"
-  ],
-  "_levels": [
-   "Bosch: self-declared on dealer site",
-   "DMP: Services DMP (self-declared on dealer site; Broward-based, serves Miami-Dade)",
-   "Napco: self-declared on dealer site"
-  ],
-  "_self_declared": true
- },
- {
-  "Name": "Everon",
-  "Point of Contact": "",
-  "Contact Role": "",
-  "Contact Source": "",
-  "Municipality": "Miramar",
-  "State": "FL",
-  "Website": "https://everonsolutions.com/about/company-information/locations/fl/miramar/dade-county",
-  "Email": "?",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, smart home/automation, remote video monitoring, mass notification/ERRCS, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/government/retail/warehouses/industrial, brands: ADT/Avigilon/Bosch/Brivo/DMP",
-  "Number of Locations": 74,
-  "ZIP Code": "?",
-  "Preferred Zone (Y/N)": "Y",
-  "Fit Score": 4,
-  "Source URL": "https://www.everonsolutions.com/product-vendors",
-  "_region": "Other FL",
-  "_pz_why": "Mentions 'Dade County'",
-  "_brands": [
-   "Avigilon",
-   "Bosch",
-   "Brivo",
-   "DMP"
-  ],
-  "_levels": [
-   "Avigilon: self-declared on company site (Motorola Solutions/Avigilon)",
-   "Bosch: self-declared on company site",
-   "Brivo: self-declared on company site",
-   "DMP: Product vendor (self-declared on company site; Miramar office with Dade County service pages)"
-  ],
-  "_self_declared": true
- },
- {
   "Name": "Guardian Electronics, Inc.",
   "Point of Contact": "",
   "Contact Role": "",
@@ -2371,32 +2397,6 @@
   "_levels": [
    "Bosch: \"We recommend and represent\" (self-declared; Bosch named for fire alarm)",
    "Napco: \"We recommend and represent\" (self-declared; Napco named for fire alarm and StarLink communicators)"
-  ],
-  "_self_declared": true
- },
- {
-  "Name": "Miami Security Systems",
-  "Point of Contact": "",
-  "Contact Role": "",
-  "Contact Source": "",
-  "Municipality": "City of Miami",
-  "State": "FL",
-  "Website": "https://www.miamisecuritysystems.net/",
-  "Email": "info@miamisecuritysystems.net",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, structured cabling, gates/barriers, smart home/automation, serves hospitals/healthcare/hotels/condos/HOA/offices/warehouses/industrial, brands: Dahua/Digital Watchdog/DMP/Hikvision/Honeywell",
-  "Number of Locations": "?",
-  "ZIP Code": "?",
-  "Preferred Zone (Y/N)": "Y",
-  "Fit Score": 4,
-  "Source URL": "https://www.miamisecuritysystems.net/fire-alarm-miami-fl/",
-  "_region": "Other FL",
-  "_pz_why": "Mentions 'coral gables'",
-  "_brands": [
-   "DMP"
-  ],
-  "_levels": [
-   "DMP: \"Authorized dealer\" for some listed brands (self-declared; DMP named)"
   ],
   "_self_declared": true
  },

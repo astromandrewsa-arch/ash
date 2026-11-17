@@ -9,6 +9,15 @@ OVERRIDE_TYPE = {
     "ABC Liquors": "Other", "Xfinity Home": "Other", "Comcast": "Other",
 }
 recs = json.load(open("data/iaf_members.json"))
+try:
+    _found = json.load(open("data/websites_found.json"))
+except FileNotFoundError:
+    _found = {}
+for _r in recs:
+    if not _r["website"]:
+        _f = _found.get(clean_name(_r["name"])) or _found.get(_r["name"])
+        if _f and _f.get("website"):
+            _r["website"] = _f["website"]
 rows = []
 for r in recs:
     en = enrich(r["website"]) if r["website"] else None
