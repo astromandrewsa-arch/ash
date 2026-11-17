@@ -9,9 +9,9 @@
 | 1 | Manufacturer dealer locators | leads/T2_Manufacturer_Dealers.xlsx | done (v1) |
 | 2 | IAF members | leads/T1_IAF_Members.xlsx | done (v1) |
 | 3 | TMA members | leads/T1_TMA_Members.xlsx | pending |
-| 4 | Alarm Exchange | docs/T2_Alarm_Exchange.docx | pending |
+| 4 | Alarm Exchange | docs/T2_Alarm_Exchange.docx | done |
 | 5 | Directories | leads/T3_Directories.xlsx | pending |
-| 5 | Licenses (DBPR) | leads/T3_Licenses.xlsx | pending |
+| 5 | Licenses (DBPR) | leads/T3_Licenses.xlsx | done (v1; websites being added) |
 | 5 | Permits & bids | docs/T3_Permits_and_Bids.docx | pending |
 | 5 | Hiring | docs/T3_Hiring.docx | pending |
 | 6 | Houses of worship | leads/Segment_Houses_of_Worship.xlsx | pending |
@@ -38,6 +38,7 @@
 - Avigilon / Avigilon Alta https://www.avigilon.com/partner-locator — lead form behind an Incapsula challenge; ask Motorola/Avigilon for the Miami-Dade partner list.
 - Brivo, DMP, Bosch (Keenfinity), Napco, Axis, Hanwha, Eagle Eye, Rhombus, Genetec (lower tiers) — no public dealer lists; a regional sales manager could supply Miami-Dade dealers (not contacted, per rules).
 - Dicsan Technology (Miami; appears to claim Avigilon and Hanwha) — site fails TLS/502; verify by hand. Empire State Security (Plantation) brands page renders client-side; verify.
+- Alarm Exchange: Protective Security Solutions Inc. (Miami 33186, top pick) website failed (TLS/503) — check services by hand; Scorpion Fire and Safety city unknown; Sunbiz (Florida company registry) is behind a Cloudflare check from this environment.
 - web.archive.org is unreachable from this cloud environment (connection timeouts), so no archived copies could be used anywhere.
 - TMA member directory (https://my.tma.us/tmamemberdirectory): Cloudflare "verify you are human" bot check returns 403 to plain requests and to a headless browser (30 s wait). Not bypassed per the rules. web.archive.org also timed out from this environment. Alternatives are being tried (see TMA section).
 
@@ -51,3 +52,13 @@
 
 ### IAF (T1)
 - Directory loaded via the page's own blank search (one request; site robots.txt crawl-delay 30 s respected). 322 listings; 23 in Miami-Dade. Board (directors.php) and committees (committees.php) added in two sections below the main table; committee members' companies are only those IAF states or a match to the person named on an IAF directory listing.
+
+### Alarm Exchange (T2 doc)
+- All 16 categories, 335 listings read (main page and each category filter view; the robots-disallowed /article/the-alarm-exchange* path was not fetched). 84 entries kept (98 listings merged), 42 Florida-related, 5 Miami-Dade. Skipped listings are counted and named per category in the document.
+- DECISION: people seeking work or offering their license are identified by first name only, as posted; no personal emails recorded.
+- Rebuild: `python3 leadgen/tools/ax_build.py` (curated entries in leadgen/tools/ax_curated.py), then `python3 leadgen/ax_out.py`.
+
+### DBPR licenses (T3)
+- Florida DBPR does not need the interactive license search: it publishes the full Electrical Contractors' Licensing Board licensee file as a public download (https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv, no phone numbers in it). Filtered to Certified Alarm System Contractor I (EF) and II (EG) with county code 23 (Dade): 223 licenses, 215 businesses/individuals.
+- DECISION: Point of Contact = the license holder named on the DBPR record, role "License holder (DBPR EF/EG)". Name = the DBA on the license, or the licensee if none. Full license number, class, status and dates are on the "License details" tab (the main tab keeps your column order).
+- The interactive search https://www.myfloridalicense.com/wl11.asp resets the connection from this environment; not needed because of the download.

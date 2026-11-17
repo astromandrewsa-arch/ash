@@ -245,10 +245,15 @@ def write_doc(path, title, intro_lines, groups, top_picks, outro_lines=()):
     """groups: list of (group_heading, [entry dicts]); entry needs 'heading' plus DOC_FIELDS keys.
     top_picks: list of (heading, one-line reason)."""
     d = new_doc(title, intro_lines)
-    for gh, entries in groups:
-        if not entries:
+    for grp in groups:
+        gh, entries = grp[0], grp[1]
+        note = grp[2] if len(grp) > 2 else ""
+        if not entries and not note:
             continue
         d.add_heading(gh, 1)
+        if note:
+            p = d.add_paragraph()
+            p.add_run(note).italic = True
         for e in entries:
             fields = []
             for label, key in DOC_FIELDS:
