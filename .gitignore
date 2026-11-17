@@ -16,3 +16,4 @@ leadgen/raw/
 leadgen/cache/
 leadgen/tools/*.html
 __pycache__/
+leadgen/tools/certs/

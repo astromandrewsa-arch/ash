@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Alarm Grid Inc.",
+    "brand": "Alarm.com",
+    "listing_level": "Self-declared: \"Alarm.com is one of Alarm Grid's premier interactive monitoring partners\"",
+    "address": "2400 E Commercial Blvd # 412",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "zip": "33308",
+    "website": "https://www.alarmgrid.com",
+    "email": "",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_source": "",
+    "services_on_listing": "Alarm.com interactive monitoring plans (self-monitoring and central-station monitoring); online alarm equipment sales",
+    "service_area": "Coral Gables, Miami-Dade County (page https://www.alarmgrid.com/places/coral-gables, \"Coral Gables Alarm Monitoring\")",
+    "listing_url": "https://www.alarmgrid.com/alarm-dot-com",
+    "query": "Web search for Alarm.com dealers in Miami; dealer pages checked: /alarm-dot-com and /places/coral-gables",
+    "notes": "Self-declared on dealer site (no public Alarm.com locator usable: alarm.com/get_started is disallowed by robots.txt and is a lead form). Address taken from the Resideo locator listing for Alarm Grid Inc. Mostly an online/DIY-oriented monitoring dealer."
+  },
+  {
+    "name": "Security 101 - Miami",
+    "brand": "Alarm.com",
+    "listing_level": "Self-declared: Alarm.com listed as a \"National Strategic Partner\" of Security 101",
+    "address": "2400 West 84th Street, Suite 15",
+    "city": "Hialeah",
+    "state": "FL",
+    "zip": "33016",
+    "website": "https://www.security101.com/miami",
+    "email": "",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_source": "",
+    "services_on_listing": "Commercial security integrator: access control, video surveillance, intrusion detection, integrated systems, hosted video/access, remote video monitoring (SiteGuard 101)",
+    "service_area": "Miami metro area (Security 101 - Miami office page)",
+    "listing_url": "https://go.security101.com/alarmcom",
+    "query": "Found via Becklar/Alarm.com partner research; dealer pages checked: go.security101.com/alarmcom and www.security101.com/miami",
+    "notes": "Self-declared on dealer site. Miami office address from https://www.security101.com/miami (\"The Miami headquarters for Security 101 is at 2400 West 84th Street, Suite 15, Hialeah, FL 33016\"). Security 101 also has a Ft. Lauderdale office (1520 N. Powerline Road, Pompano Beach) per the Honeywell commercial locator. Mailing city on the Honeywell locator is \"Miami, FL 33016\"."
+  }
+]

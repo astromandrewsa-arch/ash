@@ -21,7 +21,7 @@
   {
     "name": "Security 101 (Miami)",
     "brand": "Avigilon",
-    "listing_level": "Technology / strategic partner (self-declared)",
+    "listing_level": "National Strategic Partner (self-declared)",
     "address": "2400 West 84th Street, Suite 15",
     "city": "Hialeah",
     "state": "FL",
@@ -32,10 +32,10 @@
     "contact_role": "",
     "contact_source": "",
     "services_on_listing": "Commercial security integration: video, access control, alarm monitoring, visitor management",
-    "service_area": "Greater Miami",
-    "listing_url": "https://www.security101.com/miami",
-    "query": "web search: Avigilon authorized partner Miami",
-    "notes": "Self-declared on dealer site (Avigilon has no public partner list; its \"Partner Locator\" is a lead form). Page lists Avigilon under \"Technology Partners / Strategic Partners\" (\"long-standing strategic partnerships with the security industry's leading manufacturers\"); it does not use the words authorized or certified for Avigilon. Page states \"The Miami headquarters for Security 101 is at 2400 West 84th Street, Suite 15, Hialeah, FL 33016.\""
+    "service_area": "Greater Miami (Miami office)",
+    "listing_url": "https://go.security101.com/avigilon",
+    "query": "web search: Avigilon partner Miami",
+    "notes": "Self-declared on dealer site (Avigilon has no public partner list; its \"Partner Locator\" is a lead form). Security 101 page \"Avigilon - National strategic partners with Security 101\" (https://go.security101.com/avigilon) says \"National Strategic Partner\". The Miami office is on the company's own page https://www.security101.com/miami (\"The Miami headquarters for Security 101 is at 2400 West 84th Street, Suite 15, Hialeah, FL 33016\"), which also shows the brand logo under \"Technology Partners\". Security 101 is a national integrator with local offices; this record is its Miami office."
   },
   {
     "name": "AT&I Security Systems",
@@ -74,5 +74,24 @@
     "listing_url": "https://securecommsystems.com/about",
     "query": "web search: Miami FL security integrator Avigilon certified partner",
     "notes": "Self-declared on dealer site (Avigilon has no public partner list; its \"Partner Locator\" is a lead form). About page \"Certifications & Partnerships\" lists \"Avigilon - Certified Partner\". Site says \"based in South Florida\" with no street address, so a Miami-Dade base is NOT confirmed (the service area includes Miami-Dade). Check before use."
+  },
+  {
+    "name": "Industrial Communications (Induscom)",
+    "brand": "Avigilon",
+    "listing_level": "Motorola Solutions Ecosystem Solutions Partner (self-declared)",
+    "address": "350 N.W. 215 St.",
+    "city": "Miami",
+    "state": "FL",
+    "zip": "33169",
+    "website": "https://www.induscom.com/",
+    "email": "",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_source": "",
+    "services_on_listing": "Motorola Solutions safety and security ecosystem: Avigilon Unity on-prem VMS and access control, Avigilon Alta, Avigilon Decision Management System, two-way radio",
+    "service_area": "Southeast Florida (Miami location); also Fort Myers and Boston locations",
+    "listing_url": "https://www.induscom.com/about-us/msi-ecosystem-solutions-partner.htm",
+    "query": "cross-check of group C finding (mfr_avigilonalta.json); page re-verified",
+    "notes": "Self-declared on dealer site (Avigilon has no public partner list; its \"Partner Locator\" is a lead form). Page text: \"We Are a Motorola Solutions Ecosystem Solutions Partner\" and it lists Avigilon Unity VMS/access control products. Avigilon is a Motorola Solutions company; the page does not use the words \"Avigilon partner\". Page shows the \"Southeast Florida\" location at 350 N.W. 215 St., Miami, FL 33169. Also in group C file mfr_avigilonalta.json."
   }
 ]

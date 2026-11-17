@@ -6,8 +6,8 @@
 ## PROGRESS
 | Step | Source | Output | Status |
 | --- | --- | --- | --- |
-| 1 | Manufacturer dealer locators | leads/T2_Manufacturer_Dealers.xlsx | in progress |
-| 2 | IAF members | leads/T1_IAF_Members.xlsx | in progress |
+| 1 | Manufacturer dealer locators | leads/T2_Manufacturer_Dealers.xlsx | done (v1) |
+| 2 | IAF members | leads/T1_IAF_Members.xlsx | done (v1) |
 | 3 | TMA members | leads/T1_TMA_Members.xlsx | pending |
 | 4 | Alarm Exchange | docs/T2_Alarm_Exchange.docx | pending |
 | 5 | Directories | leads/T3_Directories.xlsx | pending |
@@ -31,6 +31,23 @@
 - No phone numbers are recorded anywhere. Raw HTML downloads (which can contain phone numbers) are kept out of git (leadgen/raw, leadgen/cache are git-ignored).
 
 ## NEEDS MANUAL WORK
+- Qolsys dealer locator https://www.iqsecurityproducts.com/find-a-dealer — its data host (code.metalocator.com) disallows robots. Search ZIPs 33134, 33139, 33141, 33030, 33160 by hand in a browser. Likely high value (Qolsys panels are the standard Alarm.com hardware).
+- Alarm.com https://www.alarm.com/get_started — robots-disallowed and asks for your contact details; only a person can use it.
+- ADT — adt.com returns 403 (Akamai) to this environment and has no dealer locator. Third-party directory leads to check by hand: City Alarms (Doral), Security Tech Group (Miami), Home Security Concepts, SafeStreets (national ADT Authorized Provider).
+- Honeywell commercial security locator https://www.bullseyelocations.com/pages/honeywellcomsec — Cloudflare 403; results were read via a summarizing fetch. Spot-check ZIP 33134, radius 250 in a browser.
+- Avigilon / Avigilon Alta https://www.avigilon.com/partner-locator — lead form behind an Incapsula challenge; ask Motorola/Avigilon for the Miami-Dade partner list.
+- Brivo, DMP, Bosch (Keenfinity), Napco, Axis, Hanwha, Eagle Eye, Rhombus, Genetec (lower tiers) — no public dealer lists; a regional sales manager could supply Miami-Dade dealers (not contacted, per rules).
+- Dicsan Technology (Miami; appears to claim Avigilon and Hanwha) — site fails TLS/502; verify by hand. Empire State Security (Plantation) brands page renders client-side; verify.
+- web.archive.org is unreachable from this cloud environment (connection timeouts), so no archived copies could be used anywhere.
 - TMA member directory (https://my.tma.us/tmamemberdirectory): Cloudflare "verify you are human" bot check returns 403 to plain requests and to a headless browser (30 s wait). Not bypassed per the rules. web.archive.org also timed out from this environment. Alternatives are being tried (see TMA section).
 
 ## SOURCE NOTES
+
+### Manufacturer dealers (T2)
+- 20 brands checked by three research agents (notes: leadgen/data/mfr_group_a/b/c_notes.md). Only Verkada, Milestone, Resideo/Honeywell (incl. Honeywell commercial security locator) and Genetec (top-tier map) have usable public locators; these were queried ZIP-by-ZIP for all 77 Miami-Dade ZIPs (or swept by radius until results stopped changing).
+- For the other brands (no public locator, a lead form, robots-disallowed or bot-blocked), dealers whose OWN website states the brand partnership were recorded and marked "self-declared" in the brand table.
+- Locator results include Broward/Palm Beach dealers returned by Miami-Dade ZIP searches (kept, sorted after Miami-Dade). Three Broward firms that claim brands and serve Miami-Dade (Sentry Security, AFA Protective Systems, Everon) were added from the agents' near-miss lists.
+- DECISION: the Honeywell commercial security locator (not on the brand list) was included under Resideo/Honeywell because it lists commercial video/access dealers.
+
+### IAF (T1)
+- Directory loaded via the page's own blank search (one request; site robots.txt crawl-delay 30 s respected). 322 listings; 23 in Miami-Dade. Board (directors.php) and committees (committees.php) added in two sections below the main table; committee members' companies are only those IAF states or a match to the person named on an IAF directory listing.
