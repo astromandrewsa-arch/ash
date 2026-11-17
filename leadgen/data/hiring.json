@@ -1,0 +1,96 @@
+{
+  "entries": [
+    {
+      "heading": "Security 101 - Miami",
+      "poc": "Blair Rogers",
+      "role": "Branch Manager (named on the company's Miami office page, not on the job post)",
+      "contact_source": "https://www.security101.com/miami",
+      "municipality": "Hialeah",
+      "state": "FL",
+      "zip": "33016",
+      "website": "https://www.security101.com/miami",
+      "email": "miami-service@security101.com",
+      "business_type": "Dealer/Integrator",
+      "found": "Security 101's careers index (seen 2026-11-17) lists an Account Executive opening for the Miami office (also one for Fort Lauderdale). The Miami AE post offers $130k on-target earnings (base plus uncapped commission), a car stipend, and asks for 5+ years of B2B enterprise security sales, $1M+ annual sales, and a record of selling multi-year recurring-revenue (RMR) contracts to mid-market and Fortune 1000 clients in healthcare, education and manufacturing; vendors named are Axis, Genetec, Lenel, Software House and Exacq. A Miami Service Technician page (commercial electronic security service tech) is also still live at $28-$31/hour, asking for 2+ years servicing networked access control and IP video (Pro-Watch, Genetec, Software House, Lenel/S2, OpenPath; Axis, Exacq, Milestone, MaxPro, Victor, Avigilon, Hanwha), though it is not on the current careers index, so it may be filled. No posting dates are shown. The Miami office is at 2400 West 84th Street, Suite 15, Hialeah, and sells to healthcare, education (Safe Learning 101 for Schools), local government, property management and national accounts.",
+      "why": "Commercial-only integrator hiring a Miami sales rep whose comp plan is built around RMR contracts, which is exactly how IRIS is sold. It already does hosted video and proactive video monitoring (SiteGuard 101) and sells to schools and local government, the buildings where police camera access matters most.",
+      "next_step": "Approach the Miami branch manager as a reseller; pitch IRIS as an RMR add-on the new AE can carry into school and government accounts. Also check whether the Fort Lauderdale branch (same AE opening) wants it.",
+      "source_url": "https://www.security101.com/company/careers/account-executive-mia",
+      "florida": true,
+      "miami_dade": true,
+      "roles": [
+        "Account Executive",
+        "Service Technician (page live, not on index)"
+      ],
+      "date_posted": "seen 2026-11-17"
+    },
+    {
+      "heading": "Titan Security Group (Titan Electronics) - Miami",
+      "poc": "",
+      "role": "",
+      "contact_source": "https://job-boards.greenhouse.io/tsg/jobs/4353557009",
+      "municipality": "Miami",
+      "state": "FL",
+      "zip": "?",
+      "website": "https://www.titan-security.com",
+      "email": "work@titan-security.com",
+      "business_type": "Dealer/Integrator",
+      "found": "Titan Security Group's Greenhouse board (seen 2026-11-17) lists a 'Miami Field Service Technician' under its Titan Electronics division, among 110 openings (mostly guard and Chicago-area roles). Pay $30-$50/hour plus a discretionary year-end bonus. Duties: install and service enterprise access control, IP CCTV, DVR/NVR, burglar alarms, intercoms and telephone entry systems; elevator (DDE) integrations mentioned. The text was copied from a Chicago template (it mentions the Illinois PERC license and travel around Chicagoland), so the Miami territory is unclear. First published 2026-08-06 per Greenhouse's public board API, last updated 2026-11-13, so still open. Applications go to work@titan-security.com.",
+      "why": "Chicago-based guard and electronics company planting a technician in Miami suggests it is building a South Florida service footprint for enterprise clients. Mid-size, not owner-run locally.",
+      "next_step": "Watch for growth: low priority as a reseller until it has a Miami office and local manager.",
+      "source_url": "https://job-boards.greenhouse.io/tsg/jobs/4353557009",
+      "florida": true,
+      "miami_dade": true,
+      "roles": [
+        "Field Service Technician"
+      ],
+      "date_posted": "2026-08-06 (Greenhouse first_published; updated 2026-11-13)"
+    },
+    {
+      "heading": "Wachter, Inc. (Nationwide Service & Projects)",
+      "poc": "",
+      "role": "",
+      "contact_source": "https://jobs.lever.co/wachter/d849e8bb-fd35-4999-890e-546787e25e16",
+      "municipality": "Miami / Fort Lauderdale",
+      "state": "FL",
+      "zip": "?",
+      "website": "https://www.wachter.com",
+      "email": "?",
+      "business_type": "Dealer/Integrator",
+      "found": "Lever post created 2026-06-01 and still open on 2026-11-17: CCTV Project Technician, on-site in Miami and Fort Lauderdale, for an experienced, licensed commercial security and low-voltage technician; CCTV, networking, Cat 6, conduit and MDF work in commercial buildings; state physical security or life safety license a plus; lift certification; travel required. Pay field reads $25-$35 with the unit set to 'per week' (a data-entry error, likely hourly). Wachter also has an older (Nov 2025) Fire/Security Alarm Installation Technician post listing Miami among five Florida cities at $30-$50/hour.",
+      "why": "National commercial integrator (Kansas-based) staffing CCTV project work in South Florida; signals large multi-site camera rollouts, but not a small owner-run dealer.",
+      "next_step": "Low priority; note as national competitor/partner channel only.",
+      "source_url": "https://jobs.lever.co/wachter/d849e8bb-fd35-4999-890e-546787e25e16",
+      "florida": true,
+      "miami_dade": true,
+      "roles": [
+        "CCTV Project Technician"
+      ],
+      "date_posted": "2026-06-01 (Lever createdAt; still open 2026-11-17)"
+    },
+    {
+      "heading": "Integrated Fire & Security Solutions (Fortis Fire & Safety) - Coral Springs branch",
+      "poc": "",
+      "role": "",
+      "contact_source": "https://job-boards.greenhouse.io/fortisfiresafety/jobs/4431725009",
+      "municipality": "Coral Springs (Broward); role also listed for Miami",
+      "state": "FL",
+      "zip": "?",
+      "website": "https://www.fortisfire.com",
+      "email": "?",
+      "business_type": "Dealer/Integrator",
+      "found": "Two South Florida openings on Fortis Fire & Safety's Greenhouse board. (1) Account Executive (Commercial Security Systems), location 'Coral Springs, FL | Miami, FL', first published 2026-10-13: B2B outside sales of CCTV and video surveillance, access control, intercom and sound, paging, structured cabling and fire alarm, plus recurring monitoring, maintenance and inspection services; commission eligible, no pay figure; HubSpot CRM; at least 10 targeted sales calls a week including cold calls; sells to end users, general contractors and electrical contractors. (2) Senior Security & Alarm Technician, Coral Springs, first published 2026-05-17 and updated 2026-08-31: service area 'primarily the Miami-Dade region'; 4+ years low-voltage security (CCTV, access control, intrusion), access-control programming required, Florida FASA/BASA license or ability to get it. Fortis says it is 'acquiring new brands all the time'; Florida accounts for 39 of its 49 openings.",
+      "why": "A private-equity fire-and-security roll-up building out a commercial security sales seat aimed at Miami, with a recurring-services pitch. Commercial video plus fire alarm customers are a natural fit for IRIS, but this is a consolidator, not an owner-run dealer.",
+      "next_step": "Secondary target: approach the Coral Springs branch once the new AE is hired; watch for further Miami-Dade acquisitions by Fortis.",
+      "source_url": "https://job-boards.greenhouse.io/fortisfiresafety/jobs/4431725009",
+      "florida": true,
+      "miami_dade": true,
+      "roles": [
+        "Account Executive (Commercial Security Systems)",
+        "Senior Security & Alarm Technician"
+      ],
+      "date_posted": "2026-10-13 (AE); 2026-05-17 (tech, updated 2026-08-31)"
+    }
+  ],
+  "top_picks": [],
+  "notes": ""
+}

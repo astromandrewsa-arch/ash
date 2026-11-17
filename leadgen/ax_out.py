@@ -21,3 +21,10 @@ for c in d["categories"]:
 write_doc("../docs/T2_Alarm_Exchange.docx", "The Alarm Exchange - IRIS lead review", intro, groups, d["top_picks"],
           outro_lines=["Method notes: " + d["notes"]])
 print("ok", n)
+
+# rows for Master (Florida entries only)
+from generic import rows_from_doc_entries
+fl_entries = [e for c in d["categories"] for e in c["entries"] if e.get("florida")]
+rows = rows_from_doc_entries(fl_entries, "T2_Alarm_Exchange.docx")
+json.dump(rows, open("data/out_ax.json", "w"), indent=1)
+print("ax rows", len(rows))
