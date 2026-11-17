@@ -73,12 +73,23 @@ def zip5(z):
     return m.group(1) if m else ""
 
 
-def region(zipcode, state="FL"):
+BROWARD_CITIES = set("""fort lauderdale|ft lauderdale|ft. lauderdale|hollywood|pembroke pines|miramar|davie|plantation|sunrise|coral springs|pompano beach|deerfield beach|cooper city|oakland park|dania beach|dania|hallandale beach|hallandale|weston|tamarac|margate|lauderhill|lauderdale lakes|coconut creek|parkland|lighthouse point|hillsboro beach|wilton manors|north lauderdale|southwest ranches|lauderdale-by-the-sea""".split("|"))
+PB_CITIES = set("""west palm beach|boca raton|delray beach|boynton beach|lake worth|lake worth beach|jupiter|palm beach gardens|wellington|royal palm beach|riviera beach|lantana|juno beach|greenacres|palm beach|north palm beach|tequesta|belle glade|loxahatchee|palm springs""".split("|"))
+
+
+def region(zipcode, state="FL", city=None):
     """Return 'Miami-Dade', 'Broward', 'Palm Beach', 'Other FL' or 'Out of state'."""
     z = zip5(zipcode)
-    if state and state.upper() != "FL":
+    if state and state.upper() not in ("FL", "?"):
         return "Out of state"
     if not z:
+        c = (city or "").lower().replace(".", "").strip()
+        if c in MD_CITY_NAMES or c in ("city of miami", "unincorporated miami-dade"):
+            return "Miami-Dade"
+        if c in BROWARD_CITIES:
+            return "Broward"
+        if c in PB_CITIES:
+            return "Palm Beach"
         return "Other FL"
     if z in MD_ZIPS:
         return "Miami-Dade"

@@ -120,7 +120,7 @@ def make_row(name, city, state, zipcode, website, email, btype, services, locati
         "Fit Score": 0, "Source URL": source_url,
     }
     row["Fit Score"] = fit_score(row)
-    row["_region"] = region(zipcode, state)
+    row["_region"] = region(zipcode, state, city)
     row["_pz_why"] = why
     return row
 

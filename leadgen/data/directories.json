@@ -16,7 +16,7 @@
   "service_area": "Miami, FL (USA) | Miami-Dade, Broward, Palm Beach Counties — Miami, Hollywood, Pembroke Pines, Doral and surrounding areas",
   "listing_url": "https://pipl.systems/company/alarm-brokers-of-florida/miami-fl/",
   "query": "https://pipl.systems/security-integrators/florida/ (Florida state page; no city pages exist) + sitemap /company/*-fl",
-  "notes": "Listing summary: Alarm Brokers of Florida Founded in 2016 by alarm industry experts Steve Carulo and Mary Runno, Alarm Brokers of Florida has spent nearly a decade building one of South Florida's most trusted locally-owned security practices — a Women-Owned Small Business (WOSB) and Economically Disadvantaged... Technology partners on listing: Ring Industries: Residential, Commercial, Government, Healthcare, Education Profile unclaimed (created by Pipl Systems)",
+  "notes": "Listing summary: Alarm Brokers of Florida Founded in 2016 by alarm industry experts Steve Carulo and Mary Runno, Alarm Brokers of Florida has spent nearly a decade building one of South Florida's most trusted locally-owned security practices — a Women-Owned Small Business (WOSB) and Economically Disadvantaged... Technology partners on listing: Ring Industries: Residential, Commercial, Government, Healthcare, Education ZIP 33131 (downtown Miami) is shared by several unrelated pipl Miami profiles - likely a pipl default, verify Profile unclaimed (created by Pipl Systems)",
   "directory": [
    "pipl.systems"
   ],
@@ -39,7 +39,7 @@
   "service_area": "Miami, FL (USA) | Miami, Boca Raton — Palm Beach, Broward, Miami-Dade Counties, Florida",
   "listing_url": "https://pipl.systems/company/circle-security-solutions/miami-fl/",
   "query": "https://pipl.systems/security-integrators/florida/ (Florida state page; no city pages exist) + sitemap /company/*-fl",
-  "notes": "Listing summary: Circle Security Solutions Circle Security Solutions has been protecting South Florida homes and businesses for over 45 years — a multigenerational family business whose history begins with founder Ira, who previously built Reliable Security in Coral Gables before being approached by the Marriott... Technology partners on listing: Ring Industries: Residential, Commercial Profile unclaimed (created by Pipl Systems)",
+  "notes": "Listing summary: Circle Security Solutions Circle Security Solutions has been protecting South Florida homes and businesses for over 45 years — a multigenerational family business whose history begins with founder Ira, who previously built Reliable Security in Coral Gables before being approached by the Marriott... Technology partners on listing: Ring Industries: Residential, Commercial ZIP 33131 (downtown Miami) is shared by several unrelated pipl Miami profiles - likely a pipl default, verify Profile unclaimed (created by Pipl Systems)",
   "directory": [
    "pipl.systems"
   ],
@@ -62,7 +62,7 @@
   "service_area": "Miami, FL (USA) | Miami, Fort Lauderdale, Palm Beach — South Florida",
   "listing_url": "https://pipl.systems/company/miami-security-systems/miami-fl/",
   "query": "https://pipl.systems/security-integrators/florida/ (Florida state page; no city pages exist) + sitemap /company/*-fl",
-  "notes": "Listing summary: Miami Security Systems Established in 1986, Miami Security Systems is a family-owned and operated security business that has been serving all of South Florida for over 35 years — making it one of the most enduring locally-owned security firms in the Miami-Dade market. Operating from its Hialeah... Technology partners on listing: Ring Industries: Residential, Commercial, Industrial Profile unclaimed (created by Pipl Systems)",
+  "notes": "Listing summary: Miami Security Systems Established in 1986, Miami Security Systems is a family-owned and operated security business that has been serving all of South Florida for over 35 years — making it one of the most enduring locally-owned security firms in the Miami-Dade market. Operating from its Hialeah... Technology partners on listing: Ring Industries: Residential, Commercial, Industrial ZIP 33131 (downtown Miami) is shared by several unrelated pipl Miami profiles - likely a pipl default, verify Listing text says it operates from a Hialeah location with a walk-in showroom Profile unclaimed (created by Pipl Systems)",
   "directory": [
    "pipl.systems"
   ],
@@ -138,6 +138,265 @@
   "flag": ""
  },
  {
+  "name": "Beyond Technology",
+  "brand": "",
+  "listing_level": "",
+  "address": "801 Brickell Ave, 7th floor",
+  "city": "Miami",
+  "state": "FL",
+  "zip": "33131",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Systems integrators, Access control",
+  "service_area": "",
+  "listing_url": "https://www.securityinformed.com/companies/miami-security-companies/directory.html | https://www.sourcesecurity.com/companies/systems-integrators-florida/directory.html",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Address/ZIP from company profile page https://www.securityinformed.com/companies/beyond-technology.html; no website shown on profile | Company profile URL(s): https://www.securityinformed.com/companies/beyond-technology.html, https://www.sourcesecurity.com/companies/beyond-technology.html | Listing text: At Beyond Technology, they are a global company that has been in the business of helping transform businesses through technology for over three decades. They have helped different organizations across industries around infrastructure projects, mobility, IoT, and cybersecurity ini | IT/infrastructure-focused (listing mentions infrastructure, mobility, IoT, cybersecurity); verify physical-security work",
+  "directory": [
+   "securityinformed.com",
+   "sourcesecurity.com"
+  ],
+  "flag": ""
+ },
+ {
+  "name": "E.G. Telecommunications & Technologies",
+  "brand": "",
+  "listing_level": "",
+  "address": "",
+  "city": "Miami",
+  "state": "FL",
+  "zip": "",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Installers, Communication equipments",
+  "service_area": "",
+  "listing_url": "https://www.securityinformed.com/companies/miami-security-companies/directory.html",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Profile page not read (Cloudflare WAF block after a few requests); ZIP/website not captured | Company profile URL(s): https://www.securityinformed.com/companies/e-g-telecommunications-technologies.html | Listing text: E.G Telecommunications & Technology is a Company specialized in telecommunications and security. Initiated formal operations in 2009 as O. E. Communications. | Telecom and security installer",
+  "directory": [
+   "securityinformed.com"
+  ],
+  "flag": ""
+ },
+ {
+  "name": "Eyeson",
+  "brand": "",
+  "listing_level": "",
+  "address": "",
+  "city": "Miami",
+  "state": "FL",
+  "zip": "",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Services, CCTV",
+  "service_area": "",
+  "listing_url": "https://www.securityinformed.com/companies/miami-security-companies/directory.html",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Profile page not read (Cloudflare WAF block after a few requests); ZIP/website not captured | Company profile URL(s): https://www.securityinformed.com/companies/eyeson.html | Listing text: Eyeson Digital is a global developer and provider of video security, proactive business intelligence, and management solutions for a number of industries including retail, financial, hospitality, property management, logistics and schools. Each Eyeson project is designed, install | Listing calls it a developer and provider of video security whose team designs and installs each project; may be partly a product company",
+  "directory": [
+   "securityinformed.com"
+  ],
+  "flag": ""
+ },
+ {
+  "name": "Integrated Security Systems",
+  "brand": "",
+  "listing_level": "",
+  "address": "",
+  "city": "Miami",
+  "state": "FL",
+  "zip": "",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Systems integrators, Access control",
+  "service_area": "",
+  "listing_url": "https://www.securityinformed.com/companies/miami-security-companies/directory.html | https://www.sourcesecurity.com/companies/systems-integrators-florida/directory.html",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Profile page not read (Cloudflare WAF block after a few requests); ZIP/website not captured | Company profile URL(s): https://www.securityinformed.com/companies/integrated-security-systems.html, https://www.sourcesecurity.com/companies/integrated-security-systems.html | Listing text: Advanced technology and exceptional customer service are the hallmarks of Integrated Security Systems. The company serves fortune 100, 500 companies as well as mid-size and smaller commercial, institutional clients that need to protect personnel, secure physical assets, control a",
+  "directory": [
+   "securityinformed.com",
+   "sourcesecurity.com"
+  ],
+  "flag": ""
+ },
+ {
+  "name": "Intellitech Systems, Inc.",
+  "brand": "",
+  "listing_level": "",
+  "address": "20725 NE 16th Ave, A-44",
+  "city": "Miami",
+  "state": "FL",
+  "zip": "33179",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Systems integrators, Access control",
+  "service_area": "",
+  "listing_url": "https://www.securityinformed.com/companies/miami-security-companies/directory.html",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Address/ZIP from company profile page https://www.securityinformed.com/companies/intellitech-systems-inc.html; no website shown on profile | Company profile URL(s): https://www.securityinformed.com/companies/intellitech-systems-inc.html | Listing text: Intellitech Systems provide services to condominiums, commercial buildings and residential customers that demand reliable and time critical solutions. From access control to security, Intellitech Systems offer the latest cutting edge solutions for your multi dwelling building, bu | Serves condominiums, commercial buildings and residential customers",
+  "directory": [
+   "securityinformed.com"
+  ],
+  "flag": ""
+ },
+ {
+  "name": "iWatchSystems LLC",
+  "brand": "",
+  "listing_level": "",
+  "address": "",
+  "city": "Miami",
+  "state": "FL",
+  "zip": "",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Services, Access control",
+  "service_area": "",
+  "listing_url": "https://www.securityinformed.com/companies/miami-security-companies/directory.html",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Profile page not read (Cloudflare WAF block after a few requests); ZIP/website not captured | Company profile URL(s): https://www.securityinformed.com/companies/iwatchsystems-llc.html | No description on listing",
+  "directory": [
+   "securityinformed.com"
+  ],
+  "flag": ""
+ },
+ {
+  "name": "Kent Security Services, Inc",
+  "brand": "",
+  "listing_level": "",
+  "address": "",
+  "city": "Miami",
+  "state": "FL",
+  "zip": "",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Systems integrators, Access control",
+  "service_area": "",
+  "listing_url": "https://www.securityinformed.com/companies/miami-security-companies/directory.html | https://www.sourcesecurity.com/companies/systems-integrators-florida/directory.html",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Profile page not read (Cloudflare WAF block after a few requests); ZIP/website not captured | Company profile URL(s): https://www.securityinformed.com/companies/kent-security-services-inc.html, https://www.sourcesecurity.com/companies/kent-security-services-inc.html | Listing text: Kent Security Services, Inc is a company based in Miami that offers a range of security and service solutions and integrate them to deliver the most manpower-efficient, operationally effective and ROI-rich program. | Guard-services company that also integrates security systems",
+  "directory": [
+   "securityinformed.com",
+   "sourcesecurity.com"
+  ],
+  "flag": ""
+ },
+ {
+  "name": "Munway Technology",
+  "brand": "",
+  "listing_level": "",
+  "address": "",
+  "city": "Miami",
+  "state": "FL",
+  "zip": "",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Systems integrators, CCTV",
+  "service_area": "",
+  "listing_url": "https://www.securityinformed.com/companies/miami-security-companies/directory.html | https://www.sourcesecurity.com/companies/systems-integrators-florida/directory.html?page=2",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Profile page not read (Cloudflare WAF block after a few requests); ZIP/website not captured | Company profile URL(s): https://www.securityinformed.com/companies/munway-technology.html, https://www.sourcesecurity.com/companies/munway-technology.html | Listing text: Munway Technology in Miami, FL is a private company categorised under Protective Devices, Security. It is a full service technology solutions company founded in 1998 specializing in the design and implementation of security and information technology systems.",
+  "directory": [
+   "securityinformed.com",
+   "sourcesecurity.com"
+  ],
+  "flag": ""
+ },
+ {
+  "name": "Paradyme",
+  "brand": "",
+  "listing_level": "",
+  "address": "",
+  "city": "Miami",
+  "state": "FL",
+  "zip": "",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Installers, Access control, Systems integrators, Consulting services",
+  "service_area": "",
+  "listing_url": "https://www.securityinformed.com/companies/miami-security-companies/directory.html?page=2 | https://www.sourcesecurity.com/companies/systems-integrators-florida/directory.html?page=2",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Profile page not read (Cloudflare WAF block after a few requests); ZIP/website not captured | Company profile URL(s): https://www.securityinformed.com/companies/paradyme.html, https://www.sourcesecurity.com/companies/paradyme.html | Listing text: Paradyme is a provider of security solutions covering a wide range of areas including access control, CCTV, gates and intercom as well as intrusion detection. The service portfolio of the company includes design, engineering, installation, and maintenance of business security sys",
+  "directory": [
+   "securityinformed.com",
+   "sourcesecurity.com"
+  ],
+  "flag": ""
+ },
+ {
+  "name": "Saltex Group",
+  "brand": "",
+  "listing_level": "",
+  "address": "",
+  "city": "Miami",
+  "state": "FL",
+  "zip": "",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Systems integrators, Access control",
+  "service_area": "",
+  "listing_url": "https://www.securityinformed.com/companies/miami-security-companies/directory.html?page=2 | https://www.sourcesecurity.com/companies/systems-integrators-florida/directory.html?page=2",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Profile page not read (Cloudflare WAF block after a few requests); ZIP/website not captured | Company profile URL(s): https://www.securityinformed.com/companies/saltex-group.html, https://www.sourcesecurity.com/companies/saltex-group.html | Listing text: Saltex Group is a worldwide leader in the security industry with more than 20 years of experience in the design, development, and implementation of integrated security systems customized to meet clients’ needs and including: CCTV, access control, detection systems, burglary and i | Integrated systems incl. CCTV, access control, intrusion, fire",
+  "directory": [
+   "securityinformed.com",
+   "sourcesecurity.com"
+  ],
+  "flag": ""
+ },
+ {
+  "name": "IP Access Video LLC",
+  "brand": "",
+  "listing_level": "",
+  "address": "",
+  "city": "Doral",
+  "state": "FL",
+  "zip": "",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Systems integrators, CCTV",
+  "service_area": "",
+  "listing_url": "https://www.sourcesecurity.com/companies/systems-integrators-florida/directory.html",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Profile page not read (Cloudflare WAF block after a few requests); ZIP/website not captured | Company profile URL(s): https://www.sourcesecurity.com/companies/ip-access-video-llc.html | Listing text: IP Access Video is a technology integrator. We are known for the design and successful implementation of advanced IP technology in the area of security, including high-end systems HD Surveillance and Corporate Access Control and Integration. We recommend technology and solutions  | Technology integrator: HD surveillance, corporate access control",
+  "directory": [
+   "sourcesecurity.com"
+  ],
+  "flag": ""
+ },
+ {
   "name": "AT&I Miami",
   "brand": "",
   "listing_level": "",
@@ -159,29 +418,6 @@
    "pipl.systems"
   ],
   "flag": "broward_listed_as_miami (listing city Cooper City, Broward County; brand/page is AT&I Miami)"
- },
- {
-  "name": "Convergint",
-  "brand": "",
-  "listing_level": "",
-  "address": "",
-  "city": "La Palma",
-  "state": "CA",
-  "zip": "90623",
-  "website": "https://www.convergint.com/",
-  "email": "",
-  "contact_name": "",
-  "contact_role": "",
-  "contact_source": "",
-  "services_on_listing": "Access Control, Intrusion / Alarm Systems, Video Surveillance",
-  "service_area": "La Palma, CA, New York, Texas, Illinois, Florida, Georgia, Virginia, Ohio, Pennsylvania, Massachusetts, Washington, Colorado (USA) | Ontario, British Columbia, Alberta (Canada)",
-  "listing_url": "https://pipl.systems/company/convergint/la-palma-ca/",
-  "query": "https://pipl.systems/security-integrators/florida/ (Florida state page; no city pages exist) + sitemap /company/*-fl",
-  "notes": "Listing summary: Convergint Convergint is a global leader in service-based systems integration across the US and... Profile unclaimed (created by Pipl Systems)",
-  "directory": [
-   "pipl.systems"
-  ],
-  "flag": "national integrator; listing address La Palma, CA; listed on Florida state page (coverage includes Florida)"
  },
  {
   "name": "Hi-Tech Security Cameras",
@@ -251,5 +487,145 @@
    "pipl.systems"
   ],
   "flag": "listing website is a Trinidad (.com) site; ZIP 33172 is Miami-Dade (Doral area); verify identity"
+ },
+ {
+  "name": "Lunis Systems",
+  "brand": "",
+  "listing_level": "",
+  "address": "",
+  "city": "Miami",
+  "state": "FL",
+  "zip": "",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Installers, CCTV",
+  "service_area": "",
+  "listing_url": "https://www.securityinformed.com/companies/miami-security-companies/directory.html",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Profile page not read (Cloudflare WAF block after a few requests); ZIP/website not captured | Company profile URL(s): https://www.securityinformed.com/companies/lunis-systems.html | Listing text: Lunis Systems provides Complete AV Services, Audio Systems Design & installation in South Florida. Pro AV Installation Services for distributed video systems including led walls, TV Installations , video projectors, digital signage and restaurant menu boards",
+  "directory": [
+   "securityinformed.com"
+  ],
+  "flag": "AV installer (pro AV, video walls, signage); CCTV listed"
+ },
+ {
+  "name": "Plasco, Inc.",
+  "brand": "",
+  "listing_level": "",
+  "address": "",
+  "city": "Miami",
+  "state": "FL",
+  "zip": "",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Resellers / Dealers / Reps, Access control, Systems integrators",
+  "service_area": "",
+  "listing_url": "https://www.securityinformed.com/companies/miami-security-companies/directory.html?page=2 | https://www.sourcesecurity.com/companies/systems-integrators-florida/directory.html?page=2",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Profile page not read (Cloudflare WAF block after a few requests); ZIP/website not captured | Company profile URL(s): https://www.securityinformed.com/companies/plasco-inc.html, https://www.sourcesecurity.com/companies/plasco-inc.html | Listing text: Plasco, Inc. is one of the largest identification solution providers worldwide and is a well established, value added reseller, integrator and custom developer of card-based technology solutions. Located in Miami, Florida and St. Louis Park, Minnesota, the company offers card-bas",
+  "directory": [
+   "securityinformed.com",
+   "sourcesecurity.com"
+  ],
+  "flag": "ID-card / card-based solutions reseller-integrator (Miami and St. Louis Park, MN)"
+ },
+ {
+  "name": "XSPONSE",
+  "brand": "",
+  "listing_level": "",
+  "address": "",
+  "city": "Miami",
+  "state": "FL",
+  "zip": "",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Systems integrators, IP networking products",
+  "service_area": "",
+  "listing_url": "https://www.securityinformed.com/companies/miami-security-companies/directory.html?page=2 | https://www.sourcesecurity.com/companies/systems-integrators-florida/directory.html?page=3",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Profile page not read (Cloudflare WAF block after a few requests); ZIP/website not captured | Company profile URL(s): https://www.securityinformed.com/companies/xsponse.html, https://www.sourcesecurity.com/companies/xsponse.html | Listing text: At XSponse, the mission is to transform security and automation through an AI-driven ecosystem that delivers actionable insights, enabling immediate action and reaction.",
+  "directory": [
+   "securityinformed.com",
+   "sourcesecurity.com"
+  ],
+  "flag": "AI-driven security/automation platform; may be a product company rather than installer"
+ },
+ {
+  "name": "Vision Security",
+  "brand": "",
+  "listing_level": "",
+  "address": "",
+  "city": "Miami",
+  "state": "FL",
+  "zip": "",
+  "website": "",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "Consultants, Access control",
+  "service_area": "",
+  "listing_url": "https://www.securityinformed.com/companies/miami-security-companies/directory.html?page=2",
+  "query": "securityinformed: Miami security companies directory (all types); sourcesecurity: systems integrators in Florida",
+  "notes": "Profile page not read (Cloudflare WAF block after a few requests); ZIP/website not captured | Company profile URL(s): https://www.securityinformed.com/companies/vision-security.html | Listing text: Vision Security can provide individuals or dedicated teams with the full protection of clients and their families at various locations, such as private residences, commercial properties, mini malls, corporate offices and hotels. The services include electronic security devices, C",
+  "directory": [
+   "securityinformed.com"
+  ],
+  "flag": "Listed as consultant; listing also names electronic security devices, CCTV and access control"
+ },
+ {
+  "name": "Kastle Systems, Inc.",
+  "brand": "",
+  "listing_level": "2025 TOBY sponsor; BOMA Miami-Dade committee participant",
+  "address": "",
+  "city": "",
+  "state": "FL",
+  "zip": "",
+  "website": "https://www.kastle.com/",
+  "email": "",
+  "contact_name": "Claudia Grene",
+  "contact_role": "BOMA Miami-Dade Registration Committee and Social Media & Website Committee member (listed as \"Kastle\")",
+  "contact_source": "https://www.bomamiamidade.org/committees/",
+  "services_on_listing": "",
+  "service_area": "",
+  "listing_url": "https://www.bomamiamidade.org/committees/ | https://www.bomamiamidade.org/toby/toby-sponsorship/",
+  "query": "BOMA Miami-Dade public site (committees page; 2025 TOBY sponsors list)",
+  "notes": "Member directory (members.bomamiamidade.org/member-directory) is behind a Cloudflare challenge, so category listings could not be read. Kastle appears by name on the BOMA committees page and the 2025 TOBY sponsor list. Kastle is a national managed access-control/video provider; local Miami office address not on these pages.",
+  "directory": [
+   "BOMA Miami-Dade (public site)"
+  ],
+  "flag": "national firm; not from member-directory category (directory blocked)"
+ },
+ {
+  "name": "Allied Universal",
+  "brand": "",
+  "listing_level": "2025 TOBY sponsor",
+  "address": "",
+  "city": "",
+  "state": "FL",
+  "zip": "",
+  "website": "https://www.aus.com/",
+  "email": "",
+  "contact_name": "",
+  "contact_role": "",
+  "contact_source": "",
+  "services_on_listing": "",
+  "service_area": "",
+  "listing_url": "https://www.bomamiamidade.org/toby/toby-sponsorship/",
+  "query": "BOMA Miami-Dade public site (2025 TOBY sponsors list)",
+  "notes": "Named in the 2025 TOBY sponsor list on bomamiamidade.org. Primarily guard services; has a technology/integration division (Allied Universal Technology Services). No local details on the page.",
+  "directory": [
+   "BOMA Miami-Dade (public site)"
+  ],
+  "flag": "national guard-services firm with integration arm; not from member-directory category (directory blocked)"
  }
 ]

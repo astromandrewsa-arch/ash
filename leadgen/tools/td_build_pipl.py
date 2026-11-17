@@ -4,6 +4,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from td_pipl_parse import parse
 BASE = '/home/user/ash/leadgen/raw/tma_dir/pipl/listings'
 MANUFACTURERS = {'BAS-IP', 'Digital Watchdog', 'IC Realtime', 'Paxton', 'STid'}
+EXCLUDE_OTHER = {'Convergint'}  # national; listing (La Palma, CA) does not mention Miami -> notes file only
 ON_STATE_PAGE = {'AT&I Miami', 'Alarm Brokers of Florida', 'Circle Security Solutions', 'Convergint', 'Hi-Tech Security Cameras',
                  'Miami Security Systems', 'Royce Integrated Solutions', 'Security 101 Miami', 'Sytec USA', 'UTS Florida'}
 # contact names that appear in the listing text itself (verified by reading each listing)
@@ -24,7 +25,7 @@ for f in sorted(os.listdir(BASE)):
     if not f.endswith('.html'):
         continue
     r = parse(os.path.join(BASE, f))
-    if r['name'] in MANUFACTURERS:
+    if r['name'] in MANUFACTURERS or r['name'] in EXCLUDE_OTHER:
         continue
     url = 'https://pipl.systems/company/' + f.replace('pipl_systems_company_', '').replace('.html', '')
     # rebuild exact listing URL from the saved slug list
@@ -45,6 +46,10 @@ for f in sorted(os.listdir(BASE)):
         notes.append('Technology partners on listing: ' + ', '.join(partners))
     if ind:
         notes.append('Industries: ' + ', '.join(ind))
+    if r['zip'] == '33131':
+        notes.append('ZIP 33131 (downtown Miami) is shared by several unrelated pipl Miami profiles - likely a pipl default, verify')
+    if r['name'] == 'Miami Security Systems':
+        notes.append('Listing text says it operates from a Hialeah location with a walk-in showroom')
     notes.append('Profile ' + ('claimed' if r['claimed'] else 'unclaimed (created by Pipl Systems)'))
     if r['name'] not in ON_STATE_PAGE:
         notes.append('Not shown on the Florida state page; found via pipl.systems sitemap')

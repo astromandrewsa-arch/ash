@@ -8,9 +8,9 @@
 | --- | --- | --- | --- |
 | 1 | Manufacturer dealer locators | leads/T2_Manufacturer_Dealers.xlsx | done (v1) |
 | 2 | IAF members | leads/T1_IAF_Members.xlsx | done (v1) |
-| 3 | TMA members | leads/T1_TMA_Members.xlsx | pending |
+| 3 | TMA members | leads/T1_TMA_Members.xlsx | done (partial - directory blocked) |
 | 4 | Alarm Exchange | docs/T2_Alarm_Exchange.docx | done |
-| 5 | Directories | leads/T3_Directories.xlsx | pending |
+| 5 | Directories | leads/T3_Directories.xlsx | done (partial - profiles/BOMA blocked) |
 | 5 | Licenses (DBPR) | leads/T3_Licenses.xlsx | done (v1; websites being added) |
 | 5 | Permits & bids | docs/T3_Permits_and_Bids.docx | pending |
 | 5 | Hiring | docs/T3_Hiring.docx | pending |
@@ -40,7 +40,10 @@
 - Dicsan Technology (Miami; appears to claim Avigilon and Hanwha) — site fails TLS/502; verify by hand. Empire State Security (Plantation) brands page renders client-side; verify.
 - Alarm Exchange: Protective Security Solutions Inc. (Miami 33186, top pick) website failed (TLS/503) — check services by hand; Scorpion Fire and Safety city unknown; Sunbiz (Florida company registry) is behind a Cloudflare check from this environment.
 - web.archive.org is unreachable from this cloud environment (connection timeouts), so no archived copies could be used anywhere.
-- TMA member directory (https://my.tma.us/tmamemberdirectory): Cloudflare "verify you are human" bot check returns 403 to plain requests and to a headless browser (30 s wait). Not bypassed per the rules. web.archive.org also timed out from this environment. Alternatives are being tried (see TMA section).
+- TMA member directory https://my.tma.us/tmamemberdirectory (USA > Florida): Cloudflare "verify you are human" check, 403 to plain requests and headless browser (also after a 60 s retry). Not bypassed. In a normal browser, export the Florida list (especially Miami, Doral, Hialeah, Medley, Miami Lakes, Coral Gables, Miami Beach, Homestead). Same block on the Five Diamond lists (https://my.tma.us/fivediamondmonitoringcenters, https://my.tma.us/20262027tmafivediamondapprovedcompanies) and New Members (https://themonitoringassociation.growthzoneapp.com/newtmamembers/). T1_TMA_Members.xlsx was rebuilt from public tma.us pages and search-engine copies of directory pages and is incomplete.
+- TMA: Arco Security Central Station Corp. (Miami 33165, the one clean Miami-Dade monitoring member) — trade press reports Owen Security Solutions bought the Arco Security Group in 2025; check current status.
+- BOMA Miami-Dade member directory https://members.bomamiamidade.org/member-directory — Cloudflare 403 and not indexed by search engines; browse the security / life safety / access control categories by hand.
+- securityinformed.com / sourcesecurity.com — list pages loaded in a headless browser, but company profile pages (street address, ZIP, website) return Cloudflare 403 after 2-3 loads even at 30-60 s spacing. Profile URLs are in leadgen/data/directories.json notes; open them by hand for ZIPs and websites.
 
 ## SOURCE NOTES
 
@@ -62,3 +65,12 @@
 - Florida DBPR does not need the interactive license search: it publishes the full Electrical Contractors' Licensing Board licensee file as a public download (https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv, no phone numbers in it). Filtered to Certified Alarm System Contractor I (EF) and II (EG) with county code 23 (Dade): 223 licenses, 215 businesses/individuals.
 - DECISION: Point of Contact = the license holder named on the DBPR record, role "License holder (DBPR EF/EG)". Name = the DBA on the license, or the licensee if none. Full license number, class, status and dates are on the "License details" tab (the main tab keeps your column order).
 - The interactive search https://www.myfloridalicense.com/wl11.asp resets the connection from this environment; not needed because of the download.
+
+### TMA (T1)
+- Directory blocked (see NEEDS MANUAL WORK). Rebuilt from ~45 tma.us pages + 271 of 859 tma.us posts (Florida/board/award/new-member posts first) and the search-engine index of individual TMA directory pages (search-result text used as evidence; pages themselves not opened). 26 Florida companies, 3 Miami-Dade. Florida TMA leadership (ADT, Everon, Hauhn & Associates) listed under the table.
+- DECISION: Business Type set from the TMA membership class (associate -> Software/Vendor, consultant -> Consultant/Broker, proprietary GSOC -> Other).
+
+### Directories (T3)
+- pipl.systems has no city pages; Florida state page + Florida company pages from its sitemap. securityinformed / sourcesecurity Miami and Florida list pages read with a headless browser; profile pages blocked. BOMA directory blocked; Kastle Systems (BOMA committee member named on BOMA's public site) and Allied Universal (BOMA sponsor) added from BOMA's public pages.
+- DECISION: pipl's ZIP 33131 appears to be a default for Miami profiles, so it was dropped where the agent flagged it (municipality then defaults to City of Miami).
+- Excluded: locksmiths, cyber-only, manufacturers, distributors; Convergint (California address on pipl).
