@@ -13,7 +13,7 @@
 | 5 | Directories | leads/T3_Directories.xlsx | done (partial - profiles/BOMA blocked) |
 | 5 | Licenses (DBPR) | leads/T3_Licenses.xlsx | done (v1; websites being added) |
 | 5 | Permits & bids | docs/T3_Permits_and_Bids.docx | pending |
-| 5 | Hiring | docs/T3_Hiring.docx | pending |
+| 5 | Hiring | docs/T3_Hiring.docx | done |
 | 6 | Houses of worship | leads/Segment_Houses_of_Worship.xlsx | pending |
 | 7 | Master | leads/Master.xlsx | pending |
 
@@ -39,6 +39,7 @@
 - Brivo, DMP, Bosch (Keenfinity), Napco, Axis, Hanwha, Eagle Eye, Rhombus, Genetec (lower tiers) — no public dealer lists; a regional sales manager could supply Miami-Dade dealers (not contacted, per rules).
 - Dicsan Technology (Miami; appears to claim Avigilon and Hanwha) — site fails TLS/502; verify by hand. Empire State Security (Plantation) brands page renders client-side; verify.
 - Alarm Exchange: Protective Security Solutions Inc. (Miami 33186, top pick) website failed (TLS/503) — check services by hand; Scorpion Fire and Safety city unknown; Sunbiz (Florida company registry) is behind a Cloudflare check from this environment.
+- Hiring: Indeed (login wall), Glassdoor/SimplyHired (bot blocks), LinkedIn and ZipRecruiter (robots.txt) were not read directly; Indeed posts were reached through Tallo mirrors. WISE Building Technologies (Doral) security/fire alarm technician post could not be confirmed (hosting page would not load) — check by hand. SIA/ESA job boards and Employ Florida (robots.txt) not reachable.
 - web.archive.org is unreachable from this cloud environment (connection timeouts), so no archived copies could be used anywhere.
 - TMA member directory https://my.tma.us/tmamemberdirectory (USA > Florida): Cloudflare "verify you are human" check, 403 to plain requests and headless browser (also after a 60 s retry). Not bypassed. In a normal browser, export the Florida list (especially Miami, Doral, Hialeah, Medley, Miami Lakes, Coral Gables, Miami Beach, Homestead). Same block on the Five Diamond lists (https://my.tma.us/fivediamondmonitoringcenters, https://my.tma.us/20262027tmafivediamondapprovedcompanies) and New Members (https://themonitoringassociation.growthzoneapp.com/newtmamembers/). T1_TMA_Members.xlsx was rebuilt from public tma.us pages and search-engine copies of directory pages and is incomplete.
 - TMA: Arco Security Central Station Corp. (Miami 33165, the one clean Miami-Dade monitoring member) — trade press reports Owen Security Solutions bought the Arco Security Group in 2025; check current status.
@@ -74,3 +75,7 @@
 - pipl.systems has no city pages; Florida state page + Florida company pages from its sitemap. securityinformed / sourcesecurity Miami and Florida list pages read with a headless browser; profile pages blocked. BOMA directory blocked; Kastle Systems (BOMA committee member named on BOMA's public site) and Allied Universal (BOMA sponsor) added from BOMA's public pages.
 - DECISION: pipl's ZIP 33131 appears to be a default for Miami profiles, so it was dropped where the agent flagged it (municipality then defaults to City of Miami).
 - Excluded: locksmiths, cyber-only, manufacturers, distributors; Convergint (California address on pipl).
+
+### Hiring (T3 doc)
+- 24 companies (22 Miami-Dade). Small local firms first, nationals (Kastle, Pavion, Securitas Technology, Wachter, Titan, ADT, Brinks Home, Johnson Controls, Parsons, KBR) in short entries. Note: Omni Data / Paradyme Secure (Miami-Dade IAF member) says it is now part of the RapidSOS family of companies — possible competitor channel; flagged in the hiring notes.
+- The shared web-search allowance ran out near the end of this agent's run, so a few names were not searched.

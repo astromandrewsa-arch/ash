@@ -1,6 +1,30 @@
 {
   "entries": [
     {
+      "heading": "Aressco Services, Inc.",
+      "poc": "Don Richter",
+      "role": "Founder (incorporated Aressco, Inc. in 1979, per the company's About page)",
+      "contact_source": "https://aressco.com/about.php",
+      "municipality": "Unincorporated Miami-Dade (Kendall/South Dade)",
+      "state": "FL",
+      "zip": "33177",
+      "website": "https://aressco.com",
+      "email": "?",
+      "business_type": "Dealer/Integrator",
+      "found": "Company careers page (seen 2026-11-17, undated) says it is 'looking for like-minded, dynamic individuals to join our rapidly expanding team' and lists current vacancies: Installation Technicians (5+ years, FASA or BASA), Service Technicians (5+ years, FASA or BASA) and Technician Apprentice (basic electronics, willing to learn). Applications by email or fax. Office: 16115 SW 117th Ave, Suite 26A, Miami 33177. The About page says Aressco runs its own UL-listed central monitoring station in South Miami-Dade ('one of the last truly local central stations in South Florida'), serves homes and businesses, and descends from Aressco, Inc. of Kendall (1979) and Assured Security Company of Homestead (1974). Product lines on the site: Alarm.com, Honeywell Total Connect, Qolsys, DMP, Uniview video.",
+      "why": "Owner-run, 45-year South Dade dealer with its own monitoring center and Homestead roots (a preferred zone), hiring install and service techs plus an apprentice: it is growing and already earns recurring monitoring revenue that IRIS can attach to. Video (Uniview) and commercial accounts are part of the mix.",
+      "next_step": "Approach as reseller (top tier): pitch to the owner as a monitored-video add-on for its commercial and Homestead/South Dade accounts; its central station is a natural place to bundle IRIS.",
+      "source_url": "https://aressco.com/careers.php",
+      "florida": true,
+      "miami_dade": true,
+      "roles": [
+        "Installation Technician",
+        "Service Technician",
+        "Technician Apprentice"
+      ],
+      "date_posted": "seen 2026-11-17 (undated careers page)"
+    },
+    {
       "heading": "Security 101 - Miami",
       "poc": "Blair Rogers",
       "role": "Branch Manager (named on the company's Miami office page, not on the job post)",
@@ -24,71 +48,30 @@
       "date_posted": "seen 2026-11-17"
     },
     {
-      "heading": "Titan Security Group (Titan Electronics) - Miami",
+      "heading": "Tech Systems, Inc. (TSi) - Miami",
       "poc": "",
       "role": "",
-      "contact_source": "https://job-boards.greenhouse.io/tsg/jobs/4353557009",
+      "contact_source": "https://tallo.com/talent/job/maintenance-and-repair/alarm-or-security-system-technician/fl/miami/low-voltage-security-technicia-3346fbd4",
       "municipality": "Miami",
       "state": "FL",
       "zip": "?",
-      "website": "https://www.titan-security.com",
-      "email": "work@titan-security.com",
-      "business_type": "Dealer/Integrator",
-      "found": "Titan Security Group's Greenhouse board (seen 2026-11-17) lists a 'Miami Field Service Technician' under its Titan Electronics division, among 110 openings (mostly guard and Chicago-area roles). Pay $30-$50/hour plus a discretionary year-end bonus. Duties: install and service enterprise access control, IP CCTV, DVR/NVR, burglar alarms, intercoms and telephone entry systems; elevator (DDE) integrations mentioned. The text was copied from a Chicago template (it mentions the Illinois PERC license and travel around Chicagoland), so the Miami territory is unclear. First published 2026-08-06 per Greenhouse's public board API, last updated 2026-11-13, so still open. Applications go to work@titan-security.com.",
-      "why": "Chicago-based guard and electronics company planting a technician in Miami suggests it is building a South Florida service footprint for enterprise clients. Mid-size, not owner-run locally.",
-      "next_step": "Watch for growth: low priority as a reseller until it has a Miami office and local manager.",
-      "source_url": "https://job-boards.greenhouse.io/tsg/jobs/4353557009",
-      "florida": true,
-      "miami_dade": true,
-      "roles": [
-        "Field Service Technician"
-      ],
-      "date_posted": "2026-08-06 (Greenhouse first_published; updated 2026-11-13)"
-    },
-    {
-      "heading": "Wachter, Inc. (Nationwide Service & Projects)",
-      "poc": "",
-      "role": "",
-      "contact_source": "https://jobs.lever.co/wachter/d849e8bb-fd35-4999-890e-546787e25e16",
-      "municipality": "Miami / Fort Lauderdale",
-      "state": "FL",
-      "zip": "?",
-      "website": "https://www.wachter.com",
+      "website": "https://techsystemsinc.com",
       "email": "?",
       "business_type": "Dealer/Integrator",
-      "found": "Lever post created 2026-06-01 and still open on 2026-11-17: CCTV Project Technician, on-site in Miami and Fort Lauderdale, for an experienced, licensed commercial security and low-voltage technician; CCTV, networking, Cat 6, conduit and MDF work in commercial buildings; state physical security or life safety license a plus; lift certification; travel required. Pay field reads $25-$35 with the unit set to 'per week' (a data-entry error, likely hourly). Wachter also has an older (Nov 2025) Fire/Security Alarm Installation Technician post listing Miami among five Florida cities at $30-$50/hour.",
-      "why": "National commercial integrator (Kansas-based) staffing CCTV project work in South Florida; signals large multi-site camera rollouts, but not a small owner-run dealer.",
-      "next_step": "Low priority; note as national competitor/partner channel only.",
-      "source_url": "https://jobs.lever.co/wachter/d849e8bb-fd35-4999-890e-546787e25e16",
+      "found": "Employee-owned commercial integrator from Buford, GA, building a Miami team through 2026: Commercial Security Systems Account Manager - Miami (posted 2026-04-17, reports to VP of Sales); Project Manager - Commercial Security Systems, Miami (posted 2026-06-20, closed 2026-07-18; CSPM certification within a year, ACS/video programming); a bilingual Regional Manager for Miami/Fort Lauderdale (aggregator snapshot); an Installation Technician Apprentice in the Miami area (company social post, per search snippet); and now a Low Voltage Security Technician, Miami (Indeed via Tallo, posted about 2026-11-12, expires 2026-12-15): 2+ years commercial security install/service, 1 year programming access and video, factory certifications; systems listed are access control, video, intrusion, alarm, infant protection and intercom. No pay posted.",
+      "why": "Clear new-branch build-out in Miami by a commercial integrator with healthcare (infant protection) and enterprise clients. A branch hiring its first sales, PM and tech staff is open to new recurring-revenue lines.",
+      "next_step": "Approach the Miami regional manager/account manager as a reseller once identified; position IRIS as a differentiator for a new branch winning its first local accounts.",
+      "source_url": "https://www.indeed.com/viewjob?jk=a987396d79476b7c",
       "florida": true,
       "miami_dade": true,
       "roles": [
-        "CCTV Project Technician"
+        "Low Voltage Security Technician",
+        "Commercial Security Systems Account Manager",
+        "Project Manager",
+        "Regional Manager (bilingual)",
+        "Installation Technician Apprentice"
       ],
-      "date_posted": "2026-06-01 (Lever createdAt; still open 2026-11-17)"
-    },
-    {
-      "heading": "Integrated Fire & Security Solutions (Fortis Fire & Safety) - Coral Springs branch",
-      "poc": "",
-      "role": "",
-      "contact_source": "https://job-boards.greenhouse.io/fortisfiresafety/jobs/4431725009",
-      "municipality": "Coral Springs (Broward); role also listed for Miami",
-      "state": "FL",
-      "zip": "?",
-      "website": "https://www.fortisfire.com",
-      "email": "?",
-      "business_type": "Dealer/Integrator",
-      "found": "Two South Florida openings on Fortis Fire & Safety's Greenhouse board. (1) Account Executive (Commercial Security Systems), location 'Coral Springs, FL | Miami, FL', first published 2026-10-13: B2B outside sales of CCTV and video surveillance, access control, intercom and sound, paging, structured cabling and fire alarm, plus recurring monitoring, maintenance and inspection services; commission eligible, no pay figure; HubSpot CRM; at least 10 targeted sales calls a week including cold calls; sells to end users, general contractors and electrical contractors. (2) Senior Security & Alarm Technician, Coral Springs, first published 2026-05-17 and updated 2026-08-31: service area 'primarily the Miami-Dade region'; 4+ years low-voltage security (CCTV, access control, intrusion), access-control programming required, Florida FASA/BASA license or ability to get it. Fortis says it is 'acquiring new brands all the time'; Florida accounts for 39 of its 49 openings.",
-      "why": "A private-equity fire-and-security roll-up building out a commercial security sales seat aimed at Miami, with a recurring-services pitch. Commercial video plus fire alarm customers are a natural fit for IRIS, but this is a consolidator, not an owner-run dealer.",
-      "next_step": "Secondary target: approach the Coral Springs branch once the new AE is hired; watch for further Miami-Dade acquisitions by Fortis.",
-      "source_url": "https://job-boards.greenhouse.io/fortisfiresafety/jobs/4431725009",
-      "florida": true,
-      "miami_dade": true,
-      "roles": [
-        "Account Executive (Commercial Security Systems)",
-        "Senior Security & Alarm Technician"
-      ],
-      "date_posted": "2026-10-13 (AE); 2026-05-17 (tech, updated 2026-08-31)"
+      "date_posted": "~2026-11-12 (tech); 2026-04-17 (AM); 2026-06-20 (PM, closed)"
     },
     {
       "heading": "Delphi One Systems Corp",
@@ -135,6 +118,73 @@
       "date_posted": "~2026-10-09 (updated 2026-11-16)"
     },
     {
+      "heading": "Integrated Fire & Security Solutions (Fortis Fire & Safety) - Coral Springs branch",
+      "poc": "",
+      "role": "",
+      "contact_source": "https://job-boards.greenhouse.io/fortisfiresafety/jobs/4431725009",
+      "municipality": "Coral Springs (Broward); role also listed for Miami",
+      "state": "FL",
+      "zip": "?",
+      "website": "https://www.fortisfire.com",
+      "email": "?",
+      "business_type": "Dealer/Integrator",
+      "found": "Two South Florida openings on Fortis Fire & Safety's Greenhouse board. (1) Account Executive (Commercial Security Systems), location 'Coral Springs, FL | Miami, FL', first published 2026-10-13: B2B outside sales of CCTV and video surveillance, access control, intercom and sound, paging, structured cabling and fire alarm, plus recurring monitoring, maintenance and inspection services; commission eligible, no pay figure; HubSpot CRM; at least 10 targeted sales calls a week including cold calls; sells to end users, general contractors and electrical contractors. (2) Senior Security & Alarm Technician, Coral Springs, first published 2026-05-17 and updated 2026-08-31: service area 'primarily the Miami-Dade region'; 4+ years low-voltage security (CCTV, access control, intrusion), access-control programming required, Florida FASA/BASA license or ability to get it. Fortis says it is 'acquiring new brands all the time'; Florida accounts for 39 of its 49 openings.",
+      "why": "A private-equity fire-and-security roll-up building out a commercial security sales seat aimed at Miami, with a recurring-services pitch. Commercial video plus fire alarm customers are a natural fit for IRIS, but this is a consolidator, not an owner-run dealer.",
+      "next_step": "Secondary target: approach the Coral Springs branch once the new AE is hired; watch for further Miami-Dade acquisitions by Fortis.",
+      "source_url": "https://job-boards.greenhouse.io/fortisfiresafety/jobs/4431725009",
+      "florida": true,
+      "miami_dade": true,
+      "roles": [
+        "Account Executive (Commercial Security Systems)",
+        "Senior Security & Alarm Technician"
+      ],
+      "date_posted": "2026-10-13 (AE); 2026-05-17 (tech, updated 2026-08-31)"
+    },
+    {
+      "heading": "Square Point Systems Inc (SPS)",
+      "poc": "",
+      "role": "",
+      "contact_source": "https://tallo.com/talent/job/maintenance-and-repair/alarm-or-security-system-technician/fl/doral/wireless-installation-member-71b6faa5",
+      "municipality": "Doral",
+      "state": "FL",
+      "zip": "?",
+      "website": "?",
+      "email": "?",
+      "business_type": "Subcontractor",
+      "found": "Indeed post (mirrored on Tallo, posted 2026-09-17, updated 2026-11-15, expires 2026-12-15): Wireless Installation Member, Doral, 'based in the Miami area'. Installs in-building public-safety radio coverage (ERCES/emergency responder communication enhancement systems, BDAs, DAS, cellular), which the post calls 'critical for public safety'. Entry-level friendly; bilingual, NFPA/FCC familiarity, low-voltage and access control experience a plus. Salary TBD.",
+      "why": "Not a camera dealer, but it sells first-responder in-building systems to the same building owners and fire marshals IRIS targets; a natural referral or co-sell partner. Post open two months, so it is still growing crews.",
+      "next_step": "Partner/referral conversation rather than reseller; low priority.",
+      "source_url": "https://www.indeed.com/viewjob?jk=66b2bf49ca93dd2f",
+      "florida": true,
+      "miami_dade": true,
+      "roles": [
+        "Wireless (ERCES/BDA/DAS) Installer"
+      ],
+      "date_posted": "2026-09-17 (updated 2026-11-15)"
+    },
+    {
+      "heading": "Dade Electric Service, Inc.",
+      "poc": "",
+      "role": "",
+      "contact_source": "https://www.talent.com/view?id=610994444901942206",
+      "municipality": "Medley",
+      "state": "FL",
+      "zip": "?",
+      "website": "?",
+      "email": "?",
+      "business_type": "Subcontractor",
+      "found": "Low Voltage Technician, Medley, posted 2026-09-14 (Talent.com JobPosting data; still listed 2026-11-17): $25-$28/hour, 401(k), dental, vision. Installs and services fire alarm, security, access control and communication systems plus structured cabling for commercial, institutional (healthcare, universities) and municipal projects across South Florida; 3+ years low-voltage experience. The company describes itself as a full-service electrical contractor founded in 1980.",
+      "why": "Long-established Miami-Dade electrical contractor building out a low-voltage/security crew for institutional and municipal work. Not a classic alarm dealer, but it installs access control and security in public buildings and could carry IRIS on municipal jobs.",
+      "next_step": "Secondary: partner/subcontractor angle; watch whether it adds a security service or monitoring line.",
+      "source_url": "https://www.talent.com/view?id=610994444901942206",
+      "florida": true,
+      "miami_dade": true,
+      "roles": [
+        "Low Voltage Technician"
+      ],
+      "date_posted": "2026-09-14"
+    },
+    {
       "heading": "Austen Fire and Security (Austen Enterprises, Inc.)",
       "poc": "",
       "role": "",
@@ -158,52 +208,95 @@
       "date_posted": "~2026-10-16 and 2026-11-12"
     },
     {
-      "heading": "Tech Systems, Inc. (TSi) - Miami",
+      "heading": "Confidential security and life-safety contractor, Miami (via Gpac)",
       "poc": "",
       "role": "",
-      "contact_source": "https://tallo.com/talent/job/maintenance-and-repair/alarm-or-security-system-technician/fl/miami/low-voltage-security-technicia-3346fbd4",
+      "contact_source": "https://www.talent.com/view?id=643904043229970589",
       "municipality": "Miami",
-      "state": "FL",
-      "zip": "?",
-      "website": "https://techsystemsinc.com",
-      "email": "?",
-      "business_type": "Dealer/Integrator",
-      "found": "Employee-owned commercial integrator from Buford, GA, building a Miami team through 2026: Commercial Security Systems Account Manager - Miami (posted 2026-04-17, reports to VP of Sales); Project Manager - Commercial Security Systems, Miami (posted 2026-06-20, closed 2026-07-18; CSPM certification within a year, ACS/video programming); a bilingual Regional Manager for Miami/Fort Lauderdale (aggregator snapshot); an Installation Technician Apprentice in the Miami area (company social post, per search snippet); and now a Low Voltage Security Technician, Miami (Indeed via Tallo, posted about 2026-11-12, expires 2026-12-15): 2+ years commercial security install/service, 1 year programming access and video, factory certifications; systems listed are access control, video, intrusion, alarm, infant protection and intercom. No pay posted.",
-      "why": "Clear new-branch build-out in Miami by a commercial integrator with healthcare (infant protection) and enterprise clients. A branch hiring its first sales, PM and tech staff is open to new recurring-revenue lines.",
-      "next_step": "Approach the Miami regional manager/account manager as a reseller once identified; position IRIS as a differentiator for a new branch winning its first local accounts.",
-      "source_url": "https://www.indeed.com/viewjob?jk=a987396d79476b7c",
-      "florida": true,
-      "miami_dade": true,
-      "roles": [
-        "Low Voltage Security Technician",
-        "Commercial Security Systems Account Manager",
-        "Project Manager",
-        "Regional Manager (bilingual)",
-        "Installation Technician Apprentice"
-      ],
-      "date_posted": "~2026-11-12 (tech); 2026-04-17 (AM); 2026-06-20 (PM, closed)"
-    },
-    {
-      "heading": "Square Point Systems Inc (SPS)",
-      "poc": "",
-      "role": "",
-      "contact_source": "https://tallo.com/talent/job/maintenance-and-repair/alarm-or-security-system-technician/fl/doral/wireless-installation-member-71b6faa5",
-      "municipality": "Doral",
       "state": "FL",
       "zip": "?",
       "website": "?",
       "email": "?",
-      "business_type": "Subcontractor",
-      "found": "Indeed post (mirrored on Tallo, posted 2026-09-17, updated 2026-11-15, expires 2026-12-15): Wireless Installation Member, Doral, 'based in the Miami area'. Installs in-building public-safety radio coverage (ERCES/emergency responder communication enhancement systems, BDAs, DAS, cellular), which the post calls 'critical for public safety'. Entry-level friendly; bilingual, NFPA/FCC familiarity, low-voltage and access control experience a plus. Salary TBD.",
-      "why": "Not a camera dealer, but it sells first-responder in-building systems to the same building owners and fire marshals IRIS targets; a natural referral or co-sell partner. Post open two months, so it is still growing crews.",
-      "next_step": "Partner/referral conversation rather than reseller; low priority.",
-      "source_url": "https://www.indeed.com/viewjob?jk=66b2bf49ca93dd2f",
+      "business_type": "Dealer/Integrator",
+      "found": "Recruiter (Gpac search firm) post, Miami, posted 2026-10-31: Alarm Technician for 'a well-established and highly respected security and life safety systems contractor' with a 'growing team'; installs and services alarm and security systems in residential and commercial settings; 2+ years, NFPA/UL, NICET preferred. A second Gpac post (2026-10-19, now removed) sought a commercial Fire Alarm Technician (Notifier, Simplex, EST/Edwards, Siemens, Fire-Lite) for a contractor with office, healthcare, education, retail and multifamily backlog. Employer not named.",
+      "why": "Shows at least one established Miami alarm/life-safety contractor growing headcount through a recruiter; identity unknown.",
+      "next_step": "Watch only; cannot act until the employer is identified.",
+      "source_url": "https://www.talent.com/view?id=643904043229970589",
       "florida": true,
       "miami_dade": true,
       "roles": [
-        "Wireless (ERCES/BDA/DAS) Installer"
+        "Alarm Technician",
+        "Fire Alarm Technician"
       ],
-      "date_posted": "2026-09-17 (updated 2026-11-15)"
+      "date_posted": "2026-10-31"
+    },
+    {
+      "heading": "iTekz LLC",
+      "poc": "",
+      "role": "",
+      "contact_source": "https://itekz-llc.careerplug.com/jobs",
+      "municipality": "Miami",
+      "state": "FL",
+      "zip": "33137",
+      "website": "?",
+      "email": "?",
+      "business_type": "Other",
+      "found": "CareerPlug board (seen 2026-11-17): Field Service Low Voltage Technician, Miami 33137, posted 2026-07-07, $17-$25/hour (commercial low-voltage install/service, cabling, networking, site surveys and BOMs, after-hours work); also Junior Project Manager, Office Manager and Help Desk Technician in Miami, plus telecom technician roles in Jacksonville and Colorado. The company describes itself as a hospitality IT consulting and integration firm offering managed security services among other IT services.",
+      "why": "Hospitality-focused IT/low-voltage integrator expanding staff in Miami and other markets; hotels are multi-camera commercial buildings, but this is an IT shop rather than a security dealer.",
+      "next_step": "Watch for growth; low priority.",
+      "source_url": "https://itekz-llc.careerplug.com/jobs/3485660",
+      "florida": true,
+      "miami_dade": true,
+      "roles": [
+        "Field Service Low Voltage Technician",
+        "Junior Project Manager"
+      ],
+      "date_posted": "2026-07-07"
+    },
+    {
+      "heading": "Wiginton Fire Systems - Miami (Medley)",
+      "poc": "",
+      "role": "",
+      "contact_source": "https://tallo.com/talent/job/maintenance-and-repair/alarm-or-security-system-technician/fl/doral/fire-alarm-technician-01ba039f",
+      "municipality": "Medley",
+      "state": "FL",
+      "zip": "?",
+      "website": "https://www.wiginton.net",
+      "email": "?",
+      "business_type": "Subcontractor",
+      "found": "Fire Alarm Technician for the Miami (Medley) team, listed in Doral, posted about 2026-11-01, expires 2026-12-05: 2+ years commercial fire alarm service, inspection and commissioning, NICET preferred, on-call rotation; employee-owned (ESOP) firm founded 1967. Also an Associate Fire Sprinkler Designer in Medley (posted 2026-10-08, $18-$29/hour).",
+      "why": "Fire-protection contractor growing its Miami branch; fire alarm customers overlap with IRIS's first-responder use case, but no video or access control in the posts.",
+      "next_step": "Watch only; low priority.",
+      "source_url": "https://fl.jobs/jobs-near-me/fire-alarm-technician-miami-florida/3047141548-2",
+      "florida": true,
+      "miami_dade": true,
+      "roles": [
+        "Fire Alarm Technician",
+        "Associate Fire Sprinkler Designer"
+      ],
+      "date_posted": "~2026-11-01"
+    },
+    {
+      "heading": "Titan Security Group (Titan Electronics) - Miami",
+      "poc": "",
+      "role": "",
+      "contact_source": "https://job-boards.greenhouse.io/tsg/jobs/4353557009",
+      "municipality": "Miami",
+      "state": "FL",
+      "zip": "?",
+      "website": "https://www.titan-security.com",
+      "email": "work@titan-security.com",
+      "business_type": "Dealer/Integrator",
+      "found": "Titan Security Group's Greenhouse board (seen 2026-11-17) lists a 'Miami Field Service Technician' under its Titan Electronics division, among 110 openings (mostly guard and Chicago-area roles). Pay $30-$50/hour plus a discretionary year-end bonus. Duties: install and service enterprise access control, IP CCTV, DVR/NVR, burglar alarms, intercoms and telephone entry systems; elevator (DDE) integrations mentioned. The text was copied from a Chicago template (it mentions the Illinois PERC license and travel around Chicagoland), so the Miami territory is unclear. First published 2026-08-06 per Greenhouse's public board API, last updated 2026-11-13, so still open. Applications go to work@titan-security.com.",
+      "why": "Chicago-based guard and electronics company planting a technician in Miami suggests it is building a South Florida service footprint for enterprise clients. Mid-size, not owner-run locally.",
+      "next_step": "Watch for growth: low priority as a reseller until it has a Miami office and local manager.",
+      "source_url": "https://job-boards.greenhouse.io/tsg/jobs/4353557009",
+      "florida": true,
+      "miami_dade": true,
+      "roles": [
+        "Field Service Technician"
+      ],
+      "date_posted": "2026-08-06 (Greenhouse first_published; updated 2026-11-13)"
     },
     {
       "heading": "Kastle Systems - Miami",
@@ -272,49 +365,26 @@
       "date_posted": "~2026-10-06"
     },
     {
-      "heading": "Dade Electric Service, Inc.",
+      "heading": "Wachter, Inc. (Nationwide Service & Projects)",
       "poc": "",
       "role": "",
-      "contact_source": "https://www.talent.com/view?id=610994444901942206",
-      "municipality": "Medley",
+      "contact_source": "https://jobs.lever.co/wachter/d849e8bb-fd35-4999-890e-546787e25e16",
+      "municipality": "Miami / Fort Lauderdale",
       "state": "FL",
       "zip": "?",
-      "website": "?",
-      "email": "?",
-      "business_type": "Subcontractor",
-      "found": "Low Voltage Technician, Medley, posted 2026-09-14 (Talent.com JobPosting data; still listed 2026-11-17): $25-$28/hour, 401(k), dental, vision. Installs and services fire alarm, security, access control and communication systems plus structured cabling for commercial, institutional (healthcare, universities) and municipal projects across South Florida; 3+ years low-voltage experience. The company describes itself as a full-service electrical contractor founded in 1980.",
-      "why": "Long-established Miami-Dade electrical contractor building out a low-voltage/security crew for institutional and municipal work. Not a classic alarm dealer, but it installs access control and security in public buildings and could carry IRIS on municipal jobs.",
-      "next_step": "Secondary: partner/subcontractor angle; watch whether it adds a security service or monitoring line.",
-      "source_url": "https://www.talent.com/view?id=610994444901942206",
-      "florida": true,
-      "miami_dade": true,
-      "roles": [
-        "Low Voltage Technician"
-      ],
-      "date_posted": "2026-09-14"
-    },
-    {
-      "heading": "Confidential security and life-safety contractor, Miami (via Gpac)",
-      "poc": "",
-      "role": "",
-      "contact_source": "https://www.talent.com/view?id=643904043229970589",
-      "municipality": "Miami",
-      "state": "FL",
-      "zip": "?",
-      "website": "?",
+      "website": "https://www.wachter.com",
       "email": "?",
       "business_type": "Dealer/Integrator",
-      "found": "Recruiter (Gpac search firm) post, Miami, posted 2026-10-31: Alarm Technician for 'a well-established and highly respected security and life safety systems contractor' with a 'growing team'; installs and services alarm and security systems in residential and commercial settings; 2+ years, NFPA/UL, NICET preferred. A second Gpac post (2026-10-19, now removed) sought a commercial Fire Alarm Technician (Notifier, Simplex, EST/Edwards, Siemens, Fire-Lite) for a contractor with office, healthcare, education, retail and multifamily backlog. Employer not named.",
-      "why": "Shows at least one established Miami alarm/life-safety contractor growing headcount through a recruiter; identity unknown.",
-      "next_step": "Watch only; cannot act until the employer is identified.",
-      "source_url": "https://www.talent.com/view?id=643904043229970589",
+      "found": "Lever post created 2026-06-01 and still open on 2026-11-17: CCTV Project Technician, on-site in Miami and Fort Lauderdale, for an experienced, licensed commercial security and low-voltage technician; CCTV, networking, Cat 6, conduit and MDF work in commercial buildings; state physical security or life safety license a plus; lift certification; travel required. Pay field reads $25-$35 with the unit set to 'per week' (a data-entry error, likely hourly). Wachter also has an older (Nov 2025) Fire/Security Alarm Installation Technician post listing Miami among five Florida cities at $30-$50/hour.",
+      "why": "National commercial integrator staffing CCTV project work in South Florida; signals large multi-site camera rollouts, but not a small owner-run dealer.",
+      "next_step": "Low priority; note as national competitor/partner channel only.",
+      "source_url": "https://jobs.lever.co/wachter/d849e8bb-fd35-4999-890e-546787e25e16",
       "florida": true,
       "miami_dade": true,
       "roles": [
-        "Alarm Technician",
-        "Fire Alarm Technician"
+        "CCTV Project Technician"
       ],
-      "date_posted": "2026-10-31"
+      "date_posted": "2026-06-01 (Lever createdAt; still open 2026-11-17)"
     },
     {
       "heading": "ADT - Miami",
@@ -427,76 +497,6 @@
       "date_posted": "2026-10-17"
     },
     {
-      "heading": "Aressco Services, Inc.",
-      "poc": "Don Richter",
-      "role": "Founder (incorporated Aressco, Inc. in 1979, per the company's About page)",
-      "contact_source": "https://aressco.com/about.php",
-      "municipality": "Unincorporated Miami-Dade (Kendall/South Dade)",
-      "state": "FL",
-      "zip": "33177",
-      "website": "https://aressco.com",
-      "email": "?",
-      "business_type": "Dealer/Integrator",
-      "found": "Company careers page (seen 2026-11-17, undated) says it is 'looking for like-minded, dynamic individuals to join our rapidly expanding team' and lists current vacancies: Installation Technicians (5+ years, FASA or BASA), Service Technicians (5+ years, FASA or BASA) and Technician Apprentice (basic electronics, willing to learn). Applications by email or fax. Office: 16115 SW 117th Ave, Suite 26A, Miami 33177. The About page says Aressco runs its own UL-listed central monitoring station in South Miami-Dade ('one of the last truly local central stations in South Florida'), serves homes and businesses, and descends from Aressco, Inc. of Kendall (1979) and Assured Security Company of Homestead (1974). Product lines on the site: Alarm.com, Honeywell Total Connect, Qolsys, DMP, Uniview video.",
-      "why": "Owner-run, 45-year South Dade dealer with its own monitoring center and Homestead roots (a preferred zone), hiring install and service techs plus an apprentice: it is growing and already earns recurring monitoring revenue that IRIS can attach to. Video (Uniview) and commercial accounts are part of the mix.",
-      "next_step": "Approach as reseller (top tier): pitch to the owner as a monitored-video add-on for its commercial and Homestead/South Dade accounts; its central station is a natural place to bundle IRIS.",
-      "source_url": "https://aressco.com/careers.php",
-      "florida": true,
-      "miami_dade": true,
-      "roles": [
-        "Installation Technician",
-        "Service Technician",
-        "Technician Apprentice"
-      ],
-      "date_posted": "seen 2026-11-17 (undated careers page)"
-    },
-    {
-      "heading": "iTekz LLC",
-      "poc": "",
-      "role": "",
-      "contact_source": "https://itekz-llc.careerplug.com/jobs",
-      "municipality": "Miami",
-      "state": "FL",
-      "zip": "33137",
-      "website": "?",
-      "email": "?",
-      "business_type": "Other",
-      "found": "CareerPlug board (seen 2026-11-17): Field Service Low Voltage Technician, Miami 33137, posted 2026-07-07, $17-$25/hour (commercial low-voltage install/service, cabling, networking, site surveys and BOMs, after-hours work); also Junior Project Manager, Office Manager and Help Desk Technician in Miami, plus telecom technician roles in Jacksonville and Colorado. The company describes itself as a hospitality IT consulting and integration firm offering managed security services among other IT services.",
-      "why": "Hospitality-focused IT/low-voltage integrator expanding staff in Miami and other markets; hotels are multi-camera commercial buildings, but this is an IT shop rather than a security dealer.",
-      "next_step": "Watch for growth; low priority.",
-      "source_url": "https://itekz-llc.careerplug.com/jobs/3485660",
-      "florida": true,
-      "miami_dade": true,
-      "roles": [
-        "Field Service Low Voltage Technician",
-        "Junior Project Manager"
-      ],
-      "date_posted": "2026-07-07"
-    },
-    {
-      "heading": "Wiginton Fire Systems - Miami (Medley)",
-      "poc": "",
-      "role": "",
-      "contact_source": "https://tallo.com/talent/job/maintenance-and-repair/alarm-or-security-system-technician/fl/doral/fire-alarm-technician-01ba039f",
-      "municipality": "Medley",
-      "state": "FL",
-      "zip": "?",
-      "website": "https://www.wiginton.net",
-      "email": "?",
-      "business_type": "Subcontractor",
-      "found": "Fire Alarm Technician for the Miami (Medley) team, listed in Doral, posted about 2026-11-01, expires 2026-12-05: 2+ years commercial fire alarm service, inspection and commissioning, NICET preferred, on-call rotation; employee-owned (ESOP) firm founded 1967. Also an Associate Fire Sprinkler Designer in Medley (posted 2026-10-08, $18-$29/hour).",
-      "why": "Fire-protection contractor growing its Miami branch; fire alarm customers overlap with IRIS's first-responder use case, but no video or access control in the posts.",
-      "next_step": "Watch only; low priority.",
-      "source_url": "https://fl.jobs/jobs-near-me/fire-alarm-technician-miami-florida/3047141548-2",
-      "florida": true,
-      "miami_dade": true,
-      "roles": [
-        "Fire Alarm Technician",
-        "Associate Fire Sprinkler Designer"
-      ],
-      "date_posted": "~2026-11-01"
-    },
-    {
       "heading": "AT&I Systems",
       "poc": "",
       "role": "",
@@ -545,6 +545,35 @@
       "date_posted": "seen 2026-11-17 (date not shown)"
     }
   ],
-  "top_picks": [],
-  "notes": ""
+  "top_picks": [
+    [
+      "Aressco Services, Inc.",
+      "Owner-run 45-year South Dade dealer (Kendall, Homestead roots) with its own UL central station; careers page lists install, service and apprentice openings for a 'rapidly expanding team'."
+    ],
+    [
+      "AT&I Systems",
+      "Commercial-only Verkada/Avigilon integrator selling managed security; five open roles incl. Enterprise AE expanding into government and institutional accounts and a new Technical Solutions Engineer (Oct 2026). HQ Cooper City, serves Miami."
+    ],
+    [
+      "Security 101 - Miami",
+      "Hialeah branch hiring a Miami Account Executive paid on RMR contracts ($130k OTE); sells to schools, local government and healthcare; already sells hosted and proactively monitored video."
+    ],
+    [
+      "Tech Systems, Inc. (TSi) - Miami",
+      "Employee-owned GA integrator building a Miami branch in 2026 (account manager, project manager, regional manager, apprentice, and a new low-voltage security tech in Nov 2026)."
+    ],
+    [
+      "Delphi One Systems Corp",
+      "Small Miami (33126) access-control and video integrator since 2001 with its own dispatch and after-hours service; hiring a service tech/installer (Nov 2026)."
+    ],
+    [
+      "Advance Security Group",
+      "Small Hialeah alarm company whose techs do fire, burglary, access control and CCTV; tech post open since Oct and refreshed 2026-11-16."
+    ],
+    [
+      "Integrated Fire & Security Solutions (Fortis Fire & Safety) - Coral Springs branch",
+      "New Account Executive (Commercial Security Systems) for Coral Springs/Miami posted 2026-10-13, selling video, access control and recurring services; senior tech covers mainly Miami-Dade."
+    ]
+  ],
+  "notes": "METHOD (2026-11-17). Sources used: Tallo city pages for alarm/security technicians and cable installers (Miami, Hialeah, Doral, Medley, Miami Gardens; these mirror Indeed posts with posted/expiry dates and Indeed job keys, which are cited as source_url); Talent.com public search pages (13 queries x 6 Miami-Dade locations, 433 unique cards, robots-allowed, 4 s between requests; mostly noise); Greenhouse public board API (first_published dates for Fortis and Titan), Lever postings API (Wachter createdAt), CareerPlug pages with JobPosting data (AT&I, iTekz), Kastle careers API, company career pages for 25 Miami-Dade firms from the IAF/manufacturer lists (robots checked), plus web search snippets. Indeed, LinkedIn, ZipRecruiter and Glassdoor were not fetched directly (see below). Phone numbers were scrubbed from all raw scratch files.\n\nCOUNTS: 24 entries, 22 flagged Miami-Dade (AT&I = Cooper City/Broward and the Jobot confidential integrator = Fort Lauderdale are Florida but not Miami-Dade). Small/mid local firms: Aressco, Delphi One, Advance Security Group, Austen Fire and Security, Square Point Systems, Dade Electric Service, iTekz, Security 101 Miami (franchise-style branch), TSi Miami (new branch), AT&I. National/large firms noted briefly: Kastle, Pavion, Securitas Technology, Wachter, Titan Security Group, Fortis (IFSS), ADT, Brinks Home, Johnson Controls, Parsons, KBR, Wiginton. Roles: sales (Security 101 AE, Fortis AE, AT&I Enterprise AE/SDR, TSi AM, ADT consultant, JCI trainee, Jobot AE) and technicians/PMs (rest).\n\nINTEL WORTH NOTING: Omni Data LLC dba Paradyme Secure (Miami-Dade IAF member) now describes itself on its Greenhouse board as 'Operating as part of the RapidSOS family of companies' (no current openings). RapidSOS works in the 911 data space, so this integrator may be a competitor channel rather than an IRIS reseller (https://job-boards.greenhouse.io/omni-data).\n\nCHECKED, NOT HIRING NOW: Horizon Electronics/Horizon Security (Miami Lakes) careers page says 'no open positions at this time' (resumes to jobs@horizonsecurity.com; https://horizonsecurity.com/jobs.html). Industrial Communications (Miami office) lists only a Marshfield, MA opening. IAF job board: 'No job listings are available at this time.' Alarm Brokers of Florida (Doral) careers page is a general resume form; its Low Voltage and Security Technician post ($28-$36/hour, DSC/Qolsys/Bosch/DMP, Openpath/Brivo/ButterflyMX) ran 2026-04-22 to 2026-05-19 and has expired. Acoustic Architects careers page is an evergreen form ('well connected account executives are of high interest'); luxury residential/marine automation, not a fit. No careers page found for Safesys, WISE BT, Paradyme, ADB/Baltic, InaCOMP, Mobile Me IT, PC Solutions, York Security, CNP, Castaway (cts-one), Florida Safeguard, NXT GEN, Tech Security Electronics, Omega Security.\n\nEXPIRED OR UNVERIFIED (older than 90 days or status unknown; not entered): Inner Vision Fire & Security (Miami low-voltage/access tech, $20-$29/hour, expired 2026-06-19); DSP Video Systems (Doral, assistant CCTV installer for HOAs, 2026-04-11 to 04-26); Edgeworth Security (Director of Sales, Miami, remote guard/integration, 2026-05-30 to 06-28); Convergint Miami Account Executive (posted 2026-05-14, available before 07-14) and Fire Alarm PM; Pye-Barker Doral fire alarm installation tech (2026-05-30); Allied Universal Commercial Account Executive Miami (dated 2026-04-30); Envera Systems field service tech Miami (first indexed about 2026-01-24); Cennox electronic security tech Miami (2025-11-26) and South Florida installer posts; Hotwire Communications security technician Miami (career.com 2026-03-04 and 2026-05-25); Total Network Consulting (Hialeah low-voltage tech, 2026-03-26 and 2026-04-05); Layer 8 Solutions (Hialeah low-voltage/access/CCTV tech, aggregator copy gone); Security Force X (staffing firm building 200-250 install techs for South Florida integrators, Tallo copy gone); Gateline AI (HOA/condo gate, RFID and CCTV tech, from $25/hour, Tallo copy gone); Secured Technologies Inc (North Miami, access control service tech from $45k, date unknown); Omega Security of South Florida (Miami Lakes, Security Alarm Technician about $62,400, Honeywell/CCTV, Tallo copy gone); Access Control Technologies/Janus (Miami gate security tech, job 2026-6308); Matrix Systems/SGI (airport access control field tech Miami/Fort Lauderdale); Coranet (Lead Security Technician South Florida, Fort Lauderdale, $35-$40/hour, undated); Firmament Solutions (IT services incl. CCTV/access/fire alarm, contract-to-hire techs, Talent.com '30+ days'); Lighthouse Integrated Solutions (1099 low-voltage field tech, Miami Beach); Tech Systems Inc bilingual Regional Manager (aggregator only); Next Security Corp (Doral distributor; its sales-support opening is in Sao Paulo).\n\nNEEDS MANUAL WORK: (1) Indeed: https://www.indeed.com/jobs?q=security+technician&l=Miami%2C+FL returns HTTP 401 'Authenticating...' bot check that redirects to login; robots.txt also disallows /viewjob. Not bypassed; Indeed posts were reached only through Tallo mirrors. Suggest a person run Indeed searches for 'CCTV', 'access control', 'alarm technician', 'security sales' in Miami/Hialeah/Doral/Homestead, last 30 days. (2) LinkedIn jobs: robots.txt 'User-agent: * Disallow: /'; not fetched. (3) ZipRecruiter: robots.txt disallows all generic agents; not fetched. (4) Glassdoor: HTTP 403 Cloudflare challenge on https://www.glassdoor.com/Job/miami-security-technician-jobs-SRCH_IL.0,5_IC1154170_KO6,25.htm. (5) SimplyHired: robots.txt itself returns 403. (6) WISE Building Technologies (Doral, IAF member): a 'Security and Fire Alarm Technician, Doral, $50k-$75k' post exists on EnergyHire (https://app.energyhire.com/job-board/security-and-fire-alarm-technician-doral-fl-4528e9e3-589f-40c1-858b-581cae4a75ad) but the host was unreachable (proxy connect failure, retried) and the Tallo copy returns 410; wisebt.com has no careers page. Worth a manual check because WISE fits the profile. (7) SIA and ESA career centers (careers.securityindustry.org, careers.esaweb.org): proxy 502 connect failure. (8) fl.jobs (Employ Florida feed) disallows all crawlers in robots.txt. (9) apsmiami.com (self-signed certificate), maximumsecuritymiami.com, fisectech.com and cs2security.com (connection reset), chactech.com (proxy 502), udtonline.com (403): career pages not checked. (10) The shared web-search budget for this session ran out near the end, so Everon, Allied Universal and remaining local firm names were not searched; a follow-up pass could cover them."
 }

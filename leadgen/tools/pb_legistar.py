@@ -3,14 +3,18 @@ Usage: python3 pb_legistar.py <client> <since YYYY-MM-DD>
 Writes raw/permits/bids/legistar_<client>.json. One request every 3.5 s."""
 import json, sys, time, urllib.parse, requests
 
-KW = ['camera', 'cctv', 'video surveillance', 'surveillance', 'access control', 'security system', 'alarm', 'real time crime',
-      'real-time crime', 'license plate', 'security integrat', 'intrusion', 'card access', 'video management', 'genetec', 'milestone',
-      'avigilon', 'axis', 'verkada', 'fusus', 'flock', 'security services', 'low voltage', 'bi-directional', 'radio enhancement']
+KW = ['camera', 'cctv', 'surveillance', 'access control', 'security system', 'alarm', 'real time crime',
+      'license plate', 'security integrat', 'card access', 'video management', 'genetec', 'milestone',
+      'avigilon', 'verkada', 'fusus', 'flock', 'low voltage', 'radio enhancement']
 
 def main(client, since):
     s = requests.Session(); s.headers['User-Agent'] = 'Mozilla/5.0 (research script)'
     found = {}
-    for kw in KW:
+    variants = []
+    for k in KW:
+        for v in (k, k.upper(), k.title()):
+            if v not in variants: variants.append(v)
+    for kw in variants:
         f = f"MatterIntroDate ge datetime'{since}' and substringof('{kw}',MatterTitle)"
         url = f'https://webapi.legistar.com/v1/{client}/matters?$filter=' + urllib.parse.quote(f) + '&$top=1000'
         time.sleep(3.5)
