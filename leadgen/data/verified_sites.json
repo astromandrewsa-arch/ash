@@ -949,5 +949,2259 @@
    "https://pcsusa.net/pcs-contact-us/",
    "https://pcsusa.net/pcs-industries/"
   ]
+ },
+ "Support305": {
+  "owner_name": "Nitesh Mistry",
+  "owner_role": "Founder & CEO",
+  "owner_source": "https://support305.pages.dev/about",
+  "other_named": [
+   {
+    "name": "Bryant Vasquez",
+    "role": "CTO",
+    "url": "https://support305.pages.dev/about"
+   },
+   {
+    "name": "Clair Strycharz",
+    "role": "Head of Business Development",
+    "url": "https://support305.pages.dev/about"
+   },
+   {
+    "name": "Gerson Carillo",
+    "role": "Head of AV Department",
+    "url": "https://support305.pages.dev/about"
+   }
+  ],
+  "email": "info@support305.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "restaurants",
+   "hotels/hospitality",
+   "offices/conference rooms",
+   "law firms",
+   "medical practices",
+   "retail",
+   "schools",
+   "homes"
+  ],
+  "brands": [
+   "Axis",
+   "Avigilon",
+   "Hanwha Vision",
+   "Hikvision",
+   "Cisco Meraki",
+   "Crestron",
+   "Control4",
+   "Savant",
+   "Lutron",
+   "Snap One",
+   "Sony",
+   "Panasonic"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33133",
+  "service_area": "Miami-Dade, Broward and Palm Beach (long city list); expanding beyond South Florida under the new brand DIST",
+  "notes": "Founded 2002 as a managed-IT company, now AV integration + CCTV/access control + managed IT. Homepage: 'Support305 is Expanding as DIST' (new brand for new markets). Real domain support305.com also resolves; input URL is the pages.dev mirror.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://support305.pages.dev/",
+   "https://support305.pages.dev/services/video",
+   "https://support305.pages.dev/services/surveillance",
+   "https://support305.pages.dev/services/cloud-solutions",
+   "https://support305.pages.dev/services/access-control",
+   "https://support305.pages.dev/project/toku",
+   "https://support305.pages.dev/services/audio-visual-installation",
+   "https://support305.pages.dev/services/conference-room",
+   "https://support305.pages.dev/services/home-automation",
+   "https://support305.pages.dev/services/low-voltage-cabling",
+   "https://support305.pages.dev/services/managed-it",
+   "https://support305.pages.dev/services/microsoft-365",
+   "https://support305.pages.dev/about",
+   "https://support305.pages.dev/contact"
+  ]
+ },
+ "AT&I Systems": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "sales@atisecuritysystems.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "commercial real estate",
+   "condos/waterfront communities",
+   "healthcare",
+   "financial/bank branches",
+   "schools",
+   "retail/grocery",
+   "warehouses/distribution",
+   "government/public safety"
+  ],
+  "brands": [
+   "Verkada",
+   "Avigilon",
+   "Avigilon Alta"
+  ],
+  "locations": 6,
+  "location_cities": [
+   "Cooper City FL (HQ)",
+   "New York NY",
+   "Atlanta GA",
+   "Chicago/Evanston IL",
+   "Dallas TX",
+   "Los Angeles CA"
+  ],
+  "hq_city": "Cooper City",
+  "hq_zip": "33330",
+  "service_area": "South Florida roots; national accounts across the US",
+  "notes": "HIGHLY RELEVANT: About page says AT&I is 'one of only 11 companies selected' for the Broward Sheriff's Office Real-Time Crime Center program, connecting client cameras to BSO's RTCC. Family-owned since 2005, now positioning as enterprise/national. HQ is in Broward (Cooper City), not Miami-Dade. No people named.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.atisecuritysystems.com/",
+   "https://www.atisecuritysystems.com/about/",
+   "https://www.atisecuritysystems.com/video-security/",
+   "https://www.atisecuritysystems.com/visitor-management/",
+   "https://www.atisecuritysystems.com/contact-us/",
+   "https://www.atisecuritysystems.com/ati-national/",
+   "https://www.atisecuritysystems.com/commercial-real-estate/",
+   "https://www.atisecuritysystems.com/infrastructure-as-a-service/",
+   "https://www.atisecuritysystems.com/access-control/"
+  ]
+ },
+ "Miami Security Systems": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "sales@miamisecuritysystems.net",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "homes",
+   "businesses",
+   "hotels",
+   "condominiums",
+   "restaurants",
+   "medical monitoring"
+  ],
+  "brands": [
+   "Hikvision",
+   "Digital Watchdog",
+   "Honeywell",
+   "Sony",
+   "Arlo",
+   "Alarm.com"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "",
+  "service_area": "Miami-Dade, Broward and Palm Beach",
+  "notes": "Alarm, camera, access, fire alarm and medical-alert installer; says 35+ years in the industry and state licensed. No street address or people on the site (only 'Miami-Dade, Florida'). Other published emails: info@, tech@, accounting@.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.miamisecuritysystems.net/",
+   "https://www.miamisecuritysystems.net/fire-alarm-service-hialeah/",
+   "https://www.miamisecuritysystems.net/access-control-services-miami-fl/",
+   "https://www.miamisecuritysystems.net/medical-monitoring-services-miami-fl/",
+   "https://www.miamisecuritysystems.net/panic-buttons-devices-services-miami/",
+   "https://www.miamisecuritysystems.net/cctv-protects-business-miami-fl/",
+   "https://www.miamisecuritysystems.net/security-camera-installation-miami-florida/",
+   "https://www.miamisecuritysystems.net/security-cameras-miami-fl/",
+   "https://www.miamisecuritysystems.net/about-us/",
+   "https://www.miamisecuritysystems.net/security-camera-installer-opaloca/",
+   "https://www.miamisecuritysystems.net/contact-us/",
+   "https://www.miamisecuritysystems.net/always-hire-licensed-low-voltage-company/"
+  ]
+ },
+ "Certified Network Professionals, Inc. (Miami, FL)": {
+  "owner_name": "Orlando G. Suero",
+  "owner_role": "President / Network & Systems Engineer",
+  "owner_source": "https://www.cnetpro.net/about-us/",
+  "other_named": [
+   {
+    "name": "Mike Gonzalez",
+    "role": "Business Development Manager",
+    "url": "https://www.cnetpro.net/about-us/"
+   },
+   {
+    "name": "Hector Robles",
+    "role": "System Integration and Software Development Manager",
+    "url": "https://www.cnetpro.net/about-us/"
+   },
+   {
+    "name": "Sergio Faundez",
+    "role": "System Implementation and Operations Manager",
+    "url": "https://www.cnetpro.net/about-us/"
+   }
+  ],
+  "email": "info@cnetpro.net",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "airports",
+   "seaports",
+   "government"
+  ],
+  "brands": [
+   "Milestone",
+   "Qognify/NiceVision",
+   "Axis",
+   "Genetec",
+   "Cisco",
+   "Juniper",
+   "Extreme Networks",
+   "Pivot3"
+  ],
+  "locations": "?",
+  "location_cities": [],
+  "hq_city": "",
+  "hq_zip": "",
+  "service_area": "America's airports and seaports (MIA client)",
+  "notes": "Five-engineer network/security integrator focused on airports and seaports (migrated MIA's Qognify video system). Miami-Dade and Broward SBE/DBE certified. No street address printed. Niche, not a building-security dealer.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.cnetpro.net/",
+   "https://www.cnetpro.net/about-us/",
+   "https://www.cnetpro.net/services/",
+   "https://www.cnetpro.net/contact-us/",
+   "https://www.cnetpro.net/solutions/"
+  ]
+ },
+ "Convergint - Miami": {
+  "owner_name": "Ann Fandozzi",
+  "owner_role": "Chief Executive Officer",
+  "owner_source": "https://www.convergint.com/who-we-are/executive-leadership/",
+  "other_named": [
+   {
+    "name": "Sean Flint",
+    "role": "President",
+    "url": "https://www.convergint.com/who-we-are/executive-leadership/"
+   }
+  ],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "utilities",
+   "healthcare/hospitals",
+   "government/public sector",
+   "manufacturing",
+   "retail",
+   "education",
+   "data centers"
+  ],
+  "brands": [],
+  "locations": "?",
+  "location_cities": [
+   "Miami (1876 NW 7th Street)"
+  ],
+  "hq_city": "Miami (local Technology Center)",
+  "hq_zip": "33125",
+  "service_area": "Global integrator; Miami Technology Center serves South Florida",
+  "notes": "Large global integrator (founded 2001), not owner-run. Miami location CTC470 is at 1876 NW 7th Street, Miami 33125 - the SAME address as Integrated Security Systems (ISS), whose site names Convergint as its parent: treat ISS and Convergint Miami as one account. No local manager or email on the location page.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.convergint.com/where-we-operate/locations/fl/miami/ctc470/",
+   "https://www.convergint.com/services/project-program-management/",
+   "https://www.convergint.com/who-we-are/executive-leadership/",
+   "https://www.convergint.com/who-we-are/history/",
+   "https://www.convergint.com/es/contacto/",
+   "https://www.convergint.com/ar/contacto/",
+   "https://www.convergint.com/cl/contacto/",
+   "https://www.convergint.com/co/contacto/",
+   "https://www.convergint.com/cr/contacto/",
+   "https://www.convergint.com/mx/contacto/",
+   "https://www.convergint.com/py/contacto/",
+   "https://www.convergint.com/pe/contacto/"
+  ]
+ },
+ "Allied Universal Technology Services (Miami, FL)": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "commercial real estate",
+   "events",
+   "corporate",
+   "government",
+   "healthcare",
+   "education"
+  ],
+  "brands": [
+   "HELIAUS (own platform)"
+  ],
+  "locations": "?",
+  "location_cities": [
+   "Miami (7205 Corporate Center Drive, Bldg 5, 33126)",
+   "Miami (6161 Blue Lagoon Drive, Suite 200, 33126)"
+  ],
+  "hq_city": "",
+  "hq_zip": "",
+  "service_area": "Global (more than 100 countries)",
+  "notes": "Global security-services giant (~770,000 staff, guards plus integrated technology services); not a small dealer. Offices page lists two Miami offices, both ZIP 33126. No executive names on the pages checked (home, about-us, offices, technology service pages).",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.aus.com/",
+   "https://www.aus.com/security-services/integrated-technology-services/video-surveillance-combined-reliable-monitoring-solutions",
+   "https://www.aus.com/security-services/event-services/mobile-security-video-surveillance-services",
+   "https://www.aus.com/professional-services/professional-workforce-and-staffing-solutions",
+   "https://www.aus.com/professional-services/cash-management-solutions-and-technology",
+   "https://www.aus.com/security-services/event-services/event-red-team-security-audits-and-quality-control",
+   "https://www.aus.com/facility-solutions/commercial-janitorial-services",
+   "https://www.aus.com/security-services/security-professionals/visitor-management-and-concierge",
+   "https://www.aus.com/security-services/integrated-technology-services/identity-and-visitor-management-systems",
+   "https://www.aus.com/security-services/integrated-technology-services/fiber-optics-and-network-management",
+   "https://www.aus.com/security-services/event-services/crowd-management-services",
+   "https://www.aus.com/security-services/event-services/event-security-staffing",
+   "https://www.aus.com/about-us",
+   "https://www.aus.com/offices"
+  ]
+ },
+ "Florida Safeguard Inc.": {
+  "owner_name": "Jim Wilhelm",
+  "owner_role": "President and Founder",
+  "owner_source": "https://floridasafeguard.com/contact.html",
+  "other_named": [
+   {
+    "name": "Ben Wilhelm",
+    "role": "Vice President",
+    "url": "https://floridasafeguard.com/contact.html"
+   }
+  ],
+  "email": "office@floridasafeguard.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "residential",
+   "commercial"
+  ],
+  "brands": [
+   "Honeywell",
+   "Hikvision",
+   "Fire-Lite",
+   "DoorBird",
+   "Sonos",
+   "Lutron",
+   "Niles",
+   "Luxul"
+  ],
+  "locations": 1,
+  "location_cities": [],
+  "hq_city": "",
+  "hq_zip": "",
+  "service_area": "South Florida",
+  "notes": "Family-owned low-voltage/security provider, 30+ years; burglar alarms, Hikvision camera systems, Fire-Lite fire alarms, access control, AV (product names appear as image captions on the homepage). Contact page also lists jim@ and ben@ addresses. No street address printed. Site needs a real browser (plain requests get an empty 202).",
+  "site_status": "ok",
+  "checked_urls": [
+   "http://www.floridasafeguard.com/",
+   "https://floridasafeguard.com/index.html",
+   "https://floridasafeguard.com/contact.html",
+   "https://floridasafeguard.com/information.html",
+   "https://floridasafeguard.com/associations.html"
+  ]
+ },
+ "Cameras Solutions II Inc.": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "businesses",
+   "residences"
+  ],
+  "brands": [],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33125",
+  "service_area": "",
+  "notes": "Trades as CS2 Security (cs2security.com). One-page GoDaddy site: security assessments, analog and IP cameras, intercom/telephone entry, gate operators, automatic door operators, intrusion. Only a first name plus initial ('Guillermo C.', Network Administrator) appears, so no full name recorded. Address 400 NW 24 Ave, Miami 33125. No email printed (form only).",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://cs2security.com/",
+   "http://www.cs2security.com/"
+  ]
+ },
+ "Netsync Network Solutions, Inc. (Miami Beach, FL)": {
+  "owner_name": "Diane Gonzales",
+  "owner_role": "President (founded Netsync Network Solutions in 2002)",
+  "owner_source": "https://www.netsync.com/company/executive-team/",
+  "other_named": [
+   {
+    "name": "Karl Houston",
+    "role": "Senior VP of Strategic Services",
+    "url": "https://www.netsync.com/company/executive-team/"
+   }
+  ],
+  "email": "sales@netsync.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": false,
+  "verticals": [
+   "government/public sector (SLED)",
+   "K-12 and higher education",
+   "healthcare",
+   "financial",
+   "retail",
+   "manufacturing",
+   "data centers"
+  ],
+  "brands": [
+   "Cisco (Master Security Partner)",
+   "Meraki",
+   "Webex",
+   "Singlewire",
+   "Fortinet",
+   "HP",
+   "Intel",
+   "AWS",
+   "Microsoft"
+  ],
+  "locations": 10,
+  "location_cities": [
+   "Houston TX (HQ)",
+   "Carrollton/Dallas TX",
+   "San Antonio TX",
+   "Tampa FL",
+   "Austin TX",
+   "McAllen TX",
+   "Long Beach CA",
+   "Riverside CA",
+   "Alpharetta GA",
+   "Denver CO"
+  ],
+  "hq_city": "Houston, TX",
+  "hq_zip": "77027",
+  "service_area": "US (nine-ten US offices) plus Middle East/Africa offices",
+  "notes": "Large Cisco IT reseller/MSP, not a camera dealer. The locations page lists NO Miami or Miami Beach office (only Tampa in Florida), so the Miami Beach tag in our data is not supported by the site.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.netsync.com/",
+   "https://www.netsync.com/services/customer-experience/business-solutions-consulting/",
+   "https://www.netsync.com/services/customer-experience/lifecycle/",
+   "https://www.netsync.com/services/project-management/",
+   "https://www.netsync.com/services/staging-and-integration/project-management/",
+   "https://www.netsync.com/solutions/security/red-teaming/",
+   "https://www.netsync.com/solutions/cloud/amazon-web-services/",
+   "https://www.netsync.com/solutions/cloud/microsoft-services/",
+   "https://www.netsync.com/solutions/cisco-powered-services/",
+   "https://www.netsync.com/solutions/cisco-powered-services/webex-ucaas-solutions/",
+   "https://www.netsync.com/solutions/cisco-powered-services/ftd-as-a-service/",
+   "https://www.netsync.com/solutions/cisco-powered-services/managed-meraki-solutions/",
+   "https://www.netsync.com/company/executive-team/",
+   "https://www.netsync.com/company/locations/"
+  ]
+ },
+ "NXT GEN Technologies": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "info@nxtgentech.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "commercial",
+   "financial",
+   "healthcare",
+   "hospitality",
+   "legal",
+   "manufacturing",
+   "retail",
+   "SLED/government"
+  ],
+  "brands": [
+   "Microsoft (CSP)"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33155",
+  "service_area": "Miami and beyond",
+  "notes": "Managed IT / cybersecurity / cloud provider; physical security (surveillance, access control design and integration) is listed only as one professional-services line. No people named. Weak fit.",
+  "site_status": "ok",
+  "checked_urls": [
+   "http://nxtgentech.com/",
+   "https://nxtgentech.com/",
+   "https://nxtgentech.com/vciso",
+   "https://nxtgentech.com/managed-services",
+   "https://nxtgentech.com/professional-services",
+   "https://nxtgentech.com/industries/commercial",
+   "https://nxtgentech.com/about",
+   "https://nxtgentech.com/contact",
+   "https://nxtgentech.com/incident-response",
+   "https://nxtgentech.com/solutions",
+   "https://nxtgentech.com/cloud",
+   "https://nxtgentech.com/value-added-partner",
+   "https://nxtgentech.com/partners"
+  ]
+ },
+ "Tech Security Electronic Inc": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "sales@techsecurityelectronics.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "integrators/contractors (wholesale)",
+   "healthcare",
+   "restaurants",
+   "industrial"
+  ],
+  "brands": [
+   "Avigilon",
+   "Axis",
+   "Hanwha",
+   "Genetec",
+   "Milestone",
+   "ACTi",
+   "Digiever",
+   "Ditek",
+   "Seco-Larm",
+   "Samsung (signage)"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Doral"
+  ],
+  "hq_city": "Doral",
+  "hq_zip": "33126",
+  "service_area": "Central America and the Caribbean (Guatemala, El Salvador, Honduras, Nicaragua, Costa Rica, Panama, Dominican Republic)",
+  "notes": "NOT A LOCAL DEALER: Spanish-language site of a Miami-based security-products DISTRIBUTOR (TSE) that supports integrators in Central America and the Caribbean; CCTV, access, intrusion, fire, networking. Brand list read from logo images. 'Nuestro Equipo' section names nobody. Could be a distribution channel, not an end dealer.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.techsecurityelectronics.com/",
+   "https://www.techsecurityelectronics.com/quienes-somos",
+   "https://www.techsecurityelectronics.com/contacto",
+   "https://www.techsecurityelectronics.com/industrias",
+   "https://www.techsecurityelectronics.com/videovigilancia"
+  ]
+ },
+ "Protective Security Solutions Inc.": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": false,
+  "residential_only": false,
+  "cameras": false,
+  "verticals": [],
+  "brands": [],
+  "locations": "?",
+  "location_cities": [],
+  "hq_city": "",
+  "hq_zip": "",
+  "service_area": "",
+  "notes": "Site down on 17 Nov 2026: https fails with an SSL handshake error (http redirects to https); headless browser also failed. Wayback Machine was not reachable from this environment. Nothing verifiable; the listed contact (Brian Messier) and email could not be confirmed.",
+  "site_status": "down",
+  "checked_urls": [
+   "http://protectivesecuritysolutions.com/",
+   "https://protectivesecuritysolutions.com/"
+  ]
+ },
+ "Chactech": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": false,
+  "residential_only": false,
+  "cameras": false,
+  "verticals": [],
+  "brands": [],
+  "locations": "?",
+  "location_cities": [],
+  "hq_city": "",
+  "hq_zip": "",
+  "service_area": "",
+  "notes": "Site down on 17 Nov 2026: chactech.com and www.chactech.com do not resolve/connect (DNS failure; proxy reports host unreachable). Wayback shows a Feb 2026 snapshot exists but web.archive.org was not reachable from this environment.",
+  "site_status": "down",
+  "checked_urls": [
+   "https://www.chactech.com/",
+   "http://chactech.com/"
+  ]
+ },
+ "Omega Security INC": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "homes",
+   "businesses",
+   "property managers/associations (smart community)",
+   "construction sites (camera trailers)",
+   "warehouses"
+  ],
+  "brands": [
+   "Honeywell/Resideo",
+   "Honeywell MAXPRO",
+   "LiftMaster myQ Community"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami Lakes"
+  ],
+  "hq_city": "Miami Lakes",
+  "hq_zip": "33015",
+  "service_area": "South Florida",
+  "notes": "Omega Security of South Florida Inc.; 25-30+ years; residential alarms and automation plus commercial cameras, access control, community gate/intercom upgrades (myQ), proactive video monitoring and security camera trailers. JS-rendered site (needed headless browser). No people or email printed (forms only).",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.omegasecurity.com/",
+   "http://www.omegasecurity.com/commercialsecurity/",
+   "https://www.omegasecurity.com/product/video-doorbell-camera-camw-wdb-vx1/",
+   "https://www.omegasecurity.com/product/c1-wifi-security-camera/",
+   "https://www.omegasecurity.com/security-camera-trailers/",
+   "https://www.omegasecurity.com/product-category/professional-camera-systems/all-cameras/",
+   "https://www.omegasecurity.com/product-category/cloud-cameras/",
+   "https://www.omegasecurity.com/product-category/professional-camera-systems/",
+   "https://www.omegasecurity.com/product-category/alarm-system/cloud-cameras-2/",
+   "https://www.omegasecurity.com/product/eyeball-network-ip-camera-wdr-color-night-vision-hc35ce5r3/",
+   "https://www.omegasecurity.com/smart-community/",
+   "https://www.omegasecurity.com/current-customer/"
+  ]
+ },
+ "UDT": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": false,
+  "residential_only": false,
+  "cameras": false,
+  "verticals": [],
+  "brands": [],
+  "locations": "?",
+  "location_cities": [],
+  "hq_city": "",
+  "hq_zip": "",
+  "service_area": "",
+  "notes": "Blocked on 17 Nov 2026: udtonline.com (and www, robots.txt, sitemap.xml) return a Cloudflare 'Performing security verification' bot challenge (403) to both plain requests and a headless browser; retried after a wait. Challenge not bypassed. Wayback not reachable from this environment.",
+  "site_status": "blocked",
+  "checked_urls": [
+   "https://udtonline.com/",
+   "http://udtonline.com/"
+  ]
+ },
+ "Circle Security Solutions": {
+  "owner_name": "Ira Ehrenkrantz",
+  "owner_role": "Founder (started Circle Security Systems, Inc. in 1976)",
+  "owner_source": "https://circlesecuritysolutions.com/company/",
+  "other_named": [
+   {
+    "name": "Lee (Ira Ehrenkrantz's son; surname not printed)",
+    "role": "Runs all day-to-day operations (joined 1986)",
+    "url": "https://circlesecuritysolutions.com/company/"
+   }
+  ],
+  "email": "info@circlesecuritysolutions.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "HOAs/condo associations",
+   "multifamily",
+   "hotels",
+   "retail",
+   "warehouses",
+   "schools/campuses",
+   "medical offices",
+   "Class-A buildings",
+   "car dealerships",
+   "marinas",
+   "restaurants/supermarkets"
+  ],
+  "brands": [
+   "Verkada",
+   "Hikvision",
+   "Dahua",
+   "Uniview",
+   "Honeywell",
+   "Alarm.com"
+  ],
+  "locations": 2,
+  "location_cities": [
+   "Miami",
+   "Boca Raton"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33143",
+  "service_area": "Miami-Dade, Broward and Palm Beach",
+  "notes": "Circle Security Systems, Inc. dba Circle Security Solutions; family business since 1976; alarms, fire, cameras (Verkada page aimed at condos/boards), access, automation. Licenses EF0000848 / EF0000852. Shares its Miami address (6815 SW 81st Terrace) and license numbers with Helios Security Systems - likely affiliated. Bernard H Robin (input) is not on the site.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://circlesecuritysolutions.com/",
+   "https://circlesecuritysolutions.com/services/",
+   "https://circlesecuritysolutions.com/company/",
+   "https://circlesecuritysolutions.com/miami-commercial-security-cameras/",
+   "https://circlesecuritysolutions.com/commercial-interactive-service/",
+   "https://circlesecuritysolutions.com/services_group/home-banner/",
+   "https://circlesecuritysolutions.com/our-services",
+   "https://circlesecuritysolutions.com/miami-residential-camera-installation/",
+   "https://circlesecuritysolutions.com/miami-security-camera-installation-wiring/",
+   "https://circlesecuritysolutions.com/verkada-security-camera-installation/",
+   "https://circlesecuritysolutions.com/contact/",
+   "https://circlesecuritysolutions.com/commercial-burglar-alarm-in-miami/"
+  ]
+ },
+ "Munway Technology INC": {
+  "owner_name": "Miguel Mundarain",
+  "owner_role": "Founder (company established 2002 'under the visionary leadership of Miguel Mundarain')",
+  "owner_source": "https://www.munway.com/about",
+  "other_named": [],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "schools (Miami-Dade County Public Schools)",
+   "government/federal",
+   "airports (MIA)",
+   "universities/colleges (FIU, Miami Dade College)",
+   "condominium associations",
+   "offices (WeWork)"
+  ],
+  "brands": [],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33166",
+  "service_area": "Florida (commercial and institutional market)",
+  "notes": "SBA 8(a) certified minority business (2017); CCTV/video, access control incl. biometrics, intercoms, cabling, visitor management, permits. Says it deployed 10,000+ cameras across 80+ schools (2004-07). Address shown as a mailbox: 7214 NW 56th Street. No email printed. Partner logos page has no readable text.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.munway.com/",
+   "https://www.munway.com/services-4",
+   "https://www.munway.com/south-florida-security-services",
+   "https://www.munway.com/about",
+   "https://www.munway.com/contact",
+   "https://www.munway.com/our-partners"
+  ]
+ },
+ "Royce Integrated Solutions": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "customerservice@royceintegrated.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "commercial",
+   "industrial",
+   "government",
+   "offices",
+   "healthcare",
+   "schools",
+   "residential/gated properties"
+  ],
+  "brands": [],
+  "locations": 1,
+  "location_cities": [
+   "Pompano Beach"
+  ],
+  "hq_city": "Pompano Beach",
+  "hq_zip": "33064",
+  "service_area": "Southeast Florida: Miami-Dade, Broward and Palm Beach counties",
+  "notes": "Gate automation, commercial fencing and access control company (family-owned since 1974) that also installs CCTV. HQ is in Broward (Pompano Beach), not Miami-Dade. Licenses CGC1512682, EG13000565. Site still contains template placeholder text. No people named.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.royceintegrated.com/",
+   "https://www.royceintegrated.com/top-10-benefits-of-hiring-gate-installation-and-repair-services-for-your-property",
+   "https://www.royceintegrated.com/3-things-to-know-before-scheduling-gate-installation-and-repair-services",
+   "https://www.royceintegrated.com/what-we-do/gate-automation-services",
+   "https://www.royceintegrated.com/services/~page-item~",
+   "https://www.royceintegrated.com/about",
+   "https://www.royceintegrated.com/contact",
+   "https://www.royceintegrated.com/5-industries-that-benefit-most-from-access-control-systems",
+   "https://www.royceintegrated.com/situations-where-access-control-becomes-a-business-necessity",
+   "https://www.royceintegrated.com/6-reasons-homeowners-are-prioritizing-gate-installation-in-2025",
+   "https://www.royceintegrated.com/hibu-eng-menu",
+   "https://www.royceintegrated.com/locations"
+  ]
+ },
+ "Atlantic Smart Technologies": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "luxury homes",
+   "builders/architects/designers",
+   "commercial AV"
+  ],
+  "brands": [
+   "Savant (Platinum Dealer)",
+   "Lutron (Diamond Dealer)"
+  ],
+  "locations": 2,
+  "location_cities": [
+   "Jupiter",
+   "Vero Beach (by appointment)"
+  ],
+  "hq_city": "Jupiter",
+  "hq_zip": "33458",
+  "service_area": "Jupiter, Palm Beach, Vero Beach / Treasure Coast",
+  "notes": "NOT MIAMI-DADE: family-owned luxury home-automation/AV firm (20+ years) in Jupiter and Vero Beach; surveillance appears only as one smart-home feature. Mostly residential. No people or email printed. Poor fit.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://atlanticsmart.com/",
+   "https://atlanticsmart.com/index.php/solutions/commercial-solutions",
+   "https://atlanticsmart.com/about-us/company",
+   "https://atlanticsmart.com/about-us/service-plans",
+   "https://atlanticsmart.com/solutions/commercial-solutions",
+   "https://atlanticsmart.com/solutions/home-solutions-audio-video",
+   "https://atlanticsmart.com/index.php/solutions/home-solutions-audio-video",
+   "https://atlanticsmart.com/about-us/showroom",
+   "https://atlanticsmart.com/about-us/process-design-build",
+   "https://atlanticsmart.com/contact",
+   "https://atlanticsmart.com/solutions/home-solutions-smart-home-automation",
+   "https://atlanticsmart.com/solutions/lighting-and-shading-control"
+  ]
+ },
+ "Helios Security Systems LLC": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "info@heliossecurity.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "homes",
+   "hotels",
+   "retail",
+   "warehouses",
+   "condominiums",
+   "offices",
+   "schools",
+   "healthcare"
+  ],
+  "brands": [],
+  "locations": 2,
+  "location_cities": [
+   "Miami (HQ)",
+   "Medley"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33143",
+  "service_area": "Miami and South Florida",
+  "notes": "Alarm, CCTV, fire alarm, access and monitoring installer, residential and commercial. Contact page HQ 6815 SW 81 Terr., Miami 33143 and licenses EF0000848 / EF0000852 are the same as Circle Security Solutions; also lists 8125 NW 74th Ave, Medley 33166 and license EG13000599. Likely affiliated with Circle (and with Protect-o-larms per our license data). No people named.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://heliossecurity.com/",
+   "https://heliossecurity.com/commercial-security-cameras/",
+   "https://heliossecurity.com/ready-to-protect-your-property-which-security-camera-installation-service-is-right-for-you/",
+   "https://heliossecurity.com/why-hire-an-access-control-company-instead-of-diy-security-systems/",
+   "https://heliossecurity.com/security-camera-installers/",
+   "https://heliossecurity.com/residential-security-cameras/",
+   "https://heliossecurity.com/hotel-security-cameras/",
+   "https://heliossecurity.com/about/",
+   "https://heliossecurity.com/category/security-cameras/",
+   "https://heliossecurity.com/contact/",
+   "https://heliossecurity.com/commercial-alarm-systems/",
+   "https://heliossecurity.com/how-do-you-choose-the-right-fire-alarm-monitoring-company-for-your-home/"
+  ]
+ },
+ "Metro Dade Security System, Inc.": {
+  "owner_name": "Dorys Martinez",
+  "owner_role": "CEO",
+  "owner_source": "https://metrodadesecurity.net/team/",
+  "other_named": [
+   {
+    "name": "Robert Martinez",
+    "role": "Director of Operations",
+    "url": "https://metrodadesecurity.net/team/"
+   },
+   {
+    "name": "Leah Miguelez",
+    "role": "Service Manager",
+    "url": "https://metrodadesecurity.net/team/"
+   },
+   {
+    "name": "Dayvis Perez",
+    "role": "Project Manager",
+    "url": "https://metrodadesecurity.net/team/"
+   }
+  ],
+  "email": "service@metrodadesecurity.net",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "condominiums",
+   "businesses",
+   "homes",
+   "healthcare",
+   "retail"
+  ],
+  "brands": [],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33126",
+  "service_area": "South Florida",
+  "notes": "Since 1997; fire alarm-heavy (UL listed to install/monitor/certify fire alarms) plus fire sprinklers, BDA, CO/NO2 detection, intrusion, video surveillance, access control, monitoring. Team page lists CEO Dorys Martinez (dmartinez@metrodadesecurity.net) and Director of Operations Robert Martinez (rmartinez@metrodadesecurity.net); 'service@' is the Service Manager's address. Team page also has template placeholders ('abc@gmail.com').",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://metrodadesecurity.net/",
+   "https://metrodadesecurity.net/services/video-surveillance/",
+   "https://metrodadesecurity.net/history/",
+   "https://metrodadesecurity.net/services/access-control/",
+   "https://metrodadesecurity.net/services/",
+   "https://metrodadesecurity.net/services/fire-alarms/",
+   "https://metrodadesecurity.net/services/fire-sprinklers/",
+   "https://metrodadesecurity.net/services/bda/",
+   "https://metrodadesecurity.net/services/co-and-no2-detection/",
+   "https://metrodadesecurity.net/services/intrusion-detection/",
+   "https://metrodadesecurity.net/services/321/",
+   "https://metrodadesecurity.net/services/maintenance-inspections-services/",
+   "https://metrodadesecurity.net/team/",
+   "https://metrodadesecurity.net/contact/",
+   "https://metrodadesecurity.net/work/"
+  ]
+ },
+ "Protect-o-larms": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "info@protectolarms.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "homes",
+   "corporate offices",
+   "commercial facilities",
+   "factories",
+   "schools",
+   "government agencies",
+   "banks/retail"
+  ],
+  "brands": [],
+  "locations": 1,
+  "location_cities": [
+   "Hollywood"
+  ],
+  "hq_city": "Hollywood",
+  "hq_zip": "33020",
+  "service_area": "South Florida (Miami-Dade, Broward)",
+  "notes": "Protect-O-Larms, Inc.: family owned and operated since 1980; alarms, cameras, access control, fire. HQ in Broward (Hollywood), not Miami-Dade. License EG13000732. Several pages are unedited WordPress theme filler ('TheBuilt'). No people named; Diego Antonio Reyes (input, also the Helios license holder) is not on the site.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://protect-o-larms.com/",
+   "https://protect-o-larms.com/services/camera-and-video-security-surveillance-systems/",
+   "https://protect-o-larms.com/services/door-access-control-systems/",
+   "https://protect-o-larms.com/services/custom-security-systems/",
+   "https://protect-o-larms.com/project/green-house/",
+   "https://protect-o-larms.com/services/",
+   "https://protect-o-larms.com/services/burglar-and-fire-alarms/",
+   "https://protect-o-larms.com/about-us/",
+   "https://protect-o-larms.com/security-cameras/",
+   "https://protect-o-larms.com/contact-us/",
+   "https://protect-o-larms.com/results-of-annual-general-meeting/",
+   "https://protect-o-larms.com/project/office-interior/"
+  ]
+ },
+ "Sytec USA": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "sales@sytecusa.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "government",
+   "schools/universities",
+   "offices",
+   "retail",
+   "warehouses",
+   "healthcare/medical offices",
+   "construction"
+  ],
+  "brands": [
+   "Axis (Professional Partner)",
+   "Avaya (Business Partner)"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33126",
+  "service_area": "Miami-Dade, Broward and South Florida",
+  "notes": "Sytec-USA, Inc.: low-voltage contractor since 1999 (license ES12001505) - structured cabling, Axis/NDAA camera systems, Avaya phones, managed IT. Commercial/government focus. No people named; /contact page returns 404.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.sytecusa.com/",
+   "https://www.sytecusa.com/security-camera-installation-miami/",
+   "https://www.sytecusa.com/managed-it-services-miami/",
+   "https://www.sytecusa.com/avaya-business-telephone-system/",
+   "https://www.sytecusa.com/about-us/",
+   "https://www.sytecusa.com/low-voltage-contractor-miami/",
+   "https://www.sytecusa.com/contact/",
+   "https://www.sytecusa.com/structured-cabling-installation-miami/",
+   "https://www.sytecusa.com/industries/"
+  ]
+ },
+ "UTS Florida": {
+  "owner_name": "Gustavo Cardoso",
+  "owner_role": "President and founder Miami Total Security LLC",
+  "owner_source": "https://www.utsflorida.com/about-us/",
+  "other_named": [],
+  "email": "info@utsflorida.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "homes",
+   "offices",
+   "retail",
+   "government",
+   "hotels",
+   "healthcare"
+  ],
+  "brands": [
+   "Hikvision",
+   "Arlo"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33186",
+  "service_area": "Miami (Pinecrest, Kendall, Doral area pages)",
+  "notes": "UTS Florida is the web brand of Miami Total Security LLC (since 2004); CCTV-focused small installer plus alarms, access, gates, cabling, fire alarms, home automation. License EF 20000614. Address 13250 SW 128 Street #111, Miami 33186.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.utsflorida.com/",
+   "https://www.utsflorida.com/cctv-security-services/",
+   "https://www.utsflorida.com/commercial-services/",
+   "https://www.utsflorida.com/hd-security-camera-installation/",
+   "https://www.utsflorida.com/product-category/security-camera/",
+   "https://www.utsflorida.com/services/",
+   "https://www.utsflorida.com/about-us/",
+   "https://www.utsflorida.com/security-camera-pinecrest-florida/",
+   "https://www.utsflorida.com/best-ip-security-camera-systems-provider-in-miami-in-2018/",
+   "https://www.utsflorida.com/contact/",
+   "https://www.utsflorida.com/cctv-show-room/",
+   "https://www.utsflorida.com/our-video-gallery/"
+  ]
+ },
+ "Kastle Systems - Miami": {
+  "owner_name": "Haniel J. Lynn",
+  "owner_role": "Chief Executive Officer",
+  "owner_source": "https://www.kastle.com/leadership",
+  "other_named": [
+   {
+    "name": "Mark Ein",
+    "role": "Executive Chairman",
+    "url": "https://www.kastle.com/leadership"
+   },
+   {
+    "name": "Piyush Sodha",
+    "role": "Co-Chairman",
+    "url": "https://www.kastle.com/leadership"
+   }
+  ],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "commercial real estate/office buildings",
+   "enterprise",
+   "multifamily",
+   "data centers",
+   "law firms",
+   "government buildings",
+   "education/student housing",
+   "parking garages",
+   "construction sites"
+  ],
+  "brands": [
+   "Kastle (own managed platform: KastleVideo, Kastle Multifamily)"
+  ],
+  "locations": 12,
+  "location_cities": [
+   "Atlanta",
+   "Austin",
+   "Charlotte",
+   "Chicago",
+   "Dallas",
+   "Denver",
+   "Houston",
+   "Los Angeles",
+   "Miami",
+   "New York",
+   "San Francisco",
+   "Washington DC"
+  ],
+  "hq_city": "Falls Church, VA (founded)",
+  "hq_zip": "",
+  "service_area": "US and Australia",
+  "notes": "National managed-security provider (founded 1972) that owns design, install and 24/7 monitoring end to end; not an owner-run dealer and runs its own platform. Offices page lists a Miami office but no local manager or address text. Leadership names came from the JS-rendered leadership page.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.kastle.com/",
+   "https://www.kastle.com/resources/commercial-access-control",
+   "https://www.kastle.com/resources/commercial-security-cameras",
+   "https://www.kastle.com/video-security",
+   "https://www.kastle.com/video-security/cameras",
+   "https://www.kastle.com/industry/multi-site",
+   "https://www.kastle.com/resources/office-relocation-checklist",
+   "https://www.kastle.com/industry/commercial",
+   "https://www.kastle.com/resources/ai-security-cameras",
+   "https://www.kastle.com/commercial-building-guide",
+   "https://www.kastle.com/about",
+   "https://www.kastle.com/leadership",
+   "https://www.kastle.com/offices"
+  ]
+ },
+ "Ascom Systems INC": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [
+   {
+    "name": "Carlos Puig",
+    "role": "Sales / Tech Support",
+    "url": "https://www.ascomsystems.com/"
+   }
+  ],
+  "email": "ascomsys@ascomsystems.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "condominiums/condo associations",
+   "property management (FirstService Residential)",
+   "schools (Dade County School Board)",
+   "hospitals (Nicklaus Children's)",
+   "offices/office plazas",
+   "retail (Walgreens)",
+   "churches",
+   "restaurants",
+   "parking garages",
+   "gated communities"
+  ],
+  "brands": [
+   "Sielox (authorized dealer)",
+   "DoorKing",
+   "Honeywell (Northern)",
+   "Kantech",
+   "Keyscan",
+   "Digital Watchdog",
+   "DSC",
+   "Qolsys",
+   "Alarm.com"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami (P.O. Box)"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33165",
+  "service_area": "Miami and surrounding area",
+  "notes": "Small family business founded 1981; access control, telephone entry, video surveillance, fire, alarms; 200+ monitored accounts; strong condo client list. Only person named is Carlos Puig (Sales / Tech Support, carlos@ascomsystems.com) - no owner title stated, though he matches the license holder in our data. Mailing address is a P.O. Box. License EF0000283. Says it has no sales team.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.ascomsystems.com/",
+   "https://www.ascomsystems.com/http/www.aiphone.com/home/products/",
+   "https://www.ascomsystems.com/Products.html",
+   "https://www.ascomsystems.com/Products.htm",
+   "https://www.ascomsystems.com/Products_Cards.htm",
+   "https://www.ascomsystems.com/Products_Controllers.htm"
+  ]
+ },
+ "Hemag INC": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "service@hemaginc.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "homes",
+   "builders",
+   "commercial AV/offices",
+   "marine/yachts"
+  ],
+  "brands": [
+   "Alarm.com",
+   "URC (Total Control)",
+   "Lutron"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "South Miami"
+  ],
+  "hq_city": "South Miami",
+  "hq_zip": "",
+  "service_area": "Miami and South Florida (Coral Gables, Pinecrest, Miami Beach, Doral, Aventura, Fort Lauderdale, West Palm Beach...)",
+  "notes": "Smart-home/AV and low-voltage integrator: automation, theater, audio, networking, surveillance cameras (incl. commercial video analytics), fire alarms (state certified alarm contractor, ETL listed), CAD drafting, IT consulting. Mostly residential. No street address or people on the site.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.hemaginc.com/",
+   "https://www.hemaginc.com/locations",
+   "https://www.hemaginc.com/our-services",
+   "https://www.hemaginc.com/It-consulting",
+   "https://www.hemaginc.com/copy-of-home-entertainment",
+   "https://www.hemaginc.com/contact",
+   "https://www.hemaginc.com/copy-of-commercial",
+   "https://www.hemaginc.com/commercial",
+   "https://www.hemaginc.com/newpage0224eac6"
+  ]
+ },
+ "Icon Home Technologies": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "info@iconht.com",
+  "commercial": false,
+  "residential_only": true,
+  "cameras": true,
+  "verticals": [
+   "homes",
+   "builders/contractors"
+  ],
+  "brands": [],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33183",
+  "service_area": "South Florida",
+  "notes": "Home integrator since 1998 (audio/video, theater, automation, lighting/shades, structured wiring, central vacuum, alarms, cameras); mentions businesses only in passing, so effectively residential. Address 8306 Mills Drive #354 (likely a mailbox). License EF 20001395. No people named. Poor fit.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.iconhometechnologies.com/",
+   "https://www.iconhometechnologies.com/systems/19544/Security-Cameras",
+   "https://www.iconhometechnologies.com/about.php",
+   "https://www.iconhometechnologies.com/contact.php",
+   "https://www.iconhometechnologies.com/systems/19076/Whole-Home-Audio-Video",
+   "https://www.iconhometechnologies.com/systems/19081/Security-Monitoring-Alarms"
+  ]
+ },
+ "JP Security Systems Inc.": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "homes",
+   "businesses"
+  ],
+  "brands": [],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "",
+  "service_area": "All of South Florida",
+  "notes": "Family owned and operated; began 1974 in New York, in Miami since the late 1980s; burglar and fire alarms, cameras, medical alert, low voltage; no subcontractors, never sold accounts. Licenses EF0000275 / EG0000219. No address, email or people on the site (form only).",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.jpsecuritysystems.com/",
+   "https://www.jpsecuritysystems.com/about-us",
+   "https://www.jpsecuritysystems.com/contact-us",
+   "https://www.jpsecuritysystems.com/cameras"
+  ]
+ },
+ "Magik Home Automation Corp": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "sales@magik.us",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "homes",
+   "offices/businesses"
+  ],
+  "brands": [
+   "Control4",
+   "Sonos",
+   "Hikvision"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Doral"
+  ],
+  "hq_city": "Doral",
+  "hq_zip": "33178",
+  "service_area": "Miami and Broward",
+  "notes": "Home automation/AV integrator (Control4) with security and surveillance cameras; some commercial integration and audio. Mostly residential. No people named. Email domain magik.us differs from the website domain.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.magikdom.com/",
+   "https://www.magikdom.com/copy-of-residential-services",
+   "https://www.magikdom.com/copy-of-home",
+   "https://www.magikdom.com/security-surveillance",
+   "https://www.magikdom.com/cameras",
+   "https://www.magikdom.com/audio-video"
+  ]
+ },
+ "Quality Wiring, Inc.": {
+  "owner_name": "Dennis Dandrinos",
+  "owner_role": "Operation Manager (most senior person named; no owner title on site)",
+  "owner_source": "https://qualitywiring.com/staff/",
+  "other_named": [
+   {
+    "name": "Hoa Le",
+    "role": "Senior Project Manager | Safety Director",
+    "url": "https://qualitywiring.com/staff/"
+   },
+   {
+    "name": "Anthony Gonzalez",
+    "role": "Project Manager | Security Specialist",
+    "url": "https://qualitywiring.com/staff/"
+   },
+   {
+    "name": "Anny Noratto",
+    "role": "Office Manager | HR Director",
+    "url": "https://qualitywiring.com/staff/"
+   }
+  ],
+  "email": "info@qualitywiring.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "businesses",
+   "government (State of Florida, Miami-Dade, City of Miami)",
+   "schools (Dade County Public Schools)",
+   "retail",
+   "condos"
+  ],
+  "brands": [
+   "Hanwha",
+   "Ubiquiti",
+   "Berk-Tek",
+   "Chatsworth",
+   "Legrand",
+   "Leviton",
+   "Proxim Wireless",
+   "Avaya (Business Partner)"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Doral"
+  ],
+  "hq_city": "Doral",
+  "hq_zip": "33172",
+  "service_area": "Orlando to the Florida Keys",
+  "notes": "Communications cabling contractor first (fiber, Cat5e/6, phones, Wi-Fi, PTP) with CCTV and burglar/fire alarm work (site counts 2,896 security installs). Miami-Dade County CSBE minority vendor. Staff page lists 11 people.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://qualitywiring.com/",
+   "https://qualitywiring.com/services/",
+   "https://qualitywiring.com/services/security-systems/",
+   "https://qualitywiring.com/services/structured-cabling/",
+   "https://qualitywiring.com/services/telephone-systems/",
+   "https://qualitywiring.com/services/wireless-broadband/",
+   "https://qualitywiring.com/about/",
+   "https://qualitywiring.com/staff/",
+   "https://qualitywiring.com/contact/",
+   "https://qualitywiring.com/partners/"
+  ]
+ },
+ "Tech Systems, Inc. (TSi) - Miami": {
+  "owner_name": "Wayne Smith",
+  "owner_role": "President and CEO",
+  "owner_source": "https://techsystemsinc.com/",
+  "other_named": [
+   {
+    "name": "Darryl Keeler",
+    "role": "Executive Chairman; TSi Founder",
+    "url": "https://techsystemsinc.com/focus-on-service/"
+   }
+  ],
+  "email": "info@techsystemsinc.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "healthcare",
+   "banks/financial",
+   "corporate offices",
+   "data centers",
+   "warehouses/industrial",
+   "schools",
+   "retail",
+   "airports",
+   "government"
+  ],
+  "brands": [
+   "Cisco"
+  ],
+  "locations": 2,
+  "location_cities": [
+   "Buford GA (HQ)",
+   "Markham ON Canada"
+  ],
+  "hq_city": "Buford, GA",
+  "hq_zip": "30518",
+  "service_area": "Nationwide US, Puerto Rico, Canada; onsite service on six continents",
+  "notes": "Enterprise security integrator, 100% employee-owned (ESOP), PSA Security Network member; F.O.C.U.S. managed service with 4-hour response. The site lists NO Miami office (only Buford GA and Markham ON), so the 'Miami' tag is not supported by the site.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://techsystemsinc.com/",
+   "https://techsystemsinc.com/what-we-do/",
+   "https://techsystemsinc.com/system-remediation/",
+   "https://techsystemsinc.com/focus-managed-services/",
+   "https://techsystemsinc.com/focus-professional-services/",
+   "https://techsystemsinc.com/focus-support-services/",
+   "https://techsystemsinc.com/why-trust-tsi/",
+   "https://techsystemsinc.com/contact-us/",
+   "https://techsystemsinc.com/focus-on-service/",
+   "https://techsystemsinc.com/who-serve/",
+   "https://techsystemsinc.com/service-areas/",
+   "https://techsystemsinc.com/alliance-partners/"
+  ]
+ },
+ "V&p Power Control Corp": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "info@vppowercontrol.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "residential",
+   "commercial",
+   "industrial"
+  ],
+  "brands": [],
+  "locations": "?",
+  "location_cities": [
+   "Miami",
+   "Orlando",
+   "Tampa",
+   "Jacksonville (coverage list)"
+  ],
+  "hq_city": "",
+  "hq_zip": "",
+  "service_area": "All of Florida (statewide)",
+  "notes": "Fire alarm-led low-voltage contractor (fire alarm, CCTV, intrusion, access, networking, automation) with UL central-station monitoring; license EF20002067. No street address or people on the site; cities shown are coverage, not offices.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.vppowercontrol.com/",
+   "https://www.vppowercontrol.com/contact/",
+   "https://www.vppowercontrol.com/services/",
+   "https://www.vppowercontrol.com/about/"
+  ]
+ },
+ "Zone 1 Security": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "info@zone1security.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "residential",
+   "commercial"
+  ],
+  "brands": [],
+  "locations": 2,
+  "location_cities": [
+   "Miami",
+   "Naples"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "",
+  "service_area": "South Florida (Miami, Naples)",
+  "notes": "One-page site (WhatsApp quote form): burglar alarm monitoring, CCTV, network cabling. License EF20001126. Very small operation; no address or people named.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.zone1security.com/"
+  ]
+ },
+ "Delphi One Systems Corp": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "service@delphione.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "luxury condos/high-rises (One Miami, Ocean One, Tequesta, Carbonell)",
+   "hotels (Mandarin Oriental, Ritz-Carlton Bal Harbour)",
+   "office towers (1060 Brickell)",
+   "utility substations (AT&T)",
+   "parking garages"
+  ],
+  "brands": [
+   "Axis",
+   "Genetec",
+   "Pelco",
+   "IndigoVision",
+   "DSX",
+   "Kantech",
+   "Sielox",
+   "Aiphone",
+   "Millennium"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33126",
+  "service_area": "Monroe, Miami-Dade, Broward, Palm Beach and Martin counties",
+  "notes": "Strong IRIS fit: engineer-founded (2000) Alarm Systems Contractor II doing large Axis IP camera, access, intercom and parking systems in Miami condos and hotels (e.g., 180 Axis cameras at Mandarin Oriental, ~170 at One Miami). No people named on the site.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.delphione.com/",
+   "https://www.delphione.com/services.php",
+   "https://www.delphione.com/services-request.php",
+   "https://www.delphione.com/about.php",
+   "https://www.delphione.com/contactus.php",
+   "https://www.delphione.com/products.php",
+   "https://www.delphione.com/porfolio.php"
+  ]
+ },
+ "Asinet": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "government (state, local, federal)",
+   "government housing developments",
+   "private developers",
+   "schools/colleges/universities",
+   "businesses",
+   "condos/buildings"
+  ],
+  "brands": [],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33166",
+  "service_area": "Florida (testimonials from Miami, Tampa, Orlando); also licensed in Georgia",
+  "notes": "ASINET, Inc. (est. 2003): wireless transmission, signal amplifiers/antennas (BDA-type), CCTV, access control, gate systems, AV. Florida Alarm System Contractor I, Georgia low-voltage license; also GC and roofing certified. No people or email on the site.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.asinet.com/",
+   "https://www.asinet.com/about/",
+   "https://www.asinet.com/contact-us/",
+   "https://www.asinet.com/cctv/",
+   "https://www.asinet.com/audio-video/",
+   "https://www.asinet.com/access-control/"
+  ]
+ },
+ "Beacon Protection Group, LLC": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "customercare@beaconprotection.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "multifamily (video intercom, smart apartment, elevator control)",
+   "homes",
+   "retail",
+   "office buildings",
+   "warehouses",
+   "healthcare",
+   "education"
+  ],
+  "brands": [
+   "Honeywell"
+  ],
+  "locations": "?",
+  "location_cities": [],
+  "hq_city": "",
+  "hq_zip": "",
+  "service_area": "New Jersey, New York, Connecticut, Massachusetts, Pennsylvania, Florida",
+  "notes": "NEW JERSEY company: family-owned since 1990 (LLC in 2018); About page says it serves customers 'across New Jersey'; Florida appears only as a service area with license EG13000699 - no Florida office or address on the site. Residential, commercial and multifamily security with live video monitoring. No people named (testimonials mention 'Diane from sales' only).",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://beaconprotection.com/",
+   "https://beaconprotection.com/commercial/video-surveillance/",
+   "https://beaconprotection.com/commercial/live-video-monitoring/",
+   "https://beaconprotection.com/residential/video-surveillance/",
+   "https://beaconprotection.com/commercial/access-control/",
+   "https://beaconprotection.com/about/",
+   "https://beaconprotection.com/contact-us/",
+   "https://beaconprotection.com/commercial/",
+   "https://beaconprotection.com/commercial/burglary/",
+   "https://beaconprotection.com/commercial/fire-protection/",
+   "https://beaconprotection.com/commercial/structured-cabling-and-data/",
+   "https://beaconprotection.com/multifamily/video-intercom/",
+   "https://beaconprotection.com/states/florida/"
+  ]
+ },
+ "Brinks Home - Miami": {
+  "owner_name": "William Niles",
+  "owner_role": "Chief Executive Officer",
+  "owner_source": "https://brinkshome.com/management-team",
+  "other_named": [
+   {
+    "name": "Bob Reedy",
+    "role": "Executive Vice President and Chief Operating Officer",
+    "url": "https://brinkshome.com/management-team"
+   },
+   {
+    "name": "Bryan Grzeck",
+    "role": "Senior Vice President and Chief Sales Officer",
+    "url": "https://brinkshome.com/management-team"
+   },
+   {
+    "name": "Mike Hackett",
+    "role": "Senior Vice President of Enterprise Business Development",
+    "url": "https://brinkshome.com/management-team"
+   }
+  ],
+  "email": "",
+  "commercial": false,
+  "residential_only": true,
+  "cameras": true,
+  "verticals": [
+   "homes"
+  ],
+  "brands": [
+   "Brinks Home (own platform)"
+  ],
+  "locations": "?",
+  "location_cities": [
+   "Dallas TX (HQ)"
+  ],
+  "hq_city": "Dallas, TX",
+  "hq_zip": "75234",
+  "service_area": "National (US)",
+  "notes": "National residential alarm-monitoring company (BH Security, LLC dba Brinks Home, Dallas TX) with a dealer partner program (bhx.brinkshome.com); no Miami office on the site. Residential only. Not a target dealer; possibly a channel only via its dealers.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.brinkshome.com/",
+   "https://brinkshome.com/",
+   "https://brinkshome.com/management-team",
+   "https://brinkshome.com/cameras",
+   "https://brinkshome.com/about-us",
+   "https://brinkshome.com/about-us/licensing",
+   "https://brinkshome.com/contact-us",
+   "https://brinkshome.com/indoor-cameras",
+   "https://brinkshome.com/outdoor-cameras",
+   "https://brinkshome.com/doorbell-camera",
+   "https://bhx.brinkshome.com",
+   "https://brinkshome.com/home-security-systems",
+   "https://brinkshome.com/smartcenter/how-much-will-a-home-security-system-really-cost-me"
+  ]
+ },
+ "Es&lvs": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "data rooms",
+   "commercial",
+   "export projects"
+  ],
+  "brands": [
+   "Janus Fire Systems",
+   "Solberg",
+   "Firetrace",
+   "Stanley Healthcare"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33166",
+  "service_area": "Florida; local and global (export) projects",
+  "notes": "Electronic Security & Low Voltage Solutions LLC (est. 2012, locally owned): fire-suppression/fire-alarm focus (clean agent, CO2, foam, aspirating smoke detection, mass notification) plus access control, burglar alarms and IP CCTV; exports suppression systems. License EF20001405. Plain requests got 503; site loads in a headless browser. No people or email on the site.",
+  "site_status": "ok",
+  "checked_urls": [
+   "http://www.eslvs.com/",
+   "http://www.eslvs.com/services.html",
+   "http://www.eslvs.com/about-us.html",
+   "http://www.eslvs.com/contacts.html"
+  ]
+ },
+ "Johnson Controls - Miami (Fire)": {
+  "owner_name": "Joakim Weidemanis",
+  "owner_role": "Chief Executive Officer, Johnson Controls",
+  "owner_source": "https://www.johnsoncontrols.com/leadership-home-page",
+  "other_named": [
+   {
+    "name": "Todd Grabowski",
+    "role": "Vice President and President, Americas",
+    "url": "https://www.johnsoncontrols.com/leadership-home-page"
+   },
+   {
+    "name": "Chris Scalia",
+    "role": "Executive Vice President and Chief Human Resources Officer",
+    "url": "https://www.johnsoncontrols.com/leadership-home-page"
+   }
+  ],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "data centers",
+   "healthcare",
+   "pharmaceutical",
+   "commercial buildings",
+   "government",
+   "education"
+  ],
+  "brands": [
+   "Johnson Controls (Tyco, Simplex, American Dynamics, Exacq, Illustra)"
+  ],
+  "locations": "?",
+  "location_cities": [],
+  "hq_city": "",
+  "hq_zip": "",
+  "service_area": "Global",
+  "notes": "Global building-technology manufacturer/service company (HVAC, fire, security), not a dealer. The corporate site's pages checked show no Miami fire branch address or local manager (locations are behind a 'find a rep' tool). Not a target.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.johnsoncontrols.com/",
+   "https://www.johnsoncontrols.com/security/video-surveillance/video-management-system-hardware",
+   "https://www.johnsoncontrols.com/security/video-surveillance/video-management-systems",
+   "https://www.johnsoncontrols.com/security/video-surveillance/video-management-technologies",
+   "https://www.johnsoncontrols.com/about-us/our-company",
+   "https://www.johnsoncontrols.com/security/video-surveillance/ip-cameras",
+   "https://www.johnsoncontrols.com/security/video-surveillance/ip-camera-accessories",
+   "https://www.johnsoncontrols.com/industries/data-centers/solutions/lifecycle-services",
+   "https://www.johnsoncontrols.com/industries/data-centers/solutions/thermal-management",
+   "https://www.johnsoncontrols.com/building-insights/thought-leadership/thermal-management-where-it-really-matters-your-pharmaceutical-facility",
+   "https://www.johnsoncontrols.com/hvac-equipment/hvac-equipment-solutions-and-services",
+   "https://www.johnsoncontrols.com/services-and-support/capital-funding-solutions",
+   "https://www.johnsoncontrols.com/leadership-home-page"
+  ]
+ },
+ "Legnasys Technology Inc.": {
+  "owner_name": "Angel Alvarez",
+  "owner_role": "President",
+  "owner_source": "https://www.legnasys.com/about/",
+  "other_named": [],
+  "email": "office@legnasys.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": false,
+  "verticals": [
+   "commercial buildings",
+   "residential",
+   "warehouses",
+   "offices",
+   "schools",
+   "healthcare"
+  ],
+  "brands": [
+   "Edwards (EST)"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33175",
+  "service_area": "South Florida",
+  "notes": "FIRE/LIFE-SAFETY ONLY: family business started in a garage in 2015; fire alarm design/install/testing (Edwards), monitoring, area-of-refuge two-way systems, BDA/DAS. No cameras on the site.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.legnasys.com/",
+   "https://www.legnasys.com/services/",
+   "https://www.legnasys.com/our-service/life-safety-monitoring-services/",
+   "https://www.legnasys.com/about/",
+   "https://www.legnasys.com/contactus/",
+   "https://www.legnasys.com/our-service/fire-alarm-desing-installation-and-testing/",
+   "https://www.legnasys.com/our-service/aortwo-way/",
+   "https://www.legnasys.com/our-service/signal-enhancement-systems/"
+  ]
+ },
+ "Security Tech Group, Inc.": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "info@securitytechfl.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": false,
+  "verticals": [
+   "homes",
+   "commercial",
+   "new-build developments"
+  ],
+  "brands": [
+   "ADT (authorized dealer)",
+   "ADT Command",
+   "ADT Pulse"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33173",
+  "service_area": "Miami and Broward",
+  "notes": "ADT authorized dealer installing intruder alarms (license EG13000190); mostly residential packages; no camera service named. Two Miami addresses appear: 9425 SW 72th St Suite 100 (33173, contact page) and 2893 SW 69th Ct (33155, home/about pages). No people named. Weak fit (tied to ADT).",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.securitytechfl.com/",
+   "https://www.securitytechfl.com/services-1",
+   "https://www.securitytechfl.com/about",
+   "https://www.securitytechfl.com/contact"
+  ]
+ },
+ "Allied Electrical Services, Inc.": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "info@alliedelectricalservices.net",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": false,
+  "verticals": [
+   "residential",
+   "commercial",
+   "industrial",
+   "tent/event renovations",
+   "new construction"
+  ],
+  "brands": [],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "",
+  "service_area": "Miami-Dade, Broward and Palm Beach",
+  "notes": "NOT A SECURITY DEALER: general electrical contractor (license ER13014732) - emergency repairs, panels, lighting, generators; low voltage/structured cabling and security lighting only. Site footer says 2014. A Yahoo address (spierre81@yahoo.com) is also published on every page. No people named.",
+  "site_status": "ok",
+  "checked_urls": [
+   "http://www.alliedelectricalservices.net/",
+   "http://www.alliedelectricalservices.net/services/",
+   "http://www.alliedelectricalservices.net/about/",
+   "http://www.alliedelectricalservices.net/contact/"
+  ]
+ },
+ "Lsn International LLC": {
+  "owner_name": "Lee Mandel",
+  "owner_role": "Founder",
+  "owner_source": "https://lsninternational.com/about/",
+  "other_named": [],
+  "email": "info@lsninternational.com",
+  "commercial": false,
+  "residential_only": false,
+  "cameras": false,
+  "verticals": [
+   "investment consulting (property, hospitality, technology)"
+  ],
+  "brands": [],
+  "locations": "?",
+  "location_cities": [],
+  "hq_city": "",
+  "hq_zip": "",
+  "service_area": "",
+  "notes": "DIFFERENT BUSINESS: the site is an investment-consulting firm, not a security dealer. About page: founded by Lee Mandel, former founder/CEO of IntraLogic Solutions (security integrator acquired by Post Capital Partners in 2019). No security services offered. Not a lead. Same people as our record (license holder Lee Eric Mandel), but the business has changed.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://lsninternational.com/",
+   "https://lsninternational.com/about/"
+  ]
+ },
+ "Rrr Electrical LLC": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "rossario19902@gmail.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": false,
+  "verticals": [
+   "residential",
+   "commercial",
+   "industrial",
+   "public/private institutions"
+  ],
+  "brands": [],
+  "locations": 1,
+  "location_cities": [
+   "Homestead"
+  ],
+  "hq_city": "Homestead",
+  "hq_zip": "33032",
+  "service_area": "",
+  "notes": "NOT A SECURITY DEALER: Spanish-language site of an electrical contractor (FPL service transfers, remodels, panels, generators, EV chargers); no security or camera work. Only a first name ('Roberto') appears in a testimonial. Published email is a Gmail address.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://rrrelectrical.com/"
+  ]
+ },
+ "Titan Security Group (Titan Electronics) - Miami": {
+  "owner_name": "Dave Pack",
+  "owner_role": "Chief Executive Officer of Titan Security Group (quoted in merger announcement)",
+  "owner_source": "https://titan-security.com/titan-security-group-and-marksman-security-corporation-announce-strategic-merger-creating-a-boutique-security-services-provider-with-a-national-footprint/",
+  "other_named": [],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "hospitals/healthcare",
+   "hotels/hospitality",
+   "residential buildings/condos",
+   "commercial",
+   "warehouses",
+   "banks"
+  ],
+  "brands": [
+   "National Security Integrators (member)"
+  ],
+  "locations": 7,
+  "location_cities": [
+   "Chicago IL (HQ)",
+   "Miami FL",
+   "Downers Grove IL",
+   "Southfield MI",
+   "North Charleston SC",
+   "Nashville TN",
+   "Milwaukee WI"
+  ],
+  "hq_city": "Chicago, IL",
+  "hq_zip": "",
+  "service_area": "National footprint",
+  "notes": "Guard/staffing company with an integration arm (Titan Electronics: access, surveillance, visitor management) and a 24/7 SOC. Merged with Marksman Security Corporation (announcement on site). Miami office: 7270 NW 12th Street, Suite 680, Miami 33126. Mark Apel (input) not found on the pages checked. Only email shown is media@titan-security.com (press).",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.titan-security.com/",
+   "https://titan-security.com/",
+   "https://titan-security.com/service/security-services/security-staffing/",
+   "https://titan-security.com/service/titan-electronics/visitor-management-solutions/",
+   "https://titan-security.com/service/security-services/",
+   "https://titan-security.com/service/security-services/remote-security-services/",
+   "https://titan-security.com/service/security-services/mobile-patrols/",
+   "https://titan-security.com/service/security-services/off-duty-law-enforcement/",
+   "https://titan-security.com/service/consulting-professional-services/",
+   "https://titan-security.com/service/consulting-professional-services/security-assessments/",
+   "https://titan-security.com/service/consulting-professional-services/security-system-design-engineering/",
+   "https://titan-security.com/titan-security-group-and-marksman-security-corporation-announce-strategic-merger-creating-a-boutique-security-services-provider-with-a-national-footprint/",
+   "https://titan-security.com/service/titan-hospitality/professional-door-staff/",
+   "https://titan-security.com/locations/",
+   "https://titan-security.com/about-titan-security-group/"
+  ]
+ },
+ "Intellitech Systems, Inc.": {
+  "owner_name": "Frank Fritz",
+  "owner_role": "Founder",
+  "owner_source": "https://intellitechsystemsinc.com/about-us/",
+  "other_named": [
+   {
+    "name": "Ivan Boyko",
+    "role": "Engineer",
+    "url": "https://intellitechsystemsinc.com/about-us/"
+   },
+   {
+    "name": "Nelson Bautista",
+    "role": "Projects manager",
+    "url": "https://intellitechsystemsinc.com/about-us/"
+   }
+  ],
+  "email": "assistant@intellitechsystems.net",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "large commercial/industrial sites",
+   "multi-residential buildings",
+   "building managers/owners",
+   "homes"
+  ],
+  "brands": [
+   "Hikvision (Diamond level)",
+   "LenelS2",
+   "Digital Watchdog",
+   "Continental Access",
+   "ZKTeco",
+   "LiftMaster",
+   "Hytera",
+   "Dell",
+   "Crestron"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "North Miami"
+  ],
+  "hq_city": "Miami (North Miami)",
+  "hq_zip": "33179",
+  "service_area": "South Florida",
+  "notes": "Good IRIS fit: small locally owned firm (since 2009) doing access control, CCTV, entry phones, gates, UL fire, two-way radio and AV for commercial and multi-residential sites. Partner brands read from logo images.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://intellitechsystemsinc.com/",
+   "https://intellitechsystemsinc.com/services/",
+   "https://intellitechsystemsinc.com/smart-home-services/",
+   "https://intellitechsystemsinc.com/about-us/",
+   "https://intellitechsystemsinc.com/contact-us/",
+   "https://intellitechsystemsinc.com/it-solutions/"
+  ]
+ },
+ "Electronic Alarms, Inc.": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "homes",
+   "businesses"
+  ],
+  "brands": [
+   "DSC",
+   "Honeywell Total Connect"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "33186",
+  "service_area": "South Florida",
+  "notes": "Electronic Alarms & Communication Systems, Inc., established 1983, license EG 0000018; alarms, monitoring and camera systems (Total Connect, I-View DVR apps). Address 13170 SW 128th Street, Suite 101. No people or email printed (Wix site with contact form).",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.electronicalarmsinc.com/",
+   "https://www.electronicalarmsinc.com/contact-us",
+   "https://www.electronicalarmsinc.com/untitled-c15n8",
+   "https://www.electronicalarmsinc.com/untitled-cdvz"
+  ]
+ },
+ "Ert Security, Corp": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "homes",
+   "businesses"
+  ],
+  "brands": [],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "",
+  "service_area": "Miami",
+  "notes": "Small alarm company: burglar and smoke alarms, CCTV, access control, panic alarms, phones, cabling, home automation; UL central-station monitoring in Miami. No address, email or people on the site (form only). Our license data ties it to the same license holder as Magik Home Automation (Eddy Reyes), which the site does not mention.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://ertsecurity.com/",
+   "https://ertsecurity.com/services/",
+   "https://ertsecurity.com/about/",
+   "https://ertsecurity.com/contact/"
+  ]
+ },
+ "Flying A Security Systems, Inc.": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "info@flyinga.net",
+  "commercial": false,
+  "residential_only": true,
+  "cameras": true,
+  "verticals": [
+   "homes"
+  ],
+  "brands": [
+   "Honeywell",
+   "Hanwha",
+   "Samsung",
+   "Sony",
+   "Sonos",
+   "Sonance",
+   "Marantz",
+   "Screen Innovations",
+   "Coastal Source",
+   "Triad",
+   "Access Networks",
+   "Wisdom Audio",
+   "Future Automation"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Miami"
+  ],
+  "hq_city": "Miami",
+  "hq_zip": "",
+  "service_area": "Miami",
+  "notes": "RESIDENTIAL ONLY: family company (father to sons), 30+ years, started as burglar/fire alarms, now smart-home automation plus home security, CCTV and fire alarm. No address or people named. Poor fit for IRIS.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.flyinga.net/",
+   "https://www.flyinga.net/contact-us"
+  ]
+ },
+ "Inhoome INC": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "homes",
+   "small businesses",
+   "retail/storefront chains",
+   "warehouses",
+   "offices",
+   "banks"
+  ],
+  "brands": [
+   "Ubiquiti",
+   "Araknis",
+   "Samsung"
+  ],
+  "locations": 1,
+  "location_cities": [
+   "Doral/Miami"
+  ],
+  "hq_city": "Doral",
+  "hq_zip": "33172",
+  "service_area": "South Florida (Spanish spoken)",
+  "notes": "Smart security for homes and small businesses (20+ years): intrusion, commercial video surveillance, access control, automation, energy management. License EG13000538. Two adjacent addresses shown (10803 / 10805 NW 29th St). No visible email; a Gmail address appears only in the page's hidden structured data, so not recorded as the business email. No people named.",
+  "site_status": "ok",
+  "checked_urls": [
+   "https://www.inhoome.com/",
+   "https://www.inhoome.com/commercial-solutions/",
+   "https://www.inhoome.com/other-services/",
+   "https://www.inhoome.com/contact-us/",
+   "https://www.inhoome.com/company/",
+   "https://www.inhoome.com/residential-automation/"
+  ]
+ },
+ "Secure IT Limited": {
+  "owner_name": "",
+  "owner_role": "",
+  "owner_source": "",
+  "other_named": [],
+  "email": "sdesilva@secureittrinidad.com",
+  "commercial": true,
+  "residential_only": false,
+  "cameras": true,
+  "verticals": [
+   "government",
+   "businesses",
+   "private residences"
+  ],
+  "brands": [
+   "Reolink"
+  ],
+  "locations": "?",
+  "location_cities": [],
+  "hq_city": "",
+  "hq_zip": "",
+  "service_area": "",
+  "notes": "NOT A MIAMI COMPANY: the domain is secureittrinidad.com (Trinidad and Tobago) - security and home automation provider with 16 years' experience; no Florida address or presence on the site. Only contact is a personal-looking address (sdesilva@). Likely mis-matched to a Miami-Dade record.",
+  "site_status": "different company",
+  "checked_urls": [
+   "http://www.secureittrinidad.com/",
+   "http://www.secureittrinidad.com/index.html",
+   "http://www.secureittrinidad.com/contact-us.html",
+   "http://www.secureittrinidad.com/surveillance.html",
+   "http://www.secureittrinidad.com/new-products.html"
+  ]
  }
 }

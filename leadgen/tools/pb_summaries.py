@@ -164,7 +164,9 @@ for k, c in C.items():
 rows.sort(key=lambda x: -x[0])
 
 summ = []
-for s, k, c in rows[:60]:
+SKIP_BID_ONLY = r'ARIES IND|CUES|DEEP TREKKER|LOGIBALL|BORE TECH|GHD SERVICES|MCFARLAND|MODAXO|JENOPTIK|DAKTRONICS'
+sel = rows[:50] + [r for r in rows[50:] if r[2]['bids'] and not re.search(SKIP_BID_ONLY, ' '.join(r[2]['names']), re.I)]
+for s, k, c in sel:
     names = [n for n, _ in c['names'].most_common()]
     name = max(names[:3], key=len) if names else k
     name = name.replace('\\,', ',')

@@ -42,7 +42,11 @@ FAILURES = json.load(open("data/failures.json"))
 
 rows, loaded = master.main()
 loaded = {k.replace("T", "leads/T", 1) if k.endswith(".xlsx") else "docs/" + k: v for k, v in loaded.items()}
-cands = [r for r in rows if r["Business Type"] == "Dealer/Integrator" and r["_region"] == "Miami-Dade"]
+BAD = ("parent company", "rapidsos", "fire-only", "fire only", "fire-alarm only", "not a security", "different business",
+       "not a local dealer", "residential only", "not owner-run", "not a camera dealer", "not a dealer")
+cands = [r for r in rows if r["Business Type"] == "Dealer/Integrator" and r["_region"] == "Miami-Dade"
+         and ("cctv" in r["Services Listed on Website"].lower() or "camera" in r["Services Listed on Website"].lower())
+         and not any(b in (r.get("_notes") or "").lower() for b in BAD)]
 tnum = {"T1": 1, "T2": 2, "T3": 3}
 cands.sort(key=lambda r: (-(r["Fit Score"] + 3 - tnum[r["Best Tier"]]), 0 if r["Point of Contact"] else 1, -r["_n_sources"], r["Best Tier"]))
 top = [(r, master.reason(r) + ((" | note: " + r["_notes"][:160]) if r.get("_notes") else "")) for r in cands[:20]]

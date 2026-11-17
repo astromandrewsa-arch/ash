@@ -127,6 +127,12 @@ def make_row(name, city, state, zipcode, website, email, btype, services, locati
 
 
 _VER = None
+TYPE_OVERRIDE = {  # from the hand check of each company's own site (leadgen/data/verified_sites.json notes)
+    "rd electric": "Other", "allied electrical services inc": "Other", "rrr electrical llc": "Other",
+    "lsn international llc": "Other", "netsync network solutions inc miami beach fl": "Other",
+    "tech security electronic inc": "Software/Vendor", "johnson controls - miami fire": "Software/Vendor",
+    "arco security central station corp": "Monitoring Center", "brinks home - miami": "Monitoring Center",
+}
 
 
 def _verified():
@@ -165,6 +171,17 @@ def apply_verified(row):
         return
     if st != "ok":
         return
+    tov = TYPE_OVERRIDE.get(norm_name(v["_name"]))
+    if tov:
+        row["Business Type"] = tov
+    # A contact our keyword extractor took from this company's own site is replaced by the hand-checked result
+    cs = row.get("Contact Source", "")
+    site_dom = _domain(norm_url(row["Website"])) if row.get("Website") not in ("?", "") else ""
+    if row.get("Point of Contact") and site_dom and cs.startswith("http") and _domain(cs.split(" ;")[0]) == site_dom:
+        if v.get("owner_name"):
+            row["Point of Contact"], row["Contact Role"], row["Contact Source"] = v["owner_name"], v.get("owner_role") or "Listed contact", v.get("owner_source", "")
+        else:
+            row["Point of Contact"], row["Contact Role"], row["Contact Source"] = "", "", ""
     svc = [x.strip() for x in row.get("Services Listed on Website", "?").split(",") if x.strip() and x.strip() != "?"]
     svc = [x for x in svc if not x.startswith(("commercial", "residential", "CCTV"))]
     head = []
@@ -249,7 +266,7 @@ def write_sheet(ws, line1, line2, line3, rows, columns=COLUMNS):
     widths = {"Name": 34, "Point of Contact": 22, "Contact Role": 18, "Contact Source": 40, "Municipality": 20,
               "State": 6, "Website": 32, "Email": 28, "Business Type": 18, "Services Listed on Website": 60,
               "Number of Locations": 10, "ZIP Code": 9, "Preferred Zone (Y/N)": 10, "Fit Score": 8, "Source URL": 45,
-              "Found In": 40, "Best Tier": 10}
+              "Found In": 40, "Best Tier": 10, "Notes": 60}
     for j, h in enumerate(columns, 1):
         ws.column_dimensions[get_column_letter(j)].width = widths.get(h, 16)
     ws.freeze_panes = "B5"

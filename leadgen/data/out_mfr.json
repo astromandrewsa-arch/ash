@@ -9,12 +9,18 @@
   "Website": "http://acousticarchitects.net",
   "Email": "design@acousticarchitects.net",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, access control, alarm monitoring, audio/video, smart home/automation, networking/IT, serves schools/offices/retail, brands: Verkada",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, alarm monitoring, audio/video, smart home/automation, networking/IT, serves luxury residences/condos/MDU/commercial buildings/yachts/marine, brands: Control4/Crestron/Lutron/Savant/Somfy/Sonos/Verkada",
   "Number of Locations": 2,
   "ZIP Code": "33150",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 5,
   "Source URL": "https://www.verkada.com/find-partners/?radius=25&search=33134",
+  "_verified_owner": [
+   "Spencer Hauldren",
+   "Founder & Managing Partner",
+   "https://acousticarchitects.net/about/our-team/"
+  ],
+  "_verified_notes": "Luxury smart-home automation/AV integrator (founded 2008) with a Smart Security line (access control, video surveillance, cameras); mostly high-end residential and yachts, some commercial and MDU work. Media contact on site is an outside PR firm (jp@theedge360.com). Marginal fit for IRIS.",
   "_region": "Miami-Dade",
   "_pz_why": "Mentions 'coral gables'",
   "_brands": [
@@ -35,12 +41,13 @@
   "Website": "https://www.adbsnow.com",
   "Email": "info@adbsnow.com",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, intercom, structured cabling, gates/barriers, smart home/automation, networking/IT, license plate recognition, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/government/retail/warehouses/industrial, brands: Axis/Cisco/Ubiquiti",
-  "Number of Locations": 2,
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, intercom, structured cabling, gates/barriers, smart home/automation, networking/IT, license plate recognition, serves offices/commercial real estate/healthcare/medical/retail/warehouses/logistics/schools/universities/hotels/condos/multifamily/government/restaurants, brands: Axis/Axis (AXIS Certified Partner)/Cisco/Ubiquiti",
+  "Number of Locations": 1,
   "ZIP Code": "33160",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 5,
   "Source URL": "https://adbsnow-site.pages.dev/about-us.html",
+  "_verified_notes": "Commercial network/security integrator since 2015 (video, access, intercoms, VoIP, cabling, Wi-Fi), Axis-focused. The Fort Lauderdale address on the site (401 E Las Olas) is the AXIS Experience Center, not their office. No people named.",
   "_region": "Miami-Dade",
   "_pz_why": "Mentions 'coral gables'",
   "_brands": [
@@ -52,28 +59,34 @@
   "_self_declared": true
  },
  {
-  "Name": "InaCOMP Technical Services Group",
-  "Point of Contact": "Michael Boone",
-  "Contact Role": "President, Commercial",
-  "Contact Source": "https://www.inacomp.net/about",
-  "Municipality": "Doral",
+  "Name": "Florida Safeguard Inc.",
+  "Point of Contact": "Jim Wilhelm",
+  "Contact Role": "President and Founder",
+  "Contact Source": "https://floridasafeguard.com/contact.html",
+  "Municipality": "Pinecrest",
   "State": "FL",
-  "Website": "http://inacomp.net",
-  "Email": "ithelp@inacomptsg.com",
+  "Website": "http://www.floridasafeguard.com",
+  "Email": "ben@floridasafeguard.com",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, structured cabling, audio/video, networking/IT, serves schools/hospitals/healthcare/offices/government/retail/warehouses/industrial, brands: Cisco/Meraki/Verkada",
-  "Number of Locations": 3,
-  "ZIP Code": "33172",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, structured cabling, serves residential/commercial, brands: DoorBird/Fire-Lite/Hikvision/Honeywell/Lutron/Luxul/Niles/Resideo/Sonos",
+  "Number of Locations": 1,
+  "ZIP Code": "33156",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 5,
-  "Source URL": "https://www.verkada.com/find-partners/?radius=25&search=33134",
+  "Source URL": "https://findapro.resideo.com/ (public page; data from its Apex call /webruntime/api/apex/execute method searchDealers, zipOnlyMatch=true) ; https://www.resideo.com/us/en/find-a-pro/ (JSON: https://www.resideo.com/rde/findAPro/professionals, Categories=98551 Security, Radius=50)",
+  "_verified_owner": [
+   "Jim Wilhelm",
+   "President and Founder",
+   "https://floridasafeguard.com/contact.html"
+  ],
+  "_verified_notes": "Family-owned low-voltage/security provider, 30+ years; burglar alarms, Hikvision camera systems, Fire-Lite fire alarms, access control, AV (product names appear as image captions on the homepage). Contact page also lists jim@ and ben@ addresses. No street address printed. Site needs a real browser (plain requests get an empty 202).",
   "_region": "Miami-Dade",
   "_pz_why": "Mentions 'south florida'",
   "_brands": [
-   "Verkada"
+   "Resideo/Honeywell"
   ],
   "_levels": [
-   "Verkada: Platinum Partner"
+   "Resideo/Honeywell: Tier 2"
   ],
   "_self_declared": false
  },
@@ -87,12 +100,13 @@
   "Website": "https://www.induscom.com/",
   "Email": "?",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, intercom, smart home/automation, license plate recognition, mass notification/ERRCS, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/government/retail/warehouses/industrial, brands: Avigilon/Avigilon Alta",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, intercom, smart home/automation, license plate recognition, mass notification/ERRCS, serves public safety/government/commercial real estate/healthcare/schools/hotels/warehouses/industrial/transportation, brands: Avigilon/Avigilon Alta/Motorola Solutions (Authorized Channel Partner, Ecosystem Solutions Partner)",
   "Number of Locations": 3,
   "ZIP Code": "33169",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 5,
   "Source URL": "https://www.induscom.com/about-us/msi-ecosystem-solutions-partner.htm ; https://www.induscom.com/avigilon/avigilon-alta.htm",
+  "_verified_notes": "Two-way radio / Motorola Solutions dealer since 1974 (radios, BDA/DAS, towers, MOTOTRBO network) that also sells Avigilon video and access and body-worn/in-car video. Miami office ZIP 33169 (NW 215th St). Sells Motorola's public-safety ecosystem, which overlaps with IRIS. No people named; no email printed.",
   "_region": "Miami-Dade",
   "_pz_why": "Mentions 'south florida'",
   "_brands": [
@@ -106,6 +120,33 @@
   "_self_declared": true
  },
  {
+  "Name": "Miami Security Systems",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "City of Miami",
+  "State": "FL",
+  "Website": "https://www.miamisecuritysystems.net/",
+  "Email": "info@miamisecuritysystems.net",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, structured cabling, gates/barriers, smart home/automation, serves homes/businesses/hotels/condominiums/restaurants/medical monitoring, brands: Alarm.com/Arlo/Dahua/Digital Watchdog/DMP/Hikvision/Honeywell/Sony",
+  "Number of Locations": 1,
+  "ZIP Code": "?",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 5,
+  "Source URL": "https://www.miamisecuritysystems.net/fire-alarm-miami-fl/",
+  "_verified_notes": "Alarm, camera, access, fire alarm and medical-alert installer; says 35+ years in the industry and state licensed. No street address or people on the site (only 'Miami-Dade, Florida'). Other published emails: info@, tech@, accounting@.",
+  "_region": "Miami-Dade",
+  "_pz_why": "Mentions 'coral gables'",
+  "_brands": [
+   "DMP"
+  ],
+  "_levels": [
+   "DMP: \"Authorized dealer\" for some listed brands (self-declared; DMP named)"
+  ],
+  "_self_declared": true
+ },
+ {
   "Name": "Mobile Me IT",
   "Point of Contact": "",
   "Contact Role": "",
@@ -115,40 +156,15 @@
   "Website": "http://mobilemeit.com",
   "Email": "sales@mobilemeit.com",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, intercom, structured cabling, networking/IT, serves schools/hospitals/healthcare/hotels/government/warehouses/industrial, brands: Hanwha/Hanwha Vision/Verkada/Wisenet",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, intercom, structured cabling, networking/IT, serves schools (K-12, faith-based, higher ed)/healthcare/government/cities/construction/maritime/retail/hotels, brands: Apple/Axis/Hanwha/Hanwha Vision/Lenovo/Microsoft/UniFi/Verkada/Verkada (Gold Partner)/Wisenet",
   "Number of Locations": 1,
   "ZIP Code": "33172",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 5,
   "Source URL": "https://www.verkada.com/find-partners/?radius=25&search=33134",
+  "_verified_notes": "IT + security + licensed electrical contractor (EC13015256) since 2011; commercial only. No people named on site.",
   "_region": "Miami-Dade",
   "_pz_why": "Mentions 'miami-dade'",
-  "_brands": [
-   "Verkada"
-  ],
-  "_levels": [
-   "Verkada: Gold Partner"
-  ],
-  "_self_declared": false
- },
- {
-  "Name": "PC Solutions & Integration",
-  "Point of Contact": "",
-  "Contact Role": "",
-  "Contact Source": "",
-  "Municipality": "Coral Gables",
-  "State": "FL",
-  "Website": "http://pcsusa.net",
-  "Email": "?",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, access control, intrusion alarms, alarm monitoring, audio/video, networking/IT, serves schools/offices, brands: Verkada",
-  "Number of Locations": 3,
-  "ZIP Code": "33146",
-  "Preferred Zone (Y/N)": "Y",
-  "Fit Score": 5,
-  "Source URL": "https://www.verkada.com/find-partners/?radius=25&search=33134",
-  "_region": "Miami-Dade",
-  "_pz_why": "Located in Coral Gables",
   "_brands": [
    "Verkada"
   ],
@@ -167,12 +183,18 @@
   "Website": "https://support305.pages.dev/",
   "Email": "info@support305.com",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, structured cabling, audio/video, smart home/automation, networking/IT, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/houses of worship/retail, brands: Avigilon/Avigilon Alta/Axis/Control4/Hanwha Vision",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, structured cabling, audio/video, smart home/automation, networking/IT, serves restaurants/hotels/hospitality/offices/conference rooms/law firms/medical practices/retail/schools/homes, brands: Avigilon/Avigilon Alta/Axis/Cisco Meraki/Control4/Crestron/Hanwha Vision/Hikvision/Lutron/Panasonic/Savant/Snap One/Sony",
   "Number of Locations": 1,
   "ZIP Code": "33133",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 5,
   "Source URL": "https://support305.pages.dev/services/surveillance",
+  "_verified_owner": [
+   "Nitesh Mistry",
+   "Founder & CEO",
+   "https://support305.pages.dev/about"
+  ],
+  "_verified_notes": "Founded 2002 as a managed-IT company, now AV integration + CCTV/access control + managed IT. Homepage: 'Support305 is Expanding as DIST' (new brand for new markets). Real domain support305.com also resolves; input URL is the pages.dev mirror.",
   "_region": "Miami-Dade",
   "_pz_why": "Mentions 'coral gables'",
   "_brands": [
@@ -197,14 +219,15 @@
   "Municipality": "Miami Beach",
   "State": "FL",
   "Website": "https://yorksecuritysolutions.com/",
-  "Email": "?",
+  "Email": "service@yorkss.com",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, intercom, structured cabling, gates/barriers, mass notification/ERRCS, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/government/retail, brands: Axis/Brivo/Hanwha",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, intercom, structured cabling, gates/barriers, mass notification/ERRCS, serves multifamily condos/rental communities/HOA boards/property managers/office buildings/hotels/hospitality/retail, brands: Axis/Brivo/Hanwha/OpenPath",
   "Number of Locations": 1,
   "ZIP Code": "33139",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 5,
   "Source URL": "https://yorksecuritysolutions.com/blog/brivo-access-control",
+  "_verified_notes": "Commercial/multifamily access control and AI video integrator; legacy traces to a 1937 locksmith business. FL license EG13000865. No people named on site (James Bienenfeld not on site).",
   "_region": "Miami-Dade",
   "_pz_why": "Located in Miami Beach",
   "_brands": [
@@ -255,12 +278,13 @@
   "Website": "https://www.atisecuritysystems.com/",
   "Email": "sales@atisecuritysystems.com",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, intercom, gates/barriers, networking/IT, license plate recognition, serves schools/hospitals/healthcare/condos/HOA/offices/government/retail/warehouses/industrial, brands: Avigilon/Avigilon Alta/Verkada",
-  "Number of Locations": 5,
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, intercom, gates/barriers, networking/IT, license plate recognition, serves commercial real estate/condos/waterfront communities/healthcare/financial/bank branches/schools/retail/grocery/warehouses/distribution/government/public safety, brands: Avigilon/Avigilon Alta/Verkada",
+  "Number of Locations": 6,
   "ZIP Code": "33131",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 4,
   "Source URL": "https://www.atisecuritysystems.com/access-control/avigilon-alta/ ; https://www.verkada.com/find-partners/?radius=25&search=33134",
+  "_verified_notes": "HIGHLY RELEVANT: About page says AT&I is 'one of only 11 companies selected' for the Broward Sheriff's Office Real-Time Crime Center program, connecting client cameras to BSO's RTCC. Family-owned since 2005, now positioning as enterprise/national. HQ is in Broward (Cooper City), not Miami-Dade. No people named.",
   "_region": "Miami-Dade",
   "_pz_why": "Mentions 'miami-dade'",
   "_brands": [
@@ -276,19 +300,25 @@
  {
   "Name": "Certified Network Professionals, Inc. (Miami, FL)",
   "Point of Contact": "Orlando G. Suero",
-  "Contact Role": "President CNP",
-  "Contact Source": "https://www.cnetpro.net/",
+  "Contact Role": "President / Network & Systems Engineer",
+  "Contact Source": "https://www.cnetpro.net/about-us/",
   "Municipality": "Unincorporated Miami-Dade",
   "State": "FL",
   "Website": "https://www.cnetpro.net",
   "Email": "info@cnetpro.net",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, alarm monitoring, networking/IT, serves schools, brands: Axis/Cisco/Genetec/Milestone",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, alarm monitoring, networking/IT, serves airports/seaports/government, brands: Axis/Cisco/Extreme Networks/Genetec/Juniper/Milestone/Pivot3/Qognify/NiceVision",
   "Number of Locations": "?",
   "ZIP Code": "33126",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 4,
   "Source URL": "https://www.milestonesys.com/where-to-buy-reseller-and-distributor/",
+  "_verified_owner": [
+   "Orlando G. Suero",
+   "President / Network & Systems Engineer",
+   "https://www.cnetpro.net/about-us/"
+  ],
+  "_verified_notes": "Five-engineer network/security integrator focused on airports and seaports (migrated MIA's Qognify video system). Miami-Dade and Broward SBE/DBE certified. No street address printed. Niche, not a building-security dealer.",
   "_region": "Miami-Dade",
   "_pz_why": "Mentions 'miami dade'",
   "_brands": [
@@ -296,6 +326,38 @@
   ],
   "_levels": [
    "Milestone: Advanced"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "InaCOMP Technical Services Group",
+  "Point of Contact": "Michael Kanan",
+  "Contact Role": "Chairman and CEO",
+  "Contact Source": "https://www.inacomp.net/about",
+  "Municipality": "Doral",
+  "State": "FL",
+  "Website": "http://inacomp.net",
+  "Email": "ithelp@inacomptsg.com",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, structured cabling, audio/video, networking/IT, serves K-12 and higher education/healthcare/clinics/automotive/manufacturing/venues/esports/retail/multi-site/legal/financial/local government/small and midsize businesses, brands: Cisco/Dell/HP/HPE/Lenovo/Meraki/Microsoft/Promethean/Verkada",
+  "Number of Locations": 5,
+  "ZIP Code": "33172",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 4,
+  "Source URL": "https://www.verkada.com/find-partners/?radius=25&search=33134",
+  "_verified_owner": [
+   "Michael Kanan",
+   "Chairman and CEO",
+   "https://www.inacomp.net/about"
+  ],
+  "_verified_notes": "IT/technology integrator founded 1982 in Michigan; cameras/access (Verkada) are one of several lines. Miami office: 1400 NW 107th Avenue, Suite 206, Miami FL 33172 (South Florida commercial team under Michael Boone).",
+  "_region": "Miami-Dade",
+  "_pz_why": "Mentions 'south florida'",
+  "_brands": [
+   "Verkada"
+  ],
+  "_levels": [
+   "Verkada: Platinum Partner"
   ],
   "_self_declared": false
  },
@@ -328,30 +390,31 @@
   "_self_declared": false
  },
  {
-  "Name": "Miami Security Systems",
+  "Name": "PC Solutions & Integration",
   "Point of Contact": "",
   "Contact Role": "",
   "Contact Source": "",
-  "Municipality": "City of Miami",
+  "Municipality": "Coral Gables",
   "State": "FL",
-  "Website": "https://www.miamisecuritysystems.net/",
-  "Email": "info@miamisecuritysystems.net",
+  "Website": "http://pcsusa.net",
+  "Email": "?",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, structured cabling, gates/barriers, smart home/automation, serves hospitals/healthcare/hotels/condos/HOA/offices/warehouses/industrial, brands: Dahua/Digital Watchdog/DMP/Hikvision/Honeywell",
-  "Number of Locations": "?",
-  "ZIP Code": "?",
+  "Services Listed on Website": "commercial, access control, intrusion alarms, alarm monitoring, audio/video, networking/IT, serves K-12 education/healthcare/government/retail/hospitality/manufacturing/transportation/data centers, brands: Verkada",
+  "Number of Locations": 6,
+  "ZIP Code": "33146",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 4,
-  "Source URL": "https://www.miamisecuritysystems.net/fire-alarm-miami-fl/",
+  "Source URL": "https://www.verkada.com/find-partners/?radius=25&search=33134",
+  "_verified_notes": "IT managed-services / network and cybersecurity provider (PCS); no camera or physical-security work on the site. Poor fit for IRIS. No people named (only customer testimonials).",
   "_region": "Miami-Dade",
-  "_pz_why": "Mentions 'coral gables'",
+  "_pz_why": "Located in Coral Gables",
   "_brands": [
-   "DMP"
+   "Verkada"
   ],
   "_levels": [
-   "DMP: \"Authorized dealer\" for some listed brands (self-declared; DMP named)"
+   "Verkada: Gold Partner"
   ],
-  "_self_declared": true
+  "_self_declared": false
  },
  {
   "Name": "World Security & Electric (WSE), now Pye-Barker Fire & Safety - Doral",
@@ -378,6 +441,33 @@
    "DMP: Authorized DMP Security Systems Dealer (self-declared; page now redirects)"
   ],
   "_self_declared": true
+ },
+ {
+  "Name": "Cameras Solutions II Inc.",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "City of Miami",
+  "State": "FL",
+  "Website": "http://www.cs2security.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, intrusion alarms, intercom, gates/barriers, serves businesses/residences, brands: Milestone",
+  "Number of Locations": 1,
+  "ZIP Code": "33125",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 4,
+  "Source URL": "https://www.milestonesys.com/where-to-buy-reseller-and-distributor/",
+  "_verified_notes": "Trades as CS2 Security (cs2security.com). One-page GoDaddy site: security assessments, analog and IP cameras, intercom/telephone entry, gate operators, automatic door operators, intrusion. Only a first name plus initial ('Guillermo C.', Network Administrator) appears, so no full name recorded. Address 400 NW 24 Ave, Miami 33125. No email printed (form only).",
+  "_region": "Miami-Dade",
+  "_pz_why": "",
+  "_brands": [
+   "Milestone"
+  ],
+  "_levels": [
+   "Milestone: Advanced"
+  ],
+  "_self_declared": false
  },
  {
   "Name": "Castaway Security Solutions",
@@ -407,20 +497,26 @@
  },
  {
   "Name": "Convergint - Miami",
-  "Point of Contact": "Sean Flint",
-  "Contact Role": "President",
+  "Point of Contact": "Ann Fandozzi",
+  "Contact Role": "Chief Executive Officer",
   "Contact Source": "https://www.convergint.com/who-we-are/executive-leadership/",
   "Municipality": "City of Miami",
   "State": "FL",
   "Website": "https://www.convergint.com/where-we-operate/locations/fl/miami/ctc470/",
   "Email": "?",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, networking/IT, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/houses of worship/government/retail/warehouses/industrial, brands: Bosch/DMP/Edwards/Genetec/Milestone/Rapid Response/Simplex/Verkada",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, networking/IT, serves utilities/healthcare/hospitals/government/public sector/manufacturing/retail/education/data centers, brands: Bosch/DMP/Edwards/Genetec/Milestone/Rapid Response/Simplex/Verkada",
   "Number of Locations": 3,
   "ZIP Code": "33125",
   "Preferred Zone (Y/N)": "N",
   "Fit Score": 4,
   "Source URL": "https://www.convergint.com/how-we-do-it/technology-partners/",
+  "_verified_owner": [
+   "Ann Fandozzi",
+   "Chief Executive Officer",
+   "https://www.convergint.com/who-we-are/executive-leadership/"
+  ],
+  "_verified_notes": "Large global integrator (founded 2001), not owner-run. Miami location CTC470 is at 1876 NW 7th Street, Miami 33125 - the SAME address as Integrated Security Systems (ISS), whose site names Convergint as its parent: treat ISS and Convergint Miami as one account. No local manager or email on the location page.",
   "_region": "Miami-Dade",
   "_pz_why": "",
   "_brands": [
@@ -432,54 +528,57 @@
   "_self_declared": true
  },
  {
-  "Name": "Florida Safeguard Inc.",
+  "Name": "NXT GEN Technologies",
   "Point of Contact": "",
   "Contact Role": "",
   "Contact Source": "",
-  "Municipality": "Pinecrest",
+  "Municipality": "Unincorporated Miami-Dade",
   "State": "FL",
-  "Website": "http://www.floridasafeguard.com",
-  "Email": "ben@floridasafeguard.com",
+  "Website": "http://nxtgentech.com",
+  "Email": "info@nxtgentech.com",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, structured cabling, serves offices, brands: Resideo/Honeywell",
-  "Number of Locations": "?",
-  "ZIP Code": "33156",
-  "Preferred Zone (Y/N)": "Y",
-  "Fit Score": 3,
-  "Source URL": "https://findapro.resideo.com/ (public page; data from its Apex call /webruntime/api/apex/execute method searchDealers, zipOnlyMatch=true) ; https://www.resideo.com/us/en/find-a-pro/ (JSON: https://www.resideo.com/rde/findAPro/professionals, Categories=98551 Security, Radius=50)",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, alarm monitoring, smart home/automation, networking/IT, serves commercial/financial/healthcare/hospitality/legal/manufacturing/retail/SLED/government, brands: Microsoft (CSP)/Verkada",
+  "Number of Locations": 1,
+  "ZIP Code": "33155",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 4,
+  "Source URL": "https://www.verkada.com/find-partners/?radius=25&search=33134",
+  "_verified_notes": "Managed IT / cybersecurity / cloud provider; physical security (surveillance, access control design and integration) is listed only as one professional-services line. No people named. Weak fit.",
   "_region": "Miami-Dade",
-  "_pz_why": "Mentions 'south florida'",
+  "_pz_why": "",
   "_brands": [
-   "Resideo/Honeywell"
+   "Verkada"
   ],
   "_levels": [
-   "Resideo/Honeywell: Tier 2"
+   "Verkada: Gold Partner"
   ],
   "_self_declared": false
  },
  {
-  "Name": "Netsync Network Solutions, Inc. (Miami Beach, FL)",
-  "Point of Contact": "Diane Gonzales",
-  "Contact Role": "President",
-  "Contact Source": "https://www.netsync.com/company/executive-team/",
-  "Municipality": "Miami Beach",
+  "Name": "Omega Security INC",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Hialeah",
   "State": "FL",
-  "Website": "https://www.netsync.com",
-  "Email": "info@netsync.com",
+  "Website": "https://www.omegasecurity.com/",
+  "Email": "?",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, smart home/automation, networking/IT, serves schools/hospitals/healthcare/offices/government/retail/warehouses/industrial, brands: Cisco/Meraki/Milestone",
-  "Number of Locations": 10,
-  "ZIP Code": "33139",
-  "Preferred Zone (Y/N)": "Y",
-  "Fit Score": 3,
-  "Source URL": "https://www.milestonesys.com/where-to-buy-reseller-and-distributor/",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, serves homes/businesses/property managers/associations (smart community)/construction sites (camera trailers)/warehouses, brands: Honeywell/Honeywell MAXPRO/Honeywell/Resideo/LiftMaster myQ Community/Resideo",
+  "Number of Locations": 1,
+  "ZIP Code": "33015",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 4,
+  "Source URL": "https://findapro.resideo.com/ (public page; data from its Apex call /webruntime/api/apex/execute method searchDealers, zipOnlyMatch=true) ; https://www.resideo.com/us/en/find-a-pro/ (JSON: https://www.resideo.com/rde/findAPro/professionals, Categories=98551 Security, Radius=50) ; https://buildings.honeywell.com/us/en/brands/our-brands/security/partnerships/dealer-locator (embedded Bullseye locator: https://www.bullseyelocations.com/pages/honeywellcomsec?f=1&PostalCode=<ZIP>&Radius=<R>&CountryId=1)",
+  "_verified_notes": "Omega Security of South Florida Inc.; 25-30+ years; residential alarms and automation plus commercial cameras, access control, community gate/intercom upgrades (myQ), proactive video monitoring and security camera trailers. JS-rendered site (needed headless browser). No people or email printed (forms only).",
   "_region": "Miami-Dade",
-  "_pz_why": "Located in Miami Beach",
+  "_pz_why": "",
   "_brands": [
-   "Milestone"
+   "Resideo/Honeywell"
   ],
   "_levels": [
-   "Milestone: Advanced"
+   "Resideo/Honeywell: Honeywell Security Partner; Silver Security Dealer",
+   "Resideo/Honeywell: Tier 2"
   ],
   "_self_declared": false
  },
@@ -493,12 +592,13 @@
   "Website": "https://www.aus.com",
   "Email": "?",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, fire alarm, structured cabling, gates/barriers, guard services, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/government/retail/warehouses/industrial, brands: Milestone",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, fire alarm, structured cabling, gates/barriers, guard services, serves commercial real estate/events/corporate/government/healthcare/education, brands: HELIAUS (own platform)/Milestone",
   "Number of Locations": "?",
   "ZIP Code": "33126",
   "Preferred Zone (Y/N)": "N",
   "Fit Score": 3,
   "Source URL": "https://www.milestonesys.com/where-to-buy-reseller-and-distributor/",
+  "_verified_notes": "Global security-services giant (~770,000 staff, guards plus integrated technology services); not a small dealer. Offices page lists two Miami offices, both ZIP 33126. No executive names on the pages checked (home, about-us, offices, technology service pages).",
   "_region": "Miami-Dade",
   "_pz_why": "",
   "_brands": [
@@ -506,58 +606,6 @@
   ],
   "_levels": [
    "Milestone: Premier"
-  ],
-  "_self_declared": false
- },
- {
-  "Name": "Cameras Solutions II Inc.",
-  "Point of Contact": "",
-  "Contact Role": "",
-  "Contact Source": "",
-  "Municipality": "City of Miami",
-  "State": "FL",
-  "Website": "http://www.cs2security.com",
-  "Email": "?",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, CCTV/video surveillance, intrusion alarms, intercom, gates/barriers, brands: Milestone",
-  "Number of Locations": "?",
-  "ZIP Code": "33125",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 3,
-  "Source URL": "https://www.milestonesys.com/where-to-buy-reseller-and-distributor/",
-  "_region": "Miami-Dade",
-  "_pz_why": "",
-  "_brands": [
-   "Milestone"
-  ],
-  "_levels": [
-   "Milestone: Advanced"
-  ],
-  "_self_declared": false
- },
- {
-  "Name": "NXT GEN Technologies",
-  "Point of Contact": "",
-  "Contact Role": "",
-  "Contact Source": "",
-  "Municipality": "Unincorporated Miami-Dade",
-  "State": "FL",
-  "Website": "http://nxtgentech.com",
-  "Email": "info@nxtgentech.com",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, access control, alarm monitoring, smart home/automation, networking/IT, serves schools/hospitals/healthcare/hotels/offices/government/retail, brands: Verkada",
-  "Number of Locations": 1,
-  "ZIP Code": "33155",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 3,
-  "Source URL": "https://www.verkada.com/find-partners/?radius=25&search=33134",
-  "_region": "Miami-Dade",
-  "_pz_why": "",
-  "_brands": [
-   "Verkada"
-  ],
-  "_levels": [
-   "Verkada: Gold Partner"
   ],
   "_self_declared": false
  },
@@ -640,15 +688,48 @@
   "State": "FL",
   "Website": "https://www.techsecurityelectronics.com",
   "Email": "sales@techsecurityelectronics.com",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "intercom, serves hospitals/healthcare/warehouses/industrial, brands: Milestone",
+  "Business Type": "Software/Vendor",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, intercom, serves integrators/contractors (wholesale)/healthcare/restaurants/industrial, brands: ACTi/Avigilon/Axis/Digiever/Ditek/Genetec/Hanwha/Milestone/Samsung (signage)/Seco-Larm",
   "Number of Locations": 1,
   "ZIP Code": "33126",
   "Preferred Zone (Y/N)": "N",
-  "Fit Score": 2,
+  "Fit Score": 3,
   "Source URL": "https://www.milestonesys.com/where-to-buy-reseller-and-distributor/",
+  "_verified_notes": "NOT A LOCAL DEALER: Spanish-language site of a Miami-based security-products DISTRIBUTOR (TSE) that supports integrators in Central America and the Caribbean; CCTV, access, intrusion, fire, networking. Brand list read from logo images. 'Nuestro Equipo' section names nobody. Could be a distribution channel, not an end dealer.",
   "_region": "Miami-Dade",
   "_pz_why": "",
+  "_brands": [
+   "Milestone"
+  ],
+  "_levels": [
+   "Milestone: Advanced"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "Netsync Network Solutions, Inc. (Miami Beach, FL)",
+  "Point of Contact": "Diane Gonzales",
+  "Contact Role": "President (founded Netsync Network Solutions in 2002)",
+  "Contact Source": "https://www.netsync.com/company/executive-team/",
+  "Municipality": "Miami Beach",
+  "State": "FL",
+  "Website": "https://www.netsync.com",
+  "Email": "info@netsync.com",
+  "Business Type": "Other",
+  "Services Listed on Website": "commercial, smart home/automation, networking/IT, serves government/public sector (SLED)/K-12 and higher education/healthcare/financial/retail/manufacturing/data centers, brands: AWS/Cisco/Cisco (Master Security Partner)/Fortinet/HP/Intel/Meraki/Microsoft/Milestone/Singlewire/Webex",
+  "Number of Locations": 10,
+  "ZIP Code": "33139",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 2,
+  "Source URL": "https://www.milestonesys.com/where-to-buy-reseller-and-distributor/",
+  "_verified_owner": [
+   "Diane Gonzales",
+   "President (founded Netsync Network Solutions in 2002)",
+   "https://www.netsync.com/company/executive-team/"
+  ],
+  "_verified_notes": "Large Cisco IT reseller/MSP, not a camera dealer. The locations page lists NO Miami or Miami Beach office (only Tampa in Florida), so the Miami Beach tag in our data is not supported by the site.",
+  "_region": "Miami-Dade",
+  "_pz_why": "Located in Miami Beach",
   "_brands": [
    "Milestone"
   ],
@@ -680,33 +761,6 @@
   ],
   "_levels": [
    "Verkada: Gold Partner"
-  ],
-  "_self_declared": false
- },
- {
-  "Name": "Omega Security INC",
-  "Point of Contact": "",
-  "Contact Role": "",
-  "Contact Source": "",
-  "Municipality": "Hialeah",
-  "State": "FL",
-  "Website": "https://www.omegasecurity.com/",
-  "Email": "?",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "brands: Resideo/Honeywell",
-  "Number of Locations": "?",
-  "ZIP Code": "33015",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 1,
-  "Source URL": "https://findapro.resideo.com/ (public page; data from its Apex call /webruntime/api/apex/execute method searchDealers, zipOnlyMatch=true) ; https://www.resideo.com/us/en/find-a-pro/ (JSON: https://www.resideo.com/rde/findAPro/professionals, Categories=98551 Security, Radius=50) ; https://buildings.honeywell.com/us/en/brands/our-brands/security/partnerships/dealer-locator (embedded Bullseye locator: https://www.bullseyelocations.com/pages/honeywellcomsec?f=1&PostalCode=<ZIP>&Radius=<R>&CountryId=1)",
-  "_region": "Miami-Dade",
-  "_pz_why": "",
-  "_brands": [
-   "Resideo/Honeywell"
-  ],
-  "_levels": [
-   "Resideo/Honeywell: Honeywell Security Partner; Silver Security Dealer",
-   "Resideo/Honeywell: Tier 2"
   ],
   "_self_declared": false
  },
@@ -858,12 +912,13 @@
   "Website": "https://www.atisecuritysystems.com/",
   "Email": "sales@atisecuritysystems.com",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, intercom, gates/barriers, networking/IT, license plate recognition, serves schools/hospitals/healthcare/condos/HOA/offices/government/retail/warehouses/industrial, brands: Avigilon/Verkada",
-  "Number of Locations": 5,
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, intercom, gates/barriers, networking/IT, license plate recognition, serves commercial real estate/condos/waterfront communities/healthcare/financial/bank branches/schools/retail/grocery/warehouses/distribution/government/public safety, brands: Avigilon/Avigilon Alta/Verkada",
+  "Number of Locations": 6,
   "ZIP Code": "33330",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 4,
   "Source URL": "https://www.atisecuritysystems.com/access-control-old/avigilon/ ; https://www.verkada.com/find-partners/?radius=25&search=33134",
+  "_verified_notes": "HIGHLY RELEVANT: About page says AT&I is 'one of only 11 companies selected' for the Broward Sheriff's Office Real-Time Crime Center program, connecting client cameras to BSO's RTCC. Family-owned since 2005, now positioning as enterprise/national. HQ is in Broward (Cooper City), not Miami-Dade. No people named.",
   "_region": "Broward",
   "_pz_why": "Mentions 'miami-dade'",
   "_brands": [
@@ -1706,12 +1761,18 @@
   "Website": "http://acousticarchitects.net",
   "Email": "design@acousticarchitects.net",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, access control, alarm monitoring, audio/video, smart home/automation, networking/IT, serves schools/offices/retail, brands: Verkada",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, alarm monitoring, audio/video, smart home/automation, networking/IT, serves luxury residences/condos/MDU/commercial buildings/yachts/marine, brands: Control4/Crestron/Lutron/Savant/Somfy/Sonos/Verkada",
   "Number of Locations": 2,
   "ZIP Code": "33401",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 5,
   "Source URL": "https://www.verkada.com/find-partners/?radius=100&search=33134",
+  "_verified_owner": [
+   "Spencer Hauldren",
+   "Founder & Managing Partner",
+   "https://acousticarchitects.net/about/our-team/"
+  ],
+  "_verified_notes": "Luxury smart-home automation/AV integrator (founded 2008) with a Smart Security line (access control, video surveillance, cameras); mostly high-end residential and yachts, some commercial and MDU work. Media contact on site is an outside PR firm (jp@theedge360.com). Marginal fit for IRIS.",
   "_region": "Palm Beach",
   "_pz_why": "Mentions 'coral gables'",
   "_brands": [
@@ -1834,12 +1895,13 @@
   "Website": "http://atisecuritysystems.com",
   "Email": "sales@atisecuritysystems.com",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, intercom, gates/barriers, networking/IT, license plate recognition, serves schools/hospitals/healthcare/condos/HOA/offices/government/retail/warehouses/industrial, brands: Avigilon/Verkada",
-  "Number of Locations": 5,
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, intercom, gates/barriers, networking/IT, license plate recognition, serves commercial real estate/condos/waterfront communities/healthcare/financial/bank branches/schools/retail/grocery/warehouses/distribution/government/public safety, brands: Avigilon/Avigilon Alta/Verkada",
+  "Number of Locations": 6,
   "ZIP Code": "33410",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 4,
   "Source URL": "https://www.verkada.com/find-partners/?radius=100&search=33134",
+  "_verified_notes": "HIGHLY RELEVANT: About page says AT&I is 'one of only 11 companies selected' for the Broward Sheriff's Office Real-Time Crime Center program, connecting client cameras to BSO's RTCC. Family-owned since 2005, now positioning as enterprise/national. HQ is in Broward (Cooper City), not Miami-Dade. No people named.",
   "_region": "Palm Beach",
   "_pz_why": "Mentions 'miami-dade'",
   "_brands": [
@@ -1860,12 +1922,13 @@
   "Website": "http://atisecuritysystems.com",
   "Email": "sales@atisecuritysystems.com",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, intercom, gates/barriers, networking/IT, license plate recognition, serves schools/hospitals/healthcare/condos/HOA/offices/government/retail/warehouses/industrial, brands: Avigilon/Verkada",
-  "Number of Locations": 5,
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, intercom, gates/barriers, networking/IT, license plate recognition, serves commercial real estate/condos/waterfront communities/healthcare/financial/bank branches/schools/retail/grocery/warehouses/distribution/government/public safety, brands: Avigilon/Avigilon Alta/Verkada",
+  "Number of Locations": 6,
   "ZIP Code": "33426",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 4,
   "Source URL": "https://www.verkada.com/find-partners/?radius=100&search=33134",
+  "_verified_notes": "HIGHLY RELEVANT: About page says AT&I is 'one of only 11 companies selected' for the Broward Sheriff's Office Real-Time Crime Center program, connecting client cameras to BSO's RTCC. Family-owned since 2005, now positioning as enterprise/national. HQ is in Broward (Cooper City), not Miami-Dade. No people named.",
   "_region": "Palm Beach",
   "_pz_why": "Mentions 'miami-dade'",
   "_brands": [

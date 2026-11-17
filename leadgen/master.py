@@ -16,6 +16,12 @@ SOURCES = [  # (label, out json, tier)
     ("T3_Permits_and_Bids.docx", "data/out_pb.json", 3),
     ("T3_Hiring.docx", "data/out_hiring.json", 3),
 ]
+MANUAL_NOTES = {
+    "aps security": "IAF Past President and South Region (Miami-Dade/Broward) director Diego R. del Pino is with APS Security (iaf-safe.org/directors.php).",
+    "at&i": "AT&I says it is one of 11 companies selected for the Broward Sheriff's Office Real-Time Crime Center program (own site) - directly relevant to IRIS; Verkada Platinum partner.",
+    "omni data": "Now owned by RapidSOS (911 data company) per its own site - possible competitor channel; approach carefully.",
+    "thunder electrical": "Company of IAF Director-Electrical Fernando Munilla (iaf-safe.org/directors.php).",
+}
 KEEP_TYPES = {"Dealer/Integrator", "Subcontractor", "Monitoring Center", "Guard Company", "Consultant/Broker"}
 TIER_NAME = {1: "T1", 2: "T2", 3: "T3"}
 SUFFIX = re.compile(r"\s*-\s*(miami|doral|hialeah|fort lauderdale|ft lauderdale|west palm beach|boca raton|plantation|miramar)\b.*$", re.I)
@@ -86,6 +92,9 @@ def main():
             if not m["Point of Contact"] or norm_name(m["Point of Contact"]) != norm_name(vo[0]):
                 m["Point of Contact"], m["Contact Role"], m["Contact Source"] = vo
         m["_notes"] = next((r["_verified_notes"] for r in g if r.get("_verified_notes")), "")
+        for key, note in MANUAL_NOTES.items():
+            if key in m["Name"].lower():
+                m["_notes"] = (note + " " + m["_notes"]).strip()
         # merge services: longest real one
         svc = [r["Services Listed on Website"] for r in g if r.get("Services Listed on Website") not in ("?", "")]
         if svc:
@@ -123,7 +132,9 @@ def write_master(rows, loaded, top, failures, counts):
     wb = Workbook()
     ws = wb.active
     ws.title = "Master"
-    cols = COLUMNS + ["Found In", "Best Tier"]
+    cols = COLUMNS + ["Found In", "Best Tier", "Notes"]
+    for r in rows:
+        r["Notes"] = (r.get("_notes") or "")[:400]
     md = sum(1 for r in rows if r["_region"] == "Miami-Dade")
     write_sheet(ws, f"MASTER - de-duplicated dealers/integrators from all IRIS lead files ({len(rows)} companies; {md} in Miami-Dade). Built from leads/*.xlsx and docs/*.docx in this folder.",
                 "Tiers: T1 = trade-association members (IAF, TMA; super top priority); T2 = warm (manufacturer dealer locators, Alarm Exchange); T3 = cold (directories, DBPR licenses, permits/bids, hiring). Best Tier = warmest file the company appears in. Sorted by Best Tier, then Fit Score (then Miami-Dade first).",
