@@ -33,13 +33,13 @@ def keys_for(row):
     if site not in ("?", ""):
         d = _domain(norm_url(site))
         if d and not any(d.endswith(g) for g in ("pages.dev", "google.com", "facebook.com", "wixsite.com", "business.site", "convergint.com", "pyebarkerfs.com")):
-            ks.add(("d", d))
+            ks.add(("d", d, row.get("_region")))
     name = row["Name"]
     parts = re.split(r"\b(?:dba|d/b/a|now)\b", name, flags=re.I)
     for p in parts:
         k = norm_key(SUFFIX.sub("", p))
         if len(k) >= 6:
-            ks.add(("n", k))
+            ks.add(("n", k, row.get("_region")))
     return ks
 
 
@@ -65,8 +65,9 @@ def main():
                 # loose name containment within same region (e.g. "X Inc" vs "X (CTC#470)")
                 nk = norm_key(SUFFIX.sub("", r["Name"]))
                 if len(nk.split()) >= 3:
-                    for (t, k), g in idx.items():
-                        if t == "n" and len(k.split()) >= 3 and (k.startswith(nk) or nk.startswith(k)) and groups[g][0].get("_region") == r.get("_region"):
+                    for key, g in idx.items():
+                        t, k = key[0], key[1]
+                        if t == "n" and len(k.split()) >= 3 and (k.startswith(nk) or nk.startswith(k)) and key[2] == r.get("_region"):
                             gid = g
                             break
             if gid is None:
@@ -77,7 +78,7 @@ def main():
                 idx.setdefault(k, gid)
     rows = []
     for g in groups:
-        g.sort(key=lambda r: (r["_tier"], REGION_ORDER.get(r.get("_region"), 9), -r["Fit Score"]))
+        g.sort(key=lambda r: (REGION_ORDER.get(r.get("_region"), 9), r["_tier"], -r["Fit Score"]))
         m = {c: g[0].get(c, "") for c in COLUMNS}
         for r in g[1:]:
             for c in COLUMNS:

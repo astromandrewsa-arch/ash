@@ -84,6 +84,42 @@
   "Not needed: the public licensee download was used instead"
  ],
  [
+  "Coral Gables permits (T3)",
+  "Coral Gables EnerGov permit portal",
+  "Contractor names and permit PDFs need a login; 1,360 security-type permits in window but contractors unknown",
+  "Log in (free citizen account) or file a public-records request for the permit numbers saved in leadgen/raw/permits/cg_energov_permits.json"
+ ],
+ [
+  "Coral Gables contract lists (T3 bids)",
+  "City SharePoint links",
+  "Redirect to a Microsoft login",
+  "Check Coral Gables procurement awards by hand"
+ ],
+ [
+  "Homestead procurement (T3 bids)",
+  "City of Homestead procurement portal",
+  "Cloudflare bot check; agendas in an unsearchable document system",
+  "Search Homestead council agendas for camera/access-control awards"
+ ],
+ [
+  "City of Miami agendas/procurement (T3 bids)",
+  "https://www.miamigov.com",
+  "Blocks non-browser requests; agenda search failed on proxy disconnects",
+  "Search City of Miami Legistar/procurement for security camera awards"
+ ],
+ [
+  "Jackson Health (T3 bids)",
+  "Jackson Health procurement / board agendas",
+  "No security items in current solicitations; agenda app empty outside a browser",
+  "Check board agendas by hand"
+ ],
+ [
+  "Miami Beach permits (T3)",
+  "Miami Beach permit portal",
+  "53 permits name no contractor; camera construction contract values not shown",
+  "Optional: open those permits by hand"
+ ],
+ [
   "Sunbiz (Florida company registry)",
   "https://search.sunbiz.org",
   "Cloudflare 403",
