@@ -10,3 +10,9 @@ screenshots/*
 
 # Scratch helpers
 scripts/*.tmp.mjs
+
+# lead-gen scratch (may contain raw HTML)
+leadgen/raw/
+leadgen/cache/
+leadgen/tools/*.html
+__pycache__/

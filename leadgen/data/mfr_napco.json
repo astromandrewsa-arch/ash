@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Guardian Electronics, Inc.",
+    "brand": "Napco Security Technologies (incl. StarLink, Napco Access Pro/Continental, Marks USA)",
+    "listing_level": "\"We recommend and represent\" (self-declared; Napco named for fire alarm and StarLink communicators)",
+    "address": "",
+    "city": "",
+    "state": "FL",
+    "zip": "",
+    "website": "https://guardian-electronics.com/",
+    "email": "sales@guardian-electronics.com",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_source": "",
+    "services_on_listing": "Fire alarm installation, service, monitoring; offers Napco/StarLink cellular fire alarm communicators; access control",
+    "service_area": "Miami-Dade and Broward (site lists Miami, Doral, Miami Beach, Hialeah, Coral Gables ... and Broward cities)",
+    "listing_url": "https://guardian-electronics.com/products/fire-alarms-miami-broward/",
+    "query": "web search: Napco fire alarm Miami",
+    "notes": "self-declared on dealer site: \"We recommend and represent the following manufacturers: ... Napco Fire Alarm\" and \"the most modern Fire Alarm Cellular Radio communicator from Napco/Starlink\". No street address on the site. Probably Miami-Dade-based (see the same record in mfr_bosch.json); verify."
+  }
+]

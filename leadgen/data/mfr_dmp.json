@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Miami Security Systems",
+    "brand": "DMP (Digital Monitoring Products)",
+    "listing_level": "\"Authorized dealer\" for some listed brands (self-declared; DMP named)",
+    "address": "",
+    "city": "Miami",
+    "state": "FL",
+    "zip": "",
+    "website": "https://www.miamisecuritysystems.net/",
+    "email": "info@miamisecuritysystems.net",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_source": "",
+    "services_on_listing": "Fire alarm installation; security systems; brands worked with: Notifier, DMP, Badger, Buckeye",
+    "service_area": "Miami",
+    "listing_url": "https://www.miamisecuritysystems.net/fire-alarm-miami-fl/",
+    "query": "web search: DMP authorized dealer Miami",
+    "notes": "self-declared on dealer site, weak wording: \"tools we have worked with include ... Notifier, DMP, Badger, and Buckeye ... Miami Security System is also an Authorized dealer in the buying and selling of some of these gadgets\". No street address on the site; city taken from site name and content. Same brand list as World Security & Electric (below), so the two may be related."
+  },
+  {
+    "name": "World Security & Electric (WSE), now Pye-Barker Fire & Safety - Doral",
+    "brand": "DMP (Digital Monitoring Products)",
+    "listing_level": "Authorized DMP Security Systems Dealer (self-declared; page now redirects)",
+    "address": "2924 NW 109th Ave",
+    "city": "Doral",
+    "state": "FL",
+    "zip": "33172",
+    "website": "https://pyebarkerfs.com/locations/doral-fl/",
+    "email": "",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_source": "",
+    "services_on_listing": "Fire alarm and security systems; access control",
+    "service_area": "Miami, Broward, South Florida",
+    "listing_url": "https://wsefs.com/security-systems/access-control/",
+    "query": "web search: DMP authorized dealer Miami",
+    "notes": "Search-index copy of the dealer's own page was titled \"DMP Security Systems Dealer Miami, Access Control Security Systems...\" with snippet \"WSE is an authorized DMP Security Systems Dealer\". On 2026-11-17 that URL 301-redirects to Pye-Barker Fire & Safety, Doral (address above is the Pye-Barker Doral branch from the redirect target), and the live page no longer mentions DMP. Probably acquired by Pye-Barker. A MapQuest listing gives WSE's former address as 6993 NW 82nd Ave Ste 24, Miami, FL 33166. Verify by hand."
+  }
+]
