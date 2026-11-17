@@ -60,7 +60,7 @@ def fit_score(rec):
     loc = rec.get("Number of Locations")
     if isinstance(loc, int) and 1 <= loc <= 3:
         score += 1
-    if residential_only(s):
+    if residential_only(s) or "residential (only)" in low:
         score = min(score, 1)
     return max(score, 1) if rec.get("Business Type") == "Dealer/Integrator" else score
 
@@ -119,10 +119,88 @@ def make_row(name, city, state, zipcode, website, email, btype, services, locati
         "Number of Locations": locations, "ZIP Code": zip5(zipcode) or "?", "Preferred Zone (Y/N)": pz,
         "Fit Score": 0, "Source URL": source_url,
     }
+    apply_verified(row)
     row["Fit Score"] = fit_score(row)
-    row["_region"] = region(zipcode, state, city)
+    row["_region"] = region(row["ZIP Code"] if row["ZIP Code"] != "?" else zipcode, state, city)
     row["_pz_why"] = why
     return row
+
+
+_VER = None
+
+
+def _verified():
+    global _VER
+    if _VER is None:
+        import json, os
+        from enrich import _domain, norm_url
+        _VER = {}
+        f = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "verified_sites.json")
+        if os.path.exists(f):
+            for name, v in json.load(open(f)).items():
+                v = dict(v, _name=name)
+                _VER[("n", norm_name(name))] = v
+                if v.get("website"):
+                    _VER[("d", _domain(norm_url(v["website"])))] = v
+    return _VER
+
+
+def apply_verified(row):
+    """Overlay what a person-equivalent read of the company's own site found (leadgen/data/verified_sites.json)."""
+    from enrich import _domain, norm_url
+    V = _verified()
+    if not V:
+        return
+    v = None
+    if row.get("Website") not in ("?", ""):
+        v = V.get(("d", _domain(norm_url(row["Website"]))))
+    v = v or V.get(("n", norm_name(row["Name"])))
+    if not v:
+        return
+    st = v.get("site_status", "ok")
+    if st == "different company":
+        row["Website"], row["Services Listed on Website"], row["Number of Locations"] = "?", "?", "?"
+        if "role:" in row.get("Contact Source", "") or (row.get("Contact Source", "").startswith("http") and "myfloridalicense" not in row["Contact Source"] and "iaf-safe" not in row["Contact Source"]):
+            pass
+        return
+    if st != "ok":
+        return
+    svc = [x.strip() for x in row.get("Services Listed on Website", "?").split(",") if x.strip() and x.strip() != "?"]
+    svc = [x for x in svc if not x.startswith(("commercial", "residential", "CCTV"))]
+    head = []
+    if v.get("commercial"):
+        head.append("commercial")
+    if v.get("residential_only"):
+        head.append("residential (only)")
+    if v.get("cameras"):
+        head.append("CCTV/video surveillance")
+    rest = [x for x in svc if not x.startswith(("serves ", "brands:"))]
+    tail = []
+    if v.get("verticals"):
+        tail.append("serves " + "/".join(v["verticals"]))
+    brands = sorted(set(v.get("brands") or []) | set(sum([x[len("brands: "):].split("/") for x in svc if x.startswith("brands:")], [])), key=str.lower)
+    if brands:
+        tail.append("brands: " + "/".join(b for b in brands if b))
+    row["Services Listed on Website"] = ", ".join(head + rest + tail) or "?"
+    loc = v.get("locations")
+    if isinstance(loc, int) and loc > 0:
+        row["Number of Locations"] = loc
+    if v.get("email") and row.get("Email") in ("?", ""):
+        row["Email"] = v["email"]
+    if row.get("ZIP Code") in ("?", "") and v.get("hq_zip"):
+        row["ZIP Code"] = str(v["hq_zip"])[:5]
+    owner = (v.get("owner_name") or "").strip()
+    if owner:
+        cur = row.get("Point of Contact", "")
+        if not cur:
+            row["Point of Contact"], row["Contact Role"], row["Contact Source"] = owner, v.get("owner_role") or "Listed contact", v.get("owner_source", "")
+        elif norm_name(cur).split()[-1:] == norm_name(owner).split()[-1:] and norm_name(cur).split()[:1] == norm_name(owner).split()[:1]:
+            if row.get("Contact Role") in ("Listed contact", "") or row.get("Contact Role", "").startswith("License holder"):
+                row["Contact Source"] = (row.get("Contact Source") or "") + " ; role: " + v.get("owner_source", "")
+                row["Contact Role"] = v.get("owner_role") or row["Contact Role"]
+        row["_verified_owner"] = (owner, v.get("owner_role", ""), v.get("owner_source", ""))
+    if v.get("notes"):
+        row["_verified_notes"] = v["notes"]
 
 
 def sort_rows(rows):

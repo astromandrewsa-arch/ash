@@ -1,0 +1,650 @@
+[
+ {
+  "name": "Aressco Services Inc",
+  "website": "https://www.aressco.com",
+  "current_contact": "Don Richter",
+  "current_role": "Founder (incorporated Aressco, Inc. in 1979, per the company's About page)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, gates/barriers, serves schools/offices/government/retail/warehouses/industrial, brands",
+  "locations_auto": 1,
+  "email_auto": "?"
+ },
+ {
+  "name": "Horizon Electronics Inc",
+  "website": "http://www.horizonsecurity.com",
+  "current_contact": "Jorge Tapanes",
+  "current_role": "Listed contact",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, intercom, structured cabling, gates/barriers, networking/IT, serves schools/hospitals/",
+  "locations_auto": 1,
+  "email_auto": "info@horizonsecurity.com"
+ },
+ {
+  "name": "MCG Electronics Inc dba APS Security Systems",
+  "website": "https://Www.apsmiami.com",
+  "current_contact": "Eric del Pino",
+  "current_role": "Listed contact",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, intercom, structured cabling, gates/barriers, audio/video, smart home/automation, netw",
+  "locations_auto": 1,
+  "email_auto": "info@apsmiami.com"
+ },
+ {
+  "name": "Integrated Security Systems Inc",
+  "website": "http://www.teamiss.com",
+  "current_contact": "Jeffrey S. Nunberg",
+  "current_role": "President & CEO",
+  "services_auto": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, mass notification/ERRCS, serves schools/hospitals/healthcare/offices/warehouses/industrial, brands:",
+  "locations_auto": "?",
+  "email_auto": "isshr@teamiss.com"
+ },
+ {
+  "name": "Maximum Security Inc",
+  "website": "http://www.maximumsecuritymiami.com",
+  "current_contact": "Greg Gracer",
+  "current_role": "Listed contact",
+  "services_auto": "commercial, residential, CCTV/video surveillance, intrusion alarms, alarm monitoring, structured cabling, remote video monitoring, serves schools/offices",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "DiversiFire Systems Inc",
+  "website": "https://diversifire.net/",
+  "current_contact": "Stefani Royall-Hall",
+  "current_role": "Listed contact",
+  "services_auto": "commercial, intrusion alarms, alarm monitoring, fire alarm, serves schools/hospitals/healthcare/condos/HOA/offices/government/warehouses/industrial, brands: Notifier/Silent Knight",
+  "locations_auto": 1,
+  "email_auto": "sales@diversifire.net"
+ },
+ {
+  "name": "Arco Security Central Station Corp.",
+  "website": "http://arcoweb.com",
+  "current_contact": "Jorge Dominguez",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, serves government/warehouses/industrial",
+  "locations_auto": 1,
+  "email_auto": "central@arcoweb.com"
+ },
+ {
+  "name": "Wiginton Fire Systems - Miami",
+  "website": "https://wiginton.net/",
+  "current_contact": "Randy Agee",
+  "current_role": "Senior Vice President, Wiginton Fire Systems",
+  "services_auto": "commercial, residential, intrusion alarms, alarm monitoring, fire alarm, structured cabling, mass notification/ERRCS, serves schools/hospitals/healthcare/offices/retail/warehouses/industrial",
+  "locations_auto": 4,
+  "email_auto": "aeb@wiginton.net"
+ },
+ {
+  "name": "Safesys USA LLC",
+  "website": "https://www.safesysusa.com",
+  "current_contact": "Patricia Fermin",
+  "current_role": "Listed contact",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, structured cabling, serves government",
+  "locations_auto": "?",
+  "email_auto": "info@safesysusa.com"
+ },
+ {
+  "name": "WISE Building Technologies, LLC",
+  "website": "https://www.wisebt.com",
+  "current_contact": "Guido Tregent",
+  "current_role": "Founder",
+  "services_auto": "intrusion alarms, alarm monitoring, fire alarm, intercom, structured cabling, smart home/automation, mass notification/ERRCS, serves schools/offices",
+  "locations_auto": 3,
+  "email_auto": "info@wisebt.com"
+ },
+ {
+  "name": "Fisec Technology Convergence LLC",
+  "website": "http://www.fisectech.com",
+  "current_contact": "Alejandro Morales",
+  "current_role": "Listed contact",
+  "services_auto": "?",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "Omni Data LLC dba Paradyme Secure LLC",
+  "website": "http://www.paradyme360.com",
+  "current_contact": "Marsha Chin Loy",
+  "current_role": "Listed contact",
+  "services_auto": "?",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "R&D Electric",
+  "website": "https://Www.rdelectricinc.com",
+  "current_contact": "Rafael Echarri",
+  "current_role": "Listed contact",
+  "services_auto": "?",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "Acoustic Architects",
+  "website": "http://acousticarchitects.net",
+  "current_contact": "Spencer Hauldren",
+  "current_role": "Founder & Managing Partner",
+  "services_auto": "commercial, residential, access control, alarm monitoring, audio/video, smart home/automation, networking/IT, serves schools/offices/retail, brands: Verkada",
+  "locations_auto": 2,
+  "email_auto": "design@acousticarchitects.net"
+ },
+ {
+  "name": "York Security Solutions",
+  "website": "https://yorksecuritysolutions.com/",
+  "current_contact": "James Bienenfeld",
+  "current_role": "License holder (DBPR EG)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, intercom, structured cabling, gates/barriers, mass notification/ERRCS, serves schools/hospitals/healthcare/hotels/co",
+  "locations_auto": 1,
+  "email_auto": "?"
+ },
+ {
+  "name": "Baltic Service LLC",
+  "website": "https://www.adbsnow.com",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, intercom, structured cabling, gates/barriers, smart home/automation, networking/IT, license plate recognition, serve",
+  "locations_auto": 2,
+  "email_auto": "info@adbsnow.com"
+ },
+ {
+  "name": "InaCOMP Technical Services Group",
+  "website": "http://inacomp.net",
+  "current_contact": "Michael Boone",
+  "current_role": "President, Commercial",
+  "services_auto": "commercial, CCTV/video surveillance, access control, intrusion alarms, structured cabling, audio/video, networking/IT, serves schools/hospitals/healthcare/offices/government/retail/warehouses/industri",
+  "locations_auto": 3,
+  "email_auto": "ithelp@inacomptsg.com"
+ },
+ {
+  "name": "Industrial Communications (Induscom)",
+  "website": "https://www.induscom.com/",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, intercom, smart home/automation, license plate recognition, mass notification/ERRCS, serves schools/hospitals/health",
+  "locations_auto": 3,
+  "email_auto": "?"
+ },
+ {
+  "name": "Mobile Me IT",
+  "website": "http://mobilemeit.com",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "commercial, CCTV/video surveillance, access control, intrusion alarms, intercom, structured cabling, networking/IT, serves schools/hospitals/healthcare/hotels/government/warehouses/industrial, brands:",
+  "locations_auto": 1,
+  "email_auto": "sales@mobilemeit.com"
+ },
+ {
+  "name": "PC Solutions & Integration",
+  "website": "http://pcsusa.net",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "commercial, access control, intrusion alarms, alarm monitoring, audio/video, networking/IT, serves schools/offices, brands: Verkada",
+  "locations_auto": 3,
+  "email_auto": "?"
+ },
+ {
+  "name": "Support305",
+  "website": "https://support305.pages.dev/",
+  "current_contact": "Nitesh Mistry",
+  "current_role": "Founder & CEO",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, structured cabling, audio/video, smart home/automation, networking/IT, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/h",
+  "locations_auto": 1,
+  "email_auto": "info@support305.com"
+ },
+ {
+  "name": "AT&I Systems",
+  "website": "https://www.atisecuritysystems.com/",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, intercom, gates/barriers, networking/IT, license plate recognition, serves schools/hospitals/healt",
+  "locations_auto": 5,
+  "email_auto": "sales@atisecuritysystems.com"
+ },
+ {
+  "name": "Miami Security Systems",
+  "website": "https://www.miamisecuritysystems.net/",
+  "current_contact": "Juan Carlos Perez",
+  "current_role": "License holder (DBPR EG)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, structured cabling, gates/barriers, smart home/automation, serves hospitals/healthcare",
+  "locations_auto": "?",
+  "email_auto": "info@miamisecuritysystems.net"
+ },
+ {
+  "name": "Certified Network Professionals, Inc. (Miami, FL)",
+  "website": "https://www.cnetpro.net",
+  "current_contact": "Orlando G. Suero",
+  "current_role": "President CNP",
+  "services_auto": "commercial, CCTV/video surveillance, access control, alarm monitoring, networking/IT, serves schools, brands: Axis/Cisco/Genetec/Milestone",
+  "locations_auto": "?",
+  "email_auto": "info@cnetpro.net"
+ },
+ {
+  "name": "Convergint - Miami",
+  "website": "https://www.convergint.com/where-we-operate/locations/fl/miami/ctc470/",
+  "current_contact": "Sean Flint",
+  "current_role": "President",
+  "services_auto": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, networking/IT, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/houses of worship/gove",
+  "locations_auto": 3,
+  "email_auto": "?"
+ },
+ {
+  "name": "Allied Universal Technology Services (Miami, FL)",
+  "website": "https://www.aus.com",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, fire alarm, structured cabling, gates/barriers, guard services, serves schools/hospitals/healthcare/hotels/condos/HO",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "Florida Safeguard Inc.",
+  "website": "http://www.floridasafeguard.com",
+  "current_contact": "James A Wilhelm",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, residential, structured cabling, serves offices, brands: Resideo/Honeywell",
+  "locations_auto": "?",
+  "email_auto": "ben@floridasafeguard.com"
+ },
+ {
+  "name": "Cameras Solutions II Inc.",
+  "website": "http://www.cs2security.com",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "commercial, CCTV/video surveillance, intrusion alarms, intercom, gates/barriers, brands: Milestone",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "Netsync Network Solutions, Inc. (Miami Beach, FL)",
+  "website": "https://www.netsync.com",
+  "current_contact": "Diane Gonzales",
+  "current_role": "President",
+  "services_auto": "commercial, smart home/automation, networking/IT, serves schools/hospitals/healthcare/offices/government/retail/warehouses/industrial, brands: Cisco/Meraki/Milestone",
+  "locations_auto": 10,
+  "email_auto": "info@netsync.com"
+ },
+ {
+  "name": "NXT GEN Technologies",
+  "website": "http://nxtgentech.com",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "commercial, access control, alarm monitoring, smart home/automation, networking/IT, serves schools/hospitals/healthcare/hotels/offices/government/retail, brands: Verkada",
+  "locations_auto": 1,
+  "email_auto": "info@nxtgentech.com"
+ },
+ {
+  "name": "Tech Security Electronic Inc",
+  "website": "https://www.techsecurityelectronics.com",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "intercom, serves hospitals/healthcare/warehouses/industrial, brands: Milestone",
+  "locations_auto": 1,
+  "email_auto": "sales@techsecurityelectronics.com"
+ },
+ {
+  "name": "Protective Security Solutions Inc.",
+  "website": "http://protectivesecuritysolutions.com (did not load on 17 Nov 2026: TLS handshake failure / 503)",
+  "current_contact": "Brian Messier",
+  "current_role": "Listed contact",
+  "services_auto": "?",
+  "locations_auto": "?",
+  "email_auto": "brian@protectivesecuritysolutions.com"
+ },
+ {
+  "name": "Chactech",
+  "website": "http://chactech.com",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "Trained & Certified Partner Reps: VCE Essentials 2, AC Specialist 3, Alarms Specialist 2, VSP Foundations 1; brands: Verkada",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "Omega Security INC",
+  "website": "https://www.omegasecurity.com/",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "brands: Resideo/Honeywell",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "UDT",
+  "website": "http://udtonline.com",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "Trained & Certified Partner Reps: VCE Essentials 0, AC Specialist 0, Alarms Specialist 0, VSP Foundations 17; brands: Verkada",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "Circle Security Solutions",
+  "website": "https://circlesecuritysolutions.com/",
+  "current_contact": "Bernard H Robin",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, structured cabling, gates/barriers, smart home/automation, networking/IT, serves schoo",
+  "locations_auto": 2,
+  "email_auto": "info@circlesecuritysolutions.com"
+ },
+ {
+  "name": "Munway Technology INC",
+  "website": "https://www.munway.com/",
+  "current_contact": "Miguel Antonio Mundarain",
+  "current_role": "License holder (DBPR EG)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, intercom, structured cabling, remote video monitoring, nurse call, serves schools/condos/HOA/offices/government",
+  "locations_auto": 1,
+  "email_auto": "?"
+ },
+ {
+  "name": "Royce Integrated Solutions",
+  "website": "https://www.royceintegrated.com/",
+  "current_contact": "Jason Michael Bell",
+  "current_role": "License holder (DBPR EG)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, intercom, gates/barriers, smart home/automation, serves schools/hospitals/healthcare/offices/gover",
+  "locations_auto": 1,
+  "email_auto": "customerservice@royceintegrated.com"
+ },
+ {
+  "name": "Atlantic Smart Technologies",
+  "website": "https://atlanticsmart.com/",
+  "current_contact": "Hunter Beall Iii Rogers",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, residential, structured cabling, audio/video, smart home/automation, networking/IT, serves schools/offices",
+  "locations_auto": 2,
+  "email_auto": "?"
+ },
+ {
+  "name": "Helios Security Systems LLC",
+  "website": "https://heliossecurity.com/",
+  "current_contact": "Diego Antonio Reyes",
+  "current_role": "License holder (DBPR EG)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, smart home/automation, networking/IT, remote video monitoring, serves schools/hospital",
+  "locations_auto": 1,
+  "email_auto": "info@heliossecurity.com"
+ },
+ {
+  "name": "Metro Dade Security System, Inc.",
+  "website": "https://metrodadesecurity.net",
+  "current_contact": "Dorys Mery Martinez",
+  "current_role": "CEO",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, mass notification/ERRCS, serves hospitals/healthcare/condos/HOA/offices",
+  "locations_auto": 1,
+  "email_auto": "accounting@metrodadesecurity.net"
+ },
+ {
+  "name": "Protect-o-larms",
+  "website": "https://protect-o-larms.com",
+  "current_contact": "Diego Antonio Reyes",
+  "current_role": "License holder (DBPR EG)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, intercom, gates/barriers, audio/video, serves schools/offices/government",
+  "locations_auto": 1,
+  "email_auto": "info@protectolarms.com"
+ },
+ {
+  "name": "Sytec USA",
+  "website": "https://www.sytecusa.com/",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, intercom, structured cabling, networking/IT, license plate recognition, serves schools/hospitals/healthcare/con",
+  "locations_auto": 1,
+  "email_auto": "sales@sytecusa.com"
+ },
+ {
+  "name": "UTS Florida",
+  "website": "https://www.utsflorida.com/",
+  "current_contact": "Gustavo Cardoso",
+  "current_role": "President and founder Miami Total Security LLC",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, structured cabling, gates/barriers, smart home/automation, networking/IT, serves schoo",
+  "locations_auto": 1,
+  "email_auto": "info@utsflorida.com"
+ },
+ {
+  "name": "Kastle Systems - Miami",
+  "website": "https://www.kastle.com",
+  "current_contact": "Haniel J. Lynn",
+  "current_role": "Chief Executive Officer",
+  "services_auto": "commercial, CCTV/video surveillance, access control, alarm monitoring, intercom, networking/IT, remote video monitoring, serves schools/hospitals/healthcare/condos/HOA/offices/houses of worship/govern",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "Ascom Systems INC",
+  "website": "https://www.ascomsystems.com/",
+  "current_contact": "Carlos A Puig",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, intercom, structured cabling, serves schools/hospitals/healthcare/condos/HOA/offices/h",
+  "locations_auto": "?",
+  "email_auto": "ascomsys@ascomsystems.com"
+ },
+ {
+  "name": "Hemag INC",
+  "website": "https://www.hemaginc.com/",
+  "current_contact": "Eberto Garcia",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, intrusion alarms, fire alarm, structured cabling, audio/video, smart home/automation, networking/IT, brands: Alarm.com",
+  "locations_auto": "?",
+  "email_auto": "service@hemaginc.com"
+ },
+ {
+  "name": "Icon Home Technologies",
+  "website": "https://www.iconhometechnologies.com/",
+  "current_contact": "Manuel Gonzalez",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, audio/video, smart home/automation, serves offices",
+  "locations_auto": "?",
+  "email_auto": "info@iconht.com"
+ },
+ {
+  "name": "JP Security Systems Inc.",
+  "website": "https://www.jpsecuritysystems.com/",
+  "current_contact": "George Anthony Perez",
+  "current_role": "License holder (DBPR EG)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, intrusion alarms, alarm monitoring, fire alarm, structured cabling, smart home/automation, serves hospitals/healthcare/offices/warehouses/industrial",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "Magik Home Automation Corp",
+  "website": "https://www.magikdom.com/",
+  "current_contact": "Eddy Reyes",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, intercom, gates/barriers, audio/video, smart home/automation, networking/IT, serves schools/hospit",
+  "locations_auto": "?",
+  "email_auto": "sales@magik.us"
+ },
+ {
+  "name": "Quality Wiring, Inc.",
+  "website": "https://qualitywiring.com/",
+  "current_contact": "Dennis G Dandrinos",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, CCTV/video surveillance, access control, intrusion alarms, fire alarm, intercom, structured cabling, networking/IT, serves schools/condos/HOA/offices/government/warehouses/industrial",
+  "locations_auto": "?",
+  "email_auto": "info@qualitywiring.com"
+ },
+ {
+  "name": "Tech Systems, Inc. (TSi) - Miami",
+  "website": "https://techsystemsinc.com",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "commercial, CCTV/video surveillance, access control, intrusion alarms, serves schools/hospitals/healthcare/government/warehouses/industrial",
+  "locations_auto": 1,
+  "email_auto": "info@techsystemsinc.com"
+ },
+ {
+  "name": "V&p Power Control Corp",
+  "website": "https://www.vppowercontrol.com/",
+  "current_contact": "Eric Folgueira Rodriguez",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, structured cabling, smart home/automation, networking/IT, serves offices/warehouses/in",
+  "locations_auto": 1,
+  "email_auto": "info@vppowercontrol.com"
+ },
+ {
+  "name": "Zone 1 Security",
+  "website": "https://www.zone1security.com/",
+  "current_contact": "Derek Raful",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, intrusion alarms, alarm monitoring, structured cabling",
+  "locations_auto": "?",
+  "email_auto": "info@zone1security.com"
+ },
+ {
+  "name": "Delphi One Systems Corp",
+  "website": "https://www.delphione.com/",
+  "current_contact": "Francisco J Rodriguez",
+  "current_role": "License holder (DBPR EG)",
+  "services_auto": "CCTV/video surveillance, access control, intrusion alarms, intercom, structured cabling, gates/barriers, nurse call, serves condos/HOA, brands: Axis/Genetec/Kantech/Pelco",
+  "locations_auto": "?",
+  "email_auto": "service@delphione.com"
+ },
+ {
+  "name": "Asinet",
+  "website": "https://www.asinet.com/",
+  "current_contact": "Norge L Pineda",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, fire alarm, structured cabling, gates/barriers, audio/video, smart home/automation, networking/IT, license plate rec",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "Beacon Protection Group, LLC",
+  "website": "https://beaconprotection.com/",
+  "current_contact": "Evaristo Galvez",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, intercom, structured cabling, smart home/automation, remote video monitoring, serves s",
+  "locations_auto": "?",
+  "email_auto": "customercare@beaconprotection.com"
+ },
+ {
+  "name": "Brinks Home - Miami",
+  "website": "https://www.brinkshome.com",
+  "current_contact": "Bob Reedy",
+  "current_role": "Executive Vice President and Chief Operating Officer",
+  "services_auto": "commercial, residential, CCTV/video surveillance, intrusion alarms, alarm monitoring, smart home/automation, networking/IT, serves offices/warehouses/industrial, brands: Brinks",
+  "locations_auto": 1,
+  "email_auto": "?"
+ },
+ {
+  "name": "Es&lvs",
+  "website": "http://www.eslvs.com/",
+  "current_contact": "Douglas Ohallorans Cejudo",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "CCTV/video surveillance, access control, intrusion alarms, fire alarm, structured cabling, networking/IT, mass notification/ERRCS, serves hospitals/healthcare/offices/retail",
+  "locations_auto": 1,
+  "email_auto": "?"
+ },
+ {
+  "name": "Johnson Controls - Miami (Fire)",
+  "website": "https://www.johnsoncontrols.com",
+  "current_contact": "Chris Scalia",
+  "current_role": "Executive Vice President and Chief Human Resources Officer",
+  "services_auto": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, intercom, smart home/automation, remote video monitoring, mass notification/ERRCS, ser",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "Legnasys Technology Inc.",
+  "website": "https://www.legnasys.com/",
+  "current_contact": "Angel Adolfo Alvarez",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, residential, intrusion alarms, alarm monitoring, fire alarm, mass notification/ERRCS, serves schools/hospitals/healthcare/condos/HOA/offices/retail/warehouses/industrial, brands: Edwards",
+  "locations_auto": 1,
+  "email_auto": "?"
+ },
+ {
+  "name": "Security Tech Group, Inc.",
+  "website": "https://www.securitytechfl.com/",
+  "current_contact": "Romel Vivar",
+  "current_role": "License holder (DBPR EG)",
+  "services_auto": "commercial, residential, intrusion alarms, alarm monitoring, serves offices, brands: ADT",
+  "locations_auto": "?",
+  "email_auto": "info@securitytechfl.com"
+ },
+ {
+  "name": "Allied Electrical Services, Inc.",
+  "website": "http://www.alliedelectricalservices.net/",
+  "current_contact": "Steve Pierre",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "commercial, residential, structured cabling, serves warehouses/industrial",
+  "locations_auto": "?",
+  "email_auto": "info@alliedelectricalservices.net"
+ },
+ {
+  "name": "Lsn International LLC",
+  "website": "https://lsninternational.com/",
+  "current_contact": "Lee Eric Mandel",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "serves hospitals/healthcare/hotels",
+  "locations_auto": 1,
+  "email_auto": "info@lsninternational.com"
+ },
+ {
+  "name": "Rrr Electrical LLC",
+  "website": "https://rrrelectrical.com/",
+  "current_contact": "Roberto Del Rosario Rivero",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "serves warehouses/industrial",
+  "locations_auto": 1,
+  "email_auto": "rossario19902@gmail.com"
+ },
+ {
+  "name": "Titan Security Group (Titan Electronics) - Miami",
+  "website": "https://www.titan-security.com",
+  "current_contact": "Mark Apel",
+  "current_role": "President",
+  "services_auto": "commercial, residential, access control, intrusion alarms, guard services, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/government/retail/warehouses/industrial",
+  "locations_auto": 5,
+  "email_auto": "work@titan-security.com"
+ },
+ {
+  "name": "Intellitech Systems, Inc.",
+  "website": "https://intellitechsystemsinc.com/",
+  "current_contact": "Frank Fritz",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "(per listing) Systems integrators, Access control",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "Electronic Alarms, Inc.",
+  "website": "https://www.electronicalarmsinc.com/",
+  "current_contact": "Jose D Lima",
+  "current_role": "License holder (DBPR EG)",
+  "services_auto": "residential, intrusion alarms, alarm monitoring, serves offices, brands: DSC",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "Ert Security, Corp",
+  "website": "https://ertsecurity.com/",
+  "current_contact": "Eddy Reyes",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "residential, access control, intrusion alarms, alarm monitoring, intercom, structured cabling, smart home/automation",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "Flying A Security Systems, Inc.",
+  "website": "https://www.flyinga.net/",
+  "current_contact": "Woodman Joshua Alderman",
+  "current_role": "License holder (DBPR EF)",
+  "services_auto": "residential, CCTV/video surveillance, intrusion alarms, alarm monitoring, fire alarm, intercom, audio/video, smart home/automation, brands: Hanwha/Honeywell",
+  "locations_auto": "?",
+  "email_auto": "info@flyinga.net"
+ },
+ {
+  "name": "Inhoome INC",
+  "website": "https://www.inhoome.com/",
+  "current_contact": "Roberto Miguel Larreal",
+  "current_role": "License holder (DBPR EG)",
+  "services_auto": "?",
+  "locations_auto": "?",
+  "email_auto": "?"
+ },
+ {
+  "name": "Secure IT Limited",
+  "website": "http://www.secureittrinidad.com",
+  "current_contact": "",
+  "current_role": "",
+  "services_auto": "residential, intrusion alarms, smart home/automation, serves government",
+  "locations_auto": "?",
+  "email_auto": "sdesilva@secureittrinidad.com"
+ }
+]

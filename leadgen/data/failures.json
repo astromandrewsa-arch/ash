@@ -1,0 +1,122 @@
+[
+ [
+  "TMA member directory (T1)",
+  "https://my.tma.us/tmamemberdirectory",
+  "Cloudflare bot check (403) for plain requests and headless browser; not bypassed",
+  "Open in a normal browser, filter USA > Florida, export or copy Miami-Dade members (Miami, Doral, Hialeah, Medley, Miami Lakes, Coral Gables, Miami Beach, Homestead) into T1_TMA_Members.xlsx"
+ ],
+ [
+  "TMA Five Diamond + New Members lists (T1)",
+  "https://my.tma.us/fivediamondmonitoringcenters ; https://my.tma.us/20262027tmafivediamondapprovedcompanies ; https://themonitoringassociation.growthzoneapp.com/newtmamembers/",
+  "Same Cloudflare block",
+  "Browse by hand for Florida entries"
+ ],
+ [
+  "TMA: Arco Security Central Station Corp. (T1)",
+  "https://arcoweb.com",
+  "Trade press says Owen Security Solutions bought Arco Security Group (2025)",
+  "Confirm current owner/status before calling"
+ ],
+ [
+  "Qolsys dealer locator (T2)",
+  "https://www.iqsecurityproducts.com/find-a-dealer",
+  "Data host code.metalocator.com disallows robots",
+  "Search ZIPs 33134, 33139, 33141, 33030, 33160 in a browser; add dealers to T2_Manufacturer_Dealers.xlsx"
+ ],
+ [
+  "Alarm.com dealer finder (T2)",
+  "https://www.alarm.com/get_started",
+  "robots.txt disallow; asks for your contact details",
+  "Only usable by a person; optional"
+ ],
+ [
+  "ADT authorized dealers (T2)",
+  "https://www.adt.com/local/fl/miami",
+  "403 (Akamai) to this environment; no public dealer locator",
+  "Check third-party leads by hand: City Alarms (Doral), Security Tech Group (Miami), Home Security Concepts, SafeStreets"
+ ],
+ [
+  "Honeywell commercial security locator (T2)",
+  "https://www.bullseyelocations.com/pages/honeywellcomsec",
+  "Cloudflare 403; read via a summarizing fetch",
+  "Spot-check ZIP 33134, radius 250 in a browser"
+ ],
+ [
+  "Avigilon / Avigilon Alta partner locator (T2)",
+  "https://www.avigilon.com/partner-locator",
+  "Lead form behind an Incapsula challenge",
+  "Ask Motorola/Avigilon channel team for Miami-Dade partners"
+ ],
+ [
+  "Brivo, DMP, Bosch/Keenfinity, Napco, Axis, Hanwha, Eagle Eye, Rhombus, Genetec lower tiers (T2)",
+  "brand sites",
+  "No public dealer list (lead forms or rep lists only)",
+  "Ask each brand's Florida regional sales manager for a Miami-Dade dealer list"
+ ],
+ [
+  "Dicsan Technology (T2 candidate)",
+  "https://dicsan.com",
+  "TLS error / 502; appears to claim Avigilon and Hanwha partnership",
+  "Verify by hand; add if confirmed"
+ ],
+ [
+  "Empire State Security (T2 candidate)",
+  "https://empirestatesecurity.com/brands",
+  "Brands page renders client-side; claims Avigilon/Bosch/Napco",
+  "Verify by hand (Plantation, serves Miami-Dade)"
+ ],
+ [
+  "BOMA Miami-Dade member directory (T3)",
+  "https://members.bomamiamidade.org/member-directory",
+  "Cloudflare 403; not indexed by search engines",
+  "Browse security / life safety / access control categories by hand"
+ ],
+ [
+  "securityinformed.com / sourcesecurity.com profiles (T3)",
+  "https://www.securityinformed.com/companies/miami-security-companies/directory.html",
+  "Profile pages blocked (Cloudflare) after 2-3 loads",
+  "Open profile URLs (in leadgen/data/directories.json notes) for ZIPs and websites"
+ ],
+ [
+  "DBPR interactive license search (T3)",
+  "https://www.myfloridalicense.com/wl11.asp",
+  "Connection reset from this environment",
+  "Not needed: the public licensee download was used instead"
+ ],
+ [
+  "Sunbiz (Florida company registry)",
+  "https://search.sunbiz.org",
+  "Cloudflare 403",
+  "Use by hand to confirm officers/addresses if needed"
+ ],
+ [
+  "Job boards (T3 hiring)",
+  "Indeed / LinkedIn / ZipRecruiter / Glassdoor / SimplyHired",
+  "Login wall, bot blocks or robots.txt",
+  "Search 'security technician Miami' / 'security sales Miami' by hand for newer posts"
+ ],
+ [
+  "WISE Building Technologies job post (T3 hiring)",
+  "https://www.wisebt.com",
+  "Job-hosting page would not load",
+  "Confirm the security/fire alarm technician opening"
+ ],
+ [
+  "Alarm Exchange: Protective Security Solutions Inc. (T2 top pick)",
+  "-",
+  "Company website failed (TLS/503)",
+  "Confirm services (cameras?) by hand"
+ ],
+ [
+  "web.archive.org (all sources)",
+  "https://web.archive.org",
+  "Unreachable from this cloud environment (timeouts)",
+  "Use archived copies by hand if a live page disappears"
+ ],
+ [
+  "Web search allowance",
+  "-",
+  "Exhausted by research agents near the end of the run",
+  "Some websites/contacts could not be searched; 'website ?' rows can be looked up by hand"
+ ]
+]

@@ -80,7 +80,7 @@ def class_label(cc):
 
 BIZ = r'\b(LLC|INC|CORP|CONDO|CONDOMINIUM|ASSOC|ASSOCIATION|HOTEL|CENTER|CITY OF|COUNTY|SCHOOL|UNIVERSITY|MEDICAL|HOSPITAL|CHURCH|TEMPLE|ACADEMY|LP|L\.P\.|LTD|PARTNERS|HOLDINGS|PROPERTIES|PROPERTY|OWNER|TRUST CO|BANK|CLUB|RESORT|APARTMENTS|TOWER|PLAZA|MARINA|FOUNDATION)\b'
 def biz_name(s):
-    s = (s or '').strip().strip(',')
+    s = re.split(r'\s%|\bC/O\b|\bc/o\b|\bATTN\b', (s or ''))[0].strip().strip(',')
     return s if re.search(BIZ, s.upper()) else ''
 
 def fmt_range(dates):
@@ -147,7 +147,9 @@ def build_mb():
                 owner = biz_name(r.get('owner_first_line'))
                 lab = class_label(r.get('class_code'))
                 addr = re.sub(r'\s+', ' ', (p.get('AddressDisplay') or '').split(' Miami Beach')[0].split(' MIAMI BEACH')[0]).strip()
-                desc = re.sub(r'\s+', ' ', (p.get('Description') or ''))[:90]
+                addr = re.sub(r'\s*Unit:\s*(?!COMMON)\S+', ' (unit in building)', addr)
+                desc = re.sub(r'\s+', ' ', (p.get('Description') or ''))
+                desc = re.sub(r'(UNIT|APT|APARTMENT)\s*(#|NO\.?)?\s*:?\s*[\w-]+', r'\1 #', desc, flags=re.I)[:90]
                 bits = [b for b in [addr, owner, lab] if b]
                 ex.append(' / '.join(bits) + (f' - "{desc}"' if desc else ''))
         exu = list(dict.fromkeys(ex))
@@ -189,6 +191,7 @@ def build_cg():
             if resid:
                 continue
             addr = re.sub(r'\s+', ' ', (p.get('AddressDisplay') or '').split(' Coral Gables')[0]).strip()
+            addr = re.sub(r'\s*Unit:\s*\S+', ' (suite)', addr)
             desc = re.sub(r'\s+', ' ', (p.get('Description') or ''))[:100]
             if re.search(r'UNIVERSITY|UM |HOSPITAL|HOTEL|TOWER|PLAZA|BANK|SCHOOL|MALL|MERRICK|OFFICE|SUITE|RESTAURANT|CONDO|GARAGE|CITY OF|POLICE|ACCESS|CAMERA|CCTV|BDA', desc.upper()):
                 exs.append(f'{addr} - "{desc}"')

@@ -226,3 +226,45 @@ add('Beth Jacob High School', S, 'Orthodox', '1110 NE 163rd Street, North Miami 
 add('Neytz Hachochma School', S, 'Orthodox', '901 NE 167th Street, North Miami Beach, FL', 'North Miami Beach', '33162', 'http://neytz.com/',
     '', 'Dolly Aizenman', 'Director (Miami-Dade County private school listing)', MDC, 'County layer: KG-12, enrollment 20.', '', MDC + ' ; ' + FED_E + 'neytz_hachochma',
     'Federation directory shows an older address (152 NW 165 St). Website did not resolve through the proxy.')
+
+# ---------------- South Dade, Coral Gables, Downtown: batch 5 ----------------
+add('Temple Judea', H, 'Reform', '5500 Granada Boulevard, Coral Gables, FL', 'Coral Gables', '33146', 'https://www.judeagables.org/',
+    'info@judeagables.org', 'Rabbi Judith Lazarus Siegal', 'Senior Rabbi', 'https://www.judeagables.org/clergy.html', '', '',
+    'https://www.judeagables.org/ ; https://www.judeagables.org/professional-staff1.html ; ' + URJ + ' ; ' + FED_S + 'temple_judea',
+    'Read via WebFetch (site returns 406 to scripts). URJ member. Executive Director Sharon Israel Moskovitz (s.israel@judeagables.org); Director of Operations Janice Garcia. Campus includes Margaux Early Childhood School (separate record).')
+add('Margaux Early Childhood School at Temple Judea', S, 'Reform', '5500 Granada Boulevard, Coral Gables, FL', 'Coral Gables', '33146', 'https://www.judeagables.org/margaux',
+    'margauxschool@judeagables.org', 'Jackie Vera', 'Early Childhood Director', 'https://www.judeagables.org/professional-staff1.html', '', '',
+    'https://www.judeagables.org/professional-staff1.html', 'Read via WebFetch. Same campus as Temple Judea.')
+add('Bet Shira Congregation', H, 'Conservative', '7500 SW 120th Street, Miami, FL', 'Pinecrest', '33156', 'https://www.betshira.org/',
+    'info@betshira.org', 'Rabbi Jesse Charyn', 'Rabbi', 'https://www.betshira.org/', 'USCJ directory size class: Small (200-399).', '',
+    'https://www.betshira.org/staff.html ; ' + USCJ + ' ; ' + FED_S + 'bet_shira_congregation',
+    'Read via WebFetch (site returns 406 to scripts). USCJ member. Executive Director Elyse Hyman (ehyman@betshira.org). County polling place.')
+add('Bet Shira Early Childhood Center', S, 'Conservative', '7500 SW 120th Street, Miami, FL', 'Pinecrest', '33156', 'https://www.betshirapreschool.org/',
+    'preschool@betshira.org', 'Dorit Kadouri', 'Early Childhood Education Director', 'https://www.betshira.org/staff.html', 'County layer: PK-KG, enrollment 58.', '',
+    'https://www.betshira.org/staff.html ; ' + MDC, 'Same campus as Bet Shira Congregation.')
+add('Temple Beth Am', H, 'Reform', '5950 North Kendall Drive, Pinecrest, FL', 'Pinecrest', '33156', 'https://www.tbam.org/',
+    'info@tbam.org', 'Rabbi Jeremy Barras', 'Senior Rabbi', 'https://www.tbam.org/temple/staff-directory/', 'Janet and Richard Yulman Campus (site).',
+    'Staff directory lists Lior Edry, Security Director; a site post describes clergy meeting with City of Miami Police and Homeland Security officials about rising threats.',
+    'https://www.tbam.org/temple/staff-directory/ ; ' + URJ + ' ; ' + FED_S + 'temple_beth_am', 'URJ member. Executive Director Sharon Levi. Campus includes Temple Beth Am Day School (separate record). Strong IRIS fit.')
+add('Temple Beth Am Day School', S, 'Reform', '5950 North Kendall Drive, Pinecrest, FL', 'Pinecrest', '33156', 'https://www.tbam.org/',
+    'info@tbam.org', 'Nora Anderson', 'Head of Day School', 'https://www.tbam.org/temple/staff-directory/', 'County layer: PK-05, enrollment 324.',
+    'Temple has an in-house Security Director (Lior Edry).', 'https://www.tbam.org/temple/staff-directory/ ; ' + MDC + ' ; ' + FED_E + 'temple_beth_am_day_school', 'Same campus as Temple Beth Am.')
+add('Center for Jewish Life at Beth David (Beth David Congregation)', H, 'Conservative', '2625 SW 3rd Avenue, Miami, FL', 'City of Miami', '33129', 'https://www.centerbd.org/',
+    'info@centerbd.org', 'Rabbi Julie Jacobs', 'Senior Rabbi', 'https://www.centerbd.org/about', 'Congregation traces to 1912 (B\'nai Zion) per site history.', '',
+    'https://www.centerbd.org/about ; ' + FED_S + 'beth_david_congregation', 'Executive Vice President Rodrigo Wolf Yadlin (site). Campus houses the Gordon School (separate record). Federation lists denomination as "Jewish+".')
+add('Gordon School of Beth David', S, 'Conservative', '2625 SW 3rd Avenue, Miami, FL', 'City of Miami', '33129', 'https://www.gordonschoolmiami.org/',
+    'office@gordonschoolmiami.org', 'Veronica Alter', 'Day School Director', 'https://www.gordonschoolmiami.org/about', 'County layer: PK-05, enrollment 158; early childhood center began 1986.', '',
+    'https://www.gordonschoolmiami.org/about ; ' + MDC + ' ; ' + FED_E + 'gordon_school_of_beth_david_congregation',
+    'CEO: Rabbi Julie Jacobs; Principal of Early Childhood Center: Sara Zamikoff (about page).')
+add('Young Israel of Kendall', H, 'Orthodox', '7880 SW 112th Street, Miami, FL', 'Pinecrest', '33156', 'https://yikendall.com/',
+    'admin@yikendall.com', 'Rabbi Hershel D. Becker', 'Rabbi', 'https://yikendall.com/about/', '', '', 'https://yikendall.com/contact-us/ ; ' + OU + ' ; ' + FED_S + 'young_israel_of_kendall',
+    'OU member. Municipality inferred from ZIP 33156 (mailing city Miami); verify Pinecrest vs. unincorporated Kendall.')
+add('Congregation Dor Chadash', H, 'Reform & Conservative', '9560 SW 107th Avenue, Suite 202, Miami, FL (mailing)', 'Unincorporated Miami-Dade (Kendall)', '33176', 'https://www.dorchadashmiami.org/',
+    '', '', '', '', '', '', 'https://www.dorchadashmiami.org/ ; ' + FED_S + 'congregation_dor_chadash_miami',
+    'Site gives only a mailing suite address; federation lists 8770 SW 131st Street. May not own a dedicated building - verify.')
+add('Dave and Mary Alper JCC (Early Childhood Development Center)', S, 'JCC (community)', '11155 SW 112th Avenue, Miami, FL', 'Unincorporated Miami-Dade (Kendall)', '33176', 'https://www.alperjcc.org/',
+    '', 'Irene Tzanani', 'Chief Executive Officer', 'https://www.alperjcc.org/about-us/leadership', 'Site: impacts more than 140,000 residents annually; Early Childhood Development Center serves more than 150 students a year.', '',
+    'https://www.alperjcc.org/about-us/leadership ; ' + OU + ' ; ' + FED_E + 'dave_and_mary_alper_jewish_community_center_jcc', 'JCC campus; typed School for its preschool. County layer also lists Greenfield Day School at this address.')
+add('El Centro de Estudios Judios - Torat Emet (CEJTE)', H, 'Sephardic Orthodox', '1221 SW 104th Avenue, Miami, FL', 'Unincorporated Miami-Dade (Westchester area)', '33174', 'https://cejte.org/',
+    'info@cejte.org', '', '', '', '', '', 'https://cejte.org/contact/ ; ' + FED_S + 'el_centro_de_estudios_judios___torat_emet',
+    'Spanish-language Sephardic congregation/study center. Site names Rabbi Rigoberto Emmanuel Vinas as author of a Haggadah commentary but states no title.')

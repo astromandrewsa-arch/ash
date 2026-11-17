@@ -81,6 +81,11 @@ def main():
         if named:
             pick = next((r for r in named if r.get("Contact Role") not in ("Listed contact", "") and "License holder" not in r.get("Contact Role", "")), named[0])
             m["Point of Contact"], m["Contact Role"], m["Contact Source"] = pick["Point of Contact"], pick["Contact Role"], pick["Contact Source"]
+        vo = next((r["_verified_owner"] for r in g if r.get("_verified_owner")), None)
+        if vo and (not m["Point of Contact"] or m["Contact Role"] in ("Listed contact", "") or m["Contact Role"].startswith("License holder")):
+            if not m["Point of Contact"] or norm_name(m["Point of Contact"]) != norm_name(vo[0]):
+                m["Point of Contact"], m["Contact Role"], m["Contact Source"] = vo
+        m["_notes"] = next((r["_verified_notes"] for r in g if r.get("_verified_notes")), "")
         # merge services: longest real one
         svc = [r["Services Listed on Website"] for r in g if r.get("Services Listed on Website") not in ("?", "")]
         if svc:
@@ -112,6 +117,44 @@ def reason(r):
     if r["Point of Contact"]:
         bits.append(f"contact: {r['Point of Contact']} ({r['Contact Role']})")
     return "; ".join(bits)
+
+
+def write_master(rows, loaded, top, failures, counts):
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Master"
+    cols = COLUMNS + ["Found In", "Best Tier"]
+    md = sum(1 for r in rows if r["_region"] == "Miami-Dade")
+    write_sheet(ws, f"MASTER - de-duplicated dealers/integrators from all IRIS lead files ({len(rows)} companies; {md} in Miami-Dade). Built from leads/*.xlsx and docs/*.docx in this folder.",
+                "Tiers: T1 = trade-association members (IAF, TMA; super top priority); T2 = warm (manufacturer dealer locators, Alarm Exchange); T3 = cold (directories, DBPR licenses, permits/bids, hiring). Best Tier = warmest file the company appears in. Sorted by Best Tier, then Fit Score (then Miami-Dade first).",
+                f"Date collected: {TODAY}. Florida only; vendors, associations, end users and out-of-state firms are left out (they stay in their source files). Values merged across files: first non-blank value from the warmest source; named person with a stated role preferred.",
+                rows, columns=cols)
+    s2 = wb.create_sheet("Summary")
+    r = 1
+    def put(row, vals, bold=False):
+        for j, v in enumerate(vals, 1):
+            c = s2.cell(row=row, column=j, value=v)
+            if bold:
+                c.font = Font(bold=True)
+    put(r, ["IRIS Miami-Dade dealer leads - summary", "", f"Date: {TODAY}"], True); r += 2
+    put(r, ["ENTRY COUNTS PER FILE"], True); r += 1
+    put(r, ["File", "Entries in file", "Of which Miami-Dade", "Rows feeding Master"], True); r += 1
+    for f, n, nmd in counts:
+        put(r, [f, n, nmd, loaded.get(f, "-")]); r += 1
+    put(r, ["leads/Master.xlsx", len(rows), md, ""]); r += 2
+    put(r, ["TOP 20 MASTER LEADS"], True); r += 1
+    put(r, ["#", "Name", "Municipality", "Best Tier", "Fit Score", "Point of Contact", "Why (one line)"], True); r += 1
+    for i, (t, why) in enumerate(top, 1):
+        put(r, [i, t["Name"], t["Municipality"], t["Best Tier"], t["Fit Score"], (t["Point of Contact"] + (" (" + t["Contact Role"] + ")" if t["Contact Role"] else "")) if t["Point of Contact"] else "", why]); r += 1
+    r += 1
+    put(r, ["SOURCES THAT FAILED OR NEED MANUAL WORK"], True); r += 1
+    put(r, ["Source", "URL", "Problem", "What to do by hand"], True); r += 1
+    for x in failures:
+        put(r, list(x)); r += 1
+    for j, w in enumerate([8, 40, 22, 40, 10, 30, 110], 1):
+        s2.column_dimensions[get_column_letter(j)].width = w
+    s2.column_dimensions["A"].width = 34
+    wb.save("../leads/Master.xlsx")
 
 
 if __name__ == "__main__":
