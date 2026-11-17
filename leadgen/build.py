@@ -95,7 +95,7 @@ def clean_name(n):
     n = re.sub(r"\s+", " ", (n or "").strip())
     if n.isupper() and len(n) > 4:
         small = {"OF", "AND", "THE", "FOR"}
-        n = " ".join(w if w in ("LLC", "INC", "CCTV", "USA", "ADT", "DMP", "IT", "AV", "LV", "FL") or len(w) <= 2 and w not in small
+        n = " ".join(w if w.strip(",.") in ("LLC", "INC", "CCTV", "USA", "ADT", "DMP", "IT", "AV", "LV", "FL", "FCS", "CMS", "AT&I") or len(w) <= 2 and w not in small
                      else w.capitalize() if w not in small else w.lower() for w in n.split())
     return n
 

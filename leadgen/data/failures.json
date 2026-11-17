@@ -2,14 +2,14 @@
  [
   "TMA member directory (T1)",
   "https://my.tma.us/tmamemberdirectory",
-  "Cloudflare bot check (403) for plain requests and headless browser; not bypassed",
-  "Open in a normal browser, filter USA > Florida, export or copy Miami-Dade members (Miami, Doral, Hialeah, Medley, Miami Lakes, Coral Gables, Miami Beach, Homestead) into T1_TMA_Members.xlsx"
+  "Blocked to automation - RESOLVED: Florida list exported by hand on 2026-11-17 and merged",
+  "Done"
  ],
  [
   "TMA Five Diamond + New Members lists (T1)",
   "https://my.tma.us/fivediamondmonitoringcenters ; https://my.tma.us/20262027tmafivediamondapprovedcompanies ; https://themonitoringassociation.growthzoneapp.com/newtmamembers/",
-  "Same Cloudflare block",
-  "Browse by hand for Florida entries"
+  "Same block; the pasted Five Diamond page was sorted by distance from a non-Florida location (Kastle, Mobile Video Guard)",
+  "Optional: filter the Five Diamond list to Florida and paste it"
  ],
  [
   "TMA: Arco Security Central Station Corp. (T1)",
@@ -20,8 +20,8 @@
  [
   "Qolsys dealer locator (T2)",
   "https://www.iqsecurityproducts.com/find-a-dealer",
-  "Data host code.metalocator.com disallows robots",
-  "Search ZIPs 33134, 33139, 33141, 33030, 33160 in a browser; add dealers to T2_Manufacturer_Dealers.xlsx"
+  "robots-disallowed data host - PARTLY RESOLVED: first 20 of 63 results (to ~37 mi) copied by hand and merged",
+  "Optional: copy results 21-63 (mostly Broward/Palm Beach)"
  ],
  [
   "Alarm.com dealer finder (T2)",
@@ -68,8 +68,8 @@
  [
   "BOMA Miami-Dade member directory (T3)",
   "https://members.bomamiamidade.org/member-directory",
-  "Cloudflare 403; not indexed by search engines",
-  "Browse security / life safety / access control categories by hand"
+  "Cloudflare 403 - RESOLVED: security / life safety / access control categories exported by hand and merged",
+  "Optional: open the 6 person-only listings (Scot Barry, Joe Garrett, Joel Leffler, Monica Lopez, Vanessa Pauley, Laura Prewett) to see their companies"
  ],
  [
   "securityinformed.com / sourcesecurity.com profiles (T3)",

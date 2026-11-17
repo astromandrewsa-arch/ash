@@ -61,9 +61,9 @@ Also worth a call even though they miss the Miami-Dade top 10:
 | --- | --- | --- | --- |
 | 1 | Manufacturer dealer locators | leads/T2_Manufacturer_Dealers.xlsx | done |
 | 2 | IAF members | leads/T1_IAF_Members.xlsx | done |
-| 3 | TMA members | leads/T1_TMA_Members.xlsx | done (partial - directory blocked) |
+| 3 | TMA members | leads/T1_TMA_Members.xlsx | done (Florida export added by hand) |
 | 4 | Alarm Exchange | docs/T2_Alarm_Exchange.docx | done |
-| 5 | Directories | leads/T3_Directories.xlsx | done (partial - profiles/BOMA blocked) |
+| 5 | Directories | leads/T3_Directories.xlsx | done (BOMA added by hand; profiles still blocked) |
 | 5 | Licenses (DBPR) | leads/T3_Licenses.xlsx | done |
 | 5 | Permits & bids | docs/T3_Permits_and_Bids.docx | done (Coral Gables contractors need login) |
 | 5 | Hiring | docs/T3_Hiring.docx | done |
@@ -156,3 +156,9 @@ Also worth a call even though they miss the Miami-Dade top 10:
 - 619 Florida companies, de-duplicated by website domain and normalized name within the same region (so Security 101 Miami and Security 101 Orlando, or Wiginton's branches, stay separate). Best Tier = warmest file a company appears in. Sorted by Best Tier, then Fit Score, then Miami-Dade first.
 - DECISION: an extra "Notes" column at the end of Master carries caveats from the hand check (acquired, fire-only, out of county, RapidSOS-owned, etc.).
 - DECISION: the top 20 on the Summary tab = Miami-Dade dealers/integrators that offer cameras, ranked by Fit Score plus a tier bonus (T1 +2, T2 +1), then named contact, then number of files. National firms and those flagged fire-only, residential-only, out of county or RapidSOS/Convergint-owned are left out.
+
+### Update 2026-11-17 (afternoon): data supplied by hand
+- TMA: the Florida filter of the TMA member directory (22 listings) was pasted in and is now the source for T1_TMA_Members.xlsx (website, address and the directory listing URL for each). New: CSR Privacy Solutions (Jensen Beach) and Security Sales and Solutions / SS&SI Dealer Network (Deltona, a dealer network). Three Florida Five Diamond centers not in that export (Scutum Digital, COPS Monitoring FL, Life Safety Monitoring) are kept and flagged. Dropped because they are not in the Florida export: Prizm Fire & Security (self-claim only), Johnson Controls (Boca), M2M Services (same company as Residence Control EOOD). The pasted Five Diamond page was sorted by distance from a non-Florida location, so it added nothing for Florida.
+- Qolsys: 20 dealers from the find-a-dealer locator (first 20 of 63 results) added to T2_Manufacturer_Dealers.xlsx (13 in Miami-Dade, 7 in Broward). Silmar, TechBTC and Wesco/Anixter are distributors (Software/Vendor). Where the locator shows "alarm.com" as the website (APS, Prizm), no website was recorded.
+- BOMA Miami-Dade: 6 companies from the security / life safety / access control categories added to T3_Directories.xlsx, each with the person named on the listing (Kastle - Claudia Grene; Regions Security Services - David Rodriguez-Baez; Security Alliance - Angel Rosado; PBM Southeast - Dan Tokofsky; Allied Universal - Javier Vazquez; Titan Security Group). Six listings show a person but no company; they are in a section under the table. Mostly guard companies and nationals.
+- No phone numbers from the pasted data were stored.

@@ -14,13 +14,15 @@
   "ZIP Code": "33177",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 5,
-  "Source URL": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL ; https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv ; https://aressco.com/careers.php",
+  "Source URL": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL ; https://www.iqsecurityproducts.com/find-a-dealer ; https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv ; https://aressco.com/careers.php",
   "_notes": "Family-owned since 1979; runs its own UL-listed local central station in South Miami-Dade; all installs by own employees (no subs); site has a Client List page and an Avigilon demo page. Email is behind a 'Click to email us' script, not printed.",
-  "Found In": "T1_IAF_Members.xlsx, T3_Licenses.xlsx, T3_Hiring.docx",
+  "Found In": "T1_IAF_Members.xlsx, T2_Manufacturer_Dealers.xlsx, T3_Licenses.xlsx, T3_Hiring.docx",
   "Best Tier": "T1",
   "_region": "Miami-Dade",
-  "_n_sources": 3,
-  "_brands": []
+  "_n_sources": 4,
+  "_brands": [
+   "Qolsys"
+  ]
  },
  {
   "Name": "Horizon Electronics Inc",
@@ -83,13 +85,15 @@
   "ZIP Code": "33155",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 5,
-  "Source URL": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL",
+  "Source URL": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL ; https://www.iqsecurityproducts.com/find-a-dealer",
   "_notes": "IAF Past President and South Region (Miami-Dade/Broward) director Diego R. del Pino is with APS Security (iaf-safe.org/directors.php). Family-owned since 1987 by the del Pino family (three generations; no individual named on site, so Eric del Pino is unconfirmed); UL-listed monitoring, remote video monitoring with talk-down, LPR; AV division AVX (avxmiami.com). FL license EF0000574.",
-  "Found In": "T1_IAF_Members.xlsx",
+  "Found In": "T1_IAF_Members.xlsx, T2_Manufacturer_Dealers.xlsx",
   "Best Tier": "T1",
   "_region": "Miami-Dade",
-  "_n_sources": 1,
-  "_brands": []
+  "_n_sources": 2,
+  "_brands": [
+   "Qolsys"
+  ]
  },
  {
   "Name": "Alarm Grid Inc",
@@ -322,7 +326,7 @@
   "ZIP Code": "33462",
   "Preferred Zone (Y/N)": "Y",
   "Fit Score": 5,
-  "Source URL": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL ; https://my.tma.us/tmamemberdirectory/FindStartsWith?term=%23%21",
+  "Source URL": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL ; https://my.tma.us/tmamemberdirectory/Details/guardian-hawk-security-2740175",
   "_notes": "",
   "Found In": "T1_IAF_Members.xlsx, T1_TMA_Members.xlsx",
   "Best Tier": "T1",
@@ -532,29 +536,6 @@
   "Source URL": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL",
   "_notes": "",
   "Found In": "T1_IAF_Members.xlsx",
-  "Best Tier": "T1",
-  "_region": "Other FL",
-  "_n_sources": 1,
-  "_brands": []
- },
- {
-  "Name": "Prizm Fire & Security",
-  "Point of Contact": "",
-  "Contact Role": "",
-  "Contact Source": "",
-  "Municipality": "?",
-  "State": "FL",
-  "Website": "https://www.prizmalarms.com/",
-  "Email": "contact@prizmalarms.com",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, intrusion alarms, alarm monitoring, fire alarm, smart home/automation, networking/IT, remote video monitoring, serves hospitals/healthcare/offices, brands: Alarm.com/Qolsys",
-  "Number of Locations": 1,
-  "ZIP Code": "?",
-  "Preferred Zone (Y/N)": "Y",
-  "Fit Score": 5,
-  "Source URL": "https://www.prizmalarms.com/commercial-fire-alarm/",
-  "_notes": "",
-  "Found In": "T1_TMA_Members.xlsx",
   "Best Tier": "T1",
   "_region": "Other FL",
   "_n_sources": 1,
@@ -778,32 +759,6 @@
   "_brands": []
  },
  {
-  "Name": "Everon",
-  "Point of Contact": "Don Young",
-  "Contact Role": "TMA Past President",
-  "Contact Source": "https://tma.us/about/our-leadership/executive-committee-board/",
-  "Municipality": "Boca Raton",
-  "State": "FL",
-  "Website": "https://www.everonsolutions.com/",
-  "Email": "?",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, smart home/automation, remote video monitoring, mass notification/ERRCS, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/government/retail/warehouses/industrial, brands: ADT/Milestone/Verkada",
-  "Number of Locations": 74,
-  "ZIP Code": "33431",
-  "Preferred Zone (Y/N)": "Y",
-  "Fit Score": 4,
-  "Source URL": "https://my.tma.us/fivediamondmonitoringcenters/Details/everon-3670462 | https://my.tma.us/tmamemberdirectory/Details/everon-3584030 ; https://www.milestonesys.com/where-to-buy-reseller-and-distributor/ ; https://www.verkada.com/find-partners/?radius=100&search=33134 ; https://www.milestonesys.com/where-to-buy-reseller-and-distributor/ ; https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search | https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/miamidade_permit_data/FeatureServer/0 | https://pdfs.dadeschools.net/Bdarch/2026/Bd090926/agenda/e143.pdf",
-  "_notes": "",
-  "Found In": "T1_TMA_Members.xlsx, T2_Manufacturer_Dealers.xlsx, T3_Permits_and_Bids.docx",
-  "Best Tier": "T1",
-  "_region": "Palm Beach",
-  "_n_sources": 3,
-  "_brands": [
-   "Milestone",
-   "Verkada"
-  ]
- },
- {
   "Name": "Intelli-Tec Security",
   "Point of Contact": "Carmine Pizzo",
   "Contact Role": "President",
@@ -968,9 +923,9 @@
  },
  {
   "Name": "Redwire LLC",
-  "Point of Contact": "Summer Anderson",
-  "Contact Role": "Listed contact",
-  "Contact Source": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL",
+  "Point of Contact": "Doug Smith",
+  "Contact Role": "Owner",
+  "Contact Source": "https://www.redwire.com/about/people/",
   "Municipality": "Tallahassee",
   "State": "FL",
   "Website": "http://www.redwire.com",
@@ -981,9 +936,32 @@
   "ZIP Code": "32303",
   "Preferred Zone (Y/N)": "N",
   "Fit Score": 4,
-  "Source URL": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL ; https://my.tma.us/tmamemberdirectory/FindStartsWith",
+  "Source URL": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL ; https://my.tma.us/tmamemberdirectory/Details/redwire-4825208",
   "_notes": "",
   "Found In": "T1_IAF_Members.xlsx, T1_TMA_Members.xlsx",
+  "Best Tier": "T1",
+  "_region": "Other FL",
+  "_n_sources": 2,
+  "_brands": []
+ },
+ {
+  "Name": "Security Alarm Corporation",
+  "Point of Contact": "Jennifer Mercer",
+  "Contact Role": "Listed contact",
+  "Contact Source": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL",
+  "Municipality": "Port Charlotte",
+  "State": "FL",
+  "Website": "http://www.securityalarmcorp.com/",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, smart home/automation, mass notification/ERRCS, nurse call, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/government/retail/warehouses/industrial, brands: Alarm.com/Brivo/ButterflyMX/Hanwha/Hanwha Vision/OpenEye/Qolsys/Rhombus/Verkada",
+  "Number of Locations": 2,
+  "ZIP Code": "33948",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 4,
+  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/security-alarm-corporation-2740088 ; https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL",
+  "_notes": "",
+  "Found In": "T1_TMA_Members.xlsx, T1_IAF_Members.xlsx",
   "Best Tier": "T1",
   "_region": "Other FL",
   "_n_sources": 2,
@@ -1519,6 +1497,29 @@
   "_brands": []
  },
  {
+  "Name": "Security Sales and Solutions Inc. / DBA SS&SI Dealer Network",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Deltona",
+  "State": "FL",
+  "Website": "https://www.ssandsi.com/",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, fire alarm, intercom, structured cabling, gates/barriers, smart home/automation, networking/IT, license plate recognition, serves schools/offices/warehouses/industrial, brands: 2GIG/Aiphone/Alarm.com/Digital Watchdog/DSC/Elk/Hanwha/Hanwha Vision/Honeywell/Qolsys/Uniview",
+  "Number of Locations": 3,
+  "ZIP Code": "?",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 4,
+  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/security-sales-and-solutions-inc-dba-ss-si-dealer-network-2740080",
+  "_notes": "",
+  "Found In": "T1_TMA_Members.xlsx",
+  "Best Tier": "T1",
+  "_region": "Other FL",
+  "_n_sources": 1,
+  "_brands": []
+ },
+ {
   "Name": "Sourcelink ACQS LLC dba Signal 21 Security Systems",
   "Point of Contact": "Jeannie Devlin",
   "Contact Role": "Listed contact",
@@ -1686,7 +1687,7 @@
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
   "Municipality": "Unincorporated Miami-Dade",
   "State": "FL",
-  "Website": "http://arcoweb.com",
+  "Website": "http://www.arcoweb.com/",
   "Email": "central@arcoweb.com",
   "Business Type": "Monitoring Center",
   "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, serves residential/commercial/industrial/financial/marine/government (federal, state, local)/mobile",
@@ -1694,7 +1695,7 @@
   "ZIP Code": "33165",
   "Preferred Zone (Y/N)": "N",
   "Fit Score": 3,
-  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/arco-security-central-station-corp-3966856 | https://my.tma.us/newtmamembers/Details/arco-security-central-station-corp-4700978 ; https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
+  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/arco-security-central-station-corp-3966856 ; https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
   "_notes": "Primarily a wholesale central station ('Pure Wholesale', 'Dealer Support Services' at support@arcoweb.com) operating since 1970; consulting and monitoring for burglar, fire, video and access systems. A monitoring partner for dealers rather than a typical installer. arcoweb.com redirects to a netsolhost.com address. No people named.",
   "Found In": "T1_TMA_Members.xlsx, T3_Licenses.xlsx",
   "Best Tier": "T1",
@@ -1885,29 +1886,6 @@
   "Source URL": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL",
   "_notes": "",
   "Found In": "T1_IAF_Members.xlsx",
-  "Best Tier": "T1",
-  "_region": "Palm Beach",
-  "_n_sources": 1,
-  "_brands": []
- },
- {
-  "Name": "Johnson Controls Security (JCI)",
-  "Point of Contact": "",
-  "Contact Role": "",
-  "Contact Source": "",
-  "Municipality": "Boca Raton",
-  "State": "FL",
-  "Website": "https://securityproducts.jci.com/",
-  "Email": "?",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, fire alarm, remote video monitoring, license plate recognition, guard services, mass notification/ERRCS, serves schools/hospitals/healthcare/condos/HOA/government/retail/warehouses/industrial, brands: Lenel",
-  "Number of Locations": "?",
-  "ZIP Code": "33487",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 3,
-  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/johnson-controls-security-jci-4775722",
-  "_notes": "",
-  "Found In": "T1_TMA_Members.xlsx",
   "Best Tier": "T1",
   "_region": "Palm Beach",
   "_n_sources": 1,
@@ -2227,7 +2205,7 @@
   "ZIP Code": "32256",
   "Preferred Zone (Y/N)": "N",
   "Fit Score": 3,
-  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/first-coast-security-fcs-4858730 | https://my.tma.us/newtmamembers/Details/first-coast-security-fcs-4858732 | https://tma.us/operatoronlinegraduates/",
+  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/first-coast-security-fcs-4858730",
   "_notes": "",
   "Found In": "T1_TMA_Members.xlsx",
   "Best Tier": "T1",
@@ -2834,6 +2812,29 @@
   "_brands": []
  },
  {
+  "Name": "Criticom Monitoring Services (CMS)",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Longwood",
+  "State": "FL",
+  "Website": "https://www.cmsn.com/",
+  "Email": "adaprano@cmsn.com",
+  "Business Type": "Monitoring Center",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, intrusion alarms, alarm monitoring, smart home/automation, remote video monitoring, serves offices/warehouses/industrial, brands: Alarm.com",
+  "Number of Locations": "?",
+  "ZIP Code": "32750",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 2,
+  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/criticom-monitoring-services-cms-5053553",
+  "_notes": "",
+  "Found In": "T1_TMA_Members.xlsx",
+  "Best Tier": "T1",
+  "_region": "Other FL",
+  "_n_sources": 1,
+  "_brands": []
+ },
+ {
   "Name": "Frontline Integration Systems",
   "Point of Contact": "Bailey Sukovich",
   "Contact Role": "Listed contact",
@@ -3018,29 +3019,6 @@
   "_brands": []
  },
  {
-  "Name": "VectorFirm",
-  "Point of Contact": "Chris Peterson",
-  "Contact Role": "Founder & President",
-  "Contact Source": "https://vectorfirm.com/",
-  "Municipality": "Orlando",
-  "State": "FL",
-  "Website": "http://www.vectorfirm.com",
-  "Email": "cpeterson@vectorfirm.com",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, serves offices, brands: Vector",
-  "Number of Locations": "?",
-  "ZIP Code": "?",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 2,
-  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/vectorfirm-4719499",
-  "_notes": "",
-  "Found In": "T1_TMA_Members.xlsx",
-  "Best Tier": "T1",
-  "_region": "Other FL",
-  "_n_sources": 1,
-  "_brands": []
- },
- {
   "Name": "Voltz Electric Company, LLC",
   "Point of Contact": "",
   "Contact Role": "",
@@ -3211,7 +3189,7 @@
   "Website": "?",
   "Email": "?",
   "Business Type": "Consultant/Broker",
-  "Services Listed on Website": "(per listing) Insurance consultant (embedded IoT insurance) per directory snippet",
+  "Services Listed on Website": "?",
   "Number of Locations": "?",
   "ZIP Code": "?",
   "Preferred Zone (Y/N)": "Y",
@@ -3524,29 +3502,27 @@
   "_brands": []
  },
  {
-  "Name": "Adt, LLC",
-  "Point of Contact": "Mike Picciola",
-  "Contact Role": "TMA Vice President",
-  "Contact Source": "https://tma.us/about/our-leadership/executive-committee-board/",
+  "Name": "ADT, LLC",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
   "Municipality": "Boca Raton",
   "State": "FL",
-  "Website": "https://www.adt.com/",
+  "Website": "http://www.adt.com/",
   "Email": "?",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "Trained & Certified Partner Reps: VCE Essentials 4, AC Specialist 1, Alarms Specialist 0, VSP Foundations 12; brands: Verkada",
+  "Services Listed on Website": "?",
   "Number of Locations": "?",
   "ZIP Code": "33431",
   "Preferred Zone (Y/N)": "N",
   "Fit Score": 1,
-  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/adt-llc-4921512 | https://tma.us/about/our-leadership/executive-committee-board/ ; https://www.verkada.com/find-partners/?radius=100&search=33134",
+  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/adt-llc-4921512",
   "_notes": "",
-  "Found In": "T1_TMA_Members.xlsx, T2_Manufacturer_Dealers.xlsx",
+  "Found In": "T1_TMA_Members.xlsx",
   "Best Tier": "T1",
   "_region": "Palm Beach",
-  "_n_sources": 2,
-  "_brands": [
-   "Verkada"
-  ]
+  "_n_sources": 1,
+  "_brands": []
  },
  {
   "Name": "Advanced Alarm Service Inc",
@@ -3825,52 +3801,6 @@
   "_brands": []
  },
  {
-  "Name": "Rooney & Associates",
-  "Point of Contact": "John J. Rooney",
-  "Contact Role": "President/Owner",
-  "Contact Source": "https://www.kirschenbaumesq.com/page/alarm-exchange?keywords=&category=business-brokers-consultants",
-  "Municipality": "Palm Harbor",
-  "State": "FL",
-  "Website": "?",
-  "Email": "?",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "?",
-  "Number of Locations": "?",
-  "ZIP Code": "?",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 1,
-  "Source URL": "https://my.tma.us/tmamemberdirectory/FindStartsWith ; https://www.kirschenbaumesq.com/page/alarm-exchange?keywords=&category=business-brokers-consultants",
-  "_notes": "",
-  "Found In": "T1_TMA_Members.xlsx, T2_Alarm_Exchange.docx",
-  "Best Tier": "T1",
-  "_region": "Other FL",
-  "_n_sources": 2,
-  "_brands": []
- },
- {
-  "Name": "Security Alarm Corporation",
-  "Point of Contact": "Jennifer Mercer",
-  "Contact Role": "Listed contact",
-  "Contact Source": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL",
-  "Municipality": "Port Charlotte",
-  "State": "FL",
-  "Website": "?",
-  "Email": "?",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "(per listing) Installation and monitoring",
-  "Number of Locations": "?",
-  "ZIP Code": "33948",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 1,
-  "Source URL": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL ; https://my.tma.us/tmamemberdirectory/Details/security-alarm-corporation-2740088",
-  "_notes": "",
-  "Found In": "T1_IAF_Members.xlsx, T1_TMA_Members.xlsx",
-  "Best Tier": "T1",
-  "_region": "Other FL",
-  "_n_sources": 2,
-  "_brands": []
- },
- {
   "Name": "ACCI",
   "Point of Contact": "Arin J Lowery",
   "Contact Role": "Listed contact",
@@ -4049,29 +3979,6 @@
   "Source URL": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL",
   "_notes": "",
   "Found In": "T1_IAF_Members.xlsx",
-  "Best Tier": "T1",
-  "_region": "Other FL",
-  "_n_sources": 1,
-  "_brands": []
- },
- {
-  "Name": "Alyxx.io Networks",
-  "Point of Contact": "",
-  "Contact Role": "",
-  "Contact Source": "",
-  "Municipality": "Saint Cloud",
-  "State": "FL",
-  "Website": "?",
-  "Email": "?",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "?",
-  "Number of Locations": "?",
-  "ZIP Code": "34771",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 1,
-  "Source URL": "https://my.tma.us/tmamemberdirectory/FindStartsWith",
-  "_notes": "",
-  "Found In": "T1_TMA_Members.xlsx",
   "Best Tier": "T1",
   "_region": "Other FL",
   "_n_sources": 1,
@@ -4377,7 +4284,7 @@
   "_brands": []
  },
  {
-  "Name": "Dac Security, Inc.",
+  "Name": "Dac Security, INC.",
   "Point of Contact": "William Shilson Iii",
   "Contact Role": "Listed contact",
   "Contact Source": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL",
@@ -4630,7 +4537,7 @@
   "_brands": []
  },
  {
-  "Name": "Fire Sprinkler Services Fl, LLC",
+  "Name": "Fire Sprinkler Services FL, LLC",
   "Point of Contact": "James Olson",
   "Contact Role": "Listed contact",
   "Contact Source": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL",
@@ -5228,29 +5135,6 @@
   "_brands": []
  },
  {
-  "Name": "Scutum Digital",
-  "Point of Contact": "",
-  "Contact Role": "",
-  "Contact Source": "",
-  "Municipality": "Tampa",
-  "State": "FL",
-  "Website": "?",
-  "Email": "?",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "(per listing) Monitoring center",
-  "Number of Locations": "?",
-  "ZIP Code": "?",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 1,
-  "Source URL": "https://my.tma.us/fivediamondmonitoringcenters/Details/scutum-digital-tampa-fl-3103396",
-  "_notes": "",
-  "Found In": "T1_TMA_Members.xlsx",
-  "Best Tier": "T1",
-  "_region": "Other FL",
-  "_n_sources": 1,
-  "_brands": []
- },
- {
   "Name": "Secur-Tel Inc",
   "Point of Contact": "Scott Word",
   "Contact Role": "Listed contact",
@@ -5665,6 +5549,29 @@
   "_brands": []
  },
  {
+  "Name": "VectorFirm",
+  "Point of Contact": "Chris Peterson",
+  "Contact Role": "Founder & President",
+  "Contact Source": "https://vectorfirm.com/",
+  "Municipality": "Orlando",
+  "State": "FL",
+  "Website": "http://www.vectorfirm.com/",
+  "Email": "cpeterson@vectorfirm.com",
+  "Business Type": "Monitoring Center",
+  "Services Listed on Website": "commercial, serves offices, brands: Vector",
+  "Number of Locations": "?",
+  "ZIP Code": "32806",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/vectorfirm-4719499",
+  "_notes": "",
+  "Found In": "T1_TMA_Members.xlsx",
+  "Best Tier": "T1",
+  "_region": "Other FL",
+  "_n_sources": 1,
+  "_brands": []
+ },
+ {
   "Name": "VSC Fire & Security Inc",
   "Point of Contact": "Jeremiah A Finnegan",
   "Contact Role": "Listed contact",
@@ -5826,21 +5733,21 @@
   "_brands": []
  },
  {
-  "Name": "Hauhn & Associates",
-  "Point of Contact": "Jay Hauhn",
-  "Contact Role": "Special Advisor to the TMA President",
-  "Contact Source": "https://tma.us/about/our-leadership/executive-committee-board/",
+  "Name": "Hauhn and Associates",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
   "Municipality": "Hillsboro Beach",
   "State": "FL",
   "Website": "?",
   "Email": "?",
   "Business Type": "Consultant/Broker",
-  "Services Listed on Website": "(per listing) Industry consultant",
+  "Services Listed on Website": "?",
   "Number of Locations": "?",
   "ZIP Code": "?",
   "Preferred Zone (Y/N)": "N",
   "Fit Score": 0,
-  "Source URL": "https://tma.us/about/our-leadership/executive-committee-board/ | https://tma.us/about/our-committees/",
+  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/hauhn-and-associates-2856043",
   "_notes": "",
   "Found In": "T1_TMA_Members.xlsx",
   "Best Tier": "T1",
@@ -5895,6 +5802,29 @@
   "_brands": []
  },
  {
+  "Name": "Rooney & Associates",
+  "Point of Contact": "John J. Rooney",
+  "Contact Role": "President/Owner",
+  "Contact Source": "https://www.kirschenbaumesq.com/page/alarm-exchange?keywords=&category=business-brokers-consultants",
+  "Municipality": "Palm Harbor",
+  "State": "FL",
+  "Website": "http://www.rooneyassociates.com/",
+  "Email": "?",
+  "Business Type": "Consultant/Broker",
+  "Services Listed on Website": "?",
+  "Number of Locations": "?",
+  "ZIP Code": "?",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 0,
+  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/rooney-associates-2740098 ; https://www.kirschenbaumesq.com/page/alarm-exchange?keywords=&category=business-brokers-consultants",
+  "_notes": "",
+  "Found In": "T1_TMA_Members.xlsx, T2_Alarm_Exchange.docx",
+  "Best Tier": "T1",
+  "_region": "Other FL",
+  "_n_sources": 2,
+  "_brands": []
+ },
+ {
   "Name": "Continental Air And Electric",
   "Point of Contact": "Adam Littauer",
   "Contact Role": "Listed contact",
@@ -5935,29 +5865,6 @@
   "Source URL": "https://members.iaf-safe.org/members/directory/search_bootstrap.php?twocol=&org_id=AAFL",
   "_notes": "",
   "Found In": "T1_IAF_Members.xlsx",
-  "Best Tier": "T1",
-  "_region": "Other FL",
-  "_n_sources": 1,
-  "_brands": []
- },
- {
-  "Name": "Criticom Monitoring Services (CMS)",
-  "Point of Contact": "",
-  "Contact Role": "",
-  "Contact Source": "",
-  "Municipality": "Longwood",
-  "State": "FL",
-  "Website": "?",
-  "Email": "?",
-  "Business Type": "Monitoring Center",
-  "Services Listed on Website": "(per listing) Wholesale/contract monitoring for alarm dealers",
-  "Number of Locations": "?",
-  "ZIP Code": "?",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 0,
-  "Source URL": "https://my.tma.us/tmamemberdirectory/Details/criticom-monitoring-services-cms-2740213",
-  "_notes": "",
-  "Found In": "T1_TMA_Members.xlsx",
   "Best Tier": "T1",
   "_region": "Other FL",
   "_n_sources": 1,
@@ -6194,6 +6101,29 @@
   "_brands": []
  },
  {
+  "Name": "Scutum Digital",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Tampa",
+  "State": "FL",
+  "Website": "?",
+  "Email": "?",
+  "Business Type": "Monitoring Center",
+  "Services Listed on Website": "(per listing) Monitoring center",
+  "Number of Locations": "?",
+  "ZIP Code": "?",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 0,
+  "Source URL": "https://my.tma.us/fivediamondmonitoringcenters/Details/scutum-digital-tampa-fl-3103396",
+  "_notes": "",
+  "Found In": "T1_TMA_Members.xlsx",
+  "Best Tier": "T1",
+  "_region": "Other FL",
+  "_n_sources": 1,
+  "_brands": []
+ },
+ {
   "Name": "Southern Atlantic Electric Co Inc",
   "Point of Contact": "Kelsey Perry",
   "Contact Role": "Listed contact",
@@ -6309,6 +6239,31 @@
   "_brands": []
  },
  {
+  "Name": "Circle Security Solutions",
+  "Point of Contact": "Ira Ehrenkrantz",
+  "Contact Role": "Founder (started Circle Security Systems, Inc. in 1976)",
+  "Contact Source": "https://circlesecuritysolutions.com/company/",
+  "Municipality": "South Miami",
+  "State": "FL",
+  "Website": "https://circlesecuritysolutions.com",
+  "Email": "info@circlesecuritysolutions.com",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, structured cabling, gates/barriers, smart home/automation, networking/IT, serves HOAs/condo associations/multifamily/hotels/retail/warehouses/schools/campuses/medical offices/Class-A buildings/car dealerships/marinas/restaurants/supermarkets, brands: ADT/Alarm.com/Axis/Dahua/Digital Watchdog/Hikvision/Honeywell/Qolsys/Speco/Uniview/Verkada",
+  "Number of Locations": 2,
+  "ZIP Code": "33143",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 5,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer ; https://pipl.systems/company/circle-security-solutions/miami-fl/ ; https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
+  "_notes": "Circle Security Systems, Inc. dba Circle Security Solutions; family business since 1976; alarms, fire, cameras (Verkada page aimed at condos/boards), access, automation. Licenses EF0000848 / EF0000852. Shares its Miami address (6815 SW 81st Terrace) and license numbers with Helios Security Systems - likely affiliated. Bernard H Robin (input) is not on the site.",
+  "Found In": "T2_Manufacturer_Dealers.xlsx, T3_Directories.xlsx, T3_Licenses.xlsx",
+  "Best Tier": "T2",
+  "_region": "Miami-Dade",
+  "_n_sources": 3,
+  "_brands": [
+   "Qolsys"
+  ]
+ },
+ {
   "Name": "Miami Security Systems",
   "Point of Contact": "Juan Carlos Perez",
   "Contact Role": "License holder (DBPR EG)",
@@ -6359,7 +6314,7 @@
   ]
  },
  {
-  "Name": "Florida Safeguard Inc.",
+  "Name": "Florida Safeguard INC.",
   "Point of Contact": "Jim Wilhelm",
   "Contact Role": "President and Founder",
   "Contact Source": "https://floridasafeguard.com/contact.html",
@@ -6381,6 +6336,31 @@
   "_n_sources": 2,
   "_brands": [
    "Resideo/Honeywell"
+  ]
+ },
+ {
+  "Name": "Hemag Inc",
+  "Point of Contact": "Eberto Garcia",
+  "Contact Role": "License holder (DBPR EF)",
+  "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
+  "Municipality": "Cutler Bay",
+  "State": "FL",
+  "Website": "https://hemaginc.com",
+  "Email": "service@hemaginc.com",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, intrusion alarms, fire alarm, structured cabling, audio/video, smart home/automation, networking/IT, serves homes/builders/commercial AV/offices/marine/yachts, brands: Alarm.com/Lutron/Qolsys/URC (Total Control)",
+  "Number of Locations": 1,
+  "ZIP Code": "33157",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 5,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer ; https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
+  "_notes": "Smart-home/AV and low-voltage integrator: automation, theater, audio, networking, surveillance cameras (incl. commercial video analytics), fire alarms (state certified alarm contractor, ETL listed), CAD drafting, IT consulting. Mostly residential. No street address or people on the site.",
+  "Found In": "T2_Manufacturer_Dealers.xlsx, T3_Licenses.xlsx",
+  "Best Tier": "T2",
+  "_region": "Miami-Dade",
+  "_n_sources": 2,
+  "_brands": [
+   "Qolsys"
   ]
  },
  {
@@ -6510,6 +6490,31 @@
    "Avigilon Alta",
    "Axis",
    "Hanwha Vision"
+  ]
+ },
+ {
+  "Name": "Cypress Trace Security, Inc.",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Coral Springs",
+  "State": "FL",
+  "Website": "https://cypresstracesecurity.com",
+  "Email": "sales@cypresstracesecurity.com",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, intrusion alarms, alarm monitoring, audio/video, smart home/automation, remote video monitoring, mass notification/ERRCS, serves hospitals/healthcare/offices, brands: Alarm.com/Hikvision/Honeywell/Qolsys",
+  "Number of Locations": 1,
+  "ZIP Code": "33076",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 5,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_notes": "",
+  "Found In": "T2_Manufacturer_Dealers.xlsx",
+  "Best Tier": "T2",
+  "_region": "Broward",
+  "_n_sources": 1,
+  "_brands": [
+   "Qolsys"
   ]
  },
  {
@@ -7132,6 +7137,32 @@
   ]
  },
  {
+  "Name": "Everon, LLC (West Palm Beach, FL)",
+  "Point of Contact": "Prentice Robertson",
+  "Contact Role": "President & Chief Operations Officer",
+  "Contact Source": "https://www.garda.com/",
+  "Municipality": "West Palm Beach",
+  "State": "FL",
+  "Website": "https://www.garda.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, smart home/automation, remote video monitoring, mass notification/ERRCS, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/government/retail/warehouses/industrial, brands: ADT",
+  "Number of Locations": 74,
+  "ZIP Code": "33407",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 4,
+  "Source URL": "https://www.milestonesys.com/where-to-buy-reseller-and-distributor/ ; https://www.verkada.com/find-partners/?radius=100&search=33134 ; https://energovcss.miamibeachfl.gov/energovprod/selfservice#/search | https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/miamidade_permit_data/FeatureServer/0 | https://pdfs.dadeschools.net/Bdarch/2026/Bd090926/agenda/e143.pdf",
+  "_notes": "",
+  "Found In": "T2_Manufacturer_Dealers.xlsx, T3_Permits_and_Bids.docx",
+  "Best Tier": "T2",
+  "_region": "Palm Beach",
+  "_n_sources": 2,
+  "_brands": [
+   "Milestone",
+   "Verkada"
+  ]
+ },
+ {
   "Name": "American Integrated Security Group",
   "Point of Contact": "Levy Acs",
   "Contact Role": "President / CTO / AISG Co-Founder",
@@ -7305,9 +7336,9 @@
  },
  {
   "Name": "Allied Universal Technology Services (Miami, FL)",
-  "Point of Contact": "",
-  "Contact Role": "",
-  "Contact Source": "",
+  "Point of Contact": "Javier Vazquez",
+  "Contact Role": "Listed contact",
+  "Contact Source": "https://members.bomamiamidade.org/member-directory/Details/javier-vazquez-2794133",
   "Municipality": "Unincorporated Miami-Dade",
   "State": "FL",
   "Website": "https://www.aus.com",
@@ -7318,14 +7349,39 @@
   "ZIP Code": "33126",
   "Preferred Zone (Y/N)": "N",
   "Fit Score": 3,
-  "Source URL": "https://www.milestonesys.com/where-to-buy-reseller-and-distributor/",
+  "Source URL": "https://www.milestonesys.com/where-to-buy-reseller-and-distributor/ ; https://members.bomamiamidade.org/member-directory/Details/javier-vazquez-2794133",
   "_notes": "Global security-services giant (~770,000 staff, guards plus integrated technology services); not a small dealer. Offices page lists two Miami offices, both ZIP 33126. No executive names on the pages checked (home, about-us, offices, technology service pages).",
+  "Found In": "T2_Manufacturer_Dealers.xlsx, T3_Directories.xlsx",
+  "Best Tier": "T2",
+  "_region": "Miami-Dade",
+  "_n_sources": 2,
+  "_brands": [
+   "Milestone"
+  ]
+ },
+ {
+  "Name": "Get Smart Security inc",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "North Miami",
+  "State": "FL",
+  "Website": "https://getsmartersecurity.com",
+  "Email": "info@getsmartersecurity.com",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, intercom, structured cabling, audio/video, smart home/automation, remote video monitoring, serves condos/HOA/offices, brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33161",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 3,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_notes": "",
   "Found In": "T2_Manufacturer_Dealers.xlsx",
   "Best Tier": "T2",
   "_region": "Miami-Dade",
   "_n_sources": 1,
   "_brands": [
-   "Milestone"
+   "Qolsys"
   ]
  },
  {
@@ -7479,6 +7535,32 @@
   ]
  },
  {
+  "Name": "Everon, LLC (HQ - Boca Raton, FL)",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Boca Raton",
+  "State": "FL",
+  "Website": "https://www.everonsolutions.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, smart home/automation, remote video monitoring, mass notification/ERRCS, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/government/retail/warehouses/industrial, brands: ADT/Milestone/Verkada",
+  "Number of Locations": 74,
+  "ZIP Code": "33431",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 3,
+  "Source URL": "https://www.milestonesys.com/where-to-buy-reseller-and-distributor/ ; https://www.verkada.com/find-partners/?radius=100&search=33134",
+  "_notes": "",
+  "Found In": "T2_Manufacturer_Dealers.xlsx",
+  "Best Tier": "T2",
+  "_region": "Palm Beach",
+  "_n_sources": 1,
+  "_brands": [
+   "Milestone",
+   "Verkada"
+  ]
+ },
+ {
   "Name": "Midwest Alarm Company dba BCI",
   "Point of Contact": "",
   "Contact Role": "",
@@ -7577,6 +7659,31 @@
   "_brands": []
  },
  {
+  "Name": "Master Electronic Solutions",
+  "Point of Contact": "Luis M Hernandez",
+  "Contact Role": "License holder (DBPR EF)",
+  "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
+  "Municipality": "Unincorporated Miami-Dade",
+  "State": "FL",
+  "Website": "https://mesofmiami.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "CCTV/video surveillance, access control, intrusion alarms, fire alarm, smart home/automation, brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33175",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 2,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer ; https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
+  "_notes": "",
+  "Found In": "T2_Manufacturer_Dealers.xlsx, T3_Licenses.xlsx",
+  "Best Tier": "T2",
+  "_region": "Miami-Dade",
+  "_n_sources": 2,
+  "_brands": [
+   "Qolsys"
+  ]
+ },
+ {
   "Name": "Conti Corporation (Pompano Beach, FL)",
   "Point of Contact": "",
   "Contact Role": "",
@@ -7652,6 +7759,31 @@
   ]
  },
  {
+  "Name": "DSP Video Systems",
+  "Point of Contact": "Billy A Cocca",
+  "Contact Role": "License holder (DBPR EG)",
+  "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
+  "Municipality": "Doral",
+  "State": "FL",
+  "Website": "https://www.dspsmart.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33122",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer ; https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
+  "_notes": "",
+  "Found In": "T2_Manufacturer_Dealers.xlsx, T3_Licenses.xlsx",
+  "Best Tier": "T2",
+  "_region": "Miami-Dade",
+  "_n_sources": 2,
+  "_brands": [
+   "Qolsys"
+  ]
+ },
+ {
   "Name": "Protective Security Solutions Inc.",
   "Point of Contact": "Brian Messier",
   "Contact Role": "Listed contact",
@@ -7673,6 +7805,31 @@
   "_region": "Miami-Dade",
   "_n_sources": 2,
   "_brands": []
+ },
+ {
+  "Name": "VCS Tech Systems",
+  "Point of Contact": "Miguel Jesus Vidal",
+  "Contact Role": "License holder (DBPR EG)",
+  "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
+  "Municipality": "Doral",
+  "State": "FL",
+  "Website": "https://www.vcstechsystems.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33172",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer ; https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
+  "_notes": "",
+  "Found In": "T2_Manufacturer_Dealers.xlsx, T3_Licenses.xlsx",
+  "Best Tier": "T2",
+  "_region": "Miami-Dade",
+  "_n_sources": 2,
+  "_brands": [
+   "Qolsys"
+  ]
  },
  {
   "Name": "Chactech",
@@ -7697,6 +7854,56 @@
   "_n_sources": 1,
   "_brands": [
    "Verkada"
+  ]
+ },
+ {
+  "Name": "Florida Alarms",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Hialeah",
+  "State": "FL",
+  "Website": "?",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33012",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_notes": "",
+  "Found In": "T2_Manufacturer_Dealers.xlsx",
+  "Best Tier": "T2",
+  "_region": "Miami-Dade",
+  "_n_sources": 1,
+  "_brands": [
+   "Qolsys"
+  ]
+ },
+ {
+  "Name": "NVE Technologies, Inc.",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Unincorporated Miami-Dade",
+  "State": "FL",
+  "Website": "https://nvetechnologies.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33186",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_notes": "",
+  "Found In": "T2_Manufacturer_Dealers.xlsx",
+  "Best Tier": "T2",
+  "_region": "Miami-Dade",
+  "_n_sources": 1,
+  "_brands": [
+   "Qolsys"
   ]
  },
  {
@@ -7750,6 +7957,31 @@
   ]
  },
  {
+  "Name": "Burglar Alarm Technicians",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Ft. Lauderdale",
+  "State": "FL",
+  "Website": "?",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33334",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_notes": "",
+  "Found In": "T2_Manufacturer_Dealers.xlsx",
+  "Best Tier": "T2",
+  "_region": "Broward",
+  "_n_sources": 1,
+  "_brands": [
+   "Qolsys"
+  ]
+ },
+ {
   "Name": "Navicon Group K&M Communications",
   "Point of Contact": "",
   "Contact Role": "",
@@ -7775,6 +8007,81 @@
   ]
  },
  {
+  "Name": "Nexzum",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Sunrise",
+  "State": "FL",
+  "Website": "https://nexzum.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33351",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_notes": "",
+  "Found In": "T2_Manufacturer_Dealers.xlsx",
+  "Best Tier": "T2",
+  "_region": "Broward",
+  "_n_sources": 1,
+  "_brands": [
+   "Qolsys"
+  ]
+ },
+ {
+  "Name": "Palecek Security",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Fort Lauderdale",
+  "State": "FL",
+  "Website": "?",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33314",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_notes": "",
+  "Found In": "T2_Manufacturer_Dealers.xlsx",
+  "Best Tier": "T2",
+  "_region": "Broward",
+  "_n_sources": 1,
+  "_brands": [
+   "Qolsys"
+  ]
+ },
+ {
+  "Name": "Prizm Fire And Security Systems LLC",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Coral Springs",
+  "State": "FL",
+  "Website": "?",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33067",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_notes": "",
+  "Found In": "T2_Manufacturer_Dealers.xlsx",
+  "Best Tier": "T2",
+  "_region": "Broward",
+  "_n_sources": 1,
+  "_brands": [
+   "Qolsys"
+  ]
+ },
+ {
   "Name": "Prosegur",
   "Point of Contact": "",
   "Contact Role": "",
@@ -7797,6 +8104,31 @@
   "_n_sources": 1,
   "_brands": [
    "Verkada"
+  ]
+ },
+ {
+  "Name": "Security Tech, Inc.",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Plantation",
+  "State": "FL",
+  "Website": "https://www.securitytechinc.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33317",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_notes": "",
+  "Found In": "T2_Manufacturer_Dealers.xlsx",
+  "Best Tier": "T2",
+  "_region": "Broward",
+  "_n_sources": 1,
+  "_brands": [
+   "Qolsys"
   ]
  },
  {
@@ -7847,6 +8179,31 @@
   "_n_sources": 1,
   "_brands": [
    "Verkada"
+  ]
+ },
+ {
+  "Name": "Vector Security",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Fort Lauderdale",
+  "State": "FL",
+  "Website": "https://vectorsecurity.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "residential, CCTV/video surveillance, intrusion alarms, smart home/automation, brands: Qolsys/Vector",
+  "Number of Locations": "?",
+  "ZIP Code": "33309",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_notes": "",
+  "Found In": "T2_Manufacturer_Dealers.xlsx",
+  "Best Tier": "T2",
+  "_region": "Broward",
+  "_n_sources": 1,
+  "_brands": [
+   "Qolsys"
   ]
  },
  {
@@ -7984,19 +8341,20 @@
   "Website": "https://markitplacedirect.connection.com",
   "Email": "?",
   "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "Products: BriefCam Analytics; XProtect VMS; Specializations: VMS Specialist; brands: Milestone",
+  "Services Listed on Website": "Trained & Certified Partner Reps: VCE Essentials 0, AC Specialist 0, Alarms Specialist 0, VSP Foundations 0; brands: Verkada",
   "Number of Locations": "?",
   "ZIP Code": "33431",
   "Preferred Zone (Y/N)": "N",
   "Fit Score": 1,
-  "Source URL": "https://www.milestonesys.com/where-to-buy-reseller-and-distributor/",
+  "Source URL": "https://www.milestonesys.com/where-to-buy-reseller-and-distributor/ ; https://www.verkada.com/find-partners/?radius=100&search=33134",
   "_notes": "",
   "Found In": "T2_Manufacturer_Dealers.xlsx",
   "Best Tier": "T2",
   "_region": "Palm Beach",
   "_n_sources": 1,
   "_brands": [
-   "Milestone"
+   "Milestone",
+   "Verkada"
   ]
  },
  {
@@ -8395,29 +8753,6 @@
   "_brands": []
  },
  {
-  "Name": "Circle Security Solutions",
-  "Point of Contact": "Ira Ehrenkrantz",
-  "Contact Role": "Founder (started Circle Security Systems, Inc. in 1976)",
-  "Contact Source": "https://circlesecuritysolutions.com/company/",
-  "Municipality": "City of Miami",
-  "State": "FL",
-  "Website": "https://circlesecuritysolutions.com/",
-  "Email": "info@circlesecuritysolutions.com",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, structured cabling, gates/barriers, smart home/automation, networking/IT, serves HOAs/condo associations/multifamily/hotels/retail/warehouses/schools/campuses/medical offices/Class-A buildings/car dealerships/marinas/restaurants/supermarkets, brands: ADT/Alarm.com/Axis/Dahua/Digital Watchdog/Hikvision/Honeywell/Speco/Uniview/Verkada",
-  "Number of Locations": 2,
-  "ZIP Code": "33143",
-  "Preferred Zone (Y/N)": "Y",
-  "Fit Score": 5,
-  "Source URL": "https://pipl.systems/company/circle-security-solutions/miami-fl/ ; https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
-  "_notes": "Circle Security Systems, Inc. dba Circle Security Solutions; family business since 1976; alarms, fire, cameras (Verkada page aimed at condos/boards), access, automation. Licenses EF0000848 / EF0000852. Shares its Miami address (6815 SW 81st Terrace) and license numbers with Helios Security Systems - likely affiliated. Bernard H Robin (input) is not on the site.",
-  "Found In": "T3_Directories.xlsx, T3_Licenses.xlsx",
-  "Best Tier": "T3",
-  "_region": "Miami-Dade",
-  "_n_sources": 2,
-  "_brands": []
- },
- {
   "Name": "Delphi One Systems Corp",
   "Point of Contact": "Francisco J Rodriguez",
   "Contact Role": "License holder (DBPR EG)",
@@ -8441,7 +8776,7 @@
   "_brands": []
  },
  {
-  "Name": "Quality Wiring, Inc.",
+  "Name": "Quality Wiring, INC.",
   "Point of Contact": "Dennis G Dandrinos",
   "Contact Role": "Operation Manager (most senior person named; no owner title on site)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv ; role: https://qualitywiring.com/staff/",
@@ -8533,7 +8868,7 @@
   "_brands": []
  },
  {
-  "Name": "Electronic Alarms, Inc.",
+  "Name": "Electronic Alarms, INC.",
   "Point of Contact": "Jose D Lima",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -8602,30 +8937,7 @@
   "_brands": []
  },
  {
-  "Name": "Hemag INC",
-  "Point of Contact": "Eberto Garcia",
-  "Contact Role": "License holder (DBPR EF)",
-  "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
-  "Municipality": "Unincorporated Miami-Dade",
-  "State": "FL",
-  "Website": "https://www.hemaginc.com/",
-  "Email": "service@hemaginc.com",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, CCTV/video surveillance, intrusion alarms, fire alarm, structured cabling, audio/video, smart home/automation, networking/IT, serves homes/builders/commercial AV/offices/marine/yachts, brands: Alarm.com/Lutron/URC (Total Control)",
-  "Number of Locations": 1,
-  "ZIP Code": "33165",
-  "Preferred Zone (Y/N)": "Y",
-  "Fit Score": 5,
-  "Source URL": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
-  "_notes": "Smart-home/AV and low-voltage integrator: automation, theater, audio, networking, surveillance cameras (incl. commercial video analytics), fire alarms (state certified alarm contractor, ETL listed), CAD drafting, IT consulting. Mostly residential. No street address or people on the site.",
-  "Found In": "T3_Licenses.xlsx",
-  "Best Tier": "T3",
-  "_region": "Miami-Dade",
-  "_n_sources": 1,
-  "_brands": []
- },
- {
-  "Name": "JP Security Systems Inc.",
+  "Name": "JP Security Systems INC.",
   "Point of Contact": "George Anthony Perez",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -8671,7 +8983,7 @@
   "_brands": []
  },
  {
-  "Name": "Metro Dade Security System, Inc.",
+  "Name": "Metro Dade Security System, INC.",
   "Point of Contact": "Dorys Mery Martinez",
   "Contact Role": "CEO",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv ; role: https://metrodadesecurity.net/team/",
@@ -8855,7 +9167,7 @@
   "_brands": []
  },
  {
-  "Name": "Guardian Electronics Inc.",
+  "Name": "Guardian Electronics INC.",
   "Point of Contact": "Luis E Mederos",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -8947,7 +9259,7 @@
   "_brands": []
  },
  {
-  "Name": "Security Tech Group, Inc.",
+  "Name": "Security Tech Group, INC.",
   "Point of Contact": "Romel Vivar",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -9085,6 +9397,29 @@
   "_brands": []
  },
  {
+  "Name": "Titan Security Group (Titan Electronics) - Miami",
+  "Point of Contact": "Dave Pack",
+  "Contact Role": "Chief Executive Officer of Titan Security Group (quoted in merger announcement)",
+  "Contact Source": "https://titan-security.com/titan-security-group-and-marksman-security-corporation-announce-strategic-merger-creating-a-boutique-security-services-provider-with-a-national-footprint/",
+  "Municipality": "City of Miami",
+  "State": "FL",
+  "Website": "https://www.titan-security.com",
+  "Email": "work@titan-security.com",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, guard services, serves hospitals/healthcare/hotels/hospitality/residential buildings/condos/commercial/warehouses/banks, brands: National Security Integrators (member)",
+  "Number of Locations": 7,
+  "ZIP Code": "?",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 3,
+  "Source URL": "https://job-boards.greenhouse.io/tsg/jobs/4353557009 ; https://members.bomamiamidade.org/member-directory/Details/titan-security-group-3127854",
+  "_notes": "Guard/staffing company with an integration arm (Titan Electronics: access, surveillance, visitor management) and a 24/7 SOC. Merged with Marksman Security Corporation (announcement on site). Miami office: 7270 NW 12th Street, Suite 680, Miami 33126. Mark Apel (input) not found on the pages checked. Only email shown is media@titan-security.com (press).",
+  "Found In": "T3_Hiring.docx, T3_Directories.xlsx",
+  "Best Tier": "T3",
+  "_region": "Miami-Dade",
+  "_n_sources": 2,
+  "_brands": []
+ },
+ {
   "Name": "Beacon Protection Group, LLC",
   "Point of Contact": "Evaristo Galvez",
   "Contact Role": "License holder (DBPR EF)",
@@ -9131,7 +9466,7 @@
   "_brands": []
  },
  {
-  "Name": "Legnasys Technology Inc.",
+  "Name": "Legnasys Technology INC.",
   "Point of Contact": "Angel Adolfo Alvarez",
   "Contact Role": "President",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv ; role: https://www.legnasys.com/about/",
@@ -9177,6 +9512,29 @@
   "_brands": []
  },
  {
+  "Name": "Regions Security Services, Inc.",
+  "Point of Contact": "David Rodriguez-Baez",
+  "Contact Role": "Listed contact",
+  "Contact Source": "https://members.bomamiamidade.org/member-directory/Details/david-rodriguez-baez-2794168",
+  "Municipality": "Unincorporated Miami-Dade",
+  "State": "FL",
+  "Website": "https://www.regionssecurity.us/",
+  "Email": "info@regionssecurity.us",
+  "Business Type": "Guard Company",
+  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, remote video monitoring, guard services, serves hospitals/healthcare/hotels",
+  "Number of Locations": "?",
+  "ZIP Code": "33126",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 3,
+  "Source URL": "https://members.bomamiamidade.org/member-directory/Details/david-rodriguez-baez-2794168",
+  "_notes": "",
+  "Found In": "T3_Directories.xlsx",
+  "Best Tier": "T3",
+  "_region": "Miami-Dade",
+  "_n_sources": 1,
+  "_brands": []
+ },
+ {
   "Name": "Securitas Technology - Miami",
   "Point of Contact": "Bill McCarthy",
   "Contact Role": "President, Securitas Healthcare and Security Products & Solutions",
@@ -9200,48 +9558,25 @@
   "_brands": []
  },
  {
-  "Name": "Titan Security Group (Titan Electronics) - Miami",
-  "Point of Contact": "Dave Pack",
-  "Contact Role": "Chief Executive Officer of Titan Security Group (quoted in merger announcement)",
-  "Contact Source": "https://titan-security.com/titan-security-group-and-marksman-security-corporation-announce-strategic-merger-creating-a-boutique-security-services-provider-with-a-national-footprint/",
-  "Municipality": "City of Miami",
-  "State": "FL",
-  "Website": "https://www.titan-security.com",
-  "Email": "work@titan-security.com",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, guard services, serves hospitals/healthcare/hotels/hospitality/residential buildings/condos/commercial/warehouses/banks, brands: National Security Integrators (member)",
-  "Number of Locations": 7,
-  "ZIP Code": "?",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 3,
-  "Source URL": "https://job-boards.greenhouse.io/tsg/jobs/4353557009",
-  "_notes": "Guard/staffing company with an integration arm (Titan Electronics: access, surveillance, visitor management) and a 24/7 SOC. Merged with Marksman Security Corporation (announcement on site). Miami office: 7270 NW 12th Street, Suite 680, Miami 33126. Mark Apel (input) not found on the pages checked. Only email shown is media@titan-security.com (press).",
-  "Found In": "T3_Hiring.docx",
-  "Best Tier": "T3",
-  "_region": "Miami-Dade",
-  "_n_sources": 1,
-  "_brands": []
- },
- {
   "Name": "Kastle Systems, Inc.",
   "Point of Contact": "Claudia Grene",
-  "Contact Role": "BOMA Miami-Dade Registration Committee and Social Media & Website Committee member",
-  "Contact Source": "https://www.bomamiamidade.org/committees/",
-  "Municipality": "?",
+  "Contact Role": "Listed contact",
+  "Contact Source": "https://members.bomamiamidade.org/member-directory/Details/claudia-grene-3205999",
+  "Municipality": "Plantation",
   "State": "FL",
   "Website": "https://www.kastle.com/",
   "Email": "?",
   "Business Type": "Dealer/Integrator",
   "Services Listed on Website": "commercial, CCTV/video surveillance, access control, alarm monitoring, intercom, networking/IT, remote video monitoring, serves schools/hospitals/healthcare/condos/HOA/offices/houses of worship/government/warehouses/industrial, brands: Avigilon/HID/Provision",
   "Number of Locations": "?",
-  "ZIP Code": "?",
+  "ZIP Code": "33324",
   "Preferred Zone (Y/N)": "N",
   "Fit Score": 3,
-  "Source URL": "https://www.bomamiamidade.org/committees/ | https://www.bomamiamidade.org/toby/toby-sponsorship/",
+  "Source URL": "https://members.bomamiamidade.org/member-directory/Details/claudia-grene-3205999",
   "_notes": "",
   "Found In": "T3_Directories.xlsx",
   "Best Tier": "T3",
-  "_region": "Other FL",
+  "_region": "Broward",
   "_n_sources": 1,
   "_brands": []
  },
@@ -9269,7 +9604,7 @@
   "_brands": []
  },
  {
-  "Name": "Advance Security Group Enterprise Inc.",
+  "Name": "Advance Security Group Enterprise INC.",
   "Point of Contact": "Mercy Roman",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2026/Bd090926/agenda/e143.pdf",
@@ -9292,7 +9627,7 @@
   "_brands": []
  },
  {
-  "Name": "Ase Telecom & Data, Inc.",
+  "Name": "Ase Telecom & Data, INC.",
   "Point of Contact": "Javier Perez",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -9315,7 +9650,7 @@
   "_brands": []
  },
  {
-  "Name": "Dade Electric Service, Inc.",
+  "Name": "Dade Electric Service, INC.",
   "Point of Contact": "Vilakshankumar Murarka",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2026/Bd090926/agenda/e143.pdf",
@@ -9361,7 +9696,7 @@
   "_brands": []
  },
  {
-  "Name": "M C G Electronics Inc.",
+  "Name": "M C G Electronics INC.",
   "Point of Contact": "Dennis G Dandrinos",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -9568,7 +9903,7 @@
   "_brands": []
  },
  {
-  "Name": "Azq Electronic Systems, Inc.",
+  "Name": "Azq Electronic Systems, INC.",
   "Point of Contact": "Juan Azcuy-perez",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -9683,7 +10018,7 @@
   "_brands": []
  },
  {
-  "Name": "Frantech, Inc.",
+  "Name": "Frantech, INC.",
   "Point of Contact": "Francisco Alberto Espinoza",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -9936,7 +10271,7 @@
   "_brands": []
  },
  {
-  "Name": "Premises Cabling Systems, Inc.",
+  "Name": "Premises Cabling Systems, INC.",
   "Point of Contact": "Jesus Fernandez",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2024/Bd112024/agenda/e143.pdf",
@@ -9959,7 +10294,7 @@
   "_brands": []
  },
  {
-  "Name": "Pyro Protection Inc.",
+  "Name": "Pyro Protection INC.",
   "Point of Contact": "Jesus Armando Morales",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -9982,7 +10317,7 @@
   "_brands": []
  },
  {
-  "Name": "Secured Technologies Inc.",
+  "Name": "Secured Technologies INC.",
   "Point of Contact": "Ephram Yeashoua",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2021/Bd042121/agenda/e144.pdf",
@@ -10028,7 +10363,7 @@
   "_brands": []
  },
  {
-  "Name": "Structured Cabling Solutions, Inc. Dba Scs Technologies",
+  "Name": "Structured Cabling Solutions, INC. Dba Scs Technologies",
   "Point of Contact": "Syed Shah",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2026/Bd090926/agenda/e143.pdf",
@@ -10051,7 +10386,7 @@
   "_brands": []
  },
  {
-  "Name": "System of Security Service Inc.",
+  "Name": "System of Security Service INC.",
   "Point of Contact": "Mauriel Jesus Fernandez",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -10304,7 +10639,7 @@
   "_brands": []
  },
  {
-  "Name": "Dynamic Integrated Security, Inc.",
+  "Name": "Dynamic Integrated Security, INC.",
   "Point of Contact": "Jhonelba Moreno",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2026/Bd090926/agenda/e143.pdf",
@@ -10327,7 +10662,7 @@
   "_brands": []
  },
  {
-  "Name": "Innuvo, Inc.",
+  "Name": "Innuvo, INC.",
   "Point of Contact": "Michael Spring",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2021/Bd042121/agenda/e144.pdf",
@@ -10465,7 +10800,7 @@
   "_brands": []
  },
  {
-  "Name": "Zimy Electronics, Inc.",
+  "Name": "Zimy Electronics, INC.",
   "Point of Contact": "Wilhelm Zimerman",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2021/Bd042121/agenda/e144.pdf",
@@ -10511,30 +10846,7 @@
   "_brands": []
  },
  {
-  "Name": "Allied Universal",
-  "Point of Contact": "",
-  "Contact Role": "",
-  "Contact Source": "",
-  "Municipality": "?",
-  "State": "FL",
-  "Website": "https://www.aus.com/",
-  "Email": "?",
-  "Business Type": "Guard Company",
-  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, fire alarm, structured cabling, gates/barriers, guard services, serves schools/hospitals/healthcare/hotels/condos/HOA/offices/government/retail/warehouses/industrial",
-  "Number of Locations": "?",
-  "ZIP Code": "?",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 2,
-  "Source URL": "https://www.bomamiamidade.org/toby/toby-sponsorship/",
-  "_notes": "",
-  "Found In": "T3_Directories.xlsx",
-  "Best Tier": "T3",
-  "_region": "Other FL",
-  "_n_sources": 1,
-  "_brands": []
- },
- {
-  "Name": "Communications International, Inc.",
+  "Name": "Communications International, INC.",
   "Point of Contact": "Jeana Quintana",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2026/Bd090926/agenda/e143.pdf",
@@ -10557,7 +10869,7 @@
   "_brands": []
  },
  {
-  "Name": "Convergeone, Inc.",
+  "Name": "Convergeone, INC.",
   "Point of Contact": "Jeffrey Russell",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2026/Bd090926/agenda/e143.pdf",
@@ -10626,7 +10938,7 @@
   "_brands": []
  },
  {
-  "Name": "50 State Technology, Inc.",
+  "Name": "50 State Technology, INC.",
   "Point of Contact": "Stephen J Renteria",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -10718,7 +11030,7 @@
   "_brands": []
  },
  {
-  "Name": "Advanced Detection Technologies Inc.",
+  "Name": "Advanced Detection Technologies INC.",
   "Point of Contact": "Felix Puga",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -10764,7 +11076,7 @@
   "_brands": []
  },
  {
-  "Name": "Advanced Technology Group, Inc.",
+  "Name": "Advanced Technology Group, INC.",
   "Point of Contact": "Eric Folgueira Rodriguez",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -10833,7 +11145,7 @@
   "_brands": []
  },
  {
-  "Name": "Alarm Depot, Inc.",
+  "Name": "Alarm Depot, INC.",
   "Point of Contact": "Reinaldo R. Perez",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -10856,7 +11168,7 @@
   "_brands": []
  },
  {
-  "Name": "Alarm Plus, Inc.",
+  "Name": "Alarm Plus, INC.",
   "Point of Contact": "Boris Zalkind",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -10994,7 +11306,7 @@
   "_brands": []
  },
  {
-  "Name": "Apex Security Systems Inc.",
+  "Name": "Apex Security Systems INC.",
   "Point of Contact": "Eddie James Jr Gardner",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -11040,7 +11352,7 @@
   "_brands": []
  },
  {
-  "Name": "Atlantic Automatic Control, Inc.",
+  "Name": "Atlantic Automatic Control, INC.",
   "Point of Contact": "Jorge Nicasio Perez Helguera",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -11063,7 +11375,7 @@
   "_brands": []
  },
  {
-  "Name": "Audiovideo Technical Services, Inc.",
+  "Name": "Audiovideo Technical Services, INC.",
   "Point of Contact": "Cristina Guerra",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2026/Bd072226/agenda/e148.pdf",
@@ -11339,7 +11651,7 @@
   "_brands": []
  },
  {
-  "Name": "City Fire Protection, Inc.",
+  "Name": "City Fire Protection, INC.",
   "Point of Contact": "Rene Joel Lezcano",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -11408,7 +11720,7 @@
   "_brands": []
  },
  {
-  "Name": "Delta Alarm Systems, Inc.",
+  "Name": "Delta Alarm Systems, INC.",
   "Point of Contact": "Jose Enrique Quintero",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -11454,7 +11766,7 @@
   "_brands": []
  },
  {
-  "Name": "Design Av, Inc.",
+  "Name": "Design AV, INC.",
   "Point of Contact": "Javier Roberto Estefan",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -11558,29 +11870,6 @@
   "Services Listed on Website": "?",
   "Number of Locations": "?",
   "ZIP Code": "33196",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 1,
-  "Source URL": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
-  "_notes": "",
-  "Found In": "T3_Licenses.xlsx",
-  "Best Tier": "T3",
-  "_region": "Miami-Dade",
-  "_n_sources": 1,
-  "_brands": []
- },
- {
-  "Name": "Dsp Video Systems",
-  "Point of Contact": "Billy A Cocca",
-  "Contact Role": "License holder (DBPR EG)",
-  "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
-  "Municipality": "Doral",
-  "State": "FL",
-  "Website": "?",
-  "Email": "?",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "?",
-  "Number of Locations": "?",
-  "ZIP Code": "33178",
   "Preferred Zone (Y/N)": "N",
   "Fit Score": 1,
   "Source URL": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -11753,7 +12042,7 @@
   "_brands": []
  },
  {
-  "Name": "Engineered Automation, Inc.",
+  "Name": "Engineered Automation, INC.",
   "Point of Contact": "Carlos Alberto Fernandez",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -11799,7 +12088,7 @@
   "_brands": []
  },
  {
-  "Name": "Etek Fire Alarms Inc.",
+  "Name": "Etek Fire Alarms INC.",
   "Point of Contact": "Jaime Sanchez",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -11822,7 +12111,7 @@
   "_brands": []
  },
  {
-  "Name": "Excell-alarm System, Inc.",
+  "Name": "Excell-alarm System, INC.",
   "Point of Contact": "Eugene Roman",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -11868,7 +12157,7 @@
   "_brands": []
  },
  {
-  "Name": "Fidrat Fire & Systems, Inc.",
+  "Name": "Fidrat Fire & Systems, INC.",
   "Point of Contact": "Mark Joseph Tardif",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -11914,7 +12203,7 @@
   "_brands": []
  },
  {
-  "Name": "Fire Alarm Specialist of Florida Inc.",
+  "Name": "Fire Alarm Specialist of Florida INC.",
   "Point of Contact": "Brian Keith Messier",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -11960,7 +12249,7 @@
   "_brands": []
  },
  {
-  "Name": "Fire and Security Systems Specialists, Inc.",
+  "Name": "Fire and Security Systems Specialists, INC.",
   "Point of Contact": "Rolando Garcia",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -12006,7 +12295,7 @@
   "_brands": []
  },
  {
-  "Name": "Fire-link Technologies Inc.",
+  "Name": "Fire-link Technologies INC.",
   "Point of Contact": "Enrique Perez",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -12052,7 +12341,7 @@
   "_brands": []
  },
  {
-  "Name": "Flying A Security Systems, Inc.",
+  "Name": "Flying A Security Systems, INC.",
   "Point of Contact": "Woodman Joshua Alderman",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -12190,7 +12479,7 @@
   "_brands": []
  },
  {
-  "Name": "Hi-gain Electronics, Inc.",
+  "Name": "Hi-gain Electronics, INC.",
   "Point of Contact": "Juan Vicente Arias",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -12305,7 +12594,7 @@
   "_brands": []
  },
  {
-  "Name": "Improve Fire Alarms, Inc.",
+  "Name": "Improve Fire Alarms, INC.",
   "Point of Contact": "Amaury Nenninger",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -12351,7 +12640,7 @@
   "_brands": []
  },
  {
-  "Name": "Integrated Technologies, Inc.",
+  "Name": "Integrated Technologies, INC.",
   "Point of Contact": "Israel Garcia",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -12420,7 +12709,7 @@
   "_brands": []
  },
  {
-  "Name": "Jdav Design South Inc.",
+  "Name": "Jdav Design South INC.",
   "Point of Contact": "Dayron Vidal",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -12604,29 +12893,6 @@
   "_brands": []
  },
  {
-  "Name": "Master Electronic Solutions LLC",
-  "Point of Contact": "Luis M Hernandez",
-  "Contact Role": "License holder (DBPR EF)",
-  "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
-  "Municipality": "Unincorporated Miami-Dade",
-  "State": "FL",
-  "Website": "?",
-  "Email": "?",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "?",
-  "Number of Locations": "?",
-  "ZIP Code": "33175",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 1,
-  "Source URL": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
-  "_notes": "",
-  "Found In": "T3_Licenses.xlsx",
-  "Best Tier": "T3",
-  "_region": "Miami-Dade",
-  "_n_sources": 1,
-  "_brands": []
- },
- {
   "Name": "Medina Security & Network LLC",
   "Point of Contact": "Sergio R Monteagudo",
   "Contact Role": "License holder (DBPR EF)",
@@ -12673,7 +12939,7 @@
   "_brands": []
  },
  {
-  "Name": "Miami Cable Connections, Inc.",
+  "Name": "Miami Cable Connections, INC.",
   "Point of Contact": "Shane Donovan Arevalo",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -12788,7 +13054,7 @@
   "_brands": []
  },
  {
-  "Name": "Monarch Security, Inc.",
+  "Name": "Monarch Security, INC.",
   "Point of Contact": "Saleem Bin Coira",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -12834,7 +13100,7 @@
   "_brands": []
  },
  {
-  "Name": "National Fire Security, Inc.",
+  "Name": "National Fire Security, INC.",
   "Point of Contact": "Luis Cabello",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -12926,7 +13192,7 @@
   "_brands": []
  },
  {
-  "Name": "Obx Technologies, Inc.",
+  "Name": "Obx Technologies, INC.",
   "Point of Contact": "Carlos Gomez",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -12995,7 +13261,7 @@
   "_brands": []
  },
  {
-  "Name": "Omega Security of South Florida, Inc.",
+  "Name": "Omega Security of South Florida, INC.",
   "Point of Contact": "Rene Samuel Gonzalez",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13018,7 +13284,7 @@
   "_brands": []
  },
  {
-  "Name": "One Safety Solutions, Inc.",
+  "Name": "One Safety Solutions, INC.",
   "Point of Contact": "Alexei Cruz",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13133,7 +13399,7 @@
   "_brands": []
  },
  {
-  "Name": "Pearce Alarm Services, Inc.",
+  "Name": "Pearce Alarm Services, INC.",
   "Point of Contact": "Jeffrey W Jr Pearce",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13179,7 +13445,7 @@
   "_brands": []
  },
  {
-  "Name": "Pinnacle Security & Technology, Inc.",
+  "Name": "Pinnacle Security & Technology, INC.",
   "Point of Contact": "Mark Joseph Tardif",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13248,7 +13514,7 @@
   "_brands": []
  },
  {
-  "Name": "Prosafety Fire and Security Inc.",
+  "Name": "Prosafety Fire and Security INC.",
   "Point of Contact": "Yudian Gustavo Quesada",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13455,7 +13721,7 @@
   "_brands": []
  },
  {
-  "Name": "Securemax Solutions, Inc.",
+  "Name": "Securemax Solutions, INC.",
   "Point of Contact": "Rene Joel Lezcano",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13501,7 +13767,7 @@
   "_brands": []
  },
  {
-  "Name": "Security Line of Miami, Inc.",
+  "Name": "Security Line of Miami, INC.",
   "Point of Contact": "Juan Manuel Torrejon",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13616,7 +13882,7 @@
   "_brands": []
  },
  {
-  "Name": "Sunshine Security Consultants, Inc.",
+  "Name": "Sunshine Security Consultants, INC.",
   "Point of Contact": "Anderson Dwarkah",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13662,7 +13928,7 @@
   "_brands": []
  },
  {
-  "Name": "Synergy Security & Fire Solutions, Inc.",
+  "Name": "Synergy Security & Fire Solutions, INC.",
   "Point of Contact": "Enrique Lorie",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13685,7 +13951,7 @@
   "_brands": []
  },
  {
-  "Name": "Systems Design & Integration, Inc.",
+  "Name": "Systems Design & Integration, INC.",
   "Point of Contact": "Roderick Jonathan Sintow",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13754,7 +14020,7 @@
   "_brands": []
  },
  {
-  "Name": "United Communication & Protection, Inc.",
+  "Name": "United Communication & Protection, INC.",
   "Point of Contact": "Alain Padron",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13777,7 +14043,7 @@
   "_brands": []
  },
  {
-  "Name": "United Communication and Protection, Inc.",
+  "Name": "United Communication and Protection, INC.",
   "Point of Contact": "Reynaldo Antonio Padron",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13800,7 +14066,7 @@
   "_brands": []
  },
  {
-  "Name": "United Telecommunications & Alarms Inc.",
+  "Name": "United Telecommunications & Alarms INC.",
   "Point of Contact": "Rudolph C. Fyffe",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13823,7 +14089,7 @@
   "_brands": []
  },
  {
-  "Name": "Universal Fire & Security Services, Inc.",
+  "Name": "Universal Fire & Security Services, INC.",
   "Point of Contact": "Carlos Gomez",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13846,30 +14112,7 @@
   "_brands": []
  },
  {
-  "Name": "Vcs Tech Systems, LLC",
-  "Point of Contact": "Miguel Jesus Vidal",
-  "Contact Role": "License holder (DBPR EG)",
-  "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
-  "Municipality": "Doral",
-  "State": "FL",
-  "Website": "?",
-  "Email": "?",
-  "Business Type": "Dealer/Integrator",
-  "Services Listed on Website": "?",
-  "Number of Locations": "?",
-  "ZIP Code": "33172",
-  "Preferred Zone (Y/N)": "N",
-  "Fit Score": 1,
-  "Source URL": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
-  "_notes": "",
-  "Found In": "T3_Licenses.xlsx",
-  "Best Tier": "T3",
-  "_region": "Miami-Dade",
-  "_n_sources": 1,
-  "_brands": []
- },
- {
-  "Name": "Vinco Electronics & Design Inc.",
+  "Name": "Vinco Electronics & Design INC.",
   "Point of Contact": "Juan Jose Coello",
   "Contact Role": "License holder (DBPR EG)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13915,7 +14158,7 @@
   "_brands": []
  },
  {
-  "Name": "Vitel Communications, Inc.",
+  "Name": "Vitel Communications, INC.",
   "Point of Contact": "Andrew Arthur Corcoran",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -13938,7 +14181,7 @@
   "_brands": []
  },
  {
-  "Name": "Walmart Inc.",
+  "Name": "Walmart INC.",
   "Point of Contact": "Miguel Angel Gonzalez",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -14007,7 +14250,7 @@
   "_brands": []
  },
  {
-  "Name": "Bass-united Fire & Security Systems, Inc.",
+  "Name": "Bass-united Fire & Security Systems, INC.",
   "Point of Contact": "Brad Higdon",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2021/Bd021021/agenda/e151.pdf",
@@ -14030,7 +14273,7 @@
   "_brands": []
  },
  {
-  "Name": "Music Arts Enterprises, Inc., Mae",
+  "Name": "Music Arts Enterprises, INC., Mae",
   "Point of Contact": "Michael S. Katz",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2026/Bd072226/agenda/e148.pdf",
@@ -14076,7 +14319,7 @@
   "_brands": []
  },
  {
-  "Name": "United Data Technologies, Inc.",
+  "Name": "United Data Technologies, INC.",
   "Point of Contact": "Enrique A. Fleches",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2024/Bd061824/agenda/e142.pdf",
@@ -14122,7 +14365,7 @@
   "_brands": []
  },
  {
-  "Name": "Constant Technologies Inc.",
+  "Name": "Constant Technologies INC.",
   "Point of Contact": "",
   "Contact Role": "",
   "Contact Source": "",
@@ -14168,7 +14411,7 @@
   "_brands": []
  },
  {
-  "Name": "Valcom, Inc.",
+  "Name": "Valcom, INC.",
   "Point of Contact": "John W. Mason",
   "Contact Role": "Officer listed on the School Board award item",
   "Contact Source": "https://pdfs.dadeschools.net/Bdarch/2024/Bd061824/agenda/e142.pdf",
@@ -14237,7 +14480,7 @@
   "_brands": []
  },
  {
-  "Name": "Engineering Systems Technology, Inc.",
+  "Name": "Engineering Systems Technology, INC.",
   "Point of Contact": "Enrique A Borja",
   "Contact Role": "License holder (DBPR EF)",
   "Contact Source": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
@@ -14346,6 +14589,29 @@
   "Source URL": "https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv",
   "_notes": "",
   "Found In": "T3_Licenses.xlsx",
+  "Best Tier": "T3",
+  "_region": "Miami-Dade",
+  "_n_sources": 1,
+  "_brands": []
+ },
+ {
+  "Name": "Security Alliance, LLC",
+  "Point of Contact": "Angel Rosado",
+  "Contact Role": "Listed contact",
+  "Contact Source": "https://members.bomamiamidade.org/member-directory/Details/angel-rosado-4115148",
+  "Municipality": "City of Miami",
+  "State": "FL",
+  "Website": "?",
+  "Email": "?",
+  "Business Type": "Guard Company",
+  "Services Listed on Website": "?",
+  "Number of Locations": "?",
+  "ZIP Code": "?",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 0,
+  "Source URL": "https://members.bomamiamidade.org/member-directory/Details/angel-rosado-4115148",
+  "_notes": "",
+  "Found In": "T3_Directories.xlsx",
   "Best Tier": "T3",
   "_region": "Miami-Dade",
   "_n_sources": 1,

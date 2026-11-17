@@ -1,0 +1,90 @@
+{
+ "companies": [
+  {
+   "name": "Kastle Systems, Inc.",
+   "contact_name": "Claudia Grene",
+   "address": "150 S Pine Island Road",
+   "city": "Plantation",
+   "zip": "33324",
+   "website": "https://www.kastle.com/",
+   "listing_url": "https://members.bomamiamidade.org/member-directory/Details/claudia-grene-3205999"
+  },
+  {
+   "name": "Regions Security Services, Inc.",
+   "contact_name": "David Rodriguez-Baez",
+   "address": "1100 NW 72nd Ave.",
+   "city": "Miami",
+   "zip": "33126",
+   "website": "https://www.regionssecurity.us/",
+   "listing_url": "https://members.bomamiamidade.org/member-directory/Details/david-rodriguez-baez-2794168"
+  },
+  {
+   "name": "Security Alliance, LLC",
+   "contact_name": "Angel Rosado",
+   "address": "",
+   "city": "Miami",
+   "zip": "",
+   "website": "",
+   "listing_url": "https://members.bomamiamidade.org/member-directory/Details/angel-rosado-4115148"
+  },
+  {
+   "name": "Titan Security Group",
+   "contact_name": "",
+   "address": "",
+   "city": "Miami",
+   "zip": "",
+   "website": "",
+   "listing_url": "https://members.bomamiamidade.org/member-directory/Details/titan-security-group-3127854"
+  },
+  {
+   "name": "PBM Southeast, LLC",
+   "contact_name": "Dan Tokofsky",
+   "address": "100 Biscayne Boulevard",
+   "city": "Miami",
+   "zip": "33132",
+   "website": "",
+   "listing_url": "https://members.bomamiamidade.org/member-directory/Details/dan-tokofsky-2794139"
+  },
+  {
+   "name": "Allied Universal",
+   "contact_name": "Javier Vazquez",
+   "address": "7200 Corporate Center Drive",
+   "city": "Miami",
+   "zip": "33126",
+   "website": "https://www.aus.com/",
+   "listing_url": "https://members.bomamiamidade.org/member-directory/Details/javier-vazquez-2794133"
+  }
+ ],
+ "people_only": [
+  {
+   "name": "Scot Barry",
+   "listing_url": "https://members.bomamiamidade.org/member-directory/Details/scot-barry-2794284",
+   "note": ""
+  },
+  {
+   "name": "Joe Garrett",
+   "listing_url": "https://members.bomamiamidade.org/member-directory/Details/joe-garrett-4838811",
+   "note": ""
+  },
+  {
+   "name": "Joel Leffler",
+   "listing_url": "https://members.bomamiamidade.org/member-directory/Details/joel-leffler-2794207",
+   "note": "Ft. Lauderdale (33309) address on listing"
+  },
+  {
+   "name": "Monica Lopez",
+   "listing_url": "https://members.bomamiamidade.org/member-directory/Details/monica-lopez-3775378",
+   "note": ""
+  },
+  {
+   "name": "Vanessa Pauley",
+   "listing_url": "https://members.bomamiamidade.org/member-directory/Details/vanessa-pauley-5058880",
+   "note": ""
+  },
+  {
+   "name": "Laura Prewett",
+   "listing_url": "https://members.bomamiamidade.org/member-directory/Details/laura-prewett-4635345",
+   "note": ""
+  }
+ ]
+}

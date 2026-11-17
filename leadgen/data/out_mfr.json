@@ -32,6 +32,32 @@
   "_self_declared": false
  },
  {
+  "Name": "Aressco",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Unincorporated Miami-Dade",
+  "State": "FL",
+  "Website": "https://aressco.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, gates/barriers, serves schools/offices/government/retail/warehouses/industrial, brands: Alarm.com/DMP/Honeywell/Qolsys/Uniview",
+  "Number of Locations": 1,
+  "ZIP Code": "33177",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 5,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Miami-Dade",
+  "_pz_why": "Mentions 'homestead'",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
   "Name": "Baltic Service LLC",
   "Point of Contact": "",
   "Contact Role": "",
@@ -59,7 +85,39 @@
   "_self_declared": true
  },
  {
-  "Name": "Florida Safeguard Inc.",
+  "Name": "Circle Security Solutions",
+  "Point of Contact": "Ira Ehrenkrantz",
+  "Contact Role": "Founder (started Circle Security Systems, Inc. in 1976)",
+  "Contact Source": "https://circlesecuritysolutions.com/company/",
+  "Municipality": "South Miami",
+  "State": "FL",
+  "Website": "https://circlesecuritysolutions.com",
+  "Email": "info@circlesecuritysolutions.com",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, fire alarm, structured cabling, gates/barriers, smart home/automation, networking/IT, serves HOAs/condo associations/multifamily/hotels/retail/warehouses/schools/campuses/medical offices/Class-A buildings/car dealerships/marinas/restaurants/supermarkets, brands: ADT/Alarm.com/Axis/Dahua/Digital Watchdog/Hikvision/Honeywell/Qolsys/Speco/Uniview/Verkada",
+  "Number of Locations": 2,
+  "ZIP Code": "33143",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 5,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_verified_owner": [
+   "Ira Ehrenkrantz",
+   "Founder (started Circle Security Systems, Inc. in 1976)",
+   "https://circlesecuritysolutions.com/company/"
+  ],
+  "_verified_notes": "Circle Security Systems, Inc. dba Circle Security Solutions; family business since 1976; alarms, fire, cameras (Verkada page aimed at condos/boards), access, automation. Licenses EF0000848 / EF0000852. Shares its Miami address (6815 SW 81st Terrace) and license numbers with Helios Security Systems - likely affiliated. Bernard H Robin (input) is not on the site.",
+  "_region": "Miami-Dade",
+  "_pz_why": "Mentions 'coral gables'",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "Florida Safeguard INC.",
   "Point of Contact": "Jim Wilhelm",
   "Contact Role": "President and Founder",
   "Contact Source": "https://floridasafeguard.com/contact.html",
@@ -87,6 +145,33 @@
   ],
   "_levels": [
    "Resideo/Honeywell: Tier 2"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "Hemag Inc",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Cutler Bay",
+  "State": "FL",
+  "Website": "https://hemaginc.com",
+  "Email": "service@hemaginc.com",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, intrusion alarms, fire alarm, structured cabling, audio/video, smart home/automation, networking/IT, serves homes/builders/commercial AV/offices/marine/yachts, brands: Alarm.com/Lutron/Qolsys/URC (Total Control)",
+  "Number of Locations": 1,
+  "ZIP Code": "33157",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 5,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_verified_notes": "Smart-home/AV and low-voltage integrator: automation, theater, audio, networking, surveillance cameras (incl. commercial video analytics), fire alarms (state certified alarm contractor, ETL listed), CAD drafting, IT consulting. Mostly residential. No street address or people on the site.",
+  "_region": "Miami-Dade",
+  "_pz_why": "Mentions 'coral gables'",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
   ],
   "_self_declared": false
  },
@@ -417,6 +502,32 @@
   "_self_declared": false
  },
  {
+  "Name": "TechBTC",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Doral",
+  "State": "FL",
+  "Website": "https://techbtc.com",
+  "Email": "and@techbtc.com",
+  "Business Type": "Software/Vendor",
+  "Services Listed on Website": "commercial, CCTV/video surveillance, access control, intrusion alarms, fire alarm, smart home/automation, networking/IT, remote video monitoring, license plate recognition, serves schools/offices/retail/warehouses/industrial, brands: Geovision/HID/Milestone/OpenEye/Qolsys",
+  "Number of Locations": 1,
+  "ZIP Code": "33172",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 4,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Miami-Dade",
+  "_pz_why": "Mentions 'south florida'",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
   "Name": "World Security & Electric (WSE), now Pye-Barker Fire & Safety - Doral",
   "Point of Contact": "Kelly Rooney",
   "Contact Role": "President",
@@ -610,6 +721,32 @@
   "_self_declared": false
  },
  {
+  "Name": "Get Smart Security inc",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "North Miami",
+  "State": "FL",
+  "Website": "https://getsmartersecurity.com",
+  "Email": "info@getsmartersecurity.com",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, access control, intrusion alarms, alarm monitoring, intercom, structured cabling, audio/video, smart home/automation, remote video monitoring, serves condos/HOA/offices, brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33161",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 3,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Miami-Dade",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
   "Name": "Security 101 (Miami, FL)",
   "Point of Contact": "",
   "Contact Role": "",
@@ -739,6 +876,58 @@
   "_self_declared": false
  },
  {
+  "Name": "Master Electronic Solutions",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Unincorporated Miami-Dade",
+  "State": "FL",
+  "Website": "https://mesofmiami.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "CCTV/video surveillance, access control, intrusion alarms, fire alarm, smart home/automation, brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33175",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 2,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Miami-Dade",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "APS Security Systems",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Unincorporated Miami-Dade",
+  "State": "FL",
+  "Website": "?",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33155",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Miami-Dade",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
   "Name": "Chactech",
   "Point of Contact": "",
   "Contact Role": "",
@@ -761,6 +950,84 @@
   ],
   "_levels": [
    "Verkada: Gold Partner"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "DSP Video Systems",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Doral",
+  "State": "FL",
+  "Website": "https://www.dspsmart.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33122",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Miami-Dade",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "Florida Alarms",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Hialeah",
+  "State": "FL",
+  "Website": "?",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33012",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Miami-Dade",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "NVE Technologies, Inc.",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Unincorporated Miami-Dade",
+  "State": "FL",
+  "Website": "https://nvetechnologies.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33186",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Miami-Dade",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
   ],
   "_self_declared": false
  },
@@ -791,6 +1058,84 @@
   "_self_declared": false
  },
  {
+  "Name": "VCS Tech Systems",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Doral",
+  "State": "FL",
+  "Website": "https://www.vcstechsystems.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33172",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Miami-Dade",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "Silmar",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Doral",
+  "State": "FL",
+  "Website": "https://www.silmarelectronics.com",
+  "Email": "?",
+  "Business Type": "Software/Vendor",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33178",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 0,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Miami-Dade",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "Wesco / Anixter",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Medley",
+  "State": "FL",
+  "Website": "?",
+  "Email": "?",
+  "Business Type": "Software/Vendor",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33178",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 0,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Miami-Dade",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
   "Name": "Alarm Grid Inc.",
   "Point of Contact": "",
   "Contact Role": "",
@@ -815,6 +1160,32 @@
   "_levels": [
    "Alarm.com: Self-declared: \"Alarm.com is one of Alarm Grid's premier interactive monitoring partners\"",
    "Resideo/Honeywell: Tier 2"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "Cypress Trace Security, Inc.",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Coral Springs",
+  "State": "FL",
+  "Website": "https://cypresstracesecurity.com",
+  "Email": "sales@cypresstracesecurity.com",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "commercial, residential, CCTV/video surveillance, intrusion alarms, alarm monitoring, audio/video, smart home/automation, remote video monitoring, mass notification/ERRCS, serves hospitals/healthcare/offices, brands: Alarm.com/Hikvision/Honeywell/Qolsys",
+  "Number of Locations": 1,
+  "ZIP Code": "33076",
+  "Preferred Zone (Y/N)": "Y",
+  "Fit Score": 5,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Broward",
+  "_pz_why": "Mentions 'miami-dade'",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
   ],
   "_self_declared": false
  },
@@ -1544,6 +1915,32 @@
   "_self_declared": false
  },
  {
+  "Name": "Burglar Alarm Technicians",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Ft. Lauderdale",
+  "State": "FL",
+  "Website": "?",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33334",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Broward",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
   "Name": "Everon",
   "Point of Contact": "",
   "Contact Role": "",
@@ -1622,6 +2019,84 @@
   "_self_declared": false
  },
  {
+  "Name": "Nexzum",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Sunrise",
+  "State": "FL",
+  "Website": "https://nexzum.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33351",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Broward",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "Palecek Security",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Fort Lauderdale",
+  "State": "FL",
+  "Website": "?",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33314",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Broward",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "Prizm Fire And Security Systems LLC",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Coral Springs",
+  "State": "FL",
+  "Website": "?",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33067",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Broward",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
+  ],
+  "_self_declared": false
+ },
+ {
   "Name": "Prosegur",
   "Point of Contact": "",
   "Contact Role": "",
@@ -1644,6 +2119,32 @@
   ],
   "_levels": [
    "Verkada: Gold Partner"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "Security Tech, Inc.",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Plantation",
+  "State": "FL",
+  "Website": "https://www.securitytechinc.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "brands: Qolsys",
+  "Number of Locations": "?",
+  "ZIP Code": "33317",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Broward",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
   ],
   "_self_declared": false
  },
@@ -1696,6 +2197,32 @@
   ],
   "_levels": [
    "Verkada: Platinum Partner"
+  ],
+  "_self_declared": false
+ },
+ {
+  "Name": "Vector Security",
+  "Point of Contact": "",
+  "Contact Role": "",
+  "Contact Source": "",
+  "Municipality": "Fort Lauderdale",
+  "State": "FL",
+  "Website": "https://vectorsecurity.com",
+  "Email": "?",
+  "Business Type": "Dealer/Integrator",
+  "Services Listed on Website": "residential, CCTV/video surveillance, intrusion alarms, smart home/automation, brands: Qolsys/Vector",
+  "Number of Locations": "?",
+  "ZIP Code": "33309",
+  "Preferred Zone (Y/N)": "N",
+  "Fit Score": 1,
+  "Source URL": "https://www.iqsecurityproducts.com/find-a-dealer",
+  "_region": "Broward",
+  "_pz_why": "",
+  "_brands": [
+   "Qolsys"
+  ],
+  "_levels": [
+   "Qolsys: Qolsys authorized dealer (iqsecurityproducts.com find-a-dealer)"
   ],
   "_self_declared": false
  },

@@ -86,7 +86,7 @@ def main():
             # fall back to what the brand/dealer listing itself says
             services = ((listing_services[:200] + "; ") if listing_services else "") + "brands: " + "/".join(brands)
         pz_texts = [" ".join((en or {}).get("pz_mentions", [])) if en and en.get("ok") else ""] + [r.get("service_area", "") for r in g] + [listing_services]
-        btype = classify(first["name"], en)
+        btype = next((r["business_type"] for r in g if r.get("business_type")), None) or classify(first["name"], en)
         srcs = list(OrderedDict.fromkeys(r.get("listing_url", "") for r in g if r.get("listing_url")))
         row = make_row(first["name"], first.get("city"), first.get("state") or "FL", first.get("zip"), site or "?",
                        email or "?", btype, services, locations_value(en), contact, " ; ".join(srcs[:3]), pz_texts)
@@ -116,7 +116,7 @@ COVERAGE = [
     ("ADT authorized dealers", "No public dealer locator; adt.com returns 403 (Akamai) to this session", "Dealers' own sites (none found that state ADT authorization)", "https://www.adt.com/local/fl/miami"),
     ("Vivint", "Sells direct; no dealers", "-", "-"),
     ("Resideo/Honeywell", "Yes: findapro.resideo.com, resideo.com find-a-pro, Honeywell commercial security locator (Platinum/Gold/Silver)", "All Miami-Dade ZIPs (JSON endpoint used by the page) + radius sweeps", "https://findapro.resideo.com ; https://www.bullseyelocations.com/pages/honeywellcomsec"),
-    ("Qolsys", "Locator exists but its data host (code.metalocator.com) disallows robots", "Not queried", "https://www.iqsecurityproducts.com/find-a-dealer"),
+    ("Qolsys", "Yes, but its data host (code.metalocator.com) disallows robots", "Searched by hand in a browser (Miami-Dade ZIPs; first 20 of 63 results by distance)", "https://www.iqsecurityproducts.com/find-a-dealer"),
     ("Verkada", "Yes: verkada.com/find-partners", "All 77 Miami-Dade ZIPs at 25 mi + 100/150 mi sweeps", "https://www.verkada.com/find-partners/"),
     ("Milestone", "Yes: partner locator (JSON endpoint the page calls)", "All 77 ZIPs at 25 mi + 100/200 mi sweeps", "https://www.milestonesys.com/"),
     ("Genetec", "Partial: public map covers Unified Elite / Strategic partners only", "Full map list filtered to Florida", "https://www.genetec.com/contact-us/unified-elite-resellers"),

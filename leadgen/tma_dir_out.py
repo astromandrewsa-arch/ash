@@ -15,7 +15,9 @@ def prep(recs):
         if "pipl default" in (r.get("notes", "") + r.get("flag", "")) and r.get("zip", "").startswith("33131"):
             r["zip"] = ""
         fl = (r.get("flag", "") + " " + r.get("notes", "")).lower()
-        if "vendor" in fl or "associate member" in fl:
+        if r.get("business_type"):
+            pass
+        elif "vendor" in fl or "associate member" in fl:
             r["business_type"] = "Software/Vendor"
         elif "consultant" in fl:
             r["business_type"] = "Consultant/Broker"
@@ -45,8 +47,8 @@ for t in tma:
 evidence = [(r["Name"], r["_raw"].get("tma_evidence", ""), r["_raw"].get("flag", "") or "clean Miami-Dade lead") for r in rows]
 md = sum(1 for r in rows if r["_region"] == "Miami-Dade")
 write_xlsx("../leads/T1_TMA_Members.xlsx",
-           f"The Monitoring Association (TMA) members in Florida - {len(rows)} companies ({md} in Miami-Dade). Intended source: TMA member directory https://my.tma.us/tmamemberdirectory (USA > Florida) - BLOCKED by a Cloudflare bot check; rebuilt from public tma.us pages and the search-engine index of TMA directory pages (see evidence table).",
-           "Warmth: TIER 1 - SUPER TOP PRIORITY. TMA members run or buy monitoring (central stations, dealers with UL-listed monitoring) and are early adopters of police-response technology. This list is INCOMPLETE until the directory is exported by hand (see run_log.md NEEDS MANUAL WORK).",
+           f"The Monitoring Association (TMA) members in Florida - {len(rows)} companies ({md} in Miami-Dade). Source: TMA member directory https://my.tma.us/tmamemberdirectory (USA > Florida), exported by hand in a browser (the site blocks automated access); 3 Florida Five Diamond centers not in that export added from tma.us.",
+           "Warmth: TIER 1 - SUPER TOP PRIORITY. TMA members run or buy monitoring (central stations, dealers with UL-listed monitoring) and are early adopters of police-response technology. Few are Miami-Dade dealers: most are central stations, vendors and consultants statewide.",
            f"Date collected: {TODAY}. Miami-Dade first. TMA board/committee people from Florida are listed below the table.",
            rows,
            extra_sections=[("TMA MEMBERSHIP EVIDENCE PER COMPANY", ["Company", "Evidence of TMA membership", "Caveat"], evidence),
@@ -66,11 +68,13 @@ for r in rows:
 rows = sort_rows(rows)
 json.dump([{k: v for k, v in r.items() if k != "_raw"} for r in rows], open("data/out_dir.json", "w"), indent=1)
 md = sum(1 for r in rows if r["_region"] == "Miami-Dade")
+boma_people = [(p["name"], "BOMA Miami-Dade member directory (security / life safety / access control category); company not shown on the listing" + ("; " + p["note"] if p.get("note") else ""), p["listing_url"]) for p in json.load(open("data/user_boma_export.json"))["people_only"]]
 write_xlsx("../leads/T3_Directories.xlsx",
-           f"Security integrator directories, Miami-Dade - {len(rows)} companies ({md} in Miami-Dade). Sources: https://pipl.systems/security-integrators/florida/ ; https://www.securityinformed.com/companies/miami-security-companies/directory.html ; https://www.sourcesecurity.com/companies/systems-integrators-florida/directory.html ; BOMA Miami-Dade https://members.bomamiamidade.org/member-directory (blocked; public BOMA pages used).",
-           "Warmth: TIER 3 - COLD. Directory presence only; no relationship signal. Locksmiths, cyber-only firms and manufacturers excluded.",
+           f"Security integrator directories, Miami-Dade - {len(rows)} companies ({md} in Miami-Dade). Sources: https://pipl.systems/security-integrators/florida/ ; https://www.securityinformed.com/companies/miami-security-companies/directory.html ; https://www.sourcesecurity.com/companies/systems-integrators-florida/directory.html ; BOMA Miami-Dade member directory https://members.bomamiamidade.org/member-directory (security / life safety / access control categories, exported by hand).",
+           "Warmth: TIER 3 - COLD. Directory presence only; no relationship signal. Locksmiths, cyber-only firms and manufacturers excluded. BOMA members are mostly guard companies and nationals, but they sell into the office buildings IRIS targets.",
            f"Date collected: {TODAY}. Miami-Dade first. Which directory listed each company, and caveats, are in the table below.",
            rows,
-           extra_sections=[("DIRECTORY AND CAVEATS PER COMPANY", ["Company", "Listed in", "Caveat"], dirs)],
+           extra_sections=[("DIRECTORY AND CAVEATS PER COMPANY", ["Company", "Listed in", "Caveat"], dirs),
+                           ("BOMA MIAMI-DADE SECURITY-CATEGORY MEMBERS LISTED BY PERSON ONLY (company not shown; open the listing to see it)", ["Person (as listed)", "Listing", "Source URL"], boma_people)],
            sheet_title="Directories")
 print("dir", len(rows), md)
