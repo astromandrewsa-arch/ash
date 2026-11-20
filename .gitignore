@@ -17,3 +17,5 @@ leadgen/cache/
 leadgen/tools/*.html
 __pycache__/
 leadgen/tools/certs/
+leadgen/cache_loc/
+leadgen/cache_loc_v1/
