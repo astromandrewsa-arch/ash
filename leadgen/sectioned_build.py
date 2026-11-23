@@ -9,13 +9,15 @@ iaf = json.load(open("raw/simple_rows.json"))[1:]          # rows 2-39 (9 cols)
 ven = json.load(open("raw/vendor_rows.json"))              # rows 41-73
 cc = {x["sheet_row"]: x for x in json.load(open("data/company_contacts.json"))}
 pp = {x["sheet_row"]: x for x in json.load(open("data/rocketreach_people_v2.json"))}
+# emails Clearout found to bounce (mailbox not found); kept out of git like the other contact data
+BOUNCED = set(json.load(open("data/bounced_emails.json"))) if os.path.exists("data/bounced_emails.json") else set()
 
 
 def company_emails(s):
     out = []
     for e in re.split(r"[;,]\s*", s or ""):
         e = re.sub(r"\s*\(.*$", "", e).strip()
-        if e and "@" in e and not PERSONAL.search(e) and e not in out:
+        if e and "@" in e and not PERSONAL.search(e) and e.lower() not in BOUNCED and e not in out:
             out.append(e)
     return out
 
