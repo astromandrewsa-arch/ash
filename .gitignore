@@ -22,3 +22,6 @@ leadgen/cache_loc_v1/
 leadgen/cache_dade/
 leadgen/cache_dade_v1/
 leadgen/data/rocketreach_contacts*.json
+leadgen/data/company_contacts*.json
+leadgen/data/rocketreach_people*.json
+leadgen/data/sectioned_grid*.json
