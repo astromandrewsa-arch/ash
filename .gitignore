@@ -19,3 +19,5 @@ __pycache__/
 leadgen/tools/certs/
 leadgen/cache_loc/
 leadgen/cache_loc_v1/
+leadgen/cache_dade/
+leadgen/cache_dade_v1/
