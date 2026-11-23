@@ -34,7 +34,7 @@ def block(row, r):
     site = c.get("website") or r[6] or ""
     dom = _domain(norm_url(site)) if site else ""
     cem = company_emails(c.get("company_email", "")) or company_emails(r[7])
-    comp = [r[0], "Company", c.get("main_phone", ""), c.get("phone_2", ""), cem[0] if cem else "", cem[1] if len(cem) > 1 else "",
+    comp = [r[0], "Company", c.get("main_phone", ""), c.get("phone_2", ""), cem[0] if cem else "",
             r[1], r[2], r[5], site, r[4], r[8]]
     rows = [comp]
     company_lines = {digits(comp[2]), digits(comp[3])} - {""}
@@ -44,23 +44,30 @@ def block(row, r):
         # a person's number that is just the company main line is dropped; the other number moves up
         phones = [x for x in (p.get("phone_1", ""), p.get("phone_2", "")) if x and digits(x) not in company_lines]
         phones += [""] * (2 - len(phones))
+        # one email per person: RocketReach lists its recommended work email first
         rows.append(["      ↳ " + p.get("name", ""), p.get("title", ""), phones[0], phones[1],
-                     ems[0] if ems else "", ems[1] if len(ems) > 1 else "", "", "", "", "", "", ""])
+                     ems[0] if ems else "", "", "", "", "", "", ""])
     return rows
 
 
-HEAD = ["Company / Contact", "Role", "Phone 1 (best)", "Phone 2", "Email (company)", "Email 2 (company)", "Security Dealer?",
+HEAD = ["Company / Contact", "Role", "Phone 1 (best)", "Phone 2", "Email", "Security Dealer?",
         "Miami-Dade Locations", "What They Sell", "Website", "Main Office City", "Notes"]
-grid = [HEAD, ["IAF MEMBERS"] + [""] * 11]
+grid = [HEAD, ["IAF MEMBERS"] + [""] * 10]
 kinds = ["header", "section"]
 for i, r in enumerate(iaf, 2):
     for j, x in enumerate(block(i, r)):
         grid.append(x); kinds.append("company" if j == 0 else "person")
-grid.append([""] * 12); kinds.append("blank")
-grid.append(["Company (NON MEMBER ASSOCATION)"] + [""] * 11); kinds.append("section")
+grid.append([""] * 11); kinds.append("blank")
+grid.append(["Company (NON MEMBER ASSOCATION)"] + [""] * 10); kinds.append("section")
 for i, r in enumerate(ven, 41):
     for j, x in enumerate(block(i, r)):
         grid.append(x); kinds.append("company" if j == 0 else "person")
+# hand edits made on the sheet, kept here so a rebuild matches it
+for row in grid:
+    if row[5] == "LIKELY - no website to confirm":
+        row[5] = "LIKELY - security dealer (check website)"
+    if row[0].strip() == "↳ Jeffrey Nunberg":
+        row[1] = "Founder (RocketReach also lists a newer job elsewhere)"
 for row in grid:
     for k, v in enumerate(row):
         if isinstance(v, str) and v and v[0] in "+=-@":
