@@ -51,7 +51,7 @@ for i, r in enumerate(ven, 41):
         grid.append(x); kinds.append("company" if j == 0 else "person")
 for row in grid:
     for k, v in enumerate(row):
-        if isinstance(v, str) and v[:1] in "+=-@":
+        if isinstance(v, str) and v and v[0] in "+=-@":
             row[k] = "'" + v
 json.dump({"grid": grid, "kinds": kinds}, open("data/sectioned_grid.json", "w"))
 from collections import Counter

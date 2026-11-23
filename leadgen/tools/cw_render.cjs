@@ -9,7 +9,11 @@ const { chromium } = require('playwright');
     const r = await p.goto(process.argv[2], { waitUntil: 'domcontentloaded', timeout: 45000 });
     await p.waitForTimeout(4000);
     try { await p.evaluate(() => window.scrollTo(0, document.body.scrollHeight)); await p.waitForTimeout(1200); } catch (e) {}
-    out.status = r ? r.status() : null; out.url = p.url(); out.html = await p.content();
+    out.status = r ? r.status() : null;
+    for (let i = 0; i < 4; i++) {
+      try { await p.waitForLoadState('load', { timeout: 15000 }); out.url = p.url(); out.html = await p.content(); break; }
+      catch (e) { await p.waitForTimeout(3000); }
+    }
   } catch (e) { out.error = e.message.split('\n')[0]; }
   process.stdout.write(JSON.stringify(out));
   await b.close();
