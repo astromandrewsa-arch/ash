@@ -62,6 +62,12 @@ grid.append(["Company (NON MEMBER ASSOCATION)"] + [""] * 10); kinds.append("sect
 for i, r in enumerate(ven, 41):
     for j, x in enumerate(block(i, r)):
         grid.append(x); kinds.append("company" if j == 0 else "person")
+# emails found later by searching the web / company sites and checked with Clearout (kept out of git)
+FOUND = json.load(open("data/found_emails.json")) if os.path.exists("data/found_emails.json") else {}
+for row in grid:
+    key = row[0].replace("↳", "").strip()
+    if not row[4] and key in FOUND:
+        row[4] = FOUND[key]
 # hand edits made on the sheet, kept here so a rebuild matches it
 for row in grid:
     if row[5] == "LIKELY - no website to confirm":

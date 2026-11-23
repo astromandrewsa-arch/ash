@@ -27,3 +27,4 @@ leadgen/data/rocketreach_people*.json
 leadgen/data/sectioned_grid*.json
 leadgen/out/
 leadgen/data/bounced_emails.json
+leadgen/data/found_emails.json
