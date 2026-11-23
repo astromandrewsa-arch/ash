@@ -20,6 +20,12 @@ def company_emails(s):
     return out
 
 
+def digits(s):
+    """The 10-digit US number in a phone cell, ignoring the +1, punctuation and the (label)."""
+    d = re.sub(r"\D", "", re.sub(r"\(.*$", "", s or ""))
+    return d[-10:] if len(d) >= 10 else ""
+
+
 def block(row, r):
     # r: 0 company,1 dealer,2 loc,3 people(listing),4 city,5 sells,6 website,7 email,8 notes
     c = cc.get(row, {})
@@ -29,10 +35,14 @@ def block(row, r):
     comp = [r[0], "Company", c.get("main_phone", ""), c.get("phone_2", ""), cem[0] if cem else "", cem[1] if len(cem) > 1 else "",
             r[1], r[2], r[5], site, r[4], r[8]]
     rows = [comp]
+    company_lines = {digits(comp[2]), digits(comp[3])} - {""}
     for p in (pp.get(row, {}).get("people") or [])[:2]:
         ems = company_emails(p.get("company_email", "")) + company_emails(p.get("company_email_2", ""))
         ems = list(dict.fromkeys(ems))
-        rows.append(["      ↳ " + p.get("name", ""), p.get("title", ""), p.get("phone_1", ""), p.get("phone_2", ""),
+        # a person's number that is just the company main line is dropped; the other number moves up
+        phones = [x for x in (p.get("phone_1", ""), p.get("phone_2", "")) if x and digits(x) not in company_lines]
+        phones += [""] * (2 - len(phones))
+        rows.append(["      ↳ " + p.get("name", ""), p.get("title", ""), phones[0], phones[1],
                      ems[0] if ems else "", ems[1] if len(ems) > 1 else "", "", "", "", "", "", ""])
     return rows
 
