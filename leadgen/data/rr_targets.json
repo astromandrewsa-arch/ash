@@ -1,0 +1,641 @@
+[
+ {
+  "sheet_row": 2,
+  "company": "Maximum Security Inc",
+  "website_domain": "maximumsecuritymiami.com",
+  "city": "Unincorporated Miami-Dade",
+  "known_people": "Greg Gracer",
+  "locations": "Office in Unincorporated Miami-Dade; Covers Miami-Dade, Aventura, Coral Gables, ",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 3,
+  "company": "Aressco Services Inc",
+  "website_domain": "aressco.com",
+  "city": "Unincorporated Miami-Dade",
+  "known_people": "Don Richter",
+  "locations": "Office in Unincorporated Miami-Dade; Covers Miami-Dade, Florida City, Homestead,",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 4,
+  "company": "WISE Building Technologies, LLC",
+  "website_domain": "wisebt.com",
+  "city": "Doral",
+  "known_people": "Guido Tregent",
+  "locations": "Office in Doral; Covers Aventura, Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 5,
+  "company": "Horizon Electronics Inc",
+  "website_domain": "horizonsecurity.com",
+  "city": "Miami Lakes",
+  "known_people": "Jorge Tapanes",
+  "locations": "Office in Miami Lakes, Hialeah; Covers Miami-Dade",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 6,
+  "company": "Integrated Security Systems Inc",
+  "website_domain": "teamiss.com",
+  "city": "City of Miami",
+  "known_people": "Jeffrey S. Nunberg",
+  "locations": "Office in City of Miami; Covers Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 7,
+  "company": "MCG Electronics Inc dba APS Security Systems",
+  "website_domain": "apsmiami.com",
+  "city": "Unincorporated Miami-Dade",
+  "known_people": "Eric del Pino",
+  "locations": "Office in Unincorporated Miami-Dade; Covers Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 8,
+  "company": "Omni Data LLC dba Paradyme Secure LLC",
+  "website_domain": "paradyme360.com",
+  "city": "Unincorporated Miami-Dade",
+  "known_people": "Marsha Chin Loy",
+  "locations": "Office in Unincorporated Miami-Dade",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 9,
+  "company": "Safesys USA LLC",
+  "website_domain": "safesysusa.com",
+  "city": "Hialeah",
+  "known_people": "Patricia Fermin; Ignacio Rivera",
+  "locations": "Office in Hialeah",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 10,
+  "company": "Alarm Grid Inc",
+  "website_domain": "alarmgrid.com",
+  "city": "Fort Lauderdale",
+  "known_people": "Joshua Unseth",
+  "locations": "Office in Palmetto Bay; Covers Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 11,
+  "company": "Pye-Barker Fire & Safety",
+  "website_domain": "united-fire.com",
+  "city": "Coral Springs",
+  "known_people": "Annie Perrone; Kelly Rooney (President, per website)",
+  "locations": "Office in Doral; Covers South Florida",
+  "national_firm": true
+ },
+ {
+  "sheet_row": 12,
+  "company": "Security 101",
+  "website_domain": "security101.com",
+  "city": "Orlando",
+  "known_people": "Gerrit Brusse",
+  "locations": "Office in Hialeah",
+  "national_firm": true
+ },
+ {
+  "sheet_row": 13,
+  "company": "Alarm Brokers of Florida, LLC",
+  "website_domain": "",
+  "city": "Unincorporated Miami-Dade",
+  "known_people": "Steve Carulo",
+  "locations": "Office in Unincorporated Miami-Dade",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 14,
+  "company": "CF Alarm Industry INC",
+  "website_domain": "",
+  "city": "Unincorporated Miami-Dade",
+  "known_people": "",
+  "locations": "Office in Unincorporated Miami-Dade",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 15,
+  "company": "CHI Alarms Inc",
+  "website_domain": "",
+  "city": "Miami Lakes",
+  "known_people": "Rene Chi",
+  "locations": "Office in Miami Lakes",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 16,
+  "company": "Fisec Technology Convergence LLC",
+  "website_domain": "fisectech.com",
+  "city": "Unincorporated Miami-Dade",
+  "known_people": "Alejandro Morales",
+  "locations": "Office in Unincorporated Miami-Dade",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 17,
+  "company": "Layer 8 Security",
+  "website_domain": "",
+  "city": "Hialeah",
+  "known_people": "Antonio Fernandez",
+  "locations": "Office in Hialeah",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 18,
+  "company": "Sterling Security Technologies Corp.",
+  "website_domain": "",
+  "city": "Unincorporated Miami-Dade",
+  "known_people": "Fernando Rivera",
+  "locations": "Office in Unincorporated Miami-Dade",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 19,
+  "company": "Tropical Fire and Security Systems Inc",
+  "website_domain": "",
+  "city": "Miami Lakes",
+  "known_people": "Mariana Bustillo Serje",
+  "locations": "Office in Miami Lakes",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 20,
+  "company": "Alpha Security & Fire Alarm Services Inc",
+  "website_domain": "alphasecurityandfire.com",
+  "city": "Sunrise",
+  "known_people": "Jacqueline Soria",
+  "locations": "Covers Coral Gables, Miami Beach, Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 21,
+  "company": "Armer Protection",
+  "website_domain": "armer.net",
+  "city": "Oakland Park",
+  "known_people": "Michael T Oester",
+  "locations": "Covers Miami-Dade, Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 22,
+  "company": "Genset Fire and Security, LLC",
+  "website_domain": "gensetfire.com",
+  "city": "Pompano Beach",
+  "known_people": "Robert Schuermann",
+  "locations": "Covers Brickell, Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 23,
+  "company": "Safe Alarm Systems Inc",
+  "website_domain": "safealarmsystems.com",
+  "city": "Davie",
+  "known_people": "Stuart Glickman",
+  "locations": "Covers Miami-Dade",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 24,
+  "company": "Guardian Hawk Security",
+  "website_domain": "guardianhawk.com",
+  "city": "Lantana",
+  "known_people": "Scott D Herron",
+  "locations": "Covers Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 25,
+  "company": "Power Design Inc",
+  "website_domain": "powerdesigninc.us",
+  "city": "St Petersburg",
+  "known_people": "Mitch Permuy; Aaron Permuy (Senior Vice President, per website)",
+  "locations": "Covers Aventura, Bal Harbour, Brickell, Coconut Grove, Coral Gables, Doral, Hial",
+  "national_firm": true
+ },
+ {
+  "sheet_row": 26,
+  "company": "Dehart Alarm Systems LLC",
+  "website_domain": "dehartsystems.com",
+  "city": "Sarasota",
+  "known_people": "Cory Schott",
+  "locations": "Covers Miami-Dade, Aventura, Coral Gables, Doral, Miami Beach, North Miami, Pine",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 27,
+  "company": "Alarmtronic Systems",
+  "website_domain": "alarmtronicsystems.com",
+  "city": "Lake Mary",
+  "known_people": "Jay K. Patel",
+  "locations": "Covers Sweetwater",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 28,
+  "company": "AFA Protective Systems",
+  "website_domain": "afap.com",
+  "city": "Davie",
+  "known_people": "Robert C. Diaz",
+  "locations": "Covers South Florida",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 29,
+  "company": "Custom Alarm Contractors Inc",
+  "website_domain": "customalarmcontractors.com",
+  "city": "Ft Lauderdale",
+  "known_people": "Steven A. Falasca",
+  "locations": "Covers South Florida",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 30,
+  "company": "Florida State Security Inc",
+  "website_domain": "fssecurity.com",
+  "city": "Ft Lauderdale",
+  "known_people": "Vincent Falzetti",
+  "locations": "Covers South Florida",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 31,
+  "company": "Hotwire Communications",
+  "website_domain": "hotwirecommunications.com",
+  "city": "Ft Lauderdale",
+  "known_people": "Kristin Johnson (FOUNDER & CEO, per website)",
+  "locations": "Covers South Florida",
+  "national_firm": true
+ },
+ {
+  "sheet_row": 32,
+  "company": "Security Pro Systems Inc",
+  "website_domain": "securityprosystems.com",
+  "city": "Coral Springs",
+  "known_people": "Barb Barden",
+  "locations": "Covers South Florida",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 33,
+  "company": "All Florida Alarm Systems Inc",
+  "website_domain": "allfloridaalarms.com",
+  "city": "Boca Raton",
+  "known_people": "Simon Plummer",
+  "locations": "Covers South Florida",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 34,
+  "company": "Audio Video Systems Inc",
+  "website_domain": "securitybyavs.com",
+  "city": "West Palm Beach",
+  "known_people": "Angela Barnard",
+  "locations": "Covers South Florida",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 35,
+  "company": "ETC Florida LLC",
+  "website_domain": "etc-florida.com",
+  "city": "West Palm Beach",
+  "known_people": "Justin Mills",
+  "locations": "Covers South Florida",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 36,
+  "company": "Intelli-Tec Security",
+  "website_domain": "intelli-tec.net",
+  "city": "Jupiter",
+  "known_people": "Weston MacDonnell; Carmine Pizzo (President, per website)",
+  "locations": "Covers South Florida",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 37,
+  "company": "Intertech CI",
+  "website_domain": "fedoraintertech.com",
+  "city": "Delray Beach",
+  "known_people": "Ashley Mellor; Paul Caruso (Executive Vice President, per website)",
+  "locations": "Covers South Florida",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 38,
+  "company": "Knight Fire & Security Inc",
+  "website_domain": "knightcorporations.com",
+  "city": "Riviera Beach",
+  "known_people": "Anthony J Caliendo",
+  "locations": "Covers South Florida",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 39,
+  "company": "Reliant Fire and Security",
+  "website_domain": "reliantfire.net",
+  "city": "South Bay",
+  "known_people": "Macey Roberts",
+  "locations": "Covers South Florida",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 41,
+  "company": "Circle Security Solutions",
+  "website_domain": "circlesecuritysolutions.com",
+  "city": "South Miami",
+  "known_people": "Ira Ehrenkrantz (Founder)",
+  "locations": "Office in South Miami; Covers Miami-Dade, Aventura, Bal Harbour, Brickell, Cocon",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 42,
+  "company": "Support305",
+  "website_domain": "support305.pages.dev",
+  "city": "City of Miami",
+  "known_people": "Nitesh Mistry (Founder & CEO)",
+  "locations": "Office in City of Miami; Covers Miami-Dade, Aventura, Bal Harbour, Brickell, Coc",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 43,
+  "company": "Baltic Service LLC",
+  "website_domain": "adbsnow.com",
+  "city": "Sunny Isles Beach",
+  "known_people": "",
+  "locations": "Office in Sunny Isles Beach; Covers Miami-Dade, Aventura, Coral Gables, Doral, H",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 44,
+  "company": "Miami Security Systems",
+  "website_domain": "miamisecuritysystems.net",
+  "city": "City of Miami",
+  "known_people": "Juan Carlos Perez (License holder)",
+  "locations": "Office in City of Miami; Covers Miami-Dade, Brickell, Coconut Grove, Coral Gable",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 45,
+  "company": "Hemag Inc",
+  "website_domain": "hemaginc.com",
+  "city": "Cutler Bay",
+  "known_people": "Eberto Garcia (License holder)",
+  "locations": "Office in Cutler Bay; Covers Aventura, Coral Gables, Doral, Miami Beach, Palmett",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 46,
+  "company": "Acoustic Architects",
+  "website_domain": "acousticarchitects.net",
+  "city": "City of Miami",
+  "known_people": "Spencer Hauldren (Founder & Managing Partner)",
+  "locations": "Office in City of Miami; Covers Brickell, Coral Gables, Pinecrest, Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 47,
+  "company": "Industrial Communications (Induscom)",
+  "website_domain": "induscom.com",
+  "city": "Miami Gardens",
+  "known_people": "",
+  "locations": "Office in Miami Gardens; Covers Miami-Dade, Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 48,
+  "company": "Mobile Me IT",
+  "website_domain": "mobilemeit.com",
+  "city": "Doral",
+  "known_people": "",
+  "locations": "Office in Doral; Covers Miami-Dade, Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 49,
+  "company": "AT&I Systems",
+  "website_domain": "atisecuritysystems.com",
+  "city": "City of Miami",
+  "known_people": "",
+  "locations": "Office in City of Miami; Covers Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 50,
+  "company": "Cameras Solutions II Inc.",
+  "website_domain": "cs2security.com",
+  "city": "City of Miami",
+  "known_people": "",
+  "locations": "Office in City of Miami; Covers Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 51,
+  "company": "InaCOMP Technical Services Group",
+  "website_domain": "inacomp.net",
+  "city": "Doral",
+  "known_people": "Michael Kanan (Chairman and CEO)",
+  "locations": "Office in Doral; Covers Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 52,
+  "company": "Master Electronic Solutions",
+  "website_domain": "mesofmiami.com",
+  "city": "Unincorporated Miami-Dade",
+  "known_people": "Luis M Hernandez (License holder)",
+  "locations": "Office in Unincorporated Miami-Dade; Covers Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 53,
+  "company": "NXT GEN Technologies",
+  "website_domain": "nxtgentech.com",
+  "city": "Unincorporated Miami-Dade",
+  "known_people": "",
+  "locations": "Office in Unincorporated Miami-Dade; Covers Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 54,
+  "company": "PC Solutions & Integration",
+  "website_domain": "pcsusa.net",
+  "city": "Coral Gables",
+  "known_people": "",
+  "locations": "Office in Coral Gables, Unincorporated Miami-Dade; Covers Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 55,
+  "company": "York Security Solutions",
+  "website_domain": "yorksecuritysolutions.com",
+  "city": "Miami Beach",
+  "known_people": "James Bienenfeld (License holder)",
+  "locations": "Office in Miami Beach; Covers Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 56,
+  "company": "Castaway Security Solutions",
+  "website_domain": "cts-one.co",
+  "city": "City of Miami",
+  "known_people": "Craig Bruce (Chief Operating Officer)",
+  "locations": "Office in City of Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 57,
+  "company": "Certified Network Professionals, Inc. (Miami, FL)",
+  "website_domain": "cnetpro.net",
+  "city": "Unincorporated Miami-Dade",
+  "known_people": "Orlando G. Suero (President / Network & Systems Engineer)",
+  "locations": "Office in Unincorporated Miami-Dade",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 58,
+  "company": "Chactech",
+  "website_domain": "chactech.com",
+  "city": "North Miami Beach",
+  "known_people": "",
+  "locations": "Office in North Miami Beach",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 59,
+  "company": "DSP Video Systems",
+  "website_domain": "dspsmart.com",
+  "city": "Doral",
+  "known_people": "Billy A Cocca (License holder)",
+  "locations": "Office in Doral",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 60,
+  "company": "Florida Alarms",
+  "website_domain": "",
+  "city": "Hialeah",
+  "known_people": "",
+  "locations": "Office in Hialeah",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 61,
+  "company": "Florida Safeguard INC.",
+  "website_domain": "floridasafeguard.com",
+  "city": "Pinecrest",
+  "known_people": "Jim Wilhelm (President and Founder)",
+  "locations": "Office in Pinecrest",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 62,
+  "company": "Get Smart Security inc",
+  "website_domain": "getsmartersecurity.com",
+  "city": "North Miami",
+  "known_people": "",
+  "locations": "Office in North Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 63,
+  "company": "NVE Technologies, Inc.",
+  "website_domain": "nvetechnologies.com",
+  "city": "Unincorporated Miami-Dade",
+  "known_people": "",
+  "locations": "Office in Unincorporated Miami-Dade",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 64,
+  "company": "Omega Security INC",
+  "website_domain": "omegasecurity.com",
+  "city": "Hialeah",
+  "known_people": "",
+  "locations": "Office in Hialeah",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 65,
+  "company": "UDT",
+  "website_domain": "udtonline.com",
+  "city": "Hialeah",
+  "known_people": "",
+  "locations": "Office in Hialeah",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 66,
+  "company": "VCS Tech Systems",
+  "website_domain": "vcstechsystems.com",
+  "city": "Doral",
+  "known_people": "Miguel Jesus Vidal (License holder)",
+  "locations": "Office in Doral",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 67,
+  "company": "Allied Universal Technology Services (Miami, FL)",
+  "website_domain": "aus.com",
+  "city": "Unincorporated Miami-Dade",
+  "known_people": "Javier Vazquez (Listed contact)",
+  "locations": "Office in Unincorporated Miami-Dade",
+  "national_firm": true
+ },
+ {
+  "sheet_row": 68,
+  "company": "Sentry Security, Inc.",
+  "website_domain": "sentrysecurityfl.com",
+  "city": "Sunrise",
+  "known_people": "Evan Katz (Listed contact)",
+  "locations": "Covers Miami-Dade, Aventura, Bal Harbour, Coral Gables, Cutler Bay, Doral, Flori",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 69,
+  "company": "Cypress Trace Security, Inc.",
+  "website_domain": "cypresstracesecurity.com",
+  "city": "Coral Springs",
+  "known_people": "",
+  "locations": "Covers Miami-Dade",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 70,
+  "company": "Tesys Networks",
+  "website_domain": "tesysnetworks.com",
+  "city": "Miramar",
+  "known_people": "Nendy Hernandez (Founder & Chief Executive Officer)",
+  "locations": "Covers Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 71,
+  "company": "Triad Security Group Inc",
+  "website_domain": "triadsecuritygroup.net",
+  "city": "Davie",
+  "known_people": "Gerald Driscoll (Listed contact)",
+  "locations": "Covers Miami",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 72,
+  "company": "Fortress Security Solutions,inc.",
+  "website_domain": "fortressgt.com",
+  "city": "Boca Raton",
+  "known_people": "",
+  "locations": "Covers Miami-Dade, Aventura, Brickell, Coconut Grove, Coral Gables, Doral, Hiale",
+  "national_firm": false
+ },
+ {
+  "sheet_row": 73,
+  "company": "Everon",
+  "website_domain": "everonsolutions.com",
+  "city": "Miramar",
+  "known_people": "",
+  "locations": "Covers Dade County, Hialeah, Miami",
+  "national_firm": true
+ }
+]
